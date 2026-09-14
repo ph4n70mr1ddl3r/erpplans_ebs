@@ -106,9 +106,9 @@ the CIO Office. Two consequences worth stating explicitly:
 | # | Product Team | Code | Type | Primary Business Partner(s) | VS | Workflows |
 |---|---|---|---|---|---|---|
 | 1 | Merchandising & Supply Chain Systems | MSC | Stream-aligned (configure) | VP Supply Chain; VP Merchandising | 16 | 486 |
-| 2 | Warehouse, Logistics & Inventory Systems | WLI | Stream-aligned (buy & integrate) | VP Supply Chain (DC Ops, Fleet & Logistics) | 20 | 526 |
-| 3 | Store Systems & POS | SSP | Stream-aligned (buy & integrate) | VP Store Operations | 25 | 907 |
-| 4 | Commerce & Customer Platforms | CCP | Stream-aligned (buy & integrate) | CMO; Digital Commerce Inc. GM; Trade/Account Mgmt | 25 | 742 |
+| 2 | Warehouse, Logistics & Inventory Systems | WLI | Stream-aligned (configure & integrate) | VP Supply Chain (DC Ops, Fleet & Logistics) | 20 | 526 |
+| 3 | Store Systems & POS | SSP | Stream-aligned (configure & integrate) | VP Store Operations | 25 | 907 |
+| 4 | Commerce & Customer Platforms | CCP | Stream-aligned (configure & integrate) | CMO; Digital Commerce Inc. GM; Trade/Account Mgmt | 25 | 742 |
 | 5 | Finance & Treasury Systems | FIN | Stream-aligned (configure) | CFO (Controller, Treasurer, Tax) | 30 | 809 |
 | 6 | Corporate, Governance & Asset Systems | CORP | Stream-aligned (configure) | VP Legal & Compliance; Facilities & Real Estate; Quality; Internal Audit & Risk | 35 | 924 |
 | 7 | People Systems | PEO | Stream-aligned (configure) | CHRO | 16 | 445 |
@@ -491,7 +491,7 @@ RACI key per [`WORKFLOW-FORMAT-GUIDE.md`](../01-model-company/workflows/WORKFLOW
 | Process design & fit-to-standard decision | C | A | R | R | I | C |
 | Configuration change (within own domain) | A | C | C | R | C | I |
 | Customization-exception request | R | C | R | C | I | A |
-| Capability sourcing decision (configure/buy/build) | R | C | R | C | I | C (SIB gate; Council ratifies >PHP 25M TCO) |
+| Capability sourcing decision (use-EBS/build) | R | C | R | C | I | C (SIB gate; Council ratifies >PHP 25M TCO) |
 | UAT execution | R | A | I | C | R | I |
 | Regression-pack maintenance | I | I | C | C | A/R | I |
 | Production release (monthly train) | A | C | I | C | R | I |

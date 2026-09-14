@@ -267,8 +267,8 @@ Scoring is the reference model's: strategic differentiation, fit-to-standard gap
 cost, data gravity, statutory localization (a vendor without the jurisdiction's statutory
 readiness is disqualified where the capability is statutory), TCO, talent/key-person risk, and
 exit strategy. Every decision carries five mandatory appendices: integration estimate,
-control-mapping appendix against the control register, TCO sheet, exit/run-cost plan, and a
-re-evaluation trigger. Decisions with 3-year TCO above the investment threshold escalate to the
+control-mapping appendix against the control register, TCO sheet, the run-cost & talent
+plan (build), and a re-evaluation trigger. Decisions with 3-year TCO above the investment threshold escalate to the
 Product Council; core-tier removals require a CEO-noted waiver (Law 4 and §3.3).
 
 ### 5.2 The register

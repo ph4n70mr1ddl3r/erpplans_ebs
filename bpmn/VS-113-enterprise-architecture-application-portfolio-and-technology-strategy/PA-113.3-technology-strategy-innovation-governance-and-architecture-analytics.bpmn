@@ -659,7 +659,7 @@ Duration: Annual + continuous</bpmn:documentation>
         <bpmn:incoming>W5515_Flow22</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W5515_Annotation14">
-        <bpmn:text>Controls: - CTL-570 (ensure controlled execution — Technology Strategy, Innovation Governance &amp; Architecture Analytics (PA-113.3).) | - operational: no sourcing decision without the five mandatory appendices (IAP estimate, control-mapping, TCO, exit/run plan, re-evaluation trigger) | - operational: every capability decision recorded in the Capability Sourcing Register; in-suite-tier changes require a CEO-noted waiver
+        <bpmn:text>Controls: - CTL-570 (ensure controlled execution — Technology Strategy, Innovation Governance &amp; Architecture Analytics (PA-113.3).) | - operational: no sourcing decision without the five mandatory appendices (IAP estimate, control-mapping, TCO, run-cost &amp; talent plan, re-evaluation trigger) | - operational: every capability decision recorded in the Capability Sourcing Register; in-suite-tier changes require a CEO-noted waiver
 Owner: Head of Enterprise Architecture (SIB assessment lead)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W5515_Assoc15" sourceRef="W5515_Annotation14" targetRef="W5515_Start6" associationDirection="None" />

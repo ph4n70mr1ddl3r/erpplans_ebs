@@ -4535,6 +4535,46 @@ if 'platform-native in-suite automation = use EBS' not in _w5512_live:
 if 'vendor agent product = buy' in _w5512_live or 'configure/buy/build decision record' in _w5512_live:
     errs.append('workflows/VS-128-.../PA-128.3-...md: retired W5512 Step-3/Touchpoints gate literals in live prose (vendor agent product = buy; configure/buy/build decision record)')
 
+# (i) twenty-fourth-wave: the cascade's own portfolio/decision-rights/enumeration
+# surfaces — the configure-and-integrate archetype rename (sourcing model v3.0 /
+# OM v3.11) never reached the OM §3.2 portfolio-table Type cells (rows 2–4 still read
+# 'Stream-aligned (buy & integrate)' against the same document's §5.1 'configure-and-
+# integrate teams (WLI, SSP, CCP)'), the two-exit gate never reached the OM §6.1 RACI
+# row ('Capability sourcing decision (configure/buy/build)'), the W5515 Controls bullet
+# still enumerated the retired 'exit/run plan' appendix against §3.3's 'Run-cost &
+# talent plan (build)' and the wave-20-trued Step 2, the sourcing model's §9
+# TCO-per-product row still carried the retired BoB-product cost class ('BoB products
+# carry license + integration run cost' — a v1.0 relic the v3.0 re-word claim never
+# covered), and the guide's §5.1 five-appendix enumeration kept the retired
+# 'exit/run-cost plan' name. Anchors required over whitespace-normalized joined live
+# text (line-break-proof, the (a)/(f)/(h) reading); retired literals forbidden per
+# document — the guide's §5 posture-neutral doctrine family (the v1.11/wave-23
+# adjudication), the sourcing-model §1/§8 history clauses and the OM §6.2
+# vendor-commodity incident row stay exempt (per their adjudications).
+for _retired in ('Capability sourcing decision (configure/buy/build)',
+                 'Stream-aligned (buy & integrate)'):
+    if _retired in _om_live:
+        errs.append(f'07-methodology/it-product-operating-model.md: retired gate/archetype literal {_retired!r} in live prose (canon: use-EBS/build decision routing; the configure-and-integrate archetype per §5.1)')
+for _anchor in ('Capability sourcing decision (use-EBS/build)',
+                'Stream-aligned (configure & integrate)'):
+    if _anchor not in _om_live:
+        errs.append(f'07-methodology/it-product-operating-model.md: required two-tier anchor not found in live prose: {_anchor!r} (guard-anchored)')
+_w5515 = os.path.join(ROOT, '01-model-company', 'workflows', 'VS-113-enterprise-architecture-application-portfolio-and-technology-strategy', 'PA-113.3-technology-strategy-innovation-governance-and-architecture-analytics.md')
+_w5515_live = re.sub(r'\s+', ' ', ' '.join(l.rstrip('\n') for l in open(_w5515, encoding='utf-8')
+                                           if not (l.lstrip().startswith('*Date:') or 'Prior v' in l)))
+if 'no sourcing decision without the five mandatory appendices (IAP estimate, control-mapping, TCO, run-cost & talent plan, re-evaluation trigger)' not in _w5515_live:
+    errs.append('workflows/VS-113-.../PA-113.3-...md: W5515 Controls bullet must enumerate the §3.3 five with the run-cost & talent plan (build) (guard-anchored)')
+if 'exit/run plan' in _w5515_live:
+    errs.append('workflows/VS-113-.../PA-113.3-...md: retired \'exit/run plan\' appendix literal in live prose (the buy exit does not exist; §3.3 appendix 4 is the run-cost & talent plan)')
+if 'BoB products carry license' in _sm_live:
+    errs.append('07-methodology/capability-sourcing-and-engineering-model.md: retired BoB-product cost class in the §9 TCO row live prose (no BoB capability products exist under the two-tier doctrine)')
+if 'in-suite and vendor-commodity licenses carry license/support + integration run cost' not in _sm_live:
+    errs.append('07-methodology/capability-sourcing-and-engineering-model.md: §9 TCO-per-product row must carry the two-tier cost-shape anchor (guard-anchored)')
+if 'exit/run-cost plan' in _ag_live:
+    errs.append('07-methodology/ai-first-operating-guide.md: retired exit-appendix literal in the §5.1 enumeration live prose (canon: the run-cost & talent plan (build); the buy exit does not exist)')
+if 'TCO sheet, the run-cost & talent plan (build), and a re-evaluation trigger' not in _ag_live:
+    errs.append('07-methodology/ai-first-operating-guide.md: §5.1 five-appendix enumeration must carry the run-cost & talent plan (build) anchor (guard-anchored)')
+
 print(f"C77_BAD={len(errs)}")
 for e in errs:
     print('BAD|' + e)
@@ -4542,7 +4582,7 @@ PY
 )
 C77_BAD=$(echo "$CHECK77" | sed -n 's/^C77_BAD=\([0-9]*\).*/\1/p')
 if [ "${C77_BAD:-1}" -eq 0 ]; then
-    ok "Sourcing-doctrine posture guard clean: no retired 'cloud ERP' / best-of-breed / bought-edge literals in live prose (joined-text probe — split literals caught), no retired 'configure → buy → build' gate order anywhere live (joined-text probe), the executive summary carries the two-tier landscape anchors, the guide's §4.2/L3 assignments and Law-4/§3.3/§5.1/§7.3/§9.2 two-exit forms hold, the sourcing model's §2 heading/intro and §12.2 routing hold the in-suite/build canon, the OM's principle 7 + SIB row hold, W5512's Step 3 routes use-EBS → build, the A6.3 already-built canon is pinned, the IT gap-analysis companion's §1 scope anchor holds, and the deployment canon is on-premises (EBS is not a cloud/SaaS ERP; blueprint README + architecture data-residency + tech-guidelines §2.1 pinned) (guard added by the 2026-09-14 twentieth-wave consistency review — the doctrine enactment re-pointed every guarded surface while stranding the posture prose on surfaces no rule read; twenty-second-wave review repaired the IT companion's line-split scope line and hardened the probe against line breaks; on-premises canon correction pinned the three deployment-decision surfaces; twenty-third-wave review closed the cascade's own teaching surfaces — the sourcing model §2 heading/'three tiers' intro + §12.2 vendor-agent-products routing, the guide's Law 4 'default order' / §3.3 three-posture estate / §5.1 configure→buy→build / §7.3 buy=vendor-agent / §9.2 row, the OM's principle 7 + SIB row, and W5512's Step 3 + Touchpoints, with the retired gate-order literal joining the joined-text probe and all repaired surfaces anchor-pinned)"
+    ok "Sourcing-doctrine posture guard clean: no retired 'cloud ERP' / best-of-breed / bought-edge literals in live prose (joined-text probe — split literals caught), no retired 'configure → buy → build' gate order anywhere live (joined-text probe), the executive summary carries the two-tier landscape anchors, the guide's §4.2/L3 assignments and Law-4/§3.3/§5.1/§7.3/§9.2 two-exit forms hold, the sourcing model's §2 heading/intro and §12.2 routing hold the in-suite/build canon, the OM's principle 7 + SIB row hold, W5512's Step 3 routes use-EBS → build, the A6.3 already-built canon is pinned, the IT gap-analysis companion's §1 scope anchor holds, the deployment canon is on-premises (EBS is not a cloud/SaaS ERP; blueprint README + architecture data-residency + tech-guidelines §2.1 pinned), and the twenty-fourth-wave portfolio/enumeration surfaces hold — the OM's §3.2 configure-and-integrate Type cells + §6.1 use-EBS/build RACI row, the W5515 Controls five-appendix enumeration with the run-cost & talent plan (build), the sourcing model's §9 two-tier TCO cost shape, and the guide's §5.1 run-cost & talent-plan appendix (guard added by the 2026-09-14 twentieth-wave consistency review — the doctrine enactment re-pointed every guarded surface while stranding the posture prose on surfaces no rule read; twenty-second-wave review repaired the IT companion's line-split scope line and hardened the probe against line breaks; on-premises canon correction pinned the three deployment-decision surfaces; twenty-third-wave review closed the cascade's own teaching surfaces — the sourcing model §2 heading/'three tiers' intro + §12.2 vendor-agent-products routing, the guide's Law 4 'default order' / §3.3 three-posture estate / §5.1 configure→buy→build / §7.3 buy=vendor-agent / §9.2 row, the OM's principle 7 + SIB row, and W5512's Step 3 + Touchpoints, with the retired gate-order literal joining the joined-text probe and all repaired surfaces anchor-pinned; twenty-fourth-wave review closed the cascade's own portfolio/enumeration surfaces — the OM §3.2 Type cells + §6.1 RACI row, the W5515 Controls five-appendix enumeration, the sourcing model's §9 TCO cost-shape row, and the guide's §5.1 appendix enumeration, all anchor-pinned)"
 else
     error "Sourcing-doctrine posture violations against the two-tier canon ($C77_BAD):"
     echo "$CHECK77" | grep -E '^BAD\|' | sed 's/^BAD|/    /'

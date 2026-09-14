@@ -245,7 +245,7 @@ Contract clauses required at signature (vendor commodities): Philippine
 |---|---|
 | **Persistent envelopes survive** | All teams — configure, integrate, build — remain persistent-capacity funded (OM §8.4); nothing reverts to project funding |
 | **Build envelopes** | Build squads carry their run cost (squad + infrastructure) in the product envelope; **PFRS / IAS 38** capitalization of qualifying development costs is assessed quarterly with FIN (Controller) — FIN owns the accounting policy, the squad owns the evidence trail |
-| **TCO-per-product accounting** | FinOps tags 100% of spend to products (already OM policy); BoB products carry license + integration run cost; built products carry squad + cloud cost. Every QBR shows TCO per product |
+| **TCO-per-product accounting** | FinOps tags 100% of spend to products (already OM policy); in-suite and vendor-commodity licenses carry license/support + integration run cost; built products carry squad + cloud cost. Every QBR shows TCO per product |
 | **Sourcing reserve** | The CIO Office central bucket (OM §8.4) funds sourcing transitions — evaluations, migrations, exit execution — so no team's steady-state capacity is cannibalized by a sourcing move |
 | **Exit reserves** | Per §8 — accrued centrally, disclosed in the QBR FinOps pack |
 
