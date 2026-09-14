@@ -13,7 +13,7 @@
 | Legacy on-premise accounting | GL, AP, AR, FA | Balance migration as of go-live; open items individually | Pilot go-live weekend |
 | Standalone POS | Sales history, item master | Summarized daily by store (12 months); detailed last 3 months | Pilot go-live weekend |
 | Spreadsheet purchasing | Vendor master, open POs | Active POs migrated; vendor master cleansed | Pilot go-live weekend |
-| Separate payroll software | Employee master, YTD earnings | Full employee master + year-to-date for BIR reconciliation | Pilot go-live weekend |
+| Separate payroll software | Employee master, YTD earnings | Full employee master to EBS Core HR; year-to-date earnings & deductions to the in-house Payroll PH build for BIR reconciliation (EBS receives postings, not balances) | Pilot go-live weekend |
 | Custom ecommerce | Customer/loyalty accounts, order history | Full loyalty member migration; order history last 6 months | Phase 5 (optimization) |
 | Manual inventory | On-hand quantities per location | Full wall-to-wall count at go-live; counts loaded as opening balances | Per-wave go-live |
 
@@ -87,7 +87,7 @@
 | TIN | Payroll system | Validate format (XXX-XXX-XXX or XXX-XXX-XXX-XXX) | Valid TIN format |
 | Bank Account | Payroll system | Validate bank name + account number | Format validation |
 | Employee Type | Payroll system | Regular, Probationary, Fixed-term, Project-based | Valid type |
-| YTD Earnings & Deductions | Payroll system | Migrate year-to-date for BIR annual reconciliation (1702/1604) | Sum validates to payroll register |
+| YTD Earnings & Deductions | Payroll system | Load into the in-house Payroll PH build — not EBS (EBS receives postings, not balances); retained for BIR annual reconciliation (1702/1604) | Sum validates to payroll register |
 | Leave Balances | Payroll system | Migrate VL/SL balances as of go-live | Non-negative |
 
 **Target record count**: 6,762 employees
@@ -171,4 +171,4 @@
 
 ---
 
-*Date: 2026-08-24 (v2.5 — consistency review #19: §2 trade price-record count aligned to the canonical B2B scheme (~5,000 → ~5,200 trade price records, matching §9.2 of the profile). Prior v2.4 — consistency review #15: the §2.1 employee-master TIN rule aligned to the both-formats standard the rest of the file already carries (COM-011 / §TIN Validation): `Validate format (XXX-XXX-XXX)` → `(XXX-XXX-XXX or XXX-XXX-XXX-XXX)`; the same repair was applied to the single-format TIN checks in PA-17.3, PA-22.2, and PA-29.1. Prior v2.3 — §2.2 vendor-master target count reconciled to `model-company-profile.md` §6.5 range `~800–1,000 active vendors` (was `~1,000`); vendor TIN cleansing rule updated to accept both Philippine TIN formats (`XXX-XXX-XXX or XXX-XXX-XXX-XXX`) per COM-011 / §3, was 12-digit only. Prior v2.2: counts reconciled with README.md; canonical glossary reference added)*
+*Date: 2026-09-14 (v2.6 — twenty-first-wave consistency review: §1 scope row and §2.4 YTD row re-pointed to the two-tier sourcing doctrine — payroll year-to-date earnings & deductions load into the in-house Payroll PH build, not EBS; EBS receives postings, not balances, mirroring 02-oracle-ebs/data-migration.md row 11 — the doctrine commits re-pointed the blueprint side but never reached this template. Prior v2.5 — consistency review #19: §2 trade price-record count aligned to the canonical B2B scheme (~5,000 → ~5,200 trade price records, matching §9.2 of the profile). Prior v2.4 — consistency review #15: the §2.1 employee-master TIN rule aligned to the both-formats standard the rest of the file already carries (COM-011 / §TIN Validation): `Validate format (XXX-XXX-XXX)` → `(XXX-XXX-XXX or XXX-XXX-XXX-XXX)`; the same repair was applied to the single-format TIN checks in PA-17.3, PA-22.2, and PA-29.1. Prior v2.3 — §2.2 vendor-master target count reconciled to `model-company-profile.md` §6.5 range `~800–1,000 active vendors` (was `~1,000`); vendor TIN cleansing rule updated to accept both Philippine TIN formats (`XXX-XXX-XXX or XXX-XXX-XXX-XXX`) per COM-011 / §3, was 12-digit only. Prior v2.2: counts reconciled with README.md; canonical glossary reference added)*

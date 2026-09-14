@@ -36,7 +36,10 @@ prohibited (customization-governance §5 applies to integration code equally).
 ## 2. Pattern Register (per Integration-Matrix Flow)
 
 Column "Flow" quotes the canonical matrix rows
-([data-volumes §3](../01-model-company/data-volumes-and-integrations.md)).
+([data-volumes §3](../01-model-company/data-volumes-and-integrations.md))
+one-for-one, in the matrix's own order — every canonical flow has exactly one
+register row, endpoints quoted verbatim. The single exception is the gateway
+chargeback/fee row at the end, a declared register extension beyond the matrix.
 
 | Flow | SLA | EBS-side pattern | Reconciliation control |
 |---|---|---|---|
@@ -48,17 +51,19 @@ Column "Flow" quotes the canonical matrix rows
 | ERP → Ecommerce: fulfillment status | Real-time | OM ship-confirm business events → IAP → ecommerce | Status-echo reconciliation |
 | ERP → WMS: transfer orders, PO receipts | Real-time | Internal requisitions/receipts → IAP → WMS tasking | Task-completion feed mirrors C8/C7 counts |
 | WMS → ERP: pick/ship/inventory confirmations | Real-time (< 1 min) | WMS events → IAP → ship-confirm (WSH), MTL transactions interface | Ship-confirm vs pick-ticket count; W22 discrepancy workflow |
-| ERP → Loyalty: earn triggers | Real-time | Sales events → IAP → loyalty engine | Earn/redemption netting vs AR/POS settlement (W550) |
+| ERP → Loyalty/CRM: points earning triggers | Real-time | Sales events → IAP → loyalty engine | Earn/redemption netting vs AR/POS settlement (W550) |
 | CRM/POS → ERP: redemption | Real-time | Redemption event → AR credit/invoice adjustment via interface | Daily redemption ledger tie-out |
 | ERP → Banks: AP payment files | Daily batch | IBY payment process → bank formats → IAP delivery | Payment-file vs payment-batch hash; W320 controls |
 | Banks → ERP: statements | Daily batch | Statement files → CE statement import → auto-reconciliation | W89 recon-rate KPI; unmatched → W272-class queues |
 | ERP → BIR eFPS: returns | Monthly/quarterly | eBTax/SLA balances → BI Publisher return datasets → IAP submission channel | Return dataset vs GL balance certification (VS-79 control) |
-| ERP → SSS/PhilHealth/Pag-IBIG | Monthly | Payroll PH build statutory-file generation (E6) → IAP delivery | Contribution registers vs payroll registers (W251) |
-| ERP → Delivery partners (3PL) | Real-time | Delivery orders from WSH/OMO → IAP → partner APIs; status back into shipping | Delivery-order vs ship-confirm tie-out (W548) |
+| ERP → SSS/PhilHealth/Pag-IBIG: contribution files | Monthly | Payroll PH build statutory-file generation (E6) → IAP delivery | Contribution registers vs payroll registers (W251) |
+| ERP → Delivery Partners: delivery orders | Real-time | Delivery orders from WSH/OMO → IAP → partner APIs | Delivery-order vs ship-confirm tie-out (W548) |
+| Delivery Partners → ERP: delivery status | Real-time | Partner status events → IAP → shipping status update | Status-echo count vs open delivery orders per partner/day (W548) |
 | Payment GW → ERP: confirmations | Real-time | Gateway events → IAP → AR receipts (fast path) + settlement batches | W99/W261/W267 settlement reconciliation |
-| ERP → Supplier portal (iSupplier) | Real-time | Native iSupplier portal (DMZ) for PO/ASN/invoice; XML Gateway for cXML suppliers | ASN vs receipt match (W422); supplier-invoice tie-out |
-| Gateways → ERP: chargebacks/fees | Monthly | Gateway fee/chargeback files → IAP → AP invoices/AR deductions | W267/W348 revenue-assurance audit trail |
-| **Payroll (in-house build) → ERP: costing journals & statutory accruals** | Monthly | Payroll PH period costing → IAP → `GL_INTERFACE` posting (E8); EBS stays the ledger of record | Journal tie-out vs the payroll register per period; SLA derivation review |
+| ERP → Supplier Portal: POs, schedules | Real-time | Native iSupplier portal (DMZ) PO/schedule release; XML Gateway for cXML suppliers | PO-release vs portal-acknowledgment count |
+| Supplier Portal → ERP: ASN, invoices | As submitted | Portal ASN/invoice submissions → IAP → receiving/AP matching | ASN vs receipt match (W422); supplier-invoice tie-out |
+| Payroll PH (in-house build) → ERP: costing journals & statutory accruals | Monthly | Payroll PH period costing → IAP → `GL_INTERFACE` posting (E8); EBS stays the ledger of record | Journal tie-out vs the payroll register per period; SLA derivation review |
+| Gateways → ERP: chargebacks/fees *(register extension — beyond the canonical matrix)* | Monthly | Gateway fee/chargeback files → IAP → AP invoices/AR deductions | W267/W348 revenue-assurance audit trail |
 
 **Built differentiators note:** OMO/TPS/AAP — and the already-built POS/ecommerce/loyalty
 platforms — do not integrate "differently": they are IAP consumers/producers like any

@@ -341,6 +341,22 @@ out of their documents. W0 joined the token scan's exemptions (the realization-w
 tables label their foundation wave 'W0 — Foundation'; the register's ids start at W1),
 and the sourcing-model + folder sections joined the bare-§ fallback union (the
 citations 'sourcing model §12.1' and 'architecture §4' are cross-doc).
+
+2026-09-14 twenty-first-wave consistency review: the doctrine cascade's
+ canonical-integration strand closed — the two-tier doctrine's payroll posting
+ flow (fit-gap E8 INT; 02-oracle-ebs/data-migration row 11) had never reached
+ data-volumes §3's canonical Integration Detail Matrix, the EBS pattern
+ register's Flow column claimed to 'quote the canonical matrix rows' while the
+ gateway chargeback/fee row had no canonical counterpart and the canonical
+ delivery-status row was silently folded into the outbound 3PL row, and the
+ legacy mapping template still routed payroll YTD into the ERP against
+ data-migration row 11 — repaired in place and the whole class brought under
+ guard with integration_mirror_hits (the §3 matrix re-derived every run with
+ the Payroll PH posting row required; the register's Flow sequence required
+ equal to the canonical sequence after the one declared extension, endpoints
+ verbatim) and migration_template_hits (the corrected §1/§2.4 anchors
+ required, the retired YTD-into-EBS routing forbidden, the 02 row-11 anchor
+ required present).
 """
 
 def _doc_versions():
@@ -1953,6 +1969,129 @@ def ebs_blueprint_hits():
     return hits
 
 
+def integration_mirror_hits():
+    """2026-09-14 twenty-first-wave consistency review — the doctrine cascade
+    extended the integration estate (fit-gap E8: the in-house Payroll PH build
+    posts period costing to the GL) but never reached the canonical integration
+    map, and 02-oracle-ebs/integrations.md §2's header claims its Flow column
+    'quotes the canonical matrix rows' — a claim that was false at the edges
+    (the gateway chargeback/fee row had no canonical counterpart; the canonical
+    delivery-status row was silently folded into the outbound 3PL row). Re-derived
+    every run: (a) data-volumes §3's Integration Detail Matrix must carry exactly
+    one Payroll PH → ERP posting row (the E8 INT canon); (b) the register's Flow
+    column must quote the canonical matrix one-for-one, in the matrix's own order,
+    with exactly one declared register extension (the gateway chargeback/fee row)
+    — a missing, folded, extra, reordered or re-endpointed row fires."""
+    hits = []
+
+    def norm(s):
+        return re.sub(r"[^a-z0-9]", "", s.lower())
+
+    # ---- (a) the canonical matrix's own integrity + the payroll posting row
+    dv = strip_footer(open(os.path.join(MC, "data-volumes-and-integrations.md"),
+                           encoding="utf-8").read())
+    if "## 3. Integration Detail Matrix" not in dv:
+        return [("data-volumes-and-integrations.md", 0,
+                 "cannot find §3 Integration Detail Matrix "
+                 "(integration_mirror_hits re-derivation source)")]
+    sec3 = dv.split("## 3. Integration Detail Matrix")[1].split("## 4.")[0]
+    canon = []
+    for ln in sec3.splitlines():
+        if not ln.startswith("| "):
+            continue
+        cells = [c.strip() for c in ln.strip().strip("|").split("|")]
+        if len(cells) != 5 or cells[0] == "Source":
+            continue
+        canon.append((cells[0], cells[1]))
+    if not canon:
+        return [("data-volumes-and-integrations.md", 0,
+                 "cannot parse the §3 Integration Detail Matrix rows "
+                 "(integration_mirror_hits re-derivation source)")]
+    payroll = [r for r in canon if "payroll" in r[0].lower()]
+    if len(payroll) != 1 or "erp" not in payroll[0][1].lower():
+        hits.append(("data-volumes-and-integrations.md", 0,
+                     f"§3 canonical matrix must carry exactly one Payroll PH → ERP "
+                     f"posting row (the fit-gap E8 INT canon the EBS pattern register "
+                     f"quotes) — found {payroll or 'none'}"))
+
+    # ---- (b) the EBS pattern register must quote the canonical rows 1:1, in order
+    reg_path = os.path.normpath(os.path.join(MC, "..", "02-oracle-ebs", "integrations.md"))
+    reg = strip_footer(open(reg_path, encoding="utf-8").read())
+    if "## 2. Pattern Register" not in reg:
+        return hits + [("integrations.md (02-oracle-ebs)", 0,
+                        "cannot find §2 Pattern Register")]
+    sec2 = reg.split("## 2. Pattern Register")[1].split("## 3.")[0]
+    flows = []
+    for ln in sec2.splitlines():
+        if not ln.startswith("|"):
+            continue
+        cells = [c.strip() for c in ln.strip().strip("|").split("|")]
+        if len(cells) != 4:
+            continue
+        m = re.match(r"^(.+?)\s*→\s*(.+?):", cells[0])
+        if m:
+            flows.append((m.group(1), m.group(2), cells[0]))
+    quoted = [f for f in flows if "chargebacks/fees" not in f[2].lower()]
+    extensions = [f for f in flows if "chargebacks/fees" in f[2].lower()]
+    if len(extensions) != 1:
+        hits.append(("integrations.md (02-oracle-ebs)", 0,
+                     f"the §2 register must declare exactly one extension row (the "
+                     f"gateway chargeback/fee row, marked as beyond the canonical "
+                     f"matrix) — found {len(extensions)}"))
+    if len(quoted) != len(canon):
+        hits.append(("integrations.md (02-oracle-ebs)", 0,
+                     f"§2 register quotes {len(quoted)} canonical-matrix flows but the "
+                     f"§3 matrix re-derives {len(canon)} — every canonical flow needs "
+                     f"exactly one register row (no folding, no additions beyond the "
+                     f"declared extension)"))
+    else:
+        for i, ((cs, ct), (rs, rt, raw)) in enumerate(zip(canon, quoted)):
+            if norm(cs) != norm(rs) or norm(ct) != norm(rt):
+                hits.append(("integrations.md (02-oracle-ebs)", 0,
+                             f"register row {i + 1} '{raw}' does not quote canonical "
+                             f"matrix row {i + 1} '{cs} → {ct}' — the Flow column must "
+                             f"quote the canonical endpoints verbatim, in the matrix's "
+                             f"own order"))
+    return hits
+
+
+def migration_template_hits():
+    """2026-09-14 twenty-first-wave consistency review — the two-tier doctrine
+    moved payroll balances (02-oracle-ebs/data-migration.md v1.1 row 11: payroll
+    YTD loads into the in-house Payroll PH build; EBS receives postings, not
+    balances) but the legacy mapping template (data-migration-mapping.md) still
+    routed YTD earnings & deductions into the ERP — the same-day sibling
+    contradiction the (b)-commit cascade class keeps producing. The corrected
+    §1 scope-row and §2.4 YTD-row forms are required present, the retired
+    YTD-into-EBS routing is forbidden in live prose, and the 02 row-11 anchor
+    this template must not contradict is required present."""
+    hits = []
+    rel = "data-migration-mapping.md"
+    body = strip_footer(open(os.path.join(MC, rel), encoding="utf-8").read())
+    for anc in (
+            "year-to-date earnings & deductions to the in-house Payroll PH build",
+            "EBS receives postings, not balances",
+            "Load into the in-house Payroll PH build — not EBS",
+    ):
+        if anc not in body:
+            hits.append((rel, 0, f'missing required anchor "{anc}"'))
+    for lit in (
+            "Full employee master + year-to-date for BIR reconciliation",
+            "Migrate year-to-date for BIR annual reconciliation",
+    ):
+        for m in re.finditer(re.escape(lit), body):
+            hits.append((rel, body[:m.start()].count("\n") + 1,
+                         f'retired payroll-YTD-into-EBS routing "{lit}"'))
+    dm = strip_footer(open(os.path.normpath(
+        os.path.join(MC, "..", "02-oracle-ebs", "data-migration.md")),
+        encoding="utf-8").read())
+    if "Loaded into the **in-house payroll build** (Payroll PH)" not in dm:
+        hits.append(("data-migration.md (02-oracle-ebs)", 0,
+                     "row 11's in-house-payroll-build anchor is missing — the mapping "
+                     "template's YTD routing must not contradict it"))
+    return hits
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--guard", action="store_true",
@@ -2063,6 +2202,9 @@ def main():
     hits.extend(profile_derived_figure_hits())
     # 2026-09-14 nineteenth-wave consistency review addition
     hits.extend(ebs_blueprint_hits())
+    # 2026-09-14 twenty-first-wave consistency review additions
+    hits.extend(integration_mirror_hits())
+    hits.extend(migration_template_hits())
     for doc, line, detail in hits:
         print(f"model-doc: {doc}:{line}: {detail}")
     print(f"audit-model-docs: {len(hits)} hit(s) across {len(DOCS)} documents")
