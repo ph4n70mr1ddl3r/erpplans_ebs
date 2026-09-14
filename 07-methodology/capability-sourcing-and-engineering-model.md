@@ -42,9 +42,9 @@ model; this document governs the sourcing decisions that determine team shape.
 
 ---
 
-## 2. Landscape Principle — Unified Core, Bought Edges, Built Differentiators
+## 2. Landscape Principle — In-Suite Core, Built Differentiators
 
-The strategy does **not** abandon the unified ERP. It partitions the landscape into three
+The strategy does **not** abandon the unified ERP. It partitions the landscape into two
 tiers, each with a default sourcing posture:
 
 | Tier | What it contains | Default posture | Why |
@@ -303,8 +303,10 @@ Hard boundaries regardless of tier: no agent owns a statutory filing path (BIR/S
    plus VS-133 process mining surface candidates; scored by hours × frequency × error rate ×
    feasibility (derivable from each workflow's Time Estimate / Staffing Implication data).
 2. **Proposal** — the **owning product team** (the team whose workflow it is) proposes with its
-   BPO; SIB routes the sourcing (ERP-native automation = configure; vendor agent products =
-   buy; custom agents on the paved road = build) — the same gate, one more domain.
+   BPO; SIB routes the sourcing per the §3 gate (in-suite platform-native automation = use
+   EBS; custom agents on the paved road = build — vendor agent products are not a sourcing
+   exit; foundation-model APIs remain commodity procurement under tier-1 TPRM) — the same
+   gate, one more domain.
 3. **Registration & review** — agent registered in the VS-128 registry with a risk tier; AI
    ethics review for anything touching customers, employees, money, or personal data
    (RA 10173 DPIA where automated decisions affect data subjects).

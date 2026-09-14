@@ -4311,6 +4311,24 @@ echo "--- Check 77: Sourcing-doctrine posture guard (two-tier canon) ---"
 # (line-break-proof, offset→line mapping preserved), the lowercase-best-of-breed
 # sweep extends to the four domain gap-analysis companions, and the companion's
 # repaired scope anchor is required present (part f).
+# 2026-09-14 twenty-third-wave review: the cascade's own teaching surfaces — the
+# wave-20 re-points fixed W5515/PA-128.3's gate prose but left the documents that
+# DEFINE the gate teaching the retired three-exit order: the sourcing model's §2
+# heading still read 'Unified Core, Bought Edges, Built Differentiators' with a 'three
+# tiers' intro over its own two-tier table (the v3.0 footer had collapsed §2 to
+# in-suite/build), its §12.2 stage-2 still routed 'vendor agent products = buy', the
+# guide's Law 4 statement still said 'in that default order', §3.3 still taught an
+# 'exactly three sourcing postures' estate with a '**Bought edge**' row holding the
+# retired BoB rows (WMS/TMS/WFM/FSM), §5.1 still taught 'configure → buy → build',
+# §7.3 stage-1 routed 'buy = vendor agent', §9.2's decision-rights row still read
+# '(configure/buy/build)', the operating model's §2 principle 7 still taught 'Configure
+# by default; buy before build' with the four-item appendix list (the model's §3.3
+# mandates five), its §8 SIB row still read 'Configure/buy/build routing', and
+# PA-128.3's W5512 Step 3 still taught 'vendor agent product = buy' two paragraphs
+# above its own use-EBS→build risk bullet and control — repaired in place and the
+# class closed: the retired gate-order literal joins the joined-text probe (a), and
+# part (h) anchor-pins the repaired §2 heading/intro, §12.2 routing, Law 4, §3.3,
+# §5.1, §7.3, §9.2, OM principle 7, OM SIB row and W5512 Step 3 + Touchpoints.
 CHECK77=$(python3 - "$REPO_ROOT" <<'PY'
 import os, re, sys, glob
 ROOT = sys.argv[1]
@@ -4349,6 +4367,21 @@ for f in glob.glob(ROOT + '/**/*.md', recursive=True):
                 break
             acc = end
         errs.append(f"{rel}:{lineno}: retired 'cloud ERP' posture literal in live prose (canon: Oracle E-Business Suite 12.2, the ERP core of record; joined-text probe — the literal may span a line break)")
+    # 2026-09-14 twenty-third-wave extension: the retired three-exit gate order joins the
+    # joined-text probe. Arrow-form only — the sourcing model's §1 history narration of the
+    # 2026-09-03 posture uses the slash form '(configure / buy / build)' and stays exempt as
+    # the dated record; the workflow-gap-analysis batch records are already skipped above.
+    for m in re.finditer(r'configure\s+→\s+buy\s+→\s+build', joined):
+        pos = m.start()
+        lineno = live_lines[0][0] if live_lines else 0
+        acc = 0
+        for idx, (i, text) in enumerate(live_lines):
+            end = acc + len(text) + 1
+            if pos < end:
+                lineno = i
+                break
+            acc = end
+        errs.append(f"{rel}:{lineno}: retired three-exit gate order 'configure → buy → build' in live prose (canon: the ordered two-exit test — in-EBS → build; joined-text probe)")
 
 # (b) VS-113 folder + PA-128.3 + the four domain gap-analysis companions: lowercase
 # 'best-of-breed' retired (W5516's registered title keeps its canonical case — so the
@@ -4450,6 +4483,58 @@ for _retired in ('can be cloud-hosted', 'Asia-Pacific hosting recommended', 'No 
     if _retired in _tg_live:
         errs.append(f'07-methodology/technical-guidelines.md: retired deployment literal \'{_retired}\' in live prose (canon: EBS on-premises, BuildRight-controlled facilities)')
 
+# (h) twenty-third-wave: the sourcing-gate teaching surfaces are anchor-pinned against
+# the two-exit canon (in-EBS → build; vendor agent products are not a sourcing exit).
+# Required anchors scanned over live lines joined (the same line-break-proof reading as
+# (a)/(f)); retired literals forbidden per document — 'Bought Edges' appears legitimately
+# in dated records elsewhere (change-notes, the sourcing-model §1 history), so it is
+# scoped to the sourcing model's live prose.
+_sm = os.path.join(ROOT, '07-methodology', 'capability-sourcing-and-engineering-model.md')
+_sm_live = ' '.join(l.rstrip('\n') for l in open(_sm, encoding='utf-8')
+                    if not (l.lstrip().startswith('*Date:') or 'Prior v' in l))
+_sm_live = re.sub(r'\s+', ' ', _sm_live)  # collapse indentation/line breaks — anchors are line-break-proof
+if '## 2. Landscape Principle — In-Suite Core, Built Differentiators' not in _sm_live:
+    errs.append("07-methodology/capability-sourcing-and-engineering-model.md: §2 heading must read the two-tier form 'Landscape Principle — In-Suite Core, Built Differentiators' (guard-anchored; the v3.0 footer collapsed §2 to in-suite/build — the retired 'Unified Core, Bought Edges' heading contradicted its own two-tier table)")
+if 'partitions the landscape into two' not in _sm_live:
+    errs.append('07-methodology/capability-sourcing-and-engineering-model.md: §2 intro must say the landscape partitions into two tiers (guard-anchored)')
+if 'Landscape Principle — Unified Core' in _sm_live or 'partitions the landscape into three' in _sm_live:
+    errs.append('07-methodology/capability-sourcing-and-engineering-model.md: retired three-tier §2 heading/intro form in live prose (guard-anchored)')
+if 'vendor agent products are not a sourcing' not in _sm_live:
+    errs.append('07-methodology/capability-sourcing-and-engineering-model.md: §12.2 stage-2 must route per the two-exit §3 gate — vendor agent products are not a sourcing exit (guard-anchored)')
+_ag = os.path.join(ROOT, '07-methodology', 'ai-first-operating-guide.md')
+_ag_live = ' '.join(l.rstrip('\n') for l in open(_ag, encoding='utf-8')
+                    if not (l.lstrip().startswith('*Date:') or l.lstrip().startswith('*Document Version:') or 'Prior v' in l))
+_ag_live = re.sub(r'\s+', ' ', _ag_live)
+for _anchor in ('one two-exit gate — use the core, else build',
+                '**Commodity services**',
+                'The test is ordered: **use the core → build**',
+                'Capability sourcing (use-the-core/build)'):
+    if _anchor not in _ag_live:
+        errs.append(f'07-methodology/ai-first-operating-guide.md: required two-tier anchor not found in live prose: {_anchor!r} (guard-anchored)')
+for _retired in ('**Bought edge**', 'exactly three sourcing postures', 'both alternatives are demonstrably inadequate', 'buy = vendor agent', 'Capability sourcing (configure/buy/build)'):
+    if _retired in _ag_live:
+        errs.append(f'07-methodology/ai-first-operating-guide.md: retired gate/posture literal {_retired!r} in live prose (canon: two-exit gate — use the core, else build)')
+_om = os.path.join(ROOT, '07-methodology', 'it-product-operating-model.md')
+_om_live = ' '.join(l.rstrip('\n') for l in open(_om, encoding='utf-8')
+                    if not (l.lstrip().startswith('*Date:') or l.lstrip().startswith('*Document Version:') or 'Prior v' in l))
+_om_live = re.sub(r'\s+', ' ', _om_live)
+for _anchor in ('Use EBS by default; build where EBS ships nothing',
+                'Use-EBS/build routing for every capability (the ordered test: in-EBS → build',
+                'a run-cost & talent plan (build), and a re-evaluation trigger'):
+    if _anchor not in _om_live:
+        errs.append(f'07-methodology/it-product-operating-model.md: required two-tier anchor not found in live prose: {_anchor!r} (guard-anchored)')
+for _retired in ('Configure by default; buy before build', 'Configure/buy/build routing', 'default order configure', 'in the order configure'):
+    if _retired in _om_live:
+        errs.append(f'07-methodology/it-product-operating-model.md: retired gate literal {_retired!r} in live prose (canon: in-EBS → build)')
+_w5512 = os.path.join(ROOT, '01-model-company', 'workflows', 'VS-128-ai-ml-governance-responsible-ai', 'PA-128.3-ai-lifecycle-operations-assurance-value-realization.md')
+_w5512_live = ' '.join(l.rstrip('\n') for l in open(_w5512, encoding='utf-8')
+                       if not (l.lstrip().startswith('*Date:') or 'Prior v' in l))
+_w5512_live = re.sub(r'\s+', ' ', _w5512_live)
+if 'platform-native in-suite automation = use EBS' not in _w5512_live:
+    errs.append('workflows/VS-128-.../PA-128.3-...md: W5512 Step 3 must route per the two-exit gate (anchor: platform-native in-suite automation = use EBS) (guard-anchored)')
+if 'vendor agent product = buy' in _w5512_live or 'configure/buy/build decision record' in _w5512_live:
+    errs.append('workflows/VS-128-.../PA-128.3-...md: retired W5512 Step-3/Touchpoints gate literals in live prose (vendor agent product = buy; configure/buy/build decision record)')
+
 print(f"C77_BAD={len(errs)}")
 for e in errs:
     print('BAD|' + e)
@@ -4457,7 +4542,7 @@ PY
 )
 C77_BAD=$(echo "$CHECK77" | sed -n 's/^C77_BAD=\([0-9]*\).*/\1/p')
 if [ "${C77_BAD:-1}" -eq 0 ]; then
-    ok "Sourcing-doctrine posture guard clean: no retired 'cloud ERP' / best-of-breed / bought-edge literals in live prose (joined-text probe — split literals caught), the executive summary carries the two-tier landscape anchors, the guide's §4.2/L3 assignments hold, the A6.3 already-built canon is pinned, the IT gap-analysis companion's §1 scope anchor holds, and the deployment canon is on-premises (EBS is not a cloud/SaaS ERP; blueprint README + architecture data-residency + tech-guidelines §2.1 pinned) (guard added by the 2026-09-14 twentieth-wave consistency review — the doctrine enactment re-pointed every guarded surface while stranding the posture prose on surfaces no rule read; twenty-second-wave review repaired the IT companion's line-split scope line and hardened the probe against line breaks; on-premises canon correction pinned the three deployment-decision surfaces after the pre-selection-era cloud-hosting wording was found in the blueprint README's Deployment-model row and tech-guidelines §2.1)"
+    ok "Sourcing-doctrine posture guard clean: no retired 'cloud ERP' / best-of-breed / bought-edge literals in live prose (joined-text probe — split literals caught), no retired 'configure → buy → build' gate order anywhere live (joined-text probe), the executive summary carries the two-tier landscape anchors, the guide's §4.2/L3 assignments and Law-4/§3.3/§5.1/§7.3/§9.2 two-exit forms hold, the sourcing model's §2 heading/intro and §12.2 routing hold the in-suite/build canon, the OM's principle 7 + SIB row hold, W5512's Step 3 routes use-EBS → build, the A6.3 already-built canon is pinned, the IT gap-analysis companion's §1 scope anchor holds, and the deployment canon is on-premises (EBS is not a cloud/SaaS ERP; blueprint README + architecture data-residency + tech-guidelines §2.1 pinned) (guard added by the 2026-09-14 twentieth-wave consistency review — the doctrine enactment re-pointed every guarded surface while stranding the posture prose on surfaces no rule read; twenty-second-wave review repaired the IT companion's line-split scope line and hardened the probe against line breaks; on-premises canon correction pinned the three deployment-decision surfaces; twenty-third-wave review closed the cascade's own teaching surfaces — the sourcing model §2 heading/'three tiers' intro + §12.2 vendor-agent-products routing, the guide's Law 4 'default order' / §3.3 three-posture estate / §5.1 configure→buy→build / §7.3 buy=vendor-agent / §9.2 row, the OM's principle 7 + SIB row, and W5512's Step 3 + Touchpoints, with the retired gate-order literal joining the joined-text probe and all repaired surfaces anchor-pinned)"
 else
     error "Sourcing-doctrine posture violations against the two-tier canon ($C77_BAD):"
     echo "$CHECK77" | grep -E '^BAD\|' | sed 's/^BAD|/    /'

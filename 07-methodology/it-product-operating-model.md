@@ -67,11 +67,13 @@ cutover command centers) are out of scope; see §10 for the transition.
    (integration, infrastructure, security, data, engineering enablement, field services) that
    treat domain teams as their customers, following Team-Topologies-style separation:
    stream-aligned, platform, and enabling (GRC) team types.
-7. **Configure by default; buy before build.** Every capability decision routes through the
-   Sourcing & Investment Board gate in the order configure → buy → build, with the ERP core
-   protected by a CEO-noted waiver rule. No capability may be re-sourced without a registered
-   decision carrying an IAP integration estimate, a control-mapping appendix against the
-   808-control register, a TCO sheet, and a re-evaluation trigger.
+7. **Use EBS by default; build where EBS ships nothing.** Every capability decision routes
+   through the Sourcing & Investment Board gate in the order in-EBS → build — build is
+   admitted only when the EBS-standard answer demonstrably does not exist — with the
+   in-suite core protected by a CEO-noted waiver rule. No capability may be re-sourced
+   without a registered decision carrying an IAP integration estimate, a control-mapping
+   appendix against the 808-control register, a TCO sheet, a run-cost & talent plan (build),
+   and a re-evaluation trigger.
 8. **Agents are products, not side effects.** Agentic automation runs on the AI & Agent
    Platform (AAP) paved road: every agent is registered under VS-128, acts only through
    IAP-contract tools, obeys the Tier-based autonomy ladder (Tier-1 human-approval-gated,
@@ -541,7 +543,7 @@ RACI key per [`WORKFLOW-FORMAT-GUIDE.md`](../01-model-company/workflows/WORKFLOW
 | Body | Cadence | Chair | Members | Decision Rights |
 |---|---|---|---|---|
 | **Product Council** | Monthly | CIO | 9 domain POs/PMs; BPOs or executive delegates (CFO/COO/CMO/CHRO offices); Head of EA; FinOps analyst with vendor-portfolio analyst (secretariat) | Capacity allocation between products (funding runs, not projects); roadmap approval above PHP 5M; cross-product priority conflicts; product KPI review; new-product creation or team split/merge recommendations; ratifies Sourcing & Investment Board recommendations above PHP 25M 3-year TCO |
-| **Sourcing & Investment Board (SIB)** | Monthly + on demand | CIO | Head of EA (assessment lead); affected IT PO/PM and BPO; FinOps analyst; CFO delegate; SEC lead (TPRM); Head of Engineering (build decisions); AAP lead (agentic decisions) | Configure/buy/build routing for every capability (default order configure → buy → build); agent-automation decisions incl. the Tier-based autonomy ladder; maintains the Capability Sourcing Register; recommends >PHP 25M-TCO decisions to the Product Council; core-tier waiver recommendations to the CEO (sourcing model §3) |
+| **Sourcing & Investment Board (SIB)** | Monthly + on demand | CIO | Head of EA (assessment lead); affected IT PO/PM and BPO; FinOps analyst; CFO delegate; SEC lead (TPRM); Head of Engineering (build decisions); AAP lead (agentic decisions) | Use-EBS/build routing for every capability (the ordered test: in-EBS → build; the fit-gap register is the standing evidence base); agent-automation decisions incl. the Tier-based autonomy ladder; maintains the Capability Sourcing Register; recommends >PHP 25M-TCO decisions to the Product Council; core-tier waiver recommendations to the CEO (sourcing model §3) |
 | **Architecture Review Board (ARB)** | Bi-weekly | Head of EA | Domain architects (incl. the OMO/TPS tech leads); IAP, INFRA, SEC, DP, SEP leads | Customization exceptions; new applications, integrations, or data pipelines; architecture opinions on sourcing proposals; retirement of capabilities; waivers removing a capability from the ERP core (rare, CEO-noted; core guardrail per the sourcing model §2) |
 | **Product Sync** | Weekly | Rotating PO | Domain POs/PMs; platform leads (IAP, INFRA, SEC, DP, SEP); FS supervisor | Dependency sequencing; release-window and contract-change coordination across the ERP train, vendor release intake, and build-squad rings; matrixed-resource booking; incident-trend review |
 | **Tier & Control Board** | Monthly | SEC GRC lead (senior analyst) | Domain QA/release analysts; Internal Audit liaison; Legal & Compliance liaison | Sign-off on changes touching Tier-1 workflows; audit-finding remediation tracking; annual control-test calendar against the 808-control register |

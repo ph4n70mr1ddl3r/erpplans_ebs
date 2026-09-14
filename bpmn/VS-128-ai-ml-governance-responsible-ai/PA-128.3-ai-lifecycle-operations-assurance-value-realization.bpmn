@@ -625,8 +625,8 @@ Duration: 2–3 hours/candidate</bpmn:documentation>
         <bpmn:incoming>W5512_Flow18</bpmn:incoming>
         <bpmn:outgoing>W5512_Flow19</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W5512_Task10" name="SIB routes the sourcing per the sourcing-model §3 gate — ERP-native automation…">
-        <bpmn:documentation>Step 3: SIB routes the sourcing per the sourcing-model §3 gate — ERP-native automation = configure; vendor agent product = buy; custom agent on the SEP paved road = build (the same gate, one more domain)
+      <bpmn:userTask id="W5512_Task10" name="SIB routes the sourcing per the sourcing-model §3 gate — platform-native…">
+        <bpmn:documentation>Step 3: SIB routes the sourcing per the sourcing-model §3 gate — platform-native in-suite automation = use EBS; custom agent on the SEP paved road = build (vendor agent products are not a sourcing exit; foundation-model APIs remain commodity procurement under tier-1 TPRM) — the same gate, one more domain
 Responsible (R): SIB / AAP Platform Lead
 Accountable (A): Head of EA
 Duration: At monthly SIB</bpmn:documentation>

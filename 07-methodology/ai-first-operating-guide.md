@@ -67,7 +67,7 @@ These laws are absolute. Every other rule in the corpus is an application of one
 | 1 | **One truth** | The enterprise knowledge base (EKB) is the only source of operational truth. No system, document, meeting, or model may carry a competing version of a canonical fact. | §8 (EKB, consistency engine, citation-or-refusal read rule) |
 | 2 | **One owner** | Every workflow, agent, system, control, dataset, and KB artifact has exactly one accountable owner — a named role, never a committee. Unowned means broken; the absence of an owner is itself a P2 incident. | §9.1; the catalog's Owner field on all 5,427 workflows; W5535 gap-admission |
 | 3 | **Contracts, not products** | Systems are interchangeable behind capability contracts. Nothing above the integration layer may know or care whether a capability is COTS, configured, or in-house. | §4 (capability-contract doctrine); single integration path (§3.5) |
-| 4 | **Configure the core, buy the commodity, build the differentiator** | Every capability is sourced through one gate, in that default order, with scored criteria and registered decisions. Neither "we already own it" nor "we can build it" is an argument. | §5 (sourcing doctrine; the W5515 gate) |
+| 4 | **Configure the core, buy the commodity, build the differentiator** | Every capability is sourced through one two-exit gate — use the core, else build — with scored criteria and registered decisions; commodity services are procured (tier-1 TPRM), not capability-sourced. Neither "we already own it" nor "we can build it" is an argument. | §5 (sourcing doctrine; the W5515 gate) |
 | 5 | **Agents are workers, not features** | Every AI agent is a registered digital worker with an owner, a charter, an autonomy tier, a cost code, and a kill-switch — managed in the same portfolio governance as human staff and systems. | §7 (agent factory; lifecycle; portfolio) |
 | 6 | **Autonomy is earned, tiered, and revocable** | An agent acts with exactly the autonomy its workflow's criticality tier licenses — drafted/approved for Tier 1, bounded for Tier 2, autonomous-in-bounds for Tier 3 — and any autonomy can be revoked instantly. | §6.3 (autonomy ladder); kill-switch (§7.1) |
 | 7 | **Humans own judgment, law, and money** | Statutory filings, SoD-conflicting duties, the POS/OT estate, and Tier-1 decisions are terminal-human. AI prepares; people decide and sign where the law and the control register require it. | §6.4 (hard boundaries); the 808-control register |
@@ -126,13 +126,15 @@ of Law 3.
 
 ### 3.3 The system estate (L3) — composable by design
 
-The estate has exactly three sourcing postures, assigned per capability by the gate in §5:
+The estate holds every capability in one of exactly two sourcing postures, assigned per
+capability by the gate in §5 — plus vendor commodity services, which are procurement
+(tier-1 TPRM), not capability sourcing:
 
 | Posture | What it holds (reference instantiation) | Property |
 |---|---|---|
-| **Configured core** | Financial ledger, procure-to-pay, the inventory ledger, HR/payroll, POS, approvals workflow | The systems of record (§4.2); protected by a core-tier guardrail — removal requires a CEO-noted waiver |
-| **Bought edge** | Warehouse execution, transport, workforce management, field service, foundation-model APIs | Specialist products, integrated via L4; exit-reserved and release-managed (§5.4) |
-| **Built differentiator** | Omnichannel order orchestration; trade & project services platform; the agent platform | In-house products on the engineering paved road — built only where the market has no adequate answer |
+| **Configured core** | Financial ledger, procure-to-pay, the inventory ledger, warehouse & transport execution, HR/payroll, POS, approvals workflow | The systems of record (§4.2); protected by a core-tier guardrail — removal requires a CEO-noted waiver |
+| **Built differentiator** | Omnichannel order orchestration; trade & project services platform; workforce scheduling & field-service dispatch platforms; the agent platform | In-house products on the engineering paved road — built only where the core platform has no adequate answer |
+| **Commodity services** | Foundation-model APIs and other vendor utilities | Procured, not sourced: commodity procurement under tier-1 TPRM; integrated via L4; run-discipline per §5.4 |
 
 ### 3.4 L2 — Data
 
@@ -256,8 +258,11 @@ accepted as lock-in.
 
 Every capability decision — new capability, replacement, or re-sourcing — routes through one
 gate (operated by the Sourcing & Investment Board, chaired by the CIO; demand enters through
-the capability demand-intake front door, W5535 in the reference corpus). The default order is
-**configure → buy → build**; build requires that both alternatives are demonstrably inadequate.
+the capability demand-intake front door, W5535 in the reference corpus). The test is ordered:
+**use the core → build** — if the core platform ships the function (or can be configured to),
+the answer is *use it*; build is admitted only when the core platform's standard answer
+demonstrably does not exist (in the reference corpus, the fit-gap register is the standing
+evidence base).
 Scoring is the reference model's: strategic differentiation, fit-to-standard gap, integration
 cost, data gravity, statutory localization (a vendor without the jurisdiction's statutory
 readiness is disqualified where the capability is statutory), TCO, talent/key-person risk, and
@@ -431,7 +436,7 @@ twin of the workflow format's required fields):
 
 | Stage | What happens | Gate to pass |
 |---|---|---|
-| 1. Intake | Candidate scored from the automation inventory (hours × frequency × error rate × feasibility — derivable from the workflow catalog's own Time Estimate/Staffing data); sourcing routed (configure = platform-native automation, buy = vendor agent, build = paved road) | Sourcing gate (§5.1) |
+| 1. Intake | Candidate scored from the automation inventory (hours × frequency × error rate × feasibility — derivable from the workflow catalog's own Time Estimate/Staffing data); sourcing routed (platform-native automation = use the core, custom agent = paved-road build; vendor agent products are not a sourcing exit) | Sourcing gate (§5.1) |
 | 2. Registration & review | Charter registered; risk tier assigned; ethics review for anything touching customers, employees, money, or personal data (DPIA where automated decisions affect data subjects) | Complete charter + review sign-off |
 | 3. Evaluation | Offline evals on the frozen dataset → **shadow** (runs beside humans, no actions) → **canary** (bounded actions, sampled audit) | Thresholds met at each rung; QA + evaluation engineer sign-off |
 | 4. Operation | Production on the paved road; telemetry live; sampled audit per tier; anomalies auto-escalate | Standing — drift or breach pulls the tier down (§6.3) |
@@ -634,7 +639,7 @@ cadence (§9.4).
 | Decision | Decides | Escalation |
 |---|---|---|
 | Day-to-day workflow execution & exceptions | The workflow's Owner field (R/A per step) | Department head |
-| Capability sourcing (configure/buy/build) | Sourcing & Investment Board (CIO chair) | Product Council (TCO threshold); CEO for core-tier removal |
+| Capability sourcing (use-the-core/build) | Sourcing & Investment Board (CIO chair) | Product Council (TCO threshold); CEO for core-tier removal |
 | Funding & portfolio priorities | Product Council | CEO/Board by materiality |
 | Architecture exceptions & contracts | Architecture Review Board | CIO |
 | Tier-1 changes, control-affecting changes | Tier & Control Board (with GRC) | CFO/CIO jointly |
