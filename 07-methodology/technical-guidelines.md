@@ -1,6 +1,6 @@
 # Technical Implementation Guidelines
 
-> This document provides technical guidelines and reference specifications for BuildRight Depot Corp.'s unified cloud ERP system architecture. The POS architecture is designed for **real-time/near-real-time operation** with **offline resilience** and **multi-origin fulfillment** capability.
+> This document provides technical guidelines and reference specifications for BuildRight Depot Corp.'s unified ERP system architecture (Oracle E-Business Suite 12.2 under the two-tier doctrine). The POS architecture is designed for **real-time/near-real-time operation** with **offline resilience** and **multi-origin fulfillment** capability.
 
 ---
 
@@ -175,7 +175,7 @@ define what connects. The table below details how these systems are integrated.
 
 ## 4. Security Reference Requirements
 
-These are the active security controls implemented across the unified cloud ERP platform.
+These are the active security controls implemented across the unified ERP platform.
 
 | Area | Expectation |
 |---|---|

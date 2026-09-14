@@ -1236,7 +1236,7 @@ Owner: Database Administrator (DBA)</bpmn:text>
     <bpmn:process id="W_W595" name="W595. ERP System Daily Health Check &amp; Integration Monitoring" isExecutable="false">
       <bpmn:documentation>Trigger: Daily scheduled health check (automated at 05:00); real-time integration failure alert from W380
 Frequency: Daily automated health check at 05:00 (before store operations begin at 08:00); continuous real-time integration monitoring 24/7
-Volume: 1 unified cloud ERP system; 600 POS terminals across 200 stores; 4 WMS instances; 1 ecommerce platform; BIR eFPS/EIS integration; bank integrations (BDO, BPI, Metrobank, Chinabank); payment gateways (GCash, PayMaya, credit card processors); ~15–20 critical integration endpoints monitored continuously
+Volume: 1 unified ERP system; 600 POS terminals across 200 stores; 4 WMS instances; 1 ecommerce platform; BIR eFPS/EIS integration; bank integrations (BDO, BPI, Metrobank, Chinabank); payment gateways (GCash, PayMaya, credit card processors); ~15–20 critical integration endpoints monitored continuously
 Owner: ERP System Administrator
 Participants: ERP System Administrator, IT Infrastructure Engineer (R for network/server issues), IT Helpdesk Lead (R for user communication), Integration Specialist (R for API issues), CIO (A for escalation)
 Source: workflow W595 — ERP System Daily Health Check &amp; Integration Monitoring</bpmn:documentation>

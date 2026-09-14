@@ -20,7 +20,7 @@ Source: workflow W4089 — Digital Adoption Strategy &amp; In-App Guidance (Digi
         <bpmn:outgoing>W4089_Flow10</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:userTask id="W4089_Task4" name="OCM/IT define the digital-adoption strategy: a Digital Adoption Platform (DAP)…">
-        <bpmn:documentation>Step 1: OCM/IT define the digital-adoption strategy: a Digital Adoption Platform (DAP) for in-app walkthroughs/contextual help, self-service enablement, and usage analytics across the cloud ERP, POS, ecommerce, and WMS
+        <bpmn:documentation>Step 1: OCM/IT define the digital-adoption strategy: a Digital Adoption Platform (DAP) for in-app walkthroughs/contextual help, self-service enablement, and usage analytics across the ERP, POS, ecommerce, and WMS
 Responsible (R): OCM / IT / EA
 Accountable (A): CHRO / CIO
 Duration: Per deployment</bpmn:documentation>

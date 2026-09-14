@@ -1,7 +1,8 @@
 # BuildRight Depot Corp. — Model Company Profile
 
 > A model hardware/DIY/home improvement big-box retail chain running a unified, modern
-> cloud ERP system across its entire retail operations and supply chain.
+> ERP system — Oracle E-Business Suite 12.2, the platform of record — across its entire
+> retail operations and supply chain.
 
 ---
 

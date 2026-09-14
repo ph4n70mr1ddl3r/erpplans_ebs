@@ -311,7 +311,7 @@ Source: workflow W3589 — Vendor &amp; Platform Strategy for Enterprise Systems
         <bpmn:outgoing>W3589_Flow10</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:userTask id="W3589_Task4" name="Chief Enterprise Architect/Vendor Mgmt define the platform and vendor strategy…">
-        <bpmn:documentation>Step 1: Chief Enterprise Architect/Vendor Mgmt define the platform and vendor strategy for enterprise systems: ERP, POS, WMS, ecommerce, MDM, BI, loyalty, payments, integration, cloud, security — single-vendor vs. best-of-breed, build vs. buy, the consolidation/rationalization direction (links to W3577), and the strategic vendor portfolio
+        <bpmn:documentation>Step 1: Chief Enterprise Architect/Vendor Mgmt define the platform and vendor strategy for enterprise systems: ERP, POS, WMS, ecommerce, MDM, BI, loyalty, payments, integration, cloud, security — the in-suite vs. build split under the two-tier doctrine, the consolidation/rationalization direction (links to W3577), and the strategic vendor portfolio
 Responsible (R): Chief Enterprise Architect / Vendor Mgmt
 Accountable (A): CIO
 Duration: Strategy + per decision</bpmn:documentation>
@@ -584,7 +584,7 @@ Owner: Chief Enterprise Architect / BI</bpmn:text>
 Frequency: Monthly SIB + on demand; annual register reaffirmation at QBR
 Volume: Every capability decision across the 188-VS estate routes through one gate — ~30–45 SIB assessments/year (new decisions, renewals-with-change, fired re-evaluation triggers) plus ~9 annual register reaffirmations
 Owner: Head of Enterprise Architecture (SIB assessment lead)
-Participants: Head of Enterprise Architecture, SIB (CIO chair; affected IT PO/PM &amp; BPO; FinOps/TBM analyst links to VS-135; CFO delegate; SEC lead — TPRM links to VS-161; Head of Engineering for build cases; AAP Platform Lead for agentic decisions), Product Council (ratifies 3-year-TCO &gt; PHP 25M), CEO (core-tier removal waiver, rare), ARB (links to W3571), vendor-portfolio analyst (Register secretariat), Procurement/Legal (links to VS-34/VS-100.3)
+Participants: Head of Enterprise Architecture, SIB (CIO chair; affected IT PO/PM &amp; BPO; FinOps/TBM analyst links to VS-135; CFO delegate; SEC lead — TPRM links to VS-161; Head of Engineering for build cases; AAP Platform Lead for agentic decisions), Product Council (ratifies 3-year-TCO &gt; PHP 25M), CEO (in-suite-tier removal waiver, rare), ARB (links to W3571), vendor-portfolio analyst (Register secretariat), Procurement/Legal (links to VS-34/VS-100.3)
 Source: workflow W5515 — Sourcing Decision Gate Operation &amp; Capability Sourcing Register</bpmn:documentation>
       <bpmn:laneSet id="W5515_LaneSet5">
         <bpmn:lane id="W5515_Lane1" name="Head of EA">
@@ -607,8 +607,8 @@ Source: workflow W5515 — Sourcing Decision Gate Operation &amp; Capability Sou
       <bpmn:startEvent id="W5515_Start6" name="Capability sourcing proposal (new capability, replacement, renewal-with-change) or a…">
         <bpmn:outgoing>W5515_Flow16</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:userTask id="W5515_Task7" name="Head of EA run the scored configure → buy → build assessment with the affected…">
-        <bpmn:documentation>Step 1: Head of EA run the scored configure → buy → build assessment with the affected PO/PM and BPO: strategic differentiation, ERP fit-to-standard gap, de-unification integration cost, data gravity, PH regulatory fit, 3-year TCO, talent/key-person risk, and exit strategy — default order configure → buy → build; build only when both alternatives are demonstrably inadequate
+      <bpmn:userTask id="W5515_Task7" name="Head of EA run the scored use-EBS → build assessment with the affected PO/PM…">
+        <bpmn:documentation>Step 1: Head of EA run the scored use-EBS → build assessment with the affected PO/PM and BPO: strategic differentiation, EBS fit-to-standard gap, de-unification integration cost, data gravity, PH regulatory fit, 3-year TCO, talent/key-person risk, and exit strategy — ordered test in-EBS → build: if an EBS module ships the function (or can be configured to), the answer is use it; build is admitted only when the EBS-standard answer demonstrably does not exist
 Responsible (R): Head of EA / Owning PO &amp; BPO
 Accountable (A): CIO (SIB chair)
 Duration: 6–10 hours/decision</bpmn:documentation>
@@ -616,7 +616,7 @@ Duration: 6–10 hours/decision</bpmn:documentation>
         <bpmn:outgoing>W5515_Flow17</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W5515_Task8" name="Assemble the five mandatory appendices — no sourcing decision is valid without…">
-        <bpmn:documentation>Step 2: Assemble the five mandatory appendices — no sourcing decision is valid without them: IAP integration estimate (flows, contracts, latency budget, run cost — links to W3579); control-mapping appendix naming every touched control of the 808-control register with its post-change evidence source; FinOps-verified TCO sheet (links to W4100); exit plan (buy) or run-cost &amp; talent plan (build); re-evaluation trigger
+        <bpmn:documentation>Step 2: Assemble the five mandatory appendices — no sourcing decision is valid without them: IAP integration estimate (flows, contracts, latency budget, run cost — links to W3579); control-mapping appendix naming every touched control of the 808-control register with its post-change evidence source; FinOps-verified TCO sheet (links to W4100); run-cost &amp; talent plan for build decisions (the buy exit does not exist under the two-tier doctrine); re-evaluation trigger
 Responsible (R): Head of EA / FinOps / SEC / IAP
 Accountable (A): CIO (SIB chair)
 Duration: Included in Step-1 pack</bpmn:documentation>
@@ -624,7 +624,7 @@ Duration: Included in Step-1 pack</bpmn:documentation>
         <bpmn:outgoing>W5515_Flow18</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W5515_Task9" name="ARB record the architecture opinion (integration pattern, data ownership…">
-        <bpmn:documentation>Step 3: ARB record the architecture opinion (integration pattern, data ownership, retirement of affected capabilities — links to W3571); SEC pre-read the TPRM tier and Philippine-localization posture for any buy candidate (links to VS-161)
+        <bpmn:documentation>Step 3: ARB record the architecture opinion (integration pattern, data ownership, retirement of affected capabilities — links to W3571); SEC pre-read the TPRM tier and Philippine-localization posture for any sourcing proposal (links to VS-161)
 Responsible (R): ARB / SEC
 Accountable (A): Head of EA
 Duration: Per decision</bpmn:documentation>
@@ -640,7 +640,7 @@ Duration: At monthly SIB</bpmn:documentation>
         <bpmn:outgoing>W5515_Flow20</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W5515_Task11" name="Route decisions exceeding SIB decision rights: 3-year TCO &gt; PHP 25M → Product…">
-        <bpmn:documentation>Step 5: Route decisions exceeding SIB decision rights: 3-year TCO &gt; PHP 25M → Product Council ratification; removal of a capability from the Core tier → CEO-noted waiver of the unified-core principle (rare; same weight as the v1.x single-vendor waiver)
+        <bpmn:documentation>Step 5: Route decisions exceeding SIB decision rights: 3-year TCO &gt; PHP 25M → Product Council ratification; removal of a capability from the in-suite tier → CEO-noted waiver (rare; same weight as the v1.x single-vendor waiver)
 Responsible (R): SIB / Product Council / CEO
 Accountable (A): CIO
 Duration: Per qualifying decision</bpmn:documentation>
@@ -659,7 +659,7 @@ Duration: Annual + continuous</bpmn:documentation>
         <bpmn:incoming>W5515_Flow22</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W5515_Annotation14">
-        <bpmn:text>Controls: - CTL-570 (ensure controlled execution — Technology Strategy, Innovation Governance &amp; Architecture Analytics (PA-113.3).) | - operational: no sourcing decision without the five mandatory appendices (IAP estimate, control-mapping, TCO, exit/run plan, re-evaluation trigger) | - operational: every capability decision recorded in the Capability Sourcing Register; Core-tier changes require a CEO-noted waiver
+        <bpmn:text>Controls: - CTL-570 (ensure controlled execution — Technology Strategy, Innovation Governance &amp; Architecture Analytics (PA-113.3).) | - operational: no sourcing decision without the five mandatory appendices (IAP estimate, control-mapping, TCO, exit/run plan, re-evaluation trigger) | - operational: every capability decision recorded in the Capability Sourcing Register; in-suite-tier changes require a CEO-noted waiver
 Owner: Head of Enterprise Architecture (SIB assessment lead)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W5515_Assoc15" sourceRef="W5515_Annotation14" targetRef="W5515_Start6" associationDirection="None" />

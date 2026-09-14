@@ -3,7 +3,7 @@
     <bpmn:process id="W_W4105" name="W4105. Cloud FinOps Operating Model &amp; FinOps Culture (Inform / Optimize / Operate)" isExecutable="false">
       <bpmn:documentation>Trigger: Program stand-up; cloud/SaaS maturity
 Frequency: Maintained + maturity evolution
-Volume: Enterprise FinOps function (cloud ERP, SaaS, integration, perimeter)
+Volume: Enterprise FinOps function (ERP core, SaaS, integration, perimeter)
 Owner: FinOps Lead
 Participants: CIO (VS-27), Engineering (VS-27/VS-113), Finance (VS-17.4), business owners
 Source: workflow W4105 — Cloud FinOps Operating Model &amp; FinOps Culture (Inform / Optimize / Operate)</bpmn:documentation>

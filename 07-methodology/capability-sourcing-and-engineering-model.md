@@ -32,7 +32,7 @@ This document defines:
 4. The **team archetypes and build-squad shape** the strategy requires (§5).
 5. The **Software Engineering Platform (SEP)** team and the paved road (§6).
 6. The **engineering standard** build squads must meet (SDLC, security, delivery) (§7).
-7. The **best-of-breed lifecycle** — vendor management, release intake, exit reserves (§8).
+7. The **vendor & platform lifecycle** — vendor commodities, already-built platforms, in-suite EBS currency; release intake, exit reserves (§8).
 8. **Funding, TCO and capitalization** rules per archetype (§9).
 9. KPIs and **risks** (§10–§11).
 

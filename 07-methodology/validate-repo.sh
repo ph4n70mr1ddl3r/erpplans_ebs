@@ -4271,6 +4271,109 @@ else
     echo "$CHECK76" | grep -E '^BAD\|' | sed 's/^BAD|/    /'
 fi
 
+# --- Check 77: Sourcing-doctrine posture guard (two-tier canon) ---
+echo "--- Check 77: Sourcing-doctrine posture guard (two-tier canon) ---"
+# The 2026-09-14 two-tier doctrine enactment (Oracle EBS 12.2 named the platform of
+# record; the best-of-breed buy tier eliminated — commits 8256ab1 / 356afc5 / fe57b44)
+# re-pointed every guarded surface but stranded the posture prose on live surfaces no
+# rule read: the executive summary still introduced 'a unified cloud ERP core provided
+# by a theoretical software vendor, surrounded by best-of-breed edge products' with a
+# 'Bought Edges' landscape table, the AI-first operating guide's §4.2 systems-of-record
+# reference assignment still assigned execution state to 'The bought edge systems
+# (WMS/TMS/WFM/FSM)' and payroll to 'statutory-core', its L3 reference-architecture
+# layer still drew 'bought best-of-breed edges', the root-README tree row still called
+# the OM 'hybrid: ERP core + BoB edges', and the process layer (VS-113's sourcing
+# machinery, the sourcing model's own §1 list) still taught the retired three-way
+# 'configure → buy → build' gate alongside operational PA bodies describing a 'unified
+# cloud ERP'. This check pins the two-tier canon: the retired 'cloud ERP' posture
+# literal cannot reappear in live prose anywhere (the sourcing model's §1 history
+# clause recording what the v1.x model assumed, dated change-notes and the gap-analysis
+# scenario table's authoring-time rows are the exempt record), the VS-113 sourcing
+# machinery and PA-128.3 cannot re-adopt lowercase 'best-of-breed' vocabulary (the
+# W5516 registered title keeps its case), the executive summary must carry the
+# two-tier landscape anchors and never the retired vendor/BoB forms, the guide's two
+# repaired assignment phrases cannot regress, and the assumptions register's A6.3
+# ecommerce row must state the already-built canon.
+CHECK77=$(python3 - "$REPO_ROOT" <<'PY'
+import os, re, sys, glob
+ROOT = sys.argv[1]
+errs = []
+
+# (a) repo-wide live-prose retirement of the 'cloud ERP' posture literal.
+for f in glob.glob(ROOT + '/**/*.md', recursive=True):
+    rel = os.path.relpath(f, ROOT)
+    if rel.startswith('CHANGELOG'):
+        continue
+    if os.path.normpath(rel) == os.path.normpath('01-model-company/workflows/workflow-gap-analysis.md'):
+        continue  # scenario table = authoring-time snapshot; batch notes = dated record
+    for i, line in enumerate(open(f, encoding='utf-8'), 1):
+        if line.lstrip().startswith('*Date:') or 'Prior v' in line:
+            continue
+        if 'single-vendor unified cloud ERP' in line:
+            continue  # sourcing-model §1 history: what the v1.x model assumed (retained record)
+        if re.search(r'cloud ERP', line, re.I):
+            errs.append(f"{rel}:{i}: retired 'cloud ERP' posture literal in live prose (canon: Oracle E-Business Suite 12.2, the ERP core of record)")
+
+# (b) VS-113 folder + PA-128.3: lowercase 'best-of-breed' retired (W5516's registered
+# title keeps its canonical case — so the match is case-sensitive, and the TOC/intra-file
+# anchor slugs forced by that registered title are stripped before matching).
+vs113 = os.path.join(ROOT, '01-model-company', 'workflows', 'VS-113-enterprise-architecture-application-portfolio-and-technology-strategy')
+targets = sorted(glob.glob(os.path.join(vs113, '*.md')))
+targets.append(os.path.join(ROOT, '01-model-company', 'workflows', 'VS-128-ai-ml-governance-responsible-ai', 'PA-128.3-ai-lifecycle-operations-assurance-value-realization.md'))
+for f in targets:
+    rel = os.path.relpath(f, ROOT)
+    for i, line in enumerate(open(f, encoding='utf-8'), 1):
+        if line.lstrip().startswith('*Date:') or 'Prior v' in line:
+            continue
+        probe = re.sub(r'\(#[^)]*\)', '', line)  # anchor slugs inherit the registered title's case
+        if 'best-of-breed' in probe:
+            errs.append(f"{rel}:{i}: retired lowercase 'best-of-breed' posture vocabulary in live prose (two-tier doctrine: in-suite/build; the W5516 registered title keeps its case)")
+
+# (c) executive-summary.md: two-tier landscape anchors required in live prose (a deleted
+# landscape row fails loudly even while a change-note still mentions the phrase); retired
+# forms forbidden in live prose (the *Date: change-notes are the exempt record).
+ex = os.path.join(ROOT, '01-model-company', 'executive-summary.md')
+xlines = open(ex, encoding='utf-8').readlines()
+live_x = [l for l in xlines if not (l.lstrip().startswith('*Date:') or 'Prior v' in l)]
+xtext = ''.join(live_x)
+for anchor in ('Oracle E-Business Suite 12.2', 'two-tier', 'Oracle WMS/MSCA', 'already-built'):
+    if anchor not in xtext:
+        errs.append(f"01-model-company/executive-summary.md: required two-tier landscape anchor '{anchor}' not found (guard-anchored)")
+for i, line in enumerate(xlines, 1):
+    if line.lstrip().startswith('*Date:') or 'Prior v' in line:
+        continue
+    for retired in ('Theoretical Software Vendor', 'Best-of-breed WMS', 'Bought Edges', 'Specialist vendors', 'best-of-breed'):
+        if retired in line:
+            errs.append(f"01-model-company/executive-summary.md:{i}: retired posture literal '{retired}' in live prose")
+
+# (d) ai-first-operating-guide.md: the two repaired §4.2/L3 phrases cannot regress in
+# live prose; the footer clause that documents the repair quotes them as frozen history.
+ag = os.path.join(ROOT, '07-methodology', 'ai-first-operating-guide.md')
+for i, line in enumerate(open(ag, encoding='utf-8'), 1):
+    if line.lstrip().startswith('*Date:') or line.lstrip().startswith('*Document Version:') or 'Prior v' in line:
+        continue
+    for retired in ('bought best-of-breed edges', 'The bought edge systems', 'payroll stays statutory-core'):
+        if retired in line:
+            errs.append(f"07-methodology/ai-first-operating-guide.md:{i}: retired assignment phrase '{retired}' in live prose")
+
+# (e) assumptions register: the A6.3 ecommerce row must state the already-built canon.
+asm = os.path.join(ROOT, '01-model-company', 'assumptions-and-design-decisions.md')
+if 'A6.3 | Ecommerce platform | Already-built in-house platform' not in open(asm, encoding='utf-8').read():
+    errs.append("01-model-company/assumptions-and-design-decisions.md: A6.3 ecommerce row must read 'Already-built in-house platform' (guard-anchored)")
+
+print(f"C77_BAD={len(errs)}")
+for e in errs:
+    print('BAD|' + e)
+PY
+)
+C77_BAD=$(echo "$CHECK77" | sed -n 's/^C77_BAD=\([0-9]*\).*/\1/p')
+if [ "${C77_BAD:-1}" -eq 0 ]; then
+    ok "Sourcing-doctrine posture guard clean: no retired 'cloud ERP' / best-of-breed / bought-edge literals in live prose, the executive summary carries the two-tier landscape anchors, the guide's §4.2/L3 assignments hold, and the A6.3 already-built canon is pinned (guard added by the 2026-09-14 twentieth-wave consistency review — the doctrine enactment re-pointed every guarded surface while stranding the posture prose on surfaces no rule read)"
+else
+    error "Sourcing-doctrine posture violations against the two-tier canon ($C77_BAD):"
+    echo "$CHECK77" | grep -E '^BAD\|' | sed 's/^BAD|/    /'
+fi
+
 echo ""
 echo "=== Validation Complete ==="
 echo "Errors: $ERRORS, Warnings: $WARNINGS"

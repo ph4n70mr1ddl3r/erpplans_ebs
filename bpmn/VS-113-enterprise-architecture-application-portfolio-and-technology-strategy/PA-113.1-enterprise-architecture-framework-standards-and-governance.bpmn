@@ -103,7 +103,7 @@ Duration: Maintained</bpmn:documentation>
         <bpmn:outgoing>W3570_Flow11</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W3570_Task5" name="Enterprise Architects/Domain Architects develop the reference architectures…">
-        <bpmn:documentation>Step 2: Enterprise Architects/Domain Architects develop the reference architectures: business-capability map, application-reference patterns (ERP-centric, surrounding best-of-breed, integration patterns links to W3579), data-reference patterns (links to W3581), deployment/availability patterns (links to W3582), and security patterns (links to W3583); map to the BuildRight landscape (POS, ERP, ecommerce, loyalty, WMS, payments, BI)
+        <bpmn:documentation>Step 2: Enterprise Architects/Domain Architects develop the reference architectures: business-capability map, application-reference patterns (ERP-centric, surrounding-application, integration patterns links to W3579), data-reference patterns (links to W3581), deployment/availability patterns (links to W3582), and security patterns (links to W3583); map to the BuildRight landscape (POS, ERP, ecommerce, loyalty, WMS, payments, BI)
 Responsible (R): Enterprise Architects / Domain Architects
 Accountable (A): Chief Enterprise Architect
 Duration: Maintained</bpmn:documentation>

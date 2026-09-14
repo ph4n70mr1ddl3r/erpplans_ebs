@@ -251,7 +251,7 @@ Duration: Per target</bpmn:documentation>
         <bpmn:outgoing>W3988_Flow13</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W3988_Task7" name="IT/Integration-Lead conduct IT and systems DD: ERP and application landscape…">
-        <bpmn:documentation>Step 2: IT/Integration-Lead conduct IT and systems DD: ERP and application landscape (alignment to BuildRight&#x27;s unified cloud ERP and enterprise architecture links to VS-113), data quality/master data (links to VS-29), infrastructure, security (links to VS-27), integration complexity/cost, and the carve-out/separation picture (links to VS-99 ITAM)
+        <bpmn:documentation>Step 2: IT/Integration-Lead conduct IT and systems DD: ERP and application landscape (alignment to BuildRight&#x27;s unified ERP and enterprise architecture links to VS-113), data quality/master data (links to VS-29), infrastructure, security (links to VS-27), integration complexity/cost, and the carve-out/separation picture (links to VS-99 ITAM)
 Responsible (R): IT / Integration Lead
 Accountable (A): CIO
 Duration: Per target</bpmn:documentation>

@@ -166,8 +166,8 @@ Source: workflow W3995 — Systems, Data &amp; ERP Integration for Acquired Enti
       <bpmn:startEvent id="W3995_Start3" name="Post-close integration">
         <bpmn:outgoing>W3995_Flow10</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:userTask id="W3995_Task4" name="IT/EA plan systems integration onto BuildRight&#x27;s unified cloud ERP and…">
-        <bpmn:documentation>Step 1: IT/EA plan systems integration onto BuildRight&#x27;s unified cloud ERP and enterprise architecture (links to VS-113): migration vs retirement vs coexistence, integration sequence, master-data harmonization (items, customers, vendors, locations, COA links to VS-29), and security/identity integration (links to VS-27)
+      <bpmn:userTask id="W3995_Task4" name="IT/EA plan systems integration onto BuildRight&#x27;s unified ERP and enterprise…">
+        <bpmn:documentation>Step 1: IT/EA plan systems integration onto BuildRight&#x27;s unified ERP and enterprise architecture (links to VS-113): migration vs retirement vs coexistence, integration sequence, master-data harmonization (items, customers, vendors, locations, COA links to VS-29), and security/identity integration (links to VS-27)
 Responsible (R): IT / EA / MDM
 Accountable (A): CIO
 Duration: Per transaction</bpmn:documentation>

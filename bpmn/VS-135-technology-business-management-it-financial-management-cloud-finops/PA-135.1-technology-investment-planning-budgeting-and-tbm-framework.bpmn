@@ -435,7 +435,7 @@ Owner: FinOps Lead</bpmn:text>
     <bpmn:process id="W_W4103" name="W4103. Application Portfolio Rationalization &amp; Run-Cost Analysis" isExecutable="false">
       <bpmn:documentation>Trigger: Annual portfolio review; redundancy/duplication; high run-cost
 Frequency: Annual + on trigger
-Volume: Enterprise application portfolio (cloud ERP + ~10+ integrations + perimeter apps)
+Volume: Enterprise application portfolio (ERP core + ~10+ integrations + perimeter apps)
 Owner: FinOps Lead / Enterprise Architect (VS-113)
 Participants: EA (VS-113), IT (VS-27), ITAM (VS-99), business owners, OpEx (VS-133)
 Source: workflow W4103 — Application Portfolio Rationalization &amp; Run-Cost Analysis</bpmn:documentation>

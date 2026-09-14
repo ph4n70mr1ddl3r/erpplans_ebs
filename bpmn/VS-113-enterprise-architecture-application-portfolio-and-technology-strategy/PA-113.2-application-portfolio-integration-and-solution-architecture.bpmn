@@ -524,7 +524,7 @@ Source: workflow W3584 — Architecture for ERP Platform &amp; Core Systems Evol
         <bpmn:outgoing>W3584_Flow10</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:serviceTask id="W3584_Task4" name="Enterprise Architects/Core-Systems Owners define the ERP and core-systems…">
-        <bpmn:documentation>Step 1: Enterprise Architects/Core-Systems Owners define the ERP and core-systems evolution architecture: ERP-centric reference architecture (W3570), extension vs. customization policy (prefer configured/standard over custom), the surrounding best-of-breed estate (POS links to VS-08, WMS links to VS-04, ecommerce links to VS-10, MDM links to VS-29, loyalty links to VS-13, payments links to VS-80), and the upgrade/release strategy
+        <bpmn:documentation>Step 1: Enterprise Architects/Core-Systems Owners define the ERP and core-systems evolution architecture: ERP-centric reference architecture (W3570), extension vs. customization policy (prefer configured/standard over custom), the surrounding application estate (POS links to VS-08, WMS links to VS-04, ecommerce links to VS-10, MDM links to VS-29, loyalty links to VS-13, payments links to VS-80), and the upgrade/release strategy
 Responsible (R): Enterprise Architects / Core-Systems Owners
 Accountable (A): Chief Enterprise Architect
 Duration: Strategy + per release</bpmn:documentation>
@@ -539,8 +539,8 @@ Duration: Per release</bpmn:documentation>
         <bpmn:incoming>W3584_Flow11</bpmn:incoming>
         <bpmn:outgoing>W3584_Flow12</bpmn:outgoing>
       </bpmn:serviceTask>
-      <bpmn:userTask id="W3584_Task6" name="Enterprise Architects manage the core-systems capability roadmap: when to adopt…">
-        <bpmn:documentation>Step 3: Enterprise Architects manage the core-systems capability roadmap: when to adopt ERP-native vs. best-of-breed vs. build, retirement of redundant surrounding applications (W3578), and alignment to the technology roadmap (W3585) and business capabilities (links to VS-33); report core-systems health and evolution to governance (W3592)
+      <bpmn:userTask id="W3584_Task6" name="Enterprise Architects manage the core-systems capability roadmap: when a…">
+        <bpmn:documentation>Step 3: Enterprise Architects manage the core-systems capability roadmap: when a capability runs in-suite vs. as a built platform, retirement of redundant surrounding applications (W3578), and alignment to the technology roadmap (W3585) and business capabilities (links to VS-33); report core-systems health and evolution to governance (W3592)
 Responsible (R): Enterprise Architects
 Accountable (A): CIO
 Duration: Roadmap cycle</bpmn:documentation>
@@ -579,8 +579,8 @@ Owner: Enterprise Architects</bpmn:text>
     <bpmn:process id="W_W5516" name="W5516. Best-of-Breed Product Lifecycle Management, Vendor Release Intake &amp; Exit Reserves" isExecutable="false">
       <bpmn:documentation>Trigger: Vendor release notification; contract signature/renewal; annual TPRM reassessment; QBR cycle; vendor health/EOL signal
 Frequency: Per vendor release + monthly product health + quarterly/annual lifecycle cycles
-Volume: ~9 BoB products at adoption (WMS, TMS, WFM, FSM, foundation-model API contracts) × ~6–12 vendor releases/product/year ≈ 54–108 release intakes/year; carried by 4 Vendor PM seats (WLI ×2, SSP ×1, CCP ×1) plus the CIO Office secretariat
-Owner: Vendor Product Manager (owning domain team, per BoB product)
+Volume: ~9 vendor-managed products (vendor commodities incl. foundation-model API contracts, the already-built POS/ecommerce/loyalty platforms, and the in-suite EBS currency program) × ~6–12 vendor releases/product/year ≈ 54–108 release intakes/year; carried by 4 Vendor PM seats (WLI ×2, SSP ×1, CCP ×1) plus the CIO Office secretariat
+Owner: Vendor Product Manager (owning domain team, per managed product)
 Participants: Vendor Product Managers (WLI ×2, SSP ×1, CCP ×1), CIO Office vendor-portfolio analyst (Register &amp; exit-reserve records), domain QA &amp; release analysts (regression pack), SEC TPRM analyst (links to VS-161), IAP (contract catalog &amp; consumer tests — links to W3579), INFRA (staging rings), Procurement/Legal (links to VS-34/VS-100.3), Tier &amp; Control Board (escalation), application lifecycle owner (links to W3578)
 Source: workflow W5516 — Best-of-Breed Product Lifecycle Management, Vendor Release Intake &amp; Exit Reserves</bpmn:documentation>
       <bpmn:laneSet id="W5516_LaneSet5">
@@ -605,7 +605,7 @@ Source: workflow W5516 — Best-of-Breed Product Lifecycle Management, Vendor Re
         <bpmn:outgoing>W5516_Flow16</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:userTask id="W5516_Task7" name="Vendor Product Manager run release intake: vendor releases land in the owning…">
-        <bpmn:documentation>Step 1: Vendor Product Manager run release intake: vendor releases land in the owning team&#x27;s staging ring and pass the intake checklist plus the domain regression pack (Tier-1 workflow coverage mandatory) before production — the same standard the ERP vendor train meets; a release may be deferred one cycle, never two
+        <bpmn:documentation>Step 1: Vendor Product Manager run release intake: vendor releases land in the owning team&#x27;s staging ring and pass the intake checklist plus the domain regression pack (Tier-1 workflow coverage mandatory) before production — the same standard the in-suite EBS currency (RUP/CPU) cycle meets; a release may be deferred one cycle, never two
 Responsible (R): Vendor PM / QA &amp; release analyst
 Accountable (A): Owning team IT PO
 Duration: 4–8 hours/release</bpmn:documentation>
@@ -628,16 +628,16 @@ Duration: Per signature/renewal</bpmn:documentation>
         <bpmn:incoming>W5516_Flow18</bpmn:incoming>
         <bpmn:outgoing>W5516_Flow19</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W5516_Task10" name="SEC/TPRM keep every BoB vendor risk-tiered with tier-1 annual reassessment and…">
-        <bpmn:documentation>Step 4: SEC/TPRM keep every BoB vendor risk-tiered with tier-1 annual reassessment and audit-report review (links to VS-161/W4729); continuous-monitoring feeds (financial, cyber, performance) watch vendor health and EOL (links to W4734)
+      <bpmn:userTask id="W5516_Task10" name="SEC/TPRM keep every managed vendor risk-tiered with tier-1 annual reassessment…">
+        <bpmn:documentation>Step 4: SEC/TPRM keep every managed vendor risk-tiered with tier-1 annual reassessment and audit-report review (links to VS-161/W4729); continuous-monitoring feeds (financial, cyber, performance) watch vendor health and EOL (links to W4734)
 Responsible (R): SEC TPRM analyst
 Accountable (A): SEC lead
 Duration: Annual + continuous</bpmn:documentation>
         <bpmn:incoming>W5516_Flow19</bpmn:incoming>
         <bpmn:outgoing>W5516_Flow20</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W5516_Task11" name="CIO Office accrue each product&#x27;s exit reserve at every QBR (a set percentage of…">
-        <bpmn:documentation>Step 5: CIO Office accrue each product&#x27;s exit reserve at every QBR (a set percentage of license cost, held centrally) and disclose reserves in the QBR FinOps pack — a vendor exit is never unfundable (links to VS-135)
+      <bpmn:userTask id="W5516_Task11" name="CIO Office accrue each replaceable vendor dependency&#x27;s exit reserve at every…">
+        <bpmn:documentation>Step 5: CIO Office accrue each replaceable vendor dependency&#x27;s exit reserve at every QBR (a set percentage of license cost, held centrally) and disclose reserves in the QBR FinOps pack — a vendor exit is never unfundable; the in-house platforms are forever by doctrine, so their resilience is a DR/run-cost question, not an exit question (links to VS-135)
 Responsible (R): Vendor-portfolio analyst / FinOps
 Accountable (A): CIO
 Duration: Quarterly</bpmn:documentation>
@@ -657,7 +657,7 @@ Duration: Monthly + per trigger</bpmn:documentation>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W5516_Annotation14">
         <bpmn:text>Controls: - CTL-569 (ensure controlled execution — Application Portfolio, Integration &amp; Solution Architecture (PA-113.2).) | - operational: vendor releases pass the domain regression pack (Tier-1 mandatory) before production | - operational: upgrade-currency KPI — defer one cycle, never two; Tier &amp; Control Board escalation at two behind | - operational: exit reserve accrued at every QBR; contract clauses (data residency, exit assistance, export, price caps) verified at signature and renewal
-Owner: Vendor Product Manager (owning domain team, per BoB product)</bpmn:text>
+Owner: Vendor Product Manager (owning domain team, per managed product)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W5516_Assoc15" sourceRef="W5516_Annotation14" targetRef="W5516_Start6" associationDirection="None" />
       <bpmn:sequenceFlow id="W5516_Flow16" sourceRef="W5516_Start6" targetRef="W5516_Task7" />

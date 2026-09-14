@@ -7,16 +7,17 @@
 ## Overview
 
 Enterprise Architecture, Application Portfolio & Technology Strategy workflows for BuildRight Depot
-Corp. — governing the **enterprise design discipline** that keeps the unified cloud ERP platform and
+Corp. — governing the **enterprise design discipline** that keeps the unified ERP platform of record
+(Oracle E-Business Suite 12.2) and
 its surrounding application landscape coherent, integrated, secure, standards-compliant, and aligned
 to business strategy as BuildRight grows from 200 to 300+ stores, expands ecommerce and
 marketplace operations, and executes major transformation programs. The model company profile
 (§14.1) declares "all legacy systems decommissioned and consolidated" into a single optimized ERP,
 yet consolidation is not a one-time event: ~10+ active integration touchpoints (POS ↔ ERP,
 Ecommerce ↔ ERP, Payment Gateway, Bank, BIR eFPS, SSS/PhilHealth/Pag-IBIG, Delivery Partners,
-Loyalty Engine, WMS RF Guns, Supplier Portal), the surrounding best-of-breed estate (loyalty
+Loyalty Engine, WMS RF Guns, Supplier Portal), the surrounding application estate (loyalty
 engine, payment gateway, BI, WMS, CRM, retail media, marketplace, storefront, MDM, the 600-POS
-estate), the cloud/SaaS portfolio (links to VS-99), and the steady pipeline of digital and
+estate), the cloud/SaaS commodity portfolio (links to VS-99), and the steady pipeline of digital and
 regulatory change (e-invoicing, AI/ML, net-zero, omnichannel evolution) require a continuous
 enterprise-architecture discipline. No existing value stream owns this: VS-27 operates and secures
 the platforms (IT operations/service management, infrastructure, cybersecurity), VS-28 consumes

@@ -8,7 +8,7 @@
 
 Technology Business Management (TBM), IT Financial Management & Cloud FinOps workflows for
 BuildRight Depot Corp. — owning the enterprise discipline of **managing the financials of
-technology** across a 5-entity, 200-store, PHP 62.3B-revenue retailer running a unified cloud ERP
+technology** across a 5-entity, 200-store, PHP 62.3B-revenue retailer running a unified ERP
 with ~10+ active integration touchpoints (POS, ecommerce, payments, banks, BIR eFPS, statutory,
 delivery, loyalty, WMS, supplier portal) and an expanding digital perimeter (ecommerce,
 marketplace, retail media, mobile app, BIR e-invoicing, AI/ML). Technology spend at this scale

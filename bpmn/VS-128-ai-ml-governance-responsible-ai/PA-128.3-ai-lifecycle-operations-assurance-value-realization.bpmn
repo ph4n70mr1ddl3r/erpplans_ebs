@@ -661,7 +661,7 @@ Duration: 0.5 hour/agent</bpmn:documentation>
         <bpmn:incoming>W5512_Flow23</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W5512_Annotation15">
-        <bpmn:text>Controls: - CTL-616 (ensure controlled execution — AI Lifecycle Operations, Assurance &amp; Value Realization (PA-128.3).) | - operational: registration gate — no runtime identity without a VS-128 registry record | - operational: SIB configure → buy → build routing for every agent proposal
+        <bpmn:text>Controls: - CTL-616 (ensure controlled execution — AI Lifecycle Operations, Assurance &amp; Value Realization (PA-128.3).) | - operational: registration gate — no runtime identity without a VS-128 registry record | - operational: SIB use-EBS → build routing for every agent proposal
 Owner: AAP Platform Lead</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W5512_Assoc16" sourceRef="W5512_Annotation15" targetRef="W5512_Start7" associationDirection="None" />

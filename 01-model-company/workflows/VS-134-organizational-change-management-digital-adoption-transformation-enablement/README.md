@@ -10,7 +10,7 @@ Organizational Change Management (OCM), Digital Adoption & Transformation Enable
 BuildRight Depot Corp. — owning the enterprise discipline of **leading the people side of change**
 so that transformation initiatives actually land and stick across a 5-entity, 200-store, 4-DC,
 ~6,762-employee operation distributed over 13+ Philippine regions. BuildRight runs a continuous
-pipeline of major change: the unified cloud ERP program, omnichannel/marketplace/retail-media
+pipeline of major change: the unified ERP program, omnichannel/marketplace/retail-media
 build-out, 10–15 new-store openings/year (VS-37), the store-remodel program (VS-109), the net-zero/
 renewable program (VS-108), BIR e-invoicing and statutory digitization, and ongoing process
 improvement (VS-133) — yet the 60–70% transformation-failure benchmark is driven overwhelmingly by
