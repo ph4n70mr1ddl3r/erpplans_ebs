@@ -306,6 +306,41 @@ generators were the only .py files missing from the methodology README's Content
 table was itself wrong — fix-ghost-titles-batch14.py (the batch-14 ghost-title charter
 sweep, listed in the root-README tree and cited by workflow-gap-analysis.md) was also
 absent; a Contents row now ships with this wave.
+
+2026-09-14 nineteenth-wave consistency review: the 02-oracle-ebs platform-blueprint
+folder joins the doc set — seven documents issued 2026-09-14 that no check read (the
+fifteenth-wave 'entire files' class one layer out), and the review found eight defects
+across five of them: the coverage-map §2 roll-up carried six invented template family
+names (Plan & Buy / Make & Improve / Move & Store / Count & Comply / People & Culture /
+Finance & Growth) with headlines written to the invented names — warehouse text on the
+785-workflow Finance row, statutory-filings text on the 445-workflow People row, payroll
+text on the 323-workflow Asset & Infrastructure row, GL/AP/AR text on the 976-workflow
+Governance & Assurance row — and §1 was missing two of the touchpoint map's 36 module
+rows despite the one-for-one claim (Innovation & Digital Transformation; Document
+Management); the architecture §2 planning paragraph kept the v1.0 'ASCP/Demantra
+evaluation' wording after fit-gap C5/§4-2 resolved adoption the same day, its §7 NFR
+row quoted the e-wallet SUBSET (~17,000/month, PA-15.2) as the ecommerce total against
+the profile's ~42,900/month canon, and its §3 stack table carried an 'RPO/RPO' typo;
+the fit-gap §3 Reading note's BUILD split ran 6 pre-date / 4 new-scope against the
+register's true 4/6 (OMO D10 + DP H6 + IAP H7 + AAP H9 pre-date; the payroll trio E5–E7,
+workforce E3, dispatch D13 and space-planning F4 are the doctrine's six new-scope rows;
+TPS carries no register row); the customization-governance §2 budget kept the v1.0
+'4 components' LOC-pack count against the register's single G4 row (its own footer
+already said '2 EXT / 1 LOC row'); and the integrations §2 SSS row kept the retired
+'PAY-PH pack' terminology for files the in-house Payroll PH build (E6) generates. All
+repaired in place (no version bumps, the twelfth–seventeenth-wave no-bump precedent);
+the guard gains ebs_blueprint_hits — the fit-gap §2 register's class column re-derived
+every run and pinned on the §3 table, the intro headline and the Reading-note split
+(counts must sum to the planned rows and name them), the touchpoint-map module set
+mirrored exactly by coverage-map §1, the canonical family names/counts mirrored in
+order by coverage-map §2, the §7 ecommerce total re-derived from the profile's
+Total-Ecommerce-Orders row, and the README §4 wave prose pinned to the classification
+register's re-derived tier ladder; doc-scoped retired literals hold the six invented
+family names, the subset-as-total and evaluation wordings, 'RPO/RPO' and 'PAY-PH pack'
+out of their documents. W0 joined the token scan's exemptions (the realization-wave
+tables label their foundation wave 'W0 — Foundation'; the register's ids start at W1),
+and the sourcing-model + folder sections joined the bare-§ fallback union (the
+citations 'sourcing model §12.1' and 'architecture §4' are cross-doc).
 """
 
 def _doc_versions():
@@ -439,7 +474,29 @@ DOCS = ["mobile-app-strategy.md", "data-migration-mapping.md",
         "../07-methodology/technical-guidelines.md",
         # 2026-09-04 guard-extension pass: shipped v1.0 outside the guard (the
         # sourcing-model precedent); generic checks verified clean on dry-run.
-        "../07-methodology/ai-first-operating-guide.md"]
+        "../07-methodology/ai-first-operating-guide.md",
+        # 2026-09-14 nineteenth-wave consistency review: the whole 02-oracle-ebs
+        # platform-blueprint folder joins the doc set — seven documents issued
+        # 2026-09-14 that no check read (the fifteenth-wave 'entire files' class one
+        # layer out: the folder shipped with zero validator coverage through both
+        # same-day issues, and the review found eight defects across five of the
+        # seven — the coverage-map's six invented family names and its two missing
+        # touchpoint-map module rows, the architecture's stale ASCP/Demantra
+        # 'evaluation' wording, its ~17,000-ecommerce subset-as-total NFR figure and
+        # the RPO/RPO typo, the fit-gap Reading note's 6/4 BUILD-split inversion,
+        # the customization-governance budget's stale 4-component LOC row, and the
+        # integrations SSS row's retired 'PAY-PH pack' terminology). Generic sweeps
+        # verified clean after the repairs; the guard gains the ebs_blueprint_hits
+        # structural rule (fit-gap §2→§3 class-count re-derivation + Reading-note
+        # BUILD split, touchpoint-map module-set mirror, canonical family-name
+        # mirror, ecommerce-total re-derivation, tier-ladder pin).
+        "../02-oracle-ebs/README.md",
+        "../02-oracle-ebs/ebs-platform-architecture.md",
+        "../02-oracle-ebs/module-coverage-map.md",
+        "../02-oracle-ebs/fit-gap-analysis.md",
+        "../02-oracle-ebs/customization-governance.md",
+        "../02-oracle-ebs/integrations.md",
+        "../02-oracle-ebs/data-migration.md"]
 RETIRED_FIGURES = ["6,757", "6,715", "5,357", "5,362", "5,349", "5,341",
                    "80,000 SKU", "1,000 POS terminal"]
 
@@ -484,6 +541,42 @@ RETIRED_LITERALS = {
         "16 product teams per",
         "IT 50→115",
     ],
+    # 2026-09-14 nineteenth-wave consistency review — the repaired defect forms of
+    # the 02-oracle-ebs blueprint must not come back (per-doc scope: 'People &
+    # Culture' legitimately appears in W3989's workflow title elsewhere, and the
+    # ~17,000 e-wallet-subset figure legitimately appears in PA-15.2 — only these
+    # documents misused them):
+    "module-coverage-map.md": [
+        # §2's roll-up table carried six invented template family names against the
+        # workflow catalog's canonical eight (the canonical names/counts are
+        # re-derived and pinned every run by ebs_blueprint_hits)
+        "Plan & Buy",
+        "Make & Improve",
+        "Move & Store",
+        "Count & Comply",
+        "People & Culture",
+        "Finance & Growth",
+    ],
+    "ebs-platform-architecture.md": [
+        # the §7 NFR row quoted the e-wallet SUBSET volume (~17,000/month,
+        # PA-15.2) as the ecommerce total; the canonical total is ~42,900/month
+        # (re-derived from the profile's Total-Ecommerce-Orders row by
+        # ebs_blueprint_hits)
+        "+ ~17,000 ecommerce",
+        "~17,000 ecommerce transactions/month",
+        # the §2 planning paragraph kept the v1.0 'evaluation' wording after
+        # fit-gap C5/§4-2 resolved adoption the same day
+        "evaluation vs. the in-house ROP/forecast pipeline",
+        # §3 tech-stack typo (the canon pairing is RPO/RTO)
+        "RPO/RPO",
+    ],
+    "integrations.md": [
+        # the §2 SSS/PhilHealth/Pag-IBIG row kept the v1.0 'PAY-PH pack'
+        # terminology after the payroll localization pack was retired (the agency
+        # files are generated by the in-house Payroll PH build, fit-gap E6;
+        # Oracle Payroll unadopted)
+        "PAY-PH pack",
+    ],
 }
 ANCHORS = {
     "it-product-operating-model.md": [
@@ -525,6 +618,25 @@ ANCHORS = {
     "data-volumes-and-integrations.md": [
         "10-Year Retention",
         "~300/day is the midpoint",
+    ],
+    # 2026-09-14 nineteenth-wave consistency review — the corrected forms the
+    # 02-oracle-ebs repairs produced must stay present (ebs_blueprint_hits
+    # re-derives their figures structurally; these pin the exact phrasings).
+    "ebs-platform-architecture.md": [
+        "RPO/RTO targets",
+        "**adopted** as the planning stack",
+        "~42,900 ecommerce orders/month",
+    ],
+    "customization-governance.md": [
+        "1 register row (G4 — the EBS-held BIR indirect-tax pack",
+    ],
+    "fit-gap-analysis.md": [
+        "of which 4 rows predate",
+        "6 rows are new scope the doctrine creates",
+    ],
+    "module-coverage-map.md": [
+        "| **Innovation & Digital Transformation** |",
+        "| **Document Management** |",
     ],
 }
 
@@ -1654,6 +1766,193 @@ def profile_derived_figure_hits():
     return hits
 
 
+def ebs_blueprint_hits():
+    """2026-09-14 nineteenth-wave consistency review — structural guard for the
+    02-oracle-ebs platform blueprint (seven documents that no check read; the review
+    found eight defects across five of them). Re-derives every pinned figure from
+    the primary sources on every run:
+      (a) the fit-gap §2 register's class column → §3's pinned class-count table,
+          the intro headline figures, and the §3 Reading note's BUILD split
+          (5 already-built platforms vs the planned-build rows; the note's
+          pre-doctrine/new-scope counts must sum to the planned rows and name them);
+      (b) the touchpoint map's module set ↔ module-coverage-map §1's column-1 set —
+          exact equality in both directions (the doc's 'one-for-one' claim — the
+          review found two module rows missing);
+      (c) the workflows/README canonical family names/counts ↔ coverage-map §2's
+          eight roll-up rows in order (the review found six invented names with
+          headlines describing the wrong families);
+      (d) the architecture §7 NFR row's ecommerce total ↔ the profile's
+          Total-Ecommerce-Orders canon (the review found the e-wallet subset
+          quoted as the total);
+      (e) the README §4 realization-wave prose ↔ the classification register's
+          re-derived tier ladder."""
+    hits = []
+
+    def ebs(name):
+        return os.path.normpath(os.path.join(MC, "..", "02-oracle-ebs", name))
+
+    def add(doc, ln, msg):
+        hits.append((doc, ln, msg))
+
+    # ---- (a) fit-gap register class counts → §3 table + intro + Reading note
+    fg = open(ebs("fit-gap-analysis.md"), encoding="utf-8").read()
+    fg_body = strip_footer(fg)
+    reg = fg_body.split("## 2. Capability Disposition Register")[1].split("## 3.")[0]
+    counts, build_existing, build_planned = {}, [], []
+    for ln in reg.splitlines():
+        if not ln.startswith("| "):
+            continue
+        cells = [c.strip() for c in ln.split("|")]
+        if len(cells) < 6 or not re.fullmatch(r"[A-H]\d+", cells[1] or ""):
+            continue
+        m = re.match(r"[A-Z][A-Z-]*", cells[4])
+        if not m:
+            add("fit-gap-analysis.md", 0,
+                f"register row {cells[1]} has an unparseable class cell '{cells[4]}'")
+            continue
+        cls = m.group(0)
+        counts[cls] = counts.get(cls, 0) + 1
+        if cls == "BUILD":
+            (build_existing if "*(existing)*" in cells[4] else build_planned).append(cells[1])
+    total = sum(counts.values())
+    std = counts.get("FIT-STD", 0) + counts.get("FIT-CFG", 0)
+    expect = {"FIT-STD": 31, "FIT-CFG": 23, "PER": 2, "EXT": 2, "LOC": 1,
+              "INT": 5, "BUILD": 15, "EDGE": 0, "OPEN": 0}
+    for cls, want in expect.items():
+        got = counts.get(cls, 0)
+        if got != want:
+            add("fit-gap-analysis.md", 0,
+                f"register re-derives {got} {cls} rows but §3 pins {want} — the "
+                f"class-count table no longer foots against the §2 register")
+    if total != 79:
+        add("fit-gap-analysis.md", 0,
+            f"register re-derives {total} disposition rows but the pinned register "
+            f"total is 79")
+    # every §3 class-count cell must equal the §2 re-derivation (the rule's first
+    # draft pinned only the standard-total and grand-total rows; a corrupted single
+    # class cell sailed through — caught by this wave's own teeth suite, T4)
+    sec3 = fg_body.split("## 3. Register Counts")[1].split("## 4.")[0]
+    for cls, want in expect.items():
+        m3 = re.search(rf"^\| \*{{0,2}}{cls}\*{{0,2}} \| \*{{0,2}}(\d+)", sec3, re.M)
+        if not m3:
+            add("fit-gap-analysis.md", 0, f"cannot find the §3 pinned row for {cls}")
+        elif int(m3.group(1)) != counts.get(cls, 0):
+            add("fit-gap-analysis.md", 0,
+                f"§3 pins {m3.group(1)} {cls} rows but the §2 register re-derives "
+                f"{counts.get(cls, 0)}")
+    m = re.search(r"\*\*Standard total \(STD \+ CFG\)\*\* \| \*\*(\d+)\*\* \| \*\*([\d.]+)%\*\*", fg_body)
+    if m:
+        if (int(m.group(1)), float(m.group(2))) != (std, round(std / total * 100, 1)):
+            add("fit-gap-analysis.md", 0,
+                f"§3 standard-total row says {m.group(1)} rows / {m.group(2)}% but the "
+                f"register re-derives {std} / {round(std / total * 100, 1)}%")
+    else:
+        add("fit-gap-analysis.md", 0, "cannot find the §3 standard-total row")
+    m = re.search(r"\*\*Total register rows\*\* \| \*\*(\d+)\*\*", fg_body)
+    if m and int(m.group(1)) != total:
+        add("fit-gap-analysis.md", 0,
+            f"§3 total row says {m.group(1)} but the register re-derives {total}")
+    if f"{total}-row register" not in fg_body:
+        add("fit-gap-analysis.md", 0,
+            f"intro headline does not carry the re-derived '{total}-row register' figure")
+    norm = " ".join(fg_body.replace(">", " ").split())  # the intro blockquote wraps mid-clause
+    if f"**{std} rows ({round(std / total * 100, 1)}%) run on standard or configured EBS**" not in norm:
+        add("fit-gap-analysis.md", 0,
+            f"intro headline does not carry the re-derived '{std} rows "
+            f"({round(std / total * 100, 1)}%)' standard-share figure")
+    if len(build_existing) != 5:
+        add("fit-gap-analysis.md", 0,
+            f"register re-derives {len(build_existing)} already-built BUILD rows "
+            f"({', '.join(build_existing)}) but 5 are pinned")
+    else:
+        m = re.search(r"of which (\d+) already-built platforms: ([^|*]+)", fg_body)
+        if not m or int(m.group(1)) != len(build_existing) or \
+                any(rid not in m.group(2) for rid in build_existing):
+            add("fit-gap-analysis.md", 0,
+                f"§3 BUILD row's already-built list does not match the register's "
+                f"re-derived BUILD*(existing)* rows: {', '.join(build_existing)}")
+    m = re.search(r"of which (\d+) rows predate", fg_body)
+    n_new = re.search(r"and (\d+) rows are new scope", fg_body)
+    if not m or not n_new:
+        add("fit-gap-analysis.md", 0,
+            "§3 Reading note lost its pre-doctrine/new-scope BUILD-split clauses "
+            "(expected 'of which N rows predate' and 'and M rows are new scope')")
+    elif int(m.group(1)) + int(n_new.group(1)) != len(build_planned):
+        add("fit-gap-analysis.md", 0,
+            f"Reading note's BUILD split ({m.group(1)} predate + {n_new.group(1)} "
+            f"new scope) does not sum to the register's {len(build_planned)} planned "
+            f"BUILD rows ({', '.join(build_planned)})")
+    else:
+        note = fg_body.split("Reading:")[1]
+        ids_named = set(re.findall(r"\b[A-H]\d+\b", note))
+        # expand 'E5–E7'-style row ranges (the note summarizes the payroll trio as a range)
+        for a1, n1, a2, n2 in re.findall(r"\b([A-H])(\d+)–([A-H])(\d+)\b", note):
+            if a1 == a2:
+                ids_named |= {f"{a1}{i}" for i in range(int(n1), int(n2) + 1)}
+        missing = [rid for rid in build_planned if rid not in ids_named]
+        if missing:
+            add("fit-gap-analysis.md", 0,
+                f"Reading note's BUILD split does not name planned-build row(s) "
+                f"{', '.join(missing)}")
+
+    # ---- (b) touchpoint-map module set ↔ coverage-map §1 (one-for-one)
+    tm = open(os.path.join(MC, "workflows", "workflow-system-touchpoint-map.md"),
+              encoding="utf-8").read()
+    tm_rows = re.findall(r"^\| \*\*(.+?)\*\* \|", tm, re.M)
+    cm = strip_footer(open(ebs("module-coverage-map.md"), encoding="utf-8").read())
+    cm_sec1 = cm.split("## 1. Generic Module")[1].split("## 2.")[0]
+    cm_rows = re.findall(r"^\| \*\*(.+?)\*\* \|", cm_sec1, re.M)
+    if sorted(tm_rows) != sorted(cm_rows):
+        missing = [r for r in tm_rows if r not in cm_rows]
+        extra = [r for r in cm_rows if r not in tm_rows]
+        add("module-coverage-map.md", 0,
+            f"§1 module set is not one-for-one with the touchpoint map "
+            f"({len(tm_rows)} rows there, {len(cm_rows)} here"
+            f"{' — missing: ' + '; '.join(missing) if missing else ''}"
+            f"{' — not in the touchpoint map: ' + '; '.join(extra) if extra else ''})")
+
+    # ---- (c) canonical family names/counts ↔ coverage-map §2 roll-up
+    wf = open(os.path.join(MC, "workflows", "README.md"), encoding="utf-8").read()
+    canon = re.findall(r"^### (.+?) \(([\d,]+) workflows\)", wf, re.M)
+    cm_sec2 = cm.split("## 2. Family Coverage Summary")[1].split("## 3.")[0]
+    cm_fam = re.findall(r"^\| \*\*(.+?)\*\* \(([\d,]+) WF\)", cm_sec2, re.M)
+    canon_named = [(n, int(c.replace(",", ""))) for n, c in canon]
+    cm_named = [(n, int(c.replace(",", ""))) for n, c in cm_fam]
+    if canon_named != cm_named:
+        add("module-coverage-map.md", 0,
+            f"§2 family roll-up does not match the workflow catalog's canonical "
+            f"families (catalog: "
+            f"{' / '.join(f'{n} {c}' for n, c in canon_named)}; coverage map: "
+            f"{' / '.join(f'{n} {c}' for n, c in cm_named) or 'none parsed'})")
+
+    # ---- (d) architecture §7 ecommerce total ↔ the profile's canon
+    prof = open(os.path.join(MC, "model-company-profile.md"), encoding="utf-8").read()
+    m = re.search(r"\| Total Ecommerce Orders \| ~([\d,]+) \|", prof)
+    arch = strip_footer(open(ebs("ebs-platform-architecture.md"), encoding="utf-8").read())
+    if m:
+        if f"~{m.group(1)} ecommerce" not in arch:
+            add("ebs-platform-architecture.md", 0,
+                f"§7 NFR row does not carry the profile's Total-Ecommerce-Orders "
+                f"canon (~{m.group(1)}/month) — the e-wallet subset must not stand "
+                f"in for the total")
+    else:
+        hits.append(("model-company-profile.md", 0,
+                     "cannot find the '| Total Ecommerce Orders |' canon row "
+                     "(ebs_blueprint_hits re-derivation source)"))
+
+    # ---- (e) README realization-wave prose ↔ the classification tier ladder
+    cls = open(os.path.join(MC, "workflows", "workflow-criticality-classification.md"),
+               encoding="utf-8").read()
+    tiers = dict(re.findall(r"^## Tier (\d): [^\n]*\(([\d,]+) Workflows\)", cls, re.M))
+    rd = strip_footer(open(ebs("README.md"), encoding="utf-8").read())
+    for t in sorted(tiers):
+        if f"Tier {t} ({tiers[t]}" not in rd:
+            add("README.md (02-oracle-ebs)", 0,
+                f"realization-wave prose does not carry the classification "
+                f"register's re-derived Tier-{t} figure ({tiers[t]})")
+    return hits
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--guard", action="store_true",
@@ -1668,6 +1967,18 @@ def main():
     rc_secs = sections_of(os.path.join(MC, "headcount-reality-check.md"))
     it_secs = sections_of(os.path.join(REPO, "07-methodology",
                                        "it-product-operating-model.md"))
+    # 2026-09-14 nineteenth-wave consistency review: the blueprint docs cite the
+    # sourcing model ('sourcing model §12.1', 'sourcing model §7 rule 7') and their
+    # own siblings ('architecture §4', 'fit-gap §6', 'customization-governance §5',
+    # 'integrations §1') — both join the bare-§ fallback union (the rc/it precedent).
+    src_secs = sections_of(os.path.join(REPO, "07-methodology",
+                                        "capability-sourcing-and-engineering-model.md"))
+    # data-migration.md cites its mapping companion's subsections ('per mapping §2.1')
+    dmm_secs = sections_of(os.path.join(MC, "data-migration-mapping.md"))
+    ebs_secs = set()
+    for rel in DOCS:
+        if rel.startswith("../02-oracle-ebs/"):
+            ebs_secs |= sections_of(os.path.normpath(os.path.join(MC, rel)))
     hits = []
     for rel in DOCS:
         doc = os.path.basename(rel)
@@ -1681,6 +1992,11 @@ def main():
             # requirement pattern would otherwise swallow 3-digit VS-1xx/CTL-1xx
             # tokens (e.g. VS-101 fullmatches [A-Z]{2,4}-\d{3})
             if re.fullmatch(r"W\d+[A-Z]?", tok):
+                if tok == "W0":
+                    continue  # 2026-09-14 nineteenth-wave review: the 02-oracle-ebs
+                    # realization-wave tables label their foundation wave 'W0 —
+                    # Foundation' (data-migration §2 sequence likewise); W0 is a wave
+                    # label, not a workflow id — the register's ids start at W1.
                 if tok not in wids:
                     hits.append((doc, line, f"unresolved {tok}"))
             elif tok.startswith("VS") and tok not in vsids:
@@ -1703,7 +2019,9 @@ def main():
             sec = m.group(1)
             own = sections_of(path)
             if sec not in prof_secs and sec not in own and sec not in dv_secs \
-                    and sec not in rc_secs and sec not in it_secs:
+                    and sec not in rc_secs and sec not in it_secs \
+                    and sec not in src_secs and sec not in ebs_secs \
+                    and sec not in dmm_secs:
                 hits.append((doc, body[:m.start()].count("\n") + 1,
                              f"unresolved §{sec}"))
         for lit in RETIRED_LITERALS.get(doc, []):
@@ -1743,6 +2061,8 @@ def main():
     hits.extend(companion_pin_hits())
     # 2026-09-09 sixteenth-wave consistency review addition
     hits.extend(profile_derived_figure_hits())
+    # 2026-09-14 nineteenth-wave consistency review addition
+    hits.extend(ebs_blueprint_hits())
     for doc, line, detail in hits:
         print(f"model-doc: {doc}:{line}: {detail}")
     print(f"audit-model-docs: {len(hits)} hit(s) across {len(DOCS)} documents")

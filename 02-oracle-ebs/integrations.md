@@ -53,7 +53,7 @@ Column "Flow" quotes the canonical matrix rows
 | ERP → Banks: AP payment files | Daily batch | IBY payment process → bank formats → IAP delivery | Payment-file vs payment-batch hash; W320 controls |
 | Banks → ERP: statements | Daily batch | Statement files → CE statement import → auto-reconciliation | W89 recon-rate KPI; unmatched → W272-class queues |
 | ERP → BIR eFPS: returns | Monthly/quarterly | eBTax/SLA balances → BI Publisher return datasets → IAP submission channel | Return dataset vs GL balance certification (VS-79 control) |
-| ERP → SSS/PhilHealth/Pag-IBIG | Monthly | PAY-PH pack file generation → IAP delivery | Contribution registers vs payroll registers (W251) |
+| ERP → SSS/PhilHealth/Pag-IBIG | Monthly | Payroll PH build statutory-file generation (E6) → IAP delivery | Contribution registers vs payroll registers (W251) |
 | ERP → Delivery partners (3PL) | Real-time | Delivery orders from WSH/OMO → IAP → partner APIs; status back into shipping | Delivery-order vs ship-confirm tie-out (W548) |
 | Payment GW → ERP: confirmations | Real-time | Gateway events → IAP → AR receipts (fast path) + settlement batches | W99/W261/W267 settlement reconciliation |
 | ERP → Supplier portal (iSupplier) | Real-time | Native iSupplier portal (DMZ) for PO/ASN/invoice; XML Gateway for cXML suppliers | ASN vs receipt match (W422); supplier-invoice tie-out |

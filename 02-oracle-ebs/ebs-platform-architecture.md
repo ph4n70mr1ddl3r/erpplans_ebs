@@ -97,10 +97,10 @@ and the **custom ecommerce platform** (both already built — integration is the
 gift-card/loyalty stack (already built), **Payroll PH**, the store workforce platform, and
 OMO/TPS/AAP/IAP/DP. None of them buys its way in; all of them ledger into EBS.
 
-**Planning products (license-flagged):** Oracle Advanced Supply Chain Planning (ASCP) and
-Demantra Demand Management are **not** part of the base footprint; VS-02's statistical
-forecasting and VS-127's IBP surface are dispositioned in the fit-gap register (ASCP/Demantra
-evaluation vs. the in-house ROP/forecast pipeline already implied by the automation program).
+**Planning products (adopted with the two-tier doctrine):** Oracle Advanced Supply Chain Planning (ASCP) and
+Demantra Demand Management — the EBS-family Value Chain Planning stack — are **adopted** as the planning stack
+(fit-gap C5, resolution record §4-2): VS-02's statistical forecasting and VS-127's IBP surface ride them; license
+cost is a FinOps decision, not a sourcing decision.
 
 ---
 
@@ -109,7 +109,7 @@ evaluation vs. the in-house ROP/forecast pipeline already implied by the automat
 | Layer | Standard | Notes |
 |---|---|---|
 | EBS release | **12.2**, Release Update Pack baseline **12.2.12** + quarterly RUP/monthly update streams | Keep within one RUP of current; RUP currency is a KPI (customization-governance §9) |
-| Database | **Oracle Database 19c**, RAC/Active Data Guard for HA/DR | Typhoon-season resilience (sourcing model §7 rule 7): ADG to a second zone; RPO/RPO targets per VS-26.1 BCP |
+| Database | **Oracle Database 19c**, RAC/Active Data Guard for HA/DR | Typhoon-season resilience (sourcing model §7 rule 7): ADG to a second zone; RPO/RTO targets per VS-26.1 BCP |
 | Middleware | Oracle WebLogic Server (12.2 stack), Oracle HTTP Server, DMZ reverse proxy tier for iSupplier/ISG endpoints | External endpoints terminate in DMZ per [technical-guidelines](../07-methodology/technical-guidelines.md) |
 | UI | Forms (back-office power users) + OA Framework/HTML (self-service, iProcurement, iSupplier) | No Forms modification (doctrine rule 3) |
 | Patching | **ADOP online patching** (edition-based redefinition) | Custom code must be edition-enabled — rules in [customization-governance §6](customization-governance.md) |
@@ -178,7 +178,7 @@ rules:
 
 | NFR theme | EBS platform answer |
 |---|---|
-| Scale (14,000 POS txn/store/month × 200) | 600-terminal POS estate posts ~2.8M POS + ~17,000 ecommerce transactions/month chain-wide — interface-table throughput well inside EBS reference capacity; nightly reconciliation batch validates completeness (W533/W537) |
+| Scale (14,000 POS txn/store/month × 200) | 600-terminal POS estate posts ~2.8M POS transactions plus ~42,900 ecommerce orders/month chain-wide (the ecommerce total per the profile's Total-Ecommerce-Orders canon and data-volumes §1.2's ~515,000/year; the e-wallet tender subset — about 420,000 POS and 17,000 ecommerce e-wallet transactions per month, per W1268/PA-15.2 — rides the same flows) — interface-table throughput well inside EBS reference capacity; nightly reconciliation batch validates completeness (W533/W537) |
 | Availability | RAC + Data Guard; the in-house POS platform runs offline (≥ 8h) with event replay (W535) — EBS availability never gates a store |
 | Batch windows | Close, costing, planning and interface-restore jobs run inside the [batch window table](../01-model-company/data-volumes-and-integrations.md) §5 |
 | Auditability | ERES e-signatures, FND audit options on master-data tables, SLA/audit trails — evidence for the 808-control register |

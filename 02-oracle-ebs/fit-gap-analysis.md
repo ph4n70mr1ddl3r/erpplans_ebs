@@ -179,9 +179,12 @@ Legend: **VS** = owning value stream(s). Classes per §1. Counts are pinned in �
 > buy. Over two-thirds of the model company runs on EBS untouched or configured; the 2
 > extensions are accounting-schedule builds with clean edges; the single EBS-held
 > localization is the BIR indirect-tax pack; the 15 BUILD rows split into 5 platforms that
-> already exist (integrate, don't rebuild) and 10 builds — of which 6 (OMO, TPS, AAP, IAP,
-> DP) predate this doctrine and 4 are new scope it creates (payroll engine + statutory
-> outputs, store workforce platform, dispatch, space-planning).
+> already exist (integrate, don't rebuild) and 10 planned builds — of which 4 rows predate
+> this doctrine (OMO D10, DP H6, IAP H7, AAP H9; the register's other pre-doctrine product,
+> TPS, carries no fit-gap row of its own — it is the candidate remit for D13's dispatch
+> build) and 6 rows are new scope the doctrine creates (the payroll engine and its two
+> statutory-output rows E5–E7, the store workforce platform E3, the dispatch build D13,
+> and space-planning F4).
 
 ---
 

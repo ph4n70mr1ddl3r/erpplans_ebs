@@ -33,7 +33,7 @@ Scarcity is the control. Extensions compete for a hard budget:
 | Budget item | Cap at go-live | Cap steady state | Current (fit-gap register) |
 |---|---|---|---|
 | EXT builds | 10 | 10 | 2 (PFRS 15 schedules; PFRS 16 schedules) |
-| LOC pack components | — (versioned pack) | versioned | 4 components |
+| LOC pack components | — (versioned pack) | versioned | 1 register row (G4 — the EBS-held BIR indirect-tax pack + its eFPS/EIS submission datasets, fit-gap §6); the payroll-side outputs are build rows E5–E7, not pack components |
 | PER (personalizations) | 150 | 150 | 2 register rows (page-level counts tracked in the register) |
 | Custom schema objects (tables/packages total) | 120 | 120 | — |
 

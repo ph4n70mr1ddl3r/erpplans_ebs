@@ -51,6 +51,8 @@ two documents read side-by-side.
 | **HSE / Safety** | Process-owned (VS-24); EBS touchpoint: incident-driven AP/FA entries | Process-owned |
 | **Services / Rental** | Service work orders (W544) via OM service lines + Projects where project-ized; tool rental deposits via AR deposits/commitments (W139) | Standard-light |
 | **Wholesale / B2B** | OM + QP corporate price books (W163), punch-out via XML Gateway/cXML (W283), EWT on wholesale (W145) | Standard |
+| **Innovation & Digital Transformation** | Not an EBS function — the AI/ML/RPA/innovation lifecycle (W200–W203, W208, W420) runs on the in-house platforms (the AAP agentic runtime, DP) reaching EBS only through IAP contracts; EBS's own surfaces are its operational dashboards (Enterprise Command Centers) and approval eventing | Build-led, EBS-integrated |
+| **Document Management** | Process-owned under the VS-88 retention discipline; EBS carries FND attachments on the migrated entities, ERES e-signature evidence on controlled approvals, and the W396 archiving/retention tier | Process-owned + ERES/attachments |
 
 ---
 
@@ -61,13 +63,13 @@ Roll-up by the workflow catalog's 8 value-stream families
 
 | Family | EBS posture | Headline |
 |---|---|---|
-| **Plan & Buy** (462 WF) | Core EBS | Merchandise planning analytics split (in-house/DP), sourcing/PO/landing fully EBS |
-| **Make & Improve** (500 WF) | Split | Inventory ledger/kits/quality EBS; process-mining & CI tooling in-house |
+| **Plan & Source** (462 WF) | Core EBS | Merchandise planning, S&OP and the sourcing/PO spine fully EBS (Purchasing/iProcurement/LCM); statistical forecasting and IBP ride the adopted Oracle ASCP + Demantra planning stack; merchandise-planning analytics split with the in-house DP |
+| **Make & Move** (500 WF) | EBS-ledgered, in-suite-executed | Warehouse and carrier execution run in-suite (Oracle WMS/MSCA, Shipping/OTE); EBS owns the inventory ledger, kitting/BOM, inter-org transfers, freight-cost accounting and landed cost |
 | **Sell & Serve** (1,546 WF) | EBS-mastered, built-executed | The POS estate, ecommerce platform, and loyalty stack are already built — they execute; EBS owns item/price/tax/credit/order masters and the AR ledger |
-| **Move & Store** (785 WF) | EBS-ledgered, in-suite/built-executed | Warehouse and carrier execution run in-suite (Oracle WMS/MSCA, Shipping/OTE); store workforce scheduling is an in-house build; EBS owns the inventory ledger, freight cost accounting, landed cost |
-| **Count & Comply** (445 WF) | Process + EBS evidence | Statutory filings generated from EBS/PAY via the BIR pack; registers process-owned |
-| **People & Culture** (323 WF) | Core EBS + in-house payroll/workforce builds | Core HR/payroll data of record in EBS (PER); the payroll engine, statutory outputs and store scheduling are in-house builds posting into EBS |
-| **Finance & Growth** (976 WF) | Core EBS | GL/AP/AR/CE/XTR/FA/PA — the strongest standard fit in the suite |
+| **Finance** (785 WF) | Core EBS | GL/AP/AR/CE/XTR/FA — the strongest standard fit in the suite; the BIR indirect-tax pack is the one EBS-held localization (VS-79); gift-card liability, vendor rebates and capex accounting post natively |
+| **People** (445 WF) | Core EBS + in-house payroll/workforce builds | Core HR data of record in EBS (PER); the payroll engine, its statutory outputs and the store workforce platform are in-house builds posting into EBS (E3–E8) |
+| **Asset & Infrastructure** (323 WF) | Core EBS | Property Manager, FA and Projects carry leases, right-of-use schedules (the A12 EXT), capex/CIP, store construction and facilities |
+| **Governance & Assurance** (976 WF) | Process + EBS evidence | Registers, filings and assurance workflows are process-owned; EBS supplies the evidence layer (FND audit, ERES, AME logs) and the financial termini (shrinkage write-offs, claims, quarantine) |
 | **Technology & Data** (390 WF) | Process + platform | EBS is itself the governed platform (W384/W396); DP/IAP in-house per register |
 
 ---

@@ -47,7 +47,7 @@ rights); the sourcing-model rewrite shipped the same day (sourcing v3.0, OM v3.1
 4. **Upgrade-safe extensions only.** Custom code lives in a custom schema/top (`BDR`),
    registers in the EBS object registry, and follows the online-patching (editioned
    redefinition) rules so ADOP cycles never break on custom objects.
-5. **One control surface.** Every workflow's Controls section (CTL-1 – CTL-808) maps to an
+5. **One control surface.** Every workflow's Controls section (CTL-01 – CTL-808) maps to an
    EBS function, setup, AME rule, or interface control — evidence must come from EBS or the
    system the register assigned, never from a spreadsheet beside it.
 6. **De-customization triggers.** Every extension carries a review trigger: if a future RUP
