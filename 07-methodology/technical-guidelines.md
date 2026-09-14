@@ -84,9 +84,9 @@ The following is the infrastructure topology that satisfies the NFRs in [erp-req
 | 200 store locations with POS | Requires reliable connectivity or robust offline mode |
 | 4 DCs with WMS/RF guns | Low-latency connection needed for real-time pick/ship |
 | 600 POS terminals | Centralized management is essential |
-| 6,762 employees | HR/payroll can be cloud-hosted |
+| 6,762 employees | Core HR lives in the on-premises EBS suite; statutory payroll is computed on the in-house Payroll PH build on BuildRight-run infrastructure — nothing rides a public cloud (the platform of record is not a cloud/SaaS ERP) |
 | Philippine regulatory filing | BIR, SSS, PhilHealth, Pag-IBIG file generation |
-| Data residency | No strict PH data residency requirement, but Asia-Pacific hosting recommended for latency |
+| Data residency | The platform of record (Oracle EBS 12.2) runs **on-premises** in BuildRight-controlled facilities per [`02-oracle-ebs/`](../02-oracle-ebs/README.md) §1; Philippine facility placement favored for latency |
 
 ### 2.2 Network Bandwidth Reference Estimates
 

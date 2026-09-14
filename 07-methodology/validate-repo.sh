@@ -4294,6 +4294,14 @@ echo "--- Check 77: Sourcing-doctrine posture guard (two-tier canon) ---"
 # two-tier landscape anchors and never the retired vendor/BoB forms, the guide's two
 # repaired assignment phrases cannot regress, and the assumptions register's A6.3
 # ecommerce row must state the already-built canon.
+# 2026-09-14 on-premises canon correction (user direction): Oracle EBS is an on-premises
+# suite, not a cloud-based ERP — the blueprint README's Deployment-model row still offered
+# 'colocation or OCI compute' with the hedged 'on-premises-grade' rationale, the
+# architecture's Data-residency row said 'hosted private deployment', and
+# technical-guidelines §2.1 (pre-selection-era rows) said 'HR/payroll can be cloud-hosted'
+# and 'Asia-Pacific hosting recommended'. All trued to on-premises and pinned (part g);
+# the retired literals are scoped per document because 'OCI' elsewhere is legitimate
+# (PFRS 9 OCI; cXML/OCI punchout) and 'Cloud FinOps' is VS-135's registered title.
 # 2026-09-14 twenty-second-wave review: one stranded live surface found — the IT
 # gap-analysis companion's §1 scope line still read 'hybrid cloud ERP + best-of-breed
 # edge + 2 in-house built products', the retired three-tier posture — and it escaped
@@ -4406,6 +4414,42 @@ _it_live = ' '.join(l.rstrip('\n') for l in open(_it, encoding='utf-8')
 if 'the in-suite ERP core of record — Oracle E-Business Suite 12.2 under the two-tier doctrine' not in _it_live:
     errs.append("01-model-company/workflows/workflow-gap-analysis-it.md: repaired §1 scope anchor 'the in-suite ERP core of record — Oracle E-Business Suite 12.2 under the two-tier doctrine' not found in live prose (guard-anchored; the retired 'hybrid cloud ERP + best-of-breed edge + 2 in-house built products' form may not return)")
 
+# (g) deployment-posture guard (2026-09-14 on-premises canon): Oracle EBS is an
+# on-premises suite, NOT a cloud/SaaS ERP — the platform of record runs in
+# BuildRight-controlled facilities. The three deployment-decision surfaces are pinned:
+# the blueprint README's Deployment-model row, the architecture's Data-residency row,
+# and technical-guidelines §2.1 (whose pre-selection-era rows said 'HR/payroll can be
+# cloud-hosted' and 'Asia-Pacific hosting recommended'). The retired literals are
+# scoped per document — 'OCI' elsewhere in the corpus is legitimate (PFRS 9 Other
+# Comprehensive Income; the cXML/OCI punchout protocol) and must never be swept
+# repo-wide. VS-135's registered 'Cloud FinOps' title and the INFRA team names are
+# commodity-estate vocabulary, not deployment claims — out of scope.
+_ebs_readme = os.path.join(ROOT, '02-oracle-ebs', 'README.md')
+_ebs_readme_live = ' '.join(l.rstrip('\n') for l in open(_ebs_readme, encoding='utf-8')
+                            if not (l.lstrip().startswith('*Date:') or 'Prior v' in l))
+if 'On-premises deployment' not in _ebs_readme_live:
+    errs.append('02-oracle-ebs/README.md: Deployment-model row must state \'On-premises deployment\' (guard-anchored)')
+if 'on-premises suite, not a cloud/SaaS ERP' not in _ebs_readme_live:
+    errs.append('02-oracle-ebs/README.md: Deployment-model rationale must state \'on-premises suite, not a cloud/SaaS ERP\' (guard-anchored)')
+for _retired in ('OCI compute', 'on-premises-grade', 'Hosted private deployment'):
+    if _retired in _ebs_readme_live:
+        errs.append(f'02-oracle-ebs/README.md: retired deployment literal \'{_retired}\' in live prose (canon: on-premises, BuildRight-controlled facilities)')
+_arch = os.path.join(ROOT, '02-oracle-ebs', 'ebs-platform-architecture.md')
+_arch_live = ' '.join(l.rstrip('\n') for l in open(_arch, encoding='utf-8')
+                      if not (l.lstrip().startswith('*Date:') or 'Prior v' in l))
+if 'Fully under BuildRight control (on-premises deployment)' not in _arch_live:
+    errs.append('02-oracle-ebs/ebs-platform-architecture.md: Data-residency row must read \'Fully under BuildRight control (on-premises deployment)\' (guard-anchored)')
+_tg = os.path.join(ROOT, '07-methodology', 'technical-guidelines.md')
+_tg_live = ' '.join(l.rstrip('\n') for l in open(_tg, encoding='utf-8')
+                    if not (l.lstrip().startswith('*Date:') or 'Prior v' in l))
+for _anchor in ('Core HR lives in the on-premises EBS suite',
+                'runs **on-premises** in BuildRight-controlled facilities per'):
+    if _anchor not in _tg_live:
+        errs.append(f'07-methodology/technical-guidelines.md: required on-premises §2.1 anchor not found: {_anchor!r} (guard-anchored)')
+for _retired in ('can be cloud-hosted', 'Asia-Pacific hosting recommended', 'No strict PH data residency requirement'):
+    if _retired in _tg_live:
+        errs.append(f'07-methodology/technical-guidelines.md: retired deployment literal \'{_retired}\' in live prose (canon: EBS on-premises, BuildRight-controlled facilities)')
+
 print(f"C77_BAD={len(errs)}")
 for e in errs:
     print('BAD|' + e)
@@ -4413,7 +4457,7 @@ PY
 )
 C77_BAD=$(echo "$CHECK77" | sed -n 's/^C77_BAD=\([0-9]*\).*/\1/p')
 if [ "${C77_BAD:-1}" -eq 0 ]; then
-    ok "Sourcing-doctrine posture guard clean: no retired 'cloud ERP' / best-of-breed / bought-edge literals in live prose (joined-text probe — split literals caught), the executive summary carries the two-tier landscape anchors, the guide's §4.2/L3 assignments hold, the A6.3 already-built canon is pinned, and the IT gap-analysis companion's §1 scope anchor holds (guard added by the 2026-09-14 twentieth-wave consistency review — the doctrine enactment re-pointed every guarded surface while stranding the posture prose on surfaces no rule read; twenty-second-wave review repaired the IT companion's line-split scope line and hardened the probe against line breaks)"
+    ok "Sourcing-doctrine posture guard clean: no retired 'cloud ERP' / best-of-breed / bought-edge literals in live prose (joined-text probe — split literals caught), the executive summary carries the two-tier landscape anchors, the guide's §4.2/L3 assignments hold, the A6.3 already-built canon is pinned, the IT gap-analysis companion's §1 scope anchor holds, and the deployment canon is on-premises (EBS is not a cloud/SaaS ERP; blueprint README + architecture data-residency + tech-guidelines §2.1 pinned) (guard added by the 2026-09-14 twentieth-wave consistency review — the doctrine enactment re-pointed every guarded surface while stranding the posture prose on surfaces no rule read; twenty-second-wave review repaired the IT companion's line-split scope line and hardened the probe against line breaks; on-premises canon correction pinned the three deployment-decision surfaces after the pre-selection-era cloud-hosting wording was found in the blueprint README's Deployment-model row and tech-guidelines §2.1)"
 else
     error "Sourcing-doctrine posture violations against the two-tier canon ($C77_BAD):"
     echo "$CHECK77" | grep -E '^BAD\|' | sed 's/^BAD|/    /'

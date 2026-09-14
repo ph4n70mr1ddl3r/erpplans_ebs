@@ -182,7 +182,7 @@ rules:
 | Availability | RAC + Data Guard; the in-house POS platform runs offline (≥ 8h) with event replay (W535) — EBS availability never gates a store |
 | Batch windows | Close, costing, planning and interface-restore jobs run inside the [batch window table](../01-model-company/data-volumes-and-integrations.md) §5 |
 | Auditability | ERES e-signatures, FND audit options on master-data tables, SLA/audit trails — evidence for the 808-control register |
-| Data residency | Fully under BuildRight control (hosted private deployment), RA 10173-aligned (W434 NPC registration scope) |
+| Data residency | Fully under BuildRight control (on-premises deployment), RA 10173-aligned (W434 NPC registration scope) |
 
 ---
 
