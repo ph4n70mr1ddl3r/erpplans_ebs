@@ -849,6 +849,80 @@ for dirpath, _d, files in os.walk(ROOT):
             line_no = txt.count('\n', 0, m.start()) + 1
             stale.append(f"{os.path.relpath(path, ROOT)}:{line_no}")
 
+# ---- Part C: workflows/README.md Quick-Stats table + family-subtotal reconciliation line
+# vs the canonical registers. Added by the 2026-09-14 twenty-sixth-wave consistency review:
+# the Quick-Stats table (188 / 569 / 5,427 / 1,396 / 3,296 / 758 / the 'Classified total'
+# row-prefix triple) and the closing 'Family subtotal reconciliation: … = N' sentence were
+# read by no check — Part A reconciles the family sections only, and Checks 70/74 pin other
+# surfaces — so a batch that re-pointed every guarded surface could still strand the README's
+# own headline block (verified by synthetic injection before arming: a 5,426 Quick-Stats row
+# and a 5,426 reconciliation total both passed the full validator 0/0). Every figure is
+# re-derived from the primary sources each run: VS-* directories, PA-*.md files, unique ##
+# W-headers + ### sub-workflow headers in the PA corpus, and the classification register's
+# per-tier rows (register_heading_hits attribution).
+import glob
+vs_dirs = [p for p in glob.glob(f"{ROOT}/01-model-company/workflows/VS-*") if os.path.isdir(p)]
+pa_files = glob.glob(f"{ROOT}/01-model-company/workflows/VS-*/PA-*.md")
+uniq_h, sub_h = set(), set()
+for _f in pa_files:
+    _t = open(_f, encoding='utf-8').read()
+    uniq_h.update(m.group(1) for m in re.finditer(r'^## (W\d+[A-Z]?)\.', _t, re.M))
+    sub_h.update(m.group(1) for m in re.finditer(r'^### (W\d+[A-Z]?)\.', _t, re.M))
+cls_txt = open(f"{ROOT}/01-model-company/workflows/workflow-criticality-classification.md", encoding='utf-8').read()
+# Per-tier row attribution ports audit-model-docs.register_heading_hits' derivation
+# (the repo's canonical tier counter): '## Tier N:' / '### Tier N Additions' /
+# '#### Tier N …' headings set the attribution context; any other level-≤2 heading
+# clears it; every '| Wx | …' register row increments the active tier.
+tiers, _cur = {1: 0, 2: 0, 3: 0}, None
+for _line in cls_txt.splitlines():
+    _hm = re.match(r'^(#{1,4}) (.*)', _line)
+    if _hm:
+        _level, _text = len(_hm.group(1)), _hm.group(2)
+        _tm = re.match(r'^Tier (\d):', _text)
+        _am = re.match(r'^Tier (\d) Additions', _text)
+        _t4 = re.match(r'^Tier (\d)', _text)
+        if _tm:
+            _cur = int(_tm.group(1))
+        elif _am:
+            _cur = int(_am.group(1))
+        elif _level == 4 and _t4:
+            _cur = int(_t4.group(1))
+        elif _level <= 2:
+            _cur = None
+        continue
+    if _cur and re.match(r'^\| (W\d+[A-Z]?) \| ', _line):
+        tiers[_cur] += 1
+qs = {}
+for _line in readme:
+    _m = re.match(r'^\| ([A-Za-z][A-Za-z0-9 /()-]*?) \| ([0-9,]+) \|$', _line)
+    if _m:
+        qs[_m.group(1).strip()] = int(_m.group(2).replace(',', ''))
+def _qeq(key, want, basis):
+    got = qs.get(key)
+    if got is None:
+        errors.append(f"workflows/README.md Quick-Stats row '{key}' missing (guard re-derived {want:,} from the {basis})")
+    elif got != want:
+        errors.append(f"workflows/README.md Quick-Stats '{key}' says {got:,} but the canonical re-derivation is {want:,} ({basis})")
+_qeq('Value Streams', len(vs_dirs), 'VS-* directory count')
+_qeq('Process Areas', len(pa_files), 'PA-*.md file count')
+_qeq('Workflows', len(uniq_h), 'unique ## W-headers')
+_qeq('Classified (Tier 1)', tiers[1], 'register Tier-1 rows (register_heading_hits attribution)')
+_qeq('Classified (Tier 2)', tiers[2], 'register Tier-2 rows (register_heading_hits attribution)')
+_qeq('Classified (Tier 3)', tiers[3], 'register Tier-3 rows (register_heading_hits attribution)')
+readme_whole = '\n'.join(readme)
+_mtot = re.search(r'^\| Classified total \| ([0-9,]+) rows = ([0-9,]+) unique workflows \+ ([0-9,]+) parent/summary', readme_whole, re.M)
+if not _mtot:
+    errors.append("workflows/README.md Quick-Stats 'Classified total' row missing or reshaped (expected '| Classified total | N rows = U unique workflows + S parent/summary sub-workflow rows …')")
+else:
+    _n, _u, _s = (int(x.replace(',', '')) for x in _mtot.groups())
+    if (_n, _u, _s) != (sum(tiers.values()), len(uniq_h), len(sub_h)) or sum(tiers.values()) != len(uniq_h) + len(sub_h):
+        errors.append(f"workflows/README.md 'Classified total' triple {_n:,}/{_u:,}/{_s:,} disagrees with the re-derivation {sum(tiers.values()):,} register rows = {len(uniq_h):,} unique + {len(sub_h)} ### sub-workflow headers")
+_exp_rec = 'Family subtotal reconciliation: ' + ' + '.join(f"{f['sum']:,}" for f in readme_fam.values()) + f" = {readme_total:,}"
+if _exp_rec not in readme_whole:
+    errors.append(f"workflows/README.md family-subtotal reconciliation line missing or stale (expected exactly: {_exp_rec})")
+if f"all {len(vs_dirs)} value streams" not in readme_whole:
+    errors.append(f"workflows/README.md index-row clause 'all N value streams' missing or stale (re-derives to {len(vs_dirs)})")
+
 print(f"A_ERRS={len(errors)}")
 for e in errors: print(f"A_ERR|{e}")
 print(f"B_STALE={len(stale)}")
@@ -860,9 +934,9 @@ A_ERRS=$(echo "$CHECK24" | sed -n 's/^A_ERRS=//p')
 B_STALE=$(echo "$CHECK24" | sed -n 's/^B_STALE=//p')
 GRAND=$(echo "$CHECK24" | sed -n 's/^GRAND=//p')
 if [ "$A_ERRS" -eq 0 ]; then
-    ok "workflows/README.md family headers & per-VS row sums reconcile with value-stream-index.md subtotals (8 families, grand total $GRAND workflows)"
+    ok "workflows/README.md family headers & per-VS row sums reconcile with value-stream-index.md subtotals (8 families, grand total $GRAND workflows); the Quick-Stats table and the family-subtotal reconciliation line match the canonical re-derivation ($GRAND unique ## headers, tier rows re-derived from the classification register; Part C added by the 2026-09-14 twenty-sixth-wave consistency review after synthetic injections proved the headline block invisible to every check)"
 else
-    error "workflows/README.md does not reconcile with value-stream-index.md ($A_ERRS family mismatch(es)) — family header / row-sum / index-subtotal must all agree:"
+    error "workflows/README.md does not reconcile with value-stream-index.md or its own canonical-figure block ($A_ERRS mismatch(es)) — family header / row-sum / index-subtotal / Quick-Stats row / reconciliation line must all agree:"
     echo "$CHECK24" | grep '^A_ERR|' | sed 's/^A_ERR|/    /'
 fi
 if [ "$B_STALE" -eq 0 ]; then
