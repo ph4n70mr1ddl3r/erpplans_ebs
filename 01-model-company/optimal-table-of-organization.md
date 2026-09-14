@@ -765,7 +765,7 @@ afternoon); DC3 (40,000 sqm) may split the AM roles into two each during peak.
 | Merchandising & Promo Council | Bi-monthly | VP Merchandising | Catalog events, markdowns, vendor funding |
 | Pricing Exception Review Board | Weekly | VP Merchandising (CFO delegate) | Price-override / margin-exception approvals |
 | Architecture Review Board | Bi-weekly | Head of EA (CIO) | VS-113; configuration & integration standards |
-| Sourcing & Investment Board | Monthly + on demand | CIO | Configure/buy/build routing per the capability sourcing model; Capability Sourcing Register; agent autonomy ratifications |
+| Sourcing & Investment Board | Monthly + on demand | CIO | Use-EBS/build routing per the capability sourcing model (§3 two-exit gate; no buy exit for capability products); Capability Sourcing Register; agent autonomy ratifications |
 | IT Product Council / QBR | Monthly / Quarterly | CIO | Product backlogs, KPIs, funding |
 | Risk & Compliance Committee | Monthly | VP Legal & Compliance | ERM, AML/ABC, privacy, TPRM dashboard |
 | Data Privacy Council | Quarterly | DPO (functional to VP Legal) | DPA/NPC posture, breach readiness |

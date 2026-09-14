@@ -50,7 +50,7 @@ Duration: 1–2 weeks</bpmn:documentation>
       </bpmn:userTask>
       <bpmn:userTask id="W1763_Task9" name="IT integrates partner into POS system: (a) installment payment method added to…">
         <bpmn:documentation>Step 4: IT integrates partner into POS system: (a) installment payment method added to POS terminal, (b) real-time approval interface with financing partner, (c) settlement reconciliation automated, (d) promotional rate tables configured in POS
-Responsible (R): IT / POS Vendor
+Responsible (R): IT / SSP (the in-house POS platform team)
 Accountable (A): CIO
 Duration: 2–4 weeks</bpmn:documentation>
         <bpmn:incoming>W1763_Flow16</bpmn:incoming>

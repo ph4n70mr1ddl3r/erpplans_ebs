@@ -4487,7 +4487,7 @@ Owner: Regulatory Compliance Officer</bpmn:text>
 Frequency: Monthly transmission; per-store/terminal registration as needed; annual renewal
 Volume: ~200 stores × 3 POS terminals = 600 registered devices; ~2.8M transactions/month chain-wide requiring e-invoice transmission
 Owner: Tax Manager
-Participants: IT Systems Administrator, POS Vendor Support, Store Manager, BIR Liaison Officer
+Participants: IT Systems Administrator, SSP (Store Systems &amp; POS — the in-house POS platform), Store Manager, BIR Liaison Officer
 Source: workflow W1489 — BIR Electronic Invoicing (E-Invoice) Compliance, System Registration &amp; Monthly Transmission</bpmn:documentation>
       <bpmn:laneSet id="W1489_LaneSet3">
         <bpmn:lane id="W1489_Lane1" name="Tax Manager">

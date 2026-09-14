@@ -236,7 +236,7 @@ Owner: Dark Store Operations Manager</bpmn:text>
 Frequency: Per site + major upgrade
 Volume: Per dark store / MFC
 Owner: IT – Applications
-Participants: IT Apps, IT Integration, WMS Vendor, Automation Vendor, Dark Store Ops Mgr, Quality
+Participants: IT Apps, IT Integration, Automation Vendor, Dark Store Ops Mgr, Quality
 Source: workflow W3092 — Dark Store System Integration, WMS &amp; Robotics Commissioning</bpmn:documentation>
       <bpmn:laneSet id="W3092_LaneSet4">
         <bpmn:lane id="W3092_Lane1" name="IT – Applications">
@@ -246,7 +246,7 @@ Source: workflow W3092 — Dark Store System Integration, WMS &amp; Robotics Com
         <bpmn:lane id="W3092_Lane2" name="IT – Integration">
         <bpmn:flowNodeRef>W3092_Task7</bpmn:flowNodeRef>
         </bpmn:lane>
-        <bpmn:lane id="W3092_Lane3" name="WMS Vendor">
+        <bpmn:lane id="W3092_Lane3" name="Automation Vendor">
         <bpmn:flowNodeRef>W3092_Task8</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W3092_End9</bpmn:flowNodeRef>
         </bpmn:lane>
@@ -272,7 +272,7 @@ Duration: 3–4 weeks</bpmn:documentation>
       </bpmn:userTask>
       <bpmn:userTask id="W3092_Task8" name="Vendor/IT run commissioning: automation dry-run, end-to-end pick-pack-dispatch…">
         <bpmn:documentation>Step 3: Vendor/IT run commissioning: automation dry-run, end-to-end pick-pack-dispatch dress rehearsal, peak-volume stress test, failover/fallback (manual mode) drill, and go/no-go sign-off with Dark Store Ops Mgr
-Responsible (R): WMS Vendor / Automation Vendor / IT
+Responsible (R): Automation Vendor / IT (in-suite WMS — Oracle WMS/MSCA)
 Accountable (A): Dark Store Operations Manager
 Duration: 2–3 weeks</bpmn:documentation>
         <bpmn:incoming>W3092_Flow14</bpmn:incoming>

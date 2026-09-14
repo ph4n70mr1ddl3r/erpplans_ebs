@@ -1391,7 +1391,7 @@ Owner: Quality Manager / Compliance Officer</bpmn:text>
 Frequency: Store openings: ~10–15/year; software updates: 2–4/year; regulation changes: ad-hoc; CAS renewal: annual
 Volume: 600 POS terminals across 200 stores (3 per store); each requires BIR registration
 Owner: Tax Accountant / IT Systems Administrator
-Participants: Tax Accountant, IT Systems Administrator, BIR Revenue District Office (RDO), POS Vendor, Store Manager, Finance Controller
+Participants: Tax Accountant, IT Systems Administrator, BIR Revenue District Office (RDO), SSP (Store Systems &amp; POS — the in-house POS platform), Store Manager, Finance Controller
 Source: workflow W1181 — BIR Point-of-Sale (POS) System Registration &amp; CAS Compliance Maintenance</bpmn:documentation>
       <bpmn:laneSet id="W1181_LaneSet3">
         <bpmn:lane id="W1181_Lane1" name="Tax Accountant">
@@ -1426,7 +1426,7 @@ Duration: 1–2 weeks/update</bpmn:documentation>
         <bpmn:outgoing>W1181_Flow15</bpmn:outgoing>
       </bpmn:serviceTask>
       <bpmn:serviceTask id="W1181_Task7" name="BIR regulation change response">
-        <bpmn:documentation>Step 3: BIR regulation change response: When BIR issues new revenue regulations affecting POS/CAS: (a) Tax Accountant analyzes regulation impact on current POS configuration; (b) coordinate with POS vendor for required software changes; (c) test changes; (d) file BIR notification or re-registration; (e) deploy changes to all 600 terminals within BIR-mandated compliance timeline; (f) example: if BIR requires e-invoicing integration per RR 8-2020 (electronic receipts/invoices under NIRC §237 as amended by TRAIN), plan and execute system-wide implementation
+        <bpmn:documentation>Step 3: BIR regulation change response: When BIR issues new revenue regulations affecting POS/CAS: (a) Tax Accountant analyzes regulation impact on current POS configuration; (b) route required software changes to the in-house POS platform team (SSP — Store Systems &amp; POS) under IT change management; (c) test changes; (d) file BIR notification or re-registration; (e) deploy changes to all 600 terminals within BIR-mandated compliance timeline; (f) example: if BIR requires e-invoicing integration per RR 8-2020 (electronic receipts/invoices under NIRC §237 as amended by TRAIN), plan and execute system-wide implementation
 Responsible (R): Tax Accountant / IT Systems Admin
 Accountable (A): Finance Controller
 Duration: Per regulation</bpmn:documentation>

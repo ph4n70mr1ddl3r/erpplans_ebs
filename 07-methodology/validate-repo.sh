@@ -4382,6 +4382,23 @@ for f in glob.glob(ROOT + '/**/*.md', recursive=True):
                 break
             acc = end
         errs.append(f"{rel}:{lineno}: retired three-exit gate order 'configure → buy → build' in live prose (canon: the ordered two-exit test — in-EBS → build; joined-text probe)")
+    # 2026-09-14 twenty-fifth-wave extension: the capability-product vendor seat joins the
+    # joined-text probe — a 'WMS Vendor' seat cannot exist under the in-suite WMS adoption
+    # (Oracle WMS/MSCA; no WMS vendor exists to seat). Zero legitimate live uses repo-wide
+    # (the CHANGELOG, the gap-analysis scenario table and the dated lines keep their
+    # exemptions); the PA-37.1 terminal-hardware 'POS vendor' is the exempt commodity sense
+    # and is handled per-document below, never here.
+    for m in re.finditer(r'WMS [Vv]endor', joined):
+        pos = m.start()
+        lineno = live_lines[0][0] if live_lines else 0
+        acc = 0
+        for idx, (i, text) in enumerate(live_lines):
+            end = acc + len(text) + 1
+            if pos < end:
+                lineno = i
+                break
+            acc = end
+        errs.append(f"{rel}:{lineno}: retired capability-vendor seat 'WMS Vendor' in live prose (the WMS is in-suite Oracle WMS/MSCA under the two-tier doctrine — no WMS vendor exists to seat; joined-text probe)")
 
 # (b) VS-113 folder + PA-128.3 + the four domain gap-analysis companions: lowercase
 # 'best-of-breed' retired (W5516's registered title keeps its canonical case — so the
@@ -4575,6 +4592,53 @@ if 'exit/run-cost plan' in _ag_live:
 if 'TCO sheet, the run-cost & talent plan (build), and a re-evaluation trigger' not in _ag_live:
     errs.append('07-methodology/ai-first-operating-guide.md: §5.1 five-appendix enumeration must carry the run-cost & talent plan (build) anchor (guard-anchored)')
 
+# (j) twenty-fifth-wave: the doctrine cascade's vendor-seat/routing stragglers —
+# the gate order and the capability-product vendor seats on surfaces no rule read:
+# the official TO's §8 SIB cadence row still routed 'Configure/buy/build routing per
+# the capability sourcing model' (the gate the sourcing model's own §3 collapsed to
+# two exits; the same class the wave-23/24 trues closed in the OM's §8 SIB row and
+# §6.1 RACI row), the OM's DP team row still read 'Under the hybrid landscape' (the
+# sibling IAP row reads 'Under the two-tier landscape'), W3092 still carried a 'WMS
+# Vendor' participant/step-R seat against the in-suite Oracle WMS/MSCA adoption (its
+# own Step 1 has IT configuring the dark-store WMS extension on the enterprise WMS),
+# and W1181/W1489/the financing-partner step still routed POS software changes to
+# 'POS Vendor'/'POS Vendor Support' seats against the register's already-built
+# in-house POS row and the workflows' own 'per IT change management' text (SSP —
+# Store Systems & POS — owns the POS estate per sourcing model §4/§5). The PA-37.1
+# terminal-hardware 'POS vendor' (equipment install parallel to 'CCTV vendor'/ISP)
+# stays legitimate: commodity procurement, the PA-138.1/automation-vendor precedent —
+# so the POS-vendor ban is scoped to the three software-context files, never
+# repo-wide; the WMS-vendor seat alone joins the repo-wide joined-text probe (a).
+_to = os.path.join(ROOT, '01-model-company', 'optimal-table-of-organization.md')
+_to_live = re.sub(r'\s+', ' ', ' '.join(l.rstrip('\n') for l in open(_to, encoding='utf-8')
+                                       if not (l.lstrip().startswith('*Date:') or 'Prior v' in l)))
+if 'Use-EBS/build routing per the capability sourcing model' not in _to_live:
+    errs.append('01-model-company/optimal-table-of-organization.md: §8 SIB row must route per the two-exit gate — use-EBS/build (guard-anchored)')
+if 'Configure/buy/build routing' in _to_live:
+    errs.append("01-model-company/optimal-table-of-organization.md: retired three-exit gate literal 'Configure/buy/build routing' in live prose (canon: use-EBS/build — the buy exit does not exist)")
+if 'Under the hybrid landscape' in _om_live:
+    errs.append('07-methodology/it-product-operating-model.md: retired hybrid-landscape literal in the DP team row live prose (canon: the two-tier landscape, per the sibling IAP row)')
+if 'Under the two-tier landscape the second steward carries dual-record harmonization' not in _om_live:
+    errs.append('07-methodology/it-product-operating-model.md: DP team row must carry the two-tier-landscape anchor (guard-anchored)')
+_w3092 = os.path.join(ROOT, '01-model-company', 'workflows', 'VS-93-dark-store-micro-fulfillment', 'PA-93.1-dark-store-site-strategy-design-network.md')
+_w3092_live = re.sub(r'\s+', ' ', ' '.join(l.rstrip('\n') for l in open(_w3092, encoding='utf-8')
+                                          if not (l.lstrip().startswith('*Date:') or 'Prior v' in l)))
+if 'Automation Vendor / IT (in-suite WMS' not in _w3092_live or 'IT Apps, IT Integration, Automation Vendor, Dark Store Ops Mgr, Quality' not in _w3092_live:
+    errs.append('workflows/VS-93-.../PA-93.1-...md: W3092 must commission the in-suite WMS by IT with the automation vendor only (anchors: participants row + step-3 R cell) (guard-anchored)')
+if 'WMS Vendor' in _w3092_live:
+    errs.append('workflows/VS-93-.../PA-93.1-...md: retired capability-vendor seat "WMS Vendor" in live prose (the WMS is in-suite Oracle WMS/MSCA; no vendor exists to seat)')
+for _posf, _posr in ((os.path.join(ROOT, '01-model-company', 'workflows', 'VS-17-record-to-report', 'PA-17.3-tax-and-statutory.md'), 'PA-17.3'),
+                     (os.path.join(ROOT, '01-model-company', 'workflows', 'VS-22-compliance-regulatory', 'PA-22.1-regulatory-permits-and-licenses.md'), 'PA-22.1'),
+                     (os.path.join(ROOT, '01-model-company', 'workflows', 'VS-38-consumer-credit-financing', 'PA-38.1-consumer-financing-program.md'), 'PA-38.1')):
+    _plive = re.sub(r'\s+', ' ', ' '.join(l.rstrip('\n') for l in open(_posf, encoding='utf-8')
+                                         if not (l.lstrip().startswith('*Date:') or 'Prior v' in l)))
+    if 'POS Vendor' in _plive:
+        errs.append(f'workflows/.../{_posr}: retired capability-vendor seat "POS Vendor" in live prose (the POS estate is the already-built in-house platform — software changes route to SSP, Store Systems & POS; the PA-37.1 terminal-hardware vendor is the exempt commodity sense)')
+    if _posr != 'PA-38.1' and 'SSP (Store Systems & POS — the in-house POS platform)' not in _plive:
+        errs.append(f'workflows/.../{_posr}: W1181/W1489 participants must seat the in-house POS owner SSP (Store Systems & POS) (guard-anchored)')
+    if _posr == 'PA-38.1' and 'IT / SSP (the in-house POS platform team)' not in _plive:
+        errs.append('workflows/.../PA-38.1: the financing-partner step must route POS integration to IT / SSP (the in-house POS platform team) (guard-anchored)')
+
 print(f"C77_BAD={len(errs)}")
 for e in errs:
     print('BAD|' + e)
@@ -4582,7 +4646,7 @@ PY
 )
 C77_BAD=$(echo "$CHECK77" | sed -n 's/^C77_BAD=\([0-9]*\).*/\1/p')
 if [ "${C77_BAD:-1}" -eq 0 ]; then
-    ok "Sourcing-doctrine posture guard clean: no retired 'cloud ERP' / best-of-breed / bought-edge literals in live prose (joined-text probe — split literals caught), no retired 'configure → buy → build' gate order anywhere live (joined-text probe), the executive summary carries the two-tier landscape anchors, the guide's §4.2/L3 assignments and Law-4/§3.3/§5.1/§7.3/§9.2 two-exit forms hold, the sourcing model's §2 heading/intro and §12.2 routing hold the in-suite/build canon, the OM's principle 7 + SIB row hold, W5512's Step 3 routes use-EBS → build, the A6.3 already-built canon is pinned, the IT gap-analysis companion's §1 scope anchor holds, the deployment canon is on-premises (EBS is not a cloud/SaaS ERP; blueprint README + architecture data-residency + tech-guidelines §2.1 pinned), and the twenty-fourth-wave portfolio/enumeration surfaces hold — the OM's §3.2 configure-and-integrate Type cells + §6.1 use-EBS/build RACI row, the W5515 Controls five-appendix enumeration with the run-cost & talent plan (build), the sourcing model's §9 two-tier TCO cost shape, and the guide's §5.1 run-cost & talent-plan appendix (guard added by the 2026-09-14 twentieth-wave consistency review — the doctrine enactment re-pointed every guarded surface while stranding the posture prose on surfaces no rule read; twenty-second-wave review repaired the IT companion's line-split scope line and hardened the probe against line breaks; on-premises canon correction pinned the three deployment-decision surfaces; twenty-third-wave review closed the cascade's own teaching surfaces — the sourcing model §2 heading/'three tiers' intro + §12.2 vendor-agent-products routing, the guide's Law 4 'default order' / §3.3 three-posture estate / §5.1 configure→buy→build / §7.3 buy=vendor-agent / §9.2 row, the OM's principle 7 + SIB row, and W5512's Step 3 + Touchpoints, with the retired gate-order literal joining the joined-text probe and all repaired surfaces anchor-pinned; twenty-fourth-wave review closed the cascade's own portfolio/enumeration surfaces — the OM §3.2 Type cells + §6.1 RACI row, the W5515 Controls five-appendix enumeration, the sourcing model's §9 TCO cost-shape row, and the guide's §5.1 appendix enumeration, all anchor-pinned)"
+    ok "Sourcing-doctrine posture guard clean: no retired 'cloud ERP' / best-of-breed / bought-edge literals in live prose (joined-text probe — split literals caught), no retired 'configure → buy → build' gate order anywhere live (joined-text probe), the executive summary carries the two-tier landscape anchors, the guide's §4.2/L3 assignments and Law-4/§3.3/§5.1/§7.3/§9.2 two-exit forms hold, the sourcing model's §2 heading/intro and §12.2 routing hold the in-suite/build canon, the OM's principle 7 + SIB row hold, W5512's Step 3 routes use-EBS → build, the A6.3 already-built canon is pinned, the IT gap-analysis companion's §1 scope anchor holds, the deployment canon is on-premises (EBS is not a cloud/SaaS ERP; blueprint README + architecture data-residency + tech-guidelines §2.1 pinned), and the twenty-fourth-wave portfolio/enumeration surfaces hold — the OM's §3.2 configure-and-integrate Type cells + §6.1 use-EBS/build RACI row, the W5515 Controls five-appendix enumeration with the run-cost & talent plan (build), the sourcing model's §9 two-tier TCO cost shape, and the guide's §5.1 run-cost & talent-plan appendix (guard added by the 2026-09-14 twentieth-wave consistency review — the doctrine enactment re-pointed every guarded surface while stranding the posture prose on surfaces no rule read; twenty-second-wave review repaired the IT companion's line-split scope line and hardened the probe against line breaks; on-premises canon correction pinned the three deployment-decision surfaces; twenty-third-wave review closed the cascade's own teaching surfaces — the sourcing model §2 heading/'three tiers' intro + §12.2 vendor-agent-products routing, the guide's Law 4 'default order' / §3.3 three-posture estate / §5.1 configure→buy→build / §7.3 buy=vendor-agent / §9.2 row, the OM's principle 7 + SIB row, and W5512's Step 3 + Touchpoints, with the retired gate-order literal joining the joined-text probe and all repaired surfaces anchor-pinned; twenty-fourth-wave review closed the cascade's own portfolio/enumeration surfaces — the OM §3.2 Type cells + §6.1 RACI row, the W5515 Controls five-appendix enumeration, the sourcing model's §9 TCO cost-shape row, and the guide's §5.1 appendix enumeration, all anchor-pinned; twenty-fifth-wave review closed the cascade's own vendor-seat/routing stragglers — the official TO's §8 SIB row re-pointed to use-EBS/build routing, the OM's DP row trued to the two-tier landscape, W3092's 'WMS Vendor' seat retired for the in-suite WMS (automation vendor + IT only), and the W1181/W1489/financing-partner 'POS Vendor' seats re-seated to SSP (Store Systems & POS), the in-house POS owner — with the WMS-vendor seat joining the repo-wide joined-text probe and the POS-vendor ban scoped to the three software-context files (the PA-37.1 terminal-hardware sense staying exempt as commodity procurement))"
 else
     error "Sourcing-doctrine posture violations against the two-tier canon ($C77_BAD):"
     echo "$CHECK77" | grep -E '^BAD\|' | sed 's/^BAD|/    /'
