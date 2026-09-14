@@ -433,7 +433,7 @@ Per-pass history: [workflow-gap-analysis.md](workflow-gap-analysis.md) §4.
 - **PA-191.2** [Debris Collection, Segregation & DENR-Compliant Hauling Execution](./VS-191-customer-construction-debris-demolition-waste-and-site-cleanup-operations/PA-191.2-debris-collection-segregation-and-denr-compliant-hauling-execution.md) — 8 workflows
 - **PA-191.3** [Diversion, Disposal, Settlement & Site Cleanup Analytics](./VS-191-customer-construction-debris-demolition-waste-and-site-cleanup-operations/PA-191.3-diversion-disposal-settlement-and-site-cleanup-analytics.md) — 8 workflows
 
-**[VS-192: Green Fleet Transition, Electric Vehicle (EV) Fleet Operations & Sustainable Transportation](./VS-192-green-fleet-transition-electric-vehicle-fleet-operations-and-sustainable-transportation/README.md)** (24 workflows)
+**[VS-192: Green Fleet Transition, EV Fleet Operations & Sustainable Transportation](./VS-192-green-fleet-transition-electric-vehicle-fleet-operations-and-sustainable-transportation/README.md)** (24 workflows)
 
 - **PA-192.1** [Green Fleet Strategy, Electrification Roadmap & Capital Planning](./VS-192-green-fleet-transition-electric-vehicle-fleet-operations-and-sustainable-transportation/PA-192.1-green-fleet-strategy-electrification-roadmap-and-capital-planning.md) — 8 workflows
 - **PA-192.2** [EV / Alt-Fuel Fleet Operations, Charging & Energy Management](./VS-192-green-fleet-transition-electric-vehicle-fleet-operations-and-sustainable-transportation/PA-192.2-ev-alt-fuel-fleet-operations-charging-and-energy-management.md) — 8 workflows

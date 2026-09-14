@@ -1591,13 +1591,13 @@ idx_pa = {m.group(1): (m.group(2), m.group(3)) for m in re.finditer(
 # summary-row count asserted: the VS-README H1's 'VS-nn: Name' title is a fourth name surface
 # no rule read — the 2026-09-14 twenty-seventh-wave review found 4 drifted H1s (VS-101/114/130/192)
 # after the gap-fill batches renamed the index rows and re-pointed only Check 31's three surfaces.
+bad = 0
 vs_canon = {}
 for m in re.finditer(r"^\|\s*[^|]*\|\s*\[(VS-\d+)\]\((VS-\d+-[a-z0-9-]+)/README\.md\) \| ([^|]+) \|", idx, re.M):
     vs_canon[m.group(2)] = m.group(3).strip()
 if len(vs_canon) != 188:
     bad += 1
     print(f"BAD|value-stream-index summary rows: {len(vs_canon)} carry a VS link (expected 188)")
-bad = 0
 for vsdir in sorted(glob.glob(os.path.join(WF, "VS-*"))):
     vrd = open(os.path.join(vsdir, "README.md"), encoding="utf-8").read()
     vsname_m = re.match(r"^# (VS-\d+): (.+)$", vrd.split("\n", 1)[0])
@@ -1628,12 +1628,74 @@ for vsdir in sorted(glob.glob(os.path.join(WF, "VS-*"))):
                 bad += 1; print(f"BAD|{os.path.relpath(vsdir, ROOT)}/README.md: {pid} links {rlink!r} != file {os.path.basename(p)!r}")
         else:
             bad += 1; print(f"BAD|{os.path.relpath(vsdir, ROOT)}/README.md: {pid} has no Process Areas row")
+# (c) twenty-eighth wave: the PA header quote-line ('> Part of **[VS-nn: Name](./README.md)** ...')
+# is the fifth VS-name label surface — and the value-stream-index detailed-map bullets carry the
+# VS-name a sixth time. The 2026-09-14 twenty-eighth-wave review found 14 drifted quote-line VS
+# names (VS-48.2/.3, VS-100/114/130/192 ×3 — twelve of them in the very files whose footers the
+# twenty-seventh wave trued one paragraph away) and one drifted detailed-map VS bullet (VS-192,
+# the class that wave adjudicated clean), all stranded by the same expansion-era index renames.
+# The quote-line must be read JOINED over its wrapped '>' lines (the VS-190/191/192 quote-lines
+# split across a line break — the twenty-second-wave line-split lesson), the VS-number must agree
+# with the folder, the optional '(Family)' suffix must equal the workflows/README canonical family
+# for that VS, and the '[Value Stream Index](../value-stream-index.md)' link is required.
+rd = open(os.path.join(WF, "README.md"), encoding="utf-8").read()
+fam_of = {}; curfam = None
+for rl in rd.splitlines():
+    fm = re.match(r"^### ([^()]+) \([\d,]+ workflows\)", rl)
+    if fm:
+        curfam = fm.group(1).strip(); continue
+    rm = re.match(r"^\| \[(VS-\d+)\]\(VS-\d+-[a-z0-9-]+/README\.md\) \|", rl)
+    if rm and curfam:
+        fam_of[rm.group(1)] = curfam
+if len(fam_of) != 188:
+    bad += 1; print(f"BAD|workflows/README.md: family membership parsed for {len(fam_of)} VSs (expected 188)")
+seen_quotes = 0
+for vsdir in sorted(glob.glob(os.path.join(WF, "VS-*"))):
+    vd = os.path.basename(vsdir)
+    vsnum = "VS-" + vd.split("-")[1]
+    for p in sorted(glob.glob(os.path.join(vsdir, "PA-*.md"))):
+        rel = os.path.relpath(p, ROOT)
+        lines = open(p, encoding="utf-8").read().splitlines()
+        qblock = []; inq = False
+        for ql in lines[:12]:
+            if ql.startswith(">"):
+                inq = True; qblock.append(ql[1:].strip())
+            elif inq:
+                break
+        joined = " ".join(qblock)
+        qm = re.search(r"Part of \*\*\[(VS-\d+):\s*([^]]+?)\]\(\./README\.md\)\*\*(?:\s*\(([^)]*)\))?", joined)
+        if not qm:
+            bad += 1; print(f"BAD|{rel}: header quote-line missing or malformed ('Part of **[VS-nn: <canonical VS-name>](./README.md)**')"); continue
+        seen_quotes += 1
+        if qm.group(1) != vsnum:
+            bad += 1; print(f"BAD|{rel}: quote-line VS-number {qm.group(1)} disagrees with folder {vsnum}")
+        elif qm.group(2).strip() != vs_canon.get(vd):
+            bad += 1; print(f"BAD|{rel}: quote-line VS name {qm.group(2).strip()!r} != canonical {vs_canon.get(vd)!r}")
+        if "[Value Stream Index](../value-stream-index.md)" not in joined:
+            bad += 1; print(f"BAD|{rel}: quote-line missing the [Value Stream Index](../value-stream-index.md) link")
+        suf = (qm.group(3) or "").strip()
+        if suf and fam_of.get(vsnum) != suf:
+            bad += 1; print(f"BAD|{rel}: quote-line family suffix ({suf}) != canonical family ({fam_of.get(vsnum)})")
+if seen_quotes != 569:
+    bad += 1; print(f"BAD|PA quote-lines found: {seen_quotes} (expected 569)")
+# (d) twenty-eighth wave: the value-stream-index detailed-map '**[VS-nn: Name]**' bullets carry
+# the VS-name — pinned to the same summary-row canon (slug + name; counts remain Check 68's).
+seen_bullets = 0
+for bm in re.finditer(r"^\*\*\[(VS-\d+):\s*([^]]+)\]\(\./([^)/]+)/README\.md\)\*\* \([\d,]+ workflows\)", idx, re.M):
+    seen_bullets += 1
+    bnum, bname, bslug = bm.group(1), bm.group(2).strip(), bm.group(3)
+    if vs_canon.get(bslug) != bname:
+        bad += 1; print(f"BAD|value-stream-index.md detailed map: {bnum} bullet VS name {bname!r} != canonical {vs_canon.get(bslug)!r}")
+    if bnum != "VS-" + bslug.split("-")[1]:
+        bad += 1; print(f"BAD|value-stream-index.md detailed map: {bnum} bullet links {bslug} (number disagrees)")
+if seen_bullets != 188:
+    bad += 1; print(f"BAD|value-stream-index.md detailed map: {seen_bullets} VS bullets (expected 188)")
 print(f"TOTALS bad={bad}")
 PY
 )
 C31_BAD=$(echo "$CHECK31" | sed -n 's/^TOTALS bad=\([0-9]*\)$/\1/p')
 if [ "${C31_BAD:-1}" -eq 0 ]; then
-    ok "All 569 process-area names agree 3-way (PA-file H1 == VS-README row == value-stream-index bullet, canonical = index) and all 188 VS-README H1 titles carry the canonical index VS-name (H1 arm added by the 2026-09-14 twenty-seventh-wave consistency review after four drifted H1s — VS-101/114/130/192 — were found alongside 15 drifted PA-footer VS-name labels, both surfaces one layer out from Check 31's original 3-way)"
+    ok "All 569 process-area names agree 3-way (PA-file H1 == VS-README row == value-stream-index bullet, canonical = index), all 188 VS-README H1 titles carry the canonical index VS-name (H1 arm, twenty-seventh wave), all 569 PA header quote-lines carry the canonical VS-name over a line-break-proof joined read with VS-number, optional canonical family suffix and Value-Stream-Index link verified (quote-line arm, twenty-eighth wave), and all 188 detailed-map VS bullets carry the canonical summary-row name (bullet arm, twenty-eighth wave — fourteen drifted quote-lines across VS-48/100/114/130/192 and the VS-192 detailed bullet were found one layer out from the twenty-seventh wave's footer/H1 repairs)"
 else
     error "PA/VS name drift found ($C31_BAD location(s)) — run 07-methodology/fix-pa-names.py (canonical source: value-stream-index.md):"
     echo "$CHECK31" | grep -E '^BAD\|' | sed 's/^BAD|/    /' | head -25
