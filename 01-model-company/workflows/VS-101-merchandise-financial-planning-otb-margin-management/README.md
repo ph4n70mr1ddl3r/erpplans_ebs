@@ -1,4 +1,4 @@
-# VS-101: Merchandise Financial Planning, Open-to-Buy & Margin Management
+# VS-101: Merchandise Financial Planning, OTB & Margin Management
 
 > **Plan & Source** · [Value Stream Index](../value-stream-index.md)
 

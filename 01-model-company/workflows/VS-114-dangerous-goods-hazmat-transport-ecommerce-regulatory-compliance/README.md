@@ -1,4 +1,4 @@
-# VS-114: Dangerous Goods (DG) & Hazardous Materials Transport, Ecommerce & Regulatory Compliance
+# VS-114: Dangerous Goods (DG) & Hazmat Transport, Ecommerce & Regulatory Compliance
 
 > **Governance & Assurance** · [Value Stream Index](../value-stream-index.md)
 

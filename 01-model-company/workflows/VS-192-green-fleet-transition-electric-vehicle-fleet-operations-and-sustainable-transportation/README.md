@@ -1,4 +1,4 @@
-# VS-192: Green Fleet Transition, Electric Vehicle (EV) Fleet Operations & Sustainable Transportation
+# VS-192: Green Fleet Transition, EV Fleet Operations & Sustainable Transportation
 
 > **Make & Move** · [Value Stream Index](../value-stream-index.md)
 

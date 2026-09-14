@@ -345,10 +345,60 @@ BAD_FOOTER=$(for pafile in "$REPO_ROOT"/01-model-company/workflows/VS-*/PA-*.md;
 done)
 BAD_FOOTER_COUNT=$(echo -n "$BAD_FOOTER" | grep -cP 'PA-' || true)
 if [ "$BAD_FOOTER_COUNT" -eq 0 ]; then
-    ok "All PA files end with the standardized navigation footer"
+    ok "All PA files end with the standardized navigation footer (shape arm)"
 else
     error "$BAD_FOOTER_COUNT PA file(s) do not end with the standardized footer (*Workflow Count: N · Back to... · Value Stream Index*):"
     echo "$BAD_FOOTER" | sed 's#.*/workflows/##' | sed 's/^/    /' | head -20
+fi
+# ---- Part B: the footer's figures are re-derived every run (2026-09-14 twenty-seventh-wave
+# consistency review). The shape arm above matches the count and the VS label only positionally
+# ('\d+' / '.+'), so a stale Workflow-Count number, a wrong VS-number or a drifted VS-name on the
+# 569 footers was read by no check (Checks 2/24/31/44/67/68 re-derive the index, README, tree and
+# VS-README surfaces; Check 20 resolves the footer's relative link targets — ./README.md always
+# resolves — but nothing compared its printed figures). Verified before arming by synthetic
+# injection: a footer count drift (22 → 21) and a VS-name drift ('Merchandise Strategy' →
+# 'Merchandising Strategy') both passed the full validator 0/0 exit 0. Every figure is re-derived
+# from the primary sources: the count against the file's own '## W' headers, the VS-number against
+# the folder name, and the VS-name against the canonical value-stream-index row for that VS.
+C16_FIG=$(python3 - "$REPO_ROOT" <<'PY'
+import glob, os, re, sys
+ROOT = sys.argv[1]
+WF = os.path.join(ROOT, "01-model-company", "workflows")
+canon = {}
+for line in open(os.path.join(WF, "value-stream-index.md"), encoding="utf-8"):
+    m = re.match(r"^\|\s*[^|]*\|\s*\[(VS-\d+)\]\((VS-\d+-[a-z0-9-]+)/README\.md\) \| ([^|]+) \|", line)
+    if m:
+        canon[m.group(2)] = m.group(3).strip()
+bad = []
+if len(canon) != 188:
+    bad.append(f"value-stream-index parse: {len(canon)} summary-table rows carry a VS link (expected 188)")
+for pafile in sorted(glob.glob(os.path.join(WF, "VS-*", "PA-*.md"))):
+    folder = os.path.basename(os.path.dirname(pafile))
+    txt = open(pafile, encoding="utf-8").read()
+    lines = [l for l in txt.splitlines() if l.strip()]
+    m = re.match(r"^\*Workflow Count: (\d+) · Back to \*\*\[VS-(\d+): ([^\]]+)\]\(\./README\.md\)\*\* · \[Value Stream Index\]\(\.\./value-stream-index\.md\)\*$", lines[-1]) if lines else None
+    if not m:
+        continue  # shape drift already flagged by the arm above
+    n, vsnum, vsname = int(m.group(1)), "VS-" + m.group(2), m.group(3)
+    rel = os.path.relpath(pafile, WF)
+    n_hdr = len(re.findall(r"^## W\d+[A-Z]?\.", txt, re.M))
+    if n != n_hdr:
+        bad.append(f"{rel}: footer says Workflow Count: {n}, the file defines {n_hdr} '## W' headers")
+    if not folder.startswith(vsnum + "-"):
+        bad.append(f"{rel}: footer VS number {vsnum} disagrees with folder {folder}")
+    elif folder in canon and vsname != canon[folder]:
+        bad.append(f"{rel}: footer VS name {vsname!r} != canonical value-stream-index name {canon[folder]!r}")
+print(f"HITS {len(bad)}")
+for b in bad:
+    print("BAD|" + b)
+PY
+)
+C16_FIG_BAD=$(echo "$C16_FIG" | sed -n 's/^HITS \([0-9]*\)$/\1/p')
+if [ "${C16_FIG_BAD:-1}" -eq 0 ]; then
+    ok "All PA footers carry re-derived figures: Workflow Count equals the file's own '## W'-header count (569 files), every VS-number matches its folder and every VS-name matches the canonical value-stream-index row (figure arm added by the 2026-09-14 twenty-seventh-wave consistency review after synthetic injections proved a footer count drift and a VS-name drift both pass the full validator 0/0 — Check 16 validated the footer's shape only)"
+else
+    error "$C16_FIG_BAD PA footer figure drift(s) (count vs the file's own '## W' headers / VS-number vs folder / VS-name vs the canonical index row):"
+    echo "$C16_FIG" | grep '^BAD|' | sed 's/^BAD|/    /' | head -20
 fi
 
 # --- Check 17: Orphan workflow bodies (ghost workflows) ---
@@ -1537,9 +1587,28 @@ WF = os.path.join(ROOT, "01-model-company", "workflows")
 idx = open(os.path.join(WF, "value-stream-index.md"), encoding="utf-8").read()
 idx_pa = {m.group(1): (m.group(2), m.group(3)) for m in re.finditer(
     r"^- \*\*(PA-\d+\.\d+)\*\* \[([^\]]+)\]\(([^)]+)\) — (\d+) workflows", idx, re.M)}
+# Canonical VS-name canon from the index summary rows (family cell may be empty), with the
+# summary-row count asserted: the VS-README H1's 'VS-nn: Name' title is a fourth name surface
+# no rule read — the 2026-09-14 twenty-seventh-wave review found 4 drifted H1s (VS-101/114/130/192)
+# after the gap-fill batches renamed the index rows and re-pointed only Check 31's three surfaces.
+vs_canon = {}
+for m in re.finditer(r"^\|\s*[^|]*\|\s*\[(VS-\d+)\]\((VS-\d+-[a-z0-9-]+)/README\.md\) \| ([^|]+) \|", idx, re.M):
+    vs_canon[m.group(2)] = m.group(3).strip()
+if len(vs_canon) != 188:
+    bad += 1
+    print(f"BAD|value-stream-index summary rows: {len(vs_canon)} carry a VS link (expected 188)")
 bad = 0
 for vsdir in sorted(glob.glob(os.path.join(WF, "VS-*"))):
     vrd = open(os.path.join(vsdir, "README.md"), encoding="utf-8").read()
+    vsname_m = re.match(r"^# (VS-\d+): (.+)$", vrd.split("\n", 1)[0])
+    if vsname_m:
+        vd = os.path.basename(vsdir)
+        if vsname_m.group(1) != "VS-" + vd.split("-")[1]:
+            bad += 1; print(f"BAD|{vd}/README.md: H1 VS-number {vsname_m.group(1)} disagrees with folder")
+        elif vd in vs_canon and vsname_m.group(2).strip() != vs_canon[vd]:
+            bad += 1; print(f"BAD|{vd}/README.md: H1 VS name {vsname_m.group(2).strip()!r} != canonical {vs_canon[vd]!r}")
+    else:
+        bad += 1; print(f"BAD|{os.path.relpath(vsdir, ROOT)}/README.md: H1 is not '# VS-nn: <Name>'")
     vr = {m.group(1): (m.group(3).strip(), m.group(2)) for m in re.finditer(
         r"^\| \[(PA-\d+\.\d+)\]\(([^)]+)\) \| ([^|]+) \| \d+ \|", vrd, re.M)}
     for p in sorted(glob.glob(os.path.join(vsdir, "PA-*.md"))):
@@ -1564,9 +1633,9 @@ PY
 )
 C31_BAD=$(echo "$CHECK31" | sed -n 's/^TOTALS bad=\([0-9]*\)$/\1/p')
 if [ "${C31_BAD:-1}" -eq 0 ]; then
-    ok "All 569 process-area names agree 3-way (PA-file H1 == VS-README row == value-stream-index bullet, canonical = index)"
+    ok "All 569 process-area names agree 3-way (PA-file H1 == VS-README row == value-stream-index bullet, canonical = index) and all 188 VS-README H1 titles carry the canonical index VS-name (H1 arm added by the 2026-09-14 twenty-seventh-wave consistency review after four drifted H1s — VS-101/114/130/192 — were found alongside 15 drifted PA-footer VS-name labels, both surfaces one layer out from Check 31's original 3-way)"
 else
-    error "PA-name drift found ($C31_BAD location(s)) — run 07-methodology/fix-pa-names.py (canonical source: value-stream-index.md):"
+    error "PA/VS name drift found ($C31_BAD location(s)) — run 07-methodology/fix-pa-names.py (canonical source: value-stream-index.md):"
     echo "$CHECK31" | grep -E '^BAD\|' | sed 's/^BAD|/    /' | head -25
 fi
 

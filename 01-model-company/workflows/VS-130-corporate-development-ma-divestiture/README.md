@@ -1,4 +1,4 @@
-# VS-130: Corporate Development, Mergers & Acquisitions, Divestiture & Strategic Transactions
+# VS-130: Corporate Development, Mergers, Acquisitions, Divestiture & Strategic Transactions
 
 > **Governance & Assurance** · [Value Stream Index](../value-stream-index.md)
 
