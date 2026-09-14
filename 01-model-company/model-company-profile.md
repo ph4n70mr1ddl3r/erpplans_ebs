@@ -120,10 +120,12 @@ The company operates through **5 legal entities** organized as follows:
 > table of organization** is defined in
 > [`optimal-table-of-organization.md`](optimal-table-of-organization.md): HQ **511** / total
 > **6,911** at 200 stores (upper edge of the `headcount-reality-check.md` comfortable band
-> ~440–515; IT = 122 per `it-product-operating-model.md` §9 under the hybrid capability-
-> sourcing + agentic-AI model adopted 2026-09-03 — best-of-breed edges, in-house builds
-> around the unified ERP core, and the AI & Agent Platform for governed agent automation of
-> manual tasks; see `07-methodology/capability-sourcing-and-engineering-model.md`),
+> ~440–515; IT = 122 per `it-product-operating-model.md` §9 under the two-tier capability-
+> sourcing doctrine (2026-09-14) + agentic-AI model — in-suite Oracle EBS (incl. Oracle
+> WMS/MSCA and Shipping/OTE), in-house and already-built products (the POS estate, the
+> ecommerce platform, loyalty, Payroll PH) around the EBS core, and the AI & Agent Platform
+> for governed agent automation of manual tasks; supersedes the 2026-09-03 hybrid posture;
+> see `07-methodology/capability-sourcing-and-engineering-model.md`),
 > reached in three demand-triggered phases — regulatory floor → transaction scale →
 > capability scale — with store (5,800) and DC (600) staffing unchanged.
 
@@ -693,20 +695,33 @@ BuildRight Holdings, Inc.
 ## 14. IT Infrastructure & Systems
 
 ### 14.1 Active ERP Landscape
-> Note: All legacy systems (siloed accounting, standalone POS, manual spreadsheets, separate payroll, custom ecommerce, etc.) have been decommissioned and consolidated. Since 2026-09-03 the landscape is **hybrid** (see `07-methodology/capability-sourcing-and-engineering-model.md`): the unified cloud ERP remains the **core**; four edge capabilities run on **best-of-breed** products; two differentiating capabilities are **built in-house**. All are integrated through the IAP middleware/event backbone.
+> Note: The legacy siloed estate (siloed accounting, manual spreadsheets, the separate payroll
+> software) has been decommissioned and consolidated onto the platform of record — **Oracle
+> E-Business Suite 12.2** (`02-oracle-ebs/`). Since 2026-09-14 the landscape is **two-tier**
+> (see `07-methodology/capability-sourcing-and-engineering-model.md`): *if it's in Oracle EBS
+> we use it — otherwise we build.* Warehouse and transport execution run **in-suite** (Oracle
+> WMS/MSCA, Shipping/Transportation Execution); the POS estate, the custom ecommerce platform
+> and the gift-card/loyalty stack are **already-built in-house platforms** (integrated via
+> the IAP middleware/event backbone — never rebuilt, never bought); Payroll PH, store
+> workforce scheduling and dispatch are **built in-house**; the differentiating products
+> (OMO, TPS) and the agentic runtime (AAP) are **built in-house**.
 
-| Core System Module | Function | Status |
+| System | Function | Status |
 |---|---|---|
-| Financials & Consolidation | GL, AP, AR, Fixed Assets, Multi-Entity Group Accounting | Live & Unified (core) |
-| Integrated Omnichannel POS | In-store sales, cashiering, offline cache management | Live & Unified (core) |
-| Automated Procurement | Blanket purchase orders, automated ROP releases, supplier management | Live & Unified (core) |
-| Warehouse & Inventory Mgmt | Real-time stock levels (inventory ledger of record); RF-directed execution moved to the best-of-breed WMS | Live & Unified (core) + Best-of-Breed WMS |
-| Integrated Payroll & HR | Statutory remittances, biometric attendance synchronization | Live & Unified (core) |
-| Unified E-commerce Engine | Web/Mobile catalog, BOPIS & home delivery fulfillment | Live & Unified (core) |
-| Integrated Workflow Approvals | Tiered approval workflows for POs, Capex, and inventory adjustments | Live & Unified (core) |
-| Best-of-Breed TMS | Transport planning, carrier tendering, freight audit | Live — Best-of-Breed |
-| Store Workforce Management | Store labor scheduling and time capture (payroll stays in the ERP core) | Live — Best-of-Breed |
-| Field Service Management | Installation & home-service dispatch, technician mobile app | Live — Best-of-Breed |
+| Financials & Consolidation | GL, AP, AR, Fixed Assets, Multi-Entity Group Accounting | Live — In-Suite (EBS) |
+| Omnichannel POS masters & posting | Item/price/tax masters, store orgs, sales posting to AR/inventory (checkout executes on the in-house POS platform below) | Live — In-Suite (EBS) |
+| Automated Procurement | Blanket purchase orders, automated ROP releases, supplier management | Live — In-Suite (EBS) |
+| Warehouse & Inventory Mgmt | Real-time stock levels (inventory ledger of record); RF-directed execution on Oracle WMS/MSCA | Live — In-Suite (EBS) |
+| Transport & Freight | Carrier tendering, ship-confirm, freight audit (Shipping/Transportation Execution) | Live — In-Suite (EBS) |
+| Planning & Trade Management | Demand forecasting/S&OP (ASCP/Demantra); vendor rebates & claims (Trade Management) | Live — In-Suite (EBS-family) |
+| Integrated Workflow Approvals | Tiered approval workflows for POs, Capex, and inventory adjustments | Live — In-Suite (EBS) |
+| Core HR | Org/position/employee master of record, absence, EITs (Oracle HRMS PER — the payroll build draws its people data from here) | Live — In-Suite (EBS) |
+| POS estate (already built) | In-store sales, cashiering, offline cache management (≥ 8h + event replay) | Live — Built In-House (existing; integrates) |
+| E-commerce platform (already built) | Web/Mobile catalog, BOPIS & home delivery fulfillment | Live — Built In-House (existing; integrates) |
+| Gift-card/loyalty stack (already built) | Stored-value ledger, points engine, redemption | Live — Built In-House (existing; integrates) |
+| Payroll PH (build) | PH statutory gross-to-net (SSS, PhilHealth, Pag-IBIG, PD 851, BIR withholding), statutory outputs & agency files; posts period costing journals to EBS | Live — Built In-House |
+| Store workforce platform (build) | Store labor scheduling and time capture (validated feeds into payroll and EBS) | Live — Built In-House |
+| Dispatch (build) | Installation & home-service dispatch, technician mobile app | Live — Built In-House |
 | Order Orchestration (in-house) | Omnichannel order routing, split-order & mixed-basket fulfillment (VS-60) | Live — Built In-House (OMO) |
 | Trade & Project Services Platform (in-house) | Job-site delivery, material staging/phased delivery, bulky install coordination (VS-74/VS-77/VS-143) | Live — Built In-House (TPS) |
 | AI & Agent Platform (in-house) | Governed agentic automation runtime: agent tool registry (IAP contracts only), guardrails, evaluation harness, human-in-the-loop gates, kill-switch (VS-128 governance) | Live — Built In-House (AAP) |
@@ -860,8 +875,8 @@ The following external systems are actively integrated with the core ERP system.
 | **DOLE** | Department of Labor and Employment (Philippines) |
 | **DSD** | Direct Store Delivery |
 | **EOQ** | Economic Order Quantity |
-| **ERP Platform** | The cloud-deployed ERP platform running BuildRight's core end-to-end processes (financials, procurement, inventory ledger, POS, HR/payroll, approvals). Since the 2026-09-03 hybrid capability-sourcing decision the canonical “unified cloud ERP” term is scoped to this **core**; best-of-breed edge products and in-house built platforms surround it (§14.1; `07-methodology/capability-sourcing-and-engineering-model.md`). |
-| **Best-of-Breed (BoB)** | A specialist vendor product adopted for an edge capability (WMS, TMS, store WFM, FSM) where the specialist market outperforms the ERP suite, integrated via IAP under a registered sourcing decision. |
+| **ERP Platform** | The ERP platform of record running BuildRight's core end-to-end processes (financials, procurement, inventory ledger, POS posting, HR core data, approvals) — **Oracle E-Business Suite 12.2** (`02-oracle-ebs/`). Under the 2026-09-14 two-tier sourcing doctrine the canon is *if it's in EBS we use it; otherwise we build*: in-house built and already-built platforms surround the suite (§14.1; `07-methodology/capability-sourcing-and-engineering-model.md`). |
+| **Best-of-Breed (BoB)** | *(Retired as a sourcing tier 2026-09-14 by the two-tier doctrine — no BoB capability products exist.)* Historically: a specialist vendor product adopted for an edge capability; the 2026-09-03 register's four BoB rows (WMS, TMS, store WFM, FSM) were superseded — WMS/TMS moved in-suite (Oracle WMS/MSCA, Shipping/OTE), WFM/FSM flipped to in-house builds. |
 | **Agentic AI / AI Agent** | A software agent that executes manual tasks end-to-end inside guardrails on the AI & Agent Platform (AAP): registered under VS-128, acting only through IAP-contract tools, bound by the Tier-based autonomy ladder, with kill-switch and audit trail. |
 | **EWT** | Expanded Withholding Tax (Philippines) |
 | **GMV** | Gross Merchandise Value |
@@ -882,7 +897,17 @@ The following external systems are actively integrated with the core ERP system.
 
 ---
 
-*Document Version: 2.27 | Date: 2026-09-03 | Agentic-AI extension (with
+*Document Version: 2.28 | Date: 2026-09-14 | Two-tier sourcing doctrine trued (sourcing model
+v3.0, OM v3.11): §14.1 re-issued under the two-tier doctrine — the TO banner re-pointed; the
+Active-ERP-Landscape table re-issued (Warehouse & Transport rows → in-suite Oracle WMS/MSCA
++ Shipping/OTE; Planning/Trade-Management row → the EBS-family stack; the POS estate,
+ecommerce platform and gift-card/loyalty stack recorded as already-built in-house platforms;
+Payroll PH, store workforce and dispatch as in-house builds; the legacy-decommissioning note
+trued — the built POS/ecommerce estate was retained, not decommissioned); glossary "ERP
+Platform" names Oracle EBS 12.2 as the platform of record; glossary "Best-of-Breed (BoB)"
+marked retired as a sourcing tier with the four 2026-09-03 register rows' dispositions.
+Current-state canonical figures (§3.3/§4/§11.1: HQ 362, total 6,762, IT 50) and target-state
+notes (HQ 511 / total 6,911, IT = 122) unchanged. Prior v2.27 (2026-09-03): Agentic-AI extension (with
 `it-product-operating-model.md` v2.1): §14.1 gains the AI & Agent Platform row (AAP —
 governed agent automation runtime under VS-128); glossary adds "Agentic AI / AI Agent";
 target-state notes re-based to HQ 511 / total 6,911 (IT = 122) per

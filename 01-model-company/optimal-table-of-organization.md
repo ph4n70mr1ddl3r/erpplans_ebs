@@ -327,12 +327,12 @@ Trade/Acct Mgmt (7)** — as profiled in §5.1; each closes a named-role gap fro
 check (metrology, energy manager, competitive intelligence, key-account managers).
 
 **Information Technology (122)** — governed by the IT product operating model, not restated
-here: 9 stream-aligned domain products (7 configure / buy-and-integrate teams paired to
+here: 9 stream-aligned domain products (7 configure / configure-and-integrate teams paired to
 business owners + the two in-house **build** squads OMO and TPS), 7 platform teams
 (integration, infra, security/GRC, data, engineering enablement, agentic enablement,
 field services), CIO Office.
-Target = 122 (authoritative steady-state sizing under the hybrid capability-sourcing +
-agentic model, mid-band of the 65–130 hybrid need band).
+Target = 122 (authoritative steady-state sizing under the two-tier capability-sourcing +
+agentic model, mid-band of the 65–130 two-tier need band).
 
 ### 5.3 Enterprise Role Register (every HQ role, defined)
 

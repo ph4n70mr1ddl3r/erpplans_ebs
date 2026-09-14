@@ -189,9 +189,12 @@ Legend: **VS** = owning value stream(s). Classes per §1. Counts are pinned in �
 
 The two-tier sourcing decision (*in EBS → use it; otherwise → build*) resolved the open
 schedule and superseded the sourcing register's Buy rows. The register amendment is
-recorded here as the authoritative interim decision; the sourcing-model rewrite
-(§2 tier table, §4 rows, §5 archetype wording, §8 scope) is scheduled as the next
-consistency wave.
+recorded here and executed in the same wave: the sourcing-model rewrite shipped as
+capability-sourcing-and-engineering-model.md **v3.0** (§2 two-tier landscape with the
+no-buy guardrail, §4 re-issued register, §3 use-EBS/build gate, §5 'Configure-and-integrate'
+archetype, §8 Vendor & Platform Lifecycle Management) and the operating model aligned as
+**v3.11** (archetype rename, product/vendor-management remit, §8/§9 cadences and Phase-2
+re-scope); this register remains the fit/disposition source of truth.
 
 | # | Decision | Resolution | Supersedes |
 |---|---|---|---|

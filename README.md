@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This repository contains the operational specifications, active workflows, and system architecture for **BuildRight Depot Corp.** (the **"Model Company"**), operating with all its capabilities and systems fully enabled on a modern **hybrid IT landscape**: a unified ERP **core** — selected as **Oracle E-Business Suite 12.2** and realized in [`02-oracle-ebs/`](02-oracle-ebs/) under the two-tier doctrine (*if it's in EBS we use it; otherwise we build* — customize only where gaps are proven, buy nothing) — best-of-breed edge products, and in-house built differentiating platforms (sourcing governed by [`07-methodology/capability-sourcing-and-engineering-model.md`](07-methodology/capability-sourcing-and-engineering-model.md)). Each subfolder contains the configuration, design, and architecture for running the model company on specific ERP platforms. The whole model is synthesized into the portable, AI-first operating playbook — the ERP-agnostic doctrine, agent factory, knowledge-base-as-persistent-memory, and no-confusion decision system — in [`07-methodology/ai-first-operating-guide.md`](07-methodology/ai-first-operating-guide.md).
+This repository contains the operational specifications, active workflows, and system architecture for **BuildRight Depot Corp.** (the **"Model Company"**), operating with all its capabilities and systems fully enabled on a modern **hybrid IT landscape**: a unified ERP **core** — selected as **Oracle E-Business Suite 12.2** and realized in [`02-oracle-ebs/`](02-oracle-ebs/) under the two-tier doctrine (*if it's in EBS we use it; otherwise we build* — customize only where gaps are proven, buy nothing) — in-house built and already-built differentiating platforms (sourcing governed by [`07-methodology/capability-sourcing-and-engineering-model.md`](07-methodology/capability-sourcing-and-engineering-model.md)). Each subfolder contains the configuration, design, and architecture for running the model company on specific ERP platforms. The whole model is synthesized into the portable, AI-first operating playbook — the ERP-agnostic doctrine, agent factory, knowledge-base-as-persistent-memory, and no-confusion decision system — in [`07-methodology/ai-first-operating-guide.md`](07-methodology/ai-first-operating-guide.md).
 
 ## Out of Scope
 
@@ -248,8 +248,8 @@ erpplans/
 ├── CHANGELOG.md                 ← Revision history
 └── 07-methodology/              ← Technical system architecture and guidelines
     ├── README.md                     Methodology index & future document plan
-    ├── technical-guidelines.md       POS hardware, infrastructure, integration, security, multi-vendor sourcing architecture
-    ├── capability-sourcing-and-engineering-model.md  Configure/buy/build decision gate, sourcing register, build squads, SEP
+    ├── technical-guidelines.md       POS hardware, infrastructure, integration, security, two-tier sourcing architecture
+    ├── capability-sourcing-and-engineering-model.md  Two-tier sourcing decision gate (in EBS → use it; otherwise build), sourcing register, build squads, SEP
     ├── it-product-operating-model.md IT product teams (hybrid: ERP core + BoB edges + in-house builds + AI agent platform), roles, RACI, governance, sizing (50 → 122 FTE)
     ├── ai-first-operating-guide.md   The AI-first operating guide — ERP-agnostic doctrine (ten laws, six layers, capability contracts), sourcing neutrality, autonomy ladder, agent factory, the EKB as persistent memory + consistency engine, the no-confusion decision system, and the seven-phase adoption path (v1.10)
     ├── validate-repo.sh              Cross-reference validation (76 checks)

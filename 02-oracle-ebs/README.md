@@ -30,7 +30,7 @@ otherwise → build*) supersedes the Capability Sourcing Register's four Buy row
 (WMS/TMS/WFM/FSM) and records POS, ecommerce and the loyalty/gift-card stack as
 **already-built in-house platforms**. The resolution record and the register amendment
 schedule live in [fit-gap §4](fit-gap-analysis.md) (adopted via the W5515 gate's decision
-rights); the sourcing-model document rewrite is the scheduled follow-up wave.
+rights); the sourcing-model rewrite shipped the same day (sourcing v3.0, OM v3.11).
 
 ---
 
@@ -96,9 +96,9 @@ platform-level wave shape is:
   requirements (728), workflows (5,427), and controls (808). Nothing here overrides them.
 - **Sourcing decisions:** the two-tier doctrine (2026-09-14) governs: *in EBS → use it;
   otherwise → build.* The [sourcing register](../07-methodology/capability-sourcing-and-engineering-model.md)
-  §4's four Buy rows (WMS/TMS/WFM/FSM) are superseded — resolution record and amendment
-  schedule in the [fit-gap §4](fit-gap-analysis.md); the sourcing-model rewrite is the
-  scheduled follow-up wave. POS, ecommerce and the loyalty/gift-card stack are recorded as
+  §4's four Buy rows (WMS/TMS/WFM/FSM) are superseded — the rewrite shipped the same day
+  (sourcing v3.0, OM v3.11; resolution record and amendment schedule in the
+  [fit-gap §4](fit-gap-analysis.md)). POS, ecommerce and the loyalty/gift-card stack are recorded as
   already-built in-house platforms.
 - **Statutory vocabulary:** BIR/eFPS/CAS/POS, SSS/PhilHealth/Pag-IBIG, SC/PWD/solo-parent
   discount rules follow the repo canon (VS-79, VS-85, PA-17.3) — no new statutory claims are
