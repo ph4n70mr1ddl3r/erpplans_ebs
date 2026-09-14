@@ -2,13 +2,13 @@
 
 ## Purpose
 
-This repository contains the operational specifications, active workflows, and system architecture for **BuildRight Depot Corp.** (the **"Model Company"**), operating with all its capabilities and systems fully enabled on a modern **hybrid IT landscape**: a unified cloud ERP **core**, best-of-breed edge products, and in-house built differentiating platforms (sourcing governed by [`07-methodology/capability-sourcing-and-engineering-model.md`](07-methodology/capability-sourcing-and-engineering-model.md)). Each subfolder contains the configuration, design, and architecture for running the model company on specific ERP platforms. The whole model is synthesized into the portable, AI-first operating playbook — the ERP-agnostic doctrine, agent factory, knowledge-base-as-persistent-memory, and no-confusion decision system — in [`07-methodology/ai-first-operating-guide.md`](07-methodology/ai-first-operating-guide.md).
+This repository contains the operational specifications, active workflows, and system architecture for **BuildRight Depot Corp.** (the **"Model Company"**), operating with all its capabilities and systems fully enabled on a modern **hybrid IT landscape**: a unified ERP **core** — selected as **Oracle E-Business Suite 12.2** and realized in [`02-oracle-ebs/`](02-oracle-ebs/) under the fit-to-standard-first doctrine (customize only where gaps are proven) — best-of-breed edge products, and in-house built differentiating platforms (sourcing governed by [`07-methodology/capability-sourcing-and-engineering-model.md`](07-methodology/capability-sourcing-and-engineering-model.md)). Each subfolder contains the configuration, design, and architecture for running the model company on specific ERP platforms. The whole model is synthesized into the portable, AI-first operating playbook — the ERP-agnostic doctrine, agent factory, knowledge-base-as-persistent-memory, and no-confusion decision system — in [`07-methodology/ai-first-operating-guide.md`](07-methodology/ai-first-operating-guide.md).
 
 ## Out of Scope
 
-The following are **not** covered in this repository and would be addressed during ERP platform selection and implementation:
+The following are **not** covered in this repository and would be addressed during implementation:
 
-- **Specific ERP vendor evaluation or comparison** — platform-agnostic requirements only
+- **Comparative ERP vendor evaluation** — the requirements stay platform-agnostic; the platform selection itself is recorded as a decision (Oracle EBS 12.2, see [`02-oracle-ebs/`](02-oracle-ebs/) and CHANGELOG), not re-argued here
 - **Warehouse robotics or automation hardware** — conveyor systems, AS/RS, autonomous mobile robots
 - **Blockchain or cryptocurrency** — not applicable to current retail operations
 - **IoT sensor networks** — beyond temperature monitoring and GPS telematics already specified
@@ -235,6 +235,14 @@ erpplans/
 │   ├── internal-controls-matrix.md     808 internal controls by objective
 │   ├── mobile-app-strategy.md          Customer & employee mobile app strategy
 │   └── data-migration-mapping.md       Data migration field mapping templates
+├── 02-oracle-ebs/               ← Oracle E-Business Suite 12.2 platform blueprint (the ERP core of record)
+│   ├── README.md                      Platform decision, fit-to-standard principles, document map, realization waves
+│   ├── ebs-platform-architecture.md   Org/ledger model (5 legal entities · 205 inventory orgs), module footprint, tech stack, environments, integration & security
+│   ├── module-coverage-map.md         Generic-module → EBS realization register, side-by-side with workflow-system-touchpoint-map.md
+│   ├── fit-gap-analysis.md            76-row capability disposition register (52 standard / 2 PER / 2 EXT / 4 LOC / 4 INT / 7 EDGE / 4 BUILD / 1 OPEN), PH localization pack, SIB open decisions, standard-first KPIs
+│   ├── customization-governance.md    CEMLI discipline: extension budget, CDR workflow, ADOP-safe coding standards, CEMLI register, de-customization triggers
+│   ├── integrations.md                IAP-first integration patterns for every flow in the canonical integration matrix
+│   └── data-migration.md              Object → EBS load-path register (interfaces/APIs only), validation gates, cutover
 ├── dmn/                         ← Generated DMN 1.3 decision models (79 decisions across 40 process areas; rule tables + tiered PHP authorization thresholds; mirrors the workflows/ tree; regenerates via 07-methodology/generate-dmn.py)
 ├── bpmn/                        ← Generated BPMN 2.0 models (5,450 processes; mirrors the workflows/ tree; regenerates via 07-methodology/generate-bpmn.py)
 ├── CHANGELOG.md                 ← Revision history
@@ -353,8 +361,8 @@ erpplans/
               ┌──────────────────────────┼──────────────────────────┐
               │                          │                          │
    ┌──────────▼──────────┐  ┌───────────▼───────────┐  ┌──────────▼──────────┐
-   │  01-model-company/  │  │  07-methodology/      │  │  (future: 02-06/)   │
-   │  Business context   │  │  Technical reference  │  │  Platform-specific  │
+   │  01-model-company/  │  │  07-methodology/      │  │ 02-oracle-ebs/      │
+   │  Business context   │  │  Technical reference  │  │  Platform blueprint │
    └──────────┬──────────┘  └───────────┬───────────┘  └─────────────────────┘
               │                          │
    ┌──────────▼──────────────────────────▼───────────┐

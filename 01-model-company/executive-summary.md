@@ -68,9 +68,10 @@ The ERP must handle these non-negotiables:
 ```
 erpplans/
 ├── 01-model-company/       ← Company profile, requirements, and workflows (LIVE)
+├── 02-oracle-ebs/          ← Oracle EBS 12.2 platform blueprint (the ERP core of record)
 ├── bpmn/                   ← Generated BPMN 2.0 process models (5,450 processes; regenerates via 07-methodology/generate-bpmn.py)
 ├── dmn/                    ← Generated DMN 1.3 decision models (79 decisions; regenerates via 07-methodology/generate-dmn.py)
-└── 07-methodology/         ← Technical guidelines & reference specs (partial; further methodology docs pending platform selection — see 07-methodology/README.md)
+└── 07-methodology/         ← Technical guidelines & reference specs (see 07-methodology/README.md; platform selection recorded in 02-oracle-ebs/)
 ```
 
 ---
