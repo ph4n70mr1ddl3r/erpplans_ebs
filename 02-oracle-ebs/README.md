@@ -18,17 +18,19 @@ Back to the [root README](../README.md).
 |---|---|---|
 | ERP core of record | **Oracle E-Business Suite 12.2** (latest Release Update Pack; 12.2.12 baseline at blueprint time) | Deepest standard fit for the Core tier (financials, procure-to-pay, inventory ledger, intercompany, statutory tax); one financial control surface for all 5 legal entities and the 808-control register; committed vendor support horizon (Premier Support through at least December 2034 under Oracle's rolling commitment — re-verify the current MOS note at contract time) |
 | Deployment model | Hosted private deployment (colocation or OCI compute) with DMZ tier for iSupplier/external integrations | EBS is not SaaS; the sourcing model's "unified core" is realized on-premises-grade. Data residency (RA 10173) is fully under BuildRight control |
-| Customization doctrine | **Fit-to-standard first**, CEMLI-governed (see [`customization-governance.md`](customization-governance.md)) | The user doctrine: make the most of the suite; customize only for gaps |
-| Philippine statutory layer | eBTax configuration + a bounded **localization pack** (payroll statutory, BIR report/file formats) | The one area EBS genuinely needs country-specific builds — see [`fit-gap-analysis.md`](fit-gap-analysis.md) §6 |
-| Edge systems | Best-of-breed WMS/TMS/WFM/FSM, POS, ecommerce, loyalty — unchanged from the [Capability Sourcing Register](../07-methodology/capability-sourcing-and-engineering-model.md) §4 | EBS has no native products for these; the register already decided Buy/Build. Oracle WMS/MSCA **satisfies the register's own WMS re-evaluation trigger** and goes to the SIB for the parity assessment (§4 of the fit-gap doc) |
-| In-house builds | OMO (omnichannel order orchestration), TPS (trade & project services), AAP (agentic runtime), IAP (integration platform), DP (data platform) — unchanged | Register §4; EBS offers no credible substitute |
+| Customization doctrine | **Two-tier sourcing (2026-09-14): if it's in EBS we use it — otherwise we build.** No best-of-breed capability buying; CEMLI-governed extensions only where EBS function is genuinely short ([fit-gap](fit-gap-analysis.md)) | The user doctrine: make the most of the suite; customize only for gaps; buy nothing a build isn't forced to replace |
+| Philippine statutory layer | eBTax configuration + the EBS-held **BIR indirect-tax pack** (2307, VAT datasets, CAS inventory lists); **payroll statutory is an in-house build** posting journals to EBS | The payroll engine and its BIR compensation outputs are ours (built, not bought); EBS keeps the indirect-tax localization and the ledger |
+| Warehouse & transport execution | **In-suite: Oracle WMS/MSCA + Shipping/Transportation Execution** — adopted under the two-tier doctrine (in EBS → use it) | Resolves the sourcing register's BoB WMS/TMS rows; no best-of-breed buying |
+| Already-built platforms (integrate, never rebuild) | **POS estate** (in-house), **custom ecommerce platform** (in-house), **gift-card/loyalty stack** (in-house) | The POS program is integration — flows W533–W541 onto EBS masters and posting — not sourcing |
+| In-house builds (new scope) | Payroll PH (engine + statutory outputs), store workforce scheduling & time capture, installation dispatch, space-planning; plus OMO (omnichannel orchestration), TPS (trade & project services), AAP (agentic runtime), IAP (integration platform), DP (data platform) | Register §4 builds + the two-tier doctrine's new scope; EBS offers no credible substitute for any of them |
+| Foundation-model access | Vendor LLM APIs under tier-1 TPRM contracts | Commodity API procurement, not capability sourcing — the one remaining vendor product line, unchanged |
 
-**Consistency with the sourcing model.** The Capability Sourcing Register
-([`07-methodology/capability-sourcing-and-engineering-model.md`](../07-methodology/capability-sourcing-and-engineering-model.md) §4)
-remains the single record of sourcing decisions. This folder does not re-decide anything it
-owns; it names the *product* that realizes the "unified ERP core" row (**Oracle EBS 12.2**)
-and dispositions every model-company capability against EBS standard function. Any change to
-a register row (e.g., WMS BoB → Oracle WMS) routes through the W5515 sourcing gate as usual.
+**Consistency with the sourcing model.** The 2026-09-14 two-tier decision (*in EBS → use it;
+otherwise → build*) supersedes the Capability Sourcing Register's four Buy rows
+(WMS/TMS/WFM/FSM) and records POS, ecommerce and the loyalty/gift-card stack as
+**already-built in-house platforms**. The resolution record and the register amendment
+schedule live in [fit-gap §4](fit-gap-analysis.md) (adopted via the W5515 gate's decision
+rights); the sourcing-model document rewrite is the scheduled follow-up wave.
 
 ---
 
@@ -37,8 +39,8 @@ a register row (e.g., WMS BoB → Oracle WMS) routes through the W5515 sourcing 
 1. **Standard first.** A workflow touchpoint is served by unmodified EBS unless a documented
    gap proves otherwise. The burden of proof sits with the customizer, not the standard.
 2. **Configure > Personalize > Extend > Localize > Build.** The lowest CEMLI tier that
-   closes the gap wins. "Build" in this ladder means custom code *inside* EBS — the
-   in-house products (OMO/TPS/AAP) are outside EBS and governed by the sourcing register.
+   closes the gap wins. "Build" splits two ways: custom code *inside* EBS (CEMLI extensions,
+   budget-capped) and in-house products *outside* EBS (the two-tier doctrine's build tier).
 3. **Zero modifications (M).** No base-product changes: no Forms modification, no base-table
    DML, no patch-overrides. This is what keeps quarterly Critical Patch Updates and Release
    Update Packs installable without rework.
@@ -60,9 +62,9 @@ a register row (e.g., WMS BoB → Oracle WMS) routes through the W5515 sourcing 
 |---|---|
 | [`ebs-platform-architecture.md`](ebs-platform-architecture.md) | The target platform: organization/ledger model for 5 legal entities · 200 stores · 4 DCs; the EBS module footprint; tech stack (12.2 RUP, Database 19c, WebLogic, ADOP online patching); environment strategy; integration and security architecture |
 | [`module-coverage-map.md`](module-coverage-map.md) | "Make the most of it" — the register mapping every generic ERP module in the [workflow-system-touchpoint-map](../01-model-company/workflows/workflow-system-touchpoint-map.md) to the specific EBS module and setup that serves it, per value-stream family |
-| [`fit-gap-analysis.md`](fit-gap-analysis.md) | The gap discipline: fit classes (FIT-STD/FIT-CFG/PER/EXT/LOC/INT/EDGE/BUILD), the capability disposition register (76 rows), the Philippine localization register, requirement-section (R1–R32) disposition view, SIB re-assessment items, and the standard-first KPIs |
+| [`fit-gap-analysis.md`](fit-gap-analysis.md) | The gap discipline: fit classes (FIT-STD/FIT-CFG/PER/EXT/LOC/INT/BUILD; EDGE retired), the capability disposition register (79 rows), the resolution record for the formerly-open buy decisions, the Philippine statutory split (EBS-held vs payroll-built), requirement-section (R1–R32) disposition view, and the standard-first KPIs |
 | [`customization-governance.md`](customization-governance.md) | How customization stays under control: CEMLI framework operationalized, the Customization Decision Record (CDR) workflow, naming/technical standards, online-patching-safe coding rules, the CEMLI register, de-customization triggers, KPIs |
-| [`integrations.md`](integrations.md) | EBS-specific integration patterns for every flow in the canonical [integration architecture](../01-model-company/data-volumes-and-integrations.md): POS, ecommerce, WMS/TMS/WFM/FSM edges, banks, BIR/eFPS, statutory bodies, payment gateways, iSupplier — via open interfaces, ISG REST/SOAP, business events, and IAP contracts |
+| [`integrations.md`](integrations.md) | EBS-specific integration patterns for every flow in the canonical [integration architecture](../01-model-company/data-volumes-and-integrations.md): the already-built POS estate and ecommerce platform, in-suite WMS, the in-house builds, banks, BIR/eFPS, statutory bodies, payment gateways, iSupplier — via open interfaces, ISG REST/SOAP, business events, and IAP contracts |
 | [`data-migration.md`](data-migration.md) | Loading the model company into EBS: per-object load paths (open interfaces & public APIs), sequence, and validation tied to [`data-migration-mapping.md`](../01-model-company/data-migration-mapping.md), W73 parallel-run and W385 data-quality gates |
 
 ---
@@ -82,7 +84,7 @@ platform-level wave shape is:
 | **W1 — Financial core & P2P** | AP/AR/GL close, procurement, iProcurement, iSupplier, treasury cash | AP, AR, PO, CE, XTR, AME | VS-15, VS-17, VS-18; 5-day close (FIN KPI) |
 | **W2 — Supply chain ledger** | Item master, inventory orgs, receiving, costing, landed cost, transfers | INV, PO, LCM, BOM, QA | VS-01–VS-05, VS-29; 35,000 active SKUs |
 | **W3 — Order-to-cash & retail spine** | Trade/corporate orders, advanced pricing, credit, collections; POS/ecommerce integration go-live | OM, QP, AR, IBY | VS-07/08/10/11/16; 200 stores |
-| **W4 — HR statutory** | Core HR, PH payroll localization pack, statutory filings | PER, PAY + LOC pack | VS-19, VS-79; 6,762 employees |
+| **W4 — People** | Core HR + in-house payroll build integration (posting, statutory outputs live in the build) | PER + payroll-build interfaces | VS-19, VS-79; 6,762 employees |
 | **W5 — Projects, assets, property** | Capex/CIP, fixed assets, lease admin + PFRS 16 extension | PA, FA, PN + EXT | VS-20/35/40/42/148 |
 | **W6 — Optimization** | ECC dashboards, de-customization pass, RUP currency | ECC, Web ADI | Tier 3 analytics |
 
@@ -92,8 +94,12 @@ platform-level wave shape is:
 
 - **Upstream (authoritative):** [`01-model-company/`](../01-model-company/) owns the business
   requirements (728), workflows (5,427), and controls (808). Nothing here overrides them.
-- **Sourcing decisions:** [`07-methodology/capability-sourcing-and-engineering-model.md`](../07-methodology/capability-sourcing-and-engineering-model.md)
-  §4 register governs Configure/Buy/Build; this folder realizes the Configure tier on EBS.
+- **Sourcing decisions:** the two-tier doctrine (2026-09-14) governs: *in EBS → use it;
+  otherwise → build.* The [sourcing register](../07-methodology/capability-sourcing-and-engineering-model.md)
+  §4's four Buy rows (WMS/TMS/WFM/FSM) are superseded — resolution record and amendment
+  schedule in the [fit-gap §4](fit-gap-analysis.md); the sourcing-model rewrite is the
+  scheduled follow-up wave. POS, ecommerce and the loyalty/gift-card stack are recorded as
+  already-built in-house platforms.
 - **Statutory vocabulary:** BIR/eFPS/CAS/POS, SSS/PhilHealth/Pag-IBIG, SC/PWD/solo-parent
   discount rules follow the repo canon (VS-79, VS-85, PA-17.3) — no new statutory claims are
   introduced in this folder.
@@ -102,4 +108,4 @@ platform-level wave shape is:
 
 ---
 
-*Document Version: 1.0 | Date: 2026-09-14 | Initial issue — Oracle EBS 12.2 selected as the ERP core of record; blueprint folder established (platform architecture, module coverage map, fit-gap analysis, customization governance, integrations, data migration). Canon references: 188 VS / 569 PA / 5,427 WF / 808 CTL / 728 Req / 6,762 HC current — HQ 511 / 6,911 target.*
+*Document Version: 1.1 | Date: 2026-09-14 | Two-tier sourcing doctrine enacted (in EBS → use it; otherwise → build): decision table re-pointed (in-suite Oracle WMS/MSCA + Shipping/OTE; POS/ecommerce/loyalty recorded as already-built platforms; payroll re-scoped to an in-house build; foundation-model APIs remain commodity procurement), W4 wave re-scoped (Core HR in EBS + payroll-build integration), sourcing-register supersession recorded with the rewrite scheduled. Prior v1.0 (2026-09-14): initial issue — Oracle EBS 12.2 selected as the ERP core of record; blueprint folder established (platform architecture, module coverage map, fit-gap analysis, customization governance, integrations, data migration). Canon references: 188 VS / 569 PA / 5,427 WF / 808 CTL / 728 Req / 6,762 HC current — HQ 511 / 6,911 target.*

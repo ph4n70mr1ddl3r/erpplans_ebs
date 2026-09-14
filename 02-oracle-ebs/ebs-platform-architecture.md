@@ -66,19 +66,19 @@ deliberately not adopted (see the [fit-gap register](fit-gap-analysis.md) for th
 | **Supplier Lifecycle Management** | Supplier onboarding questionnaire/approval flow | W36 vendor onboarding |
 | **Landed Cost Management (LCM)** | Import true-up: freight, duties, demurrage allocation to item cost | W144, W239, W249, VS-122 |
 | **Inventory (INV)** | Item master, UOM/conversions, onhand, subinventories, min-max, cycle counts, physical inventory, inter-org transfers, consignment | VS-05, VS-29; W3/W4/W6/W22/W42 family |
-| **Warehouse Management (WMS) / MSCA** | *Optional parity candidate* — RF-directed putaway/pick, LPN/pallet tracking | VS-04; see fit-gap §4 (SIB re-assessment vs BoB WMS) |
+| **Warehouse Management (WMS) / MSCA** | **Adopted in-suite** — RF-directed putaway/pick, LPN/pallet tracking, directed tasking | VS-04; two-tier doctrine resolution (in EBS → use it) |
 | **Bill of Materials (BOM) / WIP** | Kit/BOM definitions, bundle assembly, build-to-order | W46, VS-92 |
 | **Order Management (OM)** | Sales orders, quotes→orders (W58), backorders (W56), sales agreements, drop-ship (W246), ship-confirm | VS-11, VS-16, VS-60 (fulfillment legs) |
 | **Advanced Pricing (QP)** | Price lists, modifiers, qualifiers, coupon/promotion rules, PH mandatory discounts | W40, W61, W93, VS-85, W539 |
 | **Shipping Execution (WSH)** | Ship confirm, delivery/trip, packing slips | W19, W106 dispatch |
-| **Transportation Execution (OTE)** | Carrier tender, freight cost capture (light use; TMS owns planning per register) | VS-110 freight postings |
+| **Transportation Execution (OTE)** | Carrier tender, freight cost capture — in-suite under the two-tier doctrine (the BoB TMS row is superseded); optimization beyond OTE is a build candidate, never a buy | VS-110 freight postings |
 | **Oracle Quality (QA)** | Incoming inspection plans, supplier quality data collection | W110 supplier quality, VS-31 |
 | **Property Manager (PN)** | Lease administration, rent/CAM/indexation billing, critical dates | VS-42, W117/W118 |
 | **Projects (Project Costing + PM)** | Capex projects, CIP, project vendor bills, asset turnover hand-off | VS-40, VS-20, W21, W276 |
-| **Oracle HRMS (PER)** | Org/position/employee master, EITs (licenses, PPE sizes), absence types | VS-19, W15/W43, W292 |
-| **Oracle Payroll (PAY)** | Gross-to-net engine + **PH localization pack** (fit-gap §6) | W10 payroll, W74/W76 deductions, VS-102 |
+| **Oracle HRMS (PER)** | Org/position/employee master, EITs (licenses, PPE sizes), absence types | VS-19, W15/W43, W292 — Core HR stays in EBS; the payroll engine is the in-house build (below) |
+| *Oracle Payroll (PAY)* | ***Not adopted*** — payroll is an in-house build (fit-gap E5–E8): the build owns PH statutory gross-to-net and compensation outputs, posts costing journals into EBS, and pulls people data from PER | VS-19.2; fit-gap §4 resolution 7 |
 | **iRecruitment (IRC)** | Vacancy/requisition/candidate self-service | W-recruitment family, VS-121 |
-| **Oracle Learning Management (OLA)** | Training calendar, compliance enrollments | W51, VS-123/183 (basic; deep LMS stays edge) |
+| **Oracle Learning Management (OLA)** | Training calendar, compliance enrollments | W51, VS-123/183 (basic; deeper LMS function, if ever needed, is a build) |
 | **Oracle Treasury (XTR)** | Cash positioning, investments, debt/covenants, FX exposure & deals | VS-18.1–18.3, W80, W318/W319/W321 |
 | **Advanced Collections (IEX)** | Delinquency strategy, dunning, promise-to-pay | VS-16.3, W108 |
 | **Credit Management** | Credit scoring rules, limits, hold/release | W24, W328, W229 |
@@ -90,7 +90,12 @@ deliberately not adopted (see the [fit-gap register](fit-gap-analysis.md) for th
 | **Web ADI** | Mass maintenance (items, price lists, budgets, journals) from spreadsheets | VS-29 governance runs |
 | **Enterprise Command Centers (ECC)** | Embedded operational dashboards (payables, receivables, inventory, procurement) | Tier-3 analytics, PA-28.x |
 | **Enterprise Repository Engines (ERES)** | E-signature evidence on controlled documents/approvals | Control evidence for CTL register |
-| **Not adopted** | iStore (legacy storefront), Discoverer, Forms-customization of shipping forms, Oracle Configurator (CZ) for B2C — gaps dispositioned in the fit-gap register | VS-10, VS-07 |
+| **Not adopted** | iStore (legacy storefront), Discoverer, Forms-customization of shipping forms, Oracle Configurator (CZ) for B2C, **Oracle Payroll** — gaps dispositioned in the fit-gap register | VS-10, VS-07, VS-19.2 |
+
+**In-house products riding EBS (outside the suite, integrated via IAP):** the **POS estate**
+and the **custom ecommerce platform** (both already built — integration is the program), the
+gift-card/loyalty stack (already built), **Payroll PH**, the store workforce platform, and
+OMO/TPS/AAP/IAP/DP. None of them buys its way in; all of them ledger into EBS.
 
 **Planning products (license-flagged):** Oracle Advanced Supply Chain Planning (ASCP) and
 Demantra Demand Management are **not** part of the base footprint; VS-02's statistical
@@ -109,7 +114,7 @@ evaluation vs. the in-house ROP/forecast pipeline already implied by the automat
 | UI | Forms (back-office power users) + OA Framework/HTML (self-service, iProcurement, iSupplier) | No Forms modification (doctrine rule 3) |
 | Patching | **ADOP online patching** (edition-based redefinition) | Custom code must be edition-enabled — rules in [customization-governance §6](customization-governance.md) |
 | SSO/IAM | Oracle Internet Directory + Access Manager federation to the corporate IdP | W152 joiner/mover/leaver provisioning drives FND users & responsibilities |
-| Print/labels | BI Publisher server + store label printers via POS/WMS edges | W63/W181 shelf tags print from the POS edge, not Forms |
+| Print/labels | BI Publisher server + store label printers via the POS platform/WMS | W63/W181 shelf tags print from the in-house POS platform, not Forms |
 
 ---
 
@@ -118,7 +123,7 @@ evaluation vs. the in-house ROP/forecast pipeline already implied by the automat
 | Environment | Purpose | Notes |
 |---|---|---|
 | **DEV** | Configuration build, extension development | Refresh-masked clones per W384 |
-| **TEST/SIT** | Integration testing with edges (POS/ecommerce/WMS stubs) | IAP contract tests run here (sourcing model §7 rule 3) |
+| **TEST/SIT** | Integration testing with the integrated platforms (POS/ecommerce/WMS stubs) | IAP contract tests run here (sourcing model §7 rule 3) |
 | **UAT/TRAIN** | Business validation + the 6,762-user training estate | W73 parallel-run rehearsals |
 | **PATCH** | ADOP patch/upgrade rehearsal (RUP, CPU) | Mandatory gate before any PROD patch |
 | **PROD** | Production | DR twin via Data Guard |
@@ -133,8 +138,10 @@ refreshes run the masking profile (W384) — production data never trains unmask
 The full pattern register lives in [integrations.md](integrations.md); the platform-level
 rules:
 
-1. **IAP is the only integration path.** No edge system writes EBS tables directly. Edges
-   speak IAP contracts; IAP adapters speak EBS in its native tongues — open interface
+1. **IAP is the only integration path.** No integrated system writes EBS tables directly.
+   Integrated systems — the already-built POS estate and ecommerce platform, the in-suite
+   WMS, the in-house builds, loyalty — speak IAP contracts; IAP adapters speak EBS in its
+   native tongues — open interface
    tables, public PL/SQL APIs, ISG REST/SOAP, business events (WF_EVENT), XML Gateway.
 2. **High-volume flows are asynchronous and interface-table-based.** POS sales land in
    staging → validated → OM/AR/INV interfaces; the 30-second POS→ERP latency SLA is met by
@@ -172,11 +179,11 @@ rules:
 | NFR theme | EBS platform answer |
 |---|---|
 | Scale (14,000 POS txn/store/month × 200) | 600-terminal POS estate posts ~2.8M POS + ~17,000 ecommerce transactions/month chain-wide — interface-table throughput well inside EBS reference capacity; nightly reconciliation batch validates completeness (W533/W537) |
-| Availability | RAC + Data Guard; POS edge runs offline (≥ 8h) with event replay (W535) — EBS availability never gates a store |
+| Availability | RAC + Data Guard; the in-house POS platform runs offline (≥ 8h) with event replay (W535) — EBS availability never gates a store |
 | Batch windows | Close, costing, planning and interface-restore jobs run inside the [batch window table](../01-model-company/data-volumes-and-integrations.md) §5 |
 | Auditability | ERES e-signatures, FND audit options on master-data tables, SLA/audit trails — evidence for the 808-control register |
 | Data residency | Fully under BuildRight control (hosted private deployment), RA 10173-aligned (W434 NPC registration scope) |
 
 ---
 
-*Document Version: 1.0 | Date: 2026-09-14 | Initial issue — org/ledger model, module footprint, tech stack, environments, integration and security architecture for the EBS realization. Canon references: 5 legal entities / 200 stores / 4 DCs / 35,000 active SKUs / ~2.8M POS transactions/month (tender-mix canon); Premier-Support horizon re-verified at contract time.*
+*Document Version: 1.1 | Date: 2026-09-14 | Two-tier sourcing doctrine enacted (in EBS → use it; otherwise → build): Oracle WMS/MSCA and Shipping/OTE adopted in-suite (BoB WMS/TMS superseded), Oracle Payroll marked not-adopted with payroll re-scoped to the in-house build (fit-gap §4 resolution 7), in-house-products roster added (POS/ecommerce/loyalty already built — integration is the program). Prior v1.0 (2026-09-14): initial issue — org/ledger model, module footprint, tech stack, environments, integration and security architecture for the EBS realization. Canon references: 5 legal entities / 200 stores / 4 DCs / 35,000 active SKUs / ~2.8M POS transactions/month (tender-mix canon); Premier-Support horizon re-verified at contract time.*

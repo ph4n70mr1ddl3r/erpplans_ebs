@@ -20,8 +20,9 @@ Part of the [02-oracle-ebs blueprint](README.md).
 | **L** — Localizations | Statutory country-specific function | Confined to the [PH localization pack](fit-gap-analysis.md) §6; every output cites its statute/format and is versioned as a pack release |
 | **I** — Interfaces | Inbound/outbound data bridges | Governed by [integrations.md](integrations.md); built on EBS open interfaces/APIs, never on direct table writes by external systems |
 
-The fit-gap ladder (FIT-STD → FIT-CFG → PER → EXT → LOC → INT → EDGE/BUILD) is this
-framework with the sourcing register's Buy/Build tiers appended. Lowest wins.
+The fit-gap ladder (FIT-STD → FIT-CFG → PER → EXT → LOC → INT → BUILD) is this
+framework with the two-tier doctrine's build tier appended (in EBS → use it; otherwise →
+build — never buy). Lowest wins.
 
 ---
 
@@ -46,7 +47,7 @@ class — the budget forces a portfolio, not an accretion.
 A CDR passes only if all eight are true:
 
 1. **Gap is real** — the fit-gap ladder alternatives (STD/CFG/PER) are documented as tried
-   or ruled out with reasons, and no EDGE/BUILD product is register-assigned to it.
+   or ruled out with reasons, and no BUILD product is register-assigned to it.
 2. **Edge-clean** — the extension has a defined input, output, and trigger; it does not
    fork a business process into "the EBS way and our way".
 3. **Registered objects only** — custom objects live in the `BDR` schema/top, registered in
@@ -70,7 +71,7 @@ One page + appendices, stored with the CEMLI register entry:
 | Section | Content |
 |---|---|
 | Context | Workflow(s) (W-ids), capability register row, gap statement |
-| Alternatives | STD/CFG/PER/EDGE/BUILD attempts and why inadequate |
+| Alternatives | STD/CFG/PER/BUILD attempts and why inadequate |
 | Design | Objects, APIs used, event/interface points; architecture sketch |
 | Controls | CTL-XX mapping and evidence path |
 | Operations | Owning team, runbook link, monitoring, batch window |
@@ -140,11 +141,11 @@ unregistered object in a BDR schema is an incident, not a finding.
 
 | Trigger | Action |
 |---|---|
-| A RUP ships equivalent function | Owner has 2 quarters to retire the extension and adopt the shipped function — the same "revisit when the vendor ships it" discipline the sourcing register applies to BoB edges, applied inside the suite |
+| A RUP ships equivalent function | Owner has 2 quarters to retire the extension and adopt the shipped function — the same re-evaluation discipline the two-tier doctrine applies to in-house builds, applied inside the suite |
 | Usage falls below threshold (2 quarters) | Retirement review at QBR |
 | A PROCESS-mining finding shows the fork costs more than the gap | ARB-initiated retirement |
 | Philippine statute/format changes | Pack release replaces the component (never a live patch) |
-| Module re-tiers (e.g., Oracle WMS adoption at SIB decision 1) | Dependent EXT/INT rows re-planned in the same decision |
+| Module re-tiers (e.g., a doctrine resolution re-scopes a module's in-suite footprint) | Dependent EXT/INT rows re-planned in the same decision |
 
 Retirements celebrate: the KPI (fit-gap §7) is extensions trending to zero.
 
@@ -167,4 +168,4 @@ signs any change touching Tier-1 workflows (OM §6.3 discipline).
 
 ---
 
-*Document Version: 1.0 | Date: 2026-09-14 | Initial issue — CEMLI framework, extension budget, CDR workflow, technical & ADOP standards, CEMLI register, de-customization triggers, KPIs. Canon anchors: fit-gap register (2 EXT / 4 LOC rows); sourcing model §3.3 appendices and §12 agentic boundaries; OM §6.3 tier-and-control discipline.*
+*Document Version: 1.1 | Date: 2026-09-14 | Two-tier sourcing doctrine enacted (in EBS → use it; otherwise → build): fit-gap ladder and CDR alternative set re-worded (EDGE/Buy tier retired), de-customization triggers re-pointed to the doctrine's re-evaluation discipline. Prior v1.0 (2026-09-14): initial issue — CEMLI framework, extension budget, CDR workflow, technical & ADOP standards, CEMLI register, de-customization triggers, KPIs. Canon anchors: fit-gap register (2 EXT / 1 LOC row); sourcing model §3.3 appendices and §12 agentic boundaries; OM §6.3 tier-and-control discipline.*
