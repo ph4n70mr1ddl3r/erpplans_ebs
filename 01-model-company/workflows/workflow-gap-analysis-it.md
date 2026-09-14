@@ -15,8 +15,9 @@
 ## 1. Scope
 
 All workflows governing the **information-technology function** of the model company (200 stores,
-4 DCs, HQ; ~6,762 employees; ~1,500 ERP users; ~2,500+ endpoints; 600 POS terminals; hybrid cloud
-ERP + best-of-breed edge + 2 in-house built products), across:
+4 DCs, HQ; ~6,762 employees; ~1,500 ERP users; ~2,500+ endpoints; 600 POS terminals; the in-suite
+ERP core of record — Oracle E-Business Suite 12.2 under the two-tier doctrine — plus in-house
+built and already-built platforms per the Capability Sourcing Register), across:
 
 - The **Technology & Data family** — 13 dedicated value streams, **390 workflows**:
   VS-27 (71), VS-28 (24), VS-29 (43), VS-30 (29), VS-99 (24), VS-113 (28), VS-115 (24),

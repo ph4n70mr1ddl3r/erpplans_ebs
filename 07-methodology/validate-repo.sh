@@ -4294,32 +4294,69 @@ echo "--- Check 77: Sourcing-doctrine posture guard (two-tier canon) ---"
 # two-tier landscape anchors and never the retired vendor/BoB forms, the guide's two
 # repaired assignment phrases cannot regress, and the assumptions register's A6.3
 # ecommerce row must state the already-built canon.
+# 2026-09-14 twenty-second-wave review: one stranded live surface found — the IT
+# gap-analysis companion's §1 scope line still read 'hybrid cloud ERP + best-of-breed
+# edge + 2 in-house built products', the retired three-tier posture — and it escaped
+# BOTH sweep arms (the 'cloud ERP' literal was split across a line break, invisible to
+# the line-based probe; the best-of-breed sweep was scoped to VS-113 + PA-128.3).
+# Repaired in place and the class closed: the 'cloud ERP' probe is now joined-text
+# (line-break-proof, offset→line mapping preserved), the lowercase-best-of-breed
+# sweep extends to the four domain gap-analysis companions, and the companion's
+# repaired scope anchor is required present (part f).
 CHECK77=$(python3 - "$REPO_ROOT" <<'PY'
 import os, re, sys, glob
 ROOT = sys.argv[1]
 errs = []
 
 # (a) repo-wide live-prose retirement of the 'cloud ERP' posture literal.
+# 2026-09-14 twenty-second-wave hardening: the probe is joined-text — live lines are
+# collapsed to one string and matched with r'cloud\\s+ERP' case-insensitively — because
+# the first draft was line-based and the IT gap-analysis companion's scope line shipped
+# the literal split across a line break ('hybrid cloud<newline>ERP + best-of-breed edge'),
+# which sailed through every run until the wave-22 review joined the lines. Offset→line
+# mapping preserved so a firing guard still points at the exact line. The sourcing-model
+# §1 history clause and the gap-analysis pass-record table keep their exemptions.
 for f in glob.glob(ROOT + '/**/*.md', recursive=True):
     rel = os.path.relpath(f, ROOT)
     if rel.startswith('CHANGELOG'):
         continue
     if os.path.normpath(rel) == os.path.normpath('01-model-company/workflows/workflow-gap-analysis.md'):
         continue  # scenario table = authoring-time snapshot; batch notes = dated record
+    live_lines = []
     for i, line in enumerate(open(f, encoding='utf-8'), 1):
         if line.lstrip().startswith('*Date:') or 'Prior v' in line:
             continue
-        if 'single-vendor unified cloud ERP' in line:
-            continue  # sourcing-model §1 history: what the v1.x model assumed (retained record)
-        if re.search(r'cloud ERP', line, re.I):
-            errs.append(f"{rel}:{i}: retired 'cloud ERP' posture literal in live prose (canon: Oracle E-Business Suite 12.2, the ERP core of record)")
+        live_lines.append((i, line.rstrip('\n')))
+    joined = ' '.join(text for _, text in live_lines)
+    if 'single-vendor unified cloud ERP' in joined:
+        joined = joined.replace('single-vendor unified cloud ERP', '')  # sourcing-model §1 history: what the v1.x model assumed (retained record)
+    for m in re.finditer(r'cloud\s+ERP', joined, re.I):
+        pos = m.start()
+        lineno = live_lines[0][0] if live_lines else 0
+        acc = 0
+        for idx, (i, text) in enumerate(live_lines):
+            end = acc + len(text) + 1
+            if pos < end:
+                lineno = i
+                break
+            acc = end
+        errs.append(f"{rel}:{lineno}: retired 'cloud ERP' posture literal in live prose (canon: Oracle E-Business Suite 12.2, the ERP core of record; joined-text probe — the literal may span a line break)")
 
-# (b) VS-113 folder + PA-128.3: lowercase 'best-of-breed' retired (W5516's registered
-# title keeps its canonical case — so the match is case-sensitive, and the TOC/intra-file
-# anchor slugs forced by that registered title are stripped before matching).
+# (b) VS-113 folder + PA-128.3 + the four domain gap-analysis companions: lowercase
+# 'best-of-breed' retired (W5516's registered title keeps its canonical case — so the
+# match is case-sensitive, and the TOC/intra-file anchor slugs forced by that registered
+# title are stripped before matching). 2026-09-14 twenty-second-wave extension: the
+# companions join the sweep — the IT companion's §1 scope line carried the retired
+# 'best-of-breed edge' tier and only the VS-113/PA-128.3 folder scope kept it invisible.
+# Adjudicated out of scope (do not extend blindly): PA-138.1's 'single-source IFM vs
+# best-of-breed' is outsourced-facilities-SERVICES vendor strategy (commodity procurement
+# under the doctrine), not capability-product sourcing; the classification's W5516
+# registered title and the dated batch/blockquote records keep their exemptions.
 vs113 = os.path.join(ROOT, '01-model-company', 'workflows', 'VS-113-enterprise-architecture-application-portfolio-and-technology-strategy')
 targets = sorted(glob.glob(os.path.join(vs113, '*.md')))
 targets.append(os.path.join(ROOT, '01-model-company', 'workflows', 'VS-128-ai-ml-governance-responsible-ai', 'PA-128.3-ai-lifecycle-operations-assurance-value-realization.md'))
+for _comp in ('workflow-gap-analysis-it.md', 'workflow-gap-analysis-finance.md', 'workflow-gap-analysis-operations.md', 'workflow-gap-analysis-people.md'):
+    targets.append(os.path.join(ROOT, '01-model-company', 'workflows', _comp))
 for f in targets:
     rel = os.path.relpath(f, ROOT)
     for i, line in enumerate(open(f, encoding='utf-8'), 1):
@@ -4361,6 +4398,14 @@ asm = os.path.join(ROOT, '01-model-company', 'assumptions-and-design-decisions.m
 if 'A6.3 | Ecommerce platform | Already-built in-house platform' not in open(asm, encoding='utf-8').read():
     errs.append("01-model-company/assumptions-and-design-decisions.md: A6.3 ecommerce row must read 'Already-built in-house platform' (guard-anchored)")
 
+# (f) the IT gap-analysis companion's repaired §1 scope line cannot regress (corrected-form
+# anchor, scanned over live lines joined — the same line-break-proof reading as (a)).
+_it = os.path.join(ROOT, '01-model-company', 'workflows', 'workflow-gap-analysis-it.md')
+_it_live = ' '.join(l.rstrip('\n') for l in open(_it, encoding='utf-8')
+                    if not (l.lstrip().startswith('*Date:') or 'Prior v' in l))
+if 'the in-suite ERP core of record — Oracle E-Business Suite 12.2 under the two-tier doctrine' not in _it_live:
+    errs.append("01-model-company/workflows/workflow-gap-analysis-it.md: repaired §1 scope anchor 'the in-suite ERP core of record — Oracle E-Business Suite 12.2 under the two-tier doctrine' not found in live prose (guard-anchored; the retired 'hybrid cloud ERP + best-of-breed edge + 2 in-house built products' form may not return)")
+
 print(f"C77_BAD={len(errs)}")
 for e in errs:
     print('BAD|' + e)
@@ -4368,7 +4413,7 @@ PY
 )
 C77_BAD=$(echo "$CHECK77" | sed -n 's/^C77_BAD=\([0-9]*\).*/\1/p')
 if [ "${C77_BAD:-1}" -eq 0 ]; then
-    ok "Sourcing-doctrine posture guard clean: no retired 'cloud ERP' / best-of-breed / bought-edge literals in live prose, the executive summary carries the two-tier landscape anchors, the guide's §4.2/L3 assignments hold, and the A6.3 already-built canon is pinned (guard added by the 2026-09-14 twentieth-wave consistency review — the doctrine enactment re-pointed every guarded surface while stranding the posture prose on surfaces no rule read)"
+    ok "Sourcing-doctrine posture guard clean: no retired 'cloud ERP' / best-of-breed / bought-edge literals in live prose (joined-text probe — split literals caught), the executive summary carries the two-tier landscape anchors, the guide's §4.2/L3 assignments hold, the A6.3 already-built canon is pinned, and the IT gap-analysis companion's §1 scope anchor holds (guard added by the 2026-09-14 twentieth-wave consistency review — the doctrine enactment re-pointed every guarded surface while stranding the posture prose on surfaces no rule read; twenty-second-wave review repaired the IT companion's line-split scope line and hardened the probe against line breaks)"
 else
     error "Sourcing-doctrine posture violations against the two-tier canon ($C77_BAD):"
     echo "$CHECK77" | grep -E '^BAD\|' | sed 's/^BAD|/    /'
