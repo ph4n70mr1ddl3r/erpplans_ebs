@@ -298,7 +298,7 @@ acts remain human-confirmed — the agentic hard boundary (sourcing model §12.1
 
 | KPI | Target | Enforcement |
 |---|---|---|
-| Capability rows on standard EBS (STD+CFG) | ≥ 65% steady state (current 68.4%) | This register, re-run per wave |
+| Capability rows on standard EBS (STD+CFG) | ≥ 65% steady state (current 71.1%) | This register, re-run per wave |
 | Best-of-breed capability products | **0 — absolute under the two-tier doctrine** | Sourcing register (amendment per §4) |
 | Extensions (EXT) in production | ≤ 10; each with a CDR + de-customization trigger | CEMLI register (customization-governance §7) |
 | Modifications (M-class) | **0** — absolute | CEMLI register gate; patch rehearsal (PATCH env) |

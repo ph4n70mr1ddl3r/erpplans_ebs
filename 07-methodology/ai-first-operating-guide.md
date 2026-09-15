@@ -134,7 +134,7 @@ capability by the gate in §5 — plus vendor commodity services, which are proc
 | Posture | What it holds (reference instantiation) | Property |
 |---|---|---|
 | **Configured core** | Financial ledger, procure-to-pay, the inventory ledger, warehouse & transport execution, HR/payroll, POS, approvals workflow | The systems of record (§4.2); protected by a core-tier guardrail — removal requires a CEO-noted waiver |
-| **Built differentiator** | Omnichannel order orchestration; trade & project services platform; workforce scheduling & field-service dispatch platforms; the agent platform | In-house products on the engineering paved road — built only where the core platform has no adequate answer |
+| **Built differentiator** | Omnichannel order orchestration; trade & project services platform; workforce scheduling & the field-service dispatch experience layer (the dispatch core rides the in-suite field-service module); the agent platform | In-house products on the engineering paved road — built only where the core platform has no adequate answer |
 | **Commodity services** | Foundation-model APIs and other vendor utilities | Procured, not sourced: commodity procurement under tier-1 TPRM; integrated via L4; run-discipline per §5.4 |
 
 ### 3.4 L2 — Data
@@ -215,7 +215,7 @@ The company is ERP-agnostic in architecture, not merely in procurement posture. 
 | Customer identity & profile | Customer data platform | All channels consume CDP contracts |
 | Employee master & payroll outcomes | Core HR master (people data); statutory payroll computed on the built payroll engine, posting journals to the core ledger | WFM subscribes for schedule/time |
 | Order state (omnichannel) | Order-orchestration product (built or bought) | Ledger posts, commerce displays, WMS/FSM execute — all on its contracts |
-| Warehouse/transport/workforce/dispatch execution state | Execution products of record — in-suite modules (WMS/TMS) or built platforms (workforce/dispatch) per the two-tier sourcing register | Core subscribes for financial and HR effects |
+| Warehouse/transport/workforce/dispatch execution state | Execution products of record — in-suite modules (WMS/TMS and the field-service dispatch core) or built platforms (workforce scheduling, the dispatch experience layer) per the two-tier sourcing register | Core subscribes for financial and HR effects |
 | Enterprise knowledge (processes, controls, decisions) | The EKB (L1) | Everything reads; nothing else claims process truth |
 
 **The rule that matters:** any capability may be re-sourced (§5) and at most L3 changes. If a

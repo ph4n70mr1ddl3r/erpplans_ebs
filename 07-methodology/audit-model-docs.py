@@ -1950,6 +1950,22 @@ def ebs_blueprint_hits():
                 f"Reading note's BUILD split does not name planned-build row(s) "
                 f"{', '.join(missing)}")
 
+    # ---- (a.1) §7 standard-first KPI row tracks the register — the 2026-09-15
+    # exhaustion audit trued the §3 total row and the intro headline but stranded
+    # the KPI table's '(current 68.4%)' against the re-derived 71.1% (59/83) — a
+    # row whose own enforcement cell says 'This register, re-run per wave'
+    # (thirty-fifth-wave consistency review).
+    kpi_sec = (fg_body.split("## 7. Standard-First KPIs")[1]
+               if "## 7. Standard-First KPIs" in fg_body else "")
+    mk = re.search(r"\(current ([\d.]+)%\)", kpi_sec)
+    if not mk:
+        add("fit-gap-analysis.md", 0,
+            "cannot find the §7 standard-share KPI row's '(current N%)' figure")
+    elif float(mk.group(1)) != round(std / total * 100, 1):
+        add("fit-gap-analysis.md", 0,
+            f"§7 KPI row says 'current {mk.group(1)}%' but the register re-derives "
+            f"{std}/{total} = {round(std / total * 100, 1)}%")
+
     # ---- (b) touchpoint-map module set ↔ coverage-map §1 (one-for-one)
     tm = open(os.path.join(MC, "workflows", "workflow-system-touchpoint-map.md"),
               encoding="utf-8").read()

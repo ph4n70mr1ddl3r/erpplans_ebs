@@ -699,8 +699,10 @@ BuildRight Holdings, Inc.
 > we use it — otherwise we build.* Warehouse and transport execution run **in-suite** (Oracle
 > WMS/MSCA, Shipping/Transportation Execution); the POS estate, the custom ecommerce platform
 > and the gift-card/loyalty stack are **already-built in-house platforms** (integrated via
-> the IAP middleware/event backbone — never rebuilt, never bought); Payroll PH, store
-> workforce scheduling and dispatch are **built in-house**; the differentiating products
+> the IAP middleware/event backbone — never rebuilt, never bought); Payroll PH and store
+> workforce scheduling are **built in-house** (the installation-dispatch core is **in-suite** —
+> Oracle Field Service, fit-gap D13 — with the consumer appointment/route-optimization/
+> contractor-portal experience layer **built in-house**); the differentiating products
 > (OMO, TPS) and the agentic runtime (AAP) are **built in-house**.
 
 | System | Function | Status |
@@ -717,8 +719,8 @@ BuildRight Holdings, Inc.
 | E-commerce platform (already built) | Web/Mobile catalog, BOPIS & home delivery fulfillment | Live — Built In-House (existing; integrates) |
 | Gift-card/loyalty stack (already built) | Stored-value ledger, points engine, redemption | Live — Built In-House (existing; integrates) |
 | Payroll PH (build) | PH statutory gross-to-net (SSS, PhilHealth, Pag-IBIG, PD 851, BIR withholding), statutory outputs & agency files; posts period costing journals to EBS | Live — Built In-House |
-| Store workforce platform (build) | Store labor scheduling and time capture (validated feeds into payroll and EBS) | Live — Built In-House |
-| Dispatch (build) | Installation & home-service dispatch, technician mobile app | Live — Built In-House |
+| Store workforce platform (build) | Store shift scheduling/optimization (the genuinely-absent layer — Oracle Time & Labor covers timecards, not retail planning); validated feeds into payroll and EBS | Live — Built In-House |
+| Dispatch (Field Service core + experience-layer build) | Installation & home-service dispatch core rides the in-suite Oracle Field Service module (task assignment, dispatch scheduling, technician debrief, the mobile field device — fit-gap D13); the consumer appointment/route-optimization/contractor-portal experience layer is the in-house build | Live — In-Suite (EBS) core + Built In-House (experience layer) |
 | Order Orchestration (in-house) | Omnichannel order routing, split-order & mixed-basket fulfillment (VS-60) | Live — Built In-House (OMO) |
 | Trade & Project Services Platform (in-house) | Job-site delivery, material staging/phased delivery, bulky install coordination (VS-74/VS-77/VS-143) | Live — Built In-House (TPS) |
 | AI & Agent Platform (in-house) | Governed agentic automation runtime: agent tool registry (IAP contracts only), guardrails, evaluation harness, human-in-the-loop gates, kill-switch (VS-128 governance) | Live — Built In-House (AAP) |

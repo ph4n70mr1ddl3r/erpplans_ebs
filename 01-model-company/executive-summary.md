@@ -37,7 +37,7 @@ The business runs on **Oracle E-Business Suite 12.2** as the in-suite ERP core u
 | Warehouse & transport execution — Oracle WMS/MSCA, Shipping/Transportation Execution | In-suite (two-tier doctrine) | Fully Operational (in-suite) |
 | Order Orchestration (OMO) · Trade & Project Services (TPS) | Built in-house (SEP paved road) | Fully Operational (differentiators) |
 | Already-built platforms — POS estate, ecommerce platform, gift-card/loyalty stack | Built in-house (existing; integrated via the IAP/event backbone) | Fully Operational (integrated) |
-| Payroll PH · store workforce scheduling · dispatch | Built in-house | Fully Operational (builds) |
+| Payroll PH · store workforce scheduling · the dispatch experience layer (Field Service dispatch core in-suite) | Built in-house | Fully Operational (builds) |
 | AI & Agent Platform (AAP) | Built in-house on bought foundation-model APIs (VS-128 governance) | Fully Operational (agentic automation) |
 
 ---
