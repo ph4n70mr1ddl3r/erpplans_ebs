@@ -701,7 +701,7 @@ Source: workflow W1399 — Store-Level Sales Forecasting Accuracy Monitoring, Mo
         <bpmn:outgoing>W1399_Flow15</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:serviceTask id="W1399_Task5" name="Monthly accuracy computation">
-        <bpmn:documentation>Step 1: Monthly accuracy computation: system automatically computes forecast accuracy metrics for each store-department for the prior month: (a) MAPE (Mean Absolute Percentage Error): |actual − forecast| / actual × 100%; (b) WAPE (Weighted Absolute Percentage Error): weighted by revenue contribution; (c) Bias: systematic over-forecasting (positive bias) vs. under-forecasting (negative bias); (d) compute at store level, department level, and chain level
+        <bpmn:documentation>Step 1: Monthly accuracy computation: system automatically computes forecast accuracy metrics for each store-department for the prior month: (a) MAPE (Mean Absolute Percentage Error): absolute(actual − forecast) ÷ actual × 100%; (b) WAPE (Weighted Absolute Percentage Error): weighted by revenue contribution; (c) Bias: systematic over-forecasting (positive bias) vs. under-forecasting (negative bias); (d) compute at store level, department level, and chain level
 Responsible (R): System
 Accountable (A): —
 Duration: Automated</bpmn:documentation>

@@ -875,7 +875,7 @@ Owner: VP Legal / VP Legal &amp; Compliance</bpmn:text>
 Frequency: Ongoing; Annual renewal reviews
 Volume: ~50–100 active trademarks and designs
 Owner: Legal Counsel
-Participants: Marketing, Merchandising (Private Label), IP Office (IPO); the dedicated IP value stream VS-100.2 (W3265–W3268) owns portfolio strategy, prosecution, and enforcement — this GL-close workflow operates the renewal/DAU docket and cost postings that touch the financial close
+Participants: Marketing, Merchandising (Private Label), IP Office (IPO), Legal Counsel (the dedicated IP value stream VS-100.2 / W3265–W3268 owns portfolio strategy, prosecution &amp; enforcement — this workflow operates the renewal/DAU docket and cost postings that touch the financial close)
 Source: workflow W126 — Intellectual Property (IP) Portfolio Management</bpmn:documentation>
       <bpmn:laneSet id="W126_LaneSet3">
         <bpmn:lane id="W126_Lane1" name="Legal Counsel">
