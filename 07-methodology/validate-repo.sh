@@ -4047,25 +4047,31 @@ C71_RC_OUT=$(python3 "$REPO_ROOT/07-methodology/generate-role-coverage.py" --che
 # regenerates consistently would still move the role↔org resolution population
 # silently. The census — generate-role-coverage.py --census, under build()'s
 # own touch semantics — re-derives that population every run and it is pinned
-# here as the adjudicated baseline: of the 5,427 workflows, 2,507 Owner cells
-# resolve through the resolution order and 2,920 carry variant/uncharted forms
-# (2,040 distinct uncharted owner strings; 10,829 distinct uncharted forms
-# across all RACI surfaces). Adjudicated standing: the 1,000+ single-workflow
-# tail of the watchlist stays by policy (promotion is governance, not churn);
-# direction A — 94 of the §5.3 register's 186 ex-IT titles with zero workflow
-# touches — is likewise by design (workflow presence is contracted at function
-# level, every department has ≥1 resolved role; recorded in the TO §5.3 note).
+# here as the adjudicated baseline — re-pointed 2026-09-15 by the role-vocabulary
+# reconciliation (thirty-second wave: every recurring uncharted Owner form and
+# systematic abbreviation adjudicated to register titles, rosters, IT seats,
+# department actors, governance/system/external buckets): of the 5,427
+# workflows, 4,460 Owner cells resolve through the resolution order and 967
+# carry variant/uncharted forms (962 distinct uncharted owner strings — the
+# single-workflow deep tail, multi-stakeholder compound cells requiring
+# per-cell re-owner adjudication in the PA files; 7,117 distinct uncharted
+# forms across all RACI surfaces, down from 10,829). Adjudicated standing: the
+# remaining single-workflow tail stays on the watchlist by policy (promotion
+# is the semantic-batch loop, not churn); direction A — 94 of the §5.3
+# register's 186 ex-IT titles with zero workflow touches — is likewise by
+# design (workflow presence is contracted at function level, every department
+# has ≥1 resolved role; recorded in the TO §5.3 note).
 # Any movement of these numbers must be a conscious re-adjudication with the
 # baseline re-pointed (the Check-74 deferred-anchor pattern).
 C71_CENSUS_OUT=$(python3 "$REPO_ROOT/07-methodology/generate-role-coverage.py" --census 2>&1) && C71_CENSUS_RC=0 || C71_CENSUS_RC=$?
 C71_CENSUS_OK=0
 case "$C71_CENSUS_OUT" in
-  *"CENSUS workflows=5427 owner_resolved=2507 owner_uncharted=2920 owner_uncharted_forms=2040 uncharted_forms=10829"*) C71_CENSUS_OK=1;;
+  *"CENSUS workflows=5427 owner_resolved=4460 owner_uncharted=967 owner_uncharted_forms=962 uncharted_forms=7117"*) C71_CENSUS_OK=1;;
 esac
 if [ "${C71_BAD:-1}" -eq 0 ] && [ "$C71_RC_RC" -eq 0 ] && [ "$C71_CENSUS_RC" -eq 0 ] && [ "$C71_CENSUS_OK" -eq 1 ]; then
     B71=$(echo "$CHECK71" | sed -n 's/^BPMN_TOTALS files=\([0-9]*\) processes=\([0-9]*\)$/\1 \2/p')
     D71=$(echo "$CHECK71" | sed -n 's/^DMN_TOTALS files=\([0-9]*\) decisions=\([0-9]*\)$/\1 \2/p')
-    ok "Generated trees validate structurally against the markdown corpus AND mirror the generator's content derivation: bpmn/ $(echo $B71 | cut -d' ' -f1) files / $(echo $B71 | cut -d' ' -f2) processes (one per confirmed-register row) and dmn/ $(echo $D71 | cut -d' ' -f1) files / $(echo $D71 | cut -d' ' -f2) decisions — well-formed XML, 1 start/1 end per process, full lane coverage, 1:1 diagram:plane, complete DI shapes/edges/bounds/waypoints, decision-table structure, DRD shape per decision, and every process's documentation/start-event-name/controls-annotation byte-equal to the generator's re-derivation from its PA markdown (content mirror added by the 2026-09-10 seventeenth-wave review after batch-24 shipped PA-133.1/.3's generated files stale at the retired 5,426 — structural counts were all still correct, so nothing else could see it), and the shipped role-coverage matrix byte-identical to generate-role-coverage.py --check's re-derivation from the PA RACI fields + tier register + official TO (third-generated-artifact arm added by the 2026-09-15 thirtieth-wave review — the matrix's only harness had been the generator's own --check, which the validator never ran), and the role-vocabulary census pinned at the adjudicated baseline (owner cells 2,507 resolved / 2,920 uncharted of 5,427; 2,040 distinct uncharted owner forms; 10,829 distinct uncharted forms across all RACI surfaces — census arm added by the 2026-09-15 thirty-first-wave review so a batch that edits owners, aliases or the register and regenerates consistently still cannot move the resolution population silently)"
+    ok "Generated trees validate structurally against the markdown corpus AND mirror the generator's content derivation: bpmn/ $(echo $B71 | cut -d' ' -f1) files / $(echo $B71 | cut -d' ' -f2) processes (one per confirmed-register row) and dmn/ $(echo $D71 | cut -d' ' -f1) files / $(echo $D71 | cut -d' ' -f2) decisions — well-formed XML, 1 start/1 end per process, full lane coverage, 1:1 diagram:plane, complete DI shapes/edges/bounds/waypoints, decision-table structure, DRD shape per decision, and every process's documentation/start-event-name/controls-annotation byte-equal to the generator's re-derivation from its PA markdown (content mirror added by the 2026-09-10 seventeenth-wave review after batch-24 shipped PA-133.1/.3's generated files stale at the retired 5,426 — structural counts were all still correct, so nothing else could see it), and the shipped role-coverage matrix byte-identical to generate-role-coverage.py --check's re-derivation from the PA RACI fields + tier register + official TO (third-generated-artifact arm added by the 2026-09-15 thirtieth-wave review — the matrix's only harness had been the generator's own --check, which the validator never ran), and the role-vocabulary census pinned at the adjudicated baseline (owner cells 4,460 resolved / 967 uncharted of 5,427; 962 distinct uncharted owner forms; 7,117 distinct uncharted forms across all RACI surfaces — census arm added by the 2026-09-15 thirty-first-wave review so a batch that edits owners, aliases or the register and regenerates consistently still cannot move the resolution population silently; baseline re-pointed the same day by the thirty-second-wave reconciliation, which adjudicated every recurring uncharted Owner form and systematic abbreviation to the org of record across four tranches and cut the uncharted population 10,829 → 7,117)"
 else
     error "Generated BPMN/DMN trees failed structural validation:"
     echo "$CHECK71" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
