@@ -7519,7 +7519,7 @@ Owner: Store Manager</bpmn:text>
       <bpmn:documentation>Trigger: Weekly scheduled calibration check, or customer complaint about color mismatch, or new tinting colorant cartridge installation
 Frequency: Weekly calibration (200 stores); ad-hoc calibration after complaints (~50–100/month chain-wide)
 Volume: 1 tinting machine per store × 200 stores = 200 weekly calibrations
-Owner: Department Supervisor (Paint &amp; Finishes) or designated Paint Associate
+Owner: Department Supervisor / Sales Associate
 Participants: Paint Associate / Department Supervisor, Vendor Technical Support (as needed)
 Source: workflow W1130 — Store-Level Paint Tinting Machine Calibration Verification &amp; Color Accuracy Audit</bpmn:documentation>
       <bpmn:laneSet id="W1130_LaneSet3">
@@ -7574,7 +7574,7 @@ Duration: 15–30 min</bpmn:documentation>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1130_Annotation10">
         <bpmn:text>Controls: - CTL-259 (ensure controlled execution — Store Daily Management (PA-07.1).) | - operational: Department Supervisor (Paint &amp; Finishes) or designated Paint Associate review and approval gate
-Owner: Department Supervisor (Paint &amp; Finishes) or designated Paint Associate</bpmn:text>
+Owner: Department Supervisor / Sales Associate</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1130_Assoc11" sourceRef="W1130_Annotation10" targetRef="W1130_Start4" associationDirection="None" />
       <bpmn:sequenceFlow id="W1130_Flow12" sourceRef="W1130_Start4" targetRef="W1130_Task5" />

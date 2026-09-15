@@ -889,7 +889,7 @@ Owner: Regulatory Officer</bpmn:text>
       <bpmn:documentation>Trigger: Government agency, LGU, or state-owned enterprise issues Invitation to Bid or Request for Quotation (RFQ) for construction materials, hardware, or related supplies
 Frequency: ~20–40 government procurement opportunities/year; primarily infrastructure agencies (DPWH), LGUs, DepEd, DOH, and state universities
 Volume: Individual contract values PHP 500K–20M; competitive bidding is a subset of the ~3–5% of revenue from government and institutional customers (VS-46)
-Owner: Sales Rep (Trade &amp; Corporate) — dedicated government accounts representative
+Owner: Key Account Manager
 Participants: Sales Rep, Category Manager, Pricing Analyst, Legal, Finance, Supply Planner
 Source: workflow W78 — Government / Institutional Procurement Participation</bpmn:documentation>
       <bpmn:laneSet id="W78_LaneSet4">
@@ -991,7 +991,7 @@ Duration: 2 hours/quarter</bpmn:documentation>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W78_Annotation16">
         <bpmn:text>Controls: - CTL-307 (ensure controlled execution — Regulatory Permits &amp; Licenses (PA-22.1).) | - operational: Sales Rep (Trade &amp; Corporate) — dedicated government accounts representative review and approval gate
-Owner: Sales Rep (Trade &amp; Corporate) — dedicated government accounts representative</bpmn:text>
+Owner: Key Account Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W78_Assoc17" sourceRef="W78_Annotation16" targetRef="W78_Start5" associationDirection="None" />
       <bpmn:sequenceFlow id="W78_Flow18" sourceRef="W78_Start5" targetRef="W78_Task6" />

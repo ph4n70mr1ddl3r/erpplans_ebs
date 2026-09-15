@@ -3358,7 +3358,7 @@ Owner: Electrical Department Supervisor</bpmn:text>
       <bpmn:documentation>Trigger: Customer requests comprehensive bathroom renovation material planning, either in-store at the tile/plumbing sections or via ecommerce project planner
 Frequency: ~5,000–8,000 customer interactions/month across all stores (bathroom renovation involves tiles 12%, plumbing 12%, and electrical 10% of SKUs)
 Volume: 1 complete project plan per customer
-Owner: Tile &amp; Flooring Gallery Supervisor (primary), with support from Plumbing and Electrical Department Supervisors
+Owner: Department Supervisor
 Participants: Sales Associate (Tile Section), Sales Associate (Plumbing Section), Sales Associate (Electrical Section), Customer
 Source: workflow W1065 — Customer Bathroom Renovation Complete Project Planning &amp; Material Bundle Service</bpmn:documentation>
       <bpmn:laneSet id="W1065_LaneSet3">
@@ -3422,7 +3422,7 @@ Duration: 5–8 min</bpmn:documentation>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1065_Annotation11">
         <bpmn:text>Controls: - CTL-267 (ensure controlled execution — Project Estimation &amp; Advisory (PA-09.2).) | - operational: must include disclaimer that actual quantities may vary after demolition reveals hidden conditions; operational: must enforce these per W1064
-Owner: Tile &amp; Flooring Gallery Supervisor (primary), with support from Plumbing and Electrical Department Supervisors</bpmn:text>
+Owner: Department Supervisor</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1065_Assoc12" sourceRef="W1065_Annotation11" targetRef="W1065_Start4" associationDirection="None" />
       <bpmn:sequenceFlow id="W1065_Flow13" sourceRef="W1065_Start4" targetRef="W1065_Task5" />

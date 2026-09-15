@@ -2206,7 +2206,7 @@ Owner: COO / Crisis Management Team</bpmn:text>
       <bpmn:documentation>Trigger: Scheduled quarterly DGC meeting, or ad-hoc escalation of data policy disputes
 Frequency: Quarterly meetings; continuous policy oversight
 Volume: 4 scheduled meetings/year; 2-5 major policy reviews/year; ad-hoc escalations
-Owner: Chief Data Officer (or CIO acting as DGC Chair)
+Owner: Chief Information Officer (CIO)
 Participants: CIO, CFO, VP Supply Chain, VP Merchandising, Master Data Manager, BI Manager, Data Privacy Officer
 Source: workflow W474 — Enterprise Data Governance Council Operations</bpmn:documentation>
       <bpmn:laneSet id="W474_LaneSet4">
@@ -2272,7 +2272,7 @@ Duration: 2 hours/annual</bpmn:documentation>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W474_Annotation12">
         <bpmn:text>Controls: - CTL-289 (ensure controlled execution — GL &amp; Financial Close (PA-17.1).) | - operational: Chief Data Officer (or CIO acting as DGC Chair) review and approval gate
-Owner: Chief Data Officer (or CIO acting as DGC Chair)</bpmn:text>
+Owner: Chief Information Officer (CIO)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W474_Assoc13" sourceRef="W474_Annotation12" targetRef="W474_Start5" associationDirection="None" />
       <bpmn:sequenceFlow id="W474_Flow14" sourceRef="W474_Start5" targetRef="W474_Task6" />

@@ -475,7 +475,7 @@ Owner: Tax Manager</bpmn:text>
       <bpmn:documentation>Trigger: Execution of a new long-term store lease, or modification (renewal, rent escalation, space reduction) of an existing lease.
 Frequency: Monthly
 Volume: 5-10 modifications or new setups per month
-Owner: Finance (Finance Controller (Lease Accounting))
+Owner: Leases Accountant
 Participants: Real Estate Team, Finance, Legal
 Source: workflow W275 — IFRS 16 / PFRS 16 Lease Accounting &amp; Modifications</bpmn:documentation>
       <bpmn:laneSet id="W275_LaneSet4">
@@ -550,7 +550,7 @@ Duration: Per W95</bpmn:documentation>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W275_Annotation13">
         <bpmn:text>Controls: - CTL-301 (ensure controlled execution — Site Selection &amp; Lease Management (PA-20.1).) | - operational: Finance (Finance Controller (Lease Accounting)) review and approval gate
-Owner: Finance (Finance Controller (Lease Accounting))</bpmn:text>
+Owner: Leases Accountant</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W275_Assoc14" sourceRef="W275_Annotation13" targetRef="W275_Start5" associationDirection="None" />
       <bpmn:sequenceFlow id="W275_Flow15" sourceRef="W275_Start5" targetRef="W275_Task6" />

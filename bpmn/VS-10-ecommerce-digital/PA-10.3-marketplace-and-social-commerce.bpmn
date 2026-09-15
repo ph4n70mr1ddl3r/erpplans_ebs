@@ -1153,7 +1153,7 @@ Owner: Ecommerce Manager</bpmn:text>
       <bpmn:documentation>Trigger: A marketplace platform (Shopee/Lazada/TikTok Shop) issues an account-level enforcement action against BuildRight&#x27;s seller account: seller-metric failure or penalty-point breach, listing-violation strike, IP/counterfeit complaint takedown, fraud-suspicion payout freeze, or full selling-privilege suspension/account deactivation
 Frequency: Full or partial suspensions: rare, ~1–2 events/year across all platforms; lower-tier enforcement (mass listing takedowns, campaign exclusion, settlement holds): ~10–20 events/year
 Volume: 1 event × the affected platform&#x27;s share of ~12,800 marketplace orders/month (≈30% of ~42,900 ecommerce orders/month per W1470) — a full Shopee-class suspension removes ~40–50% of marketplace demand overnight; settlement freezes hold PHP 15–40M of platform receivables
-Owner: Ecommerce Manager (event commander); GM, Digital Commerce Inc. (posture decisions)
+Owner: Ecommerce Manager / GM, Digital Commerce Inc.
 Participants: Ecommerce Associate, Content Manager, Category Manager (IP authorization letters), Finance Controller (settlement recovery), Customer Service Representative (order comms), VP Legal (IP/policy appeals), VP Marketing, IT (channel integration flags)
 Source: workflow W5550 — Marketplace Account Suspension, Enforcement Freeze &amp; Appeal Recovery Protocol</bpmn:documentation>
       <bpmn:laneSet id="W5550_LaneSet4">
@@ -1246,7 +1246,7 @@ Duration: 4 h</bpmn:documentation>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W5550_Annotation15">
         <bpmn:text>Controls: - CTL-271 (ensure controlled execution — Marketplace &amp; Social Commerce (PA-10.3).) | - CTL-200 (ensure marketplace order &amp; settlement reconciliation.) | - operational: no appeal is filed without the corrective-action statement attached; ad spend is not re-enabled until seller metrics re-cross platform thresholds
-Owner: Ecommerce Manager (event commander); GM, Digital Commerce Inc. (posture decisions)</bpmn:text>
+Owner: Ecommerce Manager / GM, Digital Commerce Inc.</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W5550_Assoc16" sourceRef="W5550_Annotation15" targetRef="W5550_Start5" associationDirection="None" />
       <bpmn:sequenceFlow id="W5550_Flow17" sourceRef="W5550_Start5" targetRef="W5550_Task6" />

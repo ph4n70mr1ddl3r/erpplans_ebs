@@ -502,7 +502,7 @@ Owner: Cashier (processing); Store Manager (verification and approval)</bpmn:tex
       <bpmn:documentation>Trigger: Cashier initiates void (pre- or post-tender) or refund at POS
 Frequency: Multiple daily per store — estimated 2–5 voids/refunds per store per day
 Volume: ~400–1,000 voids/refunds/day chain-wide
-Owner: Cashier (initiation); Authorizing Manager (approval per tier)
+Owner: Cashier / Store Manager
 Participants: Cashier, Department Supervisor, Assistant Store Manager, Store Manager, Regional Manager (by tier)
 Source: workflow W529 — POS Void &amp; Refund Tiered Authorization</bpmn:documentation>
       <bpmn:laneSet id="W529_LaneSet4">
@@ -613,7 +613,7 @@ Duration: Automated</bpmn:documentation>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W529_Annotation17">
         <bpmn:text>Controls: - CTL-265 (ensure controlled execution — POS Compliance &amp; Controls (PA-08.3).) | - operational: should flag multiple same-customer voids within a session
-Owner: Cashier (initiation); Authorizing Manager (approval per tier)</bpmn:text>
+Owner: Cashier / Store Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W529_Assoc18" sourceRef="W529_Annotation17" targetRef="W529_Start5" associationDirection="None" />
       <bpmn:sequenceFlow id="W529_Flow19" sourceRef="W529_Start5" targetRef="W529_Task6" />

@@ -595,7 +595,7 @@ Owner: Customer Safety / BI (VS-28) / Risk (VS-21) / OpEx (VS-133)</bpmn:text>
       <bpmn:documentation>Trigger: A customer or visitor dies on premises — sudden natural death (cardiac, stroke), fatal accident (fall, struck-by), or unattended death discovered on site — before any police determination of cause
 Frequency: The rare fatality tail of the ~daily chain-wide customer-incident population (W4401): a small number of events per year across ~205 sites serving ~99,000 customers on premises per day
 Volume: 1 event × the site&#x27;s trading surface (partial closure with a screened area, or full closure, for 2–12 hours) × responders (Store Manager, security, first aider, PNP/SOCO) × the notification set (family, insurer per W4405, DOLE only where an employee is involved, comms only if public)
-Owner: Store Manager (scene &amp; site command), with the Head of Customer Safety as protocol owner
+Owner: Store Manager / Head of HSE
 Participants: Security Guard, First Aider (VS-83), Regional Manager, Head of Customer Safety, HSE Manager (VS-24), Legal Counsel (VS-100), HR Business Partner (employee-involved cases; W1325 death-in-service benefits), Insurance Coordinator (W4403/W4405), EAP Counselor (W2867), Corporate Communications (W134/W855 if the event becomes public), PNP Scene of the Crime Operations (SOCO) team, Barangay officials
 Source: workflow W5555 — Customer or Visitor Death on Premises — Scene Protocol, Family Liaison &amp; Trading-Continuity Decision</bpmn:documentation>
       <bpmn:laneSet id="W5555_LaneSet6">
@@ -692,7 +692,7 @@ Duration: 2–6 weeks</bpmn:documentation>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W5555_Annotation17">
         <bpmn:text>Controls: - CTL-673 (ensure controlled execution — Customer Incident Response, Claims &amp; Safety Analytics (PA-147.3).) | - operational: scene released only on documented PNP/SOCO clearance filed in the incident record; trading-continuity decision documented with its basis before either closing or continuing; decedent and family data handled per the restricted-visibility privacy rule
-Owner: Store Manager (scene &amp; site command), with the Head of Customer Safety as protocol owner</bpmn:text>
+Owner: Store Manager / Head of HSE</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W5555_Assoc18" sourceRef="W5555_Annotation17" targetRef="W5555_Start7" associationDirection="None" />
       <bpmn:sequenceFlow id="W5555_Flow19" sourceRef="W5555_Start7" targetRef="W5555_Task8" />

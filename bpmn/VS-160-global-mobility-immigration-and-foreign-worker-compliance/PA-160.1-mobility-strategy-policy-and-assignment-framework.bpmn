@@ -508,7 +508,7 @@ Owner: Head of Global Mobility</bpmn:text>
       <bpmn:documentation>Trigger: Cross-border assignment start; travel-risk event
 Frequency: Per assignment + on event
 Volume: ~15–25 foreign assignees traveling to/from PH (per W4705); sourcing secondees per VS-122
-Owner: Head of Global Mobility (joint with the Chief Security Officer (VS-159))
+Owner: Head of Global Mobility / Director, Regional Loss Prevention
 Participants: Chief Security Officer (VS-159), Travel Risk (VS-159 W4679), OH (VS-83), HR (VS-19)
 Source: workflow W4704 — Cross-Border Assignment Security &amp; Travel-Risk Linkage</bpmn:documentation>
       <bpmn:laneSet id="W4704_LaneSet2">
@@ -552,7 +552,7 @@ Duration: Per event</bpmn:documentation>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W4704_Annotation8">
         <bpmn:text>Controls: - CTL-130 (ensure immigration &amp; foreign-worker compliance.) | - CTL-710: cross-border assignees briefed + tracked (VS-159); duty-of-care discharged; joint response on event
-Owner: Head of Global Mobility (joint with the Chief Security Officer (VS-159))</bpmn:text>
+Owner: Head of Global Mobility / Director, Regional Loss Prevention</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W4704_Assoc9" sourceRef="W4704_Annotation8" targetRef="W4704_Start3" associationDirection="None" />
       <bpmn:sequenceFlow id="W4704_Flow10" sourceRef="W4704_Start3" targetRef="W4704_Task4" />

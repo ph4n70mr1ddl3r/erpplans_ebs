@@ -4,7 +4,7 @@
       <bpmn:documentation>Trigger: Consumer installment transaction completed at POS or ecommerce
 Frequency: ~90,000–120,000 installment transactions/month (~3–5% of POS, per the canon; consumer card/BNPL stream — settled by the financing partner T+1–T+3, never collected by BuildRight; the in-house trade stream collected by BuildRight is the separate ~200–300-collections/month basis of W1773)
 Volume: ~3–5% of all sales transactions
-Owner: Fixed Asset Accountant → Revenue Accountant
+Owner: Revenue Accountant
 Participants: Revenue Accountant, Cashier (in-store), System (ecommerce)
 Source: workflow W1771 — Installment Sale Transaction Recording &amp; Revenue Recognition</bpmn:documentation>
       <bpmn:laneSet id="W1771_LaneSet3">
@@ -50,7 +50,7 @@ Duration: 30 min/day</bpmn:documentation>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1771_Annotation9">
         <bpmn:text>Controls: - CTL-356 (ensure controlled execution — Installment Sale Processing &amp; Monitoring (PA-38.2).) | - operational: periodic reconciliation against source documents
-Owner: Fixed Asset Accountant → Revenue Accountant</bpmn:text>
+Owner: Revenue Accountant</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1771_Assoc10" sourceRef="W1771_Annotation9" targetRef="W1771_Start4" associationDirection="None" />
       <bpmn:sequenceFlow id="W1771_Flow11" sourceRef="W1771_Start4" targetRef="W1771_Task5" />

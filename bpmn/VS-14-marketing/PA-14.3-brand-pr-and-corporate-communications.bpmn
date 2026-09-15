@@ -1240,7 +1240,7 @@ Owner: VP Legal &amp; Compliance</bpmn:text>
       <bpmn:documentation>Trigger: Notice or credible discovery that a journalist, newsroom, or advocacy group is investigating BuildRight — an undercover applicant or contractor inside operations, hidden-camera footage offered or aired, a right-of-reply letter with a deadline, or an investigative series in pre-publication (labor practices, vendor sourcing, site safety, pest/sanitation footage, data handling)
 Frequency: Rare: 0–2 active investigative threats chain-wide per year; right-of-reply letters are the common entry point and undercover placement the rare one
 Volume: 1 event × the response team (comms, legal, the exposed function) × the reply-deadline window (48 hours – 7 days) × the remediation track where the exposed practice is real
-Owner: VP Marketing (communications); VP Legal &amp; Compliance (legal posture); the exposed function&#x27;s VP owns remediation
+Owner: VP Marketing / VP Legal &amp; Compliance
 Participants: VP Corporate Communications, External PR agency (W1562 retainer), VP Legal &amp; Compliance, External Counsel, Data Protection Officer (VS-91 where footage captured personal data), HSE Manager / LP Director (site verification), CHRO (labor-practice claims), Internal Audit (VS-21 verification), Corporate Communications (W134/W143 execution)
 Source: workflow W5572 — Undercover-Investigation &amp; Media-Exposé Response Protocol (Investigative-Newsroom Event)</bpmn:documentation>
       <bpmn:laneSet id="W5572_LaneSet6">
@@ -1337,7 +1337,7 @@ Duration: 2–4 weeks post</bpmn:documentation>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W5572_Annotation17">
         <bpmn:text>Controls: - CTL-283 (ensure controlled execution — Brand, PR &amp; Corporate Communications (PA-14.3).) | - operational: every public response carries the VP Legal &amp; Compliance review gate; the authentication record is filed before any rebuttal; remediation milestones tracked to audit evidence, not comms claims
-Owner: VP Marketing (communications); VP Legal &amp; Compliance (legal posture); the exposed function&#x27;s VP owns remediation</bpmn:text>
+Owner: VP Marketing / VP Legal &amp; Compliance</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W5572_Assoc18" sourceRef="W5572_Annotation17" targetRef="W5572_Start7" associationDirection="None" />
       <bpmn:sequenceFlow id="W5572_Flow19" sourceRef="W5572_Start7" targetRef="W5572_Task8" />

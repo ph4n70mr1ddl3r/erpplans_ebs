@@ -1108,7 +1108,7 @@ Owner: Store Manager</bpmn:text>
       <bpmn:documentation>Trigger: Fire or smoke detected — alarm-panel activation, sprinkler flow switch, staff/customer report, or a lithium-ion battery thermal event at the charging station per W1007&#x27;s risk framing — anywhere in a store&#x27;s 8,000–15,000 sqm footprint, a DC&#x27;s 25,000–40,000 sqm facility, or their yards
 Frequency: Rare; ~2–5 incipient (self-extinguished/suppressed) events and &lt; 1 reportable structural fire per year chain-wide
 Volume: 1 site × full evacuation population (store: ~467 customers/day + 29 staff; DC: ~120–180 staff/shift) × all fire-load zones (paint/solvents, lumber yard, battery-charging stations, rack storage)
-Owner: Store Manager (store); DC Operations Manager (DC) — the site incident commander until BFP arrival, per the E-19 custody ruling
+Owner: Store Manager / DC Operations Manager
 Participants: Store/DC Manager, all floor/shift staff (sweep &amp; muster roles), Safety Officer, Security Guard, Facilities Coordinator, BFP (first-alarm response), Regional Manager (multi-site escalation), Insurance/BCP (VS-26 W876 claim chain), VP Legal, HSE Manager, POS/Cash Office (W850 cash securing)
 Source: workflow W5537 — Fire Event Response, Suppression &amp; Post-Fire BFP Clearance (Store &amp; DC)</bpmn:documentation>
       <bpmn:laneSet id="W5537_LaneSet8">
@@ -1200,7 +1200,7 @@ Duration: 5–10 days</bpmn:documentation>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W5537_Annotation18">
         <bpmn:text>Controls: - CTL-314 (ensure controlled execution — Emergency Preparedness (PA-24.2).) | - operational: trading resumes only after the three-party reopen gate (BFP clearance + structural sign-off + suppression recertification) is evidenced in the incident case | - operational: first-response extinguishment attempted only by trained staff within the incipient classification, with a second person and a clear exit
-Owner: Store Manager (store); DC Operations Manager (DC) — the site incident commander until BFP arrival, per the E-19 custody ruling</bpmn:text>
+Owner: Store Manager / DC Operations Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W5537_Assoc19" sourceRef="W5537_Annotation18" targetRef="W5537_Start9" associationDirection="None" />
       <bpmn:sequenceFlow id="W5537_Flow20" sourceRef="W5537_Start9" targetRef="W5537_Task10" />
@@ -1246,7 +1246,7 @@ Owner: Store Manager (store); DC Operations Manager (DC) — the site incident c
       <bpmn:documentation>Trigger: A bomb threat received against a store, DC, or corporate site by phone call, written note, email, or social-media post — whether credible, vague, or assessed as hoax
 Frequency: Rare; ~1–3 threats chain-wide per year (the vast majority hoaxes)
 Volume: 1 site × full premises population (store: ~467 customers/day + 29 staff; DC: 120–180 staff/shift) × all zones (sales floor, stockrooms, yards, parking)
-Owner: Store Manager (site); Regional Manager escalated for multi-site or repeated threats
+Owner: Store Manager / Regional Manager
 Participants: Store/DC Manager, Security Guard, trained staff search teams (zone-based), Safety Officer, PNP (911) &amp; PNP-EOD bomb disposal, BFP (standby), VP Legal, Corporate Communications (W855 tree if event escalates), LP (CCTV preservation per W471)
 Source: workflow W5538 — Bomb Threat Response &amp; Search-or-Evacuation Decision Protocol</bpmn:documentation>
       <bpmn:laneSet id="W5538_LaneSet7">
@@ -1336,7 +1336,7 @@ Duration: 1–2 days</bpmn:documentation>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W5538_Annotation17">
         <bpmn:text>Controls: - CTL-314 (ensure controlled execution — Emergency Preparedness (PA-24.2).) | - operational: threats are reported to PNP regardless of credibility assessment; credibility is never a reason to withhold notification | - operational: only trained staff sweep, only in their own zones, look-don&#x27;t-touch; any find transfers control to PNP-EOD
-Owner: Store Manager (site); Regional Manager escalated for multi-site or repeated threats</bpmn:text>
+Owner: Store Manager / Regional Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W5538_Assoc18" sourceRef="W5538_Annotation17" targetRef="W5538_Start8" associationDirection="None" />
       <bpmn:sequenceFlow id="W5538_Flow19" sourceRef="W5538_Start8" targetRef="W5538_Task9" />

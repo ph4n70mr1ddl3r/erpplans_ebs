@@ -94,7 +94,7 @@ Owner: Loss Prevention Manager</bpmn:text>
       <bpmn:documentation>Trigger: Established physical site access control (W5273)
 Frequency: Per disaster site deployment
 Volume: ~3-5 structural reviews annually
-Owner: Director, Facilities &amp; Real Estate, Facilities &amp; Real Estate
+Owner: Director, Facilities &amp; Real Estate (dual-hat GM, BuildRight Property Mgmt, Inc.)
 Participants: Structural Engineer, Geodetic Engineer, Store Manager, Safety Officer
 Source: workflow W5274 — Rapid Structural Integrity and Safety Assessment</bpmn:documentation>
       <bpmn:laneSet id="W5274_LaneSet3">
@@ -149,7 +149,7 @@ Duration: 1 hour</bpmn:documentation>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W5274_Annotation10">
         <bpmn:text>Controls: - CTL-782 (ensure controlled execution — Structural Damage &amp; Insurance Appraisal Coordination (PA-184.1).) | - operational: OHS incident prevention; facilities standards verification.
-Owner: Director, Facilities &amp; Real Estate, Facilities &amp; Real Estate</bpmn:text>
+Owner: Director, Facilities &amp; Real Estate (dual-hat GM, BuildRight Property Mgmt, Inc.)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W5274_Assoc11" sourceRef="W5274_Annotation10" targetRef="W5274_Start4" associationDirection="None" />
       <bpmn:sequenceFlow id="W5274_Flow12" sourceRef="W5274_Start4" targetRef="W5274_Task5" />
