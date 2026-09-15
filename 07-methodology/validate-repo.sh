@@ -1151,6 +1151,27 @@ missing = [v for v in range(79, max_vs + 1) if v not in rows]
 if missing:
     errors.append(f"touchpoint map primary-module rows missing for: {', '.join('VS-' + str(v) for v in missing)}")
 
+# ---- D: per-VS title cells == index canon (2026-09-15 thirty-third-wave) ----
+# The §Statutory & Gap-Analysis table's 114 '| VS-nn | Title |' cells are a VS-name
+# label surface no rule read: 64 carried authoring-time compressed forms while 50 rows
+# were already byte-exact — drift, not convention, by the file's own majority (the same
+# retired-abbreviation family waves 27/28 trued off the PA footers/H1s/quote-lines and
+# the detailed-map bullets). Every title cell must now equal the canonical
+# value-stream-index summary-row name, with the 114-row population asserted so a
+# restructure cannot void the arm.
+_idx_names = {}
+for _m in re.finditer(r'^\|(?:[^|]*)\|\s*\[VS-(\d+)\]\([^)]*\)\s*\|([^|]*)\|', idx, re.M):
+    _idx_names[int(_m.group(1))] = _m.group(2).strip()
+_tcells = re.findall(r'^\| VS-(\d+) \|([^|]+)\|', tmap, re.M)
+if len(_tcells) != 114:
+    errors.append(f"touchpoint map per-VS table parses to {len(_tcells)} title cells, expected 114 (title-arm population)")
+for _vs, _name in _tcells:
+    _want = _idx_names.get(int(_vs))
+    if _want is None:
+        errors.append(f"touchpoint map row VS-{_vs} has no index summary row")
+    elif _name.strip() != _want:
+        errors.append(f"touchpoint map VS-{_vs} title cell '{_name.strip()}' != canonical '{_want}'")
+
 print(f"A_ERRS={len(errors)}")
 for e in errors: print(f"A_ERR|{e}")
 print(f"B_STALE={len(stale)}")
@@ -1162,7 +1183,7 @@ A_ERRS=$(echo "$CHECK25" | sed -n 's/^A_ERRS=//p')
 B_STALE=$(echo "$CHECK25" | sed -n 's/^B_STALE=//p')
 MAX_VS=$(echo "$CHECK25" | sed -n 's/^MAX_VS=//p')
 if [ "$A_ERRS" -eq 0 ]; then
-    ok "Proposed-register mirror & touchpoint-map reconciliation claims match canonical figures (register tiers/total; footer 'Reconciled to' == index grand totals; section range ends at VS-$MAX_VS with full VS-row coverage)"
+    ok "Proposed-register mirror & touchpoint-map reconciliation claims match canonical figures (register tiers/total; footer 'Reconciled to' == index grand totals; section range ends at VS-$MAX_VS with full VS-row coverage; and all 114 per-VS title cells equal the canonical value-stream-index summary-row names — title arm added by the 2026-09-15 thirty-third-wave review after 64 compressed authoring-time forms were found stranded on the surface no rule read while 50 sibling rows were already byte-exact)"
 else
     error "Criticality proposed-register mirror / touchpoint-map reconciliation mismatch ($A_ERRS):
 "
@@ -1294,9 +1315,85 @@ else:
     if got != want:
         errors.append(f"§8.1 anchor table is not the live top-10 (freshly recomputed from VS-79\u2013VS-{max_vs} PA+README mining): table={[(('VS-'+k), v) for k, v in got]} live={[(('VS-'+k), v) for k, v in want]}")
 
+# ---- F: §8 program-table VS-name cells == index canon + §1–§7 W-label guard (2026-09-15 thirty-third-wave) ----
+# The §8.1/§8.2/§8.3 tables' VS-name cells and the §1–§7 dependency-tree 'Wnnn (Label)'
+# labels were navigation surfaces no rule read: the §8 tables carried 32 compressed
+# authoring-time name forms (incl. the retired VS-100 '…& IP' abbreviation waves 27/28
+# retired from the PA footers/H1s/quote-lines), and §2.9's statutory tax chain named
+# 'W140 (Corporate Income Tax)' — W140 is OHS Incident Management (VS-24), correctly
+# labeled by the map's own §2.9/§4 since the initial commit while the chain line carried
+# the wrong W-id from that same commit (PA-17.3's sibling-set prose — W90 monthly BIR
+# filing, W260 eFPS filing, W407 corporate income tax computation, W475 CWT 2307
+# collection — names the intended node). Every §8 VS-name cell must now equal the
+# canonical value-stream-index summary-row name (populations asserted), and every
+# §1–§7 'Wnnn (Label)' label must share a significant token with the PA ##/###/####
+# W-header canon title for that W-id or appear on the adjudicated compressed-form
+# allowlist — so a wrong-subject label (the defect class) can never ship silently.
+_canon = {}
+for _m in re.finditer(r'^\|(?:[^|]*)\|\s*\[VS-(\d+)\]\([^)]*\)\s*\|([^|]*)\|', idx, re.M):
+    _canon[int(_m.group(1))] = _m.group(2).strip()
+if len(_canon) != 188:
+    errors.append(f"index summary rows parse to {len(_canon)} names, expected 188 (name-canon parse broken)")
+_m81 = re.search(r'^### 8\.1 .*?\n(.*?)(?=^### )', dep, re.M | re.S)
+if not _m81:
+    errors.append("cannot find the '### 8.1' section for the name arm")
+else:
+    _rows81 = re.findall(r'^\| VS-(\d+) \| ([^|]+?) \|', _m81.group(1), re.M)
+    if len(_rows81) != 10:
+        errors.append(f"§8.1 anchor table parses to {len(_rows81)} name cells, expected 10 (name arm population)")
+    for _vs, _name in _rows81:
+        if _canon.get(int(_vs)) != _name.strip():
+            errors.append(f"§8.1 VS-{_vs} name cell '{_name.strip()}' != canonical '{_canon.get(int(_vs))}'")
+_i82 = dep.find('### 8.2')
+_rows823 = re.findall(r'^\| VS-(\d+) ([^|]+?)\s*\|', dep[_i82:], re.M)
+if len(_rows823) != 39:
+    errors.append(f"§8.2–§8.3 program tables parse to {len(_rows823)} name cells, expected 39 (name arm population)")
+for _vs, _name in _rows823:
+    if _canon.get(int(_vs)) != _name.strip():
+        errors.append(f"§8.2–8.3 VS-{_vs} name cell '{_name.strip()}' != canonical '{_canon.get(int(_vs))}'")
+_pa_titles = {}
+for _d in os.listdir(WF):
+    if not _d.startswith('VS-'): continue
+    _dd = os.path.join(WF, _d)
+    if not os.path.isdir(_dd): continue
+    for _fn in os.listdir(_dd):
+        if _fn.startswith('PA-') and _fn.endswith('.md'):
+            for _ln in open(os.path.join(_dd, _fn), encoding='utf-8', errors='replace'):
+                _m = re.match(r'^(#{2,4}) (W\d+[A-Za-z]?)[.\s]\s*(.+?)\s*$', _ln)
+                if _m and _m.group(2) not in _pa_titles:
+                    _pa_titles[_m.group(2)] = _m.group(3)
+_i1 = dep.find('## 1. Master Data Dependency Tree'); _i8 = dep.find('## 8. Cross-Cutting Program Dependencies')
+_TREE = dep[_i1:_i8] if 0 <= _i1 < _i8 else ''
+if not _TREE:
+    errors.append("cannot slice the §1–§7 dependency-tree body for the W-label arm")
+_STOP = {'the', 'and', 'of', 'for', 'with', 'per', 'via', 'in', 'on', 'to', 'at', 'by', 'a', 'an', 'vs'}
+def _toks(s):
+    s = re.sub(r'[^a-z0-9 &/\u2014-]', ' ', s.lower())
+    return {w for w in re.split(r'[\s/&\u2014,()-]+', s) if w and w not in _STOP}
+_ALLOW = {  # adjudicated compressed/jargon forms (2026-09-15 thirty-third-wave): the label
+            # shares no token with the PA canon title by design (module shorthand, legacy
+            # document names) — anything else zero-overlap is the wrong-subject defect class
+    ('W14', 'IC'), ('W158', 'BC Drills'), ('W2', 'PO'), ('W27', 'Rebates'), ('W41', 'Complaints'),
+    ('W56', 'Backorders'), ('W5B', 'Trade Account Sales'), ('W5F', 'EOD'), ('W65', 'CSAT'),
+    ('W7', 'AP'), ('W8', 'AR'), ('W8', 'AR Invoicing'), ('W82', 'Hazmat')}
+_seen_labels = 0
+for _m in re.finditer(r'\b(W\d+[A-Z]?) \(([^()]*)\)', _TREE):
+    _w, _label = _m.group(1), _m.group(2)
+    _seen_labels += 1
+    if _w not in _pa_titles:
+        errors.append(f"§1–§7 tree label '{_w} ({_label})' names a W-id with no PA header")
+        continue
+    _base = re.split(r'\s+\u2014\s+', _label)[0]
+    if _toks(_base) and not (_toks(_base) & _toks(_pa_titles[_w])) and (_w, _base) not in _ALLOW:
+        errors.append(f"§1–§7 tree label '{_w} ({_base})' shares no token with the PA canon '{_pa_titles[_w]}' and is not on the adjudicated compressed-form allowlist")
+if _seen_labels < 200:
+    errors.append(f"§1–§7 W-label arm parsed only {_seen_labels} labels, expected >= 200 (parse broken)")
+
+
+print(f"MAX_VS={max_vs}")
+
 print(f"A_ERRS={len(errors)}")
 for e in errors: print(f"A_ERR|{e}")
-print(f"MAX_VS={max_vs}")
 print(f"BLOCK_VS={len(block_dirs)}")
 print(f"BLOCK_WF={wf_disk}")
 PY
@@ -1306,7 +1403,7 @@ C26_MAXVS=$(echo "$CHECK26" | sed -n 's/^MAX_VS=//p')
 C26_VS=$(echo "$CHECK26" | sed -n 's/^BLOCK_VS=//p')
 C26_WF=$(echo "$CHECK26" | sed -n 's/^BLOCK_WF=//p')
 if [ "$C26_ERRS" -eq 0 ]; then
-    ok "Dependency-map §8 block reconciliation: heading/§8.4 end at VS-$C26_MAXVS, intro block size ($C26_VS value streams / $C26_WF workflows) matches disk, the §8.1 anchor table equals the live top-10 (freshly recomputed from PA+README reference mining), and the intro coverage figures (5,427 unique / 5,450 rows / 23 sub-workflows) match the PA corpus re-derivation (intro pins added by the 2026-09-10 seventeenth-wave review after batch-24 stranded the parenthetical at the retired 5,449-row total)"
+    ok "Dependency-map §8 block reconciliation: heading/§8.4 end at VS-$C26_MAXVS, intro block size ($C26_VS value streams / $C26_WF workflows) matches disk, the §8.1 anchor table equals the live top-10 (freshly recomputed from PA+README reference mining), the intro coverage figures (5,427 unique / 5,450 rows / 23 sub-workflows) match the PA corpus re-derivation, and the §8.1/§8.2/§8.3 VS-name cells (10 + 39, populations asserted) equal the canonical value-stream-index summary-row names while all §1–§7 'Wnnn (Label)' tree labels token-overlap the PA W-header canon or sit on the adjudicated 13-entry compressed-form allowlist (intro pins added by the 2026-09-10 seventeenth-wave review; name + W-label arms added by the 2026-09-15 thirty-third-wave review after §2.9's tax chain was found carrying 'W140 (Corporate Income Tax)' — the wrong W-id, stranded since the initial commit — and 32 compressed §8 name forms were found stranded beside 17 byte-exact siblings)"
 else
     error "Dependency-map §8 self-declared coverage does not reconcile ($C26_ERRS mismatch(es)) — the block tables must be re-mined/recomputed:"
     echo "$CHECK26" | grep '^A_ERR|' | sed 's/^A_ERR|/    /'
@@ -3724,6 +3821,42 @@ for vs in disk:
         bad.append(f"VS-{vs} on disk has no summary-table row")
     if vs not in seen_head:
         bad.append(f"VS-{vs} on disk has no detailed-section heading")
+# ---- family Subtotal + Grand Total rows (2026-09-15 thirty-third-wave) ----
+# Check 68 pins each per-VS row against disk, but the 8 family '**Subtotal**' cells and
+# the '**Grand Total**' row themselves were read by no rule — a batch re-ordering rows or
+# re-totaling a family cell could strand them while every per-VS row stayed exact. Each
+# family subtotal must now equal the sum of its own per-VS rows (PA and workflow cells
+# separately) and the Grand Total must equal the family-subtotal column sums.
+_fam = None
+_fams = {}
+for line in idx.splitlines():
+    m = re.match(r'^\| (Plan & Source|Make & Move|Sell & Serve|Finance|People|Asset & Infrastructure|Governance & Assurance|Technology & Data) \|', line)
+    if m:
+        _fam = m.group(1)
+        _fams.setdefault(_fam, {'pa': 0, 'wf': 0, 'vs': 0, 'stated': None})
+    m = re.match(r'^\|(?:[^|]*)\|\s*\[VS-(\d+)\]\([^)]*\)\s*\|[^|]*\|[^|]*\|\s*(\d+)\s*\|\s*([\d,]+)\s*\|', line)
+    if m and _fam:
+        _fams[_fam]['pa'] += int(m.group(2))
+        _fams[_fam]['wf'] += int(m.group(3).replace(',', ''))
+        _fams[_fam]['vs'] += 1
+    else:
+        m = re.match(r'^\|[^|]*\|[^|]*\|[^|]*\|\s*\*\*Subtotal\*\*\s*\|\s*\*\*([\d,]+)\*\*\s*\|\s*\*\*([\d,]+)\*\*\s*\|', line)
+        if m and _fam:
+            _fams[_fam]['stated'] = (int(m.group(1).replace(',', '')), int(m.group(2).replace(',', '')))
+if len(_fams) != 8:
+    bad.append(f"index family-subtotal arm parses to {len(_fams)} families, expected 8")
+for _fname, _d in _fams.items():
+    if _d['stated'] is None:
+        bad.append(f"index family '{_fname}' has no **Subtotal** row")
+    elif _d['stated'] != (_d['pa'], _d['wf']):
+        bad.append(f"index family '{_fname}' Subtotal says {_d['stated'][0]} PAs / {_d['stated'][1]:,} workflows but its own rows sum to {_d['pa']} / {_d['wf']:,}")
+m = re.search(r'^\|[^|]*\|[^|]*\|[^|]*\|\s*\*\*Grand Total\*\*\s*\|\s*\*\*([\d,]+)\*\*\s*\|\s*\*\*([\d,]+)\*\*\s*\|\s*$', idx, re.M)
+if not m:
+    bad.append("cannot find the index **Grand Total** row")
+else:
+    _gpa, _gwf = int(m.group(1).replace(',', '')), int(m.group(2).replace(',', ''))
+    if (_gpa, _gwf) != (sum(_d['pa'] for _d in _fams.values()), sum(_d['wf'] for _d in _fams.values())):
+        bad.append(f"index Grand Total says {_gpa} PAs / {_gwf:,} workflows but the family subtotals sum to {sum(_d['pa'] for _d in _fams.values())} / {sum(_d['wf'] for _d in _fams.values()):,}")
 print(f"TOTALS summary_rows={sum_rows} headings={head_rows} problems={len(bad)}")
 for b in bad:
     print("BAD|" + b)
@@ -3731,7 +3864,7 @@ PY
 )
 C68_BAD=$(echo "$CHECK68" | sed -n 's/^TOTALS .* problems=\([0-9]*\)/\1/p')
 if [ "${C68_BAD:-1}" -eq 0 ]; then
-    ok "All value-stream-index per-VS rows (summary table + detailed headings) cross-foot against disk (guard added by the 2026-09-03 second consistency review pass after the batch-4 additions left VS-02/VS-79 headings stale)"
+    ok "All value-stream-index per-VS rows (summary table + detailed headings) cross-foot against disk, and the 8 family **Subtotal** rows plus the **Grand Total** row equal their own per-VS row sums (guard added by the 2026-09-03 second consistency review pass after the batch-4 additions left VS-02/VS-79 headings stale; subtotal arm added by the 2026-09-15 thirty-third-wave review)"
 else
     error "$C68_BAD value-stream-index per-VS problem(s):"
     echo "$CHECK68" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
