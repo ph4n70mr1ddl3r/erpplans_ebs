@@ -10,7 +10,7 @@
 > platforms** (integration is the program), **Payroll PH** is an **in-house build** posting
 > journals to EBS, and the best-of-breed buy tier is eliminated. Sourcing decisions remain
 > governed by the companion
-> [`capability-sourcing-and-engineering-model.md`](capability-sourcing-and-engineering-model.md) (v3.2).
+> [`capability-sourcing-and-engineering-model.md`](capability-sourcing-and-engineering-model.md) (v3.3).
 > Since **v3.12 the team shape conforms to the doctrine**: each configure-and-integrate team
 > carries one **Platform Product Manager** (WLI's seat chartered as the chain-wide **Oracle
 > Relationship & In-Suite Currency Manager**), WLI's second vendor seat is converted to
@@ -773,4 +773,4 @@ sizing 80 → 115. Prior v1.1 (2026-09-02, review #68) and v1.0 (2026-09-01): un
 12-team design at 80 FTE. Downstream: `optimal-table-of-organization.md` v2.5 (HQ 511 /
 total 6,911 — the actual structure of record), `model-company-profile.md` v3.0,
 `technical-guidelines.md` v3.4,
-`capability-sourcing-and-engineering-model.md` v3.2.*
+`capability-sourcing-and-engineering-model.md` v3.3.*

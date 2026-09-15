@@ -2,13 +2,17 @@
 
 > The governing document of the doctrine. Per the 2026-09-14 **two-tier sourcing decision**: *if it's in Oracle EBS we use it; otherwise we build.* Every capability domain the
 > 5,427 workflows demand is dispositioned against standard Oracle EBS 12.2 in one of the fit
-> classes below. In the **79-row register**: **54 rows (68.4%) run on standard or configured
+> classes below. In the **83-row register**: **59 rows (71.1%) run on standard or configured
 > EBS**; 2 are personalizations; only 2 are true extensions (the PFRS 15/16 accounting
 > schedules); 1 is the EBS-held Philippine indirect-tax localization; 5 are interfaces; and
-> **15 are in-house builds — of which 5 are already-built platforms (the in-house POS estate,
+> **14 are in-house builds — of which 5 are already-built platforms (the in-house POS estate,
 > the custom ecommerce platform, and the gift-card/loyalty stack) that integrate rather than
 > get bought or rebuilt**. The former best-of-breed buy tier is retired (zero rows); the two
-> formerly-OPEN planning decisions resolved in-suite.
+> formerly-OPEN planning decisions resolved in-suite; and the 2026-09-15 **EBS-exhaustion
+> audit** re-pointed three more capabilities in-suite (dispatch core → Field Service, D13;
+> lessor leasing → Lease & Finance Management, A13; T&E expenses → Internet Expenses, B11;
+> benefits enrollment → Advanced Benefits, E9; service requests → Teleservice, D14), the
+> register's own 'Not in EBS' claims corrected against the suite's native catalog.
 
 Part of the [02-oracle-ebs blueprint](README.md). The constructive half (what standard EBS
 does) lives in the [module coverage map](module-coverage-map.md).
@@ -54,6 +58,7 @@ Legend: **VS** = owning value stream(s). Classes per §1. Counts are pinned in �
 | A10 | Revenue recognition — retail & wholesale point-of-sale revenue | Standard AR/OM invoicing | FIT-STD | Single-performance-obligation sales need no RevRec engine |
 | A11 | PFRS 15 — complex multi-element contracts (project sales, service bundles) | No native multi-element schedules | EXT | Bounded schedule engine (custom concurrent program) posting via SLA; VS-157 |
 | A12 | PFRS 16 — ROU asset & lease-liability schedules | Property Manager administers leases, not ROU amortization | EXT | Amortization schedule build feeding GL/FA from PN contracts; VS-148 |
+| A13 | Lessor equipment leasing: booking, billing, assets, end-of-term (VS-96, W3165–W3176) | Lease & Finance Management (lease contracts, billing schedules → AR, asset/end-of-term tracking) | FIT-CFG | The 2026-09-15 exhaustion audit names the vehicle the VS-96 workflows' 'lease management system' touchpoint assumed: it ships in-suite, so per the doctrine we use it; insurance/maintenance bundling rides Service Contracts |
 
 ### B. Procure-to-pay & sourcing (VS-03, VS-15, VS-34, VS-39, VS-87, VS-122, VS-161)
 
@@ -68,7 +73,8 @@ Legend: **VS** = owning value stream(s). Classes per §1. Counts are pinned in �
 | B7 | Vendor TPRM scoring & reassessment (VS-161) | EIT/DFF risk attributes + AME reassessment workflow | FIT-CFG | Tiering registers on supplier records; deep TPRM tooling = SIB candidate (§4) |
 | B8 | Landed cost true-up (freight, duties, demurrage) | Landed Cost Management | FIT-STD | W144, W239, W249; arms VS-122 imports |
 | B9 | Customs broker / BOC filings coordination | File exchange via IAP to broker systems | INT | Declarations live in broker/BIR systems; EBS receives duty true-ups via B8 |
-| B10 | Vendor rebates, promotions & claims (VS-39, W27, W161) | PO accruals + Trade Management evaluation | FIT-CFG | OTM license-flagged — SIB check (§4); fallback: accrual + claims workflow |
+| B10 | Vendor rebates, promotions & claims (VS-39, W27, W161) | PO accruals + Trade Management evaluation | FIT-CFG | **Resolved in-suite per §4 resolution 3**: Oracle Trade Management is the vehicle (license cost is a FinOps decision, not a sourcing decision); PO accruals remain the staging surface feeding OTM claims |
+| B11 | Employee expense reports & the corporate-card program (W74, PA-15.2 card reconciliation) | Internet Expenses (iExpenses): expense reports, receipt upload, policy limits, AME approvals, GL/cost-center coding; AP card-program statement loads | FIT-CFG | The 2026-09-15 exhaustion audit names the vehicle the W74 self-service claim form assumed: expense capture, policy validation and card-statement reconciliation are native; reimbursement lines flow to payroll/AP as today |
 
 ### C. Supply chain & inventory (VS-01, VS-02, VS-04, VS-05, VS-06, VS-29, VS-31, VS-45, VS-92, VS-111, VS-127)
 
@@ -105,7 +111,8 @@ Legend: **VS** = owning value stream(s). Classes per §1. Counts are pinned in �
 | D10 | Omnichannel order routing & mixed-basket orchestration (VS-60) | In-house OMO per register §4 | BUILD | EBS OM carries the fulfillment legs OMO routes |
 | D11 | Marketplace operator / 3P-seller settlement (VS-95) | Marketplace integrations on the in-house ecommerce platform; AR reconciliation of commissions | BUILD *(existing)* | Payout files reconcile to AR/AP via IAP |
 | D12 | Cross-channel returns & exchanges (VS-32, W12 family) | OM RMAs + AR credit memos + INV adjustments | FIT-CFG | The POS/ecommerce platforms execute the counter transaction; EBS owns the RMA/credit lifecycle |
-| D13 | Installation & home-service dispatch, technician mobile app (VS-12) | Not in EBS, not already built → build | BUILD | The register's BoB FSM row flips to build; product remit (extend TPS vs new squad) assigned at the SIB/OM |
+| D13 | Installation & home-service dispatch, technician mobile app (VS-12) | **Oracle Field Service** — task assignment, dispatch scheduling, technician debrief & the mobile field device, on Install Base serviced assets | FIT-CFG | The 2026-09-15 exhaustion audit **corrects this row's original 'Not in EBS' claim**: the dispatch core ships in-suite, so per the doctrine we use it. The in-house build (register §4 resolution 8; product remit at the SIB/OM) narrows to what Field Service does not ship — the consumer appointment/route-optimization experience and the contractor portal for the third-party installer network (VS-172) |
+| D14 | Customer service requests & complaint escalation (W41, VS-13.1) | Teleservice / Service Requests + Escalation Management on the TCA party model | FIT-CFG | The 2026-09-15 exhaustion audit: multi-channel capture stays with the in-house CX surfaces; the ticket, SLA timers, tiered escalation and resolution coding are native — CSAT analytics may ride either side |
 
 ### E. HR & payroll (VS-19, VS-102, VS-121, VS-123, VS-183)
 
@@ -113,12 +120,13 @@ Legend: **VS** = owning value stream(s). Classes per §1. Counts are pinned in �
 |---|---|---|---|---|
 | E1 | Core HR: org/positions/employees/EITs, absence types | Oracle HRMS (PER) | FIT-STD | W15/W43/W292; license/EIT data for VS-166 registers. Core HR **stays in EBS** — the build decision covers payroll, not the people data of record |
 | E2 | Recruitment, self-service, learning & performance (W51, VS-121) | iRecruitment + Self-Service HR + OLA | FIT-STD | In-suite per the doctrine; a deeper build is the doctrine-compliant path if adoption ever lags |
-| E3 | Store workforce scheduling & time-capture platform | Not in EBS, not already built → build | BUILD | The register's BoB WFM row flips to build; owns VS-07 staffing/attendance execution |
-| E4 | Time & attendance → payroll/EBS import | In-house WFM feed → interface (BEE-class staging) | INT | Capture stays in the build; validated feeds drive scheduling compliance and pay inputs |
+| E3 | Store workforce scheduling & time-capture platform | Not in EBS — shift scheduling/optimization has no native EBS vehicle (Oracle Time & Labor covers timecards, not retail shift planning); capture retires in-suite through OTL/BEE per E4 | BUILD | The register's BoB WFM row flips to build; owns VS-07 staffing/attendance execution — the build owns the genuinely-absent layer (scheduling/optimization), not timecard mechanics |
+| E4 | Time & attendance → payroll/EBS import | In-house WFM feed → **Oracle Time & Labor's BEE batch engine** staging | INT | Capture stays in the build; validated feeds drive scheduling compliance and pay inputs — BEE is the native retirement surface the feed lands in |
 | E5 | In-house payroll engine — PH statutory gross-to-net (W10) | **In-house build (Payroll PH)** | BUILD | Per decision: *payroll we build.* SSS/PhilHealth/Pag-IBIG tables, PD 851 13th month, night differential/OT elements, BIR withholding tables — built in-house, not localized on Oracle Payroll (which stays unadopted; see architecture §2) |
 | E6 | Payroll statutory outputs & agency files (W251) | In-house build outputs | BUILD | Contribution/loan file formats (R3/RF1/PF-class) and posting reconciliation |
 | E7 | BIR compensation reporting: 2316, 1601-C, 1604-C, alphalist (W90, W5533) | In-house build outputs from payroll balances | BUILD | Per current BIR publish formats; eFPS submission rides the G3 channel |
 | E8 | Payroll costing → GL posting | Interface posting into GL/SLA | INT | EBS remains the ledger of record: the build posts period costing journals; balances tie out per period |
+| E9 | Benefits enrollment, eligibility & life events (VS-102.2) | Advanced Benefits (OAB): plan/enrollment/eligibility design, life-event processing | FIT-CFG | The 2026-09-15 exhaustion audit names the vehicle the 'Benefits administration platform' touchpoint assumed; Oracle Payroll stays unadopted — OAB communicates deduction envelopes to Payroll PH through the E4 feed |
 
 ### F. Projects, assets & property (VS-20, VS-35, VS-40, VS-42, VS-55, VS-97, VS-109)
 
@@ -163,32 +171,35 @@ Legend: **VS** = owning value stream(s). Classes per §1. Counts are pinned in �
 
 | Class | Rows | Share |
 |---|---|---|
-| FIT-STD | 31 | 39.2% |
-| FIT-CFG | 23 | 29.1% |
-| **Standard total (STD + CFG)** | **54** | **68.4%** |
-| PER | 2 | 2.5% |
-| EXT | 2 | 2.5% |
-| LOC | 1 | 1.3% |
-| INT | 5 | 6.3% |
+| FIT-STD | 31 | 37.3% |
+| FIT-CFG | 28 | 33.7% |
+| **Standard total (STD + CFG)** | **59** | **71.1%** |
+| PER | 2 | 2.4% |
+| EXT | 2 | 2.4% |
+| LOC | 1 | 1.2% |
+| INT | 5 | 6.0% |
 | EDGE | 0 *(retired)* | — |
-| BUILD | 15 *(of which 5 already-built platforms: D6 POS, D7 ecommerce, D8 gift cards, D9 loyalty, D11 marketplace)* | 19.0% |
+| BUILD | 14 *(of which 5 already-built platforms: D6 POS, D7 ecommerce, D8 gift cards, D9 loyalty, D11 marketplace)* | 16.9% |
 | OPEN | 0 *(resolved 2026-09-14)* | — |
-| **Total register rows** | **79** | 100% |
+| **Total register rows** | **83** | 100% |
 
 > Reading: the two-tier doctrine (*in EBS → use it; otherwise → build*) leaves nothing to
 > buy. Over two-thirds of the model company runs on EBS untouched or configured; the 2
 > extensions are accounting-schedule builds with clean edges; the single EBS-held
-> localization is the BIR indirect-tax pack; the 15 BUILD rows split into 5 platforms that
-> already exist (integrate, don't rebuild) and 10 planned builds — of which 4 rows predate
+> localization is the BIR indirect-tax pack; the 14 BUILD rows split into 5 platforms that
+> already exist (integrate, don't rebuild) and 9 planned builds — of which 4 rows predate
 > this doctrine (OMO D10, DP H6, IAP H7, AAP H9; the register's other pre-doctrine product,
-> TPS, carries no fit-gap row of its own — it is the candidate remit for D13's dispatch
-> build) and 6 rows are new scope the doctrine creates (the payroll engine and its two
-> statutory-output rows E5–E7, the store workforce platform E3, the dispatch build D13,
-> and space-planning F4).
+> TPS, carries no fit-gap row of its own — it is the candidate remit for the dispatch
+> experience layer) and 5 rows are new scope the doctrine creates (the payroll engine and
+> its two statutory-output rows E5–E7, the store workforce platform E3, and space-planning
+> F4). The 2026-09-15 EBS-exhaustion audit re-pointed the dispatch core in-suite (D13 →
+> Oracle Field Service; the build narrows to the consumer experience layer) and added four
+> native vehicles the original register had left unnamed (A13 Lease & Finance Management,
+> B11 Internet Expenses, D14 Teleservice, E9 Advanced Benefits).
 
 ---
 
-## 4. Formerly-Open Decisions — Resolution Record (2026-09-14)
+## 4. Resolution Record — formerly-open decisions (2026-09-14) & the EBS-exhaustion audit (2026-09-15)
 
 The two-tier sourcing decision (*in EBS → use it; otherwise → build*) resolved the open
 schedule and superseded the sourcing register's Buy rows. The register amendment is
@@ -208,7 +219,11 @@ re-scope); this register remains the fit/disposition source of truth.
 | 5 | ATS/LMS depth (VS-121/123) | Unchanged: in-suite iRecruitment/OLA per the doctrine; deeper function, if ever needed, is built — never bought | E2 |
 | 6 | **POS estate** | **Recorded as an already-built in-house platform** — the program is integration (flows W533–W541), not sourcing | Register's Core-row POS treatment |
 | 7 | **Payroll** | **Build decision: in-house Payroll PH** replaces the Oracle-Payroll-plus-localization plan; Oracle Payroll not adopted; Core HR (PER) and the GL stay in EBS; posting is E8 | Register Core-row "HR & payroll (PH statutory)" |
-| 8 | Store workforce scheduling & dispatch | New build scope created by the doctrine (rows E3, D13); product remit (extend TPS vs new squads) assigned at the SIB/OM | Register's BoB WFM/FSM rows |
+| 8 | Store workforce scheduling & dispatch | Workforce (E3) unchanged: build, scoped to the genuinely-absent layer (shift scheduling/optimization — OTL covers timecards, not planning). **Dispatch corrected 2026-09-15: Oracle Field Service is the in-suite dispatch core (D13 FIT-CFG)** — the original 'Not in EBS' claim was wrong; the build narrows to the consumer appointment/route-optimization/contractor-portal experience layer, remit at the SIB/OM | Register's BoB WFM/FSM rows |
+| 9 | Lessor equipment leasing (VS-96) | **Resolved 2026-09-15: Lease & Finance Management** — booking, billing schedules → AR, asset/end-of-term; the in-suite vehicle the workflows' unnamed 'lease management system' touchpoint assumed | New row A13 |
+| 10 | Employee T&E expenses & corporate cards (W74) | **Resolved 2026-09-15: Internet Expenses (iExpenses)** — expense reports, policy limits, AME approvals, AP card-statement loads | New row B11 |
+| 11 | Benefits enrollment & life events (VS-102.2) | **Resolved 2026-09-15: Advanced Benefits (OAB)** — deduction envelopes to the Payroll PH build via the E4 feed | New row E9 |
+| 12 | Customer service requests & complaints (W41) | **Resolved 2026-09-15: Teleservice/Service Requests + Escalation Management** on TCA; channel capture stays with the in-house CX surfaces | New row D14 |
 
 Each resolution above inherits the sourcing gate's control-mapping appendix duty
 (sourcing model §3.3): the CTL evidence path for every re-scoped capability is named in
@@ -224,21 +239,21 @@ requirement-level source of truth.
 
 | Section | Domain | Dominant disposition |
 |---|---|---|
-| R1 | Financial Management | FIT-STD/FIT-CFG (A1–A10) |
+| R1 | Financial Management | FIT-STD/FIT-CFG (A1–A10, A13) |
 | R2 | Inventory Management | FIT-STD (C2/C4/C7–C10) |
-| R3 | Procurement & Purchasing | FIT-STD (B1/B2/B4/B5/B8) |
+| R3 | Procurement & Purchasing | FIT-STD (B1/B2/B4/B5/B8) + FIT-CFG (B10–B11) |
 | R4 | Warehouse Management | FIT-STD in-suite (C6: Oracle WMS/MSCA) |
 | R5 | POS & Retail | Existing in-house POS — integrate (D6) + EBS masters (D2, G6) |
 | R6 | Ecommerce Integration | Existing in-house platform — integrate (D7) + EBS fulfillment (D1) |
 | R7 | Supply Chain Planning | FIT-CFG Oracle VCP stack (C5) + FIT-STD (C4, C14) |
-| R8 | HR & Payroll | Core HR FIT-STD (E1/E2); payroll & workforce builds (E3, E5–E7) + interfaces (E4, E8) |
-| R9 | CRM & Loyalty | Existing in-house loyalty stack (D9) + TCA master (D5) |
+| R8 | HR & Payroll | Core HR FIT-STD (E1/E2/E9); payroll & workforce builds (E3, E5–E7) + interfaces (E4, E8) |
+| R9 | CRM & Loyalty | Existing in-house loyalty stack (D9) + TCA master (D5) + Service Requests (D14) |
 | R10 | Analytics & Reporting | FIT-STD in-suite + BUILD DP (H5/H6) |
 | R11 | Intercompany & Transfer Pricing | FIT-STD (A7) |
 | R12 | Document Management | Process-owned + ERES/attachments |
 | R13 | Master Data Management | FIT-STD/FIT-CFG (C1, D5, B6) |
 | R14 | Non-Functional | Platform provisions (architecture §7) |
-| R15 | Installation & Services | FIT-STD-light (D1, F2) |
+| R15 | Installation & Services | Field Service dispatch core FIT-CFG (D13) + FIT-STD-light (D1, F2) |
 | R16 | Wholesale & Reseller | FIT-STD (D1) |
 | R17 | Governance, Legal & Strategy | Process-owned + PER capture (G8) |
 | R18–R24 | Cross-functional & gap-closure rounds | Follow the owning VS row above |
@@ -294,4 +309,4 @@ acts remain human-confirmed — the agentic hard boundary (sourcing model §12.1
 
 ---
 
-*Document Version: 1.1 | Date: 2026-09-14 | Two-tier sourcing doctrine enacted (*in EBS → use it; otherwise → build*): register re-dispositioned 76 → 79 rows (54 standard / 2 PER / 2 EXT / 1 LOC / 5 INT / 15 BUILD of which 5 already-built / 0 EDGE / 0 OPEN); Oracle WMS/MSCA adopted in-suite (C6), Oracle ASCP + Demantra adopted (C5), OTM resolved (B10), POS/ecommerce/loyalty/gift-card recorded as already-built platforms (D6–D11), payroll re-scoped to an in-house build with Oracle Payroll unadopted (E3–E8), BoB WMS/TMS/WFM/FSM rows superseded (§4 resolution record, incl. the sourcing-register amendment schedule). Prior v1.0 (2026-09-14): initial issue — fit classes, 76-row capability disposition register (52 standard / 2 PER / 2 EXT / 4 LOC / 4 INT / 7 EDGE / 4 BUILD / 1 OPEN), SIB open-decision schedule, R1–R32 orientation view, PH localization pack definition, standard-first KPIs. Register counts pinned above; canon anchors: 728 Req / 5,427 WF / 808 CTL / sourcing register §4 / ATC & statutory forms per repo canon.*
+*Document Version: 1.2 | Date: 2026-09-15 | **EBS-exhaustion audit:** by direction, every Oracle EBS capability that can be used is used — the register re-audited against the suite's native catalog: D13's 'Not in EBS' claim corrected (Oracle Field Service is the in-suite dispatch core; the build narrows to the consumer experience layer), four native vehicles added where the register had left capabilities unnamed (A13 Lease & Finance Management for VS-96 lessor leasing; B11 Internet Expenses for W74 T&E; D14 Teleservice/Service Requests for W41 complaints; E9 Advanced Benefits for VS-102.2 enrollment), B10's stale SIB note re-pointed to its §4 resolution-3 OTM adoption, E3/E4's notes trued to name Oracle Time & Labor/BEE as the capture-retirement surface, §4 gains resolutions 9–12. Register 79 → 83 rows (54 standard → 59 = 71.1%; BUILD 15 → 14 of which 5 already-built). Prior v1.1 (2026-09-14): Two-tier sourcing doctrine enacted (*in EBS → use it; otherwise → build*): register re-dispositioned 76 → 79 rows (54 standard / 2 PER / 2 EXT / 1 LOC / 5 INT / 15 BUILD of which 5 already-built / 0 EDGE / 0 OPEN); Oracle WMS/MSCA adopted in-suite (C6), Oracle ASCP + Demantra adopted (C5), OTM resolved (B10), POS/ecommerce/loyalty/gift-card recorded as already-built platforms (D6–D11), payroll re-scoped to an in-house build with Oracle Payroll unadopted (E3–E8), BoB WMS/TMS/WFM/FSM rows superseded (§4 resolution record, incl. the sourcing-register amendment schedule). Prior v1.0 (2026-09-14): initial issue — fit classes, 76-row capability disposition register (52 standard / 2 PER / 2 EXT / 4 LOC / 4 INT / 7 EDGE / 4 BUILD / 1 OPEN), SIB open-decision schedule, R1–R32 orientation view, PH localization pack definition, standard-first KPIs. Register counts pinned above; canon anchors: 728 Req / 5,427 WF / 808 CTL / sourcing register §4 / ATC & statutory forms per repo canon.*

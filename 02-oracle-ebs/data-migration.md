@@ -37,6 +37,7 @@ Part of the [02-oracle-ebs blueprint](README.md).
 | 19 | Leases (active portfolio) | Property/lease register | Property Manager contract import + abstracts | W5 — PFRS 16 EXT schedules rebuild from abstracts |
 | 20 | Banks, accounts, signatories | Treasury register | CE bank model + IBY setup | W1 |
 | 21 | Attachments & documents (contracts, permits) | Per VS-88 retention rules | FND attachments API against migrated entities | Rolling |
+| 22 | Equipment lease book — lessor side (active contracts, billing schedules, serviced assets) | Legacy lease/rental register | Lease & Finance Management contract & billing-schedule import; serviced assets to Install Base (fit-gap A13, §4 resolution 9) | W5 — billing schedules verified against AR before go-live |
 
 Volumes anchor to the canonical
 [data-migration-mapping](../01-model-company/data-migration-mapping.md) targets — no
@@ -54,7 +55,7 @@ W0  Foundation setup (rows 1–3)
       │       → onhand (16, per wave)
       └─> W3  O2C: customers (9) → channels live (POS/ecom cutover)
       └─> W4  People: employees (10) → payroll YTD into the build (11) → payroll posting verified (E8)
-      └─> W5  Assets/projects/property: FA (17) → projects (18) → leases (19)
+      └─> W5  Assets/projects/property: FA (17) → projects (18) → leases (19) → equipment lease book (22)
 ```
 
 Hard rules:
@@ -123,4 +124,4 @@ decision, not a rebuild.
 
 ---
 
-*Document Version: 1.2 | Date: 2026-09-14 | Structure-promotion re-base (profile v3.0 / TO v2.3): row 10's headcount re-based 6,762 → 6,911 (200×29 stores + 600 DC + 511 HQ). No other mapping rows changed. Prior v1.1 | Date: 2026-09-14 | Two-tier sourcing doctrine enacted: row 11 re-pointed (payroll YTD loads into the in-house Payroll PH build; EBS receives postings, not balances), W4 sequence line updated. Prior v1.0 (2026-09-14): initial issue — 21-row load-path register (object → EBS interface/API), wave sequence, six validation gates tied to W73/W385, historical-data strategy, cutover sequence and roles. Volume anchors quoted from data-migration-mapping.md and the canon (55,000 item-master / ~800–1,000 vendors / ~5,400 AR accounts / 6,762 HC); no new totals introduced.*
+*Document Version: 1.3 | Date: 2026-09-15 | **EBS-exhaustion audit:** row 22 added — the VS-96 lessor equipment lease book migrates into Lease & Finance Management (fit-gap A13, §4 resolution 9; serviced assets to Install Base per D13's Field Service disposition), W5 sequence line updated. No other mapping rows changed. Prior v1.2 | Date: 2026-09-14 | Structure-promotion re-base (profile v3.0 / TO v2.3): row 10's headcount re-based 6,762 → 6,911 (200×29 stores + 600 DC + 511 HQ). No other mapping rows changed. Prior v1.1 | Date: 2026-09-14 | Two-tier sourcing doctrine enacted: row 11 re-pointed (payroll YTD loads into the in-house Payroll PH build; EBS receives postings, not balances), W4 sequence line updated. Prior v1.0 (2026-09-14): initial issue — 21-row load-path register (object → EBS interface/API), wave sequence, six validation gates tied to W73/W385, historical-data strategy, cutover sequence and roles. Volume anchors quoted from data-migration-mapping.md and the canon (55,000 item-master / ~800–1,000 vendors / ~5,400 AR accounts / 6,762 HC); no new totals introduced.*

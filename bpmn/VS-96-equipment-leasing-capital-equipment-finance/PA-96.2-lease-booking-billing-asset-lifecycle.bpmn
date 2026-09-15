@@ -23,8 +23,8 @@ Source: workflow W3169 — Lease Booking, Asset Capitalization &amp; Start-Day S
       <bpmn:startEvent id="W3169_Start5" name="Origination complete (W3168)">
         <bpmn:outgoing>W3169_Flow12</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:userTask id="W3169_Task6" name="Lease Operations Mgr book lease in lease-management system: contract terms…">
-        <bpmn:documentation>Step 1: Lease Operations Mgr book lease in lease-management system: contract terms, payment schedule, asset record (serial, location, customer), residual, end-of-term option, lessor (W3165), funding source; generate lease ID
+      <bpmn:userTask id="W3169_Task6" name="Lease Operations Mgr book lease in Lease &amp; Finance Management (OKL): contract…">
+        <bpmn:documentation>Step 1: Lease Operations Mgr book lease in Lease &amp; Finance Management (OKL): contract terms, payment schedule, asset record (serial, location, customer), residual, end-of-term option, lessor (W3165), funding source; generate lease ID
 Responsible (R): Lease Operations Mgr / IT
 Accountable (A): Lease Operations Manager
 Duration: Per deal</bpmn:documentation>

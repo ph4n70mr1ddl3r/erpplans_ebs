@@ -648,7 +648,7 @@ ANCHORS = {
     ],
     "fit-gap-analysis.md": [
         "of which 4 rows predate",
-        "6 rows are new scope the doctrine creates",
+        "5 rows are new scope the doctrine creates",
     ],
     "module-coverage-map.md": [
         "| **Innovation & Digital Transformation** |",
@@ -1871,18 +1871,18 @@ def ebs_blueprint_hits():
             (build_existing if "*(existing)*" in cells[4] else build_planned).append(cells[1])
     total = sum(counts.values())
     std = counts.get("FIT-STD", 0) + counts.get("FIT-CFG", 0)
-    expect = {"FIT-STD": 31, "FIT-CFG": 23, "PER": 2, "EXT": 2, "LOC": 1,
-              "INT": 5, "BUILD": 15, "EDGE": 0, "OPEN": 0}
+    expect = {"FIT-STD": 31, "FIT-CFG": 28, "PER": 2, "EXT": 2, "LOC": 1,
+              "INT": 5, "BUILD": 14, "EDGE": 0, "OPEN": 0}
     for cls, want in expect.items():
         got = counts.get(cls, 0)
         if got != want:
             add("fit-gap-analysis.md", 0,
                 f"register re-derives {got} {cls} rows but §3 pins {want} — the "
                 f"class-count table no longer foots against the §2 register")
-    if total != 79:
+    if total != 83:
         add("fit-gap-analysis.md", 0,
             f"register re-derives {total} disposition rows but the pinned register "
-            f"total is 79")
+            f"total is 83")
     # every §3 class-count cell must equal the §2 re-derivation (the rule's first
     # draft pinned only the standard-total and grand-total rows; a corrupted single
     # class cell sailed through — caught by this wave's own teeth suite, T4)

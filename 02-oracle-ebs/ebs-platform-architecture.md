@@ -61,9 +61,11 @@ deliberately not adopted (see the [fit-gap register](fit-gap-analysis.md) for th
 | **E-Business Tax (eBTax)** | PH VAT determination, VAT-exempt/zero-rated (SC/PWD/solo-parent pathways), EWT/ATC (WC 010/WI 010/WP 010 canon) | VS-79, VS-85, W145, W24 |
 | **Purchasing (PO)** | Requisitions, POs, blankets (W2C), receipts, receiving 3-way match | VS-03, VS-15; W2 family |
 | **iProcurement** | Store/HQ self-service requisitioning, non-merchandise catalogues | W136, VS-34 |
+| **Internet Expenses (OIE)** | Employee expense reports, policy limits, AME approvals, corporate-card statement loads (fit-gap B11, §4 resolution 10) | W74, PA-15.2 card reconciliation |
 | **Sourcing (PON)** | RFQs, auctions, bid tendering (government/institutional) | W166, VS-46 |
 | **iSupplier (POS portal)** | Vendor portal: PO view, ASNs, invoicing, catalogs | W422, R28, PA-03.x |
 | **Supplier Lifecycle Management** | Supplier onboarding questionnaire/approval flow | W36 vendor onboarding |
+| **Trade Management (OTM)** | Vendor rebate accrual evaluation & claims — in-suite per fit-gap B10/§4 resolution 3 (license cost is a FinOps decision) | VS-39, W27/W161 |
 | **Landed Cost Management (LCM)** | Import true-up: freight, duties, demurrage allocation to item cost | W144, W239, W249, VS-122 |
 | **Inventory (INV)** | Item master, UOM/conversions, onhand, subinventories, min-max, cycle counts, physical inventory, inter-org transfers, consignment | VS-05, VS-29; W3/W4/W6/W22/W42 family |
 | **Warehouse Management (WMS) / MSCA** | **Adopted in-suite** — RF-directed putaway/pick, LPN/pallet tracking, directed tasking | VS-04; two-tier doctrine resolution (in EBS → use it) |
@@ -74,14 +76,18 @@ deliberately not adopted (see the [fit-gap register](fit-gap-analysis.md) for th
 | **Transportation Execution (OTE)** | Carrier tender, freight cost capture — in-suite under the two-tier doctrine (the BoB TMS row is superseded); optimization beyond OTE is a build candidate, never a buy | VS-110 freight postings |
 | **Oracle Quality (QA)** | Incoming inspection plans, supplier quality data collection | W110 supplier quality, VS-31 |
 | **Property Manager (PN)** | Lease administration, rent/CAM/indexation billing, critical dates | VS-42, W117/W118 |
+| **Lease & Finance Management (OKL)** | Lessor equipment leasing: lease booking, billing schedules → AR, asset/end-of-term tracking (fit-gap A13, §4 resolution 9) | VS-96, W3165–W3176 |
 | **Projects (Project Costing + PM)** | Capex projects, CIP, project vendor bills, asset turnover hand-off | VS-40, VS-20, W21, W276 |
 | **Oracle HRMS (PER)** | Org/position/employee master, EITs (licenses, PPE sizes), absence types | VS-19, W15/W43, W292 — Core HR stays in EBS; the payroll engine is the in-house build (below) |
 | *Oracle Payroll (PAY)* | ***Not adopted*** — payroll is an in-house build (fit-gap E5–E8): the build owns PH statutory gross-to-net and compensation outputs, posts costing journals into EBS, and pulls people data from PER | VS-19.2; fit-gap §4 resolution 7 |
 | **iRecruitment (IRC)** | Vacancy/requisition/candidate self-service | W-recruitment family, VS-121 |
 | **Oracle Learning Management (OLA)** | Training calendar, compliance enrollments | W51, VS-123/183 (basic; deeper LMS function, if ever needed, is a build) |
+| **Advanced Benefits (OAB)** | Benefits enrollment/eligibility/life events; deduction envelopes to Payroll PH via the E4 feed (fit-gap E9, §4 resolution 11) | VS-102.2 |
+| **Teleservice / Service Requests** | Complaint/service-request capture, SLA timers, tiered escalation on the TCA party model (fit-gap D14, §4 resolution 12) | W41, VS-13.1 |
 | **Oracle Treasury (XTR)** | Cash positioning, investments, debt/covenants, FX exposure & deals | VS-18.1–18.3, W80, W318/W319/W321 |
 | **Advanced Collections (IEX)** | Delinquency strategy, dunning, promise-to-pay | VS-16.3, W108 |
 | **Credit Management** | Credit scoring rules, limits, hold/release | W24, W328, W229 |
+| **Field Service (CSF) + Install Base** | Task assignment, dispatch scheduling, technician debrief & the mobile field device on serviced assets — the in-suite dispatch core (fit-gap D13, §4 resolution 8); the build narrows to the consumer experience layer | VS-12 dispatch; VS-96 serviced assets |
 | **Approvals Management (AME)** | Rule-driven approvals across PO/AP/AR/HR (PHP tier ladders) | The DMN authorization ladders' system enforcement |
 | **Oracle Workflow / Business Events** | Document approvals, event subscription for integrations | Cross-cutting |
 | **Integrated SOA Gateway (ISG)** | REST/SOAP exposure of EBS interfaces for IAP/edges | [integrations.md](integrations.md) |
@@ -94,7 +100,8 @@ deliberately not adopted (see the [fit-gap register](fit-gap-analysis.md) for th
 
 **In-house products riding EBS (outside the suite, integrated via IAP):** the **POS estate**
 and the **custom ecommerce platform** (both already built — integration is the program), the
-gift-card/loyalty stack (already built), **Payroll PH**, the store workforce platform, and
+gift-card/loyalty stack (already built), **Payroll PH**, the store workforce platform, the
+dispatch experience layer (the Field Service dispatch core being in-suite per fit-gap D13), and
 OMO/TPS/AAP/IAP/DP. None of them buys its way in; all of them ledger into EBS.
 
 **Planning products (adopted with the two-tier doctrine):** Oracle Advanced Supply Chain Planning (ASCP) and
@@ -186,4 +193,4 @@ rules:
 
 ---
 
-*Document Version: 1.2 | Date: 2026-09-14 | Structure-promotion re-base (profile v3.0 / TO v2.3): §4's UAT/TRAIN row training-estate figure re-based 6,762-user → 6,911-user (promoted HQ 511 / total 6,911). No §1–§3/§5–§7 changes. Prior v1.1 | Date: 2026-09-14 | Two-tier sourcing doctrine enacted (in EBS → use it; otherwise → build): Oracle WMS/MSCA and Shipping/OTE adopted in-suite (BoB WMS/TMS superseded), Oracle Payroll marked not-adopted with payroll re-scoped to the in-house build (fit-gap §4 resolution 7), in-house-products roster added (POS/ecommerce/loyalty already built — integration is the program). Prior v1.0 (2026-09-14): initial issue — org/ledger model, module footprint, tech stack, environments, integration and security architecture for the EBS realization. Canon references: 5 legal entities / 200 stores / 4 DCs / 35,000 active SKUs / ~2.8M POS transactions/month (tender-mix canon); Premier-Support horizon re-verified at contract time.*
+*Document Version: 1.3 | Date: 2026-09-15 | **EBS-exhaustion audit footprint expansion:** six native products joined the §2 module footprint — Trade Management (B10/§4-3, previously resolved but unlisted), Internet Expenses (B11), Lease & Finance Management (A13), Field Service + Install Base (D13's corrected in-suite dispatch core), Advanced Benefits (E9) and Teleservice/Service Requests (D14); the in-house roster paragraph names the dispatch experience layer as the narrowed build. No §1/§3–§7 changes. Prior v1.2 | Date: 2026-09-14 | Structure-promotion re-base (profile v3.0 / TO v2.3): §4's UAT/TRAIN row training-estate figure re-based 6,762-user → 6,911-user (promoted HQ 511 / total 6,911). No §1–§3/§5–§7 changes. Prior v1.1 | Date: 2026-09-14 | Two-tier sourcing doctrine enacted (in EBS → use it; otherwise → build): Oracle WMS/MSCA and Shipping/OTE adopted in-suite (BoB WMS/TMS superseded), Oracle Payroll marked not-adopted with payroll re-scoped to the in-house build (fit-gap §4 resolution 7), in-house-products roster added (POS/ecommerce/loyalty already built — integration is the program). Prior v1.0 (2026-09-14): initial issue — org/ledger model, module footprint, tech stack, environments, integration and security architecture for the EBS realization. Canon references: 5 legal entities / 200 stores / 4 DCs / 35,000 active SKUs / ~2.8M POS transactions/month (tender-mix canon); Premier-Support horizon re-verified at contract time.*
