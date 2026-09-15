@@ -549,12 +549,58 @@ elif intro_m:
         if unc!=u: errs.append(f"Intro banner unclassified ({unc:,}) != Summary Grand Total unclassified ({u:,})")
 else:
     errs.append("Could not locate intro-banner (either the pre-2026-06-28 'An additional N workflows (M total − K classified)' form or the full-coverage 'Zero workflows remain unclassified' form)")
+# ---- (d) register W-title mirror vs the PA canon (2026-09-15 thirtieth-wave) ----
+# The register's W-title column is a navigation surface no rule read. Drift
+# against the PA ##/###/#### W-header canon (the generator-read primary source
+# and the bpmn process names) had accumulated 49 stranded forms: the NCSD/
+# I-SEAL/PAS 39/Intercharge token errors the semantic batches repaired in the
+# PA files but never re-pointed into the register, plus the abbreviation/
+# prefix/spacing drifts (initial-commit short forms and retired spellings).
+# Every register row's title must now equal the PA header title exactly, except
+# the two v7.31-adjudicated treasury-companion annotated forms (W423/W425 —
+# deliberate register-only retitles, self-documented in the register's own
+# footer of 2026-08-24), whose exact literals are pinned here so a reversion
+# to the bare PA title, or any new 'exception', fires.
+_pa_title_re = re.compile(r"^(#{2,4}) (W\d+[A-Za-z]?)[.\s]\s*(.+?)\s*$")
+_pa_titles = {}
+for _d in os.listdir(WFR):
+    if not _d.startswith("VS-"): continue
+    _dd = os.path.join(WFR, _d)
+    if not os.path.isdir(_dd): continue
+    for _fn in os.listdir(_dd):
+        if _fn.startswith("PA-") and _fn.endswith(".md"):
+            for _ln in open(os.path.join(_dd, _fn), encoding="utf-8"):
+                _m = _pa_title_re.match(_ln)
+                if _m and _m.group(2) not in _pa_titles:
+                    _pa_titles[_m.group(2)] = _m.group(3)
+_STANDING_TITLES = {
+    "W423": "AR Post-dated Check (PDC) Warehousing & Clearing — Treasury Execution (canonical lifecycle: W1380)",
+    "W425": "Bounced Check (DAIF/DAUD) Recovery & Penalty — Treasury Reversal (canonical resolution: W1381)",
+}
+_reg_row_re = re.compile(r"^\|\s*(W\d+[A-Za-z]?)\s*\|\s*([^|]+?)\s*\|")
+_reg_titles = {}
+for _ln in lines:
+    _m = _reg_row_re.match(_ln)
+    if _m:
+        _reg_titles.setdefault(_m.group(1), _m.group(2))
+if len(_reg_titles) != CR:
+    errs.append(f"register parses to {len(_reg_titles)} distinct W-id rows but the PA corpus re-derives {CR} register rows ({CU} unique + {_sub} sub-workflow headers)")
+_missing = sorted(set(_reg_titles) - set(_pa_titles))[:5]
+_extra = sorted(set(_pa_titles) - set(_reg_titles))[:5]
+if _missing:
+    errs.append(f"register rows for W-ids with no PA header: {_missing}")
+if _extra:
+    errs.append(f"PA headers with no register row: {_extra}")
+for _w in sorted(_reg_titles):
+    _want = _STANDING_TITLES.get(_w, _pa_titles.get(_w))
+    if _want is not None and _reg_titles[_w] != _want:
+        errs.append(f"register title for {_w} is '{_reg_titles[_w]}' but the PA canon is '{_want}'")
 print("\n".join(errs))
 PY
 )
 PROSE_DRIFT_COUNT=$(echo -n "$PROSE_DRIFT" | grep -cP '.' || true)
 if [ "$PROSE_DRIFT_COUNT" -eq 0 ]; then
-    ok "Criticality-classification prose counts (tier bodies + intro arithmetic) match headings/Summary, and all six canonical figure surfaces (intro headline, Coverage row, Grand Total, Domain prose, sub-workflow note, Confirmed Total) match the PA corpus re-derivation (5,427 unique / 5,450 rows; canon-pin extension added by the 2026-09-10 seventeenth-wave review after the batch-24 pass stranded four live spots at the retired totals while every one stayed self-consistent)"
+    ok "Criticality-classification prose counts (tier bodies + intro arithmetic) match headings/Summary, all six canonical figure surfaces (intro headline, Coverage row, Grand Total, Domain prose, sub-workflow note, Confirmed Total) match the PA corpus re-derivation (5,427 unique / 5,450 rows; canon-pin extension added by the 2026-09-10 seventeenth-wave review after the batch-24 pass stranded four live spots at the retired totals while every one stayed self-consistent), and all 5,450 register W-title cells equal the PA ##/### W-header canon exactly except the two v7.31-adjudicated W423/W425 treasury-companion annotated forms (title mirror added by the 2026-09-15 thirtieth-wave review after 49 stranded register titles — incl. the NCSD/I-SEAL/PAS 39/Intercharge token errors the semantic batches repaired in the PA files but never re-pointed into the register — were found on the surface no rule read)"
 else
     error "$PROSE_DRIFT_COUNT criticality-classification prose count(s) disagree with their heading or the Summary table:"
     echo "$PROSE_DRIFT" | sed 's/^/    /'
@@ -1698,7 +1744,7 @@ if [ "${C31_BAD:-1}" -eq 0 ]; then
     ok "All 569 process-area names agree 3-way (PA-file H1 == VS-README row == value-stream-index bullet, canonical = index), all 188 VS-README H1 titles carry the canonical index VS-name (H1 arm, twenty-seventh wave), all 569 PA header quote-lines carry the canonical VS-name over a line-break-proof joined read with VS-number, optional canonical family suffix and Value-Stream-Index link verified (quote-line arm, twenty-eighth wave), and all 188 detailed-map VS bullets carry the canonical summary-row name (bullet arm, twenty-eighth wave — fourteen drifted quote-lines across VS-48/100/114/130/192 and the VS-192 detailed bullet were found one layer out from the twenty-seventh wave's footer/H1 repairs)"
 else
     error "PA/VS name drift found ($C31_BAD location(s)) — run 07-methodology/fix-pa-names.py (canonical source: value-stream-index.md):"
-    echo "$CHECK31" | grep -E '^BAD\|' | sed 's/^BAD|/    /' | head -25
+    echo "$CHECK31" | grep -E '^BAD\|' | sed 's/^BAD|/    /' | head -25 || true
 fi
 
 # --- Check 32: Dangling requirement-ID citations in workflow/PA and summary docs ---
@@ -1754,7 +1800,7 @@ if [ "${C32_IDS:-1}" -eq 0 ]; then
     ok "All requirement-ID citations across the workflow catalog resolve to a defined erp-requirements.md row"
 else
     error "Dangling requirement-ID citations found ($C32_IDS distinct ID(s)) — remap to the canonical requirement ID (see Check 4 for the matrix equivalent):"
-    echo "$CHECK32" | grep -E '^BAD\|' | sed 's/^BAD|/    /' | head -25
+    echo "$CHECK32" | grep -E '^BAD\|' | sed 's/^BAD|/    /' | head -25 || true
 fi
 
 # --- Check 33: Workflow-reference resolution inside PA bodies & VS READMEs ---
@@ -1800,7 +1846,7 @@ if [ "${C33_IDS:-1}" -eq 0 ]; then
     ok "All workflow-ID citations across the model-company docs (PA bodies, VS READMEs, summary docs) resolve to a defined workflow header"
 else
     error "Dangling workflow-ID citations found ($C33_IDS distinct ID(s)) — remap to the canonical workflow/VS id (see fix-pa-wrefs.py for the review #20 precedent):"
-    echo "$CHECK33" | grep -E '^BAD\|' | sed 's/^BAD|/    /' | head -25
+    echo "$CHECK33" | grep -E '^BAD\|' | sed 's/^BAD|/    /' | head -25 || true
 fi
 
 # --- Check 34: CTL-240–808 PA-control objective names match canonical PA names ---
@@ -1859,7 +1905,7 @@ if [ "${C34_MBAD:-1}" -eq 0 ] && [ "${C34_BBAD:-1}" -eq 0 ]; then
     ok "All 569 PA-control objectives (matrix + PA-body parentheticals) carry their canonical process-area name from value-stream-index.md"
 else
     error "PA-control objective-name drift (matrix: $C34_MBAD, PA bodies: $C34_BBAD) — re-run 07-methodology/fix-ctl-pa-names.py:"
-    echo "$CHECK34" | grep -E '^BAD-' | sed 's/^BAD-MATRIX|/    /; s/^BAD-BODY|/    /' | head -25
+    echo "$CHECK34" | grep -E '^BAD-' | sed 's/^BAD-MATRIX|/    /; s/^BAD-BODY|/    /' | head -25 || true
 fi
 
 # --- Check 35: VS-number citation resolution (catalog & summary docs) ---
@@ -1913,7 +1959,7 @@ if [ "${C35_IDS:-1}" -eq 0 ]; then
     ok "All VS-number citations across the model-company docs resolve to an active value stream (no workflow references written in the VS namespace)"
 else
     error "Dangling/misnamespaced VS-number citations found ($C35_IDS distinct id(s)) — remap to the canonical workflow id (see fix-vs-wrefs.py for the review #21 precedent):"
-    echo "$CHECK35" | grep -E '^BAD\|' | sed 's/^BAD|/    /' | head -25
+    echo "$CHECK35" | grep -E '^BAD\|' | sed 's/^BAD|/    /' | head -25 || true
 fi
 
 # --- Check 36: duplicate requirement titles in erp-requirements.md ---
@@ -2007,7 +2053,7 @@ if [ "${C37_BAD:-1}" -eq 0 ]; then
     ok "All quoted requirement priority-split figures match the erp-requirements.md register (429 Must / 293 Should / 6 Nice)"
 else
     error "Quoted priority-split figures disagree with the erp-requirements.md register (see BAD lines for derived counts):"
-    echo "$CHECK37" | grep -E '^BAD\|' | sed 's/^BAD|/    /'
+    echo "$CHECK37" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
 fi
 
 # --- Check 38: Requirements-TOC count-column agreement vs the register rows ---
@@ -2063,7 +2109,7 @@ if [ "${C38_BAD:-1}" -eq 0 ]; then
     ok "erp-requirements.md TOC Count column agrees with the register (per-row and 728-total)"
 else
     error "Requirements-TOC Count column disagrees with the erp-requirements.md register:"
-    echo "$CHECK38" | grep -E '^BAD\|' | sed 's/^BAD|/    /'
+    echo "$CHECK38" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
 fi
 
 # --- Check 39: Namespace & listing integrity (dup W headers, VS listings, CTL/PA citations, cross-file anchors) ---
@@ -2164,7 +2210,7 @@ if [ "${C39_BAD:-1}" -eq 0 ] && [ "$C39_GUARD_RC" -eq 0 ]; then
     ok "Namespace integrity: ${C39_HDRS} workflow headers unique; all CTL & PA-N.N citations resolve; all cross-file anchors resolve; misdirected-CTL guard clean (0 wrong-PA paren citations; batch-13-adjudicated 170-citation colon-form census exact per-PA and per-CTL — guard mode of audit-misdirected-ctl.py, armed by the 2026-09-10 eighteenth-wave review after the script was found unrunnable outside its original author's machine via a hardcoded absolute path, ten shipped tools re-pointed to repo-relative resolution; fix-ghost-titles-batch14 and fix-ghost-roles-batch26 additionally sunset-guarded after sandbox runs showed both would rewrite frozen/official records their aged-out rules still match)"
 else
     error "Namespace/listing integrity violations found:"
-    echo "$CHECK39" | grep -E '^BAD\|' | sed 's/^BAD|/    /'
+    echo "$CHECK39" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
     if [ "$C39_GUARD_RC" -ne 0 ]; then
         echo "$C39_GUARD_OUT" | sed 's/^/    /'
     fi
@@ -2214,7 +2260,7 @@ if [ "${C40_BAD:-1}" -eq 0 ]; then
     ok "All quoted validator check counts equal the ${IMPLEMENTED_CHECKS} checks implemented in validate-repo.sh"
 else
     error "Quoted validator check counts disagree with the ${IMPLEMENTED_CHECKS} checks implemented in validate-repo.sh:"
-    echo "$CHECK40" | grep -E '^BAD\|' | sed 's/^BAD|/    /'
+    echo "$CHECK40" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
 fi
 
 # --- Check 41: Quoted requirement-total & category-count figures vs the register ---
@@ -2277,7 +2323,7 @@ if [ "${C41_BAD:-1}" -eq 0 ]; then
     ok "All quoted requirement-total and category-count figures match the erp-requirements.md register (${C41_T} requirements across ${C41_C} prefixes)"
 else
     error "Quoted requirement-total/category-count figures disagree with the erp-requirements.md register:"
-    echo "$CHECK41" | grep -E '^BAD\|' | sed 's/^BAD|/    /'
+    echo "$CHECK41" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
 fi
 
 # --- Check 42: Duplicate workflow titles (normalized) across the workflow catalog ---
@@ -2326,7 +2372,7 @@ if [ "${C42_BAD:-1}" -eq 0 ]; then
     ok "All ${C42_TOTAL} workflow titles are unique after normalization (3 adjudicated parallel program-template groups allowlisted)"
 else
     error "Duplicate workflow titles found (same normalized title on 2+ IDs) — designate a canonical workflow, retitle companions to their genuine slice, or add an adjudicated allowlist entry:"
-    echo "$CHECK42" | grep -E '^BAD\|' | sed 's/^BAD|/    /'
+    echo "$CHECK42" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
 fi
 
 # --- Check 43: Analysis-section list hygiene, paren balance & bold balance ---
@@ -2403,7 +2449,7 @@ if [ "${C43_BAD:-1}" -eq 0 ]; then
     ok "Controls sections bullet-hygenic; all paragraph blocks bold-balanced and Controls parens balanced"
 else
     error "Analysis-section hygiene violations (dangling Controls lines, unbalanced parens, broken '**' bold) — repair via 07-methodology/fix-controls-bullets.py + per-case review:"
-    echo "$CHECK43" | grep -E '^BAD\|' | sed 's/^BAD|/    /'
+    echo "$CHECK43" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
 fi
 
 # --- Check 44: Root-README folder-tree agreement with value-stream-index.md ---
@@ -2493,7 +2539,7 @@ if [ "${C44_BAD:-1}" -eq 0 ]; then
     ok "Root-README folder tree agrees with value-stream-index.md (${C44_VS} VS rows, workflow/PA counts, total line) and workflow-criticality-proposed.md (${C44_U} unclassified)"
 else
     error "Root-README folder-tree rows disagree with the canonical registers:"
-    echo "$CHECK44" | grep -E '^BAD\|' | sed 's/^BAD|/    /'
+    echo "$CHECK44" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
 fi
 
 # --- Check 45: Current-state workflow-total figures on anchored self-description surfaces ---
@@ -2594,7 +2640,7 @@ if [ "${C45_BAD:-1}" -eq 0 ]; then
     ok "Anchored current-state total figures agree with the canonical registers (grand total ${C45_T}; format-guide, requirement-matrix, VS-133 and dependency-map surfaces)"
 else
     error "Anchored current-state total figures disagree with the canonical registers:"
-    echo "$CHECK45" | grep -E '^BAD\|' | sed 's/^BAD|/    /'
+    echo "$CHECK45" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
 fi
 
 # --- Check 46: Stale tender-mix / fleet / SKU figures & superseded statutory citations ---
@@ -2815,7 +2861,7 @@ if [ "${C47_BAD:-1}" -eq 0 ]; then
     ok "All per-store rates cohere with their same-line chain-wide totals (unit-normalized) and all explicit 200-store multiplications check out"
 else
     error "Per-store-rate/chain-total unit mismatches or store-math errors found ($C47_BAD):"
-    echo "$CHECK47" | grep -E '^BAD\|' | sed 's/^BAD|/    /' | head -20
+    echo "$CHECK47" | grep -E '^BAD\|' | sed 's/^BAD|/    /' | head -20 || true
 fi
 
 # --- Check 48: steps-table row integrity (leading pipe, canonical header, ID ordering) ---
@@ -2882,7 +2928,7 @@ if [ "${C48_BAD:-1}" -eq 0 ]; then
     ok "All 5,425 steps tables carry canonical headers, well-formed rows, and (num, letter)-ascending step IDs"
 else
     error "Steps-table integrity violations found ($C48_BAD):"
-    echo "$CHECK48" | grep -E '^BAD\|' | sed 's/^BAD|/    /' | head -25
+    echo "$CHECK48" | grep -E '^BAD\|' | sed 's/^BAD|/    /' | head -25 || true
 fi
 
 # --- Check 49: Time Estimate finalization state (no mechanical drafts; full coverage) ---
@@ -3351,7 +3397,7 @@ if [ "${C63_BAD:-1}" -eq 0 ]; then
     ok "Root-README worklist rows agree with the worklist files and the methodology tree lists every 07-methodology file (stale batch17 residual repaired by review #69)"
 else
     error "$C63_BAD root-README worklist/tree violation(s):"
-    echo "$C63_OUT" | grep -E '^BAD\|' | sed 's/^BAD|/    /'
+    echo "$C63_OUT" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
 fi
 
 # --- Check 64: event-custody register guards (dependency-map self-loops + overlap-pair bidirectional links) ---
@@ -3422,7 +3468,7 @@ if [ "${C64_BAD:-1}" -eq 0 ]; then
     ok "No dependency-map self-loop edges and all ${C64_PAIRS} declared event-custody overlap pairs cross-reference bidirectionally (guard added by the 2026-09-03 event-custody pass)"
 else
     error "$C64_BAD event-custody violation(s) (dependency-map self-loop / one-sided overlap pair):"
-    echo "$CHECK64" | grep -E '^BAD\|' | sed 's/^BAD|/    /'
+    echo "$CHECK64" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
 fi
 
 # --- Check 65: cross-VS duplicate-event guard (identical event Triggers / distinctive Frequency canons) ---
@@ -3503,7 +3549,7 @@ if [ "${C65_BAD:-1}" -eq 0 ]; then
     ok "No cross-VS byte-identical event Triggers or distinctive Frequency canons outside the 33 adjudicated shared-cadence/shared-canon clusters (guard added by the 2026-09-03 second custody wave; the paraphrase class is covered by the event-custody register's scope notes)"
 else
     error "$C65_BAD cross-VS duplicate-event violation(s):"
-    echo "$CHECK65" | grep -E '^BAD\|' | sed 's/^BAD|/    /'
+    echo "$CHECK65" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
 fi
 
 # --- Check 66: Repo-wide file-level relative-link resolution (non-PA files) ---
@@ -3550,7 +3596,7 @@ if [ "${C66_BAD:-1}" -eq 0 ]; then
     ok "All non-PA relative markdown links resolve to existing files (guard added by the 2026-09-03 residual sweep; PA files remain Check 20's surface)"
 else
     error "$C66_BAD broken relative link(s) outside PA files:"
-    echo "$CHECK66" | grep -E '^BAD\|' | sed 's/^BAD|/    /'
+    echo "$CHECK66" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
 fi
 
 # --- Check 67: VS-README Process-Areas tables cross-foot vs disk ---
@@ -3611,7 +3657,7 @@ if [ "${C67_BAD:-1}" -eq 0 ]; then
     ok "All 188 VS-README Process-Areas tables cross-foot against the PA files' own ## W headers (guard added by the 2026-09-03 consistency review pass after the W239 move left VS-24/VS-87 stale)"
 else
     error "$C67_BAD VS-README process-area-count problem(s):"
-    echo "$CHECK67" | grep -E '^BAD\|' | sed 's/^BAD|/    /'
+    echo "$CHECK67" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
 fi
 
 # --- Check 68: Value-stream-index per-VS rows cross-foot vs disk ---
@@ -3688,7 +3734,7 @@ if [ "${C68_BAD:-1}" -eq 0 ]; then
     ok "All value-stream-index per-VS rows (summary table + detailed headings) cross-foot against disk (guard added by the 2026-09-03 second consistency review pass after the batch-4 additions left VS-02/VS-79 headings stale)"
 else
     error "$C68_BAD value-stream-index per-VS problem(s):"
-    echo "$CHECK68" | grep -E '^BAD\|' | sed 's/^BAD|/    /'
+    echo "$CHECK68" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
 fi
 
 # --- Check 69: Semantic-audit registry integrity (admitted-set vs live workflows vs pending notes) ---
@@ -3771,7 +3817,7 @@ if [ "${C69_BAD:-1}" -eq 0 ]; then
     ok "Semantic-audit registry closes: $C69_ADM admitted + $C69_PEND pending = $C69_LIVE live workflows; no ghosts, duplicates, or pending/bare contradictions (guard added by the 2026-09-04 consistency review pass after the batch-9 pending-note contradiction left the detector audited-set at 5,374)"
 else
     error "$C69_BAD semantic-audit-registry violation(s):"
-    echo "$CHECK69" | grep -E '^BAD\|' | sed 's/^BAD|/    /'
+    echo "$CHECK69" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
 fi
 
 # --- Check 70: Root-README figure annotations vs canonical registers ---
@@ -3825,7 +3871,9 @@ echo "--- Check 71: Generated BPMN/DMN trees vs the markdown corpus ---"
 # BPMNDiagram:BPMNPlane:process, DI shape/edge coverage with positive bounds
 # and waypoints, decision-table structure, and a DRD shape per decision.
 # This check re-derives the canonical counts from the markdown corpus on
-# every run and structurally validates both trees.
+# every run and structurally validates both trees. Since the 2026-09-15
+# thirtieth-wave review it also byte-verifies the third generated artifact
+# (01-model-company/role-coverage-matrix.md) via generate-role-coverage.py --check.
 CHECK71=$(python3 - "$REPO_ROOT" <<'PY'
 import re, sys, xml.etree.ElementTree as ET
 from pathlib import Path
@@ -3984,13 +4032,26 @@ for b in bad:
 PY
 )
 C71_BAD=$(echo "$CHECK71" | sed -n 's/^TOTALS .* errors=\([0-9]*\)$/\1/p')
-if [ "${C71_BAD:-1}" -eq 0 ]; then
+# Part C (2026-09-15 thirtieth-wave consistency review): the role-coverage
+# matrix is a third generated artifact whose only regression harness was the
+# generator's own --check mode — never invoked by this validator. A PA
+# Owner/Participants/RACI edit that regenerates nothing could strand the
+# shipped matrix stale at the retired role coverage — the exact staleness
+# class this check exists to catch for bpmn/dmn. --check IS the generator's
+# own byte-compare, so invoking it here gives the matrix the same shipped-tree
+# currency guarantee; the check count is unchanged (the arm lives in Check 71).
+C71_RC_OUT=$(python3 "$REPO_ROOT/07-methodology/generate-role-coverage.py" --check 2>&1) && C71_RC_RC=0 || C71_RC_RC=$?
+if [ "${C71_BAD:-1}" -eq 0 ] && [ "$C71_RC_RC" -eq 0 ]; then
     B71=$(echo "$CHECK71" | sed -n 's/^BPMN_TOTALS files=\([0-9]*\) processes=\([0-9]*\)$/\1 \2/p')
     D71=$(echo "$CHECK71" | sed -n 's/^DMN_TOTALS files=\([0-9]*\) decisions=\([0-9]*\)$/\1 \2/p')
-    ok "Generated trees validate structurally against the markdown corpus AND mirror the generator's content derivation: bpmn/ $(echo $B71 | cut -d' ' -f1) files / $(echo $B71 | cut -d' ' -f2) processes (one per confirmed-register row) and dmn/ $(echo $D71 | cut -d' ' -f1) files / $(echo $D71 | cut -d' ' -f2) decisions — well-formed XML, 1 start/1 end per process, full lane coverage, 1:1 diagram:plane, complete DI shapes/edges/bounds/waypoints, decision-table structure, DRD shape per decision, and every process's documentation/start-event-name/controls-annotation byte-equal to the generator's re-derivation from its PA markdown (content mirror added by the 2026-09-10 seventeenth-wave review after batch-24 shipped PA-133.1/.3's generated files stale at the retired 5,426 — structural counts were all still correct, so nothing else could see it)"
+    ok "Generated trees validate structurally against the markdown corpus AND mirror the generator's content derivation: bpmn/ $(echo $B71 | cut -d' ' -f1) files / $(echo $B71 | cut -d' ' -f2) processes (one per confirmed-register row) and dmn/ $(echo $D71 | cut -d' ' -f1) files / $(echo $D71 | cut -d' ' -f2) decisions — well-formed XML, 1 start/1 end per process, full lane coverage, 1:1 diagram:plane, complete DI shapes/edges/bounds/waypoints, decision-table structure, DRD shape per decision, and every process's documentation/start-event-name/controls-annotation byte-equal to the generator's re-derivation from its PA markdown (content mirror added by the 2026-09-10 seventeenth-wave review after batch-24 shipped PA-133.1/.3's generated files stale at the retired 5,426 — structural counts were all still correct, so nothing else could see it), and the shipped role-coverage matrix byte-identical to generate-role-coverage.py --check's re-derivation from the PA RACI fields + tier register + official TO (third-generated-artifact arm added by the 2026-09-15 thirtieth-wave review — the matrix's only harness had been the generator's own --check, which the validator never ran)"
 else
     error "Generated BPMN/DMN trees failed structural validation:"
-    echo "$CHECK71" | grep -E '^BAD\|' | sed 's/^BAD|/    /'
+    echo "$CHECK71" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
+    if [ "$C71_RC_RC" -ne 0 ]; then
+        echo "role-coverage --check:" 
+        echo "$C71_RC_OUT" | sed 's/^/    /'
+    fi
 fi
 
 # --- Check 72: Document version-chain monotonicity (repo-wide) ---
@@ -4080,7 +4141,7 @@ if [ "${C72_BAD:-1}" -eq 0 ]; then
     ok "All $V72 versioned document footers carry a strictly decreasing Prior chain below the live version (guard added by the 2026-09-07 eleventh-wave consistency review — the AI-first operating guide had shipped all eight batch-16\u201323 re-point clauses labeled v1.1\u2013v1.8 beneath a version header that never left '1.0 | Initial issue', an inversion invisible to the index-pin rule because the pin satisfied itself off the same stale footer)"
 else
     error "Document version-chain monotonicity violated:"
-    echo "$CHECK72" | grep -E '^BAD\|' | sed 's/^BAD|/    /'
+    echo "$CHECK72" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
 fi
 
 # --- Check 73: Canonical integration-diagram twin-copy byte-identity ---
@@ -4124,7 +4185,7 @@ if [ "${C73_BAD:-1}" -eq 0 ] && echo "$CHECK73" | grep -q '^TOTALS'; then
     ok "Canonical integration diagram byte-identical across its two copies (data-volumes §2 ↔ technical-guidelines §3.2, $L73 lines; guard added by the 2026-09-07 twelfth-wave consistency review — waves 7/9/11 each re-verified the twin copies by hand because no check read them)"
 else
     error "Integration-diagram twin-copy check failed:"
-    echo "$CHECK73" | grep -E '^BAD\|' | sed 's/^BAD|/    /'
+    echo "$CHECK73" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
 fi
 
 # --- Check 74: Generated-tree coverage surfaces (README quick-stats + quoted tree rows) ---
@@ -4234,7 +4295,7 @@ if [ "${C74_BAD:-1}" -eq 0 ]; then
     ok "Generated-tree coverage surfaces match the shipped trees: bpmn/ $(echo $B74 | tr '/' ' / ') (files/processes/tasks/flows/diagrams) and dmn/ $(echo $D74 | tr '/' ' / ') (files/decisions/rules) re-derived and asserted on bpmn/README + dmn/README quick-stats and the root-README, generator-row and exec-summary tree rows and — since the 2026-09-09 fourteenth-wave review — the methodology-index generator rows (incl. the 197 deferred anchor); dmn/README deferred anchor (197) pinned (guard added by the 2026-09-07 twelfth-wave consistency review — Check 71 reads the XML, but waves 8/9/11 each re-derived the coverage tables and quoted tree-row figures by hand because no check read them)"
 else
     error "Generated-tree coverage surfaces disagree with the shipped trees:"
-    echo "$CHECK74" | grep -E '^BAD\|' | sed 's/^BAD|/    /'
+    echo "$CHECK74" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
 fi
 
 # --- Check 75: Methodology-index Contents completeness vs disk ---
@@ -4291,7 +4352,7 @@ if [ "${C75_BAD:-1}" -eq 0 ]; then
     ok "Methodology-index completeness: all $D75 on-disk 07-methodology/ tools (.py) and docs (.md) carry Contents rows in 07-methodology/README.md and every Contents-row link resolves (guard added by the 2026-09-09 fourteenth-wave consistency review, closing the gap the twelfth wave documented when it completed the table by hand — no check read its completeness vs disk; the six .txt worklist/census data artifacts are out of scope, listed only in the root-README tree per Check 63)"
 else
     error "Methodology-index Contents table disagrees with disk ($C75_BAD):"
-    echo "$CHECK75" | grep -E '^BAD\|' | sed 's/^BAD|/    /'
+    echo "$CHECK75" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
 fi
 
 # --- Check 76: Domain gap-analysis companion figures vs canonical registers ---
@@ -4506,7 +4567,7 @@ if [ "${C76_BAD:-1}" -eq 0 ]; then
     ok "Domain gap-analysis companions (finance/IT/operations/people) re-derived clean: every family roster, bucket total, inventory clause and 'now stands at' figure matches the canonical registers (${U76}-header W universe; guard added by the 2026-09-09 fifteenth-wave consistency review — the four companions were live navigation surfaces no check read, and every gap-fill batch after their batches 8–11 had re-pointed the guarded surfaces while stranding the companions' authoring-time snapshots)"
 else
     error "Domain gap-analysis companion figures disagree with the canonical registers ($C76_BAD):"
-    echo "$CHECK76" | grep -E '^BAD\|' | sed 's/^BAD|/    /'
+    echo "$CHECK76" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
 fi
 
 # --- Check 77: Sourcing-doctrine posture guard (two-tier canon) ---
@@ -4887,7 +4948,7 @@ if [ "${C77_BAD:-1}" -eq 0 ]; then
     ok "Sourcing-doctrine posture guard clean: no retired 'cloud ERP' / best-of-breed / bought-edge literals in live prose (joined-text probe — split literals caught), no retired 'configure → buy → build' gate order anywhere live (joined-text probe), the executive summary carries the two-tier landscape anchors, the guide's §4.2/L3 assignments and Law-4/§3.3/§5.1/§7.3/§9.2 two-exit forms hold, the sourcing model's §2 heading/intro and §12.2 routing hold the in-suite/build canon, the OM's principle 7 + SIB row hold, W5512's Step 3 routes use-EBS → build, the A6.3 already-built canon is pinned, the IT gap-analysis companion's §1 scope anchor holds, the deployment canon is on-premises (EBS is not a cloud/SaaS ERP; blueprint README + architecture data-residency + tech-guidelines §2.1 pinned), and the twenty-fourth-wave portfolio/enumeration surfaces hold — the OM's §3.2 configure-and-integrate Type cells + §6.1 use-EBS/build RACI row, the W5515 Controls five-appendix enumeration with the run-cost & talent plan (build), the sourcing model's §9 two-tier TCO cost shape, and the guide's §5.1 run-cost & talent-plan appendix (guard added by the 2026-09-14 twentieth-wave consistency review — the doctrine enactment re-pointed every guarded surface while stranding the posture prose on surfaces no rule read; twenty-second-wave review repaired the IT companion's line-split scope line and hardened the probe against line breaks; on-premises canon correction pinned the three deployment-decision surfaces; twenty-third-wave review closed the cascade's own teaching surfaces — the sourcing model §2 heading/'three tiers' intro + §12.2 vendor-agent-products routing, the guide's Law 4 'default order' / §3.3 three-posture estate / §5.1 configure→buy→build / §7.3 buy=vendor-agent / §9.2 row, the OM's principle 7 + SIB row, and W5512's Step 3 + Touchpoints, with the retired gate-order literal joining the joined-text probe and all repaired surfaces anchor-pinned; twenty-fourth-wave review closed the cascade's own portfolio/enumeration surfaces — the OM §3.2 Type cells + §6.1 RACI row, the W5515 Controls five-appendix enumeration, the sourcing model's §9 TCO cost-shape row, and the guide's §5.1 appendix enumeration, all anchor-pinned; twenty-fifth-wave review closed the cascade's own vendor-seat/routing stragglers — the official TO's §8 SIB row re-pointed to use-EBS/build routing, the OM's DP row trued to the two-tier landscape, W3092's 'WMS Vendor' seat retired for the in-suite WMS (automation vendor + IT only), and the W1181/W1489/financing-partner 'POS Vendor' seats re-seated to SSP (Store Systems & POS), the in-house POS owner — with the WMS-vendor seat joining the repo-wide joined-text probe and the POS-vendor ban scoped to the three software-context files (the PA-37.1 terminal-hardware sense staying exempt as commodity procurement))"
 else
     error "Sourcing-doctrine posture violations against the two-tier canon ($C77_BAD):"
-    echo "$CHECK77" | grep -E '^BAD\|' | sed 's/^BAD|/    /'
+    echo "$CHECK77" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
 fi
 
 echo ""

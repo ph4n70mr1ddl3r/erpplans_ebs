@@ -85,25 +85,25 @@ Failure in any of these workflows would disrupt store operations or legal compli
 
 | ID | Workflow | Operational Significance |
 |---|---|---|
-| W7 | AP — Vendor Invoice Processing | 6,715+ invoices/month; 3-way match is a must-have |
+| W7 | Accounts Payable — Vendor Invoice Processing | 6,715+ invoices/month; 3-way match is a must-have |
 | W7C | Non-PO / Recurring Expense Invoice Processing | Recurring vendor payments must continue |
 | W7D | AP Vendor Statement Reconciliation | Month-end AP integrity |
-| W8 | AR — Trade & Corporate Accounts | 5,200 AR accounts; B2B revenue collection |
+| W8 | Accounts Receivable — Trade & Corporate Accounts | 5,200 AR accounts; B2B revenue collection |
 | W9 | Financial Close & Reporting | Under CREATE Law / PFRS requirements |
 | W9A | Month-End Close | 5-day close SLA |
 | W9B | Year-End Close | Statutory auditing dependency |
-| W21 | Capex Request & Approval | Capital budgeting & controls |
+| W21 | Capital Expenditure (Capex) Request & Approval | Capital budgeting & controls |
 | W24 | Trade & Corporate Credit Application | Credit risk mitigation |
 | W25 | Petty Cash Management | Controls cash across 205 locations |
-| W26 | Annual Budget Preparation | Cost controls |
-| W30 | Treasury & Cash Management | Sweep cash; ensure liquidity |
-| W59 | Insurance Policy Lifecycle | Risk mitigation |
+| W26 | Annual Budget Preparation & Monthly Variance Review | Cost controls |
+| W30 | Daily Treasury & Cash Position Management | Sweep cash; ensure liquidity |
+| W59 | Insurance Policy Lifecycle Management | Risk mitigation |
 | W74 | Employee Expense Reimbursement | Expense processing |
 | W76 | Employee Loans & Advances | Loan management |
 | W89 | Bank Reconciliation | Daily/weekly bank matching |
 | W90 | Monthly Tax Filing & Statutory Remittance | BIR compliance |
 | W94 | Customer Deposit & Advance Payment Management | Deposit tracking |
-| W99 | Payment Settlement Reconciliation (Card/E-Wallet/Online) | Payment integrity |
+| W99 | Payment Settlement Reconciliation (Card / E-Wallet / Online) | Payment integrity |
 | W100 | Vendor Statement Reconciliation | Vendor relationship |
 | W101 | Customer Refund & Credit Processing | BIR-compliant credit notes |
 | W108 | Customer Credit Collection & Escalation | Collection for 5,200 accounts |
@@ -125,7 +125,7 @@ Failure in any of these workflows would disrupt store operations or legal compli
 | W6 | Cycle Counting & Inventory Accuracy | Weekly counts; ≥97% accuracy target |
 | W22 | Stock Transfers (Store-to-Store & Inter-DC) | Multi-location transfers |
 | W22A | Store-Level Outbound Transfer Fulfillment | Transfer execution |
-| W22B | Store-to-DC Return (Excess/Damaged) | Reverse logistics |
+| W22B | Store-to-DC Return (Excess / Damaged Inventory) | Reverse logistics |
 | W42 | Annual Physical Inventory Execution | Annual wall-to-wall count |
 | W56 | Customer Backorder Management | Customer order fulfillment |
 | W91 | Damaged & Defective Goods Disposition | Inventory quality |
@@ -142,7 +142,7 @@ Failure in any of these workflows would disrupt store operations or legal compli
 | W2 | Procurement — Purchase Order Cycle | Parent workflow |
 | W2A | Auto-Replenishment (Stocking Items) | 1,200+ POs/month auto-generated |
 | W2B | Import Purchase Orders | 40% of COGS; LC, customs, landed cost |
-| W2C | Blanket / Contract Purchase Orders | Annual supply agreements |
+| W2C | Blanket Purchase Orders | Annual supply agreements |
 | W36 | Vendor Onboarding | 800–1,000 active vendors |
 | W38 | Special Order / Non-Stock Item Fulfillment | Customer special orders |
 | W44 | Vendor Performance Review | Vendor management |
@@ -162,7 +162,7 @@ Failure in any of these workflows would disrupt store operations or legal compli
 | W3C | DC Inbound Delivery Scheduling | Inbound coordination |
 | W46 | Kit / Bundle Assembly & Disassembly | Kit operations |
 | W106 | DC Outbound Dispatch & Load Planning | Outbound coordination |
-| W188 | Fleet Spare Parts & Preventive Maintenance | Fleet readiness |
+| W188 | Fleet Spare Parts & Preventive Maintenance (PM) Management | Fleet readiness |
 | W270 | Pallet & Returnable Transport Packaging (RTP) Tracking | Pallet management |
 
 ### Core POS & Store Operations (23 workflows)
@@ -179,7 +179,7 @@ Failure in any of these workflows would disrupt store operations or legal compli
 | W12 | Returns & Exchanges | Parent workflow |
 | W12A | In-Store Returns | Customer-facing returns |
 | W12B | Online-Initiated Returns | Omnichannel returns |
-| W12C | Cross-Store Returns | Cross-store return processing |
+| W12C | Cross-Store Returns (Purchased at Store A, Returned at Store B) | Cross-store return processing |
 | W18 | Direct Store Delivery (DSD) Receiving | 30% of goods by value |
 | W18B | DSD Vendor Delivery Scheduling | DSD coordination |
 | W33 | Warranty Claim Processing | Customer warranty |
@@ -204,9 +204,9 @@ Failure in any of these workflows would disrupt store operations or legal compli
 
 | ID | Workflow | Operational Significance |
 |---|---|---|
-| W11 | BOPIS Order Fulfillment | ~25,700 orders/month |
-| W19 | Home Delivery Fulfillment | ~17,200 orders/month |
-| W19B | Ship from Store | Omnichannel fulfillment |
+| W11 | Ecommerce — BOPIS Order Fulfillment | ~25,700 orders/month |
+| W19 | Ecommerce — Home Delivery Fulfillment | ~17,200 orders/month |
+| W19B | Ship from Store (Store-Fulfilled Home Delivery) | Omnichannel fulfillment |
 | W98 | Ecommerce Order Exception & Cancellation Management | Order exceptions |
 | W215 | Customer Home Delivery Reverse Logistics (Returns) | Delivery returns |
 | W246 | Drop-Ship Vendor (DSV) Order Fulfillment | Drop-ship orders |
@@ -220,7 +220,7 @@ Failure in any of these workflows would disrupt store operations or legal compli
 | W15 | Recruitment & Employee Onboarding | ~1,200–1,600 hires/year |
 | W34 | Store Shift Scheduling | Store workforce management |
 | W43 | Employee Separation & Offboarding | Offboarding compliance |
-| W251 | Philippine Statutory Benefits & Claims Administration | SSS, PhilHealth, Pag-IBIG |
+| W251 | Philippine Statutory Benefits & Claims Administration (SSS, PhilHealth, Pag-IBIG) | SSS, PhilHealth, Pag-IBIG |
 | W280 | Court-Ordered Wage Garnishment & Third-Party Deductions | Legal compliance |
 
 ### Core Supply Chain (5 workflows)
@@ -229,7 +229,7 @@ Failure in any of these workflows would disrupt store operations or legal compli
 |---|---|---|
 | W31 | Demand Forecasting Cycle | Drives replenishment |
 | W32 | Seasonal Buy Planning | Seasonal procurement |
-| W133 | S&OP Cycle | Sales & operations planning |
+| W133 | Sales & Operations Planning (S&OP) Cycle | Sales & operations planning |
 | W144 | International Logistics & Import Operations | Import operations |
 | W250 | Supply Chain Control Tower & Real-Time Shipment Visibility | Shipment visibility |
 
@@ -250,7 +250,7 @@ Failure in any of these workflows would disrupt store operations or legal compli
 | W265 | POS Terminal Hardware Maintenance & Peripheral Management | POS terminal uptime |
 | W266 | Ecommerce Online Fraud Detection & Prevention | Fraud block |
 | W267 | Ecommerce Digital Payment Reconciliation & Dispute Handling | payment integrity |
-| W271 | Data Subject Access Requests (DSAR) Lifecycle Management | RA 10173 DSAR |
+| W271 | Data Subject Access & Deletion Requests (DPA Compliance) | RA 10173 DSAR |
 | W366 | Network Infrastructure & Connectivity Management | Connectivity for 200+ sites |
 | W368 | Database & Cloud Infrastructure Management | ERP performance & integrity |
 | W375 | Privileged Access Management (PAM) Operations | Admin access security |
@@ -285,7 +285,7 @@ Failure in any of these workflows would disrupt store operations or legal compli
 | W311 | Barcode, GTIN & Item Identification Master Governance | Must Have POS-003, ECOM-009, MDM-020; barcode assignment at SKU creation is go-live critical |
 | W312 | Replenishment & Planning Parameter Master Governance | Must Have MDM-021; direct dependency for Phase 1 W2A (auto-replenishment) and W4 (store replenishment) |
 | W399 | Fixed Asset Master Data Governance | Asset categorization and tracking rules |
-| W404 | POS System & Hardware Master Governance | POS terminal and peripheral metadata rules |
+| W404 | Point-of-Sale (POS) System & Hardware Master Governance | POS terminal and peripheral metadata rules |
 | W405 | Data Privacy & Consent Preferences Master Governance | Customer privacy preferences master records |
 
 ### Core Reporting (4 workflows)
@@ -340,10 +340,10 @@ These 3,296 workflows are needed for standard operational support, cost controls
 |---|---|---|
 | W20 | Vendor Managed Inventory (VMI) | VMI for 12 key vendors |
 | W62B | 3PL / Delivery Partner Onboarding & Offboarding | 3PL management |
-| W110 | Supplier Quality & CAPA | Quality management |
+| W110 | Supplier Quality & CAPA (Corrective and Preventive Action) | Quality management |
 | W115 | Supplier Diversity & MSME Development Program | MSME program |
 | W150 | Product Quality Testing & Certification | Quality testing |
-| W155 | Vendor Strategic Collaboration & Joint Business Planning | JBP |
+| W155 | Vendor Strategic Collaboration & Joint Business Planning (JBP) | JBP |
 | W160 | Private Label Factory Audit & Social Compliance | PL factory audit |
 | W161 | Vendor Price Protection & Market Markdown Claims | Price protection |
 | W245 | Vendor Performance Chargebacks & Penalties Management | Penalty management |
@@ -403,7 +403,7 @@ These 3,296 workflows are needed for standard operational support, cost controls
 | W175 | Employee Gratuity & Retirement Fund Management (RA 7641) | Retirement management |
 | W184 | Fixed Asset Physical Verification (Audit) | Asset verification |
 | W217 | Senior Citizen & PWD VAT-Exemption Audit & Reporting | SC/PWD reporting |
-| W232 | LC & Bank Guarantee Lifecycle | LC management |
+| W232 | Letter of Credit (LC) & Bank Guarantee Lifecycle | LC management |
 | W233 | Cash Flow Forecasting & Liquidity Management | Cash forecasting |
 | W234 | Intercompany Profit Elimination & Consolidation | IC consolidation |
 | W235 | Transfer Pricing Compliance & Documentation | TP compliance |
@@ -447,8 +447,8 @@ These 3,296 workflows are needed for standard operational support, cost controls
 
 | ID | Workflow | Operational Significance |
 |---|---|---|
-| W180 | Ecommerce Marketplace Integration (Lazada/Shopee) | Marketplace expansion |
-| W210 | Ecommerce Fulfillment Hub (Dark Store) Operations | Dark store |
+| W180 | E-commerce Marketplace Integration (Lazada/Shopee) | Marketplace expansion |
+| W210 | E-commerce Fulfillment Hub (Dark Store) Operations | Dark store |
 ### Customer Experience (11 workflows)
 
 | ID | Workflow | Operational Significance |
@@ -482,16 +482,16 @@ These 3,296 workflows are needed for standard operational support, cost controls
 | W381 | IT Knowledge Management | Operational continuity |
 | W384 | ERP Environment Management & Data Masking | Non-prod data security |
 | W391 | Software Quality Assurance (QA) & Testing Lifecycle | Release quality & defect management |
-| W392 | IT Service Level Management (SLM) & BRM | Business alignment & service uptime governance |
+| W392 | IT Service Level Management (SLM) & Business Relationship Management (BRM) | Business alignment & service uptime governance |
 | W394 | IT Technical Skills, Training & Certification Lifecycle | IT team competency & succession |
 | W395 | Mobile App Store Management (Public & Enterprise) | App release & mobility governance |
-| W396 | ERP Data Archiving & Database Tiering Execution | ERP performance & storage cost control |
+| W396 | ERP Data Archiving & Database Tiering Operational Execution | ERP performance & storage cost control |
 | W434 | NPC Annual DPO & System Registration | Mandatory data privacy compliance |
 | W386 | IT Strategy & Annual Roadmap Development | IT strategic alignment |
 | W387 | IT Compliance & Control Self-Assessment (CSA) | IT control validation |
 | W388 | Shadow IT Discovery & Governance | Unauthorized IT risk mitigation |
 | W389 | Data Privacy Impact Assessment (DPIA) Lifecycle | RA 10173 DPIA requirement |
-| W390 | IT Service Continuity & BIA Refresh | Business continuity foundation |
+| W390 | IT Service Continuity & Business Impact Analysis (BIA) Refresh | Business continuity foundation |
 
 ### Compliance & Governance (19 workflows)
 
@@ -507,7 +507,7 @@ These 3,296 workflows are needed for standard operational support, cost controls
 | W185 | Product Liability & Consumer Safety Incident Management | Product safety |
 | W207 | Store-Level Security Camera (CCTV) Audit & LP Integration | CCTV audit |
 | W209 | Barangay & Local Community Relationship Management | Community relations |
-| W216 | BIR CAS Compliance Audit | BIR CAS audit |
+| W216 | BIR CAS (Computerized Accounting System) Compliance Audit | BIR CAS audit |
 | W469 | Customer Complaint DTI Escalation & Consumer Adjudication Management | DTI complaint adjudication case management |
 | W285 | Public Liability & Customer Incident Claims Management | Liability claims |
 | W426 | Annual Conflict of Interest (COI) & Gift Policy Disclosure | Corporate governance & fraud prevention |
@@ -550,12 +550,12 @@ These 3,296 workflows are needed for standard operational support, cost controls
 | W305 | Intercompany Transfer Pricing Rule Master Governance | IC pricing |
 | W306 | Seasonal Calendar & Event Master Governance | Seasonal calendar |
 | W307 | Currency & Exchange Rate Master Governance | FX rate governance |
-| W310 | Address & Geographic Hierarchy Master (Philippine-Specific) | PSGC codes |
+| W310 | Address & Geographic Hierarchy Master Governance (Philippine-Specific) | PSGC codes |
 | W313 | Loyalty Program Configuration & Rule Master Governance | Initial config pre-loaded; ongoing governance matures in Phase 2 |
 | W314 | Planogram Template & Space Planning Master Governance | Planogram master |
 | W315 | Product Lifecycle Status & Transition Rule Master Governance | Lifecycle master |
 | W316 | Digital Asset & Product Content Master Governance | Digital asset master |
-| W400 | Equipment & Asset Maintenance Master Governance | EAM equipment classification and tagging metadata |
+| W400 | Equipment & Asset Maintenance (EAM) Master Governance | EAM equipment classification and tagging metadata |
 | W401 | Fleet & Vehicle Master Governance | Logistics fleet registration and specifications metadata |
 | W402 | Contract & Agreement Master Governance | Legal contract classification and metadata fields |
 | W403 | Competitor & Market Intelligence Master Governance | Competitor profiles and pricing category structures |
@@ -575,7 +575,7 @@ These 3,296 workflows are needed for standard operational support, cost controls
 | W165 | Project Retention & Milestone Billing | Milestone billing |
 | W166 | Corporate / Institutional Tendering | Tendering |
 | W169 | Lumber & Board Cutting Services | Daily revenue-generating service; system-supported during wave rollout |
-| W228 | Sales Commission Calculation | Commission management |
+| W228 | Sales Commission Calculation (Trade & Project Sales) | Commission management |
 | W229 | B2B Customer Credit Limit Exception & Escalation | Credit exceptions |
 | W421 | Batch/Shade Reconciliation for Large Project Sales | Shade consistency |
 | W239 | Customs Duty & Tax Reconciliation (BOC) | Customs reconciliation |
@@ -605,13 +605,13 @@ These 758 workflows deliver advanced capabilities for competitive differentiatio
 | W208 | Retail Analytics & AI-Driven Inventory Optimization | Advanced analytics |
 | W420 | AI Shelf Monitoring & Real-time Replenishment Alerting | AI shelf monitoring |
 | W397 | Cyber Threat Intelligence & Proactive Threat Hunting | Advanced threat detection maturity |
-| W398 | IT Innovation, Emerging Tech & PoC Lifecycle | Structured technology innovation |
+| W398 | IT Innovation, Emerging Tech & Proof of Concept (PoC) Lifecycle | Structured technology innovation |
 
 ### ESG & Sustainability (4 workflows)
 
 | ID | Workflow | Operational Significance |
 |---|---|---|
-| W192 | GHG Emissions Tracking | Carbon tracking |
+| W192 | Greenhouse Gas (GHG) Emissions Tracking | Carbon tracking |
 | W193 | Waste Management & Circular Economy | Waste management |
 | W194 | Social Impact & Community Development (CSR) | Social impact |
 | W195 | Sustainable Sourcing & Ethical Vendor Audit | Ethical sourcing |
@@ -620,19 +620,19 @@ These 758 workflows deliver advanced capabilities for competitive differentiatio
 
 | ID | Workflow | Operational Significance |
 |---|---|---|
-| W83 | Campaign Planning, Execution & Performance Measurement | Full campaign lifecycle |
+| W83 | Marketing Campaign Planning, Execution & Performance Measurement | Full campaign lifecycle |
 | W104 | Loyalty Program Financial Governance & Periodic Review | Loyalty financials |
 | W134 | Crisis Communication & Brand Reputation Management | Crisis management |
 | W135 | CSR Program Execution | CSR execution |
 | W142 | Social Media & Influencer Management | Social media |
 | W143 | Public Relations & Corporate Communications | PR management |
 | W149 | Bank & Credit Card Partnership Management | Bank partnerships |
-| W151 | CSR Impact Measurement & Reporting | CSR measurement |
+| W151 | Corporate Social Responsibility (CSR) Impact Measurement & Reporting | CSR measurement |
 | W153 | Retail Media Network (RMN) Operations | RMN operations |
 | W189 | Referral Program & Brand Ambassador Management | Referral program |
 | W190 | In-house Design & Creative Production Management | Creative production |
 | W263 | Loyalty Member Enrollment & Onboarding Journey | Enrollment journey |
-| W286 | RMN Vendor Billing & Yield Management | RMN billing |
+| W286 | Retail Media Network (RMN) Vendor Billing & Yield Management | RMN billing |
 
 ### Corporate Governance & Strategy (8 workflows)
 
@@ -655,17 +655,17 @@ These 758 workflows deliver advanced capabilities for competitive differentiatio
 | W121 | Operational Audit Execution (Store/DC/HQ) | Operational audit |
 | W122 | Enterprise Risk Management (ERM) Review | ERM |
 | W123 | Fraud Investigation Protocol | Fraud investigation |
-| W159 | Anti-Bribery & Corruption Monitoring & Audit | ABC monitoring |
-| W243 | POA & Board Resolution Lifecycle | POA management |
-| W331 | ITGC & Cybersecurity Audit | ITGC compliance |
-| W332 | Continuous Control Monitoring (CCM) | Real-time controls |
+| W159 | Anti-Bribery & Corruption (ABC) Monitoring & Audit | ABC monitoring |
+| W243 | Power of Attorney (POA) & Board Resolution Lifecycle | POA management |
+| W331 | IT General Controls (ITGC) & Cybersecurity Audit | ITGC compliance |
+| W332 | Continuous Control Monitoring (CCM) & Exception Management | Real-time controls |
 | W333 | Audit Issue Remediation & CAP Tracking | Findings lifecycle |
-| W334 | Third-Party Vendor Risk Audit | External risk |
-| W335 | Major Capex & Project Audit | Investment control |
-| W336 | Quality Assurance & Improvement Program | IA quality |
+| W334 | Third-Party Vendor Risk & Compliance Audit | External risk |
+| W335 | Major Capex & Post-Implementation Project Audit | Investment control |
+| W336 | Quality Assurance & Improvement Program (QAIP) | IA quality |
 | W337 | Payroll & Statutory Compliance Audit | Payroll integrity |
-| W338 | Segregation of Duties (SOD) Review | Access governance |
-| W339 | Regulatory Compliance Audit | Legal risk management |
+| W338 | Segregation of Duties (SOD) Review & Remediation | Access governance |
+| W339 | Regulatory Compliance Audit (DPA, Labor, Consumer Act) | Legal risk management |
 | W340 | Unannounced Store Cash & Vault Audit | Retail cash control |
 | W341 | ESG Assurance & Sustainability Compliance Audit | ESG audit |
 | W342 | Inventory Observation & Cycle Count Audit | Inventory audit |
@@ -683,7 +683,7 @@ These 758 workflows deliver advanced capabilities for competitive differentiatio
 | W354 | AML & Sanctions Screening (Wholesale/B2B) Audit | AML audit |
 | W355 | Intellectual Property (IP) & Brand Protection Audit | IP audit |
 | W356 | Whistleblower System & Non-Retaliation Audit | Whistleblower audit |
-| W357 | Board Governance & MCG Compliance Audit | Governance audit |
+| W357 | Board Governance & Manual on Corporate Governance (MCG) Compliance Audit | Governance audit |
 | W358 | Physical Security, CCTV & Guard Force Audit | Physical security audit |
 | W359 | AI Governance, Algorithmic Bias & Data Ethics Audit | AI governance audit |
 | W360 | Crisis Response & Incident Management Audit | Crisis audit |
@@ -2411,7 +2411,7 @@ Two IT gap-fill workflows confirmed **Tier 3** — the support-layer/periodic-as
 | W2900 | Discount Abuse, ID Sharing & Fraud Prevention Monitoring | VS-85 |
 | W2901 | Medicine & Prime Commodity Discount Compliance (RA 9994/7394) | VS-85 |
 | W2902 | Solo Parent Discount Program Configuration & Eligible-SKU Mapping | VS-85 |
-| W2904 | Customer Complaint & DTI/NCSD Escalation Handling | VS-85 |
+| W2904 | Customer Complaint & DTI/NCSC Escalation Handling | VS-85 |
 | W2905 | PEZA/BOI VAT-Zero-Rated Sale Customer Onboarding & Certificate Management | VS-85 |
 | W2906 | Government / Diplomatic VAT-Exempt Purchase Documentation | VS-85 |
 | W2907 | Educational Institution & Housing (PAG-IBIG) VAT-Exempt Sale Processing | VS-85 |
@@ -2487,7 +2487,7 @@ Two IT gap-fill workflows confirmed **Tier 3** — the support-layer/periodic-as
 | W3668 | Product Standards Technical File & Documentation Management | VS-117 |
 | W3669 | New-Product Certification & Assortment Compliance Gate | VS-117 |
 | W3670 | Vendor Certification Audit, Verification & PS License Renewal | VS-117 |
-| W3673 | Import ICC/SOC Application & I-SEAL Portal Management | VS-117 |
+| W3673 | Import ICC/SOC Application & PCIMS Portal Management | VS-117 |
 | W3674 | Shipment Documentation & BPS Documentary Review | VS-117 |
 | W3675 | DTI Inspection, Sampling & Witness Coordination | VS-117 |
 | W3676 | Accredited Laboratory Testing & Results Management | VS-117 |
@@ -4595,7 +4595,7 @@ The 336 workflows added across gap-analysis Passes 26–29 (VS-178–VS-191; W51
 | W4949 | Warehouse-Receipt & Field-Warehousing Collateral Operations | VS-170 |
 | W4950 | Import-Inventory-In-Transit Financing & Pre-Shipment / LC Settlement | VS-170 |
 | W4954 | Borrowing-Base to Inventory/AR Subledger Reconciliation | VS-170 |
-| W4955 | PFRS Encumbrance Disclosure, PAS 39 / Contingent-Liability Reporting & Note Reconciliation | VS-170 |
+| W4955 | PFRS Encumbrance Disclosure, PAS 37 / Contingent-Liability Reporting & Note Reconciliation | VS-170 |
 | W4959 | Interest Accrual, Charge Settlement & Bank Fee Reconciliation | VS-170 |
 | W5018 | Annual Report, General Information Sheet & Statutory SEC/Commissioner Investor Disclosure | VS-173 |
 | W5022 | Insider List, Trading-Window & Securities-Trading Compliance (RA 8799 SRC) | VS-173 |
@@ -5743,7 +5743,7 @@ The 336 workflows added across gap-analysis Passes 26–29 (VS-178–VS-191; W51
 | W2782 | Payment Partner SLA, Pricing & MDR Contract Review | VS-80 |
 | W2788 | Chargeback Notification, Evidence Compilation & Representment | VS-80 |
 | W2789 | Retrieval Request, Fraud Alert & Pre-Arbitration Handling | VS-80 |
-| W2791 | Payment Fee & Intercharge Cost Allocation to Store/Channel | VS-80 |
+| W2791 | Payment Fee & Interchange Cost Allocation to Store/Channel | VS-80 |
 | W2793 | PCI-DSS SAQ Scope Management & Annual Self-Assessment | VS-80 |
 | W2795 | Payment Fraud Rule & Velocity/Limit Configuration | VS-80 |
 | W2796 | Terminal Key Injection, HSM & PIN Security Management | VS-80 |
@@ -6932,6 +6932,8 @@ The 336 workflows added across gap-analysis Passes 26–29 (VS-178–VS-191; W51
 
 
 *Date: 2026-09-03 | Workflow Criticality Classification v7.47 — people-capability & reporting-policy gap fill (batch 9): the dedicated People/organization-domain gap analysis (workflow-gap-analysis-people.md) re-ran the §2 gap methodology across the People family and adjacent corporate/finance-policy streams and found four workflow-level surfaces unowned — the LMS platform & learning-records layer, the learning-content/course-catalog production lifecycle, the leadership-development program, and the accounting-policy/technical-accounting (PFRS) layer ('LMS' 58 PA files / 101 hits / zero dedicated `## W` headers with even an LMS Administrator role named in W1484's staffing; 'instructional design'/'course catalog'/a true 'accounting-policy owner' all absent — PFRS appears in 93 PA files but every dedicated owner is transaction-specific: VS-157 PFRS 15, VS-148 PFRS 16, W407 PAS 12, W1875 lease policy; adjacent slices program-generic: W51 training programs, W178 succession planning, W645 workforce planning, W3351 HRIS, W9 financial close). Four workflows added — W5525 Learning Platform (LMS) Administration, Integration & Learning-Records Operations, W5526 Learning-Content Development, Course-Catalog & Certification-Program Lifecycle, W5527 Leadership Development & Management-Capability Program (HiPo Development) (all PA-19.4), and W5528 Accounting Policy, Technical Accounting (PFRS) Position & New-Standard Adoption Governance (PA-17.4) — and confirmed directly **Tier 2 (4)** (the platform-operations/governance-layer/program-support class of their siblings W3351/W51/W9); statutory dimensions (OSH training-record evidence, mandatory pass/fail regulatory courses) ride verification steps inside the workflows, matching the W5513/W5515/W5518 precedent. All four absorbed within sized teams (OM stays 122 FTE / 17 teams; TO stays HQ 511 / 6,911). Register 5,400 → 5,404 rows (5,377 → 5,381 unique; T2 3,261 → 3,265); proposed register stays empty (0 unclassified). Downstream figures re-pointed (workflows/README Quick Stats + Finance/People families + reconciliation line, value-stream-index header/VS-17+VS-19 rows/grand total/footer/detailed sections, VS-19 README 75 → 78, VS-17 README 67 → 68, root-README tree/Key-Metrics/coverage rows, WORKFLOW-FORMAT-GUIDE anchors, requirement-matrix inventory line, dependency-map intro, touchpoint-map reconciliation footer, gap-analysis batch-9 note + companion doc, executive-summary footer, OM v2.6 FIN 798 → 799 / PEO 437 → 440 and 4,868+509 → 4,872+509=5,381, sourcing-model v1.6 §12.1 ladder 3,261 → 3,265, semantic-audit-coverage registry annotated). `validate-repo.sh`: 0 errors / 0 warnings.*
+
+*Date: 2026-09-15 | Workflow Criticality Classification v7.60 — thirtieth-wave consistency review (title-only register change, v7.34 precedent): all 49 drifted W-title cells trued to the exact PA `##`/`###` W-header canon (the generator-read primary source and the bpmn process names) — four token defects the semantic batches had repaired in the PA files but never re-pointed into the register (W2904 'DTI/NCSD' → the web-verified NCSC form per review #60; W3673 'I-SEAL' → the PCIMS portal named by PA-117.2's own steps and PA-117.1's instrument map; W4955 'PAS 39' → PAS 37, the contingent-liability standard its own title names; W2791 'Intercharge' → 'Interchange' per the card-scheme fee canon), plus the stranded abbreviation/prefix/spacing drifts (initial-commit short forms such as W26/W30/W2C/W271 and the 'Ecommerce —'/'E-commerce' prefix and W99 spacing families). No tier assignments, register-row counts, or totals changed; W423/W425's treasury-companion annotated titles stand per v7.31 and are now pinned by literal in the new Check-18 title mirror. `validate-repo.sh`: 0 errors / 0 warnings across 77 checks.*
 
 *Date: 2026-09-10 | Workflow Criticality Classification v7.59 — concessionaire connectivity gap fill (batch 24): a concessionaire operating-model review found the connectivity-exception surface unowned ('concessionaire internet'/'independent circuit' appear in zero PA files as owned content — W177 bundles internet into the monthly 'Rent + Utilities + Commission' concessionaire invoice as a BuildRight-provided utility and W111 benchmarks it as a store utility, W366 manages the store link with its segmented Wi-Fi, and W5520/W5418/W5421 guard the IPAM and device boundaries, but nobody owned the request path when a concessionaire wants its own internet connection: the default-posture rule with the segmented-Wi-Fi alternative evaluated first, the eligibility gate for documented regulatory/banking/capacity needs only, the isolation envelope (separate conduit, no physical or logical crossing into BuildRight networks, DHCP confined to the concessionaire's own equipment, no BuildRight credentials), the W47 works approval with landlord and LGU consent for exterior terminations, the W117 connectivity addendum with incident demarcation and VS-147 insurance, the commission-integrity clause keeping every concession sale on the BuildRight POS throughput SKU, and the restoration holdback released only on the W62 exit walk-through). One workflow added — W5574 Concessionaire Connectivity Request, Approval & Independent-Circuit Governance (PA-07.1) — confirmed directly **Tier 2** (the concession-operations governance class of the W5505–W5507 siblings; the network-boundary machinery it invokes is already in place, so nothing is go-live blocking). All absorbed within sized teams (OM stays 122 FTE / 17 teams; TO stays HQ 511 / 6,911). Register 5,449 → 5,450 rows (5,426 → 5,427 unique; T1 unchanged at 1,396, T2 3,295 → 3,296, Tier 3 unchanged at 758); proposed register stays empty (0 unclassified). Prior v7.58 — gas-leak, tsunami/storm-surge, media-exposé & server-room-environmental gap fill (batch 23): the batch-16/17/18/19/20/21/22 edge-case sweeps were re-run across scenario families not yet probed (pre-ignition gas events at sites with LPG exchange cages, coastal water intrusion by tsunami or storm surge, genuine-fault investigative journalism, and physical-room failures inside the IT estate) and found four unowned surfaces (keyword verification: 'gas leak'/'gas odor'/'smell of gas' = 0 corpus hits as event content, with W5069 owning only cylinder intake/periodic leak inspection and W5537 the post-ignition fire event; 'tsunami' = 0 corpus hits and 'storm surge' only as PA-09.2's customer-advisory context, with W1450's structural assessment quake-specific and W1387's flood canon rainfall/riverine; 'undercover'/'hidden camera'/'investigative report'/'right of reply' = 0 corpus hits, with W1562 owning recall/safety-incident media response and W3271/W3272 the fake-content impersonation class; 'server room'/'cooling failure'/'fire-suppression discharge' = 0 corpus hits, with W55 owning failover execution once a disaster is declared and W380 alert triage). Four workflows added — W5570 Gas-Leak Event Response (LPG/Natural-Gas Odor on Premises) (PA-24.2), W5571 Tsunami & Storm-Surge Coastal-Intrusion Response Protocol (PHIVOLCS Advisory / PAGASA Storm-Surge Warning) (PA-26.1), W5572 Undercover-Investigation & Media-Exposé Response Protocol (Investigative-Newsroom Event) (PA-14.3), W5573 Server-Room & Data-Center Environmental Event Response (Cooling Failure, Water Intrusion, Fire-Suppression Discharge) (PA-27.2) — confirmed directly **Tier 1 (2)** (W5570 the pre-ignition life-safety class of the W5537/W5538 precedent; W5571 the coastal-water evacuation-and-clearance class of the W1449/W5562 precedent) and **Tier 2 (2)** (W5572 the brand-integrity comms-contingency class of W5563/W5568; W5573 the IT-facility-contingency class of W5547/W5564). The same pass produced the tenth custody wave (v1.10, E-46–E-49). All four absorbed within sized teams (OM stays 122 FTE / 17 teams; TO stays HQ 511 / 6,911). Register 5,445 → 5,449 rows (5,422 → 5,426 unique; T1 1,394 → 1,396, T2 3,293 → 3,295, Tier 3 unchanged at 758); proposed register stays empty (0 unclassified). Prior v7.57 — terminal-tampering, procurement-impersonation, account-takeover & commute-disruption gap fill (batch 22):* the batch-16/17/18/19/20/21 edge-case sweeps were re-run across scenario families not yet probed (payment-device compromise at the lane, fraudsters impersonating BuildRight as the buyer, takeover of BuildRight's own verified accounts, commute interruptions stranding crews at undamaged sites) and found four unowned surfaces (keyword verification: 'card skimmer'/'tampered terminal' = 0 corpus hits, with W537 owning only daily terminal operations and W1205 the compliance program; 'fake PO'/'fraudulent purchase order'/'supplier impersonation' = 0 corpus hits, the fraud being the buyer-side mirror of W5559's payment diversion and W5563's fake sellers; 'account hijack'/'brand account' = 0 corpus hits, W5563 covering only the fake-page class; 'transport strike'/'commute disruption' = 0 corpus hits, W4255 being vehicle-level and W850/W2510 site-level). Four workflows added — W5566 Payment-Terminal Tampering & Card-Skimmer Response (PA-08.2), W5567 Procurement-Impersonation & Fake-PO Goods-Diversion Response (PA-03.2), W5568 Official-Channel Account-Takeover Response (PA-14.2), W5569 Mass-Commute Disruption & Transport-Strike Continuity Protocol (PA-141.2) — all confirmed directly **Tier 2 (4)** (W5566 the payment-device security class of W1205/W5547, W5567 the procurement-fraud contingency class of W5559/W5563, W5568 the brand-integrity channel-contingency class of W5563/W5550, W5569 the workforce-continuity class of W5561/W4255). The same pass produced the ninth custody wave (v1.9, E-42–E-45). All four absorbed within sized teams (OM stays 122 FTE / 17 teams; TO stays HQ 511 / 6,911). Register 5,441 → 5,445 rows (5,418 → 5,422 unique; T1 unchanged at 1,394, T2 3,289 → 3,293, Tier 3 unchanged at 758); proposed register stays empty (0 unclassified). Prior v7.56 — storefront-crash, brand-impersonation-scam, wallet-outage & adjacent-works gap fill (batch 21): the batch-16/17/18/19/20 edge-case sweeps were re-run across scenario families not yet probed (vehicle impact into an operating store, brand-impersonation commerce scams, mobile-wallet provider outages, adjacent construction damaging occupied property) and found four unowned surfaces (keyword verification: 'vehicle into building'/'storefront crash' = 0 corpus hits, with W330's emergency trigger naming structural failure only generically; 'fake seller'/'scam listing' = 0 corpus hits, with only the W3271/W3272 takedown machinery and W5557's recruitment variant present; wallet-platform outages unowned — W5547's trigger names the card-scheme/acquirer rail only and W535 the store link; 'adjacent construction'/'neighboring construction'/'excavation damage' = 0 dedicated headers). Four workflows added — W5562 Vehicle-Impact & Storefront-Crash Response Protocol (PA-147.2), W5563 Brand-Impersonation Commerce-Scam Response (Fake Sellers & Fraudulent Pickup Offers) (PA-100.2), W5564 Mobile-Wallet Platform Outage Response (E-Wallet Tender Downtime) (PA-08.1), W5565 Third-Party Construction Damage & Adjacent-Works Response Protocol (PA-20.3) — confirmed directly **Tier 1 (1)** (W5562, the life-safety structural-clearance class of the W5537/W5555 precedent) and **Tier 2 (3)** (W5563 the brand-integrity event class of W5557/W5550, W5564 the payment-platform contingency class of W5547/W5548, W5565 the asset-protection contingency class of W5560/W5133). The same pass produced the eighth custody wave (v1.8, E-38–E-41). All four absorbed within sized teams (OM stays 122 FTE / 17 teams; TO stays HQ 511 / 6,911). Register 5,437 → 5,441 rows (5,414 → 5,418 unique; T1 1,393 → 1,394, T2 3,286 → 3,289, Tier 3 unchanged at 758); proposed register stays empty (0 unclassified). Prior v7.55 — cyber-extortion, payment-diversion, land-occupation & water-continuity gap fill (batch 20): the batch-16/17/18/19 edge-case sweeps were re-run across scenario families not yet probed (destructive cyber attack with extortion, disbursement-diversion fraud, vacant-land occupation, utility-service failure beyond power) and found four unowned surfaces (keyword verification: 'ransomware'/'extortion demand'/'data-destruction' = 0 dedicated headers, appearing only as PA-27.2's DR pain point, W1330's exercise inject and W5529's OT drill; BEC named only in PA-18.2 pain points with a one-bullet callback mitigation while VS-125.2 watches only the customer-side diversion class; 'informal settler'/'squatter'/'illegal occupation'/'adverse possession' = 0 corpus hits; 'water interruption'/'water rationing' only as product-selling context in PA-09.2). Four workflows added — W5558 Ransomware & Destructive Cyber-Attack Enterprise Response Protocol (PA-27.3), W5559 Vendor Payment-Diversion & Business Email Compromise (BEC) Fraud Event Response & Recovery Protocol (PA-18.2), W5560 Informal-Settler Invasion & Illegal Occupation of Banked Land — Detection, Relocation & Ejection Protocol (PA-178.1), W5561 Sustained Water-Service Interruption Response & Store Continuity Protocol (PA-07.2) — confirmed directly **Tier 1 (1)** (W5558, the enterprise-trading-halt & statutory-continuity class of the W5545/W5546 enforcement-and-filing precedent — the data-privacy core rides the Tier-1 W53 chain and the OT variant rides W5529) and **Tier 2 (3)** (W5559 the financial-crime contingency class of W5541/W2814, W5560 the landbanking asset-protection class of W5133/W5143, W5561 the facility-continuity class of the W470 power analog). The same pass produced the seventh custody wave (v1.7, E-34–E-37). All four absorbed within sized teams (OM stays 122 FTE / 17 teams; TO stays HQ 511 / 6,911). Register 5,433 → 5,437 rows (5,410 → 5,414 unique; T1 1,392 → 1,393, T2 3,283 → 3,286, Tier 3 unchanged at 758); proposed register stays empty (0 unclassified).*
 *Date: 2026-09-05 | Workflow Criticality Classification v7.54 — in-transit-security, fatality-scene, tampering-extortion & recruitment-fraud gap fill (batch 19): the batch-16/17/18 edge-case sweeps were re-run across scenario families not yet probed (in-transit cargo crime, on-premises death events, merchandise-integrity extortion, employment-brand impersonation) and found four unowned surfaces (keyword verification: 'hijack'/'holdup'/'cargo robbery' = 0 dedicated headers with cargo theft named only inside W1337's ORC intelligence background and VS-180's relief-convoy escorts; 'death on premises'/'died in store' = 0 protocol content with W4401 owning injuries and naming fatality only as W4405's notification trigger; 'tampering threat'/'contamination threat'/'extortion' = 0 dedicated headers with VS-89 owning only found-defect triggers; 'recruitment scam'/'fake job'/'job scam' = 0 hits with W3272 watching impersonating accounts through the customer-phishing lens only). Four workflows added — W5554 In-Transit Cargo Hijacking, Armed Truck Robbery & Driver-Safety First Response Protocol (PA-06.2), W5555 Customer or Visitor Death on Premises — Scene Protocol, Family Liaison & Trading-Continuity Decision (PA-147.3), W5556 Product-Tampering Threat, Extortion Demand & Merchandise-Integrity Sweep Protocol (PA-89.1), W5557 Recruitment Fraud & Fake Job-Offer Scam Response, Takedown & Victim-Guidance Protocol (PA-121.1) — confirmed directly **Tier 1 (2)** (W5555/W5556, the life-safety scene-and-clearance class of the W5536/W5537/W5538 precedent — each gates a physical-state transition on documented external assessment) and **Tier 2 (2)** (W5554/W5557 — the contingency-operations class of W653/W2814 with the crew-safety dimension riding the Tier-1 W501/W717 chains, and the brand-integrity channel-contingency class of the W5550/W5553 precedent). The same pass produced the sixth custody wave (v1.6, E-30–E-33). All four absorbed within sized teams (OM stays 122 FTE / 17 teams; TO stays HQ 511 / 6,911). Register 5,429 → 5,433 rows (5,406 → 5,410 unique; T1 1,390 → 1,392, T2 3,281 → 3,283, Tier 3 unchanged at 758); proposed register stays empty (0 unclassified).*
