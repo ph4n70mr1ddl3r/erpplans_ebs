@@ -1955,7 +1955,14 @@ echo "--- Check 34: PA-control objective canonical-name agreement ---"
 #   (a) every matrix row 'Ensure controlled execution — <name> (PA-XX.Y)' carries the
 #       canonical index name of its PA;
 #   (b) every PA-body 'CTL-NNN (ensure controlled execution — ...)' parenthetical is
-#       the exact canonical rendering of its register row.
+#       the exact canonical rendering of its register row;
+#   (c) thirty-eighth wave (2026-09-16): every PA-control row's Owner cell must be
+#       one of its own PA's workflow Owner cells — the mirror convention 565/569
+#       rows already held when the wave found CTL-623/624/625 carrying a misplaced
+#       'CSO / VP …' paste against PA-131's Sustainability/ESG owner canon and
+#       CTL-735 a hyphenated 'Customer-Service Rep' against PA-168.2's canon; the
+#       population is asserted at 569 so a restructure cannot void the arm, and a
+#       future PA-owner edit that strands its matrix mirror fires here.
 CHECK34=$(python3 - "$REPO_ROOT" <<'PY'
 import re, os, glob, collections, sys
 ROOT = os.path.join(sys.argv[1], "01-model-company")
@@ -1963,18 +1970,32 @@ canon = {}
 for m in re.finditer(r"- \*\*(PA-\d{2,3}\.\d)\*\* \[([^\]]+)\]\(",
                      open(os.path.join(ROOT, "workflows", "value-stream-index.md"), encoding="utf-8").read()):
     canon[m.group(1)] = m.group(2)
-row = re.compile(r"^\| (CTL-\d{3}) \| Ensure controlled execution — (.+?) \((PA-\d{2,3}\.\d)\) \|")
+# PA-level owner-cell index (every workflow's Owner cell, keyed by PA number)
+pa_owners = collections.defaultdict(set)
+for f in glob.glob(os.path.join(ROOT, "workflows", "VS-*", "PA-*.md")):
+    pm = re.match(r"(PA-\d+\.\d+)", os.path.basename(f))
+    if not pm:
+        continue
+    text = open(f, encoding="utf-8").read()
+    for om in re.finditer(r"\| \*\*Owner\*\* \|(.*?)\|", text):
+        pa_owners[pm.group(1)].add(om.group(1).strip())
+row = re.compile(r"^\| (CTL-\d{3}) \| Ensure controlled execution — (.+?) \((PA-\d{2,3}\.\d)\) \| ([PD]) \| (.+?) \| (.+?) \|")
 ctl2pa = {}
 rows = 0
 bad_matrix = []
+bad_mirror = []
 for line in open(os.path.join(ROOT, "internal-controls-matrix.md"), encoding="utf-8"):
     m = row.match(line.rstrip("\n"))
     if not m:
         continue
     rows += 1
-    ctl2pa[m.group(1)] = m.group(3)
-    if m.group(2) != canon.get(m.group(3)):
-        bad_matrix.append(f"{m.group(1)}: '{m.group(2)}' != canonical '{canon.get(m.group(3))}' (PA {m.group(3)})")
+    ctl, name, pa, typ, activity, owner = m.groups()
+    ctl2pa[ctl] = pa
+    if name != canon.get(pa):
+        bad_matrix.append(f"{ctl}: '{name}' != canonical '{canon.get(pa)}' (PA {pa})")
+    if owner.strip() not in pa_owners.get(pa, set()):
+        bad_mirror.append(f"{ctl} ({pa}): owner '{owner.strip()}' is not one of the PA's workflow owner cells "
+                          f"{sorted(pa_owners.get(pa, set()))[:3]}")
 bad_body = collections.Counter()
 where = collections.defaultdict(list)
 bpat = re.compile(r"(CTL-\d{3}) \(ensure controlled execution — .*?\.\)")
@@ -1992,17 +2013,20 @@ for k in sorted(bad_matrix):
     print(f"BAD-MATRIX|{k}")
 for k in sorted(bad_body):
     print(f"BAD-BODY|{k} x{bad_body[k]} e.g. {where[k][0]}")
-print(f"TOTALS matrix_rows={rows} matrix_bad={len(bad_matrix)} body_bad={sum(bad_body.values())} pa_controls={len(ctl2pa)}")
+for k in sorted(bad_mirror):
+    print(f"BAD-MIRROR|{k}")
+print(f"TOTALS matrix_rows={rows} matrix_bad={len(bad_matrix)} body_bad={sum(bad_body.values())} pa_controls={len(ctl2pa)} mirror_rows={len(ctl2pa)} mirror_bad={len(bad_mirror)}")
 PY
 )
-C34_BAD=$(echo "$CHECK34" | sed -n 's/^TOTALS matrix_rows=[0-9]* matrix_bad=\([0-9]*\) body_bad=\([0-9]*\).*/\1 \2/p')
+C34_BAD=$(echo "$CHECK34" | sed -n 's/^TOTALS matrix_rows=[0-9]* matrix_bad=\([0-9]*\) body_bad=\([0-9]*\).*mirror_bad=\([0-9]*\)$/\1 \2 \3/p')
 C34_MBAD=$(echo "$C34_BAD" | cut -d' ' -f1)
 C34_BBAD=$(echo "$C34_BAD" | cut -d' ' -f2)
-if [ "${C34_MBAD:-1}" -eq 0 ] && [ "${C34_BBAD:-1}" -eq 0 ]; then
-    ok "All 569 PA-control objectives (matrix + PA-body parentheticals) carry their canonical process-area name from value-stream-index.md"
+C34_MBIRR=$(echo "$C34_BAD" | cut -d' ' -f3)
+if [ "${C34_MBAD:-1}" -eq 0 ] && [ "${C34_BBAD:-1}" -eq 0 ] && [ "${C34_MBIRR:-1}" -eq 0 ]; then
+    ok "All 569 PA-control objectives (matrix + PA-body parentheticals) carry their canonical process-area name from value-stream-index.md, and every PA-control row's Owner cell is one of its own PA's workflow owner cells (the owner-mirror arm added by the 2026-09-16 thirty-eighth-wave review after CTL-623/624/625 shipped a misplaced 'CSO / VP …' owner paste against PA-131's Sustainability/ESG owner canon and CTL-735 a hyphenated 'Customer-Service Rep' against PA-168.2's canon — 565/569 rows already held the mirror convention, now 569/569 asserted)"
 else
-    error "PA-control objective-name drift (matrix: $C34_MBAD, PA bodies: $C34_BBAD) — re-run 07-methodology/fix-ctl-pa-names.py:"
-    echo "$CHECK34" | grep -E '^BAD-' | sed 's/^BAD-MATRIX|/    /; s/^BAD-BODY|/    /' | head -25 || true
+    error "PA-control objective-name/owner-mirror drift (matrix: $C34_MBAD, PA bodies: $C34_BBAD, owner-mirror: $C34_MBIRR) — re-run 07-methodology/fix-ctl-pa-names.py:"
+    echo "$CHECK34" | grep -E '^BAD-' | sed 's/^BAD-MATRIX|/    /; s/^BAD-BODY|/    /; s/^BAD-MIRROR|/    /' | head -25 || true
 fi
 
 # --- Check 35: VS-number citation resolution (catalog & summary docs) ---
@@ -4332,12 +4356,12 @@ C71_RC_OUT=$(python3 "$REPO_ROOT/07-methodology/generate-role-coverage.py" --che
 C71_CENSUS_OUT=$(python3 "$REPO_ROOT/07-methodology/generate-role-coverage.py" --census 2>&1) && C71_CENSUS_RC=0 || C71_CENSUS_RC=$?
 C71_CENSUS_OK=0
 case "$C71_CENSUS_OUT" in
-  *"CENSUS workflows=5427 owner_resolved=5427 owner_uncharted=0 owner_uncharted_forms=0 uncharted_forms=0"*) C71_CENSUS_OK=1;;
+  *"CENSUS workflows=5427 owner_resolved=5427 owner_uncharted=0 owner_uncharted_forms=0 uncharted_forms=0 ctl_owner_cells=808 ctl_owner_resolved=808 ctl_owner_uncharted=0 ctl_owner_uncharted_forms=0"*) C71_CENSUS_OK=1;;
 esac
 if [ "${C71_BAD:-1}" -eq 0 ] && [ "$C71_RC_RC" -eq 0 ] && [ "$C71_CENSUS_RC" -eq 0 ] && [ "$C71_CENSUS_OK" -eq 1 ]; then
     B71=$(echo "$CHECK71" | sed -n 's/^BPMN_TOTALS files=\([0-9]*\) processes=\([0-9]*\)$/\1 \2/p')
     D71=$(echo "$CHECK71" | sed -n 's/^DMN_TOTALS files=\([0-9]*\) decisions=\([0-9]*\)$/\1 \2/p')
-    ok "Generated trees validate structurally against the markdown corpus AND mirror the generator's content derivation: bpmn/ $(echo $B71 | cut -d' ' -f1) files / $(echo $B71 | cut -d' ' -f2) processes (one per confirmed-register row) and dmn/ $(echo $D71 | cut -d' ' -f1) files / $(echo $D71 | cut -d' ' -f2) decisions — well-formed XML, 1 start/1 end per process, full lane coverage, 1:1 diagram:plane, complete DI shapes/edges/bounds/waypoints, decision-table structure, DRD shape per decision, and every process's documentation/start-event-name/controls-annotation byte-equal to the generator's re-derivation from its PA markdown (content mirror added by the 2026-09-10 seventeenth-wave review after batch-24 shipped PA-133.1/.3's generated files stale at the retired 5,426 — structural counts were all still correct, so nothing else could see it), and the shipped role-coverage matrix byte-identical to generate-role-coverage.py --check's re-derivation from the PA RACI fields + tier register + official TO (third-generated-artifact arm added by the 2026-09-15 thirtieth-wave review — the matrix's only harness had been the generator's own --check, which the validator never ran), and the role-vocabulary census pinned at the adjudicated baseline (owner cells 5,427 resolved / 0 uncharted, and ZERO uncharted forms across ALL FOUR RACI surfaces — full accountability AND involved-role consistency: the thirty-second-wave reconciliation resolved every Owner cell, and the thirty-sixth-wave reconciliation (2026-09-15, by direction) extended the same standard to the participant/step-prose population — 3,253 distinct previously-uncharted actor forms adjudicated to register titles, roster roles, IT seats, department grain, or their governance/system/workforce/external bucket, driving the matrix to 4,201 resolved actors / 0 uncharted; census arm added by the 2026-09-15 thirty-first-wave review so a batch that edits owners, aliases or the register and regenerates consistently still cannot move the resolution population silently — any new vocabulary a future batch mints re-fires this pin)"
+    ok "Generated trees validate structurally against the markdown corpus AND mirror the generator's content derivation: bpmn/ $(echo $B71 | cut -d' ' -f1) files / $(echo $B71 | cut -d' ' -f2) processes (one per confirmed-register row) and dmn/ $(echo $D71 | cut -d' ' -f1) files / $(echo $D71 | cut -d' ' -f2) decisions — well-formed XML, 1 start/1 end per process, full lane coverage, 1:1 diagram:plane, complete DI shapes/edges/bounds/waypoints, decision-table structure, DRD shape per decision, and every process's documentation/start-event-name/controls-annotation byte-equal to the generator's re-derivation from its PA markdown (content mirror added by the 2026-09-10 seventeenth-wave review after batch-24 shipped PA-133.1/.3's generated files stale at the retired 5,426 — structural counts were all still correct, so nothing else could see it), and the shipped role-coverage matrix byte-identical to generate-role-coverage.py --check's re-derivation from the PA RACI fields + tier register + official TO (third-generated-artifact arm added by the 2026-09-15 thirtieth-wave review — the matrix's only harness had been the generator's own --check, which the validator never ran), and the role-vocabulary census pinned at the adjudicated baseline (owner cells 5,427 resolved / 0 uncharted, and ZERO uncharted forms across ALL FOUR RACI surfaces — full accountability AND involved-role consistency: the thirty-second-wave reconciliation resolved every Owner cell, and the thirty-sixth-wave reconciliation (2026-09-15, by direction) extended the same standard to the participant/step-prose population — 3,253 distinct previously-uncharted actor forms adjudicated to register titles, roster roles, IT seats, department grain, or their governance/system/workforce/external bucket, driving the matrix to 4,201 resolved actors / 0 uncharted; census arm added by the 2026-09-15 thirty-first-wave review so a batch that edits owners, aliases or the register and regenerates consistently still cannot move the resolution population silently — any new vocabulary a future batch mints re-fires this pin; the thirty-eighth-wave review (2026-09-16) extended the census to the internal-controls-matrix's Owner column — the fifth adjudicated surface, the register behind the 808 CTL rows, whose 80 uncharted authoring-time function-owner forms the waves-32/36 reconciliations had never read — each adjudicated via the resolver's wave-38 alias table to the real org actor owning the workflows the control row cites, with the pin extended to ctl_owner_cells=808 resolved / 0 uncharted)"
 else
     error "Generated BPMN/DMN trees failed structural validation:"
     echo "$CHECK71" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true

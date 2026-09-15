@@ -3874,6 +3874,100 @@ DEPT_ACTORS_W36 = {
     "—": "Generic / cross-department",
 }
 
+# ==========================================================================
+# wave-38 (2026-09-16): the internal-controls-matrix Owner column — the role-
+# vocabulary surface the waves-32/36 reconciliations never read. The register's
+# 808 Owner cells carried 80 uncharted authoring-time forms (concentrated in
+# C10–C17, the gap-analysis domain controls authored by gap batches 8–11), each
+# adjudicated here to the register title / roster role / IT seat / department
+# grain that owns the very workflows the control row cites (the same standard
+# as waves 32/36: every mapping targeted at a REAL org actor; census integrity
+# assertions extend to this table). The census reads the matrix Owner column
+# as a fifth adjudicated surface and Check 71 pins it at zero uncharted.
+# ==========================================================================
+ROLE_ALIASES_W38 = {
+    "abl facility manager": "ABL & Collateral Operations Manager",
+    "auto-id operations manager": "Auto-ID Lead",
+    "background screening program manager": "Screening Program Manager",
+    "certified resale operations manager": "Service Center",
+    "change management lead": "OCM Lead",
+    "cod operations manager": "Payment Ops",
+    "commodity risk manager": "Treasury Manager",
+    "community sourcing manager": "Sustainability Sourcing Manager",
+    "competition compliance officer": "VP Legal & Compliance",
+    "construction finance manager": "Finance Strategy",
+    "contractor licensing manager": "PCAB Compliance Lead",
+    "cooperative accounts manager": "B2B Credit Director",
+    "corporate development director": "VP Legal & Compliance",
+    "corporate security director": "Chief Security Officer",
+    "customer data platform owner": "CDP",
+    "customer safety manager": "Customer Safety",
+    "customer-service rep": "Customer Service Rep",
+    "debris operations manager": "Site Cleanup Coordinator",
+    "disaster response coordinator": "Regulatory Compliance Officer",
+    "dg compliance manager": "DG/Hazmat Compliance Officer",
+    "dts program manager": "HR-L&D Manager",
+    "employee transport manager": "Transport Lead",
+    "equipment rental operations manager": "Rental Fleet Manager",
+    "epr program manager": "EPR Compliance Manager",
+    "ev network operations manager": "EV Program Manager",
+    "facilities management director": "Head of Facilities",
+    "field head of trade": "Field Sales Ops",
+    "field marketing manager": "Event Marketing Manager",
+    "finops manager": "FinOps Lead",
+    "floor-plan finance manager": "Credit Analyst",
+    "fraud management director": "Fraud Management",
+    "freight & logistics manager": "Logistics Manager",
+    "garden center category manager": "Garden Buyer",
+    "gift card program manager": "Marketing Operations Manager",
+    "global mobility manager": "Head of Global Mobility",
+    "global sourcing director": "Global Sourcing",
+    "green fleet program manager": "Fleet Manager",
+    "housing & welfare manager": "Housing Ops",
+    "indent sourcing manager": "Import Buyer",
+    "investor relations officer": "VP Investor Relations",
+    "key account director": "Head of Strategic Accounts",
+    "landbanking manager": "Land Acquisition Manager",
+    "last-mile operations manager": "Bulky-Delivery Operations",
+    "lease accounting manager": "Lease Accounting",
+    "leasing credit manager": "Lease Credit Manager",
+    "logistics claims coordinator": "Claims Manager",
+    "lpg program manager": "Category Manager",
+    "marketplace operations manager": "Marketplace Manager",
+    "merchandise financial planning director": "VP Merchandising",
+    "network design lead": "Network Strategy Lead",
+    "occupational health manager": "Occupational Health",
+    "operational excellence director": "COO",
+    "ot security manager": "OT Security Lead",
+    "packaging & rti manager": "Packaging Engineer",
+    "pro network manager": "Pro-Referral Network Manager",
+    "product stewardship manager": "Compliance Specialist",
+    "project escrow manager": "B2B Credit Manager",
+    "property portfolio manager": "Property Controller",
+    "receivables finance manager": "Treasury Manager",
+    "reconstruction program manager": "Finance Controller",
+    "regulatory portfolio manager": "Compliance Portfolio Manager",
+    "renewable energy operations manager": "Energy Manager",
+    "rental operations manager": "Rental Program Manager",
+    "reprographics services manager": "Director Store Services",
+    "responsible sourcing manager": "Sustainability/ESG Manager",
+    "revenue assurance manager": "Revenue Assurance Lead",
+    "risk financing manager": "Risk",
+    "sales enablement manager": "Sales Enablement",
+    "self-storage operations manager": "Property Manager",
+    "service quality manager": "Service Quality",
+    "smart locker network manager": "Locker Program Manager",
+    "solar program manager": "Category Manager — Electrical",
+    "store development director": "Real Estate",
+    "store operations technology manager": "Frontend",
+    "tprm program owner": "TPRM Program Manager",
+    "talent acquisition director": "TA Lead",
+    "uniform & ppe program manager": "Uniform Program Manager",
+    "vas operations manager": "Compliance",
+    "will-call operations manager": "Will-Call/Loading-Zone Supervisor",
+    "workforce development manager": "Trade Capability",
+}
+
 # wave-36 governance bodies (bucket additions; display = curated name).
 GOV_W36 = {
     "adverse-action board": "Adverse-Action Board",
@@ -4924,6 +5018,22 @@ class Resolver:
             if hk in IT_SEATS:
                 return ("it", "Information Technology (product model)", IT_SEATS[hk], None)
             return ("hq", "Information Technology (product model)", v, None)
+        if k in ROLE_ALIASES_W38:
+            # wave-38: controls-matrix owner forms (same semantics as W36).
+            v = ROLE_ALIASES_W38[k]
+            if v.startswith(("STORE:", "DC:", "EXTERNAL:")):
+                if v.startswith("STORE:"):
+                    return ("store", "Store (field, per-store roster)", v.split(":", 1)[1], None)
+                if v.startswith("DC:"):
+                    return ("dc", "DC (field, per-DC roster)", v.split(":", 1)[1], None)
+                return ("ext", "External / counterparty", v.split(":", 1)[1], None)
+            hk = key(v)
+            if hk in self.hq:
+                t2, d2, hc2 = self.hq[hk]
+                return ("hq", d2, t2, hc2)
+            if hk in IT_SEATS:
+                return ("it", "Information Technology (product model)", IT_SEATS[hk], None)
+            return ("hq", "Information Technology (product model)", v, None)
         if k in ROLE_ALIASES:
             v = ROLE_ALIASES[k]
             if v.startswith("STORE:"):
@@ -5316,7 +5426,7 @@ def census():
     # to a real org actor (register title / roster / external) — a typo'd value
     # would otherwise silently become a phantom IT-bucket row; every
     # DEPT_ACTORS value must be a known department label.
-    for ak, av in list(ROLE_ALIASES.items()) + list(ROLE_ALIASES_W36.items()):
+    for ak, av in list(ROLE_ALIASES.items()) + list(ROLE_ALIASES_W36.items()) + list(ROLE_ALIASES_W38.items()):
         if av.startswith(("STORE:", "DC:", "EXTERNAL:")):
             continue
         b, dept, _, _ = res.resolve(av)
@@ -5364,9 +5474,32 @@ def census():
             for f in forms:
                 unc_owner_forms.add(norm(f))
     unc_rows = sum(1 for r in rows if r["bucket"] == "unc")
+
+    # wave-38: the internal-controls-matrix Owner column — the fifth adjudicated
+    # role-vocabulary surface (the register behind the 808 CTL rows). Same
+    # semantics: whole-cell resolution first, then the ';/'-part fallback.
+    ctl_path = os.path.join(os.path.dirname(WF), "internal-controls-matrix.md")
+    ctl_rows = ctl_resolved = ctl_uncharted = 0
+    ctl_unc_forms = set()
+    ctl_row_re = re.compile(r"^\| (CTL-\d+) \| (.+?) \| ([PD]) \| (.+?) \| (.+?) \| (.+?) \| (.+?) \|$")
+    if os.path.exists(ctl_path):
+        for line in open(ctl_path, encoding="utf-8"):
+            m = ctl_row_re.match(line.rstrip("\n"))
+            if not m:
+                continue
+            ctl_rows += 1
+            ok, forms = owner_resolves(m.group(5))
+            if ok:
+                ctl_resolved += 1
+            else:
+                ctl_uncharted += 1
+                for f in forms:
+                    ctl_unc_forms.add(norm(f))
     print(f"CENSUS workflows={len(wfs)} owner_resolved={resolved} "
           f"owner_uncharted={uncharted} owner_uncharted_forms={len(unc_owner_forms)} "
-          f"uncharted_forms={unc_rows}")
+          f"uncharted_forms={unc_rows} "
+          f"ctl_owner_cells={ctl_rows} ctl_owner_resolved={ctl_resolved} "
+          f"ctl_owner_uncharted={ctl_uncharted} ctl_owner_uncharted_forms={len(ctl_unc_forms)}")
     return 0
 
 
