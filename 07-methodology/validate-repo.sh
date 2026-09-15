@@ -4041,16 +4041,41 @@ C71_BAD=$(echo "$CHECK71" | sed -n 's/^TOTALS .* errors=\([0-9]*\)$/\1/p')
 # own byte-compare, so invoking it here gives the matrix the same shipped-tree
 # currency guarantee; the check count is unchanged (the arm lives in Check 71).
 C71_RC_OUT=$(python3 "$REPO_ROOT/07-methodology/generate-role-coverage.py" --check 2>&1) && C71_RC_RC=0 || C71_RC_RC=$?
-if [ "${C71_BAD:-1}" -eq 0 ] && [ "$C71_RC_RC" -eq 0 ]; then
+# Part D (2026-09-15 thirty-first-wave consistency review): the role-vocabulary
+# census pin. The matrix --check above proves the artifact is current, but a
+# batch that edits PA Owner cells (or the alias tables / the §5.3 register) and
+# regenerates consistently would still move the role↔org resolution population
+# silently. The census — generate-role-coverage.py --census, under build()'s
+# own touch semantics — re-derives that population every run and it is pinned
+# here as the adjudicated baseline: of the 5,427 workflows, 2,507 Owner cells
+# resolve through the resolution order and 2,920 carry variant/uncharted forms
+# (2,040 distinct uncharted owner strings; 10,829 distinct uncharted forms
+# across all RACI surfaces). Adjudicated standing: the 1,000+ single-workflow
+# tail of the watchlist stays by policy (promotion is governance, not churn);
+# direction A — 94 of the §5.3 register's 186 ex-IT titles with zero workflow
+# touches — is likewise by design (workflow presence is contracted at function
+# level, every department has ≥1 resolved role; recorded in the TO §5.3 note).
+# Any movement of these numbers must be a conscious re-adjudication with the
+# baseline re-pointed (the Check-74 deferred-anchor pattern).
+C71_CENSUS_OUT=$(python3 "$REPO_ROOT/07-methodology/generate-role-coverage.py" --census 2>&1) && C71_CENSUS_RC=0 || C71_CENSUS_RC=$?
+C71_CENSUS_OK=0
+case "$C71_CENSUS_OUT" in
+  *"CENSUS workflows=5427 owner_resolved=2507 owner_uncharted=2920 owner_uncharted_forms=2040 uncharted_forms=10829"*) C71_CENSUS_OK=1;;
+esac
+if [ "${C71_BAD:-1}" -eq 0 ] && [ "$C71_RC_RC" -eq 0 ] && [ "$C71_CENSUS_RC" -eq 0 ] && [ "$C71_CENSUS_OK" -eq 1 ]; then
     B71=$(echo "$CHECK71" | sed -n 's/^BPMN_TOTALS files=\([0-9]*\) processes=\([0-9]*\)$/\1 \2/p')
     D71=$(echo "$CHECK71" | sed -n 's/^DMN_TOTALS files=\([0-9]*\) decisions=\([0-9]*\)$/\1 \2/p')
-    ok "Generated trees validate structurally against the markdown corpus AND mirror the generator's content derivation: bpmn/ $(echo $B71 | cut -d' ' -f1) files / $(echo $B71 | cut -d' ' -f2) processes (one per confirmed-register row) and dmn/ $(echo $D71 | cut -d' ' -f1) files / $(echo $D71 | cut -d' ' -f2) decisions — well-formed XML, 1 start/1 end per process, full lane coverage, 1:1 diagram:plane, complete DI shapes/edges/bounds/waypoints, decision-table structure, DRD shape per decision, and every process's documentation/start-event-name/controls-annotation byte-equal to the generator's re-derivation from its PA markdown (content mirror added by the 2026-09-10 seventeenth-wave review after batch-24 shipped PA-133.1/.3's generated files stale at the retired 5,426 — structural counts were all still correct, so nothing else could see it), and the shipped role-coverage matrix byte-identical to generate-role-coverage.py --check's re-derivation from the PA RACI fields + tier register + official TO (third-generated-artifact arm added by the 2026-09-15 thirtieth-wave review — the matrix's only harness had been the generator's own --check, which the validator never ran)"
+    ok "Generated trees validate structurally against the markdown corpus AND mirror the generator's content derivation: bpmn/ $(echo $B71 | cut -d' ' -f1) files / $(echo $B71 | cut -d' ' -f2) processes (one per confirmed-register row) and dmn/ $(echo $D71 | cut -d' ' -f1) files / $(echo $D71 | cut -d' ' -f2) decisions — well-formed XML, 1 start/1 end per process, full lane coverage, 1:1 diagram:plane, complete DI shapes/edges/bounds/waypoints, decision-table structure, DRD shape per decision, and every process's documentation/start-event-name/controls-annotation byte-equal to the generator's re-derivation from its PA markdown (content mirror added by the 2026-09-10 seventeenth-wave review after batch-24 shipped PA-133.1/.3's generated files stale at the retired 5,426 — structural counts were all still correct, so nothing else could see it), and the shipped role-coverage matrix byte-identical to generate-role-coverage.py --check's re-derivation from the PA RACI fields + tier register + official TO (third-generated-artifact arm added by the 2026-09-15 thirtieth-wave review — the matrix's only harness had been the generator's own --check, which the validator never ran), and the role-vocabulary census pinned at the adjudicated baseline (owner cells 2,507 resolved / 2,920 uncharted of 5,427; 2,040 distinct uncharted owner forms; 10,829 distinct uncharted forms across all RACI surfaces — census arm added by the 2026-09-15 thirty-first-wave review so a batch that edits owners, aliases or the register and regenerates consistently still cannot move the resolution population silently)"
 else
     error "Generated BPMN/DMN trees failed structural validation:"
     echo "$CHECK71" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
     if [ "$C71_RC_RC" -ne 0 ]; then
         echo "role-coverage --check:" 
         echo "$C71_RC_OUT" | sed 's/^/    /'
+    fi
+    if [ "$C71_CENSUS_RC" -ne 0 ] || [ "$C71_CENSUS_OK" -eq 0 ]; then
+        echo "role-vocabulary census (pinned baseline moved — re-adjudicate and re-point):"
+        echo "$C71_CENSUS_OUT" | sed 's/^/    /'
     fi
 fi
 

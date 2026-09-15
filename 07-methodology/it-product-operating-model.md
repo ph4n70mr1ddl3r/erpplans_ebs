@@ -35,7 +35,7 @@ Scope covers the steady state **after** the unified ERP go-live under the two-ti
 doctrine adopted 2026-09-14 (the in-suite EBS core + in-house/already-built products of
 `model-company-profile.md` §14.1; supersedes the 2026-09-03 hybrid posture). **Since
 2026-09-14 this model is the IT department's structure of record** — promoted with the
-org's structure promotion (profile v3.0 §3.3; TO v2.3 §5.2: "Actual = 122"). Implementation-phase structures (SI governance,
+org's structure promotion (profile v3.0 §3.3; TO v2.4 §5.2: "Actual = 122"). Implementation-phase structures (SI governance,
 cutover command centers) are out of scope; see §10 for the transition.
 
 ---
@@ -770,7 +770,7 @@ three-tier landscape (unified ERP core, BoB WMS/TMS/WFM/FSM edges, in-house OMO/
 16 teams (reconciliation unchanged 171 + 17 = 188 VS / 4,865 + 499 = 5,364 workflows),
 archetypes + Vendor PM + build squads, SIB governance, per-archetype release cadences,
 sizing 80 → 115. Prior v1.1 (2026-09-02, review #68) and v1.0 (2026-09-01): unified-model
-12-team design at 80 FTE. Downstream: `optimal-table-of-organization.md` v2.3 (HQ 511 /
+12-team design at 80 FTE. Downstream: `optimal-table-of-organization.md` v2.4 (HQ 511 /
 total 6,911 — the actual structure of record), `model-company-profile.md` v3.0,
 `technical-guidelines.md` v3.4,
 `capability-sourcing-and-engineering-model.md` v3.2.*

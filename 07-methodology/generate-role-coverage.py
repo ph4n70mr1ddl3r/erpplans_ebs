@@ -28,7 +28,10 @@ resolved (preserving canonical titles that legitimately contain "/", e.g.
 
 Deterministic: no timestamps, sorted outputs — `--check` re-derives and
 byte-compares the shipped artifact (regenerate after any PA/role/register
-change; the matrix is a derived view, never hand-edited).
+change). `--census` re-derives the owner-resolution census (resolved /
+uncharted workflow Owner cells under build()'s own touch semantics, plus the
+uncharted-watchlist population) for validate-repo.sh's pinned baseline; the
+matrix is a derived view, never hand-edited).
 
 Data integrity asserted at generation: every workflow has exactly one Owner;
 every workflow id resolves to exactly one confirmed Tier.
@@ -673,7 +676,53 @@ def render(wfs, tier, rows, dept_order):
     return "\n".join(L) + "\n"
 
 
+def census():
+    """Owner-resolution census over the unique workflow catalog.
+
+    Re-derives, every run, the numbers the role-vocabulary governance baseline
+    is pinned against: how many workflows' Owner cells resolve through the
+    resolution order (whole-string first, then the slash-part fallback — the
+    same semantics as build()'s touch()), and the size of the uncharted
+    watchlist. validate-repo.sh Check 71 pins these numbers, so any corpus,
+    alias, register or resolver change that moves them forces a conscious
+    re-adjudication with the baseline re-pointed (the Check-74 deferred-anchor
+    pattern; armed by the 2026-09-15 thirty-first-wave review).
+    """
+    wfs, tier, rows, dept_order = build()
+    hq, dc, store, dorder = parse_toc()
+    res = Resolver(hq, dc, store, dorder)
+
+    def owner_resolves(raw):
+        b, _, _, _ = res.resolve(raw)
+        if b != "unc":
+            return True, [raw]
+        parts = [p.strip() for p in re.split(r"\s*/\s*", raw) if p.strip()]
+        if len(parts) > 1:
+            rs = [res.resolve(p) for p in parts]
+            if all(r[0] != "unc" for r in rs):
+                return True, parts
+        return False, [raw]
+
+    resolved = uncharted = 0
+    unc_owner_forms = set()
+    for w in wfs:
+        ok, forms = owner_resolves(w["owner"])
+        if ok:
+            resolved += 1
+        else:
+            uncharted += 1
+            for f in forms:
+                unc_owner_forms.add(norm(f))
+    unc_rows = sum(1 for r in rows if r["bucket"] == "unc")
+    print(f"CENSUS workflows={len(wfs)} owner_resolved={resolved} "
+          f"owner_uncharted={uncharted} owner_uncharted_forms={len(unc_owner_forms)} "
+          f"uncharted_forms={unc_rows}")
+    return 0
+
+
 def main():
+    if "--census" in sys.argv:
+        return census()
     wfs, tier, rows, dept_order = build()
     out = render(wfs, tier, rows, dept_order)
     if "--check" in sys.argv:
