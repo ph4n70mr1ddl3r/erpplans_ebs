@@ -31,7 +31,7 @@ VS-11 (trade), VS-68 (credit risk), VS-17 (GL), VS-79 (tax), VS-107 (key account
 
 ## Key controls
 
-CTL-229 (credit limit), W1380 PDC, W1381 bounced-check, W475 CWT/2307, W81 bad-debt provisioning
+CTL-05 (credit limit), W1380 PDC, W1381 bounced-check, W475 CWT/2307, W81 bad-debt provisioning
 
 ---
 

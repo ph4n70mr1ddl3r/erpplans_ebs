@@ -14,7 +14,7 @@ Installation, tool rental, and DIY workshops extend the customer relationship be
 
 ## Owner & participants
 
-- **Owner**: COO / Service Operations Managers
+- **Owner**: COO / Services Category Manager, Service Coordinators & Rental Fleet Manager
 
 ## Process Areas
 

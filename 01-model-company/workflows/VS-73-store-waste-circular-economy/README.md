@@ -18,13 +18,14 @@ disclosure. Distinct from VS-24 (fixed-site HSE), VS-25 (group ESG reporting), V
   limit + 5-year manifest archive across 205 locations; RA 6969 cradle-to-grave liability;
   BFP Fire Code for flammable storage; LGU single-use-plastic ordinances.
 - **Material cost/revenue line**: ~PHP 24–40M/yr hazardous-waste disposal cost offset by
-  ~PHP 1–2M/yr cardboard recycling revenue and ~PHP 7–14M/yr lumber-offcut recovery.
+  ~PHP 2–8.6M/yr cardboard recycling revenue (W2599: ~PHP 10–43K/store/yr × 200 stores) and
+  ~PHP 12–24M/yr lumber-offcut clearance revenue (~PHP 5–10K/store/mo × 200 stores).
 - **ESG disclosure integrity**: GRI 306 (Waste) figures flow to the annual sustainability
   report (W2619) and depend entirely on upstream per-store data quality.
 
 ## Owner & participants
 
-- **Owner**: Sustainability Coordinator (reports to COO)
+- **Owner**: Sustainability Coordinator (reports to the Head of Sustainability / ESG)
 - **Key participants**: Store Managers, Maintenance Staff, Paint Section Leads, Safety
   Officers, Facilities Manager, DENR-certified waste/recycling vendors, Finance, Legal, IT
   (e-waste), Marketing (circular-economy + community programs).

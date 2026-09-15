@@ -14,7 +14,7 @@ Hire-to-retire: recruitment, payroll & compensation, workforce management, learn
 
 ## Owner & participants
 
-- **Owner**: CHRO / CHROs
+- **Owner**: CHRO / HR & Payroll Managers
 
 ## Process Areas
 
@@ -33,7 +33,7 @@ VS-102 (compensation), VS-103 (HR shared services), VS-121 (talent acquisition),
 
 ## Key controls
 
-CTL-34 (statutory), W10 payroll, W251 statutory benefits, W280 garnishment, CTL-337 payroll audit
+CTL-34 (tax & statutory compliance), W10 payroll, W251 statutory benefits, W280 garnishment, CTL-297 (payroll & compensation operating control)
 
 ---
 

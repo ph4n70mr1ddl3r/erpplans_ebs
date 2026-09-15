@@ -3696,8 +3696,8 @@ else
     echo "$CHECK66" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
 fi
 
-# --- Check 67: VS-README Process-Areas tables cross-foot vs disk ---
-echo "--- Check 67: VS-README process-area counts vs disk ---"
+# --- Check 67: VS-README Process-Areas tables cross-foot + extended-section guard ---
+echo "--- Check 67: VS-README process-area counts & extended sections vs disk ---"
 # The value-stream-index per-VS rows are re-derived by Check 68 (same pass), but
 # each VS README carries its own Process-Areas table (one row per PA file with a
 # workflow count, plus a **Total** row) that no check read. The 2026-09-03 worklist-adjudication
@@ -3705,6 +3705,27 @@ echo "--- Check 67: VS-README process-area counts vs disk ---"
 # README tree and the dependency map — and missed exactly these two README tables
 # (VS-24 stale 8/27, VS-87 stale 8/24). This check re-derives every VS README's
 # per-PA row and Total row from the PA files' own '## W' headers.
+# ---- Part B (2026-09-15 thirty-fourth wave): the 21 core-block READMEs (VS-01–VS-20
+# + VS-73) also carry Overview / Why it matters / Owner & participants / Key dependencies
+# / Key controls prose that NO check read — the thirty-fourth-wave review found four
+# wrong-id control citations (CTL-229 glossed 'credit limit' in VS-11/VS-16 where the
+# register objective is supplier quality/product-safety and the credit-limit control is
+# CTL-05; CTL-337 'payroll audit' in VS-19 where CTL-337 is the PA-32.1 returns control
+# and the payroll operating control is CTL-297; CTL-43 'lease/CAM audit' in VS-20 where
+# CTL-43 is sales-rep credit self-approval and the facility/lease-cost control is
+# CTL-218), two figure conflations vs the PA canon (VS-08's '~PHP 62.3B revenue flow
+# through 600 terminals' — the terminal flow is the ~PHP 60.5B in-store subset, the
+# PHP 1.8B ecommerce share rides the platform; VS-73's recycling split 1–2M/7–14M vs its
+# own W2599 10–43K/store/yr and 5–10K/store/mo offcut canon → 2–8.6M/12–24M network),
+# one TO reporting-line contradiction (VS-73's Coordinator '(reports to COO)' vs the
+# org of record: reports to the Head of Sustainability / ESG), and five drifted/mangled
+# owner seats (VS-08 'POS & IT' → IT Store Systems & POS (SSP); VS-09 'Service Managers'
+# and VS-12 'Service Operations Managers' phantom seats → the PA owner canon; VS-13
+# 'CRM & Loyalty' → the TO register's Loyalty & CRM Manager; VS-19 'CHRO / CHROs' →
+# 'CHRO / HR & Payroll Managers'). Part B pins the 21 Owner lines, verifies every
+# Key-controls CTL gloss against the register's own control objective (significant-token
+# overlap, joined over wrapped lines), and anchors the repaired figures with the retired
+# forms forbidden per file.
 CHECK67=$(python3 - "$REPO_ROOT" <<'PY'
 import os, re, sys
 ROOT = sys.argv[1]
@@ -3744,16 +3765,117 @@ for d in sorted(os.listdir(wf)):
             bad.append(f"{d}/README.md: PA file {f} on disk has no Process-Areas table row")
     if total_claim is not None and total_claim != sum(disk.values()):
         bad.append(f"{d}/README.md: Total row says {total_claim}, disk sums to {sum(disk.values())}")
-print(f"TOTALS rows={rows} problems={len(bad)}")
+
+# ---- Part B: extended-section VS-README guard (2026-09-15 thirty-fourth wave) ----
+OWNERS = {
+    "VS-01-merchandise-strategy": "- **Owner**: VP Merchandising / Category Managers",
+    "VS-02-supply-planning": "- **Owner**: VP Supply Chain / Demand & Supply Planners",
+    "VS-03-vendor-management": "- **Owner**: VP Supply Chain / Category Managers",
+    "VS-04-dc-warehouse": "- **Owner**: VP Supply Chain / DC Operations Managers",
+    "VS-05-inventory-lifecycle": "- **Owner**: VP Supply Chain / Inventory Managers",
+    "VS-06-logistics-fleet": "- **Owner**: VP Supply Chain / Fleet Manager",
+    "VS-07-store-operations": "- **Owner**: VP Store Operations / Store Managers",
+    "VS-08-pos-checkout": "- **Owner**: VP Store Operations / IT Store Systems & POS (SSP)",
+    "VS-09-in-store-services": "- **Owner**: VP Store Operations / Store Managers & Department Supervisors",
+    "VS-10-ecommerce-digital": "- **Owner**: GM, Digital Commerce Inc. / Digital",
+    "VS-11-trade-project-wholesale": "- **Owner**: VP Trade Sales / B2B Sales Managers",
+    "VS-12-installation-services": "- **Owner**: COO / Services Category Manager, Service Coordinators & Rental Fleet Manager",
+    "VS-13-customer-experience": "- **Owner**: Head of Customer Service / Loyalty & CRM Manager",
+    "VS-14-marketing": "- **Owner**: CMO / Marketing Managers",
+    "VS-15-procure-to-pay": "- **Owner**: Controller / AP Manager",
+    "VS-16-order-to-cash": "- **Owner**: Credit Manager / Controller",
+    "VS-17-record-to-report": "- **Owner**: Controller / CFO",
+    "VS-18-treasury-cash": "- **Owner**: Treasurer / CFO",
+    "VS-19-hire-to-retire": "- **Owner**: CHRO / HR & Payroll Managers",
+    "VS-20-real-estate-construction": "- **Owner**: COO / Facilities",
+    "VS-73-store-waste-circular-economy": "- **Owner**: Sustainability Coordinator (reports to the Head of Sustainability / ESG)",
+}
+ANCHORS = {
+    "VS-08-pos-checkout": ["~PHP 60.5B in-store revenue (of ~PHP 62.3B total company revenue)"],
+    "VS-73-store-waste-circular-economy": [
+        "~PHP 2–8.6M/yr cardboard recycling revenue",
+        "~PHP 12–24M/yr lumber-offcut clearance revenue",
+        "reports to the Head of Sustainability / ESG",
+    ],
+}
+RETIRED = {
+    "VS-08-pos-checkout": ["~PHP 62.3B revenue flow through 600 terminals", "/ POS & IT"],
+    "VS-09-in-store-services": ["/ Service Managers"],
+    "VS-11-trade-project-wholesale": ["CTL-229 (credit limit)"],
+    "VS-12-installation-services": ["/ Service Operations Managers"],
+    "VS-13-customer-experience": ["/ CRM & Loyalty"],
+    "VS-16-order-to-cash": ["CTL-229 (credit limit)"],
+    "VS-19-hire-to-retire": ["CHRO / CHROs", "CTL-337 payroll audit", "CTL-34 (statutory)"],
+    "VS-20-real-estate-construction": ["CTL-43 (lease/CAM audit)"],
+    "VS-73-store-waste-circular-economy": ["reports to COO", "~PHP 1–2M/yr cardboard", "~PHP 7–14M/yr"],
+}
+matrix_txt = open(os.path.join(ROOT, "01-model-company", "internal-controls-matrix.md"), encoding="utf-8").read()
+ctl_obj = {}
+for m in re.finditer(r"^\| CTL-(\d+) \| ([^|]+) \|", matrix_txt, re.M):
+    ctl_obj[int(m.group(1))] = m.group(2)
+STOP = {"ensure", "prevent", "detect", "and", "of", "the", "via", "per", "for", "a", "an",
+        "to", "on", "in", "with", "control", "controls", "plus", "operational"}
+def _toks(s):
+    out = set()
+    for t in re.split(r"[^a-z0-9]+", s.lower()):
+        if not t or t in STOP:
+            continue
+        out.add(t[:-1] if len(t) > 3 and t.endswith("s") else t)
+    return out
+GLOSS_RE = re.compile(r"CTL-(\d{2,3})((?:/\d{2,3})*)\s*\(([^)]+)\)")
+owner_dirs = set()
+gloss_checked = 0
+kc_sections = 0
+for d in sorted(os.listdir(wf)):
+    if not d.startswith("VS-"):
+        continue
+    rd = os.path.join(wf, d, "README.md")
+    if not os.path.exists(rd):
+        continue
+    text = open(rd, encoding="utf-8").read()
+    if "## Owner & participants" in text:
+        owner_dirs.add(d)
+    if d in OWNERS:
+        want = OWNERS[d]
+        if want not in text:
+            bad.append(f"{d}/README.md: Owner line drifted — expected {want!r}")
+    for lit in RETIRED.get(d, []):
+        if lit in text:
+            bad.append(f"{d}/README.md: retired literal present: {lit!r}")
+    for anchor in ANCHORS.get(d, []):
+        if anchor not in text:
+            bad.append(f"{d}/README.md: repaired anchor missing: {anchor!r}")
+    sec = re.search(r"^## Key controls\s*\n(.*?)(?=^## |\n---)", text, re.M | re.S)
+    if not sec:
+        continue
+    kc_sections += 1
+    joined = re.sub(r"\s*\n\s*", " ", sec.group(1))
+    for g in GLOSS_RE.finditer(joined):
+        ids = [int(g.group(1))] + [int(x) for x in g.group(2).split("/") if x]
+        gt = _toks(g.group(3))
+        for n in ids:
+            gloss_checked += 1
+            if n not in ctl_obj:
+                bad.append(f"{d}/README.md: Key-controls cites CTL-{n} but no such register row")
+            elif not (gt & _toks(ctl_obj[n])):
+                bad.append(f"{d}/README.md: CTL-{n} gloss '{g.group(3)}' shares no token with register objective '{ctl_obj[n].strip()}'")
+if owner_dirs != set(OWNERS):
+    missing = sorted(set(OWNERS) - owner_dirs)
+    extra = sorted(owner_dirs - set(OWNERS))
+    bad.append(f"extended-section population drifted: missing={missing} extra={extra} (expected 21)")
+
+print(f"TOTALS rows={rows} problems={len(bad)} glosses={gloss_checked} sections={kc_sections}")
 for b in bad:
     print("BAD|" + b)
 PY
 )
-C67_BAD=$(echo "$CHECK67" | sed -n 's/^TOTALS rows=[0-9]* problems=\([0-9]*\)/\1/p')
+C67_BAD=$(echo "$CHECK67" | sed -n 's/^TOTALS rows=[0-9]* problems=\([0-9]*\).*/\1/p')
 if [ "${C67_BAD:-1}" -eq 0 ]; then
-    ok "All 188 VS-README Process-Areas tables cross-foot against the PA files' own ## W headers (guard added by the 2026-09-03 consistency review pass after the W239 move left VS-24/VS-87 stale)"
+    C67_GLOSSES=$(echo "$CHECK67" | sed -n 's/^TOTALS rows=[0-9]* problems=[0-9]* glosses=\([0-9]*\) sections=[0-9]*/\1/p')
+    C67_SECTIONS=$(echo "$CHECK67" | sed -n 's/^TOTALS rows=[0-9]* problems=[0-9]* glosses=[0-9]* sections=\([0-9]*\)/\1/p')
+    ok "All 188 VS-README Process-Areas tables cross-foot against the PA files' own ## W headers, and the 21 extended-section READMEs (VS-01–VS-20 + VS-73) hold: every Owner line pinned to the org-of-record form, all ${C67_GLOSSES:-0} Key-controls CTL glosses across ${C67_SECTIONS:-0} sections token-overlapping the register's own control objective (joined over wrapped lines), and the thirty-fourth-wave repaired figure/reporting-line anchors present with the retired forms forbidden per file (Process-Areas cross-foot added by the 2026-09-03 consistency review pass after the W239 move left VS-24/VS-87 stale; extended-section arm added by the 2026-09-15 thirty-fourth-wave review after four wrong-id control citations (CTL-229 as 'credit limit' in VS-11/VS-16, CTL-337 as 'payroll audit' in VS-19, CTL-43 as 'lease/CAM audit' in VS-20), two subset/total and split-vs-canon figure conflations (VS-08's PHP 62.3B-through-terminals, VS-73's 1–2M/7–14M recycling split vs its own W2599/offcut canon), one TO reporting-line contradiction (VS-73's Coordinator 'reports to COO') and five drifted/mangled/phantom owner seats were found stranded on the prose sections no check read)"
 else
-    error "$C67_BAD VS-README process-area-count problem(s):"
+    error "$C67_BAD VS-README process-area/extended-section problem(s):"
     echo "$CHECK67" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
 fi
 

@@ -31,7 +31,7 @@ VS-37 (store opening), VS-97 (lessor side), VS-42 (lease admin), VS-109 (remodel
 
 ## Key controls
 
-CTL-26 (asset), W275 PFRS 16 lease accounting, W117 lease admin, W119 RPT, CTL-43 (lease/CAM audit)
+CTL-26 (asset), W275 PFRS 16 lease accounting, W117 lease admin, W119 RPT, CTL-218 (facility & lease-cost integrity)
 
 ---
 

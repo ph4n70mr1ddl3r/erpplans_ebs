@@ -14,7 +14,7 @@ Lumber cutting, paint mixing, pipe/sheet/wire fabrication, and project estimatio
 
 ## Owner & participants
 
-- **Owner**: VP Store Operations / Service Managers
+- **Owner**: VP Store Operations / Store Managers & Department Supervisors
 
 ## Process Areas
 

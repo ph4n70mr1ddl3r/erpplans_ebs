@@ -12,11 +12,11 @@ POS & checkout: transaction processing, payment & cash management, and POS compl
 
 ## Why it matters
 
-2.8M monthly POS transactions / ~PHP 62.3B revenue flow through 600 terminals; pricing/promo/loyalty/discount execution, payment integrity, and BIR e-invoicing originate here.
+2.8M monthly POS transactions / ~PHP 60.5B in-store revenue (of ~PHP 62.3B total company revenue) flow through 600 terminals; pricing/promo/loyalty/discount execution, payment integrity, and BIR e-invoicing originate here.
 
 ## Owner & participants
 
-- **Owner**: VP Store Operations / POS & IT
+- **Owner**: VP Store Operations / IT Store Systems & POS (SSP)
 
 ## Process Areas
 

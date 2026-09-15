@@ -14,7 +14,7 @@ Customer experience & loyalty: support & complaints, loyalty program operations,
 
 ## Owner & participants
 
-- **Owner**: Head of Customer Service / CRM & Loyalty
+- **Owner**: Head of Customer Service / Loyalty & CRM Manager
 
 ## Process Areas
 

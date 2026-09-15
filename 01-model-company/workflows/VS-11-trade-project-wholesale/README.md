@@ -31,7 +31,7 @@ VS-16 (O2C/credit), VS-107 (key accounts), VS-46 (B2G), VS-116 (bonds), VS-43 (t
 
 ## Key controls
 
-CTL-229 (credit limit), W162/165 project billing, CTL-48 (rebate dispute), W475 CWT/2307
+CTL-05 (credit limit), W162/165 project billing, CTL-48 (rebate dispute), W475 CWT/2307
 
 ---
 
