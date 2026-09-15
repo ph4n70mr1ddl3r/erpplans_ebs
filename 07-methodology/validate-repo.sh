@@ -3379,16 +3379,29 @@ echo "--- Check 61: Matrix rows, gap-analysis & tech-guidelines anchors ---"
 # historical totals exempt); (c) technical-guidelines.md must carry its verified
 # anchor figures (~511 HQ staff ≈460 concurrent users, ~640 Mbps aggregate, >= 8h
 # offline, 933 peak-day/store, 10-year retention — re-pointed by the 2026-09-14
-# structure-promotion re-base).
+# structure-promotion re-base). The 2026-09-15 thirty-seventh-wave review
+# extended the script with the matrix's own section-numbering layer — every
+# '## R<N>.' heading must resolve to the canonical erp-requirements.md scheme
+# (number exists, no duplicate numbers, subject token-overlap) and every
+# section numbered R25+ must mirror the canonical section's requirement
+# population exactly (range headings hold only in-range rows) — after the BCP
+# section was found carrying '## R25.' against the canonical R26, the matrix's
+# own R25 Loss-Prevention section and its own Coverage-Validation '32 sections
+# (R1–R32)' claim; and promoted the gap-analysis totals check from a frozen
+# literal (which had come to satisfy itself off a retired batch-6 note quoting
+# 5,370 — the sixth-wave OM-Total self-satisfying-anchor class) to a structural
+# re-derivation: every 'Canonical totals are now' declaration must carry
+# 188/569 and the maximum workflow total (totals are add-only across batches,
+# so the max is the live declaration) must equal the index Grand Total.
 C61_OUT=$(python3 "$REPO_ROOT/07-methodology/audit-matrix-refs.py" --guard 2>&1) && C61_RC=0 || C61_RC=$?
 C61_N=$(echo -n "$C61_OUT" | tail -1)
 echo "    $C61_N"
 if [ $C61_RC -eq 0 ]; then
-    ok "No ghost-only matrix rows; gap-analysis and technical-guidelines carry their canonical anchor figures (8 rows re-pointed 2026-08-29)"
+    ok "No ghost-only matrix rows; the matrix's R-section headings mirror the canonical requirement register (numbers unique, subjects token-matched, tail sections R25–R31 population-exact both directions, range rows in-range); the gap-analysis 'Canonical totals are now' declarations re-derive (188/569 on every line, the max workflow total equal to the index Grand Total); technical-guidelines carries its verified anchor figures (8 ghost rows re-pointed 2026-08-29; the R-section + declaration arms added by the 2026-09-15 thirty-seventh-wave review — the matrix's BCP section carried R25 against the canonical R26, its own R25 LP section and its own 32-section claim, and the totals anchor pinned a retired batch-6 literal)"
 else
-    C61_HITS=$(echo "$C61_OUT" | grep -cE "^(ghost-only-row|gap-analysis-current-state|tg-anchor):" || true)
+    C61_HITS=$(echo "$C61_OUT" | grep -cE "^(ghost-only-row|matrix-r-heading|matrix-tail-population|gap-analysis-declaration|tg-anchor):" || true)
     error "$C61_HITS matrix/gap-analysis/tech-guidelines violation(s) (run 07-methodology/audit-matrix-refs.py for detail):"
-    echo "$C61_OUT" | grep -E "^(ghost-only-row|gap-analysis-current-state|tg-anchor):" | sed 's/^/    /' | head -30
+    echo "$C61_OUT" | grep -E "^(ghost-only-row|matrix-r-heading|matrix-tail-population|gap-analysis-declaration|tg-anchor):" | sed 's/^/    /' | head -30
 fi
 
 # --- Check 62: semantic-sample anchor guard ---
