@@ -230,9 +230,10 @@ erpplans/
 │   ├── executive-summary.md            1-page C-suite overview
 │   ├── assumptions-and-design-decisions.md  Consolidated assumptions & rationale
 │   ├── headcount-reality-check.md     HQ headcount vs. workflow-coverage gap analysis
-│   ├── optimal-table-of-organization.md  OFFICIAL table of organization of record (target state): HQ 511 / total 6,911, every HQ role defined in §5.3 (phased from current 362 / 6,762; official elevation 2026-09-09; revised 2026-09-03 for the hybrid IT sourcing + agentic-AI model)
+│   ├── optimal-table-of-organization.md  OFFICIAL table of organization of record — THE ACTUAL STRUCTURE (promoted 2026-09-14): HQ 511 / total 6,911, every HQ role defined in §5.3 (pre-optimization 362 / 6,762 retained as the §5.1 reference column; official elevation 2026-09-09; two-tier IT sourcing + agentic-AI model)
 │   ├── requirement-workflow-matrix.md  Cross-reference: requirements ↔ workflows
 │   ├── internal-controls-matrix.md     808 internal controls by objective
+│   ├── role-coverage-matrix.md         GENERATED role ↔ workflow coverage matrix (per-role owned/participated/step/tier-mix; regenerate via 07-methodology/generate-role-coverage.py — do not hand-edit)
 │   ├── mobile-app-strategy.md          Customer & employee mobile app strategy
 │   └── data-migration-mapping.md       Data migration field mapping templates
 ├── 02-oracle-ebs/               ← Oracle E-Business Suite 12.2 platform blueprint (the ERP core of record)
@@ -251,10 +252,11 @@ erpplans/
     ├── technical-guidelines.md       POS hardware, infrastructure, integration, security, two-tier sourcing architecture
     ├── capability-sourcing-and-engineering-model.md  Two-tier sourcing decision gate (in EBS → use it; otherwise build), sourcing register, build squads, SEP
     ├── it-product-operating-model.md IT product teams (two-tier: in-suite EBS core + in-house built & already-built platforms + AI agent platform), roles, RACI, governance, sizing (50 → 122 FTE)
-    ├── ai-first-operating-guide.md   The AI-first operating guide — ERP-agnostic doctrine (ten laws, six layers, capability contracts), sourcing neutrality, autonomy ladder, agent factory, the EKB as persistent memory + consistency engine, the no-confusion decision system, and the seven-phase adoption path (v1.11)
+    ├── ai-first-operating-guide.md   The AI-first operating guide — ERP-agnostic doctrine (ten laws, six layers, capability contracts), sourcing neutrality, autonomy ladder, agent factory, the EKB as persistent memory + consistency engine, the no-confusion decision system, and the seven-phase adoption path (v1.12)
     ├── validate-repo.sh              Cross-reference validation (77 checks)
     ├── generate-bpmn.py             BPMN 2.0 generator — converts every workflow block in 01-model-company/workflows into validated .bpmn files under bpmn/ (5,450 processes, lanes, DI)
     ├── generate-dmn.py             DMN 1.3 generator — extracts rule tables and tiered PHP authorization rules from workflow markdown into validated .dmn files under dmn/ (79 decisions, decision tables, DMNDI)
+    ├── generate-role-coverage.py   Role–workflow coverage generator — parses PA RACI fields + tier register + the official TO into 01-model-company/role-coverage-matrix.md (per-role owned/participated/step/tier-mix, --check byte-verify)
     ├── classify-workflows.py         Keyword-driven criticality classifier
     ├── confirm-all-workflows.py      One-time full-coverage confirmation pass (2,596 → 0 unclassified)
     ├── confirm-postcatalog-14.py     One-time post-catalog confirmation pass (W5497–W5510: 14 → 0 unclassified, 2026-09-02)
@@ -323,7 +325,7 @@ erpplans/
 | Active SKUs | 35,000 |
 | Monthly Trade Purchase Orders | ~1,200 merchandise; ~1,400–1,600 total |
 | Legal Entities | 5 |
-| Total Headcount | 6,762 (200 stores × 29 + 600 DC + 362 HQ) |
+| Total Headcount | 6,911 (200 stores × 29 + 600 DC + 511 HQ) |
 | Ecommerce | Yes (with BOPIS) |
 | Country | Philippines |
 

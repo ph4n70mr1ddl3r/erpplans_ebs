@@ -7,7 +7,7 @@
 ## Overview
 
 Labor Relations & Collective Bargaining Management workflows for BuildRight Depot Corp. —
-covering the full labor-relations lifecycle across 6,762 employees, including union recognition
+covering the full labor-relations lifecycle across 6,911 employees, including union recognition
 and certification, Collective Bargaining Agreement (CBA) negotiation and administration,
 grievance handling, DOLE conciliation/mediation/arbitration, labor dispute avoidance, and
 constructive employee-partner (union/labor coalition) engagement under the Philippine Labor Code.

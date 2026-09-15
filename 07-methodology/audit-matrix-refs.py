@@ -22,8 +22,9 @@ Consistency review #43 (2026-08-29) audited the three surfaces:
   * technical-guidelines.md quantitative claims — verified against current
     state: offline capacity 933 peak-day (= 467 avg × 2.0), event latency
     < 30 sec, price push ≤ 60 sec, offline ≥ 8 hours, bandwidth table
-    (200 × 2 Mbps + 4 × 10 + 100 HQ = 540 Mbps aggregate, ~362 HQ staff,
-    ~80 RF guns/DC, 205 sites), RTO ≤ 4 hours, 10-year retention.
+    (200 × 2 Mbps + 4 × 10 + 200 HQ = 640 Mbps aggregate, ~511 HQ staff,
+    ~80 RF guns/DC, 205 sites — re-based 2026-09-14 to the promoted
+    HQ 511 / total 6,911 canon), RTO ≤ 4 hours, 10-year retention.
 
 Guard mode (--guard, validator Check 61):
   1. no requirement-matrix row may map only to ghost (non-header) W tokens;
@@ -35,7 +36,7 @@ import argparse, glob, os, re, sys
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MC = os.path.join(REPO, "01-model-company")
 
-TG_ANCHORS = ["~362 HQ staff (≈325 concurrent users)", "~540 Mbps aggregate",
+TG_ANCHORS = ["~511 HQ staff (≈460 concurrent users)", "~640 Mbps aggregate",
               "≥ 8 hours", "933 peak-day transactions per store",
               "10 years"]
 GA_ANCHOR = "**188 value streams · 569 process areas · 5,370 workflows**"

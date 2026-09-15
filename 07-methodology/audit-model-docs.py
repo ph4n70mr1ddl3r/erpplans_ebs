@@ -1619,6 +1619,23 @@ def companion_pin_hits():
     else:
         hits.append(("it-product-operating-model.md", 0,
                      "§13 sourcing doc-map row not found"))
+    # (e) OM header 'Companion to' sourcing-model pin — the mirror of (a), added
+    # by the 2026-09-14 twenty-ninth-wave review after the same-day promotion
+    # bumped the sourcing model to v3.2 and stranded the OM header pin at v3.1
+    # (the ninth-wave rule pinned the sourcing→OM direction only). The OM header
+    # wraps 'companion' and the link across lines, so the match anchors on the
+    # link-followed-by-(vN.M) form — unique to the header (the §13 row and the
+    # footer cite the model without the ](…) (vN.M) shape)
+    m = re.search(r"\[`capability-sourcing-and-engineering-model\.md`\]"
+                  r"\(capability-sourcing-and-engineering-model\.md\) \(v(\d+\.\d+)\)", om)
+    if not m:
+        hits.append(("it-product-operating-model.md", 0,
+                     "header 'Companion to' sourcing-model pin not found"))
+    elif m.group(1) != src_v:
+        hits.append(("it-product-operating-model.md",
+                     om[:m.start()].count("\n") + 1,
+                     f"header companion pin v{m.group(1)} but the sourcing-model "
+                     f"footer says v{src_v}"))
     return hits
 
 
@@ -1711,6 +1728,28 @@ def profile_derived_figure_hits():
             hits.append((rel, 0, f"\u00a710.3 AR row ({ar} = {t2} + {c2}) does not "
                                  f"cross-foot to the \u00a79.2 canon "
                                  f"({trade} + {corp} = {trade + corp})"))
+
+    # (2b) the three live employee-count rows must equal the §4 canon — added by
+    # the 2026-09-14 twenty-ninth-wave review after the promotion re-based
+    # §3.3/§4/§11.1 but stranded §11.2's Payroll-Parameters 'Total Employees' row,
+    # §15.2's Master-Data 'Employees' row and the §17 user-adoption bullet on the
+    # retired 6,762 (no rule read them; profile_derived_figure_hits already
+    # cross-foots §15.2's account rows, so the employees rows belong here)
+    for label, pat in (
+        ("\u00a711.2 Payroll-Parameters 'Total Employees' row",
+         r"\|\s*\*\*Total Employees\*\*\s*\|\s*([\d,]+)\s*\|"),
+        ("\u00a715.2 Master-Data 'Employees' row",
+         r"\|\s*Employees\s*\|\s*([\d,]+)\s*\|"),
+        ("\u00a717 user-adoption bullet",
+         r"~([\d,]+)\s*users across varying tech literacy"),
+    ):
+        m = re.search(pat, prof)
+        if not m:
+            hits.append((rel, 0, f"{label} not found (required to carry the "
+                                 f"\u00a74 total {hc:,})"))
+        elif int(m.group(1).replace(",", "")) != hc:
+            hits.append((rel, 0, f"{label} reads {m.group(1)} but the \u00a74 canon "
+                                 f"is {hc:,}"))
 
     # (3) live-corpus citation sweep
     paths = sorted(glob.glob(os.path.join(MC, "workflows", "VS-*", "PA-*.md")))

@@ -518,7 +518,7 @@ Owner: Finance Controller / Insurance Coordinator</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W861" name="W861. Employee Injury Insurance Claim Coordination &amp; SSS/ECC Filing" isExecutable="false">
       <bpmn:documentation>Trigger: Workplace injury or occupational illness affecting any BuildRight employee; triggered by HSE incident report
-Frequency: Estimated 100–150 reportable injuries per year across 6,762 employees
+Frequency: Estimated 100–150 reportable injuries per year across 6,911 employees
 Volume: ~30–50 claims filed with SSS/ECC per year (lost-time injuries); minor injuries treated on-site without claim
 Owner: HR Manager / Insurance Coordinator
 Participants: Injured Employee, Store Manager, HR Manager, Insurance Coordinator, Company Nurse, SSS Representative, DOLE (for serious incidents)

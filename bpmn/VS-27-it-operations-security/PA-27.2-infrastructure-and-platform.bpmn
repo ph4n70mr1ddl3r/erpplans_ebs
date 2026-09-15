@@ -3,7 +3,7 @@
     <bpmn:process id="W_W55" name="W55. IT Disaster Recovery &amp; System Failover" isExecutable="false">
       <bpmn:documentation>Trigger: Core ERP system failure exceeding RTO (4 hours per NFR-013), data center outage, cloud service disruption, or cyber attack causing system unavailability
 Frequency: Rare; estimated 0–2 DR events/year requiring failover
-Volume: Affects all ~6,762 employees (~1,500 named ERP users); 600 POS terminals; 200 stores; 4 DCs
+Volume: Affects all ~6,911 employees (~1,500 named ERP users); 600 POS terminals; 200 stores; 4 DCs
 Owner: CIO
 Participants: CIO, IT Infrastructure team, IT Helpdesk, VP Store Operations, CFO, external DR service provider
 Source: workflow W55 — IT Disaster Recovery &amp; System Failover</bpmn:documentation>
@@ -2004,7 +2004,7 @@ Owner: IT Helpdesk (Tier 2)</bpmn:text>
     <bpmn:process id="W_W832" name="W832. ERP User Access Quarterly Recertification &amp; Compliance Review" isExecutable="false">
       <bpmn:documentation>Trigger: Quarterly calendar trigger (March, June, September, December)
 Frequency: Quarterly
-Volume: ~6,762 employees across 5 entities with ERP access; ~200–300 role changes per quarter to recertify
+Volume: ~6,911 employees across 5 entities with ERP access; ~200–300 role changes per quarter to recertify
 Owner: IT Security Manager
 Participants: IT Security Manager, Department Managers, HR BP, Internal Audit per W338
 Source: workflow W832 — ERP User Access Quarterly Recertification &amp; Compliance Review</bpmn:documentation>
@@ -2367,7 +2367,7 @@ Owner: IT Infrastructure Manager</bpmn:text>
     <bpmn:process id="W_W5518" name="W5518. Collaboration &amp; Productivity Platform (M365/Email/Teams) Operations &amp; Tenant Governance" isExecutable="false">
       <bpmn:documentation>Trigger: Tenant incident or service-health degradation (mail-flow delay, Teams outage); new-hire mailbox &amp; collaboration provisioning from W152; quarterly security-baseline review; or the monthly tenant-service review cadence
 Frequency: Continuous monitoring; per-provisioning event; monthly service review; quarterly baseline review
-Volume: ~6,762 M365 users; ~1,500 ERP identities federated (W152); ~50+ SaaS apps in the tenant portfolio (W370); ~40 provisioning/lifecycle exceptions/month
+Volume: ~6,911 M365 users; ~1,500 ERP identities federated (W152); ~50+ SaaS apps in the tenant portfolio (W370); ~40 provisioning/lifecycle exceptions/month
 Owner: IT Infrastructure Manager
 Participants: IT Infrastructure Lead, Security Analyst, IT Helpdesk, Service Desk Lead, Application Manager (ERP SSO federation), Data Protection Officer, Internal Audit
 Source: workflow W5518 — Collaboration &amp; Productivity Platform (M365/Email/Teams) Operations &amp; Tenant Governance</bpmn:documentation>

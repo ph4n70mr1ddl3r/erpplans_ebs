@@ -170,7 +170,7 @@ Owner: Store Manager</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W561" name="W561. Employee Attendance Exception Management" isExecutable="false">
       <bpmn:documentation>Trigger: Biometric/attendance system generates exception (late arrival, unauthorized absence, undertime, biometric failure, missing punch, overtime without approval)
-Frequency: ~800–1,200 exceptions per day across 200 stores + 4 DCs + HQ (6,762 employees, ~12–18% exception rate)
+Frequency: ~800–1,200 exceptions per day across 200 stores + 4 DCs + HQ (6,911 employees, ~12–18% exception rate)
 Volume: Higher on Mondays (+25%), after holidays (+40%), during rainy season/typhoons (+30%, Metro Manila and low-lying areas), during MRT/LRT service disruptions
 Owner: HR Supervisor / Store Manager (store-level)
 Participants: Employee (R for self-service), Department Supervisor (R for approval), HR Supervisor, Payroll Specialist (I), Store Manager (A for store-level)
@@ -555,7 +555,7 @@ Owner: Department Supervisor / Store Manager (store-level); HR Supervisor (overs
     <bpmn:process id="W_W645" name="W645. Strategic Workforce Planning" isExecutable="false">
       <bpmn:documentation>Trigger: Annual planning cycle aligned with budget (W26); triggered by new store opening plan (10–15/year) or significant business change
 Frequency: Annual comprehensive plan; quarterly progress review; monthly headcount tracking
-Volume: 6,762 current headcount; ~10–15 new stores/year requiring ~290–435 net new hires; ~1,200–1,600 turnover replacements/year
+Volume: 6,911 current headcount; ~10–15 new stores/year requiring ~290–435 net new hires; ~1,200–1,600 turnover replacements/year
 Owner: HR Manager (Workforce Planning)
 Participants: CHRO, VP Store Operations, VP Supply Chain, FP&amp;A Manager, Regional Managers
 Source: workflow W645 — Strategic Workforce Planning</bpmn:documentation>
@@ -839,7 +839,7 @@ Owner: Store Manager / Department Supervisor</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W1032" name="W1032. Employee Overtime Pre-Approval, Monitoring &amp; DOLE Weekly Cap Enforcement" isExecutable="false">
       <bpmn:documentation>Trigger: Employee schedule extends beyond 8 hours/day; department overtime budget threshold reached; weekly overtime limit approaching
-Frequency: Daily monitoring across 6,762 employees; weekly reporting
+Frequency: Daily monitoring across 6,911 employees; weekly reporting
 Volume: ~15–25% of store employees work overtime weekly (particularly during peak: payday weekends, bi-monthly sales, holiday season)
 Owner: Store Manager (store-level); HR Business Partner (HQ)
 Participants: Department Supervisor, Employee, HR Payroll Specialist, DOLE Compliance Officer
@@ -948,7 +948,7 @@ Owner: Store Manager (store-level); HR Business Partner (HQ)</bpmn:text>
     <bpmn:process id="W_W1182" name="W1182. Multi-Entity Cross-Company Workforce Scheduling &amp; Labor Cost Allocation" isExecutable="false">
       <bpmn:documentation>Trigger: Monthly payroll processing cycle; or employee transfer between entities; or management re-allocation of shared services headcount
 Frequency: Monthly during payroll; as-needed for intercompany transfers
-Volume: 6,762 employees across 5 legal entities; ~50–80 intercompany cost allocations/month
+Volume: 6,911 employees across 5 legal entities; ~50–80 intercompany cost allocations/month
 Owner: HR Operations Manager / Finance Controller
 Participants: HR Operations Manager, Finance Controller, Department Heads, Payroll Administrator, Tax Accountant
 Source: workflow W1182 — Multi-Entity Cross-Company Workforce Scheduling &amp; Labor Cost Allocation</bpmn:documentation>
@@ -1488,7 +1488,7 @@ Owner: HR Manager</bpmn:text>
     <bpmn:process id="W_W5498" name="W5498. Telecommuting &amp; Flexible / Hybrid Work Arrangement Program (RA 11165)" isExecutable="false">
       <bpmn:documentation>Trigger: (a) Employee/department application for a telecommuting or hybrid arrangement; (b) program design and annual review cycle; (c) agreement expiry
 Frequency: Continuous arrangement administration; eligibility windows 2×/year; agreement renewals annual
-Volume: Eligible population ≈ 400–500 roles (HQ corporate functions (~362 staff, profile §3.3/§11.1) plus portable regional-office and analytics roles); target participation 50–150 active arrangements (~1–2% of 6,762 employees — store, DC, field, and customer-facing roles are structurally ineligible, which the program must communicate to preserve frontline equity)
+Volume: Eligible population ≈ 400–500 roles (HQ corporate functions (~511 staff, profile §3.3/§11.1, promoted 2026-09-14) plus portable regional-office and analytics roles); target participation 50–150 active arrangements (~1–2% of 6,911 employees — store, DC, field, and customer-facing roles are structurally ineligible, which the program must communicate to preserve frontline equity)
 Owner: HR Manager
 Participants: Employee, Department Head, IT (equipment/VPN/MDM — VS-27/VS-99), OSH Officer (home workstation — VS-24), Payroll (VS-19.2), Legal, Facilities (desk-sharing — VS-138)
 Source: workflow W5498 — Telecommuting &amp; Flexible / Hybrid Work Arrangement Program (RA 11165)</bpmn:documentation>
@@ -1659,7 +1659,7 @@ Owner: HR Manager</bpmn:text>
     <bpmn:process id="W_W5532" name="W5532. Workforce Time &amp; Attendance (Biometric/Time-Clock) Platform Estate &amp; Punch-Data Operations" isExecutable="false">
       <bpmn:documentation>Trigger: Shift start/end generating punch events at ~205 stores, 4 DCs and HQ; a device-offline alert or punch-interface failure; a new-store/DC opening or closure requiring device provisioning or decommissioning (W16/W703); a payroll cut-off requiring the final punch-data interface run (W10/W816); or the periodic device-health and data-retention review
 Frequency: Continuous event collection; scheduled interface runs ahead of every payroll cut-off; monthly device-health review; event-driven provisioning/decommissioning
-Volume: ~6,762 employees × ~2 punches × ~250 workdays ≈ 3.2–3.6M punch events/year across a fleet of ~420–450 biometric/RFID time-clock devices (2 per store average, DC gate banks, HQ terminals); ~800–1,200 attendance exceptions/day already processed in W561&#x27;s queues; ~26 payroll interfaces/year (bi-monthly per entity across 5 entities, W816 consolidation scope); ~10–15 store openings/closures/year with provisioning events
+Volume: ~6,911 employees × ~2 punches × ~250 workdays ≈ 3.2–3.6M punch events/year across a fleet of ~420–450 biometric/RFID time-clock devices (2 per store average, DC gate banks, HQ terminals); ~800–1,200 attendance exceptions/day already processed in W561&#x27;s queues; ~26 payroll interfaces/year (bi-monthly per entity across 5 entities, W816 consolidation scope); ~10–15 store openings/closures/year with provisioning events
 Owner: HR Technology Manager
 Participants: HR Supervisor, Payroll Specialist, Store Manager, DC Supervisor, IT Service Desk (device break/fix), IT Network Operations (connectivity), VS-103.3 people-data integration (W3350/W3351), External T&amp;A/biometric vendor (maintenance contract)
 Source: workflow W5532 — Workforce Time &amp; Attendance (Biometric/Time-Clock) Platform Estate &amp; Punch-Data Operations</bpmn:documentation>

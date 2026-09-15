@@ -306,7 +306,7 @@ Owner: Merchandising Coordinator</bpmn:text>
     <bpmn:process id="W_W2396" name="W2396. Employee Purchase Program for Clearance" isExecutable="false">
       <bpmn:documentation>Trigger: Post-clearance employee discount event
 Frequency: Per season; after public clearance
-Volume: 6/year; ~6,762 employees eligible
+Volume: 6/year; ~6,911 employees eligible
 Owner: HR Manager
 Participants: HR Mgr, Store Ops, Finance
 Source: workflow W2396 — Employee Purchase Program for Clearance</bpmn:documentation>

@@ -6,11 +6,11 @@
 
 ## Overview
 
-Hire-to-retire: recruitment, payroll & compensation, workforce management, learning, and separation for 6,762 employees across 5 entities.
+Hire-to-retire: recruitment, payroll & compensation, workforce management, learning, and separation for 6,911 employees across 5 entities.
 
 ## Why it matters
 
-6,762 employees, ~1,200–1,600 hires/yr, 15–20% turnover; payroll accuracy, statutory benefits (SSS/PhilHealth/Pag-IBIG/13th-month), and DOLE labor-code compliance are mandatory and high-volume.
+6,911 employees, ~1,200–1,600 hires/yr, 15–20% turnover; payroll accuracy, statutory benefits (SSS/PhilHealth/Pag-IBIG/13th-month), and DOLE labor-code compliance are mandatory and high-volume.
 
 ## Owner & participants
 

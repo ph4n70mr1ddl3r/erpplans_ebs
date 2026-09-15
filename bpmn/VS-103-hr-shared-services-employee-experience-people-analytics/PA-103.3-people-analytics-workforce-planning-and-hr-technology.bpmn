@@ -3,7 +3,7 @@
     <bpmn:process id="W_W3345" name="W3345. Workforce Planning, Headcount Forecasting &amp; Capacity Planning" isExecutable="false">
       <bpmn:documentation>Trigger: Annual plan (links to VS-33.1); growth/new stores; restructure
 Frequency: Annual + quarterly
-Volume: 6,762 headcount across 5 entities/205 locations
+Volume: 6,911 headcount across 5 entities/205 locations
 Owner: People Analytics Manager
 Participants: People Analytics Manager, HRBP, Store Ops (links to VS-07), Finance (links to VS-17.4), Strategic Planning (links to VS-33.1)
 Source: workflow W3345 — Workforce Planning, Headcount Forecasting &amp; Capacity Planning</bpmn:documentation>
@@ -366,7 +366,7 @@ Owner: People Analytics Manager</bpmn:text>
     <bpmn:process id="W_W3350" name="W3350. HR Data Governance, Integration &amp; People-Data Quality" isExecutable="false">
       <bpmn:documentation>Trigger: Data-quality issue; integration change; compliance
 Frequency: Continuous
-Volume: 6,762 employee records + masters
+Volume: 6,911 employee records + masters
 Owner: People Analytics Manager
 Participants: People Analytics Manager, Master Data (links to VS-29), Data Governance (links to VS-28.2), IT (links to VS-27), Data Privacy (links to VS-91)
 Source: workflow W3350 — HR Data Governance, Integration &amp; People-Data Quality</bpmn:documentation>

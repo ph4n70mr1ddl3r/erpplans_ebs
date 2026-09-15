@@ -33,7 +33,7 @@ This matters at BuildRight's scale. The Philippines' **Electric Vehicle Industry
 explicitly includes **commercial and fleet adoption**, corporate fleet EV-share expectations, and
 building/Parking-Space EV-readiness provisions that interact directly with BuildRight's existing
 EV-charging host network (VS-163) and rooftop-solar prosumer program (VS-108). At ~5,000 monthly
-store-replenishment orders, ~42,900 ecommerce orders/month, ~10–15 new stores/yr, and ~6,762
+store-replenishment orders, ~42,900 ecommerce orders/month, ~10–15 new stores/yr, and ~6,911
 employees across a 200-store archipelago, transportation is a material Scope 1 emissions line and
 operating-cost line; a structured green-fleet transition is the primary lever on both the ESG
 decarbonization commitment (VS-25) and the 12–14% EBITDA target. It is distinct from VS-06

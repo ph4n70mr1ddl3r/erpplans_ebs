@@ -6,10 +6,10 @@ Consistency review #34 (2026-08-29) reconciled the staffing-team and role-count
 claims scattered through the PA files' Staffing Implication / Time Estimate /
 Volume prose against the canonical headcount registers —
 
-  * `model-company-profile.md` §3.3 (18 HQ departments summing to 362),
-    §4 (stores 200 × 29 = 5,800; DCs 4 × 150 = 600; total 6,762),
-    §13.1 (Merchandising 40: 5 Category Managers, 10 Buyers, 5 Merchandise
-    Planners, 4 Pricing Analysts, …);
+  * `model-company-profile.md` §3.3 (18 HQ departments summing to 511 — the promoted structure of record, 2026-09-14; pre-promotion canon 362 retained in the TO §5.1 reference column),
+    §4 (stores 200 × 29 = 5,800; DCs 4 × 150 = 600; total 6,911),
+    §13.1 (Merchandising 43: 5 Category Managers, 10 Buyers, 6 Merchandise
+    Planners/Allocators, 1 Pricing Manager, 4 Pricing Analysts, …);
   * `headcount-reality-check.md` (the historical gap record the rebalances
     closed — its pre-rebalance figures are NOT current state).
 
@@ -52,25 +52,27 @@ WORKFLOWS = os.path.join(REPO, "01-model-company", "workflows")
 PROFILE = os.path.join(REPO, "01-model-company", "model-company-profile.md")
 
 # canonical §3.3 HQ department totals (spot anchors used by prose claims)
+# Re-based 2026-09-14 to the PROMOTED structure of record (TO v2.3 / profile
+# v3.0 §3.3: HQ 511; IT 122 per the 17-team product model, OM v3.13).
 DEPT_TOTALS = {
-    "executive office": 7, "merchandising": 40, "finance & accounting": 46,
-    "finance and accounting": 46, "finance": 46, "supply chain & logistics": 40,
-    "supply chain and logistics": 40, "supply chain": 40,
-    "information technology": 50, "it": 50, "human resources": 26, "hr": 26,
-    "marketing": 25, "store operations": 24, "legal & compliance": 14,
-    "legal and compliance": 14, "legal": 14, "internal audit & risk": 7,
-    "internal audit and risk": 7, "internal audit": 7,
-    "customer service / call center": 30, "call center": 30,
-    "regional loss prevention": 20, "loss prevention": 20,
-    "health, safety & environment": 10, "hse": 10,
-    "quality management": 4, "facilities & real estate": 8,
-    "sustainability / esg": 3, "strategy / corporate planning": 3,
-    "trade / account management": 5,
+    "executive office": 7, "merchandising": 43, "finance & accounting": 62,
+    "finance and accounting": 62, "finance": 62, "supply chain & logistics": 46,
+    "supply chain and logistics": 46, "supply chain": 46,
+    "information technology": 122, "it": 122, "human resources": 42, "hr": 42,
+    "marketing": 30, "store operations": 24, "legal & compliance": 20,
+    "legal and compliance": 20, "legal": 20, "internal audit & risk": 9,
+    "internal audit and risk": 9, "internal audit": 9,
+    "customer service / call center": 34, "call center": 34,
+    "regional loss prevention": 27, "loss prevention": 27,
+    "health, safety & environment": 13, "hse": 13,
+    "quality management": 5, "facilities & real estate": 12,
+    "sustainability / esg": 4, "strategy / corporate planning": 4,
+    "trade / account management": 7,
 }
 
 # §13.1 merchandising role counts + other profile-anchored role sizes
 ROLE_TOTALS = {
-    "category managers": 5, "buyers": 10, "merchandise planners": 5,
+    "category managers": 5, "buyers": 10, "merchandise planners": 6,
     "pricing analysts": 4,
 }
 
@@ -92,6 +94,17 @@ RETIRED_LITERALS = [
     # DSD cadence is per store per MONTH (~500–600 receipts/month chain-wide)
     "DSD deliveries per store per week", "DSD deliveries/store/week",
     "DSD deliveries/week",
+    # 2026-09-14 structure promotion (profile v3.0 / TO v2.3): the pre-promotion
+    # HQ subtotal 362 retired in live PA/README prose — the promotion's corpus
+    # sweep matched the ~6,762 total but stranded the 362 HQ-subtotal family
+    # (PA-22.1's HQ-Departments table, PA-72.3/PA-138.2/PA-19.3 Volume rows,
+    # PA-34.1 laptop-refresh cells, PA-13.1's trade register, VS-169's README).
+    # The 362 canon survives ONLY in dated records (profile §3.3 history note,
+    # TO §5.1 reference column, reality-check banner, *Date: footers) — none of
+    # them PA files or VS READMEs.
+    "362 HQ", "HQ = 362", "362 staff",
+    "5-person Trade/Account Management register",
+    "HSE 10, Quality 4",
 ]
 
 DEPT_TEAM_RE = re.compile(
@@ -248,11 +261,25 @@ def main():
     files = sorted(glob.glob(os.path.join(WORKFLOWS, "VS-*", "PA-*.md")))
     for f in files:
         check_file(f, hits)
+    # 2026-09-14 structure-promotion wave: the VS READMEs join the guard with a
+    # literal-only pass (VS-169's intro carried the pre-promotion
+    # '~5,800 store + ~600 DC + ~362 HQ' cut after the sweep re-based its
+    # totals; the full dept-team/volume arms stay PA-scoped — README prose
+    # carries no Volume/Frequency field rows)
+    readme_files = sorted(glob.glob(os.path.join(WORKFLOWS, "VS-*", "README.md")))
+    for f in readme_files:
+        text = open(f, encoding="utf-8").read()
+        rel = os.path.relpath(f, REPO)
+        for lit in RETIRED_LITERALS:
+            for m in re.finditer(re.escape(lit), text, re.I):
+                line = text[:m.start()].count("\n") + 1
+                hits.append(("retired-literal", rel, line, lit))
     # 2026-09-09 sixteenth-wave addition: the DC-catchment class (profile + PAs)
     hits.extend(dc_catchment_hits())
     for kind, rel, line, detail in hits:
         print(f"{kind}: {rel}:{line}: {detail}")
-    print(f"reconcile-staffing-claims: {len(hits)} hit(s) across {len(files)} PA files")
+    print(f"reconcile-staffing-claims: {len(hits)} hit(s) across {len(files)} PA files "
+          f"+ {len(readme_files)} VS READMEs")
     if args.guard:
         sys.exit(1 if hits else 0)
 

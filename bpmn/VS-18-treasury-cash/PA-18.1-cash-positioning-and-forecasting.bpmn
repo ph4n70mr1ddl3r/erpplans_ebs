@@ -1550,7 +1550,7 @@ Duration: 20 min</bpmn:documentation>
         <bpmn:outgoing>W589_Flow27</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W589_Task11" name="Payroll forecast">
-        <bpmn:documentation>Step 4: Payroll forecast: Payroll Manager provides payroll forecast for 4-week window — semi-monthly payroll on the 15th and 30th (~PHP 110–120M per run covering ~6,762 employees); variable components: overtime, commissions, 13th month accrual release (November–December), statutory contributions due per agency calendars (SSS by the last day of the following month per RA 11199; PhilHealth and Pag-IBIG by the 10th of the following month); special payroll runs (separation pay, backpay adjustments)
+        <bpmn:documentation>Step 4: Payroll forecast: Payroll Manager provides payroll forecast for 4-week window — semi-monthly payroll on the 15th and 30th (~PHP 110–120M per run covering ~6,911 employees); variable components: overtime, commissions, 13th month accrual release (November–December), statutory contributions due per agency calendars (SSS by the last day of the following month per RA 11199; PhilHealth and Pag-IBIG by the 10th of the following month); special payroll runs (separation pay, backpay adjustments)
 Responsible (R): Payroll Manager
 Accountable (A): Treasury Analyst
 Duration: 10 min</bpmn:documentation>

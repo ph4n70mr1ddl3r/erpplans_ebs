@@ -25,7 +25,7 @@
 | A2.3 | HQ in Davao City | Provincial HQ | Deliberately non-Manila to test provincial operations and connectivity | Profile §2 |
 | A2.4 | 5 legal entities | Separate Holdings, Depot, Logistics, Digital Commerce, Property Mgmt | Tests multi-entity/intercompany capability; each entity has a distinct role | Profile §2 |
 | A2.5 | Depot Inc. owns all inventory | Even though Logistics Inc. operates DCs | Simplifies inventory accounting; Logistics Inc. charges service fees, not goods transfer | Profile §2, W14 |
-| A2.6 | Revenue per employee | ~PHP 9.21M/year | Driven by optimized staffing and high automation; HQ rebalanced 315 → 357 (2026-06-20), then → 362 (2026-06-25) to stand up a dedicated S&OP/IBP sub-team in Supply Chain & Logistics (see `headcount-reality-check.md`) | Profile §4 |
+| A2.6 | Revenue per employee | ~PHP 9.01M/year | Driven by optimized staffing and high automation (re-derived at promotion: ~PHP 62.3B ÷ 6,911); HQ rebalanced 315 → 357 (2026-06-20), then → 362 (2026-06-25), then promoted to the optimal structure HQ 511 (2026-09-14) — see `optimal-table-of-organization.md` | Profile §4 |
 
 ## A3. Supply Chain & Logistics Assumptions
 

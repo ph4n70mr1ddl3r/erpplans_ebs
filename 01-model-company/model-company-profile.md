@@ -110,54 +110,50 @@ The company operates through **5 legal entities** organized as follows:
 |---|---|
 | **Location** | Davao City, Philippines |
 | **Office Size** | ~3,000 sqm |
-| **HQ Headcount** | 362 |
+| **HQ Headcount** | 511 |
 
 #### HQ Departments
 
-> Rebalanced to the **minimum** staffing required to cover the roles and volumes referenced across the workflow catalog (see `headcount-reality-check.md`). Six functions previously rolled into an un-enumerated ~40-person bucket (HSE, Quality, Facilities & Real Estate, Sustainability/ESG, Strategy, Trade Account Management) are now broken out explicitly, and four transactional functions (Finance, IT, HR, Legal) were increased to resolve contradictions the workflows themselves exposed (e.g., AP "~10 clerks" cannot fit inside a 37-person Finance team; IT field support flagged inadequate for a 200-store archipelago footprint). Store (5,800) and DC (600) headcounts are unchanged. **Supply Chain & Logistics** was subsequently rebalanced 35 → 40 (2026-06-25) to stand up a dedicated **S&OP/IBP sub-team** — the single accountable owner of the VS-127 monthly demand–supply consensus cycle that had previously been an unowned program (see the team breakdown below and `headcount-reality-check.md` §4, “S&OP Lead”).
->
-> **Target state (2026-09-02; revised 2026-09-03).** The breakdown above is the **current
-> baseline** — the minimum coverage implemented 2026-06-20/25. The adopted **target-state
-> table of organization** is defined in
-> [`optimal-table-of-organization.md`](optimal-table-of-organization.md): HQ **511** / total
-> **6,911** at 200 stores (upper edge of the `headcount-reality-check.md` comfortable band
-> ~440–515; IT = 122 per `it-product-operating-model.md` §9 under the two-tier capability-
-> sourcing doctrine (2026-09-14) + agentic-AI model — in-suite Oracle EBS (incl. Oracle
-> WMS/MSCA and Shipping/OTE), in-house and already-built products (the POS estate, the
-> ecommerce platform, loyalty, Payroll PH) around the EBS core, and the AI & Agent Platform
-> for governed agent automation of manual tasks; supersedes the 2026-09-03 hybrid posture;
-> see `07-methodology/capability-sourcing-and-engineering-model.md`),
-> reached in three demand-triggered phases — regulatory floor → transaction scale →
-> capability scale — with store (5,800) and DC (600) staffing unchanged.
+> **Promoted to the actual structure 2026-09-14.** The department list below IS the company's
+> actual organization of record — the official table of organization
+> ([`optimal-table-of-organization.md`](optimal-table-of-organization.md), promoted by executive
+> direction 2026-09-14 from the adopted 2026-09-02 target state), with every one of the 511 HQ
+> roles defined at role level in its §5.3 register. The department's sizing history — the
+> 2026-06-20/25 minimum-coverage rebalance (HQ 315 → 357 → 362) and the 2026-09-02/03
+> target-state adoption — is retained in the TO's §5.1 reference column and §11 promotion
+> record. Store (5,800) and DC (600) headcounts are unchanged. **Information Technology** runs
+> the product-centric operating model ([`../07-methodology/it-product-operating-model.md`](../07-methodology/it-product-operating-model.md):
+> 17 long-lived product teams business-paired with every department) as the actual IT structure;
+> **Supply Chain & Logistics** and **Merchandising & Buying** team breakdowns are in §3.3/§13.1
+> below.
 
 - **Executive Office**: CEO, CFO, COO, CIO, CMO, CHRO, VP Legal & Compliance (7)
-- **Merchandising & Buying**: Category managers, buyers, pricing analysts, planners (40)
-- **Finance & Accounting**: Controller, GL (per-entity), AP/AR, treasury, tax, FP&A, logistics finance (46)
-- **Supply Chain & Logistics**: S&OP/IBP & demand planning, supply & allocation planning, DC operations, fleet & logistics, procurement, imports & customs, vendor management (40)
-- **Information Technology**: Infrastructure, applications, data/BI, security, privacy, helpdesk (50)
-- **Human Resources**: Recruitment, compensation, training, payroll, benefits, labor relations (26)
-- **Marketing**: Brand, promotions, ecommerce, digital, content, loyalty, insights (25; led by a **VP Marketing** under the CMO, mirroring the VP-for-Merchandising convention at §13.1 — the department-head tier the workflow catalog's escalation seats refer to)
-- **Store Operations**: Regional managers, operations standards, facilities coordination (24)
-- **Legal & Compliance**: Corporate secretary, regulatory, DPO, AML/MLRO, contracts, government affairs (14)
-- **Internal Audit & Risk**: (7)
-- **Customer Service / Call Center**: (30)
-- **Regional Loss Prevention**: LP Officers (20)
-- **Health, Safety & Environment**: Safety officers, company nurse, wellness (10)
-- **Quality Management**: Incoming inspection, vendor QA, metrology (4)
-- **Facilities & Real Estate**: Facilities, maintenance, property/lease admin (8)
-- **Sustainability / ESG**: Environmental, social, governance reporting (3)
-- **Strategy / Corporate Planning**: Annual planning, CPM, competitive intelligence (3)
-- **Trade / Account Management**: Trade professional program, key accounts (5)
+- **Merchandising & Buying**: Category managers, buyers, planners/allocators, pricing, assortment & space, private brand, promotions, merch ops & master data (43; breakdown §13.1)
+- **Finance & Accounting**: Controller, technical accounting, GL (per-entity), AP/AR, treasury, tax, FP&A, revenue assurance, logistics & cost finance (62)
+- **Supply Chain & Logistics**: S&OP/IBP & demand planning, supply & allocation planning, DC operations, fleet & logistics, procurement, imports & customs, vendor management, inventory planning (46; breakdown below)
+- **Information Technology**: the product-centric operating model — 9 stream-aligned domain product teams (MSC · WLI · SSP · CCP · FIN · CORP · PEO · OMO · TPS), 7 platform teams (IAP · INFRA · SEC · DP · SEP · AAP · FS), CIO Office (122; [`../07-methodology/it-product-operating-model.md`](../07-methodology/it-product-operating-model.md))
+- **Human Resources**: Talent acquisition, HRBPs (field), comp & ben, payroll ops, HR shared services, L&D, labor relations, HRIS & analytics (42)
+- **Marketing**: Brand, promotions, loyalty/CRM, digital, retail media & marketplace, insights, marketing ops (30; led by a **VP Marketing** under the CMO, mirroring the VP-for-Merchandising convention at §13.1 — the department-head tier the workflow catalog's escalation seats refer to)
+- **Store Operations**: VP Store Operations, regional managers, district managers, store support center (24)
+- **Legal & Compliance**: Corporate secretary, regulatory & government affairs, contracts, DPO/privacy, AML/MLRO, litigation & IP (20)
+- **Internal Audit & Risk**: (9; incl. IT/ERP auditors, ERM/TPRM, forensics)
+- **Customer Service / Call Center**: (34; hybrid central contact center + B2B desk + ecommerce support)
+- **Regional Loss Prevention**: Director, 20 regional LP officers, investigations, analytics (27)
+- **Health, Safety & Environment**: Safety officers (regional), company nurse, wellness (13)
+- **Quality Management**: Incoming inspection, vendor QA, metrology (5)
+- **Facilities & Real Estate**: Facilities, maintenance, property/lease admin, energy, surety (12)
+- **Sustainability / ESG**: Environmental, social, governance reporting (4)
+- **Strategy / Corporate Planning**: Annual planning, CPM, competitive intelligence (4)
+- **Trade / Account Management**: Trade professional program, key accounts, trade ops (7)
 
-#### Supply Chain & Logistics Team Structure (40 total)
+#### Supply Chain & Logistics Team Structure (46 total)
 
-> Sized at 40 in §3.3; reports to the **COO** (§11.1). The breakdown below sums to exactly 40 and
-> carves out a dedicated **S&OP/IBP sub-team** — the single accountable owner for the monthly
-> demand–supply consensus cycle ([VS-127](workflows/VS-127-sales-operations-planning-integrated-business-planning/README.md))
-> that was previously an unowned program (see `headcount-reality-check.md` §4, “S&OP Lead”). The
-> 35 → 40 increase is the minimum that closes the S&OP/IBP ownership gap and relieves the Supply
-> Chain understaffing flagged in the gap record, without adopting the gap record’s comfortable
-> range (~42–50).
+> Sized at 46 per the promoted structure of record; reports to the **COO** (§11.1). The
+> breakdown below sums to exactly 46 and instantiates the official TO's §5.2 sub-team mix —
+> the dedicated **S&OP/IBP sub-team** remains the single accountable owner for the monthly
+> demand–supply consensus cycle ([VS-127](workflows/VS-127-sales-operations-planning-integrated-business-planning/README.md));
+> the promotion adds execution depth (DC operations, procurement, imports, inventory
+> planning) per the TO's §5.2 register.
 
 | Sub-team / Role | Count | Responsibility |
 |---|---|---|
@@ -168,13 +164,13 @@ The company operates through **5 legal entities** organized as follows:
 | &nbsp;&nbsp;Demand Planners | 2 | Category-assigned forecasting, NPI/promo/event modeling, demand sensing |
 | &nbsp;&nbsp;Supply & Allocation Planner | 1 | Supply review, inventory reconciliation, multi-echelon allocation (PA-127.2 / VS-136) |
 | **Operational supply chain** | | |
-| &nbsp;&nbsp;DC Operations Managers/Coordinators | 8 | DC throughput across 4 DCs (VS-04) |
+| &nbsp;&nbsp;DC Operations (Manager + Coordinators ×8 + Analyst) | 10 | DC throughput across 4 DCs (VS-04); 2 coordinators per DC |
 | &nbsp;&nbsp;Fleet & Logistics | 6 | Outbound distribution, 3PL, inter-island freight (VS-06 / VS-66) |
-| &nbsp;&nbsp;Procurement / PO Execution | 8 | Vendor PO/release execution (VS-03) |
-| &nbsp;&nbsp;Imports & Customs | 5 | Import coordination, customs brokerage liaison (VS-122 / VS-87) |
-| &nbsp;&nbsp;Vendor Management / Sourcing Analysts | 4 | Vendor scorecard, sourcing support (VS-03 / VS-67) |
-| &nbsp;&nbsp;Inventory Planning Analysts | 3 | ROP/safety-stock policy, inventory health (VS-05 / VS-136) |
-| **Total** | **40** | |
+| &nbsp;&nbsp;Procurement / PO Execution (Mgr + Specialists ×6 + Coordinators ×2) | 9 | Vendor PO/release execution, ~18,000 PO lines/mo (VS-03) |
+| &nbsp;&nbsp;Imports & Customs (Mgr + Brokers ×2 + Coordinators ×2 + Doc Specialist) | 6 | Import coordination, customs brokerage, 400–600 TEU/mo (VS-122 / VS-87) |
+| &nbsp;&nbsp;Vendor Management (Mgr + Scorecard Analyst + Portal Specialists ×2) | 4 | Vendor scorecard, portal/ASN hygiene (VS-03 / VS-67) |
+| &nbsp;&nbsp;Inventory Planning (Mgr + Planners ×2 + Replenishment/Allocation Analysts ×2) | 5 | ROP/safety-stock policy, replenishment quality, VS-136 multi-echelon (VS-05) |
+| **Total** | **46** | |
 
 ---
 
@@ -184,15 +180,12 @@ The company operates through **5 legal entities** organized as follows:
 |---|---|
 | Store Personnel | 5,800 (200 stores × 29) |
 | Distribution Center Personnel | 600 (4 DCs × 150) |
-| Corporate HQ Personnel | 362 (rebalanced to minimum workflow-coverage levels — see §3.3 and `headcount-reality-check.md`) |
-| **Total Company Headcount** | **6,762** |
+| Corporate HQ Personnel | 511 (the promoted structure of record — see §3.3 and `optimal-table-of-organization.md`) |
+| **Total Company Headcount** | **6,911** |
 
-> **Revenue per employee**: ~PHP 9.21M/year (~PHP 62.3B ÷ 6,762) — driven by BuildRight's optimized store staffing model (29 per store). The headcount per store was increased from 28 to 29 to implement the recommendation for an additional Stock Associate (4 total per store) to ensure adequate coverage for continuous replenishment, cycle counting, and omnichannel fulfillment. HQ headcount was rebalanced from 315 to 357 (2026-06-20), then to 362 (2026-06-25) to stand up a dedicated S&OP/IBP sub-team in Supply Chain & Logistics — closing the previously-unowned VS-127 consensus cycle and the “S&OP Lead” gap in `headcount-reality-check.md` §4: the six functions previously rolled into an un-enumerated bucket (HSE, Quality, Facilities & Real Estate, Sustainability/ESG, Strategy, Trade Account Management) are now broken out explicitly, and Finance, IT, HR, and Legal were increased to the minimum required to cover the roles and transaction volumes referenced across the workflow catalog (e.g., dedicated DPO W53, Regulatory Officer W54, Tax Accountant W90, Logistics Finance Analyst W277, IT Helpdesk W48, AML/MLRO, and Regional Loss Prevention's 20 Officers for variance investigation across the 200-store chain).
+> **Revenue per employee**: ~PHP 9.01M/year (~PHP 62.3B ÷ 6,911) — driven by BuildRight's optimized store staffing model (29 per store). The headcount per store was increased from 28 to 29 to implement the recommendation for an additional Stock Associate (4 total per store) to ensure adequate coverage for continuous replenishment, cycle counting, and omnichannel fulfillment. HQ headcount was rebalanced from 315 to 357 (2026-06-20), then to 362 (2026-06-25), then to the adopted optimal structure (2026-09-02/03) — and **promoted to the actual structure of record on 2026-09-14** ([`optimal-table-of-organization.md`](optimal-table-of-organization.md), §5.1/§5.3; the pre-optimization 362/6,762 figures are retained there as the superseded reference column).
 
-> **Target-state headcount:** HQ 362 → **511** and total 6,762 → **6,911** per the adopted
-> target-state table of organization ([`optimal-table-of-organization.md`](optimal-table-of-organization.md)
-> §5.1/§11, revised 2026-09-03 for the hybrid IT capability-sourcing + agentic-AI model);
-> the current-state figures in this table remain canonical until each phase trigger fires.
+> **IT note:** the Information Technology department runs the product-centric operating model as its actual structure — 17 product teams, 122 FTE ([`../07-methodology/it-product-operating-model.md`](../07-methodology/it-product-operating-model.md) §9.1; two-tier sourcing doctrine: in-suite Oracle EBS incl. Oracle WMS/MSCA and Shipping/OTE, in-house and already-built products around the EBS core, AI & Agent Platform for governed automation; see `07-methodology/capability-sourcing-and-engineering-model.md`).
 
 ---
 
@@ -545,32 +538,32 @@ BuildRight Holdings, Inc.
 
 | Executive | HQ Departments Overseen | Dept HC |
 |---|---|---|
-| CEO / President | Merchandising & Buying; Strategy / Corporate Planning | 43 |
-| CFO | Finance & Accounting; Internal Audit & Risk ¹ | 53 |
-| COO | Store Operations; Supply Chain & Logistics; Facilities & Real Estate; Quality Management; Regional Loss Prevention; Customer Service / Call Center; Trade / Account Management | 131 |
-| CIO | Information Technology | 50 |
-| CMO | Marketing | 25 |
-| CHRO | Human Resources; Health, Safety & Environment | 36 |
-| VP Legal & Compliance | Legal & Compliance; Sustainability / ESG | 17 |
-| **Total** | **17 departments** here + Executive Office = **18 total HQ departments** (the 7 executives themselves are counted in Executive Office) | **355 + 7 = 362** |
+| CEO / President | Merchandising & Buying; Strategy / Corporate Planning | 47 |
+| CFO | Finance & Accounting; Internal Audit & Risk ¹ | 71 |
+| COO | Store Operations; Supply Chain & Logistics; Facilities & Real Estate; Quality Management; Regional Loss Prevention; Customer Service / Call Center; Trade / Account Management | 155 |
+| CIO | Information Technology (the 17-team product portfolio) | 122 |
+| CMO | Marketing | 30 |
+| CHRO | Human Resources; Health, Safety & Environment | 55 |
+| VP Legal & Compliance | Legal & Compliance; Sustainability / ESG | 24 |
+| **Total** | **17 departments** here + Executive Office = **18 total HQ departments** (the 7 executives themselves are counted in Executive Office) | **504 + 7 = 511** |
 
 > Department headcounts are taken from §3.3. **¹ Internal Audit independence:** the Head of
 > Internal Audit reports **functionally to the Board's Audit Committee** (dotted line) and
 > administratively to the CEO; the CFO association above denotes financial-reporting
 > coordination only — not a line that would impair audit independence.
 >
-> **Target-state TO.** The structure above is the current baseline. The adopted target-state
-> table of organization — board committees, governance-body cadence, span/layer discipline
-> (≤ 8 layers CEO → floor), the mandated-role register (DPO, MLRO, Safety Officers, CorpSec),
-> and the field dotted-line model (LP Officers, HRBPs) — is defined in
-> [`optimal-table-of-organization.md`](optimal-table-of-organization.md).
+> **Promotion (2026-09-14).** The structure above — including the board committees, governance-
+> body cadence, span/layer discipline (≤ 8 layers CEO → floor), the mandated-role register
+> (DPO, MLRO, Safety Officers, CorpSec), and the field dotted-line model (LP Officers, HRBPs) —
+> is the company's actual organization of record, promoted from the adopted target state by
+> executive direction; see [`optimal-table-of-organization.md`](optimal-table-of-organization.md).
 
 ### 11.2 Payroll Parameters (Philippines)
 
 | Parameter | Value |
 |---|---|
 | **Payroll Frequency** | Semi-monthly (15th and 30th) |
-| **Total Employees** | 6,762 |
+| **Total Employees** | 6,911 |
 | **Payroll Entities** | 5 (one per legal entity) |
 | **Statutory Benefits** | SSS, PhilHealth, Pag-IBIG (HDMF) |
 | **13th Month Pay** | Mandatory (1/12 of annual basic salary, paid by Dec 24) |
@@ -651,26 +644,29 @@ BuildRight Holdings, Inc.
 
 ## 13. Merchandising & Category Management
 
-### 13.1 Merchandising Team Structure (40 total)
+### 13.1 Merchandising Team Structure (43 total)
 
-> Sized at 40 in §3.3; reports to the CEO (§11.1). The breakdown below sums to exactly 40
-> and rebalances the mix toward planning, pricing, and assortment analytics — per
-> `headcount-reality-check.md` §7.4 — to match the 35,000-SKU assortment complexity. (The
-> prior list named only ~22 roles inside a 40-person department, leaving ~18 unexplained.)
+> Sized at 43 per the promoted structure of record; reports to the CEO (§11.1). The breakdown
+> below sums to exactly 43 and instantiates the official TO's §5.2/§5.3 register mix — the
+> planning/pricing/assortment weight for the 35,000-SKU assortment complexity
+> (`headcount-reality-check.md` §7.4 direction), plus a dedicated Pricing Manager and
+> promotions/vendor-funding depth.
 
 | Role | Count | Responsibility |
 |---|---|---|
 | VP for Merchandising | 1 | Category P&L ownership; reports to CEO |
 | Category Managers | 5 | Each owns 2–3 product categories and leads a buyer/planner pod |
 | Buyers (incl. Senior Buyers) | 10 | Vendor negotiation, assortment selection, PO placement |
-| Merchandise Planners / Allocators | 5 | Demand forecasting, open-to-buy, store/DC allocation |
+| Merchandise Planners / Allocators | 6 | Demand forecasting, open-to-buy, store/DC allocation |
+| Pricing Manager | 1 | Pricing strategy, SRP/margin policy, pricing-exception review |
 | Pricing Analysts | 4 | Competitive price tracking, SRP/margin analysis, promo pricing |
 | Assortment & Space Analysts | 3 | Planogram / space management, assortment rationalization |
 | Direct Sourcing / Import Buyers | 3 | Import vendor management, landed cost, LC/customs coordination |
-| Private Brand Team | 3 | Own-brand development & vendor-QA liaison (links to VS-41) |
-| Promotions & Vendor-Funding Coordinator | 2 | Promo setup, co-op / vendor-funded markdowns |
-| Merchandising Operations & Master Data | 4 | Item master, pricing-system admin, vendor setup, reporting |
-| **Total** | **40** | |
+| Private Brand Product Managers | 3 | Own-brand development & vendor-QA liaison (links to VS-41) |
+| Promotions & Vendor-Funding Coordinators | 3 | Promo setup, co-op / vendor-funded markdowns |
+| Merchandising Operations & Master Data Manager | 1 | Item-master governance, pricing-system admin, vendor setup |
+| Merchandising Operations Specialists | 3 | Item/prix maintenance, vendor portal data, catalog reporting |
+| **Total** | **43** | |
 
 ### 13.2 Seasonal Calendar (Philippines)
 
@@ -805,7 +801,7 @@ The following external systems are actively integrated with the core ERP system.
 | Customers (B2B Corporate) | 200 |
 | Vendors / Suppliers | 1,000 |
 | Locations (Stores + DCs + HQ) | 205 |
-| Employees | 6,762 |
+| Employees | 6,911 |
 | Chart of Accounts | ~500–800 per entity |
 | GL Accounts (consolidated) | ~2,000–3,000 |
 
@@ -854,7 +850,7 @@ The following external systems are actively integrated with the core ERP system.
 7. **Offline POS resilience**: Stores must sell during outages
 8. **Intercompany automation**: 5-entity consolidation
 9. **Supply chain optimization**: Demand planning, auto-replenishment
-10. **User adoption**: ~6,762 users across varying tech literacy levels
+10. **User adoption**: ~6,911 users across varying tech literacy levels
 
 ---
 
@@ -898,7 +894,7 @@ The following external systems are actively integrated with the core ERP system.
 
 ---
 
-*Document Version: 2.28 | Date: 2026-09-14 | Two-tier sourcing doctrine trued (sourcing model
+*Document Version: 3.0 | Date: 2026-09-14 | **Structure promotion — the optimal TO is the actual organization of record.** By executive direction the two-state discipline collapses: the adopted target-state table of organization ([`optimal-table-of-organization.md`](optimal-table-of-organization.md)) is **promoted to the actual structure** — §3.3 HQ Headcount 362 → **511** with all 18 department bullets re-based to the promoted values (Merch 43 · Finance 62 · SC 46 · IT 122 · HR 42 · Marketing 30 · Store Ops 24 · Legal 20 · IA 9 · CS 34 · LP 27 · HSE 13 · Quality 5 · Facilities 12 · ESG 4 · Strategy 4 · Trade 7 + Executive Office 7), §3.3's SC sub-team table re-based to 46 and §13.1's merchandising breakdown to 43 (both instantiating the TO §5.2 register mix), §4 total 6,762 → **6,911** with the revenue-per-employee division re-derived **~PHP 62.3B ÷ 6,911 ≈ PHP 9.01M**, §11.1's per-executive table re-footed (CEO 47 · CFO 71 · COO 155 · CIO 122 · CMO 30 · CHRO 55 · VP Legal 24; **504 + 7 = 511**), and the three remaining live employee-count rows re-based to the same canon (§11.2 Payroll-Parameters Total Employees, §15.2 Master-Data Employees row, §17 user-adoption bullet). The IT department runs the product-centric operating model as its actual structure (17 teams / 122 FTE, OM v3.13). Store (5,800) and DC (600) staffing unchanged; revenue canon unchanged. Prior v2.28 | Date: 2026-09-14 | Two-tier sourcing doctrine trued (sourcing model
 v3.0, OM v3.11): §14.1 re-issued under the two-tier doctrine — the TO banner re-pointed; the
 Active-ERP-Landscape table re-issued (Warehouse & Transport rows → in-suite Oracle WMS/MSCA
 + Shipping/OTE; Planning/Trade-Management row → the EBS-family stack; the POS estate,

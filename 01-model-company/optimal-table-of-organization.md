@@ -1,56 +1,60 @@
-# BuildRight Depot Corp. — Target-State Table of Organization
+# BuildRight Depot Corp. — Table of Organization (Structure of Record)
 
-> The **adopted target-state table of organization (TO)** for BuildRight Depot Corp. — board
+> The **official table of organization (TO)** of BuildRight Depot Corp. — board
 > and governance lines, executive structure, department architecture, field organization,
-> spans & layers, mandated roles, and steady-state sizing.
+> spans & layers, mandated roles, and sizing.
 >
-> **STATUS — OFFICIAL TABLE OF ORGANIZATION OF RECORD (elevated 2026-09-09; adopted as target state 2026-09-02).**
+> **STATUS — OFFICIAL TABLE OF ORGANIZATION OF RECORD — THE ACTUAL STRUCTURE (promoted 2026-09-14; elevated 2026-09-09; adopted as target state 2026-09-02).**
 > This document is the single authoritative statement of the enterprise's organization — the
-> design every box, role, reporting line, and governance body is validated against. The
-> two-state discipline is unchanged: the organization recognizes exactly two
-> states. The **current baseline** is the minimum-coverage structure in
+> design every box, role, reporting line, and governance body is validated against. **Promotion
+> (2026-09-14):** by executive direction the org recognizes **one state — this document is the
+> actual structure**, effective immediately; the pre-optimization baseline (HQ 362 / total
+> 6,762; IT 50) is superseded and retained only as the §5.1 reference column and the §11
+> promotion record. The pre-optimization baseline was the minimum-coverage structure in
 > [`model-company-profile.md`](model-company-profile.md) §3.3/§11.1 (HQ 362; total 6,762).
-> The **target state** is this document: **HQ 511 / total 6,911** at 200 stores (revised
-> 2026-09-03 for the hybrid IT capability-sourcing model + agentic-AI extension), reached
-> through the three demand-triggered phases in §11. It does **not** rewrite current-state
-> canon — every delta is stated explicitly (§5.1, §11), every figure traces to a source
+> The **structure of record** is this document: **HQ 511 / total 6,911** at 200 stores (revised
+> 2026-09-03 for the capability-sourcing model + agentic-AI extension — that decision's
+> three-tier posture superseded 2026-09-14 by the **two-tier sourcing doctrine** (in-suite
+> EBS core + build; OM v3.13 §9), to which this official TO is conformed), and **promoted to
+> the actual structure 2026-09-14** — the three build-up phases of §11 are the hiring-
+> execution record, not a pending transition. Every figure traces to a source
 > ([`headcount-reality-check.md`](headcount-reality-check.md) need bands;
 > [`it-product-operating-model.md`](../07-methodology/it-product-operating-model.md) §9 —
-> IT = 122 FTE; VS-177 field retail operating model), and each phase's promotion is
-> CHANGELOG-recorded. Every HQ role is now defined at role level in the §5.3 register —
+> IT = 122 FTE; VS-177 field retail operating model), and every promotion step is
+> CHANGELOG-recorded. Every HQ role is defined at role level in the §5.3 register —
 > role titles are the canonical workflow-RACI vocabulary, so every workflow Owner
-> resolves to exactly one register row. The 300-store continuation of the target is defined in §12.
+> resolves to exactly one register row. The 300-store continuation is defined in §12.
 
 ---
 
 ## 1. Purpose & Scope
 
-- **Purpose**: define the *optimal* table of organization for this company — not just the
-  minimum structure that closes known gaps (which is what the current baseline implements),
-  but the steady-state design the company converges on as volumes, ecommerce ramp, and the
-  200 → 300 store growth path materialize. Adopted as the company's target state on
-  2026-09-02 and elevated to the **official table of organization of record** on 2026-09-09 —
-  the single source of truth for structure, with every HQ role defined in §5.3.
+- **Purpose**: define the *optimal* table of organization for this company — the design that
+  closes the known gaps, sizes to workload and benchmark bands, and scales through the
+  200 → 300 store growth path. Adopted as the company's target state on 2026-09-02,
+  elevated to the **official table of organization of record** on 2026-09-09, and
+  **promoted to the actual structure on 2026-09-14** — the single source of truth for
+  structure, with every HQ role defined in §5.3.
 - **Scope**: the whole group — Board, Executive Office, the 18 HQ departments, the field
   retail layer (regions → districts → stores), the 4 DCs, and the 5 legal entities.
 - **Out of scope**: individual names/grades, compensation bands, implementation Gantt
   (phasing triggers in §11 only), and store staffing redesign (29/store and 150/DC are
   affirmed, not changed — see §13).
 
-### The two declared states
+### The states
 
 | State | HQ | Total | Status |
 |---|---|---|---|
-| **Current baseline** | 362 | 6,762 | Minimum-coverage TO implemented 2026-06-20/25 (profile §3.3) — canonical until phase triggers fire |
-| **Target (this document)** | **511** | **6,911** | Adopted 2026-09-02 (HQ 469 / 6,869); revised 2026-09-03 for the hybrid IT capability-sourcing model (+35 IT) and agentic-AI extension (+7 IT); optimal steady state at 200 stores; phased per §11; scales per §12 |
+| **Pre-optimization baseline** | 362 | 6,762 | Minimum-coverage TO implemented 2026-06-20/25 (profile §3.3) — **superseded 2026-09-14**; retained as the §5.1 reference column |
+| **Actual (this document)** | **511** | **6,911** | Adopted 2026-09-02 (HQ 469 / 6,869); revised 2026-09-03 for the capability-sourcing model (+35 IT) and agentic-AI extension (+7 IT); conformed to the two-tier sourcing doctrine and **promoted to the actual structure 2026-09-14** (OM v3.13); scales per §12 |
 
-**Design stance.** The current baseline (HQ 362) is the *minimum-viable* TO — the floor that
-resolves the known gaps. The adopted target lands at **HQ 511** — the upper edge of the
-reality-check's comfortable band (~440–515 after the 2026-09-03 hybrid + agentic revisions;
+**Design stance.** The pre-optimization baseline (HQ 362) was the *minimum-viable* TO — the floor that
+resolved the known gaps. The promoted structure lands at **HQ 511** — the upper edge of the
+reality-check's comfortable band (~440–515 after the 2026-09-03 capability-sourcing + agentic revisions under the two-tier doctrine;
 the band was ~440–470 under the unified-ERP model, when IT = 80), pushed to the top by
 IT = 122 per the product
-operating model) — reached through **three demand-triggered phases** (§11), never big-bang
-hiring.
+operating model. The three build-up phases of §11 are the **hiring-execution record** —
+structure first, talent acquisition in sequence, never big-bang hiring.
 
 ---
 
@@ -133,8 +137,9 @@ hiring.
 ```
 
 **Reading the chart.** Seven executives + CEO's strategy staff = Executive Office (7) plus a
-strategy cell; 18 HQ departments total, exactly as the current baseline (profile §11.1) — the target state keeps
-the current executive architecture (it is sound) and optimizes *below* it: sizing, sub-team
+strategy cell; 18 HQ departments total, exactly as the pre-optimization baseline (profile §11.1) — the
+promotion keeps
+the executive architecture (it is sound) and the optimization lives *below* it: sizing, sub-team
 structure, field layer, governance bodies, and mandated-role protection.
 
 ### 3.1 Full department tree (3 reporting levels)
@@ -213,15 +218,15 @@ CEO
 
 ## 5. HQ Department Design
 
-### 5.1 Target-state sizing summary (18 departments + Executive Office)
+### 5.1 Sizing summary — the promoted structure (18 departments + Executive Office)
 
-| # | Department | Current (baseline) | Reality-check band | **Target** | Primary workload driver |
+| # | Department | Pre-optimization baseline | Reality-check band | **Actual** | Primary workload driver |
 |---|---|---|---|---|---|
 | 1 | Executive Office | 7 | 7 | **7** | — |
 | 2 | Finance & Accounting | 46 | 58–68 | **62** | ~9,000 AP invoices/mo; 5 entities; PFRS 15; monthly VAT ×5 |
 | 3 | Merchandising & Buying | 40 | 40–45 | **43** | 35K active SKUs; 6 promo events/yr; competitive pricing (VS-57) |
 | 4 | Supply Chain & Logistics | 40 | 42–50 | **46** | 800–1K vendors; 400–600 TEU/mo; VS-127 consensus cycle; 4 DCs |
-| 5 | Information Technology | 50 | 65–130 | **122** | 17 product teams per it-product-operating-model.md §9.1 (authoritative — hybrid capability-sourcing + agentic-AI model, 2026-09-03) |
+| 5 | Information Technology | 50 | 65–130 | **122** | 17 product teams per it-product-operating-model.md §9.1 (authoritative — two-tier sourcing doctrine + agentic-AI platform, 2026-09-14; §9.1's v3.12 mix re-point: WLI's second vendor seat → in-suite WMS/OTE functional-analyst depth, one Platform Product Manager per integrate team, commodity-vendor commercial ownership in the CIO Office) |
 | 6 | Human Resources | 26 | 38–48 | **42** | 6,800+ staff; ~1,400 hires/yr; 13,400+ payslips/mo; CBA (VS-84) |
 | 7 | Marketing | 25 | 28–34 | **30** | Loyalty 600K members; retail media (VS-48); marketplace (VS-95); ecom ramp 3→7% |
 | 8 | Store Operations | 24 | 24 | **24** | 6 RM + 13 DM + store support center (VS-177) |
@@ -240,9 +245,9 @@ CEO
 | | DC personnel | 600 | OK | **600** | 150/DC affirmed (§13) |
 | | **Total company** | **6,762** | | **6,911** | Revenue/employee ≈ PHP 9.01M |
 
-> 511 lands inside the reality-check comfortable band (~440–515, as amended 2026-09-03) at
-> its upper edge — the increment over ~470 is IT at 122 (hybrid capability-sourcing +
-> agentic model), sized independently and authoritatively by the IT product operating model
+> The promoted structure lands inside the reality-check comfortable band (~440–515, as amended 2026-09-03) at
+> its upper edge — the increment over ~470 is IT at 122 (two-tier capability-sourcing +
+> agentic model under the 2026-09-14 doctrine), sized independently and authoritatively by the IT product operating model
 > §9.2. The IT band was extended 65–80 → 65–130 and the HQ band ~440–470 → ~440–510 →
 > ~440–515 by the 2026-09-03 hybrid + agentic decisions; all other department bands are
 > unchanged.
@@ -330,8 +335,12 @@ check (metrology, energy manager, competitive intelligence, key-account managers
 here: 9 stream-aligned domain products (7 configure / configure-and-integrate teams paired to
 business owners + the two in-house **build** squads OMO and TPS), 7 platform teams
 (integration, infra, security/GRC, data, engineering enablement, agentic enablement,
-field services), CIO Office.
-Target = 122 (authoritative steady-state sizing under the two-tier capability-sourcing +
+field services), CIO Office. Under the two-tier doctrine the integrate domains carry one
+**Platform Product Manager** each (WLI's seat = the chain-wide Oracle relationship &
+in-suite currency; commodity-vendor commercial ownership consolidated in the CIO Office),
+and WLI's second vendor seat converts to in-suite WMS/OTE functional-analyst depth —
+the shape the doctrine pays for, totals untouched (OM v3.12 §9.1).
+Actual = 122 — the product-centric operating model is the IT department's structure of record (authoritative sizing under the two-tier capability-sourcing +
 agentic model, mid-band of the 65–130 two-tier need band).
 
 ### 5.3 Enterprise Role Register (every HQ role, defined)
@@ -809,23 +818,26 @@ workload justification — the mechanism that prevents silent org creep between 
 
 ---
 
-## 11. Sizing & Phasing — Current 362 → Target 511
+## 11. Sizing & Phasing — promotion record (362 → 511, promoted 2026-09-14)
 
-The adopted target state is reached through three demand-triggered phases (no speculative
-hiring; each phase has explicit triggers):
+The structure was built — and on **2026-09-14 promoted to the actual organization of record** —
+through three demand-triggered phases (no speculative hiring; each phase had explicit triggers;
+the phase deltas below are the hiring-execution record retained for audit):
 
 | Phase | Horizon | Moves | HC delta |
 |---|---|---|---|
 | **1 — Regulatory floor** | 0–6 mo | Legal 14→20 (MLRO cell, privacy staff, gov-affairs); HSE 10→13 (SO coverage + nurse); IA 7→9 | +11 |
 | **2 — Transaction scale** | 6–18 mo | Finance 46→62 (tied to AP-automation threshold: ≤800 inv/clerk/mo); CS 30→34 (hybrid model decision) | +20 |
-| **3 — Capability scale** | 18–36 mo | IT 50→122 (per the hybrid + agentic product-model sequencing, OM §9.3); HR 26→42 (field HRBPs as regions mature); SC 40→46; Merch 40→43; Marketing 25→30; LP 20→27; Facilities 8→12; Quality 4→5; ESG 3→4; Strategy 3→4; Trade 5→7 (top-ups) | +118 |
+| **3 — Capability scale** | 18–36 mo | IT 50→122 (per the two-tier + agentic product-model sequencing, OM §9.3); HR 26→42 (field HRBPs as regions mature); SC 40→46; Merch 40→43; Marketing 25→30; LP 20→27; Facilities 8→12; Quality 4→5; ESG 3→4; Strategy 3→4; Trade 5→7 (top-ups) | +118 |
 | | | **Total** | **362 → 511 (+149)** |
 
-**Guardrails.** Total HQ never exceeds the 440–515 band (as amended 2026-09-03 for the
-hybrid + agentic IT model) at 200 stores; any phase that would
-breach it defers into the next scaling review (§12). Store/DC staffing unchanged throughout.
-Each phase promotion is recorded in [CHANGELOG.md](../CHANGELOG.md) and flips the affected
-§5.1 row from *target* to *current* — the mechanism that keeps the two states honest.
+**Guardrails.** The 440–515 band (as amended 2026-09-03 for the
+capability-sourcing + agentic IT model and conformed to the two-tier doctrine 2026-09-14)
+governed the build-up at 200 stores; from promotion, HQ headcount is governed by the §12
+scaling rules (HQ grows at ≤ half the store rate via ERP automation).
+Store/DC staffing unchanged throughout.
+Every promotion step is recorded in [CHANGELOG.md](../CHANGELOG.md) — the mechanism that
+keeps the structure honest.
 
 ---
 
@@ -891,7 +903,7 @@ Each phase promotion is recorded in [CHANGELOG.md](../CHANGELOG.md) and flips th
 
 ---
 
-*Document Version: 2.1 | Date: 2026-09-09 | **Thirteenth-wave consistency-review true-up (the v2.0 register issuance's own self-descriptions).** Three figure defects in the v2.0 prose, all under the unchanged register: (1) the v2.0 clause claimed '≈150 distinct roles' where the register holds **188 rows / 187 distinct role titles** (the count is re-derived and pinned every run by the new guard rule); (2) the §5.3 span note claimed the Assistant-Controller routing kept 'the Controller's direct span at 7 and the Assistant Controller's at 3' — 7 is the §5.2 sub-team-line count, while the register's two Logistics & Cost Finance analyst rows give **8 reporting rows** at the Controller (still inside the §9 5–8 band), and the 'at 3' counted only the 3 administrative cluster lines, not the Assistant Controller's own 6-person GL & consolidation team — the note now states both true counts; (3) one §5.2 conformance miss of exactly the class the v2.0 pass repaired for Store Operations and AR & Credit — the GL & Consolidation mix cell still read the pre-register 'GL accountant per entity (5) + consolidation/elimination (2)' blend with no head box where the register rows are the dual-hat manager + 5 GL accountants + 1 consolidation & intercompany accountant; cell conformed. No HC, reporting-line, or sizing change — 511 stands and every register row is unchanged. Guard extension: audit-model-docs.py gains to_register_hits — §5.1's 18-department current/target columns and two-state total rows, the three §5.2 sub-team tables, every §5.3 department-table HC foot, the §5.1↔§5.3 per-department pairing, the register-total footer line, the quoted distinct-role-title count, and the span note's Controller reporting-row count are re-derived from the document every run. Prior v2.0 (2026-09-09): **Official TO of record + every-role register.** The target-state TO is elevated to the company's **official table of organization of record** — the single authoritative statement of the enterprise's org design; the two-state discipline (§1) is unchanged and no sizing figure moves. New **§5.3 Enterprise Role Register**: every one of the 511 HQ roles is defined at role level (HC, reporting line, mandate) across 18 department tables + the Executive Office, footing exactly to §5.1 (7+62+43+46+122+42+30+24+20+9+34+27+13+5+12+4+4+7 = 511), with role titles drawn from the workflow catalog's canonical RACI vocabulary (≈150 distinct roles), IT carried by reference to the operating model per the single-source rule, spans held inside the §9 bands (Finance's transactional cluster administratively routed through a dual-hat Assistant Controller to keep the Controller at 7 directs), and the §5.1 merchandising target mix (43) conformed to the reality-check §7.4 direction (+1 planner, +1 pricing, +1 promotions vs the current-40 canon). One latent-arithmetic repair: §5.2's Store Operations line summed to 24 without a department-head box (6 RM + 13 DM + 5 SSC); the register makes the **VP Store Operations box explicit inside the fixed 24** and sizes the Store Support Center at **4** (store-opening task force = a led duty of the standards manager, VS-37, not a fifth box) — net zero; §7.1's tree trued to 'Store Support Center (4)'; the §5.2 AR & Credit mix cell is detailed (mgr + AR sup/clerks 3 + collections 2 + credit 2) to match the register. Companion pins re-pointed (reality-check STATUS banner TO pin → v2.0; root-README tree annotation). Prior v1.5 (2026-09-03): **Consistency repair (§11 phase-delta true-up):**
+*Document Version: 2.3 | Date: 2026-09-14 | **Structure promotion — this TO is the actual organization of record.** By executive direction the two-state discipline collapses: the org recognizes **one state** — this document, effective immediately. §1's states table relabeled (pre-optimization baseline superseded; this document **actual**), the banner retitled, §5.1 retargeted as the promoted sizing summary (baseline column retained as the superseded reference — 362/6,762 arithmetic preserved for audit), §5.2's IT paragraph reads "Actual = 122 — the product-centric operating model is the IT department's structure of record", and §11 is recast as the **promotion record** (the three build-up phases = the hiring-execution record; from promotion, §12's scaling rules govern HQ headcount). Companion canon re-based: `model-company-profile.md` v3.0 (§3.3/§4/§11.1/§13.1 to the promoted figures; revenue/employee re-derived ~PHP 62.3B ÷ 6,911 ≈ PHP 9.01M) and `it-product-operating-model.md` v3.13 (the 17-team product model as the IT department's actual structure). No HC, role, or reporting-line change — HQ 511 / total 6,911, IT 122 / 17 teams, and the §5.3 register's 188 rows / 187 distinct role titles all stand. Prior v2.2 (2026-09-14): **Two-tier doctrine conformance + IT shape note (no sizing change).** With the 2026-09-14 two-tier sourcing doctrine enacted (in-suite EBS core + build; no capability-product buy tier), the official TO's IT surfaces are conformed: banner, two-state table, §5.1 IT driver text, §5.1 band note and §11 Phase-3/guardrail wording now speak the two-tier capability-sourcing model; §5.2's IT paragraph gains the doctrine's shape note — one **Platform Product Manager** per configure-and-integrate team (WLI's seat = the chain-wide Oracle relationship & in-suite currency), commodity-vendor commercial ownership consolidated in the CIO Office, and WLI's second vendor seat converted to in-suite WMS/OTE functional-analyst depth (OM v3.12 §9.1). Every figure is unchanged — HQ 511 / total 6,911, IT 122 / 17 product teams — and the §5.3 register's 188 rows / 187 distinct role titles stand. Prior v2.1 (2026-09-09): **Thirteenth-wave consistency-review true-up (the v2.0 register issuance's own self-descriptions).** Three figure defects in the v2.0 prose, all under the unchanged register: (1) the v2.0 clause claimed '≈150 distinct roles' where the register holds **188 rows / 187 distinct role titles** (the count is re-derived and pinned every run by the new guard rule); (2) the §5.3 span note claimed the Assistant-Controller routing kept 'the Controller's direct span at 7 and the Assistant Controller's at 3' — 7 is the §5.2 sub-team-line count, while the register's two Logistics & Cost Finance analyst rows give **8 reporting rows** at the Controller (still inside the §9 5–8 band), and the 'at 3' counted only the 3 administrative cluster lines, not the Assistant Controller's own 6-person GL & consolidation team — the note now states both true counts; (3) one §5.2 conformance miss of exactly the class the v2.0 pass repaired for Store Operations and AR & Credit — the GL & Consolidation mix cell still read the pre-register 'GL accountant per entity (5) + consolidation/elimination (2)' blend with no head box where the register rows are the dual-hat manager + 5 GL accountants + 1 consolidation & intercompany accountant; cell conformed. No HC, reporting-line, or sizing change — 511 stands and every register row is unchanged. Guard extension: audit-model-docs.py gains to_register_hits — §5.1's 18-department current/target columns and two-state total rows, the three §5.2 sub-team tables, every §5.3 department-table HC foot, the §5.1↔§5.3 per-department pairing, the register-total footer line, the quoted distinct-role-title count, and the span note's Controller reporting-row count are re-derived from the document every run. Prior v2.0 (2026-09-09): **Official TO of record + every-role register.** The target-state TO is elevated to the company's **official table of organization of record** — the single authoritative statement of the enterprise's org design; the two-state discipline (§1) is unchanged and no sizing figure moves. New **§5.3 Enterprise Role Register**: every one of the 511 HQ roles is defined at role level (HC, reporting line, mandate) across 18 department tables + the Executive Office, footing exactly to §5.1 (7+62+43+46+122+42+30+24+20+9+34+27+13+5+12+4+4+7 = 511), with role titles drawn from the workflow catalog's canonical RACI vocabulary (≈150 distinct roles), IT carried by reference to the operating model per the single-source rule, spans held inside the §9 bands (Finance's transactional cluster administratively routed through a dual-hat Assistant Controller to keep the Controller at 7 directs), and the §5.1 merchandising target mix (43) conformed to the reality-check §7.4 direction (+1 planner, +1 pricing, +1 promotions vs the current-40 canon). One latent-arithmetic repair: §5.2's Store Operations line summed to 24 without a department-head box (6 RM + 13 DM + 5 SSC); the register makes the **VP Store Operations box explicit inside the fixed 24** and sizes the Store Support Center at **4** (store-opening task force = a led duty of the standards manager, VS-37, not a fifth box) — net zero; §7.1's tree trued to 'Store Support Center (4)'; the §5.2 AR & Credit mix cell is detailed (mgr + AR sup/clerks 3 + collections 2 + credit 2) to match the register. Companion pins re-pointed (reality-check STATUS banner TO pin → v2.0; root-README tree annotation). Prior v1.5 (2026-09-03): **Consistency repair (§11 phase-delta true-up):**
 each phase row's HC-delta cell now equals the sum of its own named moves — Phase 1
 +18 → **+11** (Legal +6, HSE +3, IA +2), Phase 2 +26 → **+20** (Finance +16, CS +4),
 Phase 3 +105 → **+118** with the ESG/Strategy/Trade top-ups made explicit (ESG 3→4,

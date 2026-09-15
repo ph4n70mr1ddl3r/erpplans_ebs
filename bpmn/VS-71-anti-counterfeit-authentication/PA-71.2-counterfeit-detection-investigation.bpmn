@@ -528,7 +528,7 @@ Owner: LP Analyst</bpmn:text>
     <bpmn:process id="W_W2565" name="W2565. Internal Counterfeit Prevention &amp; Staff Integrity Program" isExecutable="false">
       <bpmn:documentation>Trigger: Annual program cycle or internal counterfeit incident
 Frequency: Annual program; incident-driven updates
-Volume: 6,762 employees
+Volume: 6,911 employees
 Owner: LP Manager
 Participants: LP Manager, HR, Store Managers, Ethics Committee
 Source: workflow W2565 — Internal Counterfeit Prevention &amp; Staff Integrity Program</bpmn:documentation>

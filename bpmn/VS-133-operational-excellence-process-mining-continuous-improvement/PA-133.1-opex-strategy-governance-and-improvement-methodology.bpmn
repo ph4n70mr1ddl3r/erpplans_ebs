@@ -528,7 +528,7 @@ Owner: COO / Master Black Belt</bpmn:text>
     <bpmn:process id="W_W4056" name="W4056. Continuous Improvement Culture, Suggestion System &amp; Recognition" isExecutable="false">
       <bpmn:documentation>Trigger: Program stand-up; ongoing
 Frequency: Continuous
-Volume: ~6,762 employees + contingent (links to VS-98); frontline suggestion volume
+Volume: ~6,911 employees + contingent (links to VS-98); frontline suggestion volume
 Owner: COO / CHRO
 Participants: OpEx CoE, HR (links to VS-103), Internal Comms (links to VS-103.1), store/DC leadership
 Source: workflow W4056 — Continuous Improvement Culture, Suggestion System &amp; Recognition</bpmn:documentation>

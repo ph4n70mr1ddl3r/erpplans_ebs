@@ -25,7 +25,7 @@ Part of the [02-oracle-ebs blueprint](README.md).
 | 7 | Price lists & modifiers | Regular/clearance/promo hierarchy | `QP_PRICE_LIST_PUB` + modifier/qualifier loads | W2 — before any channel cutover |
 | 8 | Suppliers + sites + TIN/ATC | ~800–1,000 active vendors | TCA/supplier APIs (`AP_VENDOR_PUB_PKG` class) | W1 — per mapping §2.2 |
 | 9 | Customers (trade, corporate, loyalty members) | ~5,400 AR accounts canon | TCA party/site/account APIs (`HZ_*`) + customer profile classes | W3 — per mapping §2.3 |
-| 10 | Employees + assignments + EITs | 6,762 headcount (200×29 stores + 600 DC + 362 HQ) | `HR_PERSON_API`/assignment APIs + EIT loads | W4 — per mapping §2.x |
+| 10 | Employees + assignments + EITs | 6,911 headcount (200×29 stores + 600 DC + 511 HQ) | `HR_PERSON_API`/assignment APIs + EIT loads | W4 — per mapping §2.x |
 | 11 | Payroll YTD balances | Per BIR reconciliation needs | Loaded into the **in-house payroll build** (Payroll PH); EBS receives no payroll balances — period costing journals post via row-12's interface path (E8) | W4 — statutory reconciliation gate |
 | 12 | Opening GL balances (all 5 ledgers) | Balance-sheet + P&L stubs | `GL_INTERFACE` → Journal Import, one journal per entity/segment check | W1 — go-live weekend |
 | 13 | Open AP invoices + advances | Legacy accounting | `AP_INVOICES_INTERFACE` (+ withholding at interface) | W1 |
@@ -123,4 +123,4 @@ decision, not a rebuild.
 
 ---
 
-*Document Version: 1.1 | Date: 2026-09-14 | Two-tier sourcing doctrine enacted: row 11 re-pointed (payroll YTD loads into the in-house Payroll PH build; EBS receives postings, not balances), W4 sequence line updated. Prior v1.0 (2026-09-14): initial issue — 21-row load-path register (object → EBS interface/API), wave sequence, six validation gates tied to W73/W385, historical-data strategy, cutover sequence and roles. Volume anchors quoted from data-migration-mapping.md and the canon (55,000 item-master / ~800–1,000 vendors / ~5,400 AR accounts / 6,762 HC); no new totals introduced.*
+*Document Version: 1.2 | Date: 2026-09-14 | Structure-promotion re-base (profile v3.0 / TO v2.3): row 10's headcount re-based 6,762 → 6,911 (200×29 stores + 600 DC + 511 HQ). No other mapping rows changed. Prior v1.1 | Date: 2026-09-14 | Two-tier sourcing doctrine enacted: row 11 re-pointed (payroll YTD loads into the in-house Payroll PH build; EBS receives postings, not balances), W4 sequence line updated. Prior v1.0 (2026-09-14): initial issue — 21-row load-path register (object → EBS interface/API), wave sequence, six validation gates tied to W73/W385, historical-data strategy, cutover sequence and roles. Volume anchors quoted from data-migration-mapping.md and the canon (55,000 item-master / ~800–1,000 vendors / ~5,400 AR accounts / 6,762 HC); no new totals introduced.*

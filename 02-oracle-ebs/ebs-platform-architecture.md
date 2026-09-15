@@ -124,7 +124,7 @@ cost is a FinOps decision, not a sourcing decision.
 |---|---|---|
 | **DEV** | Configuration build, extension development | Refresh-masked clones per W384 |
 | **TEST/SIT** | Integration testing with the integrated platforms (POS/ecommerce/WMS stubs) | IAP contract tests run here (sourcing model §7 rule 3) |
-| **UAT/TRAIN** | Business validation + the 6,762-user training estate | W73 parallel-run rehearsals |
+| **UAT/TRAIN** | Business validation + the 6,911-user training estate | W73 parallel-run rehearsals |
 | **PATCH** | ADOP patch/upgrade rehearsal (RUP, CPU) | Mandatory gate before any PROD patch |
 | **PROD** | Production | DR twin via Data Guard |
 
@@ -186,4 +186,4 @@ rules:
 
 ---
 
-*Document Version: 1.1 | Date: 2026-09-14 | Two-tier sourcing doctrine enacted (in EBS → use it; otherwise → build): Oracle WMS/MSCA and Shipping/OTE adopted in-suite (BoB WMS/TMS superseded), Oracle Payroll marked not-adopted with payroll re-scoped to the in-house build (fit-gap §4 resolution 7), in-house-products roster added (POS/ecommerce/loyalty already built — integration is the program). Prior v1.0 (2026-09-14): initial issue — org/ledger model, module footprint, tech stack, environments, integration and security architecture for the EBS realization. Canon references: 5 legal entities / 200 stores / 4 DCs / 35,000 active SKUs / ~2.8M POS transactions/month (tender-mix canon); Premier-Support horizon re-verified at contract time.*
+*Document Version: 1.2 | Date: 2026-09-14 | Structure-promotion re-base (profile v3.0 / TO v2.3): §4's UAT/TRAIN row training-estate figure re-based 6,762-user → 6,911-user (promoted HQ 511 / total 6,911). No §1–§3/§5–§7 changes. Prior v1.1 | Date: 2026-09-14 | Two-tier sourcing doctrine enacted (in EBS → use it; otherwise → build): Oracle WMS/MSCA and Shipping/OTE adopted in-suite (BoB WMS/TMS superseded), Oracle Payroll marked not-adopted with payroll re-scoped to the in-house build (fit-gap §4 resolution 7), in-house-products roster added (POS/ecommerce/loyalty already built — integration is the program). Prior v1.0 (2026-09-14): initial issue — org/ledger model, module footprint, tech stack, environments, integration and security architecture for the EBS realization. Canon references: 5 legal entities / 200 stores / 4 DCs / 35,000 active SKUs / ~2.8M POS transactions/month (tender-mix canon); Premier-Support horizon re-verified at contract time.*
