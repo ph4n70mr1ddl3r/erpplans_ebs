@@ -64,8 +64,8 @@ Duration: 2 hours</bpmn:documentation>
         <bpmn:incoming>W120_Flow18</bpmn:incoming>
         <bpmn:outgoing>W120_Flow19</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W120_Task10" name="Allocate audit staff and timeline in ERP/Audit Management System">
-        <bpmn:documentation>Step 6: Allocate audit staff and timeline in ERP/Audit Management System
+      <bpmn:userTask id="W120_Task10" name="Allocate audit staff and timeline in Oracle Internal Controls Manager (ICM —…">
+        <bpmn:documentation>Step 6: Allocate audit staff and timeline in Oracle Internal Controls Manager (ICM — fit-gap H11)
 Responsible (R): Audit Team
 Accountable (A): Head of IA
 Duration: 1 day</bpmn:documentation>
@@ -599,7 +599,7 @@ Source: workflow W333 — Audit Issue Remediation &amp; CAP Tracking</bpmn:docum
         <bpmn:outgoing>W333_Flow16</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:userTask id="W333_Task7" name="Log all findings, Corrective Action Plans (CAPs), owners, and due dates into…">
-        <bpmn:documentation>Step 1: Log all findings, Corrective Action Plans (CAPs), owners, and due dates into the Audit Management System
+        <bpmn:documentation>Step 1: Log all findings, Corrective Action Plans (CAPs), owners, and due dates into Oracle Internal Controls Manager (ICM — fit-gap H11)
 Responsible (R): Audit Team
 Accountable (A): Head of IA
 Duration: 1 day</bpmn:documentation>

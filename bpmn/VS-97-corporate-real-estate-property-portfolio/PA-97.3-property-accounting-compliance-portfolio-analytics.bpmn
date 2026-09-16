@@ -320,7 +320,7 @@ Source: workflow W3205 — Common Area, Grounds &amp; Facility Operations Oversi
         <bpmn:outgoing>W3205_Flow10</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:userTask id="W3205_Task4" name="Property Mgr/Facilities operate common areas: parking lot maintenance (line…">
-        <bpmn:documentation>Step 1: Property Mgr/Facilities operate common areas: parking lot maintenance (line marking, lighting, drainage — critical in PH rainy season), landscaping, signage, exterior lighting, waste collection (links to VS-73); schedule preventive maintenance via CMMS (links to VS-20.3)
+        <bpmn:documentation>Step 1: Property Mgr/Facilities operate common areas: parking lot maintenance (line marking, lighting, drainage — critical in PH rainy season), landscaping, signage, exterior lighting, waste collection (links to VS-73); schedule preventive maintenance in Oracle eAM (fit-gap F5; links to VS-20.3)
 Responsible (R): Property Mgr / Facilities
 Accountable (A): Property Manager
 Duration: Continuous</bpmn:documentation>

@@ -5647,6 +5647,9 @@ def census():
         "BuildRight Trade Partner", "Digital Payment Partner",
         "Exclusive Brand Partner", "Home Building Partner",
         "Innovation Partner", "Facebook/Meta Ads Manager",
+        # 2026-09-16 fortieth-wave review: adopted Oracle product names that end
+        # in a role head noun — vehicles, not people (fit-gap H11/F3).
+        "Oracle Internal Controls Manager", "Oracle Property Manager",
     }
 
     def _prose_candidate_resolves(span):

@@ -1961,7 +1961,7 @@ Duration: Notification: automated; Review: 15–30 min per incident</bpmn:docume
         <bpmn:outgoing>W559_Flow31</bpmn:outgoing>
       </bpmn:serviceTask>
       <bpmn:serviceTask id="W559_Task16" name="System generates corrective action task if maintenance needed">
-        <bpmn:documentation>Step 10: System generates corrective action task if maintenance needed: if incident requires facility maintenance: (a) system auto-generates work order in W47 facility maintenance module, (b) work order linked to incident ID for traceability, (c) priority set based on incident severity (Major = emergency maintenance, Moderate = 24-hour SLA, Minor = normal queue), (d) maintenance completion updates incident record status; for recurring incidents at same location: system flags pattern for Root Cause Analysis assignment
+        <bpmn:documentation>Step 10: System generates corrective action task if maintenance needed: if incident requires facility maintenance: (a) system auto-generates work order in Oracle eAM (W47, fit-gap F5), (b) work order linked to incident ID for traceability, (c) priority set based on incident severity (Major = emergency maintenance, Moderate = 24-hour SLA, Minor = normal queue), (d) maintenance completion updates incident record status; for recurring incidents at same location: system flags pattern for Root Cause Analysis assignment
 Responsible (R): System
 Accountable (A): —
 Duration: Automated</bpmn:documentation>
@@ -4647,7 +4647,7 @@ Duration: 10 min</bpmn:documentation>
         <bpmn:outgoing>W1103_Flow16</bpmn:outgoing>
       </bpmn:serviceTask>
       <bpmn:userTask id="W1103_Task8" name="Tarp Maintenance &amp; Replacement Tracking">
-        <bpmn:documentation>Step 5: Tarp Maintenance &amp; Replacement Tracking: (a) tarps inspected weekly for tears, UV degradation, and grommet damage; (b) damaged tarps replaced from store maintenance supply; (c) tarp replacement tracked in facility maintenance module (W47) as consumable expense; (d) annual tarp budget: ~PHP 15,000–25,000 per store (10–15 tarps × PHP 1,500–2,000 each)
+        <bpmn:documentation>Step 5: Tarp Maintenance &amp; Replacement Tracking: (a) tarps inspected weekly for tears, UV degradation, and grommet damage; (b) damaged tarps replaced from store maintenance supply; (c) tarp replacement tracked in Oracle eAM (W47, fit-gap F5) as consumable expense; (d) annual tarp budget: ~PHP 15,000–25,000 per store (10–15 tarps × PHP 1,500–2,000 each)
 Responsible (R): Stock Associate
 Accountable (A): Store Manager
 Duration: 5 min/week</bpmn:documentation>

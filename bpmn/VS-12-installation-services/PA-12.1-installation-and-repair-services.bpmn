@@ -2043,7 +2043,7 @@ Duration: 5 min per job (automated)</bpmn:documentation>
         <bpmn:outgoing>W1254_Flow16</bpmn:outgoing>
       </bpmn:serviceTask>
       <bpmn:userTask id="W1254_Task8" name="Warranty registration &amp; customer notification">
-        <bpmn:documentation>Step 3: Warranty registration &amp; customer notification: (a) register warranty in ERP warranty module with unique warranty ID; (b) link warranty to customer record in CRM (loyalty member or new customer); (c) send warranty confirmation to customer: email with digital warranty certificate, SMS with warranty ID and expiry date; (d) for loyalty members: auto-link warranty to customer profile for future claim reference; (e) schedule warranty expiry reminder notification (30 days before expiry)
+        <bpmn:documentation>Step 3: Warranty registration &amp; customer notification: (a) register warranty in Oracle Install Base with unique warranty ID (fit-gap D16); (b) link warranty to customer record in CRM (loyalty member or new customer); (c) send warranty confirmation to customer: email with digital warranty certificate, SMS with warranty ID and expiry date; (d) for loyalty members: auto-link warranty to customer profile for future claim reference; (e) schedule warranty expiry reminder notification (30 days before expiry)
 Responsible (R): Customer Service Representative
 Accountable (A): Installation Services Coordinator
 Duration: 5 min per job</bpmn:documentation>

@@ -58,7 +58,7 @@ Duration: 1 week</bpmn:documentation>
         <bpmn:outgoing>W1854_Flow18</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W1854_Task10" name="Lease execution: (a) COO and Legal Counsel coordinate lease signing with…">
-        <bpmn:documentation>Step 5: Lease execution: (a) COO and Legal Counsel coordinate lease signing with landlord, (b) notarization per Philippine legal requirements, (c) lease agreement registered in lease management module in ERP, (d) Finance creates lease liability and ROU asset per PFRS 16 in BuildRight Property Management, Inc. books, (e) COO coordinates tenant fit-out with landlord and store construction team per W20 (real estate &amp; construction)
+        <bpmn:documentation>Step 5: Lease execution: (a) COO and Legal Counsel coordinate lease signing with landlord, (b) notarization per Philippine legal requirements, (c) lease agreement registered in Oracle Property Manager (fit-gap F3), (d) Finance creates lease liability and ROU asset per PFRS 16 in BuildRight Property Management, Inc. books, (e) COO coordinates tenant fit-out with landlord and store construction team per W20 (real estate &amp; construction)
 Responsible (R): COO / Legal / Finance
 Accountable (A): CFO
 Duration: 1–2 weeks</bpmn:documentation>
@@ -123,8 +123,8 @@ Source: workflow W1855 — Lease Agreement Registration, Document Management &am
       <bpmn:startEvent id="W1855_Start4" name="Lease agreement executed (W1854)">
         <bpmn:outgoing>W1855_Flow11</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:userTask id="W1855_Task5" name="Lease Administrator registers new lease in lease management module: (a) lease…">
-        <bpmn:documentation>Step 1: Lease Administrator registers new lease in lease management module: (a) lease number, landlord, property address, entity (BuildRight Property Management, Inc.), (b) key dates: commencement, expiry, renewal option deadline, rent escalation dates, break clause dates, (c) financial terms: base rent, CAM charges, escalation schedule, security deposit, (d) special conditions: exclusivity, TI allowance, maintenance responsibilities, (e) document attachment: scanned signed lease agreement, notarized copy
+      <bpmn:userTask id="W1855_Task5" name="Lease Administrator registers new lease in Oracle Property Manager (fit-gap…">
+        <bpmn:documentation>Step 1: Lease Administrator registers new lease in Oracle Property Manager (fit-gap F3): (a) lease number, landlord, property address, entity (BuildRight Property Management, Inc.), (b) key dates: commencement, expiry, renewal option deadline, rent escalation dates, break clause dates, (c) financial terms: base rent, CAM charges, escalation schedule, security deposit, (d) special conditions: exclusivity, TI allowance, maintenance responsibilities, (e) document attachment: scanned signed lease agreement, notarized copy
 Responsible (R): Lease Administrator
 Accountable (A): COO
 Duration: 1–2 hours/lease</bpmn:documentation>
@@ -216,7 +216,7 @@ Duration: 2–4 weeks</bpmn:documentation>
         <bpmn:outgoing>W1856_Flow14</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W1856_Task7" name="Legal Counsel reviews and executes renewal agreement; Finance updates lease…">
-        <bpmn:documentation>Step 3: Legal Counsel reviews and executes renewal agreement; Finance updates lease terms in system: (a) update lease end date and financial schedule, (b) recalculate PFRS 16 ROU asset and lease liability for renewed term, (c) update key date alerts in lease management module
+        <bpmn:documentation>Step 3: Legal Counsel reviews and executes renewal agreement; Finance updates lease terms in system: (a) update lease end date and financial schedule, (b) recalculate PFRS 16 ROU asset and lease liability for renewed term, (c) update key date alerts in Oracle Property Manager (fit-gap F3)
 Responsible (R): Legal / Finance
 Accountable (A): CFO
 Duration: 1–2 weeks</bpmn:documentation>

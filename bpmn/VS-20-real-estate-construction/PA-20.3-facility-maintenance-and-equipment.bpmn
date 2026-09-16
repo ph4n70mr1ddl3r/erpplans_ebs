@@ -678,7 +678,7 @@ Source: workflow W808 — Generator Preventive Maintenance, Fuel Management &amp
         <bpmn:outgoing>W808_Flow15</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:userTask id="W808_Task6" name="Monthly Visual Inspection">
-        <bpmn:documentation>Step 1: Monthly Visual Inspection: Facilities Manager or designated store/DC staff conducts monthly inspection: (a) check engine oil level and condition; (b) check coolant level; (c) check battery voltage and terminal connections; (d) check fuel level in day tank; (e) inspect for leaks (oil, coolant, fuel); (f) check belt condition and tension; (g) verify control panel shows &quot;Ready&quot; status with no fault indicators; (h) run generator for 15-30 minutes under no-load to verify startup; (i) log inspection results and runtime hours in maintenance system per W400
+        <bpmn:documentation>Step 1: Monthly Visual Inspection: Facilities Manager or designated store/DC staff conducts monthly inspection: (a) check engine oil level and condition; (b) check coolant level; (c) check battery voltage and terminal connections; (d) check fuel level in day tank; (e) inspect for leaks (oil, coolant, fuel); (f) check belt condition and tension; (g) verify control panel shows &quot;Ready&quot; status with no fault indicators; (h) run generator for 15-30 minutes under no-load to verify startup; (i) log inspection results and runtime hours in Oracle eAM per W400 (fit-gap F5)
 Responsible (R): Store/DC Staff
 Accountable (A): Facilities Manager
 Duration: 30-45 min/month per generator</bpmn:documentation>
@@ -694,7 +694,7 @@ Duration: 1-2 hours/month fuel logistics</bpmn:documentation>
         <bpmn:outgoing>W808_Flow17</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W808_Task8" name="Quarterly Load Bank Testing">
-        <bpmn:documentation>Step 3: Quarterly Load Bank Testing: Generator service technician conducts quarterly load bank test: (a) connect external load bank to generator; (b) run generator at 25%, 50%, 75%, and 100% rated load for minimum 30 minutes each step; (c) record voltage, frequency, amperage, and exhaust temperature at each load level; (d) verify automatic transfer switch (ATS) operation: simulate power failure, verify generator starts within 10 seconds and ATS transfers load; (e) verify transfer back to utility power when restored; (f) compare performance to manufacturer specifications; (g) log results in maintenance system
+        <bpmn:documentation>Step 3: Quarterly Load Bank Testing: Generator service technician conducts quarterly load bank test: (a) connect external load bank to generator; (b) run generator at 25%, 50%, 75%, and 100% rated load for minimum 30 minutes each step; (c) record voltage, frequency, amperage, and exhaust temperature at each load level; (d) verify automatic transfer switch (ATS) operation: simulate power failure, verify generator starts within 10 seconds and ATS transfers load; (e) verify transfer back to utility power when restored; (f) compare performance to manufacturer specifications; (g) log results in Oracle eAM
 Responsible (R): Generator Service Technician
 Accountable (A): Facilities Manager
 Duration: 2-4 hours per generator</bpmn:documentation>
@@ -702,7 +702,7 @@ Duration: 2-4 hours per generator</bpmn:documentation>
         <bpmn:outgoing>W808_Flow18</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W808_Task9" name="Annual Full Service">
-        <bpmn:documentation>Step 4: Annual Full Service: Generator service technician conducts annual major service: (a) change engine oil and oil filter; (b) replace fuel filter(s); (c) replace air filter(s); (d) inspect and adjust valve clearance; (e) inspect and clean fuel injectors; (f) test battery under load and replace if below 80% capacity; (g) inspect alternator and connections; (h) inspect and clean ATS contacts; (i) update service log in asset maintenance record per W400; (j) estimate remaining useful life based on total runtime hours and condition
+        <bpmn:documentation>Step 4: Annual Full Service: Generator service technician conducts annual major service: (a) change engine oil and oil filter; (b) replace fuel filter(s); (c) replace air filter(s); (d) inspect and adjust valve clearance; (e) inspect and clean fuel injectors; (f) test battery under load and replace if below 80% capacity; (g) inspect alternator and connections; (h) inspect and clean ATS contacts; (i) update service log in Oracle eAM per W400; (j) estimate remaining useful life based on total runtime hours and condition
 Responsible (R): Generator Service Technician
 Accountable (A): Facilities Manager
 Duration: 4-8 hours per generator</bpmn:documentation>

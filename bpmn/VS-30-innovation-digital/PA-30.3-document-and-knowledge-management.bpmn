@@ -541,7 +541,7 @@ Duration: 2-5 days</bpmn:documentation>
         <bpmn:outgoing>W688_Flow25</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W688_Task12" name="Counterparty negotiation">
-        <bpmn:documentation>Step 5: Counterparty negotiation: Legal Counsel or Department Head negotiates final terms with counterparty; all redlines tracked in contract management system; significant deviations from BuildRight standard terms flagged for VP Legal approval
+        <bpmn:documentation>Step 5: Counterparty negotiation: Legal Counsel or Department Head negotiates final terms with counterparty; all redlines tracked in the CLM (DOC-011); significant deviations from BuildRight standard terms flagged for VP Legal approval
 Responsible (R): Legal Counsel / Department Head
 Accountable (A): VP Legal
 Duration: 1-14 days</bpmn:documentation>
@@ -557,7 +557,7 @@ Duration: 1-3 days</bpmn:documentation>
         <bpmn:outgoing>W688_Flow27</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W688_Task14" name="Contract registration &amp; obligation setup">
-        <bpmn:documentation>Step 7: Contract registration &amp; obligation setup: executed contract registered in contract management system: key dates (commencement, expiry, renewal notice deadline), financial obligations (payment schedule, rate escalation), SLA metrics, special conditions; system sets up automated reminders for renewal notice deadlines (90, 60, 30 days before expiry)
+        <bpmn:documentation>Step 7: Contract registration &amp; obligation setup: executed contract registered in the CLM (DOC-011): key dates (commencement, expiry, renewal notice deadline), financial obligations (payment schedule, rate escalation), SLA metrics, special conditions; system sets up automated reminders for renewal notice deadlines (90, 60, 30 days before expiry)
 Responsible (R): Legal Assistant
 Accountable (A): Legal Counsel
 Duration: 30 min</bpmn:documentation>

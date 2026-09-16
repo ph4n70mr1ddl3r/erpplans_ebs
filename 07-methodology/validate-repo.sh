@@ -2827,6 +2827,8 @@ echo "--- Check 46: stale-figure & superseded-citation literal guard ---"
 # literals repo-wide so no surface regresses to them. CHANGELOG.md (frozen history + this
 # repair's own description) and 'X -> Y' change-note contexts (e.g. the
 # classification register's dated version footers) are exempt.
+# The 2026-09-16 fortieth-wave review (seventh EBS-exhaustion pass) extended the same
+# mechanism with a retired-generic-vehicle literal list scoped to the workflow corpus:
 CHECK46=$(python3 - "$REPO_ROOT" <<'PY'
 import os, re, sys
 ROOT = sys.argv[1]
@@ -2868,6 +2870,75 @@ bad_literals = [
     (r'80,000 active SKUs', 'stale SKU figure (canonical: 35,000 active / ~55,000 item-master records)'),
 ]
 stale = []
+# 2026-09-16 fortieth-wave review (seventh EBS-exhaustion pass): the adopted-vehicle
+# corpus sweep retired the generic vehicle names the six audit passes' adoptions had
+# superseded — every workflow row that still said a generic 'X module/system' where the
+# fit-gap register names the adopted in-suite vehicle. Scoped to the workflow corpus
+# (01-model-company/workflows/**.md): the 02-oracle-ebs doctrine documents legitimately
+# QUOTE the retired forms when describing the sweep's cascade, so a repo-wide scope
+# would fire on the guard's own history. Domain-label cross-references ('IFM CMMS
+# (VS-138)', 'facilities/CMMS (VS-138)', 'supplier portal (VS-03.4)') stand per the
+# sweep's own adjudication — they point at the owning value stream, not at a vehicle.
+vehicle_literals = [
+    (r'ERP/Audit Management System', 'retired generic audit vehicle (adopted: Oracle Internal Controls Manager — fit-gap H11)'),
+    (r'Audit Management portal', 'retired generic audit vehicle (adopted: ICM — fit-gap H11)'),
+    (r'Audit Management System / GRC Tool', 'retired generic audit/GRC vehicle (adopted: ICM — fit-gap H11)'),
+    (r'Store audit management system', 'retired generic audit vehicle (adopted: ICM — fit-gap H11)'),
+    (r'Audit management system with finding tracking', 'retired generic audit vehicle (adopted: ICM — fit-gap H11)'),
+    (r'ERP/GRC module', 'retired generic GRC vehicle (adopted: ICM — fit-gap H11)'),
+    (r'PCI-DSS compliance tracking GRC module', 'retired generic GRC vehicle (adopted: ICM — fit-gap H11)'),
+    (r'GRC/risk register', 'retired generic GRC vehicle (adopted: ICM — fit-gap H11)'),
+    (r'GRC/compliance platform', 'retired generic GRC vehicle (adopted: ICM — fit-gap H11)'),
+    (r'Compliance/GRC platform', 'retired generic GRC vehicle (adopted: ICM — fit-gap H11)'),
+    (r'GRC/register platform', 'retired generic GRC vehicle (adopted: ICM — fit-gap H11)'),
+    (r'GRC/obligation-map', 'retired generic GRC vehicle (adopted: ICM — fit-gap H11)'),
+    (r'GRC/ownership matrix', 'retired generic GRC vehicle (adopted: ICM — fit-gap H11)'),
+    (r'ERP warranty module', 'retired generic warranty vehicle (adopted: Oracle Install Base — fit-gap D16)'),
+    (r'Service warranty module', 'retired generic warranty vehicle (adopted: Oracle Install Base — fit-gap D16)'),
+    (r'Warranty registration module', 'retired generic warranty vehicle (adopted: Oracle Install Base — fit-gap D16)'),
+    (r'ERP Contract Management module', 'retired generic contract vehicle (adopted: Oracle Procurement Contracts — fit-gap B12)'),
+    (r'Contract Management module \(W230\)', 'retired generic contract vehicle (adopted: Oracle Procurement Contracts — fit-gap B12)'),
+    (r'Contract Management System \(W230\)', 'retired generic contract vehicle (adopted: Oracle Procurement Contracts — fit-gap B12)'),
+    (r'Contract management system with', 'retired generic contract vehicle (adopted: Oracle Procurement Contracts — fit-gap B12)'),
+    (r'(?i)facility maintenance module \(W47\)', 'retired generic maintenance vehicle (adopted: Oracle eAM — fit-gap F5)'),
+    (r'Store facility maintenance module', 'retired generic maintenance vehicle (adopted: Oracle eAM — fit-gap F5)'),
+    (r'(?i)facilities maintenance (module|system)', 'retired generic maintenance vehicle (adopted: Oracle eAM — fit-gap F5)'),
+    (r'Facilities/CMMS module', 'retired generic maintenance vehicle (adopted: Oracle eAM — fit-gap F5; the bare "Facilities/CMMS (VS-138)" enumeration label stands per the sweep adjudication)'),
+    (r'CMMS / maintenance work-order module', 'retired generic maintenance vehicle (adopted: Oracle eAM — fit-gap F5)'),
+    (r'Maintenance management module \(CMMS\)', 'retired generic maintenance vehicle (adopted: Oracle eAM — fit-gap F5)'),
+    (r'CMMS / ERP Work Order', 'retired generic maintenance vehicle (adopted: Oracle eAM — fit-gap F5)'),
+    (r'Facility-asset / CMMS', 'retired generic maintenance vehicle (adopted: Oracle eAM — fit-gap F5)'),
+    (r'CAFM/CMMS \(links to VS-20\.3\)', 'retired generic maintenance vehicle (adopted: Oracle eAM — fit-gap F5)'),
+    (r'CMMS/CAFM \(links to VS-20\.3\)', 'retired generic maintenance vehicle (adopted: Oracle eAM — fit-gap F5)'),
+    (r'ERP rebate module', 'retired generic rebate vehicle (adopted: Oracle Trade Management — fit-gap B10)'),
+    (r'Vendor Rebate Module', 'retired generic rebate vehicle (adopted: Oracle Trade Management — fit-gap B10)'),
+    (r'ERP AP & Expense modules', 'retired generic expense vehicle (adopted: Internet Expenses/iExpenses — fit-gap B11)'),
+    (r'Performance management module \(W72\)', 'retired generic appraisal vehicle (adopted: Oracle Performance Management — fit-gap E2)'),
+    (r'HR recruitment module', 'retired generic recruitment vehicle (adopted: iRecruitment — fit-gap E2)'),
+    (r'HR benefits module', 'retired generic benefits vehicle (adopted: Advanced Benefits/OAB — fit-gap E9)'),
+    (r'ERP bank reconciliation module', 'retired generic reconciliation vehicle (adopted: Cash Management/CE — fit-gap A4)'),
+    (r'Bank reconciliation module with GL-to-bank', 'retired generic reconciliation vehicle (adopted: Cash Management/CE — fit-gap A4)'),
+    (r'Bank reconciliation module — automated matching', 'retired generic reconciliation vehicle (adopted: Cash Management/CE — fit-gap A4)'),
+    (r'Inventory ATP module', 'retired generic promising vehicle (adopted: Global Order Promising/GOP — fit-gap D15)'),
+    (r'(?i)lease management module', 'retired generic lease vehicle (adopted: Oracle Property Manager — fit-gap F3)'),
+    (r'in maintenance system per W400', 'retired generic maintenance vehicle (adopted: Oracle eAM — fit-gap F5)'),
+    (r'asset maintenance record per W400', 'retired generic maintenance vehicle (adopted: Oracle eAM — fit-gap F5)'),
+    (r'PM scheduling module with', 'retired generic maintenance vehicle (adopted: Oracle eAM — fit-gap F5)'),
+    (r'No single integrated fleet maintenance system', 'retired pre-F5 claim (the delivery-fleet estate is eAM-maintained — fit-gap F5, W1348/W1349)'),
+]
+for dirpath, _d, files in os.walk(os.path.join(ROOT, '01-model-company', 'workflows')):
+    if os.sep + '.git' in dirpath: continue
+    for fn in files:
+        if not fn.endswith('.md'): continue
+        path = os.path.join(dirpath, fn)
+        txt = open(path, encoding='utf-8', errors='replace').read()
+        for pat, why in vehicle_literals:
+            for m in re.finditer(pat, txt):
+                lo = max(0, m.start()-40); hi = min(len(txt), m.end()+40)
+                if '->' in txt[lo:hi] or '\u2192' in txt[lo:hi]:
+                    continue  # legitimate historical 'X -> Y' change-note
+                line_no = txt.count('\n', 0, m.start()) + 1
+                stale.append(f"{os.path.relpath(path, ROOT)}:{line_no}: '{m.group(0)}' — {why}")
 for dirpath, _d, files in os.walk(ROOT):
     if os.sep + '.git' in dirpath or os.sep + '__pycache__' in dirpath: continue
     for fn in files:
@@ -2887,9 +2958,9 @@ PY
 )
 C46_BAD=$(echo "$CHECK46" | sed -n 's/^STALE=\([0-9]*\)$/\1/p')
 if [ "${C46_BAD:-1}" -eq 0 ]; then
-    ok "No stale tender-mix/fleet/SKU figures or superseded statutory citations (RA/ATC/DO literals) in current-state prose"
+    ok "No stale tender-mix/fleet/SKU figures or superseded statutory citations (RA/ATC/DO literals) in current-state prose, and no retired generic-vehicle literals in the workflow corpus — every 'X module/system' row names the fit-gap register's adopted vehicle (vehicle-literal arm added by the 2026-09-16 fortieth-wave/seventh-pass review: the six audit passes adopted ICM/eAM/Property Manager/Procurement Contracts/Install Base/Trade Management/iExpenses/OAB/Performance Management/iRecruitment/CE/GOP but left ~60 workflow rows naming the superseded generic vehicles, incl. rows inside the adoptions' own cited workflows W808/W27/W89; scoped to workflows/** because the doctrine documents legitimately quote the retired forms in the sweep's own cascade, and the '(VS-138)'-style domain-label cross-references stand per the sweep's adjudication)"
 else
-    error "Stale figures / superseded statutory citations found in current-state prose: (incl. RA 10617/RA 10677/DAO 2013-22/DAO 2015-09/RR 34-2022)"
+    error "Stale figures / superseded statutory citations / retired generic-vehicle literals found: (incl. RA 10617/RA 10677/DAO 2013-22/DAO 2015-09/RR 34-2022 and the 'X module' vehicle forms)"
     echo "$CHECK46" | grep -E '^STALE\|' | sed 's/^STALE|/    /'
 fi
 

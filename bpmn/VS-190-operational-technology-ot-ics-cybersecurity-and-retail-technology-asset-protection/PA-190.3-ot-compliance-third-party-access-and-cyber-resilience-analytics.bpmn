@@ -236,7 +236,7 @@ Duration: annual</bpmn:documentation>
         <bpmn:outgoing>W5435_Flow14</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W5435_Task6" name="Maintain evidence (asset inventory, segmentation, baselines, vuln mgmt, IR…">
-        <bpmn:documentation>Step 2: Maintain evidence (asset inventory, segmentation, baselines, vuln mgmt, IR drills, access records) audit-ready in the GRC platform.
+        <bpmn:documentation>Step 2: Maintain evidence (asset inventory, segmentation, baselines, vuln mgmt, IR drills, access records) audit-ready in Oracle Internal Controls Manager (ICM — fit-gap H11).
 Responsible (R): OT Security Analyst
 Accountable (A): OT Security Lead
 Duration: ongoing</bpmn:documentation>

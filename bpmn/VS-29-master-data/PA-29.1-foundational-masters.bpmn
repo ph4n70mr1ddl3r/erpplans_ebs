@@ -1383,7 +1383,7 @@ Source: workflow W402 — Contract &amp; Agreement Master Governance</bpmn:docum
         <bpmn:outgoing>W402_Flow14</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:userTask id="W402_Task7" name="Contract Ingestion">
-        <bpmn:documentation>Step 1: Contract Ingestion: Contract Administrator scans and uploads the signed contract into the ERP Contract Management module, capturing metadata (parties, start/end dates, renewal terms, financial value).
+        <bpmn:documentation>Step 1: Contract Ingestion: Contract Administrator scans and uploads the signed contract into the contract master — Oracle Procurement Contracts for vendor trade agreements (fit-gap B12), the in-house CLM register for leases and B2B/customer agreements (DOC-011) — capturing metadata (parties, start/end dates, renewal terms, financial value).
 Responsible (R): Contract Administrator
 Accountable (A): —
 Duration: 15 min</bpmn:documentation>
@@ -1391,7 +1391,7 @@ Duration: 15 min</bpmn:documentation>
         <bpmn:outgoing>W402_Flow15</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W402_Task8" name="Commercial Terms Mapping">
-        <bpmn:documentation>Step 2: Commercial Terms Mapping: Category Manager extracts commercial terms (e.g., 2% volume rebate, marketing development funds) and inputs them into the Trade Spend / Rebate agreements master.
+        <bpmn:documentation>Step 2: Commercial Terms Mapping: Category Manager extracts commercial terms (e.g., 2% volume rebate, marketing development funds) and inputs them into Oracle Trade Management (the trade-spend/rebate agreements master, fit-gap B10).
 Responsible (R): Category Manager
 Accountable (A): —
 Duration: 20 min</bpmn:documentation>

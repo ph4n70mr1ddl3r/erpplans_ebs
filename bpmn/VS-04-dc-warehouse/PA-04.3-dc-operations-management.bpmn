@@ -1552,7 +1552,7 @@ Duration: As needed during typhoon season</bpmn:documentation>
         <bpmn:outgoing>W798_Flow19</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W798_Task9" name="Corrective Maintenance">
-        <bpmn:documentation>Step 5: Corrective Maintenance: When equipment or building system fails: (a) DC staff submits maintenance work order via system; (b) Facilities Manager triages: emergency (safety risk or operational stoppage — respond within 2 hours), urgent (operational degradation — respond within 24 hours), routine (non-critical — schedule within 1 week); (c) assign to internal maintenance technician or external contractor; (d) track repair completion and verify resolution; (e) update asset maintenance record per W400
+        <bpmn:documentation>Step 5: Corrective Maintenance: When equipment or building system fails: (a) DC staff submits maintenance work order via system; (b) Facilities Manager triages: emergency (safety risk or operational stoppage — respond within 2 hours), urgent (operational degradation — respond within 24 hours), routine (non-critical — schedule within 1 week); (c) assign to internal maintenance technician or external contractor; (d) track repair completion and verify resolution; (e) update the asset record in Oracle eAM per W400 (fit-gap F5)
 Responsible (R): Facilities Manager
 Accountable (A): DC Ops Manager
 Duration: Per incident</bpmn:documentation>

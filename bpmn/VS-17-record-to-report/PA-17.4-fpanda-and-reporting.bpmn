@@ -1497,7 +1497,7 @@ Source: workflow W89 — Bank Reconciliation</bpmn:documentation>
         <bpmn:outgoing>W89_Flow18</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:userTask id="W89_Task6" name="Statement import">
-        <bpmn:documentation>Step 1: Statement import: Treasury Analyst imports electronic bank statements (BDO, BPI, Metrobank, Chinabank formats) into ERP bank reconciliation module; for accounts receiving paper statements only, AP Clerk scans and enters key transactions manually
+        <bpmn:documentation>Step 1: Statement import: Treasury Analyst imports electronic bank statements (BDO, BPI, Metrobank, Chinabank formats) into Cash Management (CE, fit-gap A4); for accounts receiving paper statements only, AP Clerk scans and enters key transactions manually
 Responsible (R): Treasury Analyst / AP Clerk
 Accountable (A): Controller
 Duration: 30 min/account</bpmn:documentation>
