@@ -718,7 +718,7 @@ Duration: 5 min</bpmn:documentation>
         <bpmn:incoming>W971_Flow16</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W971_Annotation10">
-        <bpmn:text>Controls: - CTL-267 (ensure controlled execution — Project Estimation &amp; Advisory (PA-09.2).) | - operational: must display clear disclaimer: &quot;This is an aftermarket battery not manufactured by [brand]
+        <bpmn:text>Controls: - CTL-267 (ensure controlled execution — Project Estimation &amp; Advisory (PA-09.2).) | - operational: must display clear disclaimer: &quot;This is an aftermarket battery not manufactured by [brand]. Use may void your tool warranty. BuildRight recommends OEM batteries for warranty compliance.&quot;
 Owner: Department Supervisor (Tools/Hardware)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W971_Assoc11" sourceRef="W971_Annotation10" targetRef="W971_Start4" associationDirection="None" />
@@ -738,7 +738,7 @@ Owner: Department Supervisor (Tools/Hardware)</bpmn:text>
         <bpmndi:BPMNShape id="W971_Task8_di" bpmnElement="W971_Task8"><dc:Bounds x="1030" y="125" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W971_Start4_di" bpmnElement="W971_Start4"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W971_End9_di" bpmnElement="W971_End9"><dc:Bounds x="1260" y="317" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W971_Annotation10_di" bpmnElement="W971_Annotation10"><dc:Bounds x="160" y="460" width="360" height="72" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W971_Annotation10_di" bpmnElement="W971_Annotation10"><dc:Bounds x="160" y="460" width="360" height="86" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W971_Flow12_di" bpmnElement="W971_Flow12"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W971_Flow13_di" bpmnElement="W971_Flow13"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W971_Flow14_di" bpmnElement="W971_Flow14"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="165" /></bpmndi:BPMNEdge>
@@ -3139,7 +3139,7 @@ Duration: 3–5 min</bpmn:documentation>
         <bpmn:incoming>W1060_Flow16</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1060_Annotation10">
-        <bpmn:text>Controls: - CTL-267 (ensure controlled execution — Project Estimation &amp; Advisory (PA-09.2).) | - operational: must display disclaimer: &quot;Rebar quantities shown are based on customer-provided specifications
+        <bpmn:text>Controls: - CTL-267 (ensure controlled execution — Project Estimation &amp; Advisory (PA-09.2).) | - operational: must display disclaimer: &quot;Rebar quantities shown are based on customer-provided specifications. BuildRight does not provide structural engineering services. Consult a licensed civil engineer for proper rebar design per NSCP (National Structural Code of the Philippines).&quot;
 Owner: Lumber &amp; Building Materials Department Supervisor</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1060_Assoc11" sourceRef="W1060_Annotation10" targetRef="W1060_Start4" associationDirection="None" />
@@ -3159,7 +3159,7 @@ Owner: Lumber &amp; Building Materials Department Supervisor</bpmn:text>
         <bpmndi:BPMNShape id="W1060_Task8_di" bpmnElement="W1060_Task8"><dc:Bounds x="1030" y="125" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1060_Start4_di" bpmnElement="W1060_Start4"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1060_End9_di" bpmnElement="W1060_End9"><dc:Bounds x="1260" y="317" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1060_Annotation10_di" bpmnElement="W1060_Annotation10"><dc:Bounds x="160" y="460" width="360" height="72" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1060_Annotation10_di" bpmnElement="W1060_Annotation10"><dc:Bounds x="160" y="460" width="360" height="114" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W1060_Flow12_di" bpmnElement="W1060_Flow12"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W1060_Flow13_di" bpmnElement="W1060_Flow13"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W1060_Flow14_di" bpmnElement="W1060_Flow14"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>

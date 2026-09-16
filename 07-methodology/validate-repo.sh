@@ -2575,6 +2575,17 @@ echo "--- Check 43: Controls-section list hygiene + bold/paren balance ---"
 #   E. (2026-09-16 forty-third-wave review) every paragraph block in the model-company
 #      docs + root README is paren-balanced (code spans stripped) — the same review found
 #      the workflow-gap-analysis intro's pass-list parenthetical never closed
+#   F. (2026-09-16 forty-fourth-wave review) analysis bullets are quote-balanced per line
+#      (code spans masked): two Automation bullets carried a stray unbalanced close-quote
+#      after their quoted step fragment (the PA-03.1 '"Approved Factory" status in ERP"' /
+#      PA-22.1 '"Approved Promo Price" … 20 SKUs"' forms), two Controls bullets quoted
+#      their source disclaimer without ever closing it (the PA-09.2 aftermarket-battery /
+#      rebar-disclaimer forms), and two Automation fragments were cut mid-phrase without
+#      the generator's '…' marker (both ending 'across the 5"' before the fragment's own
+#      noun); the auto-verb missing-space join joins the guard as a class — the
+#      forty-third wave had trued only the two 'auto-countof' instances while thirteen
+#      sibling forms ('auto-logof' ×6, 'auto-fileof' ×2, and one each of create/distribute/
+#      record/schedule/validate) shipped across 11 files
 # Companion repairer: 07-methodology/fix-controls-bullets.py
 CHECK43=$(python3 - "$REPO_ROOT" <<'PY'
 import glob, os, re, sys
@@ -2603,6 +2614,9 @@ for f in glob.glob(os.path.join(ROOT, "01-model-company", "workflows", "VS-*", "
         elif "**" in s:
             bad += 1
             print(f"BAD|{rel}:{i}: stray '**' in Controls bullet: '{s[:80]}'")
+        elif re.sub(r"`[^`]*`", "", s).count('"') % 2 == 1:
+            bad += 1
+            print(f"BAD|{rel}:{i}: odd quote count in Controls bullet: '{s[:80]}'")
 # C: bold balance per paragraph block, model-company docs + root README
 files = glob.glob(os.path.join(ROOT, "01-model-company", "**", "*.md"), recursive=True)
 files.append(os.path.join(ROOT, "README.md"))
@@ -2626,7 +2640,9 @@ for f in files:
             bad += 1
             print(f"BAD|{rel}:{i + 1}: odd '**' count in paragraph block: '{lines[i].strip()[:80]}'")
         i = end + 1
-# D: Automation Opportunity / Pain Points bullets are paren-balanced (forty-third wave)
+# D+F: Automation Opportunity / Pain Points bullets are paren- and quote-balanced per
+# line; the auto-verb missing-space join and mid-phrase quote cuts are forbidden
+# (forty-third + forty-fourth waves)
 for f in glob.glob(os.path.join(ROOT, "01-model-company", "workflows", "VS-*", "PA-*.md")):
     rel = os.path.relpath(f, ROOT)
     in_s = False
@@ -2635,9 +2651,20 @@ for f in glob.glob(os.path.join(ROOT, "01-model-company", "workflows", "VS-*", "
         if s.startswith("### "):
             in_s = s.strip() in ("### Automation Opportunity", "### Pain Points / Risks")
             continue
-        if in_s and s.startswith("- ") and s.count("(") != s.count(")"):
+        if not (in_s and s.startswith("- ")):
+            continue
+        if s.count("(") != s.count(")"):
             bad += 1
             print(f"BAD|{rel}:{i}: unbalanced parens in analysis bullet: '{s[:80]}'")
+        elif re.sub(r"`[^`]*`", "", s).count('"') % 2 == 1:
+            bad += 1
+            print(f"BAD|{rel}:{i}: odd quote count in analysis bullet: '{s[:80]}'")
+        elif re.search(r"System auto-[a-z]+of ", s):
+            bad += 1
+            print(f"BAD|{rel}:{i}: missing-space auto-verb join in analysis bullet: '{s[:80]}'")
+        elif re.search(r'of "[^"]*\b(?:the|a|an) \d[\d.,–—-]*\s*"', s):
+            bad += 1
+            print(f"BAD|{rel}:{i}: quote fragment cut before its noun (missing '…' or completion): '{s[:80]}'")
 # E: paragraph blocks in the model-company docs + root README are paren-balanced
 # (forty-third wave; code spans stripped — they legitimately hold literal parens)
 for f in files:
@@ -2657,7 +2684,7 @@ PY
 )
 C43_BAD=$(echo "$CHECK43" | sed -n 's/^TOTALS bad=\([0-9]*\)/\1/p')
 if [ "${C43_BAD:-1}" -eq 0 ]; then
-    ok "Controls sections bullet-hygenic; all paragraph blocks bold-balanced and Controls parens balanced (forty-third-wave extension, 2026-09-16: Automation Opportunity / Pain Points bullets are paren-balanced per line — four Automation bullets were found quoting their step text truncated mid-paren (the 'for claims > PHP 5' / 'Med-Arbiter' forms) plus two 'auto-countof' missing-space forms, and one Pain-Points bullet carried a corrupted generator tail (the 'calendar and operational: … (PHP' form — the '; operational:' join class one section over) — and every model-company/root-README paragraph block is paren-balanced with code spans stripped (the workflow-gap-analysis intro's pass-list parenthetical shipped unclosed since its initial issue)"
+    ok "Controls sections bullet-hygenic; all paragraph blocks bold-balanced and Controls parens balanced (forty-third-wave extension, 2026-09-16: Automation Opportunity / Pain Points bullets are paren-balanced per line — four Automation bullets were found quoting their step text truncated mid-paren (the 'for claims > PHP 5' / 'Med-Arbiter' forms) plus two 'auto-countof' missing-space forms, and one Pain-Points bullet carried a corrupted generator tail (the 'calendar and operational: … (PHP' form — the '; operational:' join class one section over) — and every model-company/root-README paragraph block is paren-balanced with code spans stripped (the workflow-gap-analysis intro's pass-list parenthetical shipped unclosed since its initial issue); forty-fourth-wave extension, 2026-09-16: analysis bullets are also quote-balanced per line and the auto-verb missing-space join plus the mid-phrase quote cut are forbidden as classes — the same review found two Automation bullets carrying a stray unbalanced close-quote after their quoted step fragment (the PA-03.1 '"Approved Factory\" status in ERP\"' / PA-22.1 '"Approved Promo Price\" … 20 SKUs\"' forms), two Controls bullets quoting their source disclaimer without ever closing it (the PA-09.2 aftermarket-battery / rebar-disclaimer forms), two Automation fragments cut mid-phrase before the fragment's own noun (both 'across the 5\"' — the step texts continue 'legal entities'), and thirteen sibling 'auto-<verb>of' missing-space forms the forty-third wave's countof-only true had left across 11 files (auto-logof ×6, auto-fileof ×2, and one each of create/distribute/record/schedule/validate)"
 else
     error "Analysis-section hygiene violations (dangling Controls lines, unbalanced parens, broken '**' bold) — repair via 07-methodology/fix-controls-bullets.py + per-case review:"
     echo "$CHECK43" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
