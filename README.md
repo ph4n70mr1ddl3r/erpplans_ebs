@@ -240,7 +240,7 @@ erpplans/
 │   ├── README.md                      Platform decision, fit-to-standard principles, document map, realization waves
 │   ├── ebs-platform-architecture.md   Org/ledger model (5 legal entities · 205 inventory orgs), module footprint, tech stack, environments, integration & security
 │   ├── module-coverage-map.md         Generic-module → EBS realization register, side-by-side with workflow-system-touchpoint-map.md
-│   ├── fit-gap-analysis.md            96-row capability disposition register (73 standard / 2 PER / 1 EXT / 1 LOC / 5 INT / 14 BUILD incl. 5 already-built platforms / 0 EDGE / 0 OPEN), EBS-held vs payroll-built statutory split, two-tier resolution record + 2026-09-15/16 EBS-exhaustion audits (three passes), standard-first KPIs
+│   ├── fit-gap-analysis.md            96-row capability disposition register (73 standard / 2 PER / 1 EXT / 1 LOC / 5 INT / 14 BUILD incl. 5 already-built platforms / 0 EDGE / 0 OPEN), EBS-held vs payroll-built statutory split, two-tier resolution record + 2026-09-15/16 EBS-exhaustion audits (four passes), standard-first KPIs
 │   ├── customization-governance.md    CEMLI discipline: extension budget, CDR workflow, ADOP-safe coding standards, CEMLI register, de-customization triggers
 │   ├── integrations.md                IAP-first integration patterns for every flow in the canonical integration matrix
 │   └── data-migration.md              Object → EBS load-path register (interfaces/APIs only), validation gates, cutover
