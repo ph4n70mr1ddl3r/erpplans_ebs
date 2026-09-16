@@ -1871,7 +1871,15 @@ def ebs_blueprint_hits():
             (build_existing if "*(existing)*" in cells[4] else build_planned).append(cells[1])
     total = sum(counts.values())
     std = counts.get("FIT-STD", 0) + counts.get("FIT-CFG", 0)
-    expect = {"FIT-STD": 31, "FIT-CFG": 28, "PER": 2, "EXT": 2, "LOC": 1,
+    # 2026-09-16 second-pass EBS-exhaustion audit: register 83 → 90 rows — A11
+    # re-dispositioned EXT → FIT-CFG (Revenue Management and Invoicing found
+    # in-suite; the planned PFRS 15 build retired through its de-customization
+    # trigger) and seven native vehicles added (F5 eAM, B12 Procurement
+    # Contracts, D15 Global Order Promising, C16 Configurator in-store, C15
+    # In-Memory Cost Management, F6 GL budgets + budgetary control, G9 Oracle
+    # Alert); EXT 2 → 1, BUILD unchanged at 14. The pins below re-based to the
+    # re-derived arithmetic (67 standard = 74.4% of 90).
+    expect = {"FIT-STD": 34, "FIT-CFG": 33, "PER": 2, "EXT": 1, "LOC": 1,
               "INT": 5, "BUILD": 14, "EDGE": 0, "OPEN": 0}
     for cls, want in expect.items():
         got = counts.get(cls, 0)
@@ -1879,10 +1887,10 @@ def ebs_blueprint_hits():
             add("fit-gap-analysis.md", 0,
                 f"register re-derives {got} {cls} rows but §3 pins {want} — the "
                 f"class-count table no longer foots against the §2 register")
-    if total != 83:
+    if total != 90:
         add("fit-gap-analysis.md", 0,
             f"register re-derives {total} disposition rows but the pinned register "
-            f"total is 83")
+            f"total is 90")
     # every §3 class-count cell must equal the §2 re-derivation (the rule's first
     # draft pinned only the standard-total and grand-total rows; a corrupted single
     # class cell sailed through — caught by this wave's own teeth suite, T4)
