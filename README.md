@@ -269,6 +269,7 @@ erpplans/
     ├── finalize-time-estimates.py    Draft Time Estimate finalizer (per-occurrence roll-up + Frequency-derived annualization; Check 49 companion)
     ├── audit-time-estimate-math.py    Inline-arithmetic audit of Time Estimate / Staffing paragraphs (unit-convention-aware chain re-derivation; Check 50 guard)
     ├── reconcile-staffing-claims.py  Headcount-anchor & Volume-product reconciliation vs canonical registers (Check 51 guard)
+    ├── virtual-gemba-walk.py         Virtual gemba walk & time-and-motion analyzer — per-VS touch time / handoff / approval-gate walk + per-role annual demand vs chartered TO capacity (read-only; 39th wave)
     ├── audit-st-touchpoints.py       ST-vocabulary & duplicate-Trigger guard (Check 52)
     ├── fix-auto-keywords.py          Automation-keyword & RACI role-title repair/guard (Check 53)
     ├── audit-field-vocabulary.py    Risk-label / cadence / owner vocabulary guard (Check 54)
