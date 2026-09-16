@@ -1988,6 +1988,36 @@ def ebs_blueprint_hits():
             f"§7 KPI row says 'current {mk.group(1)}%' but the register re-derives "
             f"{std}/{total} = {round(std / total * 100, 1)}%")
 
+    # ---- (a.2) register-note join hygiene — the 2026-09-16 forty-first-wave
+    # consistency review: the seventh pass appended its eleven register-row
+    # clauses and the intro's seventh-pass sentence without their join
+    # punctuation — eight register notes read '…feeds The 2026-09-16…'-style
+    # unseparated runs and the intro carried a ').;' doubled join against the
+    # '; and the' segment convention — and the B13 note's PA-98.2 file
+    # reference sat lowercase ('pa-98.2'). The general rule: an appended audit
+    # clause must be sentence- or semicolon-separated (a lowercase letter
+    # directly followed by ' The <date>' can only be a missing separator);
+    # the ').;' join and the lowercase file reference are retired per
+    # document; the corrected anchor is required.
+    for jm in re.finditer(r"[a-z] The 2026-", fg_body):
+        ctx = fg_body[max(0, jm.start() - 40):jm.end() + 30]
+        add("fit-gap-analysis.md", 0,
+            f"register/intro prose carries an appended audit clause with its join "
+            f"punctuation missing (…{ctx}… — appended pass clauses must be "
+            f"sentence- or semicolon-separated)")
+    if ").;" in fg_body:
+        add("fit-gap-analysis.md", 0,
+            "intro carries a ').;' doubled sentence join (the segment convention "
+            "is '); and the' — no period before the joining semicolon)")
+    if "pa-98.2" in fg_body:
+        add("fit-gap-analysis.md", 0,
+            "register note carries the lowercase 'pa-98.2' file reference (the "
+            "canon form is 'PA-98.2')")
+    if "PA-98.2 ST row names it" not in fg_body:
+        add("fit-gap-analysis.md", 0,
+            "required corrected anchor 'PA-98.2 ST row names it' not found in the "
+            "B13 register note")
+
     # ---- (b) touchpoint-map module set ↔ coverage-map §1 (one-for-one)
     tm = open(os.path.join(MC, "workflows", "workflow-system-touchpoint-map.md"),
               encoding="utf-8").read()
