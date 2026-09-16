@@ -19,6 +19,20 @@ Conversion rules (documented in bpmn/README.md):
   * Diagram Interchange (BPMNDiagram/BPMNPlane/shapes/edges) generated for
     every element so the files open directly in any BPMN 2.0 modeler.
 
+Modes:
+  * default        — regenerate bpmn/ in place (idempotent, byte-identical on
+                     an unchanged corpus); every file re-validated after write.
+  * --check        — re-derive every file in memory and byte-compare against
+                     the shipped tree WITHOUT writing (added by the 2026-09-16
+                     forty-seventh-wave consistency review; exit 1 on any
+                     drift, missing file, or shipped file with no PA source).
+                     Wired into validate-repo.sh Check 71 so a PA edit shipped
+                     without regeneration — invisible to structural validation
+                     and to the documentation/start/annotation content mirror
+                     wherever only task names, lanes or wiring move — now fails
+                     the validator (the seventeenth-wave stale-PA-133 class,
+                     closed for the remaining surfaces).
+
 Validation (built in): every generated file is re-parsed and all internal
 references (sequenceFlow/association source/target, lane flowNodeRef, DI
 bpmnElement) are checked to resolve, and every node's incoming/outgoing
@@ -433,7 +447,14 @@ DEFINITIONS_TMPL = (
 )
 
 
-def convert_file(pa_path: Path, out_path: Path) -> int:
+def render_file(pa_path: Path) -> tuple[str, int]:
+    """Render a PA file's BPMN XML in memory. Returns (xml_text, workflow_count).
+
+    Split from convert_file by the 2026-09-16 forty-seventh-wave consistency review
+    so --check can byte-compare the shipped tree against a fresh re-derivation
+    without writing (the same shipped-currency guarantee generate-role-coverage.py
+    --check has given the role-coverage matrix since the thirtieth wave).
+    """
     workflows = parse_pa_file(pa_path)
     procs = []
     for wf in workflows:
@@ -446,12 +467,15 @@ def convert_file(pa_path: Path, out_path: Path) -> int:
             }]
         procs.append(build_process(wf))
     def_id = re.sub(r"[^A-Za-z0-9_.-]", "_", pa_path.stem)
+    xml = DEFINITIONS_TMPL.format(def_id=def_id, procs="\n".join(procs))
+    return xml, len(workflows)
+
+
+def convert_file(pa_path: Path, out_path: Path) -> int:
+    xml, n = render_file(pa_path)
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(
-        DEFINITIONS_TMPL.format(def_id=def_id, procs="\n".join(procs)),
-        encoding="utf-8",
-    )
-    return len(workflows)
+    out_path.write_text(xml, encoding="utf-8")
+    return n
 
 
 # ---------------------------------------------------------------- validation
@@ -570,10 +594,49 @@ def validate_file(path: Path) -> str | None:
 # ---------------------------------------------------------------- main
 
 def main() -> int:
+    check = "--check" in sys.argv[1:]
     pa_files = sorted(SRC.glob("VS-*/PA-*.md"))
     total_wf = 0
     total_tasks = 0
     failures = []
+    if check:
+        # Forty-seventh-wave shipped-currency arm (2026-09-16): byte-compare the
+        # shipped tree against a fresh in-memory re-derivation. Nothing is written.
+        # Catches: a PA edit shipped without regeneration (task names, lane names,
+        # wiring and step-derived content are invisible to Check 71's structural
+        # validation and its documentation/start/annotation content mirror), a
+        # hand-edit of a generated file, a partial regeneration, and a shipped file
+        # with no PA counterpart. The markdown remains the source of truth: drift is
+        # resolved by regenerating, never by hand-editing the tree.
+        shipped = {p.relative_to(OUT).as_posix() for p in OUT.rglob("*.bpmn")}
+        derived = {p.relative_to(SRC).with_suffix(".bpmn").as_posix() for p in pa_files}
+        n_drift = 0
+        for pa in pa_files:
+            rel = pa.relative_to(SRC).with_suffix(".bpmn")
+            out_path = OUT / rel
+            xml, n = render_file(pa)
+            total_wf += n
+            if not out_path.exists():
+                print(f"DRIFT|{rel.as_posix()}  missing from the shipped tree (regenerate)")
+                n_drift += 1
+                continue
+            if out_path.read_text(encoding="utf-8") != xml:
+                print(f"DRIFT|{rel.as_posix()}  stale vs its markdown source (regenerate)")
+                n_drift += 1
+        for rel in sorted(shipped - derived):
+            print(f"DRIFT|{rel}  shipped but no PA markdown derives it (delete or restore the PA)")
+            n_drift += 1
+        print(
+            f"\n=== --check: {len(pa_files)} PA files, {total_wf} processes re-derived, "
+            f"{len(shipped)} shipped files, {n_drift} drifted ==="
+        )
+        if n_drift:
+            print("SHIPPED TREE IS STALE — regenerate (python3 07-methodology/generate-bpmn.py); "
+                  "the markdown is the source of truth, never hand-edit bpmn/.")
+            return 1
+        print("Shipped bpmn/ tree is byte-identical to the generator's re-derivation from "
+              "the markdown corpus.")
+        return 0
     for pa in pa_files:
         rel = pa.relative_to(SRC).with_suffix(".bpmn")
         out_path = OUT / rel

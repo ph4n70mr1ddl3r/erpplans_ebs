@@ -34,6 +34,12 @@ renders in a DRD; added by the 2026-09-05 seventh-wave consistency
 review); numeric band inputs are verified pairwise-disjoint (a failing
 band set is demoted to hitPolicy "Collect", never silently published as
 Unique). Exit code 1 on any failure.
+
+Modes: default regenerates dmn/ in place (idempotent, byte-identical on an
+unchanged corpus); --check re-derives every file in memory and byte-compares
+against the shipped tree WITHOUT writing (added by the 2026-09-16
+forty-seventh-wave consistency review, exit 1 on drift/missing/extra; wired
+into validate-repo.sh Check 71).
 """
 
 import html
@@ -465,8 +471,15 @@ DEFINITIONS_TMPL = (
 )
 
 
-def convert_file(pa_path: Path, out_path: Path) -> tuple[int, int]:
-    """Returns (decisions_written, deferred_count)."""
+def render_file(pa_path: Path) -> tuple[str, int, int]:
+    """Render a PA file's DMN XML in memory. Returns (xml_text, decisions, deferred).
+
+    Empty xml_text (= no decisions) means no file should exist. Split from
+    convert_file by the 2026-09-16 forty-seventh-wave consistency review so
+    --check can byte-compare the shipped tree against a fresh re-derivation
+    without writing (the shipped-currency guarantee generate-role-coverage.py
+    --check has given the role-coverage matrix since the thirtieth wave).
+    """
     text = pa_path.read_text(encoding="utf-8")
     lines = text.splitlines()
     def_id = re.sub(r"[^A-Za-z0-9_.-]", "_", pa_path.stem)
@@ -509,18 +522,24 @@ def convert_file(pa_path: Path, out_path: Path) -> tuple[int, int]:
             deferred += 1
 
     if not decisions:
-        return 0, deferred
+        return "", 0, deferred
 
     body = []
     for d in decisions:
         body.extend(build_decision_xml(d, len(decisions)))
     body.extend(build_dmndi(decisions))
+    xml = DEFINITIONS_TMPL.format(def_id=def_id, def_name=esc(def_name), body="\n".join(body))
+    return xml, len(decisions), deferred
+
+
+def convert_file(pa_path: Path, out_path: Path) -> tuple[int, int]:
+    """Writes render_file()'s output. Returns (decisions_written, deferred_count)."""
+    xml, n, deferred = render_file(pa_path)
+    if not xml:
+        return 0, deferred
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(
-        DEFINITIONS_TMPL.format(def_id=def_id, def_name=esc(def_name), body="\n".join(body)),
-        encoding="utf-8",
-    )
-    return len(decisions), deferred
+    out_path.write_text(xml, encoding="utf-8")
+    return n, deferred
 
 
 # ---------------------------------------------------------------- validation
@@ -577,9 +596,55 @@ def validate_file(path: Path) -> str | None:
 # ---------------------------------------------------------------- main
 
 def main() -> int:
+    check = "--check" in sys.argv[1:]
     pa_files = sorted(SRC.glob("VS-*/PA-*.md"))
     total_dec = total_deferred = files_out = 0
     failures = []
+    if check:
+        # Forty-seventh-wave shipped-currency arm (2026-09-16): byte-compare the
+        # shipped tree against a fresh in-memory re-derivation. Nothing is written.
+        # The dmn/ tree previously had NO content pin at all — Check 71 reads it
+        # structurally (decision-table shape, DRD refs) and Check 74 pins only the
+        # README quick-stats figures — so a PA edit to a rule-shaped table or a
+        # tiered authorization step shipped without regeneration, a hand-edit of a
+        # generated file, a partial regeneration, or a stale file whose PA no
+        # longer yields decisions all shipped invisibly. The markdown remains the
+        # source of truth: drift is resolved by regenerating, never by hand-edit.
+        shipped = {p.relative_to(OUT).as_posix() for p in OUT.rglob("*.dmn")}
+        derived = {p.relative_to(SRC).with_suffix(".dmn").as_posix() for p in pa_files}
+        n_drift = 0
+        for pa in pa_files:
+            rel = pa.relative_to(SRC).with_suffix(".dmn")
+            out_path = OUT / rel
+            xml, n, deferred = render_file(pa)
+            total_dec += n
+            total_deferred += deferred
+            if not xml:
+                if out_path.exists():
+                    print(f"DRIFT|{rel.as_posix()}  shipped but its markdown no longer yields decisions (delete or restore the PA)")
+                    n_drift += 1
+                continue
+            if not out_path.exists():
+                print(f"DRIFT|{rel.as_posix()}  missing from the shipped tree (regenerate)")
+                n_drift += 1
+                continue
+            if out_path.read_text(encoding="utf-8") != xml:
+                print(f"DRIFT|{rel.as_posix()}  stale vs its markdown source (regenerate)")
+                n_drift += 1
+        for rel in sorted(shipped - derived):
+            print(f"DRIFT|{rel}  shipped but no PA markdown derives it (delete or restore the PA)")
+            n_drift += 1
+        print(
+            f"\n=== --check: {len(pa_files)} PA files, {total_dec} decisions / "
+            f"{total_deferred} deferred re-derived, {len(shipped)} shipped files, {n_drift} drifted ==="
+        )
+        if n_drift:
+            print("SHIPPED TREE IS STALE — regenerate (python3 07-methodology/generate-dmn.py); "
+                  "the markdown is the source of truth, never hand-edit dmn/.")
+            return 1
+        print("Shipped dmn/ tree is byte-identical to the generator's re-derivation from "
+              "the markdown corpus.")
+        return 0
     for pa in pa_files:
         rel = pa.relative_to(SRC).with_suffix(".dmn")
         out_path = OUT / rel
