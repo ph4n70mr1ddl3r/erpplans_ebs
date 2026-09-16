@@ -496,7 +496,7 @@ Duration: Annual</bpmn:documentation>
         <bpmn:incoming>W2676_Flow14</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W2676_Annotation9">
-        <bpmn:text>Controls: - CTL-457 (ensure controlled execution — Multi-LGU Business Permit &amp; License Management (PA-76.1).) | - operational: local-tax accrual reviewed by Tax Manager quarterly (per VS-79 / W90 indirect-tax); operational: Finance Controller sign-off on the annual store-P&amp;L local-tax line; operational: Finance Controller sign-off on the annual store-P&amp;L local-tax line
+        <bpmn:text>Controls: - CTL-457 (ensure controlled execution — Multi-LGU Business Permit &amp; License Management (PA-76.1).) | - operational: local-tax accrual reviewed by Tax Manager quarterly (per VS-79 / W90 indirect-tax); operational: Finance Controller sign-off on the annual store-P&amp;L local-tax line
 Owner: Finance Analyst</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W2676_Assoc10" sourceRef="W2676_Annotation9" targetRef="W2676_Start4" associationDirection="None" />
@@ -514,7 +514,7 @@ Owner: Finance Analyst</bpmn:text>
         <bpmndi:BPMNShape id="W2676_Task7_di" bpmnElement="W2676_Task7"><dc:Bounds x="820" y="295" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W2676_Start4_di" bpmnElement="W2676_Start4"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W2676_End8_di" bpmnElement="W2676_End8"><dc:Bounds x="1050" y="317" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W2676_Annotation9_di" bpmnElement="W2676_Annotation9"><dc:Bounds x="160" y="460" width="360" height="114" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W2676_Annotation9_di" bpmnElement="W2676_Annotation9"><dc:Bounds x="160" y="460" width="360" height="86" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W2676_Flow11_di" bpmnElement="W2676_Flow11"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W2676_Flow12_di" bpmnElement="W2676_Flow12"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W2676_Flow13_di" bpmnElement="W2676_Flow13"><di:waypoint x="790" y="165" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>

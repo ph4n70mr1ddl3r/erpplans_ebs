@@ -282,7 +282,7 @@ Duration: Continuous</bpmn:documentation>
         <bpmn:incoming>W3140_Flow15</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W3140_Annotation10">
-        <bpmn:text>Controls: - CTL-514 (ensure controlled execution — Marketplace Platform Strategy &amp; Seller Onboarding (PA-95.1).) | - operational: mandatory attributes and quality score; operational: attributes and quality score
+        <bpmn:text>Controls: - CTL-514 (ensure controlled execution — Marketplace Platform Strategy &amp; Seller Onboarding (PA-95.1).) | - operational: mandatory attributes and quality score
 Owner: Marketplace Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W3140_Assoc11" sourceRef="W3140_Annotation10" targetRef="W3140_Start5" associationDirection="None" />
@@ -301,7 +301,7 @@ Owner: Marketplace Manager</bpmn:text>
         <bpmndi:BPMNShape id="W3140_Task8_di" bpmnElement="W3140_Task8"><dc:Bounds x="820" y="465" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W3140_Start5_di" bpmnElement="W3140_Start5"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W3140_End9_di" bpmnElement="W3140_End9"><dc:Bounds x="1050" y="487" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W3140_Annotation10_di" bpmnElement="W3140_Annotation10"><dc:Bounds x="160" y="630" width="360" height="72" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W3140_Annotation10_di" bpmnElement="W3140_Annotation10"><dc:Bounds x="160" y="630" width="360" height="60" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W3140_Flow12_di" bpmnElement="W3140_Flow12"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W3140_Flow13_di" bpmnElement="W3140_Flow13"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W3140_Flow14_di" bpmnElement="W3140_Flow14"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>

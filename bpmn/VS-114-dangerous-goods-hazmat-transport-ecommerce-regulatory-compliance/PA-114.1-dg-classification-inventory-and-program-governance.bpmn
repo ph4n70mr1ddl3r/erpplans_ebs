@@ -122,7 +122,7 @@ Duration: Ongoing</bpmn:documentation>
         <bpmn:incoming>W3594_Flow13</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W3594_Annotation8">
-        <bpmn:text>Controls: - CTL-571 (ensure controlled execution — DG Classification, Inventory &amp; Program Governance (PA-114.1).) | - operational: expert classification and validation; operational: mandatory DG attributes at SKU setup; operational: DG attributes at SKU setup
+        <bpmn:text>Controls: - CTL-571 (ensure controlled execution — DG Classification, Inventory &amp; Program Governance (PA-114.1).) | - operational: expert classification and validation; operational: mandatory DG attributes at SKU setup
 Owner: DG/Hazmat Compliance Officer / Merchandising</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W3594_Assoc9" sourceRef="W3594_Annotation8" targetRef="W3594_Start3" associationDirection="None" />
@@ -139,7 +139,7 @@ Owner: DG/Hazmat Compliance Officer / Merchandising</bpmn:text>
         <bpmndi:BPMNShape id="W3594_Task6_di" bpmnElement="W3594_Task6"><dc:Bounds x="820" y="125" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W3594_Start3_di" bpmnElement="W3594_Start3"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W3594_End7_di" bpmnElement="W3594_End7"><dc:Bounds x="1050" y="147" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W3594_Annotation8_di" bpmnElement="W3594_Annotation8"><dc:Bounds x="160" y="290" width="360" height="86" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W3594_Annotation8_di" bpmnElement="W3594_Annotation8"><dc:Bounds x="160" y="290" width="360" height="72" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W3594_Flow10_di" bpmnElement="W3594_Flow10"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W3594_Flow11_di" bpmnElement="W3594_Flow11"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W3594_Flow12_di" bpmnElement="W3594_Flow12"><di:waypoint x="790" y="165" /><di:waypoint x="820" y="165" /></bpmndi:BPMNEdge>

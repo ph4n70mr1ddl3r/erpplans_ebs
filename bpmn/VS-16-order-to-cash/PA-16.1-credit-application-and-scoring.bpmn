@@ -256,7 +256,7 @@ Duration: Part of W24 quarterly cycle</bpmn:documentation>
         <bpmn:incoming>W108_Flow31</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W108_Annotation19">
-        <bpmn:text>Controls: - CTL-286 (ensure controlled execution — Credit Application &amp; Scoring (PA-16.1).) | - operational: for BIR-compliant bad debt write-off (W81)
+        <bpmn:text>Controls: - CTL-286 (ensure controlled execution — Credit Application &amp; Scoring (PA-16.1).) | - operational: registered-mail demand-letter documentation (Steps 4–5) required for BIR-compliant bad debt write-off (W81)
 Owner: AR Collector (daily); AR Supervisor (escalation); Finance Manager (legal escalation)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W108_Assoc20" sourceRef="W108_Annotation19" targetRef="W108_Start7" associationDirection="None" />
@@ -291,7 +291,7 @@ Owner: AR Collector (daily); AR Supervisor (escalation); Finance Manager (legal 
         <bpmndi:BPMNShape id="W108_Task17_di" bpmnElement="W108_Task17"><dc:Bounds x="2290" y="465" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W108_Start7_di" bpmnElement="W108_Start7"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W108_End18_di" bpmnElement="W108_End18"><dc:Bounds x="2520" y="827" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W108_Annotation19_di" bpmnElement="W108_Annotation19"><dc:Bounds x="160" y="970" width="360" height="60" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W108_Annotation19_di" bpmnElement="W108_Annotation19"><dc:Bounds x="160" y="970" width="360" height="72" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W108_Flow21_di" bpmnElement="W108_Flow21"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W108_Flow22_di" bpmnElement="W108_Flow22"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W108_Flow23_di" bpmnElement="W108_Flow23"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>
@@ -1215,7 +1215,7 @@ Duration: 30 min</bpmn:documentation>
         <bpmn:incoming>W888_Flow21</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W888_Annotation13">
-        <bpmn:text>Controls: - CTL-286 (ensure controlled execution — Credit Application &amp; Scoring (PA-16.1).) | - operational: may block for disputed amount incorrectly
+        <bpmn:text>Controls: - CTL-286 (ensure controlled execution — Credit Application &amp; Scoring (PA-16.1).) | - operational: Credit Analyst review and validation of holds with disputed-invoice exclusion before release (Step 2)
 Owner: Credit Analyst / Credit Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W888_Assoc14" sourceRef="W888_Annotation13" targetRef="W888_Start5" associationDirection="None" />
@@ -1240,7 +1240,7 @@ Owner: Credit Analyst / Credit Manager</bpmn:text>
         <bpmndi:BPMNShape id="W888_Task11_di" bpmnElement="W888_Task11"><dc:Bounds x="1450" y="295" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W888_Start5_di" bpmnElement="W888_Start5"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W888_End12_di" bpmnElement="W888_End12"><dc:Bounds x="1680" y="487" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W888_Annotation13_di" bpmnElement="W888_Annotation13"><dc:Bounds x="160" y="630" width="360" height="60" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W888_Annotation13_di" bpmnElement="W888_Annotation13"><dc:Bounds x="160" y="630" width="360" height="72" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W888_Flow15_di" bpmnElement="W888_Flow15"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W888_Flow16_di" bpmnElement="W888_Flow16"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W888_Flow17_di" bpmnElement="W888_Flow17"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>

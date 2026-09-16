@@ -125,7 +125,7 @@ Duration: Automated</bpmn:documentation>
         <bpmn:incoming>W7_Flow32</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W7_Annotation19">
-        <bpmn:text>Controls: - CTL-09 (separate purchasing from receiving.); CTL-10 (separate payment initiation from approval.); CTL-14 (ensure AP invoices match PO and GR.); CTL-17 (ensure GRNI completeness.); CTL-44 (detect and prevent duplicate vendor payments.) | - operational: for permanent accrual
+        <bpmn:text>Controls: - CTL-09 (separate purchasing from receiving.); CTL-10 (separate payment initiation from approval.); CTL-14 (ensure AP invoices match PO and GR.); CTL-17 (ensure GRNI completeness.); CTL-44 (detect and prevent duplicate vendor payments.) | - operational: Controller intervention for GRNI items aged 90+ days with permanent accrual
 Owner: AP Supervisor</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W7_Assoc20" sourceRef="W7_Annotation19" targetRef="W7_Start6" associationDirection="None" />
@@ -161,7 +161,7 @@ Owner: AP Supervisor</bpmn:text>
         <bpmndi:BPMNShape id="W7_Task17_di" bpmnElement="W7_Task17"><dc:Bounds x="2500" y="295" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W7_Start6_di" bpmnElement="W7_Start6"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W7_End18_di" bpmnElement="W7_End18"><dc:Bounds x="2730" y="657" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W7_Annotation19_di" bpmnElement="W7_Annotation19"><dc:Bounds x="160" y="800" width="360" height="86" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W7_Annotation19_di" bpmnElement="W7_Annotation19"><dc:Bounds x="160" y="800" width="360" height="100" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W7_Flow21_di" bpmnElement="W7_Flow21"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W7_Flow22_di" bpmnElement="W7_Flow22"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W7_Flow23_di" bpmnElement="W7_Flow23"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>
@@ -2211,7 +2211,7 @@ Duration: 2 hours/month</bpmn:documentation>
         <bpmn:incoming>W770_Flow23</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W770_Annotation14">
-        <bpmn:text>Controls: - CTL-284 (ensure controlled execution — Invoice Processing &amp; Matching (PA-15.1).) | - operational: must enforce one-to-one matching; operational: is preventive
+        <bpmn:text>Controls: - CTL-284 (ensure controlled execution — Invoice Processing &amp; Matching (PA-15.1).) | - operational: must enforce one-to-one matching; operational: clear contract language per W688 CLM (preventive)
 Owner: AP Accountant</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W770_Assoc15" sourceRef="W770_Annotation14" targetRef="W770_Start5" associationDirection="None" />
@@ -2238,7 +2238,7 @@ Owner: AP Accountant</bpmn:text>
         <bpmndi:BPMNShape id="W770_Task12_di" bpmnElement="W770_Task12"><dc:Bounds x="1660" y="125" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W770_Start5_di" bpmnElement="W770_Start5"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W770_End13_di" bpmnElement="W770_End13"><dc:Bounds x="1890" y="487" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W770_Annotation14_di" bpmnElement="W770_Annotation14"><dc:Bounds x="160" y="630" width="360" height="60" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W770_Annotation14_di" bpmnElement="W770_Annotation14"><dc:Bounds x="160" y="630" width="360" height="72" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W770_Flow16_di" bpmnElement="W770_Flow16"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W770_Flow17_di" bpmnElement="W770_Flow17"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W770_Flow18_di" bpmnElement="W770_Flow18"><di:waypoint x="790" y="165" /><di:waypoint x="820" y="165" /></bpmndi:BPMNEdge>
@@ -2458,7 +2458,7 @@ Duration: 20–30 hours/quarter</bpmn:documentation>
         <bpmn:incoming>W919_Flow21</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W919_Annotation14">
-        <bpmn:text>Controls: - CTL-284 (ensure controlled execution — Invoice Processing &amp; Matching (PA-15.1).) | - operational: 7-day clearing SLA with daily aging report and Store Manager escalation for GIT &gt; 14 days; operational: automated reconciliation system that matches WMS quantities to ERP balances daily, flagging exceptions for manual review; operational: that matches WMS quantities to ERP balances daily, flagging exceptions for manual review
+        <bpmn:text>Controls: - CTL-284 (ensure controlled execution — Invoice Processing &amp; Matching (PA-15.1).) | - operational: 7-day clearing SLA with daily aging report and Store Manager escalation for GIT &gt; 14 days; operational: automated reconciliation system that matches WMS quantities to ERP balances daily, flagging exceptions for manual review
 Owner: Logistics Finance Analyst</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W919_Assoc15" sourceRef="W919_Annotation14" targetRef="W919_Start7" associationDirection="None" />
@@ -2483,7 +2483,7 @@ Owner: Logistics Finance Analyst</bpmn:text>
         <bpmndi:BPMNShape id="W919_Task12_di" bpmnElement="W919_Task12"><dc:Bounds x="1240" y="805" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W919_Start7_di" bpmnElement="W919_Start7"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W919_End13_di" bpmnElement="W919_End13"><dc:Bounds x="1470" y="827" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W919_Annotation14_di" bpmnElement="W919_Annotation14"><dc:Bounds x="160" y="970" width="360" height="114" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W919_Annotation14_di" bpmnElement="W919_Annotation14"><dc:Bounds x="160" y="970" width="360" height="100" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W919_Flow16_di" bpmnElement="W919_Flow16"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W919_Flow17_di" bpmnElement="W919_Flow17"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W919_Flow18_di" bpmnElement="W919_Flow18"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>

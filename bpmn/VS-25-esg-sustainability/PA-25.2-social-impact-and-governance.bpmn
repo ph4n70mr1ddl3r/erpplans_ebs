@@ -283,7 +283,7 @@ Duration: 1 year post-opening</bpmn:documentation>
         <bpmn:incoming>W800_Flow23</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W800_Annotation15">
-        <bpmn:text>Controls: - CTL-317 (ensure controlled execution — Social Impact &amp; Governance (PA-25.2).) | - operational: to ensure compliance during construction
+        <bpmn:text>Controls: - CTL-317 (ensure controlled execution — Social Impact &amp; Governance (PA-25.2).) | - operational: additional contractor supervision to ensure green-building compliance during construction
 Owner: VP for Engineering &amp; Construction</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W800_Assoc16" sourceRef="W800_Annotation15" targetRef="W800_Start7" associationDirection="None" />
@@ -310,7 +310,7 @@ Owner: VP for Engineering &amp; Construction</bpmn:text>
         <bpmndi:BPMNShape id="W800_Task13_di" bpmnElement="W800_Task13"><dc:Bounds x="1450" y="805" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W800_Start7_di" bpmnElement="W800_Start7"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W800_End14_di" bpmnElement="W800_End14"><dc:Bounds x="1680" y="827" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W800_Annotation15_di" bpmnElement="W800_Annotation15"><dc:Bounds x="160" y="970" width="360" height="60" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W800_Annotation15_di" bpmnElement="W800_Annotation15"><dc:Bounds x="160" y="970" width="360" height="72" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W800_Flow17_di" bpmnElement="W800_Flow17"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W800_Flow18_di" bpmnElement="W800_Flow18"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W800_Flow19_di" bpmnElement="W800_Flow19"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>

@@ -706,7 +706,7 @@ Duration: 2–3 hours/month</bpmn:documentation>
         <bpmn:incoming>W956_Flow21</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W956_Annotation14">
-        <bpmn:text>Controls: - CTL-299 (ensure controlled execution — Learning &amp; Development (PA-19.4).) | - operational: for DOLE compliance per W436; operational: before action per W483
+        <bpmn:text>Controls: - CTL-299 (ensure controlled execution — Learning &amp; Development (PA-19.4).) | - operational: 100% APE completion required for DOLE compliance per W436; operational: confirmatory testing (GC-MS) required before action per W483
 Owner: HR Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W956_Assoc15" sourceRef="W956_Annotation14" targetRef="W956_Start7" associationDirection="None" />
@@ -731,7 +731,7 @@ Owner: HR Manager</bpmn:text>
         <bpmndi:BPMNShape id="W956_Task12_di" bpmnElement="W956_Task12"><dc:Bounds x="1240" y="805" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W956_Start7_di" bpmnElement="W956_Start7"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W956_End13_di" bpmnElement="W956_End13"><dc:Bounds x="1470" y="827" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W956_Annotation14_di" bpmnElement="W956_Annotation14"><dc:Bounds x="160" y="970" width="360" height="60" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W956_Annotation14_di" bpmnElement="W956_Annotation14"><dc:Bounds x="160" y="970" width="360" height="72" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W956_Flow16_di" bpmnElement="W956_Flow16"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W956_Flow17_di" bpmnElement="W956_Flow17"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W956_Flow18_di" bpmnElement="W956_Flow18"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>

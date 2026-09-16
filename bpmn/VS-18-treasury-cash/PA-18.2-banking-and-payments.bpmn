@@ -236,7 +236,7 @@ Duration: 1 hour/month</bpmn:documentation>
         <bpmn:incoming>W317_Flow28</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W317_Annotation17">
-        <bpmn:text>Controls: - CTL-59 (prevent unauthorized bank account changes.) | - operational: and bank portal access, creating a fraud and unauthorized transaction risk
+        <bpmn:text>Controls: - CTL-59 (prevent unauthorized bank account changes.) | - operational: prompt HR-to-Treasury separation alerting with signatory and system-access revocation
 Owner: Treasury Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W317_Assoc18" sourceRef="W317_Annotation17" targetRef="W317_Start6" associationDirection="None" />

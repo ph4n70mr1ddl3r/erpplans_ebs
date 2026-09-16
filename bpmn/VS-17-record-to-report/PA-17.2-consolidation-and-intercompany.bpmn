@@ -641,7 +641,7 @@ Duration: 4 hours</bpmn:documentation>
         <bpmn:incoming>W612_Flow26</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W612_Annotation16">
-        <bpmn:text>Controls: - CTL-290 (ensure controlled execution — Consolidation &amp; Intercompany (PA-17.2).) | - operational: annual TP documentation in Step 7; operational: quarterly review cadence and automatic escalation trigger if cost variance &gt; 10%; operational: escalation trigger if cost variance &gt; 10%
+        <bpmn:text>Controls: - CTL-290 (ensure controlled execution — Consolidation &amp; Intercompany (PA-17.2).) | - operational: annual TP documentation in Step 7; operational: quarterly review cadence and automatic escalation trigger if cost variance &gt; 10%
 Owner: Controller</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W612_Assoc17" sourceRef="W612_Annotation16" targetRef="W612_Start6" associationDirection="None" />
@@ -671,7 +671,7 @@ Owner: Controller</bpmn:text>
         <bpmndi:BPMNShape id="W612_Task14_di" bpmnElement="W612_Task14"><dc:Bounds x="1870" y="465" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W612_Start6_di" bpmnElement="W612_Start6"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W612_End15_di" bpmnElement="W612_End15"><dc:Bounds x="2100" y="657" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W612_Annotation16_di" bpmnElement="W612_Annotation16"><dc:Bounds x="160" y="800" width="360" height="86" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W612_Annotation16_di" bpmnElement="W612_Annotation16"><dc:Bounds x="160" y="800" width="360" height="72" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W612_Flow18_di" bpmnElement="W612_Flow18"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W612_Flow19_di" bpmnElement="W612_Flow19"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W612_Flow20_di" bpmnElement="W612_Flow20"><di:waypoint x="790" y="165" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>

@@ -279,7 +279,7 @@ Duration: Per request</bpmn:documentation>
         <bpmn:incoming>W3044_Flow15</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W3044_Annotation10">
-        <bpmn:text>Controls: - CTL-153 (ensure privacy consent, DSAR &amp; processor oversight.) | - operational: case tracking and cross-system retrieval runbooks; operational: retrieval runbooks
+        <bpmn:text>Controls: - CTL-153 (ensure privacy consent, DSAR &amp; processor oversight.) | - operational: case tracking and cross-system retrieval runbooks
 Owner: Data Protection Officer (DPO)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W3044_Assoc11" sourceRef="W3044_Annotation10" targetRef="W3044_Start5" associationDirection="None" />

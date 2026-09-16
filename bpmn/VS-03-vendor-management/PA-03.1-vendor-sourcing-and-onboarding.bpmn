@@ -5040,7 +5040,7 @@ Duration: 1–2 hours/month</bpmn:documentation>
         <bpmn:incoming>W1105_Flow19</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1105_Annotation12">
-        <bpmn:text>Controls: - CTL-246 (ensure controlled execution — Vendor Sourcing &amp; Onboarding (PA-03.1).) | - operational: must track actual discount realized vs
+        <bpmn:text>Controls: - CTL-246 (ensure controlled execution — Vendor Sourcing &amp; Onboarding (PA-03.1).) | - operational: must track actual discount realized vs. offered
 Owner: AP Manager (Finance)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1105_Assoc13" sourceRef="W1105_Annotation12" targetRef="W1105_Start5" associationDirection="None" />

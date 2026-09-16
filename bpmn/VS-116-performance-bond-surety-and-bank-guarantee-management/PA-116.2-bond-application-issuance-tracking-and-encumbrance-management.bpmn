@@ -49,7 +49,7 @@ Duration: Per bid</bpmn:documentation>
         <bpmn:incoming>W3649_Flow14</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W3649_Annotation9">
-        <bpmn:text>Controls: - CTL-578 (ensure controlled execution — Bond/Guarantee Application, Issuance, Tracking &amp; Encumbrance Management (PA-116.2).) | - operational: lead-time and pre-arranged facility; operational: format review; operational: format is rejected
+        <bpmn:text>Controls: - CTL-578 (ensure controlled execution — Bond/Guarantee Application, Issuance, Tracking &amp; Encumbrance Management (PA-116.2).) | - operational: lead-time and pre-arranged facility; operational: format review
 Owner: Surety Program Manager / B2G Sales</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W3649_Assoc10" sourceRef="W3649_Annotation9" targetRef="W3649_Start4" associationDirection="None" />
@@ -67,7 +67,7 @@ Owner: Surety Program Manager / B2G Sales</bpmn:text>
         <bpmndi:BPMNShape id="W3649_Task7_di" bpmnElement="W3649_Task7"><dc:Bounds x="820" y="295" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W3649_Start4_di" bpmnElement="W3649_Start4"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W3649_End8_di" bpmnElement="W3649_End8"><dc:Bounds x="1050" y="317" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W3649_Annotation9_di" bpmnElement="W3649_Annotation9"><dc:Bounds x="160" y="460" width="360" height="86" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W3649_Annotation9_di" bpmnElement="W3649_Annotation9"><dc:Bounds x="160" y="460" width="360" height="72" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W3649_Flow11_di" bpmnElement="W3649_Flow11"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W3649_Flow12_di" bpmnElement="W3649_Flow12"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W3649_Flow13_di" bpmnElement="W3649_Flow13"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>

@@ -771,7 +771,7 @@ Duration: Part of W104</bpmn:documentation>
         <bpmn:incoming>W933_Flow32</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W933_Annotation20">
-        <bpmn:text>Controls: - CTL-279 (ensure controlled execution — Loyalty Program Operations (PA-13.2).) | - operational: for each case
+        <bpmn:text>Controls: - CTL-279 (ensure controlled execution — Loyalty Program Operations (PA-13.2).) | - operational: legal review required for each case
 Owner: Customer Service Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W933_Assoc21" sourceRef="W933_Annotation20" targetRef="W933_Start8" associationDirection="None" />
@@ -1596,7 +1596,7 @@ Duration: 4 hours/quarter</bpmn:documentation>
         <bpmn:incoming>W1186_Flow21</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1186_Annotation13">
-        <bpmn:text>Controls: - CTL-279 (ensure controlled execution — Loyalty Program Operations (PA-13.2).) | - operational: for each partnership
+        <bpmn:text>Controls: - CTL-279 (ensure controlled execution — Loyalty Program Operations (PA-13.2).) | - operational: partnership agreement and integration review per W62 before build
 Owner: Loyalty Program Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1186_Assoc14" sourceRef="W1186_Annotation13" targetRef="W1186_Start5" associationDirection="None" />

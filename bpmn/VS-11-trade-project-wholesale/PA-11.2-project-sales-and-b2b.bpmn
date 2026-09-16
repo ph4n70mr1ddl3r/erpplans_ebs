@@ -879,7 +879,7 @@ Duration: 1-2 days</bpmn:documentation>
         <bpmn:incoming>W792_Flow23</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W792_Annotation14">
-        <bpmn:text>Controls: - CTL-273 (ensure controlled execution — Project Sales &amp; B2B (PA-11.2).) | - operational: mandatory CO logging before any delivery change; operational: CO logging before any delivery change
+        <bpmn:text>Controls: - CTL-273 (ensure controlled execution — Project Sales &amp; B2B (PA-11.2).) | - operational: mandatory CO logging before any delivery change
 Owner: Project Manager (Trade &amp; Project Sales)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W792_Assoc15" sourceRef="W792_Annotation14" targetRef="W792_Start5" associationDirection="None" />
@@ -906,7 +906,7 @@ Owner: Project Manager (Trade &amp; Project Sales)</bpmn:text>
         <bpmndi:BPMNShape id="W792_Task12_di" bpmnElement="W792_Task12"><dc:Bounds x="1660" y="465" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W792_Start5_di" bpmnElement="W792_Start5"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W792_End13_di" bpmnElement="W792_End13"><dc:Bounds x="1890" y="487" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W792_Annotation14_di" bpmnElement="W792_Annotation14"><dc:Bounds x="160" y="630" width="360" height="72" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W792_Annotation14_di" bpmnElement="W792_Annotation14"><dc:Bounds x="160" y="630" width="360" height="60" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W792_Flow16_di" bpmnElement="W792_Flow16"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W792_Flow17_di" bpmnElement="W792_Flow17"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W792_Flow18_di" bpmnElement="W792_Flow18"><di:waypoint x="790" y="165" /><di:waypoint x="820" y="165" /></bpmndi:BPMNEdge>

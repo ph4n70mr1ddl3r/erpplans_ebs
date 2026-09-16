@@ -1099,7 +1099,7 @@ Duration: 30–45 min per contractor</bpmn:documentation>
         <bpmn:incoming>W600_Flow31</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W600_Annotation19">
-        <bpmn:text>Controls: - CTL-275 (ensure controlled execution — Installation &amp; Repair Services (PA-12.1).) | - operational: conditional accreditation pathway (step 2c) for experienced but uncertified applicants, combined with mandatory BuildRight training (step 6) and supervised trial period (step 8); operational: BuildRight training (step 6) and supervised trial period (step 8); operational: establishing 3–4 regional assessment hubs (Metro Manila, Cebu, Davao, and one Northern Luzon location), conducting quarterly assessment batches rather than individual assessments, and using senior accredited contractors as regional assessors
+        <bpmn:text>Controls: - CTL-275 (ensure controlled execution — Installation &amp; Repair Services (PA-12.1).) | - operational: conditional accreditation pathway (step 2c) for experienced but uncertified applicants, combined with mandatory BuildRight training (step 6) and supervised trial period (step 8); operational: establishing 3–4 regional assessment hubs (Metro Manila, Cebu, Davao, and one Northern Luzon location), conducting quarterly assessment batches rather than individual assessments, and using senior accredited contractors as regional assessors
 Owner: Services Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W600_Assoc20" sourceRef="W600_Annotation19" targetRef="W600_Start7" associationDirection="None" />

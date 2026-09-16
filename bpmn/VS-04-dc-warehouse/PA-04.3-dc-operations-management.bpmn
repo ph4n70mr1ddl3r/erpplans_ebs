@@ -405,7 +405,7 @@ Duration: 1 hour/week</bpmn:documentation>
         <bpmn:incoming>W584_Flow33</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W584_Annotation19">
-        <bpmn:text>Controls: - CTL-252 (ensure controlled execution — DC Operations Management (PA-04.3).) | - operational: mandatory handover log acknowledgment but not fully eliminated; operational: handover log acknowledgment but not fully eliminated
+        <bpmn:text>Controls: - CTL-252 (ensure controlled execution — DC Operations Management (PA-04.3).) | - operational: mandatory handover log acknowledgment
 Owner: DC Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W584_Assoc20" sourceRef="W584_Annotation19" targetRef="W584_Start5" associationDirection="None" />
@@ -442,7 +442,7 @@ Owner: DC Manager</bpmn:text>
         <bpmndi:BPMNShape id="W584_Task17_di" bpmnElement="W584_Task17"><dc:Bounds x="2710" y="465" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W584_Start5_di" bpmnElement="W584_Start5"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W584_End18_di" bpmnElement="W584_End18"><dc:Bounds x="2940" y="487" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W584_Annotation19_di" bpmnElement="W584_Annotation19"><dc:Bounds x="160" y="630" width="360" height="72" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W584_Annotation19_di" bpmnElement="W584_Annotation19"><dc:Bounds x="160" y="630" width="360" height="60" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W584_Flow21_di" bpmnElement="W584_Flow21"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W584_Flow22_di" bpmnElement="W584_Flow22"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W584_Flow23_di" bpmnElement="W584_Flow23"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>

@@ -2006,7 +2006,7 @@ Duration: 2 hours/year</bpmn:documentation>
         <bpmn:incoming>W512_Flow28</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W512_Annotation17">
-        <bpmn:text>Controls: - CTL-296 (ensure controlled execution — Recruitment &amp; Onboarding (PA-19.1).) | - operational: system attendance tracking and Regional Safety Coordinator quarterly review; operational: attendance tracking and Regional Safety Coordinator quarterly review; operational: automated reminders and Store Manager escalation
+        <bpmn:text>Controls: - CTL-296 (ensure controlled execution — Recruitment &amp; Onboarding (PA-19.1).) | - operational: system attendance tracking and Regional Safety Coordinator quarterly review; operational: automated reminders and Store Manager escalation
 Owner: Safety Officer (per establishment)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W512_Assoc18" sourceRef="W512_Annotation17" targetRef="W512_Start6" associationDirection="None" />
@@ -2038,7 +2038,7 @@ Owner: Safety Officer (per establishment)</bpmn:text>
         <bpmndi:BPMNShape id="W512_Task15_di" bpmnElement="W512_Task15"><dc:Bounds x="2080" y="125" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W512_Start6_di" bpmnElement="W512_Start6"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W512_End16_di" bpmnElement="W512_End16"><dc:Bounds x="2310" y="657" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W512_Annotation17_di" bpmnElement="W512_Annotation17"><dc:Bounds x="160" y="800" width="360" height="100" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W512_Annotation17_di" bpmnElement="W512_Annotation17"><dc:Bounds x="160" y="800" width="360" height="86" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W512_Flow19_di" bpmnElement="W512_Flow19"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W512_Flow20_di" bpmnElement="W512_Flow20"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W512_Flow21_di" bpmnElement="W512_Flow21"><di:waypoint x="790" y="165" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>

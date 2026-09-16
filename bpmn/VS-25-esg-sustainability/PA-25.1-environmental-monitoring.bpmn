@@ -1439,7 +1439,7 @@ Duration: 1 week/year</bpmn:documentation>
         <bpmn:incoming>W1448_Flow20</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1448_Annotation13">
-        <bpmn:text>Controls: - CTL-316 (ensure controlled execution — Environmental Monitoring (PA-25.1).) | - operational: life, reducing savings vs
+        <bpmn:text>Controls: - CTL-316 (ensure controlled execution — Environmental Monitoring (PA-25.1).) | - operational: degradation-adjusted generation baseline with fault escalation when output drops &gt; 20% below expected
 Owner: COO &amp; Construction (infrastructure) / Store Manager (daily)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1448_Assoc14" sourceRef="W1448_Annotation13" targetRef="W1448_Start6" associationDirection="None" />
@@ -1463,7 +1463,7 @@ Owner: COO &amp; Construction (infrastructure) / Store Manager (daily)</bpmn:tex
         <bpmndi:BPMNShape id="W1448_Task11_di" bpmnElement="W1448_Task11"><dc:Bounds x="1240" y="635" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1448_Start6_di" bpmnElement="W1448_Start6"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1448_End12_di" bpmnElement="W1448_End12"><dc:Bounds x="1470" y="657" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1448_Annotation13_di" bpmnElement="W1448_Annotation13"><dc:Bounds x="160" y="800" width="360" height="60" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1448_Annotation13_di" bpmnElement="W1448_Annotation13"><dc:Bounds x="160" y="800" width="360" height="72" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W1448_Flow15_di" bpmnElement="W1448_Flow15"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W1448_Flow16_di" bpmnElement="W1448_Flow16"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W1448_Flow17_di" bpmnElement="W1448_Flow17"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>

@@ -270,7 +270,7 @@ Duration: quarterly</bpmn:documentation>
         <bpmn:incoming>W5395_Flow19</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W5395_Annotation12">
-        <bpmn:text>Controls: - CTL-797 (ensure controlled execution — Receivables Financing Strategy, Funder Relationships &amp; Program Setup (PA-189.1).) | - operational: eligibility accuracy; fraud detection on fabricated invoices; concentration-limit adherence; .
+        <bpmn:text>Controls: - CTL-797 (ensure controlled execution — Receivables Financing Strategy, Funder Relationships &amp; Program Setup (PA-189.1).) | - operational: eligibility accuracy; fraud detection on fabricated invoices; concentration-limit adherence.
 Owner: Credit Analyst (Receivables Finance)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W5395_Assoc13" sourceRef="W5395_Annotation12" targetRef="W5395_Start5" associationDirection="None" />
@@ -683,7 +683,7 @@ Duration: quarterly</bpmn:documentation>
         <bpmn:incoming>W5399_Flow20</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W5399_Annotation13">
-        <bpmn:text>Controls: - CTL-797 (ensure controlled execution — Receivables Financing Strategy, Funder Relationships &amp; Program Setup (PA-189.1).) | - operational: dilution accuracy; adequate reserve; coverage; .
+        <bpmn:text>Controls: - CTL-797 (ensure controlled execution — Receivables Financing Strategy, Funder Relationships &amp; Program Setup (PA-189.1).) | - operational: dilution accuracy; adequate reserve; coverage.
 Owner: Credit Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W5399_Assoc14" sourceRef="W5399_Annotation13" targetRef="W5399_Start6" associationDirection="None" />

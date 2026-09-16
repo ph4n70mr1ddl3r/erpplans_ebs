@@ -680,7 +680,7 @@ Duration: monthly</bpmn:documentation>
         <bpmn:incoming>W5439_Flow20</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W5439_Annotation13">
-        <bpmn:text>Controls: - CTL-802 (ensure controlled execution — OT Compliance, Third-Party Access &amp; Cyber Resilience Analytics (PA-190.3).) | - operational: cross-channel segregation consistency; ensure controlled execution — OT Compliance, Third-Party Access &amp; Cyber Resilience Analytics (PA-190.3; .) — coordination governance; channel posture evidence; .
+        <bpmn:text>Controls: - CTL-802 (ensure controlled execution — OT Compliance, Third-Party Access &amp; Cyber Resilience Analytics (PA-190.3).) | - operational: cross-channel segregation consistency; coordination governance; channel posture evidence.
 Owner: OT Security Lead</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W5439_Assoc14" sourceRef="W5439_Annotation13" targetRef="W5439_Start6" associationDirection="None" />
@@ -704,7 +704,7 @@ Owner: OT Security Lead</bpmn:text>
         <bpmndi:BPMNShape id="W5439_Task11_di" bpmnElement="W5439_Task11"><dc:Bounds x="1240" y="635" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W5439_Start6_di" bpmnElement="W5439_Start6"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W5439_End12_di" bpmnElement="W5439_End12"><dc:Bounds x="1470" y="657" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W5439_Annotation13_di" bpmnElement="W5439_Annotation13"><dc:Bounds x="160" y="800" width="360" height="100" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5439_Annotation13_di" bpmnElement="W5439_Annotation13"><dc:Bounds x="160" y="800" width="360" height="72" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W5439_Flow15_di" bpmnElement="W5439_Flow15"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W5439_Flow16_di" bpmnElement="W5439_Flow16"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W5439_Flow17_di" bpmnElement="W5439_Flow17"><di:waypoint x="790" y="165" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>

@@ -1977,7 +1977,7 @@ Duration: 4-6 hours/month</bpmn:documentation>
         <bpmn:incoming>W828_Flow25</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W828_Annotation15">
-        <bpmn:text>Controls: - CTL-269 (ensure controlled execution — Ecommerce Platform Operations (PA-10.1).) | - operational: but often deprioritized
+        <bpmn:text>Controls: - CTL-269 (ensure controlled execution — Ecommerce Platform Operations (PA-10.1).) | - operational: periodic feature-flag cleanup
 Owner: Ecommerce Product Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W828_Assoc16" sourceRef="W828_Annotation15" targetRef="W828_Start5" associationDirection="None" />

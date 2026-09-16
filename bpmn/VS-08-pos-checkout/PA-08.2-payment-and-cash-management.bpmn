@@ -263,7 +263,7 @@ Duration: Quarterly</bpmn:documentation>
         <bpmn:incoming>W537_Flow26</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W537_Annotation16">
-        <bpmn:text>Controls: - CTL-264 (ensure controlled execution — Payment &amp; Cash Management (PA-08.2).) | - operational: automatic retry and terminal memory buffer; operational: retry and terminal memory buffer; operational: next-day settlement file matching per W99
+        <bpmn:text>Controls: - CTL-264 (ensure controlled execution — Payment &amp; Cash Management (PA-08.2).) | - operational: automatic retry and terminal memory buffer; operational: next-day settlement file matching per W99
 Owner: Store Manager (settlement review); IT Operations (terminal troubleshooting)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W537_Assoc17" sourceRef="W537_Annotation16" targetRef="W537_Start6" associationDirection="None" />
@@ -293,7 +293,7 @@ Owner: Store Manager (settlement review); IT Operations (terminal troubleshootin
         <bpmndi:BPMNShape id="W537_Task14_di" bpmnElement="W537_Task14"><dc:Bounds x="1870" y="635" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W537_Start6_di" bpmnElement="W537_Start6"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W537_End15_di" bpmnElement="W537_End15"><dc:Bounds x="2100" y="657" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W537_Annotation16_di" bpmnElement="W537_Annotation16"><dc:Bounds x="160" y="800" width="360" height="86" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W537_Annotation16_di" bpmnElement="W537_Annotation16"><dc:Bounds x="160" y="800" width="360" height="72" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W537_Flow18_di" bpmnElement="W537_Flow18"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W537_Flow19_di" bpmnElement="W537_Flow19"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W537_Flow20_di" bpmnElement="W537_Flow20"><di:waypoint x="790" y="165" /><di:waypoint x="820" y="165" /></bpmndi:BPMNEdge>

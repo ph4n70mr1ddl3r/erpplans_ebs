@@ -69,7 +69,7 @@ Duration: 1 week</bpmn:documentation>
         <bpmn:incoming>W5345_Flow19</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W5345_Annotation12">
-        <bpmn:text>Controls: - CTL-791 (ensure controlled execution — Program Strategy, Regulatory Setup &amp; Partner Network (PA-187.1).) | - operational: regulatory compliance scope; program budget adherence; .
+        <bpmn:text>Controls: - CTL-791 (ensure controlled execution — Program Strategy, Regulatory Setup &amp; Partner Network (PA-187.1).) | - operational: regulatory compliance scope; program budget adherence.
 Owner: Sustainability/ESG Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W5345_Assoc13" sourceRef="W5345_Annotation12" targetRef="W5345_Start5" associationDirection="None" />
@@ -672,7 +672,7 @@ Duration: per movement</bpmn:documentation>
         <bpmn:incoming>W5351_Flow19</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W5351_Annotation12">
-        <bpmn:text>Controls: - CTL-791 (ensure controlled execution — Program Strategy, Regulatory Setup &amp; Partner Network (PA-187.1).) | - operational: hazardous-waste manifest/DENR compliance; manifest quantity accuracy; .
+        <bpmn:text>Controls: - CTL-791 (ensure controlled execution — Program Strategy, Regulatory Setup &amp; Partner Network (PA-187.1).) | - operational: hazardous-waste manifest/DENR compliance; manifest quantity accuracy.
 Owner: Compliance Specialist (Environmental)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W5351_Assoc13" sourceRef="W5351_Annotation12" targetRef="W5351_Start5" associationDirection="None" />

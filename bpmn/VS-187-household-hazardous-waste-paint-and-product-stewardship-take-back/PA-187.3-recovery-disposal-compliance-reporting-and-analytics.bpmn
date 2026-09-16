@@ -375,7 +375,7 @@ Duration: ongoing</bpmn:documentation>
         <bpmn:incoming>W5364_Flow19</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W5364_Annotation12">
-        <bpmn:text>Controls: - CTL-793 (ensure controlled execution — Recovery, Disposal, Compliance Reporting &amp; Stewardship Analytics (PA-187.3).) | - operational: statutory environmental reporting; reporting accuracy/reconciliation; .
+        <bpmn:text>Controls: - CTL-793 (ensure controlled execution — Recovery, Disposal, Compliance Reporting &amp; Stewardship Analytics (PA-187.3).) | - operational: statutory environmental reporting; reporting accuracy/reconciliation.
 Owner: Compliance Specialist (Environmental)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W5364_Assoc13" sourceRef="W5364_Annotation12" targetRef="W5364_Start5" associationDirection="None" />
@@ -778,7 +778,7 @@ Duration: quarterly</bpmn:documentation>
         <bpmn:incoming>W5368_Flow18</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W5368_Annotation11">
-        <bpmn:text>Controls: - CTL-793 (ensure controlled execution — Recovery, Disposal, Compliance Reporting &amp; Stewardship Analytics (PA-187.3).) | - operational: ESG-claim substantiation; metric-data accuracy; .
+        <bpmn:text>Controls: - CTL-793 (ensure controlled execution — Recovery, Disposal, Compliance Reporting &amp; Stewardship Analytics (PA-187.3).) | - operational: ESG-claim substantiation; metric-data accuracy.
 Owner: Sustainability/ESG Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W5368_Assoc12" sourceRef="W5368_Annotation11" targetRef="W5368_Start4" associationDirection="None" />

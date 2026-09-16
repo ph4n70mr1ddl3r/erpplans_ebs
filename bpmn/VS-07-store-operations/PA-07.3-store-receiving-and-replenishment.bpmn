@@ -3252,7 +3252,7 @@ Duration: 5 min</bpmn:documentation>
         <bpmn:incoming>W1193_Flow21</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1193_Annotation13">
-        <bpmn:text>Controls: - CTL-261 (ensure controlled execution — Store Receiving &amp; Replenishment (PA-07.3).) | - operational: time slot management in Step 1 and separate pickup vs; operational: Stock Associate training on safe loading limits and willingness to refuse unsafe loads; operational: load securing assistance in Step 5 and electronic goods release form documenting customer&#x27;s acceptance of responsibility in Step 6
+        <bpmn:text>Controls: - CTL-261 (ensure controlled execution — Store Receiving &amp; Replenishment (PA-07.3).) | - operational: time slot management in Step 1 and separate pickup vs. delivery bay designation where space permits; operational: Stock Associate training on safe loading limits and willingness to refuse unsafe loads; operational: load securing assistance in Step 5 and electronic goods release form documenting customer&#x27;s acceptance of responsibility in Step 6
 Owner: Store Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1193_Assoc14" sourceRef="W1193_Annotation13" targetRef="W1193_Start5" associationDirection="None" />

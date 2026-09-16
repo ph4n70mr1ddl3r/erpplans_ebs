@@ -49,7 +49,7 @@ Duration: Per dispute</bpmn:documentation>
         <bpmn:incoming>W2897_Flow14</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W2897_Annotation9">
-        <bpmn:text>Controls: - CTL-236 (ensure mandatory-discount &amp; VAT-exemption compliance.) | - operational: mandatory ID capture in POS; operational: ID capture in POS
+        <bpmn:text>Controls: - CTL-236 (ensure mandatory-discount &amp; VAT-exemption compliance.) | - operational: mandatory ID capture in POS
 Owner: Store Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W2897_Assoc10" sourceRef="W2897_Annotation9" targetRef="W2897_Start4" associationDirection="None" />

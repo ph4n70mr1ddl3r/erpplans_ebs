@@ -674,7 +674,7 @@ Duration: per material finding</bpmn:documentation>
         <bpmn:incoming>W5415_Flow20</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W5415_Annotation13">
-        <bpmn:text>Controls: - CTL-799 (ensure controlled execution — Collections, Recourse Management, Reconciliation &amp; Portfolio Analytics (PA-189.3).) | - operational: statutory compliance; regulatory; internal-audit independence (VS-21); accuracy; consolidated reporting; .
+        <bpmn:text>Controls: - CTL-799 (ensure controlled execution — Collections, Recourse Management, Reconciliation &amp; Portfolio Analytics (PA-189.3).) | - operational: statutory compliance; regulatory; internal-audit independence (VS-21); accuracy; consolidated reporting.
 Owner: Finance Controller</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W5415_Assoc14" sourceRef="W5415_Annotation13" targetRef="W5415_Start6" associationDirection="None" />

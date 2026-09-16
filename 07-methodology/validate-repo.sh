@@ -712,6 +712,13 @@ echo "--- Check 21: Automation/Controls content quality ---"
 #   (a) Automation bullets that are broken fragments (auto-X (lowercase fragment, no period)
 #   (b) Controls sections citing >=1 real CTL-XX  (coverage of the controls register)
 #   (c) Controls sections that are pure boilerplate (no CTL-XX AND one of two known strings)
+# 2026-09-17 forty-ninth-wave extension: the sibling corruption class in the Controls
+# `operational:` bullets — 99 bullets across 67 PA files carrying dangling empty tails
+# ('; .'), duplicated items (leading modifier dropped), items truncated at "vs."/bare
+# connectors, and pain-point risk clauses minted as control items — repaired and retired
+# as ERROR arms (f)–(i) in the python block below (fix-controls-splice-artifacts.py +
+# fix-controls-splice-artifacts-2-context.py; replacements grounded in each workflow's
+# own Pain Points/Steps).
 QUALITY=$(python3 - "$REPO_ROOT" <<'PY'
 import glob, os, re, sys
 ROOT = sys.argv[1]
@@ -744,6 +751,29 @@ bad = []# Broad fragment detector: any bullet emitted by add-automation-controls
 # Forty-fourth wave: the verb pattern is `auto-[\w-]+` so hyphenated verbs ('auto-follow-up')
 # are covered — W3834's fragment sailed through the `auto-\w+ ` form.
 frag_re = re.compile(r"^- (?:auto-[\w-]+|rule-based auto-[\w-]+|rule-based authorization|workflow (?:notification|orchestration)|continuous audit|auto-flag for investigation) [\(\)]")
+# Forty-ninth-wave (2026-09-17) retired-defect arms for the Controls `operational:` bullets
+# (the sibling field corruption class to the Automation arms above): the semantic-batch
+# Controls enrichment minted pain-point risk clauses and mitigation-clause substrings as
+# control items, split item lists at "vs." (the period read as a sentence end), duplicated
+# items with their leading modifier dropped, and left dangling empty final items ("; .").
+# 99 bullets across 67 PA files repaired 2026-09-17 (07-methodology/fix-controls-splice-
+# artifacts.py + fix-controls-splice-artifacts-2-context.py, every replacement grounded in
+# the owning workflow's own Pain Points/Steps). Four ERROR arms, verified silent on the
+# repaired tree:
+#   (f) dangling empty tail: any `operational:` bullet ending "; ." or containing "; .)"
+#       (the mint pass's empty-final-item signature; PA-190.3's form had the CTL gloss
+#       spliced inside the paren as well)
+#   (g) duplicated item: within one bullet, a later semicolon item whose normalized text
+#       is contained in an earlier item's ("mandatory X; operational: X")
+#   (h) truncation: an item ending in a bare connecting word (vs/and/or/with/the/to/for/
+#       of/per/in/by) before the terminal period — the "split at vs." signature
+#   (i) orphan opener: an item starting mid-sentence (and/but/are/is/causing/creating/
+#       cannot/needed() — the risk-splice signature
+CTL_TAIL = re.compile(r"; \.|; \.\)")
+CTL_OPEN = re.compile(r"^- operational: (?:and |but |are |is |causing |creating |cannot |needed \()")
+CTL_END = re.compile(r"(?:^|\s)(?:vs|and|or|with|the|to|for|of|per|in|by)$")
+def _ctl_norm(s):
+    return re.sub(r"[^a-z0-9]", "", s.lower())
 for f in files:
     txt = open(f, encoding="utf-8", errors="replace").read()
     for m in re.finditer(r'^### Automation Opportunity\n(.*?)(?=^### |^---|^## |\Z)', txt, re.M | re.S):
@@ -769,7 +799,33 @@ for f in files:
             bad.append(f"{f}:{sec_line}: empty Automation Opportunity section (0 bullets)")
     for m in re.finditer(r'^### Controls\n(.*?)(?=^### |^---|^## |\Z)', txt, re.M | re.S):
         ctrl_total += 1
+        sec_line = txt.count("\n", 0, m.start()) + 1
         body = m.group(1).strip()
+        for i, line in enumerate(m.group(1).split("\n")):
+            stripped = line.strip()
+            if not stripped.startswith("- operational:") and not stripped.startswith("- Operational control:"):
+                continue
+            ln = sec_line + 1 + i
+            if CTL_TAIL.search(stripped):
+                bad.append(f"{f}:{ln}: Controls bullet with dangling empty item ('; .') or spliced gloss: {stripped[:100]}")
+            if CTL_OPEN.match(stripped):
+                bad.append(f"{f}:{ln}: Controls bullet item minted from mid-sentence (risk-splice opener): {stripped[:100]}")
+            items = re.split(r"; (?:operational|Operational control|operational control): ", stripped)
+            all_items = [re.sub(r"^- (?:operational|Operational control): ", "", items[0])] + items[1:]
+            for a in range(1, len(all_items)):
+                na = _ctl_norm(all_items[a])
+                for b in range(a):
+                    nb = _ctl_norm(all_items[b])
+                    if len(na) > 10 and (na in nb or nb.startswith(na)):
+                        bad.append(f"{f}:{ln}: Controls bullet duplicated item (leading modifier dropped): {all_items[a][:80]}")
+                        break
+                else:
+                    continue
+                break
+            for it in all_items:
+                core = it.rstrip().rstrip(".").rstrip()
+                if len(core) > 12 and CTL_END.search(core):
+                    bad.append(f"{f}:{ln}: Controls bullet truncated item (ends on bare connector — the split-at-vs. signature): ...{core[-60:]}")
         has_ctl = bool(re.search(r'\bCTL-\d+', body))
         if has_ctl:
             ctrl_with_ctl += 1
@@ -791,10 +847,10 @@ CTRL_PCT=$(echo "$METRICS" | cut -d'|' -f6)
 CTRL_BOILER=$(echo "$METRICS" | cut -d'|' -f7)
 if [ -n "$C21_BAD" ]; then
     echo "$C21_BAD" | sed 's/^BAD|/    /' | sed "s#|$REPO_ROOT/##"
-    error "Automation-section retired-defect classes present: $(echo "$C21_BAD" | wc -l) hit(s) — the vacuous placeholder pair ('auto-integration; real-time data sync' / 'auto-report generation and distribution' / 'workflow automation; rule-based routing'), corrupted auto-verb joins, empty Automation Opportunity sections, mid-phrase fragment bullets (incl. the hyphenated-verb forms), and trailing whitespace are retired (forty-fourth-wave arms, 2026-09-16 — the fragment metric itself promoted from WARN to ERROR with the backlog long closed); repair with step-quoting bullets per the house form '- System auto-<verb> of <step quote> (replaces manual Step N).' / '(Step N, already system-executed).'"
+    error "Automation/Controls retired-defect classes present: $(echo "$C21_BAD" | wc -l) hit(s) — the vacuous placeholder pair ('auto-integration; real-time data sync' / 'auto-report generation and distribution' / 'workflow automation; rule-based routing'), corrupted auto-verb joins, empty Automation Opportunity sections, mid-phrase fragment bullets (incl. the hyphenated-verb forms), and trailing whitespace are retired (forty-fourth-wave arms, 2026-09-16 — the fragment metric itself promoted from WARN to ERROR with the backlog long closed), and the Controls `operational:` splice classes are retired (forty-ninth-wave arms, 2026-09-17: dangling empty tails ('; .'), duplicated items with the leading modifier dropped, items truncated on a bare connector (the split-at-vs. signature), and mid-sentence risk-splice openers — 99 bullets across 67 PA files repaired); repair with step-quoting bullets per the house form, Controls items grounded in the workflow's own Pain Points/Steps"
 fi
 if [ "$CTRL_WITH_CTL" -eq "$CTRL_TOTAL" ] && [ "$CTRL_BOILER" -eq 0 ]; then
-    ok "Automation/Controls quality targets met: 0/$AUTO_TOTAL fragment bullets; $CTRL_WITH_CTL/$CTRL_TOTAL Controls sections cite a CTL-XX ($CTRL_PCT%); $CTRL_BOILER pure-boilerplate; 0 vacuous placeholder / corrupted-join / empty-section / fragment / trailing-whitespace hits (the forty-fourth-wave retired classes, 2026-09-16 — 28 placeholder bullets across 14 workflows, one corrupted W907 paste, one empty W1210 section and one hyphenated W3834 fragment repaired to the step-quoting house form, and the legacy fragment metric promoted WARN → ERROR with the 2026-06-28 backlog long closed). (Register: 67 core + 172 domain anchors + 569 process-area operating controls = 808; PA controls are honest-draft derived mappings pending per-workflow review — see WORKFLOW-FORMAT-GUIDE.md 'Quality bar'. This check remains the regression guard for all metrics plus the retired classes.)"
+    ok "Automation/Controls quality targets met: 0/$AUTO_TOTAL fragment bullets; $CTRL_WITH_CTL/$CTRL_TOTAL Controls sections cite a CTL-XX ($CTRL_PCT%); $CTRL_BOILER pure-boilerplate; 0 vacuous placeholder / corrupted-join / empty-section / fragment / trailing-whitespace hits (the forty-fourth-wave retired classes, 2026-09-16 — 28 placeholder bullets across 14 workflows, one corrupted W907 paste, one empty W1210 section and one hyphenated W3834 fragment repaired to the step-quoting house form, and the legacy fragment metric promoted WARN → ERROR with the 2026-06-28 backlog long closed) and 0 Controls splice-class hits (the forty-ninth-wave retired classes, 2026-09-17: dangling '; .' tails, duplicated items, truncations on bare connectors, mid-sentence risk-splice openers — 99 bullets across 67 PA files repaired to items grounded in their own workflow's Pain Points/Steps). (Register: 67 core + 172 domain anchors + 569 process-area operating controls = 808; PA controls are honest-draft derived mappings pending per-workflow review — see WORKFLOW-FORMAT-GUIDE.md 'Quality bar'. This check remains the regression guard for all metrics plus the retired classes.)"
 else
     warn "Automation/Controls draft-field quality: $CTRL_WITH_CTL/$CTRL_TOTAL Controls sections cite a CTL-XX ($CTRL_PCT% — target 100%); $CTRL_BOILER are pure-boilerplate (target 0); fragments: $FRAG_BULLETS/$AUTO_TOTAL (also ERROR-armed above). See WORKFLOW-FORMAT-GUIDE.md 'Quality bar'; run defragment-automation.py / backfill-controls.py as appropriate."
 fi

@@ -322,7 +322,7 @@ Duration: 3 hours/new store</bpmn:documentation>
         <bpmn:incoming>W1204_Flow20</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1204_Annotation12">
-        <bpmn:text>Controls: - CTL-228 (ensure BCP readiness &amp; insurance recovery.) | - operational: BCP onboarding for new Store Managers (W16) and requiring BCP review as part of new SM orientation; operational: batch video conference sessions (10–15 stores at a time) and alternating detailed vs; operational: mandatory annual update in Step 2 and trigger-based updates (staff turnover, phone number changes)
+        <bpmn:text>Controls: - CTL-228 (ensure BCP readiness &amp; insurance recovery.) | - operational: BCP onboarding for new Store Managers (W16) and requiring BCP review as part of new SM orientation; operational: batch video conference sessions (10–15 stores at a time) and alternating detailed vs. abbreviated exercises for low-risk locations; operational: mandatory annual update in Step 2 and trigger-based updates (staff turnover, phone number changes)
 Owner: Business Continuity Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1204_Assoc13" sourceRef="W1204_Annotation12" targetRef="W1204_Start4" associationDirection="None" />

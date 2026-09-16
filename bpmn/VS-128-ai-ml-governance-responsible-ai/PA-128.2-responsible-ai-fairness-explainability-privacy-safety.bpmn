@@ -337,7 +337,7 @@ Duration: Quarterly</bpmn:documentation>
         <bpmn:incoming>W3941_Flow14</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W3941_Annotation9">
-        <bpmn:text>Controls: - CTL-615 (ensure controlled execution — Responsible AI — Fairness, Explainability, Privacy &amp; Safety (PA-128.2).) | - operational: mandatory human-review for tier-1; operational: human-review for tier-1; operational: override-rate tracking and SLA
+        <bpmn:text>Controls: - CTL-615 (ensure controlled execution — Responsible AI — Fairness, Explainability, Privacy &amp; Safety (PA-128.2).) | - operational: mandatory human-review for tier-1; operational: override-rate tracking and SLA
 Owner: AI Governance / Business AI Owners</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W3941_Assoc10" sourceRef="W3941_Annotation9" targetRef="W3941_Start4" associationDirection="None" />
@@ -355,7 +355,7 @@ Owner: AI Governance / Business AI Owners</bpmn:text>
         <bpmndi:BPMNShape id="W3941_Task7_di" bpmnElement="W3941_Task7"><dc:Bounds x="820" y="125" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W3941_Start4_di" bpmnElement="W3941_Start4"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W3941_End8_di" bpmnElement="W3941_End8"><dc:Bounds x="1050" y="317" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W3941_Annotation9_di" bpmnElement="W3941_Annotation9"><dc:Bounds x="160" y="460" width="360" height="86" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W3941_Annotation9_di" bpmnElement="W3941_Annotation9"><dc:Bounds x="160" y="460" width="360" height="72" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W3941_Flow11_di" bpmnElement="W3941_Flow11"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W3941_Flow12_di" bpmnElement="W3941_Flow12"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W3941_Flow13_di" bpmnElement="W3941_Flow13"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="165" /></bpmndi:BPMNEdge>

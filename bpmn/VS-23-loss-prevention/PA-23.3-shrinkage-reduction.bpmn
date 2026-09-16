@@ -889,7 +889,7 @@ Duration: 2–3 hours/quarter per store</bpmn:documentation>
         <bpmn:incoming>W1497_Flow21</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1497_Annotation14">
-        <bpmn:text>Controls: - CTL-312 (ensure controlled execution — Shrinkage Reduction (PA-23.3).) | - operational: is compromised
+        <bpmn:text>Controls: - CTL-312 (ensure controlled execution — Shrinkage Reduction (PA-23.3).) | - operational: strict detacher-tool and key custody protocol
 Owner: LP Analyst</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1497_Assoc15" sourceRef="W1497_Annotation14" targetRef="W1497_Start7" associationDirection="None" />

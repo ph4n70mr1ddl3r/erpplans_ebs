@@ -129,7 +129,7 @@ Duration: Monthly</bpmn:documentation>
         <bpmn:incoming>W2938_Flow15</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W2938_Annotation10">
-        <bpmn:text>Controls: - CTL-489 (ensure controlled execution — Anti-Bribery, Gifts &amp; Conflict of Interest Management (PA-86.3).) | - operational: mandatory register and threshold rules; operational: register and threshold rules
+        <bpmn:text>Controls: - CTL-489 (ensure controlled execution — Anti-Bribery, Gifts &amp; Conflict of Interest Management (PA-86.3).) | - operational: mandatory register and threshold rules
 Owner: Compliance Analyst</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W2938_Assoc11" sourceRef="W2938_Annotation10" targetRef="W2938_Start5" associationDirection="None" />
@@ -148,7 +148,7 @@ Owner: Compliance Analyst</bpmn:text>
         <bpmndi:BPMNShape id="W2938_Task8_di" bpmnElement="W2938_Task8"><dc:Bounds x="820" y="465" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W2938_Start5_di" bpmnElement="W2938_Start5"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W2938_End9_di" bpmnElement="W2938_End9"><dc:Bounds x="1050" y="487" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W2938_Annotation10_di" bpmnElement="W2938_Annotation10"><dc:Bounds x="160" y="630" width="360" height="72" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W2938_Annotation10_di" bpmnElement="W2938_Annotation10"><dc:Bounds x="160" y="630" width="360" height="60" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W2938_Flow12_di" bpmnElement="W2938_Flow12"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W2938_Flow13_di" bpmnElement="W2938_Flow13"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W2938_Flow14_di" bpmnElement="W2938_Flow14"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>

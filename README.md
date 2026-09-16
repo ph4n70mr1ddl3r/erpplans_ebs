@@ -307,7 +307,9 @@ erpplans/
     ├── fix-ghost-roles-batch26.py    Ghost-role adjudication sweep for the batch-26 families (review #72; batch-24 precedent; sunset-guarded 2026-09-10 — refuses to run against the official TO's charted VP seats)
     ├── fix-ghost-titles-batch14.py   Ghost-title charter sweep closing item A — 25 uncharted-title families mapped to TO-charted seats (~1,090 spots, batch 14; sunset-guarded 2026-09-10 — refuses to run against its own frozen history note)
     ├── fix-pa211-order.py            One-time PA-21.1 scrambled-section-order canonicalizer (batch-27, review #73)
-    └── fix-controls-bullets.py       Controls-section list-hygiene/paren/bold repairer (Check 43 companion)
+    ├── fix-controls-bullets.py       Controls-section list-hygiene/paren/bold repairer (Check 43 companion)
+    ├── fix-controls-splice-artifacts.py         Forty-ninth-wave Controls-splice repairer, mechanical classes — 50 exact-match repairs (duplicated items, dangling '; .' tails)
+    └── fix-controls-splice-artifacts-2-context.py — Forty-ninth-wave Controls-splice repairer, context class — 49 exact-match repairs (risk-splices, vs.-truncations, re-grounded in each workflow's own Pain Points/Steps)
 ```
 
 ## The Model Company at a Glance

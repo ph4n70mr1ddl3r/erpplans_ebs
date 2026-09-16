@@ -390,7 +390,7 @@ Duration: 30 min</bpmn:documentation>
         <bpmn:incoming>W274_Flow24</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W274_Annotation16">
-        <bpmn:text>Controls: - CTL-266 (ensure controlled execution — Custom Fabrication &amp; Processing (PA-09.1).) | - operational: causing reconciliation failures; operational: outages halting the entire checkout flow for financed purchases
+        <bpmn:text>Controls: - CTL-266 (ensure controlled execution — Custom Fabrication &amp; Processing (PA-09.1).) | - operational: POS reference-code validation at tender capture (Step 3); operational: T+3 batch reconciliation against partner remittance with suspense-account follow-up (Step 5, W261)
 Owner: Cashier</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W274_Assoc17" sourceRef="W274_Annotation16" targetRef="W274_Start8" associationDirection="None" />
@@ -418,7 +418,7 @@ Owner: Cashier</bpmn:text>
         <bpmndi:BPMNShape id="W274_Task14_di" bpmnElement="W274_Task14"><dc:Bounds x="1450" y="975" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W274_Start8_di" bpmnElement="W274_Start8"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W274_End15_di" bpmnElement="W274_End15"><dc:Bounds x="1680" y="997" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W274_Annotation16_di" bpmnElement="W274_Annotation16"><dc:Bounds x="160" y="1140" width="360" height="72" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W274_Annotation16_di" bpmnElement="W274_Annotation16"><dc:Bounds x="160" y="1140" width="360" height="86" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W274_Flow18_di" bpmnElement="W274_Flow18"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W274_Flow19_di" bpmnElement="W274_Flow19"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W274_Flow20_di" bpmnElement="W274_Flow20"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>
@@ -789,7 +789,7 @@ Duration: 2 hours</bpmn:documentation>
         <bpmn:incoming>W607_Flow25</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W607_Annotation15">
-        <bpmn:text>Controls: - CTL-266 (ensure controlled execution — Custom Fabrication &amp; Processing (PA-09.1).) | - operational: mandatory safety briefing, safety equipment provision, and customer trial waiver; operational: safety briefing, safety equipment provision, and customer trial waiver; operational: scheduled preventive maintenance and quarterly demo unit replacement program
+        <bpmn:text>Controls: - CTL-266 (ensure controlled execution — Custom Fabrication &amp; Processing (PA-09.1).) | - operational: mandatory safety briefing, safety equipment provision, and customer trial waiver; operational: scheduled preventive maintenance and quarterly demo unit replacement program
 Owner: Department Supervisor</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W607_Assoc16" sourceRef="W607_Annotation15" targetRef="W607_Start5" associationDirection="None" />
@@ -818,7 +818,7 @@ Owner: Department Supervisor</bpmn:text>
         <bpmndi:BPMNShape id="W607_Task13_di" bpmnElement="W607_Task13"><dc:Bounds x="1870" y="465" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W607_Start5_di" bpmnElement="W607_Start5"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W607_End14_di" bpmnElement="W607_End14"><dc:Bounds x="2100" y="487" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W607_Annotation15_di" bpmnElement="W607_Annotation15"><dc:Bounds x="160" y="630" width="360" height="114" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W607_Annotation15_di" bpmnElement="W607_Annotation15"><dc:Bounds x="160" y="630" width="360" height="86" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W607_Flow17_di" bpmnElement="W607_Flow17"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W607_Flow18_di" bpmnElement="W607_Flow18"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W607_Flow19_di" bpmnElement="W607_Flow19"><di:waypoint x="790" y="165" /><di:waypoint x="820" y="165" /></bpmndi:BPMNEdge>
@@ -2633,7 +2633,7 @@ Duration: 1–2 hours/month</bpmn:documentation>
         <bpmn:incoming>W955_Flow20</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W955_Annotation13">
-        <bpmn:text>Controls: - CTL-266 (ensure controlled execution — Custom Fabrication &amp; Processing (PA-09.1).) | - operational: to purchase from BuildRight; operational: provides community self-regulation; operational: flags suspicious profiles
+        <bpmn:text>Controls: - CTL-266 (ensure controlled execution — Custom Fabrication &amp; Processing (PA-09.1).) | - operational: facilitation-only terms with legal review per Step 5c (no co-employment); operational: government-ID verification at registration (Step 1b); operational: feedback-driven directory governance with Store Manager review (Steps 4d/5a)
 Owner: Store Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W955_Assoc14" sourceRef="W955_Annotation13" targetRef="W955_Start6" associationDirection="None" />
@@ -2657,7 +2657,7 @@ Owner: Store Manager</bpmn:text>
         <bpmndi:BPMNShape id="W955_Task11_di" bpmnElement="W955_Task11"><dc:Bounds x="1240" y="635" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W955_Start6_di" bpmnElement="W955_Start6"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W955_End12_di" bpmnElement="W955_End12"><dc:Bounds x="1470" y="657" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W955_Annotation13_di" bpmnElement="W955_Annotation13"><dc:Bounds x="160" y="800" width="360" height="72" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W955_Annotation13_di" bpmnElement="W955_Annotation13"><dc:Bounds x="160" y="800" width="360" height="100" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W955_Flow15_di" bpmnElement="W955_Flow15"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W955_Flow16_di" bpmnElement="W955_Flow16"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W955_Flow17_di" bpmnElement="W955_Flow17"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>
@@ -3266,7 +3266,7 @@ Duration: 15 min/day</bpmn:documentation>
         <bpmn:incoming>W986_Flow19</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W986_Annotation11">
-        <bpmn:text>Controls: - CTL-266 (ensure controlled execution — Custom Fabrication &amp; Processing (PA-09.1).) | - operational: PPE enforcement, equipment guard maintenance, and incident reporting per W140 mitigate; operational: must optimize cutting sequence to minimize waste (nesting algorithm); operational: with SMS notification when order is ready improves customer experience
+        <bpmn:text>Controls: - CTL-266 (ensure controlled execution — Custom Fabrication &amp; Processing (PA-09.1).) | - operational: PPE enforcement, equipment guard maintenance, and incident reporting per W140; operational: must optimize cutting sequence to minimize waste (nesting algorithm); operational: queue management with SMS notification when the order is ready
 Owner: Department Supervisor (Lumber &amp; Building Materials)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W986_Assoc12" sourceRef="W986_Annotation11" targetRef="W986_Start3" associationDirection="None" />
@@ -3289,7 +3289,7 @@ Owner: Department Supervisor (Lumber &amp; Building Materials)</bpmn:text>
         <bpmndi:BPMNShape id="W986_Task9_di" bpmnElement="W986_Task9"><dc:Bounds x="1450" y="125" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W986_Start3_di" bpmnElement="W986_Start3"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W986_End10_di" bpmnElement="W986_End10"><dc:Bounds x="1680" y="147" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W986_Annotation11_di" bpmnElement="W986_Annotation11"><dc:Bounds x="160" y="290" width="360" height="114" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W986_Annotation11_di" bpmnElement="W986_Annotation11"><dc:Bounds x="160" y="290" width="360" height="100" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W986_Flow13_di" bpmnElement="W986_Flow13"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W986_Flow14_di" bpmnElement="W986_Flow14"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W986_Flow15_di" bpmnElement="W986_Flow15"><di:waypoint x="790" y="165" /><di:waypoint x="820" y="165" /></bpmndi:BPMNEdge>
@@ -4187,7 +4187,7 @@ Duration: 3–5 min</bpmn:documentation>
         <bpmn:incoming>W1045_Flow15</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1045_Annotation9">
-        <bpmn:text>Controls: - CTL-266 (ensure controlled execution — Custom Fabrication &amp; Processing (PA-09.1).) | - operational: for high-volume stores; operational: per W172
+        <bpmn:text>Controls: - CTL-266 (ensure controlled execution — Custom Fabrication &amp; Processing (PA-09.1).) | - operational: weekly blade replacement schedule for high-volume stores; operational: PPE (gloves, safety glasses) required per W172
 Owner: Plumbing Department Supervisor</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1045_Assoc10" sourceRef="W1045_Annotation9" targetRef="W1045_Start3" associationDirection="None" />
@@ -4206,7 +4206,7 @@ Owner: Plumbing Department Supervisor</bpmn:text>
         <bpmndi:BPMNShape id="W1045_Task7_di" bpmnElement="W1045_Task7"><dc:Bounds x="1030" y="125" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1045_Start3_di" bpmnElement="W1045_Start3"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1045_End8_di" bpmnElement="W1045_End8"><dc:Bounds x="1260" y="147" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1045_Annotation9_di" bpmnElement="W1045_Annotation9"><dc:Bounds x="160" y="290" width="360" height="60" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1045_Annotation9_di" bpmnElement="W1045_Annotation9"><dc:Bounds x="160" y="290" width="360" height="72" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W1045_Flow11_di" bpmnElement="W1045_Flow11"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W1045_Flow12_di" bpmnElement="W1045_Flow12"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W1045_Flow13_di" bpmnElement="W1045_Flow13"><di:waypoint x="790" y="165" /><di:waypoint x="820" y="165" /></bpmndi:BPMNEdge>
@@ -4377,7 +4377,7 @@ Duration: 2–3 min</bpmn:documentation>
         <bpmn:incoming>W1054_Flow17</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1054_Annotation11">
-        <bpmn:text>Controls: - CTL-266 (ensure controlled execution — Custom Fabrication &amp; Processing (PA-09.1).) | - operational: to maintain inventory accuracy per INV-001
+        <bpmn:text>Controls: - CTL-266 (ensure controlled execution — Custom Fabrication &amp; Processing (PA-09.1).) | - operational: weekly spool reconciliation (physical remaining-length measurement) per INV-001
 Owner: Electrical Department Supervisor</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1054_Assoc12" sourceRef="W1054_Annotation11" targetRef="W1054_Start5" associationDirection="None" />
@@ -4398,7 +4398,7 @@ Owner: Electrical Department Supervisor</bpmn:text>
         <bpmndi:BPMNShape id="W1054_Task9_di" bpmnElement="W1054_Task9"><dc:Bounds x="1030" y="465" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1054_Start5_di" bpmnElement="W1054_Start5"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1054_End10_di" bpmnElement="W1054_End10"><dc:Bounds x="1260" y="487" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1054_Annotation11_di" bpmnElement="W1054_Annotation11"><dc:Bounds x="160" y="630" width="360" height="60" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1054_Annotation11_di" bpmnElement="W1054_Annotation11"><dc:Bounds x="160" y="630" width="360" height="72" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W1054_Flow13_di" bpmnElement="W1054_Flow13"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W1054_Flow14_di" bpmnElement="W1054_Flow14"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W1054_Flow15_di" bpmnElement="W1054_Flow15"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="165" /></bpmndi:BPMNEdge>
@@ -5539,7 +5539,7 @@ Duration: automated</bpmn:documentation>
         <bpmn:incoming>W1114_Flow16</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1114_Annotation10">
-        <bpmn:text>Controls: - CTL-266 (ensure controlled execution — Custom Fabrication &amp; Processing (PA-09.1).) | - operational: stock (accuracy target ≥ 97%), customers will have a poor experience; operational: must prevent this through POS-level ATP deduction
+        <bpmn:text>Controls: - CTL-266 (ensure controlled execution — Custom Fabrication &amp; Processing (PA-09.1).) | - operational: POS-level ATP deduction prevents sale of reserved stock to walk-in customers; operational: inventory record accuracy target ≥ 97%
 Owner: Ecommerce Operations Manager (digital channels); Customer Service Representative (phone/in-store)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1114_Assoc11" sourceRef="W1114_Annotation10" targetRef="W1114_Start4" associationDirection="None" />
@@ -5835,7 +5835,7 @@ Duration: 10–15 min</bpmn:documentation>
         <bpmn:incoming>W1131_Flow17</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1131_Annotation11">
-        <bpmn:text>Controls: - CTL-266 (ensure controlled execution — Custom Fabrication &amp; Processing (PA-09.1).) | - operational: should accept all uploads and let marketing team curate; operational: before marketing use
+        <bpmn:text>Controls: - CTL-266 (ensure controlled execution — Custom Fabrication &amp; Processing (PA-09.1).) | - operational: system accepts all uploads and the marketing team curates; operational: consent and privacy review required before marketing use
 Owner: Sales Associate (Project Liaison)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1131_Assoc12" sourceRef="W1131_Annotation11" targetRef="W1131_Start5" associationDirection="None" />
@@ -5856,7 +5856,7 @@ Owner: Sales Associate (Project Liaison)</bpmn:text>
         <bpmndi:BPMNShape id="W1131_Task9_di" bpmnElement="W1131_Task9"><dc:Bounds x="1030" y="465" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1131_Start5_di" bpmnElement="W1131_Start5"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1131_End10_di" bpmnElement="W1131_End10"><dc:Bounds x="1260" y="487" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1131_Annotation11_di" bpmnElement="W1131_Annotation11"><dc:Bounds x="160" y="630" width="360" height="72" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1131_Annotation11_di" bpmnElement="W1131_Annotation11"><dc:Bounds x="160" y="630" width="360" height="86" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W1131_Flow13_di" bpmnElement="W1131_Flow13"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W1131_Flow14_di" bpmnElement="W1131_Flow14"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W1131_Flow15_di" bpmnElement="W1131_Flow15"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>
@@ -6294,7 +6294,7 @@ Duration: 5–10 min/batch</bpmn:documentation>
         <bpmn:incoming>W1146_Flow17</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1146_Annotation11">
-        <bpmn:text>Controls: - CTL-266 (ensure controlled execution — Custom Fabrication &amp; Processing (PA-09.1).) | - operational: for stock associates
+        <bpmn:text>Controls: - CTL-266 (ensure controlled execution — Custom Fabrication &amp; Processing (PA-09.1).) | - operational: ergonomic training required for stock associates
 Owner: Department Supervisor (Lumber &amp; Building Materials)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1146_Assoc12" sourceRef="W1146_Annotation11" targetRef="W1146_Start5" associationDirection="None" />

@@ -582,7 +582,7 @@ Duration: 1 hour</bpmn:documentation>
         <bpmn:incoming>W5342_Flow19</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W5342_Annotation12">
-        <bpmn:text>Controls: - CTL-790 (ensure controlled execution — Equipment Maintenance, Safety, Compliance &amp; Fleet Utilization Analytics (PA-186.3).) | - operational: performance vs. business-case hurdle; utilization-data accuracy; .
+        <bpmn:text>Controls: - CTL-790 (ensure controlled execution — Equipment Maintenance, Safety, Compliance &amp; Fleet Utilization Analytics (PA-186.3).) | - operational: performance vs. business-case hurdle; utilization-data accuracy.
 Owner: Rental Fleet Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W5342_Assoc13" sourceRef="W5342_Annotation12" targetRef="W5342_Start5" associationDirection="None" />

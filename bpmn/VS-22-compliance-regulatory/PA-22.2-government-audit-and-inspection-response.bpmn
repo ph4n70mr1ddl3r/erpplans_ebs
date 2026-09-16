@@ -1393,7 +1393,7 @@ Duration: 4 hours/year</bpmn:documentation>
         <bpmn:incoming>W505_Flow33</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W505_Annotation20">
-        <bpmn:text>Controls: - CTL-308 (ensure controlled execution — Government Audit &amp; Inspection Response (PA-22.2).) | - operational: ensuring payroll records are accurate and complete before inspection; operational: system deadline tracking and escalation; operational: deadline tracking and escalation
+        <bpmn:text>Controls: - CTL-308 (ensure controlled execution — Government Audit &amp; Inspection Response (PA-22.2).) | - operational: ensuring payroll records are accurate and complete before inspection; operational: system deadline tracking and escalation
 Owner: CHRO</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W505_Assoc21" sourceRef="W505_Annotation20" targetRef="W505_Start7" associationDirection="None" />

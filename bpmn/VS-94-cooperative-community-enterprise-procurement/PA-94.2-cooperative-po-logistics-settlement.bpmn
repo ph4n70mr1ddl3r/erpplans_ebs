@@ -435,7 +435,7 @@ Duration: Per payment</bpmn:documentation>
         <bpmn:incoming>W3126_Flow15</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W3126_Annotation10">
-        <bpmn:text>Controls: - CTL-68 (ensure cooperative vendor qualification &amp; settlement integrity.) | - operational: mandatory direct-to-bank and expedited terms; operational: direct-to-bank and expedited terms
+        <bpmn:text>Controls: - CTL-68 (ensure cooperative vendor qualification &amp; settlement integrity.) | - operational: mandatory direct-to-bank and expedited terms
 Owner: Sustainability Sourcing Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W3126_Assoc11" sourceRef="W3126_Annotation10" targetRef="W3126_Start5" associationDirection="None" />
@@ -454,7 +454,7 @@ Owner: Sustainability Sourcing Manager</bpmn:text>
         <bpmndi:BPMNShape id="W3126_Task8_di" bpmnElement="W3126_Task8"><dc:Bounds x="820" y="465" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W3126_Start5_di" bpmnElement="W3126_Start5"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W3126_End9_di" bpmnElement="W3126_End9"><dc:Bounds x="1050" y="487" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W3126_Annotation10_di" bpmnElement="W3126_Annotation10"><dc:Bounds x="160" y="630" width="360" height="72" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W3126_Annotation10_di" bpmnElement="W3126_Annotation10"><dc:Bounds x="160" y="630" width="360" height="60" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W3126_Flow12_di" bpmnElement="W3126_Flow12"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W3126_Flow13_di" bpmnElement="W3126_Flow13"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W3126_Flow14_di" bpmnElement="W3126_Flow14"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>

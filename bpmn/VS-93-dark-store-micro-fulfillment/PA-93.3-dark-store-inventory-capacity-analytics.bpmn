@@ -282,7 +282,7 @@ Duration: Weekly</bpmn:documentation>
         <bpmn:incoming>W3108_Flow15</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W3108_Annotation10">
-        <bpmn:text>Controls: - CTL-510 (ensure controlled execution — Dark Store Inventory, Capacity &amp; Performance Analytics (PA-93.3).) | - operational: segmenting internal vs
+        <bpmn:text>Controls: - CTL-510 (ensure controlled execution — Dark Store Inventory, Capacity &amp; Performance Analytics (PA-93.3).) | - operational: segmenting internal vs. external SLA
 Owner: Dark Store Operations Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W3108_Assoc11" sourceRef="W3108_Annotation10" targetRef="W3108_Start5" associationDirection="None" />

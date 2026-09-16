@@ -109,7 +109,7 @@ Duration: 2 hours/month</bpmn:documentation>
         <bpmn:incoming>W140_Flow29</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W140_Annotation18">
-        <bpmn:text>Controls: - CTL-226 (ensure OHS compliance &amp; incident management.) | - operational: from Bureau of Fire Protection (BFP) per location
+        <bpmn:text>Controls: - CTL-226 (ensure OHS compliance &amp; incident management.) | - operational: current FSIC from Bureau of Fire Protection (BFP) per location, tracked to expiry
 Owner: Safety Officer (HQ/DC); Store Manager (Store)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W140_Assoc19" sourceRef="W140_Annotation18" targetRef="W140_Start7" associationDirection="None" />

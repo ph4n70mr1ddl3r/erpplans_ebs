@@ -204,7 +204,7 @@ Duration: Per event</bpmn:documentation>
         <bpmn:incoming>W3019_Flow15</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W3019_Annotation10">
-        <bpmn:text>Controls: - CTL-75 (detect and recover freight &amp; receiving damage.) | - operational: mandatory damage-case logging; operational: damage-case logging
+        <bpmn:text>Controls: - CTL-75 (detect and recover freight &amp; receiving damage.) | - operational: mandatory damage-case logging
 Owner: Store Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W3019_Assoc11" sourceRef="W3019_Annotation10" targetRef="W3019_Start5" associationDirection="None" />

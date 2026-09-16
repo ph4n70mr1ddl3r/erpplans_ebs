@@ -1295,7 +1295,7 @@ Duration: 4 hours/quarter</bpmn:documentation>
         <bpmn:incoming>W514_Flow30</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W514_Annotation18">
-        <bpmn:text>Controls: - CTL-253 (ensure controlled execution — Inventory Accuracy &amp; Counting (PA-05.1).) | - operational: mandatory investigation documentation for variances &gt;PHP 5K and quarterly unknown-rate target (&lt;15%); operational: investigation documentation for variances &gt;PHP 5K and quarterly unknown-rate target (&lt;15%); operational: tiered approach (A-items prioritized, C-items batch-processed monthly)
+        <bpmn:text>Controls: - CTL-253 (ensure controlled execution — Inventory Accuracy &amp; Counting (PA-05.1).) | - operational: mandatory investigation documentation for variances &gt;PHP 5K and quarterly unknown-rate target (&lt;15%); operational: tiered approach (A-items prioritized, C-items batch-processed monthly)
 Owner: Inventory Control Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W514_Assoc19" sourceRef="W514_Annotation18" targetRef="W514_Start6" associationDirection="None" />
@@ -1329,7 +1329,7 @@ Owner: Inventory Control Manager</bpmn:text>
         <bpmndi:BPMNShape id="W514_Task16_di" bpmnElement="W514_Task16"><dc:Bounds x="2290" y="635" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W514_Start6_di" bpmnElement="W514_Start6"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W514_End17_di" bpmnElement="W514_End17"><dc:Bounds x="2520" y="657" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W514_Annotation18_di" bpmnElement="W514_Annotation18"><dc:Bounds x="160" y="800" width="360" height="114" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W514_Annotation18_di" bpmnElement="W514_Annotation18"><dc:Bounds x="160" y="800" width="360" height="86" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W514_Flow20_di" bpmnElement="W514_Flow20"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W514_Flow21_di" bpmnElement="W514_Flow21"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W514_Flow22_di" bpmnElement="W514_Flow22"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>

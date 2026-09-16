@@ -1014,7 +1014,7 @@ Duration: 2 days/month</bpmn:documentation>
         <bpmn:incoming>W1182_Flow19</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1182_Annotation12">
-        <bpmn:text>Controls: - CTL-298 (ensure controlled execution — Workforce Management (PA-19.3).) | - operational: to maintain employee morale
+        <bpmn:text>Controls: - CTL-298 (ensure controlled execution — Workforce Management (PA-19.3).) | - operational: formal transfer handling per Step 4 to maintain employee morale
 Owner: HR Operations Manager / Finance Controller</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1182_Assoc13" sourceRef="W1182_Annotation12" targetRef="W1182_Start5" associationDirection="None" />

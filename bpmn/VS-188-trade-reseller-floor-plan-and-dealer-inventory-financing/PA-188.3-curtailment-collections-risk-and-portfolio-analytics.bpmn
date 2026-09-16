@@ -381,7 +381,7 @@ Duration: quarterly</bpmn:documentation>
         <bpmn:incoming>W5388_Flow19</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W5388_Annotation12">
-        <bpmn:text>Controls: - CTL-796 (ensure controlled execution — Curtailment, Collections, Risk &amp; Portfolio Analytics (PA-188.3).) | - operational: grading accuracy; limit-approval authority; concentration-limit adherence; .
+        <bpmn:text>Controls: - CTL-796 (ensure controlled execution — Curtailment, Collections, Risk &amp; Portfolio Analytics (PA-188.3).) | - operational: grading accuracy; limit-approval authority; concentration-limit adherence.
 Owner: Credit Manager (Dealer Finance)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W5388_Assoc13" sourceRef="W5388_Annotation12" targetRef="W5388_Start5" associationDirection="None" />
@@ -581,7 +581,7 @@ Duration: quarterly</bpmn:documentation>
         <bpmn:incoming>W5390_Flow20</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W5390_Annotation13">
-        <bpmn:text>Controls: - CTL-796 (ensure controlled execution — Curtailment, Collections, Risk &amp; Portfolio Analytics (PA-188.3).) | - operational: performance-data accuracy; program-growth tracking; .
+        <bpmn:text>Controls: - CTL-796 (ensure controlled execution — Curtailment, Collections, Risk &amp; Portfolio Analytics (PA-188.3).) | - operational: performance-data accuracy; program-growth tracking.
 Owner: Credit Analyst (Dealer Finance)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W5390_Assoc14" sourceRef="W5390_Annotation13" targetRef="W5390_Start6" associationDirection="None" />
@@ -684,7 +684,7 @@ Duration: quarterly</bpmn:documentation>
         <bpmn:incoming>W5391_Flow19</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W5391_Annotation12">
-        <bpmn:text>Controls: - CTL-796 (ensure controlled execution — Curtailment, Collections, Risk &amp; Portfolio Analytics (PA-188.3).) | - operational: profitability-data accuracy; vs. business case; treasury reconciliation; .
+        <bpmn:text>Controls: - CTL-796 (ensure controlled execution — Curtailment, Collections, Risk &amp; Portfolio Analytics (PA-188.3).) | - operational: profitability-data accuracy; vs. business case; treasury reconciliation.
 Owner: Finance Business Partner (Dealer Finance)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W5391_Assoc13" sourceRef="W5391_Annotation12" targetRef="W5391_Start5" associationDirection="None" />
@@ -786,7 +786,7 @@ Duration: per material finding</bpmn:documentation>
         <bpmn:incoming>W5392_Flow19</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W5392_Annotation12">
-        <bpmn:text>Controls: - CTL-796 (ensure controlled execution — Curtailment, Collections, Risk &amp; Portfolio Analytics (PA-188.3).) | - operational: statutory reporting; regulatory compliance; internal-audit independence (VS-21); accuracy; .
+        <bpmn:text>Controls: - CTL-796 (ensure controlled execution — Curtailment, Collections, Risk &amp; Portfolio Analytics (PA-188.3).) | - operational: statutory reporting; regulatory compliance; internal-audit independence (VS-21); accuracy.
 Owner: Compliance Specialist</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W5392_Assoc13" sourceRef="W5392_Annotation12" targetRef="W5392_Start5" associationDirection="None" />

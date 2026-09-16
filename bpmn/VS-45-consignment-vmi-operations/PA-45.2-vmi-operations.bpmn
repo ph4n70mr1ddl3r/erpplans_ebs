@@ -201,7 +201,7 @@ Duration: 15–30 min/exception</bpmn:documentation>
         <bpmn:incoming>W1936_Flow15</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1936_Annotation10">
-        <bpmn:text>Controls: - CTL-377 (ensure controlled execution — Vendor-Managed Inventory (VMI) Operations (PA-45.2).) | - operational: may auto-approve excessive replenishment
+        <bpmn:text>Controls: - CTL-377 (ensure controlled execution — Vendor-Managed Inventory (VMI) Operations (PA-45.2).) | - operational: periodic VMI parameter review with min/max and spending caps
 Owner: VP Supply Chain</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1936_Assoc11" sourceRef="W1936_Annotation10" targetRef="W1936_Start5" associationDirection="None" />
@@ -220,7 +220,7 @@ Owner: VP Supply Chain</bpmn:text>
         <bpmndi:BPMNShape id="W1936_Task8_di" bpmnElement="W1936_Task8"><dc:Bounds x="820" y="465" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1936_Start5_di" bpmnElement="W1936_Start5"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1936_End9_di" bpmnElement="W1936_End9"><dc:Bounds x="1050" y="487" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1936_Annotation10_di" bpmnElement="W1936_Annotation10"><dc:Bounds x="160" y="630" width="360" height="60" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1936_Annotation10_di" bpmnElement="W1936_Annotation10"><dc:Bounds x="160" y="630" width="360" height="72" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W1936_Flow12_di" bpmnElement="W1936_Flow12"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W1936_Flow13_di" bpmnElement="W1936_Flow13"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W1936_Flow14_di" bpmnElement="W1936_Flow14"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>

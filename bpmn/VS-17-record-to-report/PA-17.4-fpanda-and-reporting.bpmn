@@ -1418,7 +1418,7 @@ Duration: 2 hours/year</bpmn:documentation>
         <bpmn:incoming>W85_Flow30</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W85_Annotation18">
-        <bpmn:text>Controls: - CTL-292 (ensure controlled execution — FP&amp;A &amp; Reporting (PA-17.4).) | - operational: may not handle automatically
+        <bpmn:text>Controls: - CTL-292 (ensure controlled execution — FP&amp;A &amp; Reporting (PA-17.4).) | - operational: manual landed-cost normalization for import vs. domestic margin comparison
 Owner: Cost Accountant</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W85_Assoc19" sourceRef="W85_Annotation18" targetRef="W85_Start6" associationDirection="None" />

@@ -596,7 +596,7 @@ Duration: 5 min/delivery</bpmn:documentation>
         <bpmn:incoming>W1191_Flow24</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1191_Annotation15">
-        <bpmn:text>Controls: - CTL-258 (ensure controlled execution — Last-Mile &amp; Delivery Partners (PA-06.3).) | - operational: re-confirming access 24 hours before delivery; operational: mandatory PPE, site safety briefing from foreman, and company insurance coverage for delivery personnel; operational: PPE, site safety briefing from foreman, and company insurance coverage for delivery personnel
+        <bpmn:text>Controls: - CTL-258 (ensure controlled execution — Last-Mile &amp; Delivery Partners (PA-06.3).) | - operational: re-confirming access 24 hours before delivery; operational: mandatory PPE, site safety briefing from foreman, and company insurance coverage for delivery personnel
 Owner: Delivery Dispatch Coordinator</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1191_Assoc16" sourceRef="W1191_Annotation15" targetRef="W1191_Start6" associationDirection="None" />
@@ -624,7 +624,7 @@ Owner: Delivery Dispatch Coordinator</bpmn:text>
         <bpmndi:BPMNShape id="W1191_Task13_di" bpmnElement="W1191_Task13"><dc:Bounds x="1660" y="125" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1191_Start6_di" bpmnElement="W1191_Start6"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1191_End14_di" bpmnElement="W1191_End14"><dc:Bounds x="1890" y="657" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1191_Annotation15_di" bpmnElement="W1191_Annotation15"><dc:Bounds x="160" y="800" width="360" height="114" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1191_Annotation15_di" bpmnElement="W1191_Annotation15"><dc:Bounds x="160" y="800" width="360" height="86" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W1191_Flow17_di" bpmnElement="W1191_Flow17"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W1191_Flow18_di" bpmnElement="W1191_Flow18"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W1191_Flow19_di" bpmnElement="W1191_Flow19"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="165" /></bpmndi:BPMNEdge>

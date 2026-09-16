@@ -1951,7 +1951,7 @@ Duration: 4 hours/year</bpmn:documentation>
         <bpmn:incoming>W29_Flow47</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W29_Annotation30">
-        <bpmn:text>Controls: - CTL-36 (ensure recall execution.) | - operational: cannot identify which specific customers purchased affected items, limiting targeted notification
+        <bpmn:text>Controls: - CTL-36 (ensure recall execution.) | - operational: lot/batch traceability with POS blocking (W29.3/W29.5) so targeted customer notification stays possible
 Owner: VP Merchandising (product side); VP Store Operations (execution)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W29_Assoc31" sourceRef="W29_Annotation30" targetRef="W29_Start13" associationDirection="None" />
@@ -4553,7 +4553,7 @@ Duration: Automated (monthly report generation)</bpmn:documentation>
         <bpmn:incoming>W571_Flow34</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W571_Annotation20">
-        <bpmn:text>Controls: - CTL-259 (ensure controlled execution — Store Daily Management (PA-07.1).) | - operational: strict categorization (only genuinely urgent items marked Urgent), mandatory reading confirmation checkbox, and HQ communication guidelines limiting daily volume; operational: reading confirmation checkbox, and HQ communication guidelines limiting daily volume; operational: periodic spot-checks by Regional Manager and supervisor cascade documentation requirement for policy and task-type communications
+        <bpmn:text>Controls: - CTL-259 (ensure controlled execution — Store Daily Management (PA-07.1).) | - operational: strict categorization (only genuinely urgent items marked Urgent), mandatory reading confirmation checkbox, and HQ communication guidelines limiting daily volume; operational: periodic spot-checks by Regional Manager and supervisor cascade documentation requirement for policy and task-type communications
 Owner: VP Store Operations (HQ-side); Store Manager (store-side)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W571_Assoc21" sourceRef="W571_Annotation20" targetRef="W571_Start6" associationDirection="None" />
@@ -6709,7 +6709,7 @@ Duration: 5–10 min</bpmn:documentation>
         <bpmn:incoming>W999_Flow18</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W999_Annotation11">
-        <bpmn:text>Controls: - CTL-259 (ensure controlled execution — Store Daily Management (PA-07.1).) | - operational: mitigates financial loss; operational: must track deposits as a liability per W25
+        <bpmn:text>Controls: - CTL-259 (ensure controlled execution — Store Daily Management (PA-07.1).) | - operational: refundable deposit system mitigates financial loss (repeat non-returners flagged); operational: must track deposits as a liability per W25
 Owner: Department Supervisor (Tiles &amp; Flooring)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W999_Assoc12" sourceRef="W999_Annotation11" targetRef="W999_Start4" associationDirection="None" />
@@ -6731,7 +6731,7 @@ Owner: Department Supervisor (Tiles &amp; Flooring)</bpmn:text>
         <bpmndi:BPMNShape id="W999_Task9_di" bpmnElement="W999_Task9"><dc:Bounds x="1240" y="125" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W999_Start4_di" bpmnElement="W999_Start4"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W999_End10_di" bpmnElement="W999_End10"><dc:Bounds x="1470" y="317" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W999_Annotation11_di" bpmnElement="W999_Annotation11"><dc:Bounds x="160" y="460" width="360" height="72" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W999_Annotation11_di" bpmnElement="W999_Annotation11"><dc:Bounds x="160" y="460" width="360" height="86" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W999_Flow13_di" bpmnElement="W999_Flow13"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W999_Flow14_di" bpmnElement="W999_Flow14"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W999_Flow15_di" bpmnElement="W999_Flow15"><di:waypoint x="790" y="165" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>

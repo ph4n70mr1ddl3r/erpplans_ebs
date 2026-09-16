@@ -1422,7 +1422,7 @@ Duration: 4 hours/quarter</bpmn:documentation>
         <bpmn:incoming>W507_Flow27</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W507_Annotation16">
-        <bpmn:text>Controls: - CTL-278 (ensure controlled execution — Customer Support &amp; Complaints (PA-13.1).) | - operational: structured complaint intake with mandatory categorization; operational: categorization; operational: management review and accountability in QBR (W231)
+        <bpmn:text>Controls: - CTL-278 (ensure controlled execution — Customer Support &amp; Complaints (PA-13.1).) | - operational: structured complaint intake with mandatory categorization; operational: management review and accountability in QBR (W231)
 Owner: Customer Experience Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W507_Assoc17" sourceRef="W507_Annotation16" targetRef="W507_Start5" associationDirection="None" />
@@ -1453,7 +1453,7 @@ Owner: Customer Experience Manager</bpmn:text>
         <bpmndi:BPMNShape id="W507_Task14_di" bpmnElement="W507_Task14"><dc:Bounds x="2080" y="295" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W507_Start5_di" bpmnElement="W507_Start5"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W507_End15_di" bpmnElement="W507_End15"><dc:Bounds x="2310" y="487" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W507_Annotation16_di" bpmnElement="W507_Annotation16"><dc:Bounds x="160" y="630" width="360" height="86" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W507_Annotation16_di" bpmnElement="W507_Annotation16"><dc:Bounds x="160" y="630" width="360" height="72" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W507_Flow18_di" bpmnElement="W507_Flow18"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W507_Flow19_di" bpmnElement="W507_Flow19"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W507_Flow20_di" bpmnElement="W507_Flow20"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="165" /></bpmndi:BPMNEdge>

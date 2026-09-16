@@ -1177,7 +1177,7 @@ Duration: 5–10 min</bpmn:documentation>
         <bpmn:incoming>W983_Flow18</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W983_Annotation11">
-        <bpmn:text>Controls: - CTL-267 (ensure controlled execution — Project Estimation &amp; Advisory (PA-09.2).) | - operational: must prioritize same-batch allocation; operational: for roofing orders
+        <bpmn:text>Controls: - CTL-267 (ensure controlled execution — Project Estimation &amp; Advisory (PA-09.2).) | - operational: must prioritize same-batch allocation; operational: vehicle loading assistance per W950 mandatory for roofing orders
 Owner: Department Supervisor (Lumber &amp; Building Materials)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W983_Assoc12" sourceRef="W983_Annotation11" targetRef="W983_Start4" associationDirection="None" />
@@ -1276,7 +1276,7 @@ Duration: 5–10 min</bpmn:documentation>
         <bpmn:incoming>W984_Flow18</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W984_Annotation11">
-        <bpmn:text>Controls: - CTL-267 (ensure controlled execution — Project Estimation &amp; Advisory (PA-09.2).) | - operational: for tanks above 500L; operational: recommendation, and installation referral — not lowest price on individual items
+        <bpmn:text>Controls: - CTL-267 (ensure controlled execution — Project Estimation &amp; Advisory (PA-09.2).) | - operational: delivery scheduling per W5D mandatory for tanks above 500L; operational: professional sizing with complete system recommendation and installation referral — not lowest price on individual items
 Owner: Department Supervisor (Plumbing)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W984_Assoc12" sourceRef="W984_Annotation11" targetRef="W984_Start4" associationDirection="None" />
@@ -1298,7 +1298,7 @@ Owner: Department Supervisor (Plumbing)</bpmn:text>
         <bpmndi:BPMNShape id="W984_Task9_di" bpmnElement="W984_Task9"><dc:Bounds x="1240" y="125" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W984_Start4_di" bpmnElement="W984_Start4"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W984_End10_di" bpmnElement="W984_End10"><dc:Bounds x="1470" y="317" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W984_Annotation11_di" bpmnElement="W984_Annotation11"><dc:Bounds x="160" y="460" width="360" height="72" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W984_Annotation11_di" bpmnElement="W984_Annotation11"><dc:Bounds x="160" y="460" width="360" height="100" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W984_Flow13_di" bpmnElement="W984_Flow13"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W984_Flow14_di" bpmnElement="W984_Flow14"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W984_Flow15_di" bpmnElement="W984_Flow15"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>
@@ -1573,7 +1573,7 @@ Duration: 5–10 min</bpmn:documentation>
         <bpmn:incoming>W989_Flow18</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W989_Annotation11">
-        <bpmn:text>Controls: - CTL-267 (ensure controlled execution — Project Estimation &amp; Advisory (PA-09.2).) | - operational: for building permit applications per LGU requirements per W54
+        <bpmn:text>Controls: - CTL-267 (ensure controlled execution — Project Estimation &amp; Advisory (PA-09.2).) | - operational: licensed plumber sign-off required for building permit applications per LGU requirements per W54
 Owner: Department Supervisor (Plumbing)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W989_Assoc12" sourceRef="W989_Annotation11" targetRef="W989_Start4" associationDirection="None" />
@@ -1595,7 +1595,7 @@ Owner: Department Supervisor (Plumbing)</bpmn:text>
         <bpmndi:BPMNShape id="W989_Task9_di" bpmnElement="W989_Task9"><dc:Bounds x="1240" y="125" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W989_Start4_di" bpmnElement="W989_Start4"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W989_End10_di" bpmnElement="W989_End10"><dc:Bounds x="1470" y="317" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W989_Annotation11_di" bpmnElement="W989_Annotation11"><dc:Bounds x="160" y="460" width="360" height="60" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W989_Annotation11_di" bpmnElement="W989_Annotation11"><dc:Bounds x="160" y="460" width="360" height="72" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W989_Flow13_di" bpmnElement="W989_Flow13"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W989_Flow14_di" bpmnElement="W989_Flow14"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W989_Flow15_di" bpmnElement="W989_Flow15"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>
@@ -2878,7 +2878,7 @@ Duration: 3–5 min</bpmn:documentation>
         <bpmn:incoming>W1055_Flow16</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1055_Annotation10">
-        <bpmn:text>Controls: - CTL-267 (ensure controlled execution — Project Estimation &amp; Advisory (PA-09.2).) | - operational: purchase for &gt;PHP 5,000 systems; operational: should send proactive replacement reminders
+        <bpmn:text>Controls: - CTL-267 (ensure controlled execution — Project Estimation &amp; Advisory (PA-09.2).) | - operational: recommend DIY water test before system purchase for &gt;PHP 5,000 systems; operational: proactive filter-replacement reminders
 Owner: Plumbing Department Supervisor</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1055_Assoc11" sourceRef="W1055_Annotation10" targetRef="W1055_Start4" associationDirection="None" />
@@ -2965,7 +2965,7 @@ Duration: 2–5 min (optional continuation)</bpmn:documentation>
         <bpmn:incoming>W1056_Flow16</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1056_Annotation10">
-        <bpmn:text>Controls: - CTL-267 (ensure controlled execution — Project Estimation &amp; Advisory (PA-09.2).) | - operational: cannot guarantee accuracy for every LGU
+        <bpmn:text>Controls: - CTL-267 (ensure controlled execution — Project Estimation &amp; Advisory (PA-09.2).) | - operational: annual permit-requirement database review and update per W657 (regulatory change management)
 Owner: Lumber &amp; Building Materials Department Supervisor</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1056_Assoc11" sourceRef="W1056_Annotation10" targetRef="W1056_Start4" associationDirection="None" />
@@ -2985,7 +2985,7 @@ Owner: Lumber &amp; Building Materials Department Supervisor</bpmn:text>
         <bpmndi:BPMNShape id="W1056_Task8_di" bpmnElement="W1056_Task8"><dc:Bounds x="1030" y="125" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1056_Start4_di" bpmnElement="W1056_Start4"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1056_End9_di" bpmnElement="W1056_End9"><dc:Bounds x="1260" y="317" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1056_Annotation10_di" bpmnElement="W1056_Annotation10"><dc:Bounds x="160" y="460" width="360" height="60" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1056_Annotation10_di" bpmnElement="W1056_Annotation10"><dc:Bounds x="160" y="460" width="360" height="72" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W1056_Flow12_di" bpmnElement="W1056_Flow12"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W1056_Flow13_di" bpmnElement="W1056_Flow13"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W1056_Flow14_di" bpmnElement="W1056_Flow14"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="165" /></bpmndi:BPMNEdge>
@@ -3685,7 +3685,7 @@ Duration: 3–5 min</bpmn:documentation>
         <bpmn:incoming>W1068_Flow16</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1068_Annotation10">
-        <bpmn:text>Controls: - CTL-267 (ensure controlled execution — Project Estimation &amp; Advisory (PA-09.2).) | - operational: engineer referral; operational: must accurately classify store location and customer&#x27;s project location
+        <bpmn:text>Controls: - CTL-267 (ensure controlled execution — Project Estimation &amp; Advisory (PA-09.2).) | - operational: mandatory engineer referral with recommendations framed per NSCP standards; operational: must accurately classify store location and customer&#x27;s project location
 Owner: Lumber &amp; Building Materials Department Supervisor</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1068_Assoc11" sourceRef="W1068_Annotation10" targetRef="W1068_Start4" associationDirection="None" />
@@ -3705,7 +3705,7 @@ Owner: Lumber &amp; Building Materials Department Supervisor</bpmn:text>
         <bpmndi:BPMNShape id="W1068_Task8_di" bpmnElement="W1068_Task8"><dc:Bounds x="1030" y="125" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1068_Start4_di" bpmnElement="W1068_Start4"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1068_End9_di" bpmnElement="W1068_End9"><dc:Bounds x="1260" y="317" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1068_Annotation10_di" bpmnElement="W1068_Annotation10"><dc:Bounds x="160" y="460" width="360" height="72" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1068_Annotation10_di" bpmnElement="W1068_Annotation10"><dc:Bounds x="160" y="460" width="360" height="86" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W1068_Flow12_di" bpmnElement="W1068_Flow12"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W1068_Flow13_di" bpmnElement="W1068_Flow13"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W1068_Flow14_di" bpmnElement="W1068_Flow14"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>
@@ -3871,7 +3871,7 @@ Duration: 3–5 min</bpmn:documentation>
         <bpmn:incoming>W1071_Flow16</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1071_Annotation10">
-        <bpmn:text>Controls: - CTL-267 (ensure controlled execution — Project Estimation &amp; Advisory (PA-09.2).) | - operational: must assess Wi-Fi infrastructure first; operational: by most smart switches; operational: should recommend brands with strong privacy policies and recommend regular firmware updates
+        <bpmn:text>Controls: - CTL-267 (ensure controlled execution — Project Estimation &amp; Advisory (PA-09.2).) | - operational: must assess Wi-Fi infrastructure first; operational: must ask about neutral wires and recommend no-neutral-wire alternatives or professional rewiring where absent; operational: should recommend brands with strong privacy policies and recommend regular firmware updates
 Owner: Electrical Department Supervisor</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1071_Assoc11" sourceRef="W1071_Annotation10" targetRef="W1071_Start4" associationDirection="None" />
@@ -3891,7 +3891,7 @@ Owner: Electrical Department Supervisor</bpmn:text>
         <bpmndi:BPMNShape id="W1071_Task8_di" bpmnElement="W1071_Task8"><dc:Bounds x="1030" y="125" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1071_Start4_di" bpmnElement="W1071_Start4"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1071_End9_di" bpmnElement="W1071_End9"><dc:Bounds x="1260" y="317" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1071_Annotation10_di" bpmnElement="W1071_Annotation10"><dc:Bounds x="160" y="460" width="360" height="86" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1071_Annotation10_di" bpmnElement="W1071_Annotation10"><dc:Bounds x="160" y="460" width="360" height="114" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W1071_Flow12_di" bpmnElement="W1071_Flow12"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W1071_Flow13_di" bpmnElement="W1071_Flow13"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W1071_Flow14_di" bpmnElement="W1071_Flow14"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>
@@ -4132,7 +4132,7 @@ Duration: 3–5 min</bpmn:documentation>
         <bpmn:incoming>W1074_Flow16</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1074_Annotation10">
-        <bpmn:text>Controls: - CTL-267 (ensure controlled execution — Project Estimation &amp; Advisory (PA-09.2).) | - operational: for specific ergonomic needs or medical conditions
+        <bpmn:text>Controls: - CTL-267 (ensure controlled execution — Project Estimation &amp; Advisory (PA-09.2).) | - operational: disclaimer required for specific ergonomic needs or medical conditions
 Owner: Assistant Store Manager (special-order services)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1074_Assoc11" sourceRef="W1074_Annotation10" targetRef="W1074_Start4" associationDirection="None" />
@@ -4152,7 +4152,7 @@ Owner: Assistant Store Manager (special-order services)</bpmn:text>
         <bpmndi:BPMNShape id="W1074_Task8_di" bpmnElement="W1074_Task8"><dc:Bounds x="1030" y="125" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1074_Start4_di" bpmnElement="W1074_Start4"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1074_End9_di" bpmnElement="W1074_End9"><dc:Bounds x="1260" y="317" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1074_Annotation10_di" bpmnElement="W1074_Annotation10"><dc:Bounds x="160" y="460" width="360" height="60" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1074_Annotation10_di" bpmnElement="W1074_Annotation10"><dc:Bounds x="160" y="460" width="360" height="72" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W1074_Flow12_di" bpmnElement="W1074_Flow12"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W1074_Flow13_di" bpmnElement="W1074_Flow13"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W1074_Flow14_di" bpmnElement="W1074_Flow14"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>
@@ -4393,7 +4393,7 @@ Duration: 3–5 min</bpmn:documentation>
         <bpmn:incoming>W1078_Flow16</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1078_Annotation10">
-        <bpmn:text>Controls: - CTL-267 (ensure controlled execution — Project Estimation &amp; Advisory (PA-09.2).) | - operational: for potable water, water quality depends on maintenance; operational: must specify tight-fitting tank covers and gutter maintenance per DOH advisory; operational: must manage customer expectations about seasonal variability
+        <bpmn:text>Controls: - CTL-267 (ensure controlled execution — Project Estimation &amp; Advisory (PA-09.2).) | - operational: potable-water disclaimer — customer responsible for regular testing; operational: must specify tight-fitting tank covers and gutter maintenance per DOH advisory; operational: must manage customer expectations about seasonal variability
 Owner: Plumbing Department Supervisor</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1078_Assoc11" sourceRef="W1078_Annotation10" targetRef="W1078_Start4" associationDirection="None" />
@@ -4924,7 +4924,7 @@ Duration: 3–5 min</bpmn:documentation>
         <bpmn:incoming>W1084_Flow18</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1084_Annotation11">
-        <bpmn:text>Controls: - CTL-267 (ensure controlled execution — Project Estimation &amp; Advisory (PA-09.2).) | - operational: is offline during outages — precisely when break-ins may occur; operational: must enforce surveillance-HDD-only recommendation
+        <bpmn:text>Controls: - CTL-267 (ensure controlled execution — Project Estimation &amp; Advisory (PA-09.2).) | - operational: UPS recommended in every system design so coverage survives outages; operational: must enforce surveillance-HDD-only recommendation
 Owner: Electrical Department Supervisor</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1084_Assoc12" sourceRef="W1084_Annotation11" targetRef="W1084_Start4" associationDirection="None" />
@@ -4946,7 +4946,7 @@ Owner: Electrical Department Supervisor</bpmn:text>
         <bpmndi:BPMNShape id="W1084_Task9_di" bpmnElement="W1084_Task9"><dc:Bounds x="1240" y="125" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1084_Start4_di" bpmnElement="W1084_Start4"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1084_End10_di" bpmnElement="W1084_End10"><dc:Bounds x="1470" y="317" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1084_Annotation11_di" bpmnElement="W1084_Annotation11"><dc:Bounds x="160" y="460" width="360" height="72" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1084_Annotation11_di" bpmnElement="W1084_Annotation11"><dc:Bounds x="160" y="460" width="360" height="86" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W1084_Flow13_di" bpmnElement="W1084_Flow13"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W1084_Flow14_di" bpmnElement="W1084_Flow14"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W1084_Flow15_di" bpmnElement="W1084_Flow15"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>
@@ -6929,7 +6929,7 @@ Duration: 5–10 min/follow-up</bpmn:documentation>
         <bpmn:incoming>W1517_Flow19</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1517_Annotation11">
-        <bpmn:text>Controls: - CTL-267 (ensure controlled execution — Project Estimation &amp; Advisory (PA-09.2).) | - operational: mandatory engineering referral for projects exceeding advisory scope; operational: engineering referral for projects exceeding advisory scope
+        <bpmn:text>Controls: - CTL-267 (ensure controlled execution — Project Estimation &amp; Advisory (PA-09.2).) | - operational: mandatory engineering referral for projects exceeding advisory scope
 Owner: Project Estimator (Structural)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1517_Assoc12" sourceRef="W1517_Annotation11" targetRef="W1517_Start3" associationDirection="None" />
@@ -6952,7 +6952,7 @@ Owner: Project Estimator (Structural)</bpmn:text>
         <bpmndi:BPMNShape id="W1517_Task9_di" bpmnElement="W1517_Task9"><dc:Bounds x="1450" y="125" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1517_Start3_di" bpmnElement="W1517_Start3"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1517_End10_di" bpmnElement="W1517_End10"><dc:Bounds x="1680" y="147" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1517_Annotation11_di" bpmnElement="W1517_Annotation11"><dc:Bounds x="160" y="290" width="360" height="86" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1517_Annotation11_di" bpmnElement="W1517_Annotation11"><dc:Bounds x="160" y="290" width="360" height="60" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W1517_Flow13_di" bpmnElement="W1517_Flow13"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W1517_Flow14_di" bpmnElement="W1517_Flow14"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W1517_Flow15_di" bpmnElement="W1517_Flow15"><di:waypoint x="790" y="165" /><di:waypoint x="820" y="165" /></bpmndi:BPMNEdge>

@@ -671,7 +671,7 @@ Duration: 2-3 days per regulation</bpmn:documentation>
         <bpmn:incoming>W803_Flow17</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W803_Annotation10">
-        <bpmn:text>Controls: - CTL-315 (ensure controlled execution — Hazmat Management (PA-24.3).) | - operational: to interpret applicability
+        <bpmn:text>Controls: - CTL-315 (ensure controlled execution — Hazmat Management (PA-24.3).) | - operational: VP Legal guidance required to interpret applicability of new regulations
 Owner: Environmental Compliance Officer</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W803_Assoc11" sourceRef="W803_Annotation10" targetRef="W803_Start3" associationDirection="None" />

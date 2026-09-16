@@ -590,7 +590,7 @@ Duration: 4 hours/quarter</bpmn:documentation>
         <bpmn:incoming>W602_Flow26</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W602_Annotation16">
-        <bpmn:text>Controls: - CTL-262 (ensure controlled execution — Store Staffing &amp; People (PA-07.4).) | - operational: tracking absolute hours vs; operational: automated holiday calendar in payroll module per HR-011; operational: system requirement for same-day overtime entry in W601
+        <bpmn:text>Controls: - CTL-262 (ensure controlled execution — Store Staffing &amp; People (PA-07.4).) | - operational: tracking absolute hours vs. budget in addition to percentage; operational: automated holiday calendar in payroll module per HR-011; operational: system requirement for same-day overtime entry in W601
 Owner: Store Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W602_Assoc17" sourceRef="W602_Annotation16" targetRef="W602_Start6" associationDirection="None" />
@@ -620,7 +620,7 @@ Owner: Store Manager</bpmn:text>
         <bpmndi:BPMNShape id="W602_Task14_di" bpmnElement="W602_Task14"><dc:Bounds x="1870" y="635" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W602_Start6_di" bpmnElement="W602_Start6"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W602_End15_di" bpmnElement="W602_End15"><dc:Bounds x="2100" y="657" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W602_Annotation16_di" bpmnElement="W602_Annotation16"><dc:Bounds x="160" y="800" width="360" height="86" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W602_Annotation16_di" bpmnElement="W602_Annotation16"><dc:Bounds x="160" y="800" width="360" height="100" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W602_Flow18_di" bpmnElement="W602_Flow18"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W602_Flow19_di" bpmnElement="W602_Flow19"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W602_Flow20_di" bpmnElement="W602_Flow20"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>
@@ -762,7 +762,7 @@ Duration: 2 hours</bpmn:documentation>
         <bpmn:incoming>W603_Flow34</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W603_Annotation21">
-        <bpmn:text>Controls: - CTL-262 (ensure controlled execution — Store Staffing &amp; People (PA-07.4).) | - operational: system-enforced workflow with mandatory NTE issuance before NOD; operational: NTE issuance before NOD; operational: policy matrix with offense severity classification and HR Coordinator review in Steps 5 and 7
+        <bpmn:text>Controls: - CTL-262 (ensure controlled execution — Store Staffing &amp; People (PA-07.4).) | - operational: system-enforced workflow with mandatory NTE issuance before NOD; operational: policy matrix with offense severity classification and HR Coordinator review in Steps 5 and 7
 Owner: Store Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W603_Assoc22" sourceRef="W603_Annotation21" targetRef="W603_Start8" associationDirection="None" />
@@ -800,7 +800,7 @@ Owner: Store Manager</bpmn:text>
         <bpmndi:BPMNShape id="W603_Task19_di" bpmnElement="W603_Task19"><dc:Bounds x="2500" y="975" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W603_Start8_di" bpmnElement="W603_Start8"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W603_End20_di" bpmnElement="W603_End20"><dc:Bounds x="2730" y="997" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W603_Annotation21_di" bpmnElement="W603_Annotation21"><dc:Bounds x="160" y="1140" width="360" height="100" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W603_Annotation21_di" bpmnElement="W603_Annotation21"><dc:Bounds x="160" y="1140" width="360" height="86" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W603_Flow23_di" bpmnElement="W603_Flow23"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W603_Flow24_di" bpmnElement="W603_Flow24"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W603_Flow25_di" bpmnElement="W603_Flow25"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>
@@ -932,7 +932,7 @@ Duration: Automated</bpmn:documentation>
         <bpmn:incoming>W609_Flow30</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W609_Annotation18">
-        <bpmn:text>Controls: - CTL-262 (ensure controlled execution — Store Staffing &amp; People (PA-07.4).) | - operational: mandatory Buddy training module and Store Manager selection oversight; operational: Buddy training module and Store Manager selection oversight; operational: assigning backup Buddy and cross-training multiple eligible buddies per department
+        <bpmn:text>Controls: - CTL-262 (ensure controlled execution — Store Staffing &amp; People (PA-07.4).) | - operational: mandatory Buddy training module and Store Manager selection oversight; operational: assigning backup Buddy and cross-training multiple eligible buddies per department
 Owner: Store Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W609_Assoc19" sourceRef="W609_Annotation18" targetRef="W609_Start6" associationDirection="None" />
@@ -966,7 +966,7 @@ Owner: Store Manager</bpmn:text>
         <bpmndi:BPMNShape id="W609_Task16_di" bpmnElement="W609_Task16"><dc:Bounds x="2290" y="635" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W609_Start6_di" bpmnElement="W609_Start6"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W609_End17_di" bpmnElement="W609_End17"><dc:Bounds x="2520" y="657" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W609_Annotation18_di" bpmnElement="W609_Annotation18"><dc:Bounds x="160" y="800" width="360" height="100" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W609_Annotation18_di" bpmnElement="W609_Annotation18"><dc:Bounds x="160" y="800" width="360" height="86" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W609_Flow20_di" bpmnElement="W609_Flow20"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W609_Flow21_di" bpmnElement="W609_Flow21"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W609_Flow22_di" bpmnElement="W609_Flow22"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>

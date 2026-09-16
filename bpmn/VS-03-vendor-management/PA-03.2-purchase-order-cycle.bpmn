@@ -1532,7 +1532,7 @@ Duration: 30 min/month per event</bpmn:documentation>
         <bpmn:incoming>W1026_Flow20</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1026_Annotation13">
-        <bpmn:text>Controls: - CTL-247 (ensure controlled execution — Purchase Order Cycle (PA-03.2).) | - operational: are stranded
+        <bpmn:text>Controls: - CTL-247 (ensure controlled execution — Purchase Order Cycle (PA-03.2).) | - operational: vendor buy-back or trade-in program for orphaned accessories per W916
 Owner: Category Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1026_Assoc14" sourceRef="W1026_Annotation13" targetRef="W1026_Start6" associationDirection="None" />

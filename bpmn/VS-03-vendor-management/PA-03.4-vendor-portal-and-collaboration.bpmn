@@ -389,7 +389,7 @@ Duration: 2–3 hours/quarter (enhancement specification + UAT coordination)</bp
         <bpmn:incoming>W593_Flow23</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W593_Annotation13">
-        <bpmn:text>Controls: - CTL-249 (ensure controlled execution — Vendor Portal &amp; Collaboration (PA-03.4).) | - operational: mobile-responsive portal design, Filipino-language support, in-person training at DCs, and phased feature rollout (start with PO acknowledgment, then invoices, then advanced features); operational: portal invoice template with mandatory field validation, inline error messages, and vendor training; operational: field validation, inline error messages, and vendor training
+        <bpmn:text>Controls: - CTL-249 (ensure controlled execution — Vendor Portal &amp; Collaboration (PA-03.4).) | - operational: mobile-responsive portal design, Filipino-language support, in-person training at DCs, and phased feature rollout (start with PO acknowledgment, then invoices, then advanced features); operational: portal invoice template with mandatory field validation, inline error messages, and vendor training
 Owner: Vendor Portal Administrator (within Procurement team)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W593_Assoc14" sourceRef="W593_Annotation13" targetRef="W593_Start3" associationDirection="None" />

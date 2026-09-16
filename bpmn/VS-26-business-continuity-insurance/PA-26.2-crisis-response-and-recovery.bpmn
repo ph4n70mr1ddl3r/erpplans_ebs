@@ -228,7 +228,7 @@ Duration: 4–8 hours (planned weekend)</bpmn:documentation>
         <bpmn:incoming>W849_Flow23</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W849_Annotation14">
-        <bpmn:text>Controls: - CTL-320 (ensure controlled execution — Crisis Response &amp; Recovery (PA-26.2).) | - operational: for affected transactions; operational: needed (POS &gt; ecommerce &gt; WMS &gt; analytics)
+        <bpmn:text>Controls: - CTL-320 (ensure controlled execution — Crisis Response &amp; Recovery (PA-26.2).) | - operational: priority-tier DR peak-load allocation (POS &gt; ecommerce &gt; WMS &gt; analytics); operational: manual POS reconnection runbook for affected transactions at legacy stores
 Owner: CIO</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W849_Assoc15" sourceRef="W849_Annotation14" targetRef="W849_Start5" associationDirection="None" />
@@ -255,7 +255,7 @@ Owner: CIO</bpmn:text>
         <bpmndi:BPMNShape id="W849_Task12_di" bpmnElement="W849_Task12"><dc:Bounds x="1660" y="295" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W849_Start5_di" bpmnElement="W849_Start5"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W849_End13_di" bpmnElement="W849_End13"><dc:Bounds x="1890" y="487" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W849_Annotation14_di" bpmnElement="W849_Annotation14"><dc:Bounds x="160" y="630" width="360" height="72" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W849_Annotation14_di" bpmnElement="W849_Annotation14"><dc:Bounds x="160" y="630" width="360" height="86" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W849_Flow16_di" bpmnElement="W849_Flow16"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W849_Flow17_di" bpmnElement="W849_Flow17"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W849_Flow18_di" bpmnElement="W849_Flow18"><di:waypoint x="790" y="165" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>

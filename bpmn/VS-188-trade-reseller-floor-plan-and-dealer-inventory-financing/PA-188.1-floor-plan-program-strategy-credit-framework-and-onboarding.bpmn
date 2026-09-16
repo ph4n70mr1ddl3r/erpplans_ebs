@@ -573,7 +573,7 @@ Duration: 1 day</bpmn:documentation>
         <bpmn:incoming>W5374_Flow19</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W5374_Annotation12">
-        <bpmn:text>Controls: - CTL-794 (ensure controlled execution — Program Strategy, Credit Framework &amp; Dealer Onboarding (PA-188.1).) | - operational: account/feed accuracy; dealer data safeguards; .
+        <bpmn:text>Controls: - CTL-794 (ensure controlled execution — Program Strategy, Credit Framework &amp; Dealer Onboarding (PA-188.1).) | - operational: account/feed accuracy; dealer data safeguards.
 Owner: Credit Analyst (Dealer Finance)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W5374_Assoc13" sourceRef="W5374_Annotation12" targetRef="W5374_Start5" associationDirection="None" />

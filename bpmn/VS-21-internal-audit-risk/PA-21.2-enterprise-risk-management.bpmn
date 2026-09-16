@@ -321,7 +321,7 @@ Duration: 1 day</bpmn:documentation>
         <bpmn:incoming>W356_Flow19</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W356_Annotation12">
-        <bpmn:text>Controls: - CTL-305 (ensure controlled execution — Enterprise Risk Management (PA-21.2).) | - operational: is perceived as insecure, the detected fraud rate will drop
+        <bpmn:text>Controls: - CTL-305 (ensure controlled execution — Enterprise Risk Management (PA-21.2).) | - operational: anonymous intake with authorized-access controls to preserve reporting confidence
 Owner: Head of Internal Audit / Compliance Officer</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W356_Assoc13" sourceRef="W356_Annotation12" targetRef="W356_Start5" associationDirection="None" />
@@ -344,7 +344,7 @@ Owner: Head of Internal Audit / Compliance Officer</bpmn:text>
         <bpmndi:BPMNShape id="W356_Task10_di" bpmnElement="W356_Task10"><dc:Bounds x="1240" y="295" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W356_Start5_di" bpmnElement="W356_Start5"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W356_End11_di" bpmnElement="W356_End11"><dc:Bounds x="1470" y="487" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W356_Annotation12_di" bpmnElement="W356_Annotation12"><dc:Bounds x="160" y="630" width="360" height="60" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W356_Annotation12_di" bpmnElement="W356_Annotation12"><dc:Bounds x="160" y="630" width="360" height="72" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W356_Flow14_di" bpmnElement="W356_Flow14"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W356_Flow15_di" bpmnElement="W356_Flow15"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W356_Flow16_di" bpmnElement="W356_Flow16"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>

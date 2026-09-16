@@ -420,7 +420,7 @@ Duration: Per claim</bpmn:documentation>
         <bpmn:incoming>W3038_Flow15</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W3038_Annotation10">
-        <bpmn:text>Controls: - CTL-501 (ensure controlled execution — Customer Damage/Shortage Claims &amp; Recovery Analytics (PA-90.3).) | - operational: mandatory liability-flag at resolution; operational: liability-flag at resolution
+        <bpmn:text>Controls: - CTL-501 (ensure controlled execution — Customer Damage/Shortage Claims &amp; Recovery Analytics (PA-90.3).) | - operational: mandatory liability-flag at resolution
 Owner: Claims Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W3038_Assoc11" sourceRef="W3038_Annotation10" targetRef="W3038_Start5" associationDirection="None" />
@@ -439,7 +439,7 @@ Owner: Claims Manager</bpmn:text>
         <bpmndi:BPMNShape id="W3038_Task8_di" bpmnElement="W3038_Task8"><dc:Bounds x="820" y="465" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W3038_Start5_di" bpmnElement="W3038_Start5"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W3038_End9_di" bpmnElement="W3038_End9"><dc:Bounds x="1050" y="487" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W3038_Annotation10_di" bpmnElement="W3038_Annotation10"><dc:Bounds x="160" y="630" width="360" height="72" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W3038_Annotation10_di" bpmnElement="W3038_Annotation10"><dc:Bounds x="160" y="630" width="360" height="60" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W3038_Flow12_di" bpmnElement="W3038_Flow12"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W3038_Flow13_di" bpmnElement="W3038_Flow13"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W3038_Flow14_di" bpmnElement="W3038_Flow14"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>

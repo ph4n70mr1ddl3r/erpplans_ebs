@@ -738,7 +738,7 @@ Duration: 30 min/quarter</bpmn:documentation>
         <bpmn:incoming>W1296_Flow23</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1296_Annotation14">
-        <bpmn:text>Controls: - CTL-314 (ensure controlled execution — Emergency Preparedness (PA-24.2).) | - operational: by BFP for FSIC renewal
+        <bpmn:text>Controls: - CTL-314 (ensure controlled execution — Emergency Preparedness (PA-24.2).) | - operational: internal inspection held to the highest BFP standard, with retrofit tracking where required for FSIC renewal
 Owner: Store Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1296_Assoc15" sourceRef="W1296_Annotation14" targetRef="W1296_Start5" associationDirection="None" />
@@ -765,7 +765,7 @@ Owner: Store Manager</bpmn:text>
         <bpmndi:BPMNShape id="W1296_Task12_di" bpmnElement="W1296_Task12"><dc:Bounds x="1660" y="465" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1296_Start5_di" bpmnElement="W1296_Start5"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1296_End13_di" bpmnElement="W1296_End13"><dc:Bounds x="1890" y="487" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1296_Annotation14_di" bpmnElement="W1296_Annotation14"><dc:Bounds x="160" y="630" width="360" height="60" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1296_Annotation14_di" bpmnElement="W1296_Annotation14"><dc:Bounds x="160" y="630" width="360" height="72" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W1296_Flow16_di" bpmnElement="W1296_Flow16"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W1296_Flow17_di" bpmnElement="W1296_Flow17"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W1296_Flow18_di" bpmnElement="W1296_Flow18"><di:waypoint x="790" y="165" /><di:waypoint x="820" y="165" /></bpmndi:BPMNEdge>

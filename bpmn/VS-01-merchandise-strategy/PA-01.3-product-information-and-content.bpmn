@@ -748,7 +748,7 @@ Duration: 1–2 days</bpmn:documentation>
         <bpmn:incoming>W1347_Flow25</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1347_Annotation16">
-        <bpmn:text>Controls: - CTL-242 (ensure controlled execution — Product Information &amp; Content (PA-01.3).) | - operational: public notification channels (in-store, social media, press); operational: empowering POS System Administrator to execute emergency blocks without IT manager approval for safety recalls; operational: Administrator to execute emergency blocks without IT manager approval for safety recalls
+        <bpmn:text>Controls: - CTL-242 (ensure controlled execution — Product Information &amp; Content (PA-01.3).) | - operational: public notification channels (in-store, social media, press); operational: empowering POS System Administrator to execute emergency blocks without IT manager approval for safety recalls
 Owner: Category Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1347_Assoc17" sourceRef="W1347_Annotation16" targetRef="W1347_Start7" associationDirection="None" />
@@ -777,7 +777,7 @@ Owner: Category Manager</bpmn:text>
         <bpmndi:BPMNShape id="W1347_Task14_di" bpmnElement="W1347_Task14"><dc:Bounds x="1660" y="125" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1347_Start7_di" bpmnElement="W1347_Start7"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1347_End15_di" bpmnElement="W1347_End15"><dc:Bounds x="1890" y="827" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1347_Annotation16_di" bpmnElement="W1347_Annotation16"><dc:Bounds x="160" y="970" width="360" height="114" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1347_Annotation16_di" bpmnElement="W1347_Annotation16"><dc:Bounds x="160" y="970" width="360" height="86" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W1347_Flow18_di" bpmnElement="W1347_Flow18"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W1347_Flow19_di" bpmnElement="W1347_Flow19"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W1347_Flow20_di" bpmnElement="W1347_Flow20"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>
