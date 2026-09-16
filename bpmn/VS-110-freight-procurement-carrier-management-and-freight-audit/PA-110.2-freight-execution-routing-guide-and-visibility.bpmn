@@ -166,9 +166,9 @@ Source: workflow W3507 — Multi-Stop Route Optimization &amp; Load Consolidatio
       <bpmn:startEvent id="W3507_Start3" name="Outbound wave (W3505); last-mile batch (W3506)">
         <bpmn:outgoing>W3507_Flow10</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:userTask id="W3507_Task4" name="Logistics/TMS optimize multi-stop routes for DC→store delivery (links to…">
-        <bpmn:documentation>Step 1: Logistics/TMS optimize multi-stop routes for DC→store delivery (links to W1369/W3505) and last-mile (W3506): sequence stops, apply road/constraint data (Philippine road constraints links to W1369), vehicle capacity, time windows, and driver-hours; minimize distance/cost while meeting service
-Responsible (R): Logistics / TMS
+      <bpmn:userTask id="W3507_Task4" name="Logistics optimize multi-stop routes in the Route Optimization Engine (in-house…">
+        <bpmn:documentation>Step 1: Logistics optimize multi-stop routes in the Route Optimization Engine (in-house build — fit-gap C14) for DC→store delivery (links to W1369/W3505) and last-mile (W3506): sequence stops, apply road/constraint data (Philippine road constraints links to W1369), vehicle capacity, time windows, and driver-hours; minimize distance/cost while meeting service
+Responsible (R): Logistics
 Accountable (A): Logistics Manager
 Duration: Daily</bpmn:documentation>
         <bpmn:incoming>W3507_Flow10</bpmn:incoming>
@@ -194,7 +194,7 @@ Duration: Monthly</bpmn:documentation>
         <bpmn:incoming>W3507_Flow13</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W3507_Annotation8">
-        <bpmn:text>Controls: - CTL-560 (ensure controlled execution — Freight Execution, Routing Guide &amp; Visibility (PA-110.2).) | - operational: TMS optimization; operational: priority rules
+        <bpmn:text>Controls: - CTL-560 (ensure controlled execution — Freight Execution, Routing Guide &amp; Visibility (PA-110.2).) | - operational: Route Optimization Engine tuning (in-house build — fit-gap C14); operational: priority rules
 Owner: Logistics / Transportation</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W3507_Assoc9" sourceRef="W3507_Annotation8" targetRef="W3507_Start3" associationDirection="None" />
@@ -211,7 +211,7 @@ Owner: Logistics / Transportation</bpmn:text>
         <bpmndi:BPMNShape id="W3507_Task6_di" bpmnElement="W3507_Task6"><dc:Bounds x="820" y="125" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W3507_Start3_di" bpmnElement="W3507_Start3"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W3507_End7_di" bpmnElement="W3507_End7"><dc:Bounds x="1050" y="147" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W3507_Annotation8_di" bpmnElement="W3507_Annotation8"><dc:Bounds x="160" y="290" width="360" height="60" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W3507_Annotation8_di" bpmnElement="W3507_Annotation8"><dc:Bounds x="160" y="290" width="360" height="72" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W3507_Flow10_di" bpmnElement="W3507_Flow10"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W3507_Flow11_di" bpmnElement="W3507_Flow11"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W3507_Flow12_di" bpmnElement="W3507_Flow12"><di:waypoint x="790" y="165" /><di:waypoint x="820" y="165" /></bpmndi:BPMNEdge>
@@ -238,8 +238,8 @@ Source: workflow W3508 — Freight Tracking, Visibility &amp; Exception Manageme
       <bpmn:startEvent id="W3508_Start3" name="Shipment dispatched (W3505/W3506/W3503)">
         <bpmn:outgoing>W3508_Flow10</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:userTask id="W3508_Task4" name="Logistics/Carrier track shipments in-transit via TMS/EDI/API/GPS (links to…">
-        <bpmn:documentation>Step 1: Logistics/Carrier track shipments in-transit via TMS/EDI/API/GPS (links to VS-27/W1165): location/status, ETA, milestones (pickup, in-transit, delivery), and exceptions (delay, damage, failed pickup/delivery); aggregate to a control-tower view across all legs
+      <bpmn:userTask id="W3508_Task4" name="Logistics/Carrier track shipments in-transit via Oracle Transportation…">
+        <bpmn:documentation>Step 1: Logistics/Carrier track shipments in-transit via Oracle Transportation Execution/EDI/API/GPS (links to VS-27/W1165): location/status, ETA, milestones (pickup, in-transit, delivery), and exceptions (delay, damage, failed pickup/delivery); aggregate to a control-tower view across all legs
 Responsible (R): Logistics / Carrier
 Accountable (A): Logistics Manager
 Duration: Continuous</bpmn:documentation>

@@ -1465,8 +1465,8 @@ Duration: 30-60 min</bpmn:documentation>
         <bpmn:incoming>W681_Flow21</bpmn:incoming>
         <bpmn:outgoing>W681_Flow22</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W681_Task10" name="QC Inspector records inspection results in quality module: pass, conditional…">
-        <bpmn:documentation>Step 4: QC Inspector records inspection results in quality module: pass, conditional pass (minor issues — accepted with notation), fail (rejected per W110); captures photos of defects
+      <bpmn:userTask id="W681_Task10" name="QC Inspector records inspection results in Oracle Quality (fit-gap C12): pass…">
+        <bpmn:documentation>Step 4: QC Inspector records inspection results in Oracle Quality (fit-gap C12): pass, conditional pass (minor issues — accepted with notation), fail (rejected per W110); captures photos of defects
 Responsible (R): QC Inspector
 Accountable (A): —
 Duration: 15 min</bpmn:documentation>

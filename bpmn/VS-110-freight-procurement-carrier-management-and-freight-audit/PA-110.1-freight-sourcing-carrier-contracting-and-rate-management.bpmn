@@ -181,8 +181,8 @@ Duration: Per carrier</bpmn:documentation>
         <bpmn:incoming>W3499_Flow12</bpmn:incoming>
         <bpmn:outgoing>W3499_Flow13</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W3499_Task7" name="Procurement/Logistics load the contracted rates/tariff into the TMS/ERP (links…">
-        <bpmn:documentation>Step 3: Procurement/Logistics load the contracted rates/tariff into the TMS/ERP (links to VS-27/W1166), publish the rate-effective date, and integrate to the routing guide (W3500) and freight-audit baseline (W3513); track contract compliance and savings vs baseline (W3518)
+      <bpmn:userTask id="W3499_Task7" name="Procurement/Logistics load the contracted rates/tariff into the Oracle…">
+        <bpmn:documentation>Step 3: Procurement/Logistics load the contracted rates/tariff into the Oracle Transportation Execution/ERP rate master (links to VS-27/W1166), publish the rate-effective date, and integrate to the routing guide (W3500) and freight-audit baseline (W3513); track contract compliance and savings vs baseline (W3518)
 Responsible (R): Procurement / Logistics / IT
 Accountable (A): COO
 Duration: Per carrier</bpmn:documentation>
@@ -311,7 +311,7 @@ Source: workflow W3501 — Freight Tendering, Spot Quote &amp; Capacity Booking<
         <bpmn:outgoing>W3501_Flow10</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:userTask id="W3501_Task4" name="Logistics/DC tender the shipment to the routing-guide carrier (W3500)…">
-        <bpmn:documentation>Step 1: Logistics/DC tender the shipment to the routing-guide carrier (W3500): automated tender via TMS/EDI/API (links to VS-27), shipment details (origin/destination, weight/cube, commodity, required pickup/delivery), rate confirmation, and capacity booking; manage accept/decline and fallback to next-preferred carrier
+        <bpmn:documentation>Step 1: Logistics/DC tender the shipment to the routing-guide carrier (W3500): automated tender via Oracle Transportation Execution/EDI/API (links to VS-27), shipment details (origin/destination, weight/cube, commodity, required pickup/delivery), rate confirmation, and capacity booking; manage accept/decline and fallback to next-preferred carrier
 Responsible (R): Logistics / DC / Carrier
 Accountable (A): Logistics Manager
 Duration: Per shipment</bpmn:documentation>
@@ -535,7 +535,7 @@ Duration: Per carrier</bpmn:documentation>
         <bpmn:outgoing>W3504_Flow11</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W3504_Task5" name="Procurement/Master Data set up the carrier in the vendor master (links to…">
-        <bpmn:documentation>Step 2: Procurement/Master Data set up the carrier in the vendor master (links to VS-29/W16), TMS rate master (links to W3499/W1166), EDI/API integration (links to VS-27), bank/payment (links to VS-15/VS-18), and the routing guide (W3500); validate rate and capability
+        <bpmn:documentation>Step 2: Procurement/Master Data set up the carrier in the vendor master (links to VS-29/W16), Oracle Transportation Execution rate master (links to W3499/W1166), EDI/API integration (links to VS-27), bank/payment (links to VS-15/VS-18), and the routing guide (W3500); validate rate and capability
 Responsible (R): Procurement / Master Data / IT
 Accountable (A): Logistics Manager
 Duration: Per carrier</bpmn:documentation>

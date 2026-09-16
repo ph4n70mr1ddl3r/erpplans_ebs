@@ -325,7 +325,7 @@ Duration: Per dispatch</bpmn:documentation>
         <bpmn:outgoing>W3101_Flow11</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W3101_Task5" name="Carrier/rider signs for parcels (handheld / e-POD); system pushes tracking…">
-        <bpmn:documentation>Step 2: Carrier/rider signs for parcels (handheld / e-POD); system pushes tracking event to OMS and customer (links to VS-10/VS-13); for own-fleet, TMS route plan (links to VS-06) is loaded to driver app
+        <bpmn:documentation>Step 2: Carrier/rider signs for parcels (handheld / e-POD); system pushes tracking event to OMS and customer (links to VS-10/VS-13); for own-fleet, the Route Optimization Engine&#x27;s route plan (in-house build — fit-gap C14; links to VS-06) is loaded to driver app
 Responsible (R): Dispatch Clerk / Carrier
 Accountable (A): Dark Store Shift Supervisor
 Duration: Per dispatch</bpmn:documentation>

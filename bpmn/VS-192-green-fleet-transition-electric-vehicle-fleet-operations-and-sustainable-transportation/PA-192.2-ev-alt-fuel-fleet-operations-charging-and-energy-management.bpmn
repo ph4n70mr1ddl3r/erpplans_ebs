@@ -427,7 +427,7 @@ Source: workflow W5477 — Range-Aware Route Dispatch, Payload Optimization &amp
       </bpmn:startEvent>
       <bpmn:userTask id="W5477_Task5" name="Assign vehicles to dispatches matching usable range (from SoH W5475) to the…">
         <bpmn:documentation>Step 1: Assign vehicles to dispatches matching usable range (from SoH W5475) to the route&#x27;s energy requirement (distance, payload, grade, climate/A/C load from W5472).
-Responsible (R): Dispatcher / TMS
+Responsible (R): Dispatcher
 Accountable (A): Dispatch Supervisor
 Duration: per dispatch</bpmn:documentation>
         <bpmn:incoming>W5477_Flow13</bpmn:incoming>

@@ -169,7 +169,7 @@ Source: workflow W3531 — RTI (Totes / Cages / Containers) Tracking &amp; Recon
         <bpmn:outgoing>W3531_Flow11</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:userTask id="W3531_Task5" name="SCM/IT establish RTI tracking: barcode/RFID tagging of…">
-        <bpmn:documentation>Step 1: SCM/IT establish RTI tracking: barcode/RFID tagging of totes/cages/stillages/IBCs (links to VS-29/VS-23), the RTI master and lifecycle states (in-DC, in-transit, at-store, at-customer, at-carrier, in-repair), and the tracking system (TMS/WMS links to VS-27); define the reconciliation cadence
+        <bpmn:documentation>Step 1: SCM/IT establish RTI tracking: barcode/RFID tagging of totes/cages/stillages/IBCs (links to VS-29/VS-23), the RTI master and lifecycle states (in-DC, in-transit, at-store, at-customer, at-carrier, in-repair), and the tracking system (Oracle Transportation Execution/WMS links to VS-27); define the reconciliation cadence
 Responsible (R): SCM / IT / Master Data
 Accountable (A): SCM Manager
 Duration: Setup + maintained</bpmn:documentation>

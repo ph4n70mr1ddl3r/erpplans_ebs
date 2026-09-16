@@ -438,7 +438,7 @@ Owner: Sales Enablement / HR / Finance</bpmn:text>
     <bpmn:process id="W_W3839" name="W3839. Sales Enablement Technology &amp; Content Delivery Platform" isExecutable="false">
       <bpmn:documentation>Trigger: Tech cycle; content need
 Frequency: Maintained + continuous
-Volume: Enablement tech stack (LMS, mobile, clienteling tool)
+Volume: Enablement tech stack (OLA, mobile, clienteling tool)
 Owner: Sales Enablement / IT
 Participants: Sales Enablement, IT (links to VS-27/VS-113), Enterprise Architecture (links to VS-113), L&amp;D (links to VS-19.4), Mobile App (links to VS-75), Store Ops (links to VS-07), Analytics (links to VS-28.1)
 Source: workflow W3839 — Sales Enablement Technology &amp; Content Delivery Platform</bpmn:documentation>

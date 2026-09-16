@@ -22,7 +22,7 @@
 |---|---|
 | Workflows mapped | 5427 (exactly one Owner each — asserted) |
 | Confirmed Tier register | 5450 rows (Tier 1: 1396 · Tier 2: 3296 · Tier 3: 758) |
-| Distinct resolved actors | 4200 — §5.3 register roles 150 · IT product-model seats 30 · store field 12 · DC field 18 · department-level actors 2993 · system actors 32 · governance 59 · workforce 105 · external 801 · uncharted 0 |
+| Distinct resolved actors | 4199 — §5.3 register roles 150 · IT product-model seats 30 · store field 12 · DC field 18 · department-level actors 2993 · system actors 31 · governance 59 · workforce 105 · external 801 · uncharted 0 |
 
 > Tier mix = confirmed tiers of the workflows a role touches (a workflow
 > counts once per role regardless of how many steps mention it). HC is
@@ -3275,7 +3275,6 @@
 | Automated | System & automated actors | 0 | 0 | 0 | 4 | 3 | 0 | 3 | 0 |
 | Erp System | System & automated actors | 0 | 0 | 4 | 0 | 3 | 2 | 1 | 0 |
 | Iap | System & automated actors | 0 | 2 | 2 | 0 | 3 | 0 | 3 | 0 |
-| TMS | System & automated actors | 0 | 0 | 3 | 0 | 3 | 2 | 1 | 0 |
 | Automation | System & automated actors | 0 | 2 | 1 | 0 | 2 | 0 | 0 | 2 |
 | Network | System & automated actors | 0 | 2 | 0 | 0 | 2 | 1 | 1 | 0 |
 | Payment Gateways | System & automated actors | 0 | 2 | 0 | 0 | 2 | 2 | 0 | 0 |

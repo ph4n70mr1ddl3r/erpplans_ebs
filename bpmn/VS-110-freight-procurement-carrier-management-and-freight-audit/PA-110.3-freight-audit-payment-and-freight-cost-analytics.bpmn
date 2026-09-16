@@ -21,7 +21,7 @@ Source: workflow W3513 — Freight Invoice Audit &amp; Match</bpmn:documentation
       </bpmn:startEvent>
       <bpmn:userTask id="W3513_Task4" name="AP/Logistics receive the carrier freight invoice and perform automated freight…">
         <bpmn:documentation>Step 1: AP/Logistics receive the carrier freight invoice and perform automated freight audit (links to W1166): match the invoice line to the shipment/load and contracted rate/accessorial (W3499), validate mode/lane/weight/cube/distance, apply fuel surcharge (W3519) and accessorial rules, and flag exceptions (rate variance, duplicate, unauthorized accessorial, off-guide W3500)
-Responsible (R): AP / Logistics / TMS
+Responsible (R): AP / Logistics
 Accountable (A): Logistics Manager / AP Manager
 Duration: Per invoice</bpmn:documentation>
         <bpmn:incoming>W3513_Flow10</bpmn:incoming>
@@ -389,7 +389,7 @@ Source: workflow W3518 — Freight Cost Reduction &amp; Continuous Improvement P
         <bpmn:outgoing>W3518_Flow10</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:userTask id="W3518_Task4" name="Logistics/Procurement maintain the freight cost-reduction pipeline…">
-        <bpmn:documentation>Step 1: Logistics/Procurement maintain the freight cost-reduction pipeline: opportunities from spend analytics (W3497/W3516), carrier consolidation/rationalization, mode-shift (e.g., RORO vs air for urgent), load consolidation (W3507), backhaul utilization, network redesign (links to VS-04), packaging/cube optimization (links to VS-111/W3541), and technology/automation (links to VS-30/VS-27 TMS)
+        <bpmn:documentation>Step 1: Logistics/Procurement maintain the freight cost-reduction pipeline: opportunities from spend analytics (W3497/W3516), carrier consolidation/rationalization, mode-shift (e.g., RORO vs air for urgent), load consolidation (W3507), backhaul utilization, network redesign (links to VS-04), packaging/cube optimization (links to VS-111/W3541), and technology/automation (links to VS-30/VS-27 Oracle Transportation Execution)
 Responsible (R): Logistics / Procurement
 Accountable (A): COO
 Duration: Continuous</bpmn:documentation>
@@ -540,7 +540,7 @@ Source: workflow W3520 — Freight Risk, Insurance &amp; Business Continuity</bp
         <bpmn:outgoing>W3520_Flow12</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:userTask id="W3520_Task6" name="Logistics/Risk maintain the freight-risk view: carrier concentration and…">
-        <bpmn:documentation>Step 1: Logistics/Risk maintain the freight-risk view: carrier concentration and financial-distress risk, capacity/space risk (peak/typhoon links to VS-69), port/congestion risk, fuel/price risk (W3519), cargo loss/damage risk (W3511), regulatory/customs risk (links to VS-22/VS-87), cyber risk (TMS/track links to VS-27.3), and counterparty risk; integrate to ERM (links to VS-21.2)
+        <bpmn:documentation>Step 1: Logistics/Risk maintain the freight-risk view: carrier concentration and financial-distress risk, capacity/space risk (peak/typhoon links to VS-69), port/congestion risk, fuel/price risk (W3519), cargo loss/damage risk (W3511), regulatory/customs risk (links to VS-22/VS-87), cyber risk (Oracle Transportation Execution/track links to VS-27.3), and counterparty risk; integrate to ERM (links to VS-21.2)
 Responsible (R): Logistics / Risk
 Accountable (A): COO
 Duration: Annual</bpmn:documentation>

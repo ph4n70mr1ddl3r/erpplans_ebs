@@ -254,8 +254,8 @@ Duration: Per device + maintained</bpmn:documentation>
         <bpmn:incoming>W3620_Flow11</bpmn:incoming>
         <bpmn:outgoing>W3620_Flow12</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W3620_Task6" name="Metrology Manager/IT deploy the calibration management system / CMMS module…">
-        <bpmn:documentation>Step 3: Metrology Manager/IT deploy the calibration management system / CMMS module (links to VS-27/VS-20.3) to schedule, dispatch, record, and report calibration; integrate to the device registry and trigger alerts for due/overdue (links to W3622/W3632); audit registry completeness
+      <bpmn:userTask id="W3620_Task6" name="Metrology Manager/IT deploy Oracle eAM as the calibration management system…">
+        <bpmn:documentation>Step 3: Metrology Manager/IT deploy Oracle eAM as the calibration management system (links to VS-27/VS-20.3; fit-gap F5) to schedule, dispatch, record, and report calibration; integrate to the device registry and trigger alerts for due/overdue (links to W3622/W3632); audit registry completeness
 Responsible (R): Metrology Manager / IT
 Accountable (A): Quality Manager
 Duration: Maintained</bpmn:documentation>

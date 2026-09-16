@@ -1999,11 +1999,13 @@ def ebs_blueprint_hits():
     # unseparated runs and the intro carried a ').;' doubled join against the
     # '; and the' segment convention — and the B13 note's PA-98.2 file
     # reference sat lowercase ('pa-98.2'). The general rule: an appended audit
-    # clause must be sentence- or semicolon-separated (a lowercase letter
-    # directly followed by ' The <date>' can only be a missing separator);
-    # the ').;' join and the lowercase file reference are retired per
-    # document; the corrected anchor is required.
-    for jm in re.finditer(r"[a-z] The 2026-", fg_body):
+    # clause must be sentence- or semicolon-separated (a lowercase letter or
+    # digit directly followed by ' The <date>' can only be a missing
+    # separator — the forty-fifth-wave review widened the arm after the
+    # eighth pass's F3/F5 appends dodged it with digit-ended joins, 'A12 The'
+    # and 'C14 The'); the ').;' join and the lowercase file reference are
+    # retired per document; the corrected anchor is required.
+    for jm in re.finditer(r"[a-z0-9] The 2026-", fg_body):
         ctx = fg_body[max(0, jm.start() - 40):jm.end() + 30]
         add("fit-gap-analysis.md", 0,
             f"register/intro prose carries an appended audit clause with its join "
