@@ -171,8 +171,8 @@ Duration: Per event</bpmn:documentation>
         <bpmn:incoming>W4203_Flow10</bpmn:incoming>
         <bpmn:outgoing>W4203_Flow11</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W4203_Task5" name="Event Marketing/Trade Specialists plan product demos (paint mixing, cutting…">
-        <bpmn:documentation>Step 2: Event Marketing/Trade Specialists plan product demos (paint mixing, cutting, tool demos, solar — links to VS-09/VS-70), and train demo staff (VS-124); ensure safety for DG demos (VS-114)
+      <bpmn:userTask id="W4203_Task5" name="Event Marketing / Trade Specialists plan product demos (paint mixing, cutting…">
+        <bpmn:documentation>Step 2: Event Marketing / Trade Specialists plan product demos (paint mixing, cutting, tool demos, solar — links to VS-09/VS-70), and train demo staff (VS-124); ensure safety for DG demos (VS-114)
 Responsible (R): Event Marketing Mgr / Trade Specialists
 Accountable (A): Event Marketing Mgr
 Duration: Per event</bpmn:documentation>

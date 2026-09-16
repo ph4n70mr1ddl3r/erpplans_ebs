@@ -330,7 +330,7 @@ Duration: 2 hours/iteration</bpmn:documentation>
         <bpmn:outgoing>W73_Flow35</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W73_Task19" name="Inventory balance validation">
-        <bpmn:documentation>Step 4: Inventory balance validation: Cost Accountant and DC/Store Supervisors verify opening inventory balances for new locations or after system migration — reconcile quantities and values (WAC) to baseline records; identify discrepancies &gt; 1% by value
+        <bpmn:documentation>Step 4: Inventory balance validation: Cost Accountant and DC / Store Supervisors verify opening inventory balances for new locations or after system migration — reconcile quantities and values (WAC) to baseline records; identify discrepancies &gt; 1% by value
 Responsible (R): Cost Accountant / Store Supervisor
 Accountable (A): Controller
 Duration: 4 hours/location</bpmn:documentation>

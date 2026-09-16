@@ -3968,6 +3968,57 @@ ROLE_ALIASES_W38 = {
     "workforce development manager": "Trade Capability",
 }
 
+# ==========================================================================
+# wave-39 (2026-09-16): the step-Activity & analysis-field prose — the last
+# role-vocabulary surface the census never read. A frozen candidate extractor
+# (paren-qualifier strip, ≥1-qualifier-word role spans ending in a role head
+# noun, noise-prefix filter, Store-instance normalization) sweeps every step's
+# Activity cell and the eight analysis fields; every candidate resolves through
+# the same owner_resolves semantics as the RACI cells. The adjudications below
+# map each prose variant/plural/company-prefix form to the chartered title its
+# own workflow's Role (R)/(A) cells or the TO §5.3 register/§7 rosters carry;
+# the census sweeps the surface every run and Check 71 pins it at zero.
+# ==========================================================================
+ROLE_ALIASES_W39 = {
+    "ap clerks": "AP Clerk",
+    "ar clerks": "AR Clerk",
+    "payroll officers": "Payroll Officer",
+    "finance controllers": "Finance Controller",
+    "supply planners": "Supply Planner",
+    "store receiving clerks": "Store Receiving Clerk",
+    "store supervisors": "Store Supervisor",
+    "sales representatives": "Sales Rep",
+    "regional ops managers": "Regional Ops Mgr",
+    "wholesale managers": "Wholesale Manager",
+    "dc stock associates": "Warehouse Associate",
+    "dc warehouse associate": "Warehouse Associate",
+    "hq trade account managers": "Trade Account Manager",
+    "marketing ops manager": "Marketing Operations Manager",
+    "cx representative": "CX Rep",
+    "digital content representative": "Content Rep",
+    "catalog specialist": "Ecommerce Catalog Specialist",
+    "back-office delivery coordinator": "Delivery Coordinator",
+    "qa associate": "Quality Assurance Associate",
+    "buildright sales associates": "Sales Associate",
+    "buildright safety officer": "Safety Officer",
+    "buildright facilities coordinator": "Facilities Coordinator",
+    "buildright warranty administrator": "Warranty Administrator",
+    "buildright dc inventory controller": "Inventory Control Supervisor",
+    "buildright dg/hazmat compliance officer": "DG/Hazmat Compliance Officer",
+    "hq insurance coordinator": "Insurance Coordinator",
+    "hq loyalty program coordinator": "Loyalty Program Coordinator",
+    "assistant manager": "STORE:Assistant Store Manager",
+    "stores manager": "STORE:Store Manager",
+    "closure project manager": "Project Manager",
+    "customer experience lead": "Customer Experience Manager",
+    "it store ops manager": "IT Store Ops Mgr",
+    "it service desk lead": "Service Desk Lead",
+    "tax compliance officer": "Tax Compliance Manager",
+    "trade compliance officer": "Trade Compliance Manager",
+    "dg compliance officer": "DG/Hazmat Compliance Officer",
+    "hq manager": "HQ Function Mgr",
+}
+
 # wave-36 governance bodies (bucket additions; display = curated name).
 GOV_W36 = {
     "adverse-action board": "Adverse-Action Board",
@@ -4156,6 +4207,34 @@ WF_W36 = {
     "worker": "Worker",
     "workshop staff": "Workshop Staff",
     "zone staff": "Zone Staff",
+    # wave-39: appointed emergency-response & crisis-recovery functions (the
+    # W695 emergency team and W484 PRT role assignments — procedural functions
+    # the workflows themselves appoint, not TO headcount rows) and the W1177
+    # master-data stewardship assignments (the Data Governance Council's
+    # per-domain stewards).
+    "floor warden": "Floor Warden (emergency response appointment)",
+    "floor wardens": "Floor Wardens (emergency response appointments)",
+    "assembly point coordinator": "Assembly Point Coordinator (emergency response appointment)",
+    "first aid responder": "First Aid Responder (emergency response appointment)",
+    "first aid responders": "First Aid Responders (emergency response appointments)",
+    "fire marshal": "Fire Marshal (emergency response appointment)",
+    "communication officer": "Communication Officer (emergency response appointment)",
+    "operations lead": "PRT Operations Lead (crisis-recovery appointment)",
+    "finance lead": "PRT Finance Lead (crisis-recovery appointment)",
+    "people lead": "PRT People Lead (crisis-recovery appointment)",
+    "it lead": "PRT IT Lead (crisis-recovery appointment)",
+    "supply chain lead": "PRT Supply Chain Lead (crisis-recovery appointment)",
+    "legal lead": "PRT Legal Lead (crisis-recovery appointment)",
+    "communications lead": "PRT Communications Lead (crisis-recovery appointment)",
+    "customer steward": "Customer Data Steward (master-data stewardship assignment)",
+    "finance steward": "Finance Data Steward (master-data stewardship assignment)",
+    "hr steward": "HR Data Steward (master-data stewardship assignment)",
+    "product steward": "Product Data Steward (master-data stewardship assignment)",
+    "store ops steward": "Store Ops Data Steward (master-data stewardship assignment)",
+    "supply chain steward": "Supply Chain Data Steward (master-data stewardship assignment)",
+    "vendor steward": "Vendor Data Steward (master-data stewardship assignment)",
+    "domain data stewards": "Domain Data Stewards (master-data stewardship assignments)",
+    "individual director": "Individual Director (Board peer review)",
 }
 
 # wave-36 external counterparties.
@@ -4943,6 +5022,35 @@ EXT_W36 = {
     "worker-voice provider": "Worker-Voice Provider",
     "worker-voice technology providers": "Worker-Voice Technology Providers",
     "workout manager": "Workout Manager",
+    # wave-39: external government officials, licensed practitioners and
+    # counterparties named in step prose (BIR audit team, LGU treasurers,
+    # DAR/NCIP/DTI adjudicators, the PRC-licensed professionals who sign and
+    # seal permit plans, the accredited MRO/environmental auditor, the
+    # contractor's site engineer, the labor union president, the government
+    # agency's finance officer).
+    "bir revenue officer": "BIR Revenue Officer",
+    "revenue officer": "BIR Revenue Officer",
+    "revenue officers": "BIR Revenue Officer",
+    "bfp fire inspector": "BFP Fire Inspector",
+    "bfp fire inspectors": "BFP Fire Inspectors",
+    "lgu treasurer": "LGU Treasurer",
+    "city/provincial treasurer": "City/Provincial Treasurer",
+    "dar regional director": "DAR Regional Director",
+    "ncip regional director": "NCIP Regional Director",
+    "dti hearing officer": "DTI Hearing Officer",
+    "medical review officer": "Medical Review Officer (accredited)",
+    "environmental auditor": "Environmental Auditor (third-party)",
+    "contractor site engineer": "Contractor Site Engineer",
+    "union president": "Union President",
+    "finance officer": "Agency Finance Officer",
+    "professional electrical engineer": "PRC-Licensed Professional Electrical Engineer",
+    "licensed electrical engineer": "PRC-Licensed Professional Electrical Engineer",
+    "electrical engineer": "PRC-Licensed Electrical Engineer",
+    "registered master electrician": "PRC-Licensed Registered Master Electrician",
+    "master electrician": "PRC-Licensed Master Electrician",
+    "master plumber": "PRC-Licensed Master Plumber",
+    "civil engineer": "PRC-Licensed Civil Engineer",
+    "licensed mechanical engineer": "PRC-Licensed Mechanical Engineer",
 }
 
 SPLIT_RE = re.compile(r"\s*,\s*(?![^()]*\))")
@@ -5021,6 +5129,22 @@ class Resolver:
         if k in ROLE_ALIASES_W38:
             # wave-38: controls-matrix owner forms (same semantics as W36).
             v = ROLE_ALIASES_W38[k]
+            if v.startswith(("STORE:", "DC:", "EXTERNAL:")):
+                if v.startswith("STORE:"):
+                    return ("store", "Store (field, per-store roster)", v.split(":", 1)[1], None)
+                if v.startswith("DC:"):
+                    return ("dc", "DC (field, per-DC roster)", v.split(":", 1)[1], None)
+                return ("ext", "External / counterparty", v.split(":", 1)[1], None)
+            hk = key(v)
+            if hk in self.hq:
+                t2, d2, hc2 = self.hq[hk]
+                return ("hq", d2, t2, hc2)
+            if hk in IT_SEATS:
+                return ("it", "Information Technology (product model)", IT_SEATS[hk], None)
+            return ("hq", "Information Technology (product model)", v, None)
+        if k in ROLE_ALIASES_W39:
+            # wave-39: step-prose & analysis-field role variants (same semantics).
+            v = ROLE_ALIASES_W39[k]
             if v.startswith(("STORE:", "DC:", "EXTERNAL:")):
                 if v.startswith("STORE:"):
                     return ("store", "Store (field, per-store roster)", v.split(":", 1)[1], None)
@@ -5426,7 +5550,7 @@ def census():
     # to a real org actor (register title / roster / external) — a typo'd value
     # would otherwise silently become a phantom IT-bucket row; every
     # DEPT_ACTORS value must be a known department label.
-    for ak, av in list(ROLE_ALIASES.items()) + list(ROLE_ALIASES_W36.items()) + list(ROLE_ALIASES_W38.items()):
+    for ak, av in list(ROLE_ALIASES.items()) + list(ROLE_ALIASES_W36.items()) + list(ROLE_ALIASES_W38.items()) + list(ROLE_ALIASES_W39.items()):
         if av.startswith(("STORE:", "DC:", "EXTERNAL:")):
             continue
         b, dept, _, _ = res.resolve(av)
@@ -5495,11 +5619,87 @@ def census():
                 ctl_uncharted += 1
                 for f in forms:
                     ctl_unc_forms.add(norm(f))
+
+    # wave-39: the step-Activity & analysis-field prose — the sixth adjudicated
+    # role-vocabulary surface. A frozen extractor lifts candidate role spans
+    # (paren-qualifier stripped, >=1 capitalized qualifier word, ending in a
+    # role head noun; noise prefixes for verb/conditional openers; 'Store A/B'
+    # instance labels normalized; a documented non-role span set for tool
+    # names, vendor tiers, customer segments and badges), and every candidate
+    # resolves through the same owner_resolves semantics as the RACI cells.
+    PROSE_HEADS = (r"(?:Managers?|Directors?|Leads?|Analysts?|Specialists?|Supervisors?|"
+                   r"Coordinators?|Clerks?|Officers?|Engineers?|Accountants?|Planners?|"
+                   r"Buyers?|Representatives?|Reps?|Associates?|Technicians?|Assistants?|"
+                   r"Attorneys?|Counsel|Chefs?|Cashiers?|Drivers?|Auditors?|Architects?|"
+                   r"Admins?|Administrators?|Partners?|Controllers?|Treasurers?|"
+                   r"Secretaries?|President|Chemists?|Trainers?|Recruiters?|Paralegals?|"
+                   r"Underwriters?|Actuaries?|Adjusters?|Appraisers?|Surveyors?|"
+                   r"Inspectors?|Installers?|Operators?|Dispatchers?|Mechanics?|"
+                   r"Stewards?|Nurses?|Physicians?|Pharmacists?|Librarians?|Scientists?|"
+                   r"Developers?|Designers?|Editors?|Writers?|Electricians?|Plumbers?|"
+                   r"Bartenders?|Butchers?|Bakers?|Florists?|Locksmiths?|Wardens?|Marshals?)")
+    PROSE_CAND = re.compile(r"\b((?:[A-Z][A-Za-z0-9&/-]*\s){1,3}" + PROSE_HEADS + r")\b")
+    PROSE_NOISE = re.compile(r"^(If |Each |Affected |Your |Daily |Weekly |Monthly |Every |All |When |Where |Per |Brief |Notify |Secure |Engage |OR )")
+    PROSE_NON_ROLE = {
+        "Approved Mechanics", "Call Associate", "Data Quality Partners",
+        "Lapsed Buyer", "Project Planner", "Project Planners",
+        "Strategic Partner", "Sustainable Packaging Partner", "Visualizer Lead",
+        "BuildRight Trade Partner", "Digital Payment Partner",
+        "Exclusive Brand Partner", "Home Building Partner",
+        "Innovation Partner", "Facebook/Meta Ads Manager",
+    }
+
+    def _prose_candidate_resolves(span):
+        if span in PROSE_NON_ROLE:
+            return True
+        span = re.sub(r"^Store [A-Z0-9]{1,3}\s", "Store ", span)
+        span = re.sub(r"^(The|A|An)\s+", "", span)  # sentence-position articles
+        return owner_resolves(span)[0]
+
+    prose_fields = ("Pain Points", "Controls", "Automation Opportunity", "KPIs",
+                    "Trigger", "Volume", "Fields", "Staffing Implication")
+    prose_uncharted = 0
+    prose_unc_forms = set()
+    for vd in sorted(d for d in os.listdir(WF) if d.startswith("VS-")):
+        dd = os.path.join(WF, vd)
+        for fn in sorted(f for f in os.listdir(dd) if f.startswith("PA-") and f.endswith(".md")):
+            text = open(os.path.join(dd, fn), encoding="utf-8").read()
+            parts = re.split(r"^## (W\d+[A-Z]?)\. (.+)$", text, flags=re.M)
+            for i in range(1, len(parts) - 2, 3):
+                body = parts[i + 2]
+                segs = []
+                in_steps = False
+                for ln in body.splitlines():
+                    if re.match(r"^\|\s*#\s*\|", ln) and "Role (R)" in ln:
+                        in_steps = True
+                        continue
+                    if in_steps:
+                        if not ln.startswith("|"):
+                            in_steps = False
+                            continue
+                        cells = [c.strip() for c in ln.strip().strip("|").split("|")]
+                        if len(cells) >= 2 and not set(cells[0]) <= set("- "):
+                            segs.append(cells[1])
+                for field in prose_fields:
+                    m = re.search(r"\| \*\*" + field + r"\*\* \|(.*?)\|", body)
+                    if m:
+                        segs.append(m.group(1))
+                for seg in segs:
+                    flat = re.sub(r"\([^)]*\)", " ", seg)
+                    for m in PROSE_CAND.finditer(flat):
+                        span = m.group(1).strip()
+                        if PROSE_NOISE.match(span):
+                            continue
+                        if not _prose_candidate_resolves(span):
+                            prose_uncharted += 1
+                            prose_unc_forms.add(span)
+
     print(f"CENSUS workflows={len(wfs)} owner_resolved={resolved} "
           f"owner_uncharted={uncharted} owner_uncharted_forms={len(unc_owner_forms)} "
           f"uncharted_forms={unc_rows} "
           f"ctl_owner_cells={ctl_rows} ctl_owner_resolved={ctl_resolved} "
-          f"ctl_owner_uncharted={ctl_uncharted} ctl_owner_uncharted_forms={len(ctl_unc_forms)}")
+          f"ctl_owner_uncharted={ctl_uncharted} ctl_owner_uncharted_forms={len(ctl_unc_forms)} "
+          f"prose_role_uncharted={prose_uncharted} prose_role_forms={len(prose_unc_forms)}")
     return 0
 
 

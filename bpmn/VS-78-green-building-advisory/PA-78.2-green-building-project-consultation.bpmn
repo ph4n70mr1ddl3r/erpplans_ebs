@@ -19,8 +19,8 @@ Source: workflow W2726 — Green Building Project Material Consultation Service<
       <bpmn:startEvent id="W2726_Start3" name="Customer inquires about green building materials">
         <bpmn:outgoing>W2726_Flow10</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:userTask id="W2726_Task4" name="Green-Certified Associate conducts consultation: project type, green target…">
-        <bpmn:documentation>Step 1: Green-Certified Associate conducts consultation: project type, green target (BERDE/LEED or general sustainability), budget, timeline; identifies contributing BuildRight products
+      <bpmn:userTask id="W2726_Task4" name="Green-Certified Sales Associate conducts consultation: project type, green…">
+        <bpmn:documentation>Step 1: Green-Certified Sales Associate conducts consultation: project type, green target (BERDE/LEED or general sustainability), budget, timeline; identifies contributing BuildRight products
 Responsible (R): Green-Certified Sales Associate
 Accountable (A): Department Supervisor
 Duration: 30–45 min</bpmn:documentation>

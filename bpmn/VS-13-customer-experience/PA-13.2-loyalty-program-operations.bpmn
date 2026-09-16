@@ -1138,7 +1138,7 @@ Duration: Automated</bpmn:documentation>
         <bpmn:outgoing>W996_Flow15</bpmn:outgoing>
       </bpmn:serviceTask>
       <bpmn:userTask id="W996_Task7" name="Tier Upgrade Notification &amp; Benefits Activation">
-        <bpmn:documentation>Step 2: Tier Upgrade Notification &amp; Benefits Activation: For upgraded accounts: (a) Store Manager or Trade Desk Sales Associate contacts contractor to congratulate on tier upgrade; (b) benefits activated in system — Silver: 2% additional trade discount, priority delivery scheduling; Gold: 5% additional trade discount, priority delivery, dedicated Sales Associate, extended credit terms (Net 45 vs. Net 30), annual Store Manager appreciation dinner invitation; Platinum: 7% additional trade discount, all Gold benefits, 24-hour emergency delivery, quarterly business review with Category Manager, exclusive product preview events, free annual safety equipment certification for 2 employees per W51; (c) new trade discount tier automatically applied at POS via customer loyalty account per W17; (d) system generates welcome kit email with updated pricing matrix and benefit details
+        <bpmn:documentation>Step 2: Tier Upgrade Notification &amp; Benefits Activation: For upgraded accounts: (a) Store Manager or Sales Associate (Trade Desk) contacts contractor to congratulate on tier upgrade; (b) benefits activated in system — Silver: 2% additional trade discount, priority delivery scheduling; Gold: 5% additional trade discount, priority delivery, dedicated Sales Associate, extended credit terms (Net 45 vs. Net 30), annual Store Manager appreciation dinner invitation; Platinum: 7% additional trade discount, all Gold benefits, 24-hour emergency delivery, quarterly business review with Category Manager, exclusive product preview events, free annual safety equipment certification for 2 employees per W51; (c) new trade discount tier automatically applied at POS via customer loyalty account per W17; (d) system generates welcome kit email with updated pricing matrix and benefit details
 Responsible (R): Sales Associate / Store Manager
 Accountable (A): Store Manager
 Duration: 15–20 min per upgrade</bpmn:documentation>
@@ -1146,7 +1146,7 @@ Duration: 15–20 min per upgrade</bpmn:documentation>
         <bpmn:outgoing>W996_Flow16</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:serviceTask id="W996_Task8" name="Churn Risk Detection">
-        <bpmn:documentation>Step 3: Churn Risk Detection: System monitors trade account spending patterns: (a) flags accounts with &gt;20% month-over-month spend decline (Yellow risk); (b) flags accounts with &gt;40% month-over-month decline or 2 consecutive months of decline (Red risk); (c) flags accounts with zero transactions for 60+ days (Dormant risk per W84); (d) system generates churn risk report and distributes to Store Manager and Trade Desk Sales Associate weekly
+        <bpmn:documentation>Step 3: Churn Risk Detection: System monitors trade account spending patterns: (a) flags accounts with &gt;20% month-over-month spend decline (Yellow risk); (b) flags accounts with &gt;40% month-over-month decline or 2 consecutive months of decline (Red risk); (c) flags accounts with zero transactions for 60+ days (Dormant risk per W84); (d) system generates churn risk report and distributes to Store Manager and Sales Associate (Trade Desk) weekly
 Responsible (R): System
 Accountable (A): Store Manager
 Duration: Automated</bpmn:documentation>

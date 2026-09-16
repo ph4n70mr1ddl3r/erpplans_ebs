@@ -270,8 +270,8 @@ Source: workflow W167 — Store &amp; DC Recycling Program (Circular Economy)</b
       <bpmn:startEvent id="W167_Start6" name="Accumulation of secondary packaging (cartons, plastics, broken pallets)">
         <bpmn:outgoing>W167_Flow15</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:userTask id="W167_Task7" name="Store/DC Associates segregate waste: Carton, Stretch Film (Plastic), Wood…">
-        <bpmn:documentation>Step 1: Store/DC Associates segregate waste: Carton, Stretch Film (Plastic), Wood (Pallets), Scrap Metal
+      <bpmn:userTask id="W167_Task7" name="Store and DC associates segregate waste: Carton, Stretch Film (Plastic), Wood…">
+        <bpmn:documentation>Step 1: Store and DC associates segregate waste: Carton, Stretch Film (Plastic), Wood (Pallets), Scrap Metal
 Responsible (R): Associates
 Accountable (A): —
 Duration: Ongoing</bpmn:documentation>

@@ -847,7 +847,7 @@ Duration: Per W146 timeline</bpmn:documentation>
         <bpmn:outgoing>W809_Flow19</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W809_Task9" name="Sell-through reporting">
-        <bpmn:documentation>Step 3: Sell-through reporting: Reseller reports sales of consignment goods: (a) standard process: reseller submits monthly sell-through report via B2B portal — item codes, quantities sold, selling price to end customer, date of sale; (b) automated process (for resellers with POS integration per W283): system receives daily sell-through data feed; (c) B2B Sales Representative follows up with reseller by 5th business day of month if sell-through report not submitted; (d) system reconciles: opening consignment balance + shipments during period − reported sales = expected closing consignment balance
+        <bpmn:documentation>Step 3: Sell-through reporting: Reseller reports sales of consignment goods: (a) standard process: reseller submits monthly sell-through report via B2B portal — item codes, quantities sold, selling price to end customer, date of sale; (b) automated process (for resellers with POS integration per W283): system receives daily sell-through data feed; (c) Sales Rep follows up with reseller by 5th business day of month if sell-through report not submitted; (d) system reconciles: opening consignment balance + shipments during period − reported sales = expected closing consignment balance
 Responsible (R): Reseller / Sales Representative
 Accountable (A): B2B Sales Manager
 Duration: Monthly (reseller: 30–60 min; Sales Rep follow-up: 15–30 min)</bpmn:documentation>
@@ -855,7 +855,7 @@ Duration: Monthly (reseller: 30–60 min; Sales Rep follow-up: 15–30 min)</bpm
         <bpmn:outgoing>W809_Flow20</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W809_Task10" name="Monthly physical count reconciliation">
-        <bpmn:documentation>Step 4: Monthly physical count reconciliation: To verify sell-through accuracy and prevent shrinkage: (a) reseller conducts physical count of all consignment SKUs at month-end; (b) physical count compared to system expected balance (from step 3 reconciliation); (c) if variance ≤2%: acceptable — system adjusts inventory to physical count; (d) if variance &gt;2%: B2B Sales Representative conducts on-site audit count within 5 business days; (e) unexplained losses charged to reseller at consignment cost per agreement terms; (f) quarterly: BuildRight DC Inventory Controller performs surprise audit count at top 5 consignment locations by value
+        <bpmn:documentation>Step 4: Monthly physical count reconciliation: To verify sell-through accuracy and prevent shrinkage: (a) reseller conducts physical count of all consignment SKUs at month-end; (b) physical count compared to system expected balance (from step 3 reconciliation); (c) if variance ≤2%: acceptable — system adjusts inventory to physical count; (d) if variance &gt;2%: Sales Rep conducts on-site audit count within 5 business days; (e) unexplained losses charged to reseller at consignment cost per agreement terms; (f) quarterly: BuildRight DC Inventory Controller performs surprise audit count at top 5 consignment locations by value
 Responsible (R): Reseller / Sales Representative / DC Inventory Controller
 Accountable (A): B2B Sales Manager
 Duration: 1–2 hours per count (reseller); 2–4 hours per audit (BuildRight)</bpmn:documentation>

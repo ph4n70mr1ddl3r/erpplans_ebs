@@ -114,7 +114,7 @@ Duration: Quarterly review</bpmn:documentation>
         <bpmn:outgoing>W519_Flow31</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W519_Task17" name="Annual: Compliance Officer conducts AML awareness training for all Store…">
-        <bpmn:documentation>Step 11: Annual: Compliance Officer conducts AML awareness training for all Store Managers and Lead Cashiers (integrated with W51 training program); training covers AMLA requirements, red flags for suspicious transactions, customer identification procedures, tipping-off prohibition, and STR filing process
+        <bpmn:documentation>Step 11: Annual: Compliance Officer conducts AML awareness training for all Store Managers and Assistant Store Managers (integrated with W51 training program); training covers AMLA requirements, red flags for suspicious transactions, customer identification procedures, tipping-off prohibition, and STR filing process
 Responsible (R): Compliance Officer
 Accountable (A): CFO
 Duration: 2 hours/year</bpmn:documentation>

@@ -120,8 +120,8 @@ Duration: 5 min</bpmn:documentation>
         <bpmn:incoming>W5218_Flow12</bpmn:incoming>
         <bpmn:outgoing>W5218_Flow13</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W5218_Task6" name="Secure signature from the B2B Credit Manager or Legal Operations Officer.">
-        <bpmn:documentation>Step 3: Secure signature from the B2B Credit Manager or Legal Operations Officer.
+      <bpmn:userTask id="W5218_Task6" name="Secure signature from the B2B Credit Manager or Legal Counsel.">
+        <bpmn:documentation>Step 3: Secure signature from the B2B Credit Manager or Legal Counsel.
 Responsible (R): AR Supervisor / Credit Officer
 Accountable (A): AR Supervisor / Credit Officer
 Duration: 5 min</bpmn:documentation>

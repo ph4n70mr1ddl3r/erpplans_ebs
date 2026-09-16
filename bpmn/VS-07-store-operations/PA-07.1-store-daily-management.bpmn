@@ -6461,7 +6461,7 @@ Source: workflow W952 — Store-Level Customer Gratuity &amp; Service Tip Proces
         <bpmn:outgoing>W952_Flow14</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:userTask id="W952_Task6" name="Service Delivery &amp; Tip Offer">
-        <bpmn:documentation>Step 1: Service Delivery &amp; Tip Offer: Customer receives service (loading, cutting, delivery, etc.) and offers tip; Staff Associate follows policy: (a) initial response: politely declines (&quot;It&#x27;s our pleasure to help, sir/ma&#x27;am — no tip needed&quot;); (b) if customer insists: accepts graciously with verbal thank-you; (c) never solicits tips or suggests tip amounts; (d) provides same quality service regardless of whether customer tips
+        <bpmn:documentation>Step 1: Service Delivery &amp; Tip Offer: Customer receives service (loading, cutting, delivery, etc.) and offers tip; the Sales Associate / Stock Associate follows policy: (a) initial response: politely declines (&quot;It&#x27;s our pleasure to help, sir/ma&#x27;am — no tip needed&quot;); (b) if customer insists: accepts graciously with verbal thank-you; (c) never solicits tips or suggests tip amounts; (d) provides same quality service regardless of whether customer tips
 Responsible (R): Sales Associate / Stock Associate
 Accountable (A): Store Manager
 Duration: 0 min (during service)</bpmn:documentation>

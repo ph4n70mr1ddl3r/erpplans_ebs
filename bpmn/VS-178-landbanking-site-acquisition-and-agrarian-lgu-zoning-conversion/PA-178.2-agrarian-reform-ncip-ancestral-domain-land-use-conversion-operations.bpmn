@@ -357,7 +357,7 @@ Source: workflow W5141 — Agricultural-to-Commercial Land Reclassification Appl
         <bpmn:outgoing>W5141_Flow11</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:userTask id="W5141_Task4" name="Submit application for Land Reclassification to the Municipal/City Planning and…">
-        <bpmn:documentation>Step 1: Submit application for Land Reclassification to the Municipal/City Planning and Development Coordinator.
+        <bpmn:documentation>Step 1: Submit application for Land Reclassification to the Municipal/City Planning and Development Office.
 Responsible (R): Regulatory Compliance Officer / Land Liaison Officer
 Accountable (A): Regulatory Compliance Officer / Land Liaison Officer
 Duration: 1-2 hours</bpmn:documentation>

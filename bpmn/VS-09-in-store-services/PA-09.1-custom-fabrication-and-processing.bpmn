@@ -1955,7 +1955,7 @@ Source: workflow W943 — Customer Glass Cutting &amp; Custom Flat Glass Service
         <bpmn:outgoing>W943_Flow13</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:userTask id="W943_Task4" name="Customer Request &amp; Measurement">
-        <bpmn:documentation>Step 1: Customer Request &amp; Measurement: Customer approaches glass cutting station with dimensions or physical item (broken glass, window frame) for measurement; Sales Associate (Glass Specialist) verifies glass type (clear 3mm/4mm/5mm/6mm, tinted, frosted, textured, mirror), dimensions (max 1.22m × 2.44m standard sheet), edge finish (plain cut, polished, beveled), and quantity; for walk-in: Sales Associate measures physical item with steel tape; for ecommerce: customer provides dimensions via online order form (W949 visualizer integration for photo-to-dimension estimation)
+        <bpmn:documentation>Step 1: Customer Request &amp; Measurement: Customer approaches glass cutting station with dimensions or physical item (broken glass, window frame) for measurement; the Sales Associate (Glass Specialist) verifies glass type (clear 3mm/4mm/5mm/6mm, tinted, frosted, textured, mirror), dimensions (max 1.22m × 2.44m standard sheet), edge finish (plain cut, polished, beveled), and quantity; for walk-in: Sales Associate measures physical item with steel tape; for ecommerce: customer provides dimensions via online order form (W949 visualizer integration for photo-to-dimension estimation)
 Responsible (R): Sales Associate
 Accountable (A): Department Supervisor
 Duration: 5–10 min</bpmn:documentation>
@@ -1971,7 +1971,7 @@ Duration: 5–8 min</bpmn:documentation>
         <bpmn:outgoing>W943_Flow15</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W943_Task6" name="Order Acceptance &amp; Payment">
-        <bpmn:documentation>Step 3: Order Acceptance &amp; Payment: Customer accepts quotation; Sales Associate creates service work order (SWO) in POS system per W544; customer pays at POS — material cost + cutting fee + edge finish + associated products (sealant, clips, moulding) in single transaction; POS prints SWO receipt with: order number, glass specifications, dimensions, edge finish, promised ready time, and customer copy; system allocates glass sheet from inventory and creates cutting instruction for Glass Specialist
+        <bpmn:documentation>Step 3: Order Acceptance &amp; Payment: Customer accepts quotation; Sales Associate creates service work order (SWO) in POS system per W544; customer pays at POS — material cost + cutting fee + edge finish + associated products (sealant, clips, moulding) in single transaction; POS prints SWO receipt with: order number, glass specifications, dimensions, edge finish, promised ready time, and customer copy; system allocates glass sheet from inventory and creates cutting instruction for the Sales Associate (Glass Specialist)
 Responsible (R): Sales Associate / Cashier
 Accountable (A): Department Supervisor
 Duration: 5 min</bpmn:documentation>
@@ -1979,7 +1979,7 @@ Duration: 5 min</bpmn:documentation>
         <bpmn:outgoing>W943_Flow16</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W943_Task7" name="Glass Cutting Execution">
-        <bpmn:documentation>Step 4: Glass Cutting Execution: Glass Specialist retrieves glass sheet from storage rack (backroom glass storage area, vertical rack with dividers by type/thickness); Glass Specialist dons PPE per W140 (cut-resistant gloves, safety goggles, closed-toe shoes); performs cuts using manual glass cutter (score-and-snap for straight cuts) or CNC glass cutting table (available at top 30 stores); applies edge finish: plain cut (default), polished edge (hand polisher), or beveled edge (beveling machine — top 30 stores); measures finished piece against order dimensions; records cut dimensions and waste factor on SWO
+        <bpmn:documentation>Step 4: Glass Cutting Execution: The Sales Associate (Glass Specialist) retrieves glass sheet from storage rack (backroom glass storage area, vertical rack with dividers by type/thickness); the Sales Associate (Glass Specialist) dons PPE per W140 (cut-resistant gloves, safety goggles, closed-toe shoes); performs cuts using manual glass cutter (score-and-snap for straight cuts) or CNC glass cutting table (available at top 30 stores); applies edge finish: plain cut (default), polished edge (hand polisher), or beveled edge (beveling machine — top 30 stores); measures finished piece against order dimensions; records cut dimensions and waste factor on SWO
 Responsible (R): Sales Associate (Glass Specialist)
 Accountable (A): Department Supervisor
 Duration: 10–25 min/piece</bpmn:documentation>
@@ -1987,7 +1987,7 @@ Duration: 10–25 min/piece</bpmn:documentation>
         <bpmn:outgoing>W943_Flow17</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W943_Task8" name="Quality Inspection &amp; Customer Handover">
-        <bpmn:documentation>Step 5: Quality Inspection &amp; Customer Handover: Glass Specialist inspects: (a) dimensional accuracy (±2mm tolerance); (b) edge quality (no chips, cracks, burrs); (c) glass type and thickness match to order; failed inspection → recut from new sheet, waste piece dispositioned per W91; wraps finished piece in protective packing material (bubble wrap or corrugated sheet); customer inspects and signs acceptance on SWO; system closes SWO and posts sale; system updates inventory: glass sheet consumed + waste factor (average 10–15% waste per sheet) posted to scrap per W443
+        <bpmn:documentation>Step 5: Quality Inspection &amp; Customer Handover: The Sales Associate (Glass Specialist) inspects: (a) dimensional accuracy (±2mm tolerance); (b) edge quality (no chips, cracks, burrs); (c) glass type and thickness match to order; failed inspection → recut from new sheet, waste piece dispositioned per W91; wraps finished piece in protective packing material (bubble wrap or corrugated sheet); customer inspects and signs acceptance on SWO; system closes SWO and posts sale; system updates inventory: glass sheet consumed + waste factor (average 10–15% waste per sheet) posted to scrap per W443
 Responsible (R): Sales Associate / Customer
 Accountable (A): Department Supervisor
 Duration: 5–10 min</bpmn:documentation>
@@ -1995,7 +1995,7 @@ Duration: 5–10 min</bpmn:documentation>
         <bpmn:outgoing>W943_Flow18</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W943_Task9" name="Daily Station Cleanup &amp; Waste Disposal">
-        <bpmn:documentation>Step 6: Daily Station Cleanup &amp; Waste Disposal: At end of day: Glass Specialist cleans glass cutting station; collects glass waste (offcuts, broken pieces) in designated sharps/glass waste container; waste glass disposed per W82 hazardous/non-hazardous waste protocol (flat glass is non-hazardous but requires special handling for sharp edges); system records daily glass waste volume for inventory reconciliation; glass cutting tools inspected and maintained (cutter wheel replacement every 200 linear meters of cut)
+        <bpmn:documentation>Step 6: Daily Station Cleanup &amp; Waste Disposal: At end of day: The Sales Associate (Glass Specialist) cleans glass cutting station; collects glass waste (offcuts, broken pieces) in designated sharps/glass waste container; waste glass disposed per W82 hazardous/non-hazardous waste protocol (flat glass is non-hazardous but requires special handling for sharp edges); system records daily glass waste volume for inventory reconciliation; glass cutting tools inspected and maintained (cutter wheel replacement every 200 linear meters of cut)
 Responsible (R): Sales Associate (Glass Specialist)
 Accountable (A): Department Supervisor
 Duration: 15 min/day</bpmn:documentation>
@@ -2087,7 +2087,7 @@ Duration: 5 min</bpmn:documentation>
         <bpmn:outgoing>W944_Flow16</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W944_Task7" name="Pipe Cutting &amp; Threading Execution">
-        <bpmn:documentation>Step 4: Pipe Cutting &amp; Threading Execution: Pipe Specialist retrieves pipe from storage rack; dons PPE per W140 (safety goggles, cut-resistant gloves, steel-toe boots, ear protection for power cutting); measures and marks cut points with measuring tape and marker; performs cuts: (a) PVC — manual PVC cutter (quick, clean cut); (b) GI/copper ≤ 2&quot; — manual pipe cutter (rotating blade); (c) GI/black iron 2½&quot;–4&quot; — power pipe cutter (abrasive chop saw); deburrs cut ends with file or deburring tool; for threaded ends: mounts pipe in pipe threading machine (½&quot;–4&quot; capacity), applies cutting oil, threads to BSPT standard (11 threads per inch for ½&quot;–¾&quot;, taper per BS 21); cleans threaded ends (removes metal chips, applies anti-rust coating for GI); measures finished pieces against order
+        <bpmn:documentation>Step 4: Pipe Cutting &amp; Threading Execution: The Sales Associate (Pipe Specialist) retrieves pipe from storage rack; dons PPE per W140 (safety goggles, cut-resistant gloves, steel-toe boots, ear protection for power cutting); measures and marks cut points with measuring tape and marker; performs cuts: (a) PVC — manual PVC cutter (quick, clean cut); (b) GI/copper ≤ 2&quot; — manual pipe cutter (rotating blade); (c) GI/black iron 2½&quot;–4&quot; — power pipe cutter (abrasive chop saw); deburrs cut ends with file or deburring tool; for threaded ends: mounts pipe in pipe threading machine (½&quot;–4&quot; capacity), applies cutting oil, threads to BSPT standard (11 threads per inch for ½&quot;–¾&quot;, taper per BS 21); cleans threaded ends (removes metal chips, applies anti-rust coating for GI); measures finished pieces against order
 Responsible (R): Sales Associate (Pipe Specialist)
 Accountable (A): Department Supervisor
 Duration: 10–20 min/piece</bpmn:documentation>
@@ -2095,7 +2095,7 @@ Duration: 10–20 min/piece</bpmn:documentation>
         <bpmn:outgoing>W944_Flow17</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W944_Task8" name="Quality Inspection &amp; Customer Handover">
-        <bpmn:documentation>Step 5: Quality Inspection &amp; Customer Handover: Pipe Specialist inspects: (a) cut length accuracy (±3mm); (b) thread quality — thread gauge fit check (go/no-go gauge for BSPT threads); (c) deburr quality — no sharp edges; (d) anti-rust coating applied (GI only); customer inspects and signs acceptance on SWO; system closes SWO; leftover pipe pieces offered to customer or disposed per W91 if customer declines
+        <bpmn:documentation>Step 5: Quality Inspection &amp; Customer Handover: The Sales Associate (Pipe Specialist) inspects: (a) cut length accuracy (±3mm); (b) thread quality — thread gauge fit check (go/no-go gauge for BSPT threads); (c) deburr quality — no sharp edges; (d) anti-rust coating applied (GI only); customer inspects and signs acceptance on SWO; system closes SWO; leftover pipe pieces offered to customer or disposed per W91 if customer declines
 Responsible (R): Sales Associate / Customer
 Accountable (A): Department Supervisor
 Duration: 5–10 min</bpmn:documentation>
@@ -2283,7 +2283,7 @@ Duration: 5–10 min</bpmn:documentation>
         <bpmn:outgoing>W946_Flow15</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W946_Task6" name="Frame Cutting &amp; Assembly">
-        <bpmn:documentation>Step 3: Frame Cutting &amp; Assembly: Fabrication Specialist retrieves aluminum profile stock or wood stock; cuts frame pieces to dimensions using miter saw (aluminum) or table saw (wood) at 45° corners; for aluminum: joins corners with aluminum corner keys and crimping tool; for wood: joins with wood glue, dowels, and corner braces; dry-fits frame to verify dimensions
+        <bpmn:documentation>Step 3: Frame Cutting &amp; Assembly: The Sales Associate (Fabrication Specialist) retrieves aluminum profile stock or wood stock; cuts frame pieces to dimensions using miter saw (aluminum) or table saw (wood) at 45° corners; for aluminum: joins corners with aluminum corner keys and crimping tool; for wood: joins with wood glue, dowels, and corner braces; dry-fits frame to verify dimensions
 Responsible (R): Sales Associate (Fabrication Specialist)
 Accountable (A): Department Supervisor
 Duration: 20–30 min/screen</bpmn:documentation>
@@ -2291,7 +2291,7 @@ Duration: 20–30 min/screen</bpmn:documentation>
         <bpmn:outgoing>W946_Flow16</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W946_Task7" name="Mesh Installation">
-        <bpmn:documentation>Step 4: Mesh Installation: Fabrication Specialist cuts mesh to frame dimensions plus 2cm overhang on all sides; lays mesh over frame with groove facing up; presses rubber spline into groove over mesh using spline roller tool, starting from one corner and working around; trims excess mesh with utility knife; inspects mesh tension (uniform, no wrinkles, no gaps) and spline seating (fully seated in groove, no protrusion)
+        <bpmn:documentation>Step 4: Mesh Installation: The Sales Associate (Fabrication Specialist) cuts mesh to frame dimensions plus 2cm overhang on all sides; lays mesh over frame with groove facing up; presses rubber spline into groove over mesh using spline roller tool, starting from one corner and working around; trims excess mesh with utility knife; inspects mesh tension (uniform, no wrinkles, no gaps) and spline seating (fully seated in groove, no protrusion)
 Responsible (R): Sales Associate (Fabrication Specialist)
 Accountable (A): Department Supervisor
 Duration: 10–15 min/screen</bpmn:documentation>
@@ -2299,7 +2299,7 @@ Duration: 10–15 min/screen</bpmn:documentation>
         <bpmn:outgoing>W946_Flow17</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W946_Task8" name="Hardware Installation &amp; Quality Check">
-        <bpmn:documentation>Step 5: Hardware Installation &amp; Quality Check: Fabrication Specialist installs hinges (2–3 per screen depending on size), handle, and latch/lock per customer specification; quality check: (a) frame squareness (diagonal measurement within ±3mm); (b) mesh tension and uniformity; (c) hardware alignment and operation; (d) overall dimensions match order (±3mm tolerance); marks BuildRight label on frame (date, store, order number)
+        <bpmn:documentation>Step 5: Hardware Installation &amp; Quality Check: The Sales Associate (Fabrication Specialist) installs hinges (2–3 per screen depending on size), handle, and latch/lock per customer specification; quality check: (a) frame squareness (diagonal measurement within ±3mm); (b) mesh tension and uniformity; (c) hardware alignment and operation; (d) overall dimensions match order (±3mm tolerance); marks BuildRight label on frame (date, store, order number)
 Responsible (R): Sales Associate (Fabrication Specialist)
 Accountable (A): Department Supervisor
 Duration: 10–15 min/screen</bpmn:documentation>
@@ -2501,7 +2501,7 @@ Duration: 2–5 min (customer)</bpmn:documentation>
         <bpmn:outgoing>W954_Flow17</bpmn:outgoing>
       </bpmn:serviceTask>
       <bpmn:userTask id="W954_Task9" name="Issue Resolution Follow-Up">
-        <bpmn:documentation>Step 3: Issue Resolution Follow-Up: For negative responses: (a) Customer Service Representative calls customer within 4 hours of negative response during business hours; (b) documents issue: delivery damage, wrong item, missing item, installation quality, installation behavior/professionalism, timing/punctuality; (c) categorizes issue per root cause taxonomy (delivery, installation, product, logistics); (d) resolves or escalates: (i) delivery damage → claim per W860 insurance or W91 disposition; (ii) wrong/missing item → replacement per W12 returns; (iii) installation quality → service rework per W795; (iv) technician behavior → escalated to Installation Service Manager per W600 contractor management; (e) resolution tracked per W597 SLA (target: 48-hour resolution for delivery issues, 72-hour for installation issues)
+        <bpmn:documentation>Step 3: Issue Resolution Follow-Up: For negative responses: (a) Customer Service Representative calls customer within 4 hours of negative response during business hours; (b) documents issue: delivery damage, wrong item, missing item, installation quality, installation behavior/professionalism, timing/punctuality; (c) categorizes issue per root cause taxonomy (delivery, installation, product, logistics); (d) resolves or escalates: (i) delivery damage → claim per W860 insurance or W91 disposition; (ii) wrong/missing item → replacement per W12 returns; (iii) installation quality → service rework per W795; (iv) technician behavior → escalated to the Installation Services Coordinator per W600 contractor management; (e) resolution tracked per W597 SLA (target: 48-hour resolution for delivery issues, 72-hour for installation issues)
 Responsible (R): Customer Service Rep
 Accountable (A): Customer Experience Manager
 Duration: 15–30 min/case</bpmn:documentation>
@@ -3231,7 +3231,7 @@ Duration: 5–8 min</bpmn:documentation>
         <bpmn:outgoing>W986_Flow15</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W986_Task6" name="Order Acceptance &amp; Payment">
-        <bpmn:documentation>Step 3: Order Acceptance &amp; Payment: Customer accepts quotation; Sales Associate processes payment at POS — material cost + cutting fee + bending fee in single transaction; POS prints SWO receipt with: order number, rebar specifications, cut/bend details, promised ready time (standard: 2–4 hours for orders ≤100 pieces; next day for larger orders); system allocates rebar from inventory and creates fabrication instruction for Steel Specialist
+        <bpmn:documentation>Step 3: Order Acceptance &amp; Payment: Customer accepts quotation; Sales Associate processes payment at POS — material cost + cutting fee + bending fee in single transaction; POS prints SWO receipt with: order number, rebar specifications, cut/bend details, promised ready time (standard: 2–4 hours for orders ≤100 pieces; next day for larger orders); system allocates rebar from inventory and creates fabrication instruction for the Sales Associate (Steel Specialist)
 Responsible (R): Sales Associate / Cashier
 Accountable (A): Department Supervisor
 Duration: 5 min</bpmn:documentation>
@@ -3239,7 +3239,7 @@ Duration: 5 min</bpmn:documentation>
         <bpmn:outgoing>W986_Flow16</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W986_Task7" name="Rebar Cutting &amp; Bending Execution">
-        <bpmn:documentation>Step 4: Rebar Cutting &amp; Bending Execution: Steel Specialist retrieves rebar from yard storage per W3B; dons PPE per W140 (cut-resistant gloves, safety goggles, steel-toe boots, hard hat); performs operations: (a) cutting — uses hydraulic rebar cutter (capacity: up to 25mm); cuts to specified lengths with ±5mm tolerance; (b) bending — uses hydraulic rebar bender (capacity: up to 25mm); bends to specified angles and dimensions with ±3° angular tolerance; (c) sorts and bundles finished pieces by specification with tie wire; (d) tags each bundle with SWO number and customer name; (e) records waste offcuts — pieces &lt;1m dispositioned to scrap per W443; (f) for orders exceeding same-day capacity: queues remaining work for next morning and notifies customer of pickup time
+        <bpmn:documentation>Step 4: Rebar Cutting &amp; Bending Execution: The Sales Associate (Steel Specialist) retrieves rebar from yard storage per W3B; dons PPE per W140 (cut-resistant gloves, safety goggles, steel-toe boots, hard hat); performs operations: (a) cutting — uses hydraulic rebar cutter (capacity: up to 25mm); cuts to specified lengths with ±5mm tolerance; (b) bending — uses hydraulic rebar bender (capacity: up to 25mm); bends to specified angles and dimensions with ±3° angular tolerance; (c) sorts and bundles finished pieces by specification with tie wire; (d) tags each bundle with SWO number and customer name; (e) records waste offcuts — pieces &lt;1m dispositioned to scrap per W443; (f) for orders exceeding same-day capacity: queues remaining work for next morning and notifies customer of pickup time
 Responsible (R): Sales Associate (Steel Specialist)
 Accountable (A): Department Supervisor
 Duration: 15–45 min (depends on order size)</bpmn:documentation>
@@ -3247,7 +3247,7 @@ Duration: 15–45 min (depends on order size)</bpmn:documentation>
         <bpmn:outgoing>W986_Flow17</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W986_Task8" name="Quality Inspection &amp; Customer Handover">
-        <bpmn:documentation>Step 5: Quality Inspection &amp; Customer Handover: Steel Specialist inspects: (a) dimensional accuracy — lengths ±5mm, bend angles ±3°; (b) bar integrity — no cracks, kinks, or excessive deformation at bends; (c) quantity per specification; failed inspection → re-cut/re-bend from new bar, waste piece to scrap; customer inspects finished pieces and signs acceptance on SWO; system closes SWO and posts sale; customer loads rebar at yard loading zone per W438; vehicle loading assistance per W950 provided for heavy orders
+        <bpmn:documentation>Step 5: Quality Inspection &amp; Customer Handover: The Sales Associate (Steel Specialist) inspects: (a) dimensional accuracy — lengths ±5mm, bend angles ±3°; (b) bar integrity — no cracks, kinks, or excessive deformation at bends; (c) quantity per specification; failed inspection → re-cut/re-bend from new bar, waste piece to scrap; customer inspects finished pieces and signs acceptance on SWO; system closes SWO and posts sale; customer loads rebar at yard loading zone per W438; vehicle loading assistance per W950 provided for heavy orders
 Responsible (R): Sales Associate / Customer
 Accountable (A): Department Supervisor
 Duration: 5–10 min</bpmn:documentation>
@@ -3255,7 +3255,7 @@ Duration: 5–10 min</bpmn:documentation>
         <bpmn:outgoing>W986_Flow18</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W986_Task9" name="Daily Station Cleanup &amp; Waste Disposal">
-        <bpmn:documentation>Step 6: Daily Station Cleanup &amp; Waste Disposal: At end of day: Steel Specialist cleans rebar cutting/bending station; applies rust preventive to cutter and bender blades; collects steel offcuts in scrap bin; steel scrap sold to recycler per W443 (salvage monetization); system records daily scrap weight for inventory reconciliation; rebar fabrication tools inspected — hydraulic fluid levels, blade sharpness, bender pin condition
+        <bpmn:documentation>Step 6: Daily Station Cleanup &amp; Waste Disposal: At end of day: The Sales Associate (Steel Specialist) cleans rebar cutting/bending station; applies rust preventive to cutter and bender blades; collects steel offcuts in scrap bin; steel scrap sold to recycler per W443 (salvage monetization); system records daily scrap weight for inventory reconciliation; rebar fabrication tools inspected — hydraulic fluid levels, blade sharpness, bender pin condition
 Responsible (R): Sales Associate (Steel Specialist)
 Accountable (A): Department Supervisor
 Duration: 15 min/day</bpmn:documentation>

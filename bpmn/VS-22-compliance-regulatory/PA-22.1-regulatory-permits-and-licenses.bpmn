@@ -2820,8 +2820,8 @@ Duration: 4 hours/quarter</bpmn:documentation>
         <bpmn:incoming>W479_Flow20</bpmn:incoming>
         <bpmn:outgoing>W479_Flow21</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W479_Task10" name="Technical Representative Assignment">
-        <bpmn:documentation>Step 2: Technical Representative Assignment: Regulatory Compliance Manager maintains the registered credentials of the designated &quot;Qualified Person&quot; (e.g. licensed pharmacist or chemist) required by the FDA to oversee chemical safety reporting.
+      <bpmn:userTask id="W479_Task10" name="Qualified Person (Technical Representative) Assignment">
+        <bpmn:documentation>Step 2: Qualified Person (Technical Representative) Assignment: Regulatory Compliance Manager maintains the registered credentials of the designated &quot;Qualified Person&quot; (e.g. licensed pharmacist or chemist) required by the FDA to oversee chemical safety reporting.
 Responsible (R): Regulatory Compliance Manager
 Accountable (A): VP Legal &amp; Compliance
 Duration: Ongoing</bpmn:documentation>
@@ -2968,7 +2968,7 @@ Duration: 2 hours</bpmn:documentation>
         <bpmn:outgoing>W480_Flow21</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W480_Task10" name="Geodetic &amp; Topographic Survey">
-        <bpmn:documentation>Step 2: Geodetic &amp; Topographic Survey: If the site is within CAAP buffer zones, Project Manager hires a CAAP-deputized Geodetic Engineer to perform an elevation survey and prepare a certified Geodetic Report detailing elevation and height.
+        <bpmn:documentation>Step 2: Geodetic &amp; Topographic Survey: If the site is within CAAP buffer zones, Project Manager hires a Geodetic Engineer deputized by CAAP to perform an elevation survey and prepare a certified Geodetic Report detailing elevation and height.
 Responsible (R): Geodetic Engineer
 Accountable (A): Project Manager
 Duration: 3 days</bpmn:documentation>

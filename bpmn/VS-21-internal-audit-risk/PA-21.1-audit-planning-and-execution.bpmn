@@ -164,8 +164,8 @@ Duration: Ongoing</bpmn:documentation>
         <bpmn:incoming>W121_Flow19</bpmn:incoming>
         <bpmn:outgoing>W121_Flow20</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W121_Task10" name="Exit Meeting: Discuss preliminary findings with Auditee Manager">
-        <bpmn:documentation>Step 4: Exit Meeting: Discuss preliminary findings with Auditee Manager
+      <bpmn:userTask id="W121_Task10" name="Exit Meeting: Discuss preliminary findings with the Auditee">
+        <bpmn:documentation>Step 4: Exit Meeting: Discuss preliminary findings with the Auditee
 Responsible (R): Senior Auditor
 Accountable (A): Senior Auditor
 Duration: 2 hours</bpmn:documentation>

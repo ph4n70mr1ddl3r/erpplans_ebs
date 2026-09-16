@@ -1595,7 +1595,7 @@ Duration: 8 hours/event (planning + execution)</bpmn:documentation>
         <bpmn:outgoing>W1259_Flow12</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W1259_Task5" name="Trade customer retention analytics">
-        <bpmn:documentation>Step 2: Trade customer retention analytics: Monthly churn risk analysis: (a) identify trade accounts with declining monthly purchases (&gt; 20% decline vs. 3-month average); (b) flag accounts approaching credit limit exhaustion — may indicate financial distress or competitor shift; (c) calculate trade account lifetime value (LTV) and segment by risk tier: (i) green (active, growing), (ii) yellow (declining, at-risk), (iii) red (churned — no purchase in 60 days); (d) for yellow/red accounts: assign personal outreach from Store Manager or dedicated Trade Sales Associate; (e) track retention rate by region and store
+        <bpmn:documentation>Step 2: Trade customer retention analytics: Monthly churn risk analysis: (a) identify trade accounts with declining monthly purchases (&gt; 20% decline vs. 3-month average); (b) flag accounts approaching credit limit exhaustion — may indicate financial distress or competitor shift; (c) calculate trade account lifetime value (LTV) and segment by risk tier: (i) green (active, growing), (ii) yellow (declining, at-risk), (iii) red (churned — no purchase in 60 days); (d) for yellow/red accounts: assign personal outreach from Store Manager or the dedicated Sales Associate (Trade Desk); (e) track retention rate by region and store
 Responsible (R): Trade Marketing Manager / BI Analyst
 Accountable (A): VP Merchandising
 Duration: 4 hours/month</bpmn:documentation>

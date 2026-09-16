@@ -735,7 +735,7 @@ Owner: HR Operations Manager</bpmn:text>
     <bpmn:process id="W_W178" name="W178. Employee Succession &amp; Internal Mobility" isExecutable="false">
       <bpmn:documentation>Trigger: Retirement of key leader; store expansion; or high-potential (HiPo) identification
 Frequency: Annual HiPo review and succession mapping; ongoing internal postings per vacancy
-Volume: ~200 Store Manager and ~30 HQ Director/Manager roles requiring succession plans; ~30–50 internal promotions/transfers per year
+Volume: ~200 Store Manager and ~30 Department Head/Manager roles requiring succession plans; ~30–50 internal promotions/transfers per year
 Owner: CHRO
 Participants: CEO, Department Heads, HR Manager, High-Potential Employees
 Source: workflow W178 — Employee Succession &amp; Internal Mobility</bpmn:documentation>
@@ -766,7 +766,7 @@ Duration: 2 weeks</bpmn:documentation>
         <bpmn:outgoing>W178_Flow15</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W178_Task7" name="Succession Mapping">
-        <bpmn:documentation>Step 2: Succession Mapping: Identify &quot;Ready Now&quot; and &quot;Ready in 1–2 Years&quot; successors for all Store Manager and HQ Director roles
+        <bpmn:documentation>Step 2: Succession Mapping: Identify &quot;Ready Now&quot; and &quot;Ready in 1–2 Years&quot; successors for all Store Manager and Department Head roles
 Responsible (R): Department Head
 Accountable (A): CEO
 Duration: 1 week</bpmn:documentation>

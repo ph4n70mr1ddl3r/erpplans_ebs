@@ -3178,8 +3178,8 @@ Duration: 5–15 min</bpmn:documentation>
         <bpmn:incoming>W743_Flow20</bpmn:incoming>
         <bpmn:outgoing>W743_Flow21</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W743_Task11" name="Mid-day spot check — Store Manager or Duty Manager conducts random spot check…">
-        <bpmn:documentation>Step 4: Mid-day spot check — Store Manager or Duty Manager conducts random spot check of 3–5 zones; logs observations
+      <bpmn:userTask id="W743_Task11" name="Mid-day spot check — Store Manager or Assistant Store Manager conducts random…">
+        <bpmn:documentation>Step 4: Mid-day spot check — Store Manager or Assistant Store Manager conducts random spot check of 3–5 zones; logs observations
 Responsible (R): Store Manager
 Accountable (A): Store Manager
 Duration: 10 min</bpmn:documentation>

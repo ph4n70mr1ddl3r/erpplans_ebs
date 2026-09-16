@@ -238,7 +238,7 @@ Duration: Absorbed in W34 scheduling</bpmn:documentation>
         <bpmn:outgoing>W567_Flow32</bpmn:outgoing>
       </bpmn:serviceTask>
       <bpmn:userTask id="W567_Task17" name="Recognition and development: top cross-trained associates (certified in 3+…">
-        <bpmn:documentation>Step 10: Recognition and development: top cross-trained associates (certified in 3+ departments at intermediate level) identified for: (a) recognition per W72 performance management — cross-training achievement as performance differentiator; (b) potential promotion to Department Supervisor or Senior Sales Associate; (c) management trainee program candidate identification per W179; (d) higher-priority consideration for preferred shift assignments
+        <bpmn:documentation>Step 10: Recognition and development: top cross-trained associates (certified in 3+ departments at intermediate level) identified for: (a) recognition per W72 performance management — cross-training achievement as performance differentiator; (b) potential promotion to Department Supervisor or to senior Sales Associate roles; (c) management trainee program candidate identification per W179; (d) higher-priority consideration for preferred shift assignments
 Responsible (R): Training Manager / HR Business Partner
 Accountable (A): COO
 Duration: Absorbed in W72 cycle</bpmn:documentation>
@@ -1590,7 +1590,7 @@ Owner: HR Training Manager</bpmn:text>
     <bpmn:process id="W_W5527" name="W5527. Leadership Development &amp; Management-Capability Program (HiPo Development)" isExecutable="false">
       <bpmn:documentation>Trigger: High-potential identification from the annual succession review (W178); a leadership-pipeline gap from W3345 workforce planning; a first-time-manager promotion event; the annual program-enrollment cycle; or program-effectiveness review findings
 Frequency: Annual enrollment cycle aligned to the W178 talent review; per-promotion event; quarterly cohort sessions; annual program review
-Volume: ~230 succession-critical roles (200 Store Managers + 30 HQ Director/Manager roles); ~60–80 HiPo/leadership candidates/year; ~25–35 first-time-manager promotions/year
+Volume: ~230 succession-critical roles (200 Store Managers + 30 Department Head/Manager roles); ~60–80 HiPo/leadership candidates/year; ~25–35 first-time-manager promotions/year
 Owner: CHRO
 Participants: HR Manager, HR Business Partners, Department Heads, Regional Managers (store-cohort sponsors), external leadership-program &amp; coaching providers, LMS Administrator
 Source: workflow W5527 — Leadership Development &amp; Management-Capability Program (HiPo Development)</bpmn:documentation>
