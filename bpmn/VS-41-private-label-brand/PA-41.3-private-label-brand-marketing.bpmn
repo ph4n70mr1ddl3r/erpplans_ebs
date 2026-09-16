@@ -312,7 +312,7 @@ Duration: 1–2 weeks</bpmn:documentation>
         <bpmn:outgoing>W1849_Flow14</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W1849_Task7" name="Sales Associate training (2 weeks before launch): (a) Marketing creates product…">
-        <bpmn:documentation>Step 2: Sales Associate training (2 weeks before launch): (a) Marketing creates product training module: product features, quality story, price advantage vs. national brands, customer talking points, common questions and answers, (b) HR distributes training through learning management system (LMS) per W51 (training), (c) Department Supervisors conduct brief team huddles on launch products in relevant departments
+        <bpmn:documentation>Step 2: Sales Associate training (2 weeks before launch): (a) Marketing creates product training module: product features, quality story, price advantage vs. national brands, customer talking points, common questions and answers, (b) HR distributes training through Oracle Learning Management (OLA) per W51 (training), (c) Department Supervisors conduct brief team huddles on launch products in relevant departments
 Responsible (R): Marketing / HR
 Accountable (A): Store Manager
 Duration: 1 week</bpmn:documentation>

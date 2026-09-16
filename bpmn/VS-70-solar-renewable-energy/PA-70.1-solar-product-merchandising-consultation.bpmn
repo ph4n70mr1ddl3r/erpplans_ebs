@@ -329,8 +329,8 @@ Duration: 1 week initial; quarterly updates</bpmn:documentation>
         <bpmn:incoming>W2530_Flow11</bpmn:incoming>
         <bpmn:outgoing>W2530_Flow12</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W2530_Task6" name="Delivery: online modules via LMS (4 hours) + in-store practical workshop with…">
-        <bpmn:documentation>Step 2: Delivery: online modules via LMS (4 hours) + in-store practical workshop with vendor demo units (4 hours); associates must pass certification quiz (80% minimum); certified associates receive badge on name tag and ERP profile
+      <bpmn:userTask id="W2530_Task6" name="Delivery: online modules via OLA (4 hours) + in-store practical workshop with…">
+        <bpmn:documentation>Step 2: Delivery: online modules via OLA (4 hours) + in-store practical workshop with vendor demo units (4 hours); associates must pass certification quiz (80% minimum); certified associates receive badge on name tag and ERP profile
 Responsible (R): Training Manager / Vendor Trainers
 Accountable (A): CHRO
 Duration: 8 hours per cohort</bpmn:documentation>

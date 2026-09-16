@@ -1013,7 +1013,7 @@ Duration: Quarterly review (4 hours/quarter)</bpmn:documentation>
         <bpmn:outgoing>W1484_Flow16</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:serviceTask id="W1484_Task7" name="New hire training path activation">
-        <bpmn:documentation>Step 2: New hire training path activation: During onboarding per W19.1: (a) HR system triggers LMS enrollment in the appropriate role-based curriculum; (b) new employee&#x27;s LMS dashboard shows: (i) required courses (mandatory for role), (ii) recommended courses (elective enrichment), (iii) due dates (Day 1–5: company orientation and safety, Day 6–15: role-specific technical training, Day 16–30: advanced topics and on-floor practice); (c) system tracks completion and scores per course
+        <bpmn:documentation>Step 2: New hire training path activation: During onboarding per W19.1: (a) HR system triggers OLA enrollment in the appropriate role-based curriculum; (b) new employee&#x27;s OLA dashboard shows: (i) required courses (mandatory for role), (ii) recommended courses (elective enrichment), (iii) due dates (Day 1–5: company orientation and safety, Day 6–15: role-specific technical training, Day 16–30: advanced topics and on-floor practice); (c) system tracks completion and scores per course
 Responsible (R): System / HR Training Manager
 Accountable (A): Store Manager (store roles) / Department Head (HQ roles)
 Duration: Automated setup</bpmn:documentation>
@@ -1021,7 +1021,7 @@ Duration: Automated setup</bpmn:documentation>
         <bpmn:outgoing>W1484_Flow17</bpmn:outgoing>
       </bpmn:serviceTask>
       <bpmn:userTask id="W1484_Task8" name="Training delivery &amp; on-floor practice">
-        <bpmn:documentation>Step 3: Training delivery &amp; on-floor practice: (a) Digital courses (LMS): policy modules, product knowledge videos, system simulations (POS practice mode), safety training with quiz; (b) In-person training (by Department Supervisor): hands-on POS practice, receiving dock walkthrough, product location tour, customer service role-play; (c) Buddy shifts (first 5 working days): new employee paired with experienced colleague for real-time coaching — buddy logs daily progress in LMS; (d) Department Supervisor check-ins: Day 7, Day 14, Day 30 — supervisor assesses progress, provides feedback, adjusts training pace
+        <bpmn:documentation>Step 3: Training delivery &amp; on-floor practice: (a) Digital courses (OLA): policy modules, product knowledge videos, system simulations (POS practice mode), safety training with quiz; (b) In-person training (by Department Supervisor): hands-on POS practice, receiving dock walkthrough, product location tour, customer service role-play; (c) Buddy shifts (first 5 working days): new employee paired with experienced colleague for real-time coaching — buddy logs daily progress in OLA; (d) Department Supervisor check-ins: Day 7, Day 14, Day 30 — supervisor assesses progress, provides feedback, adjusts training pace
 Responsible (R): New Employee / Department Supervisor / Buddy
 Accountable (A): Store Manager
 Duration: First 30 days</bpmn:documentation>
@@ -1029,7 +1029,7 @@ Duration: First 30 days</bpmn:documentation>
         <bpmn:outgoing>W1484_Flow18</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W1484_Task9" name="Competency assessment &amp; certification">
-        <bpmn:documentation>Step 4: Competency assessment &amp; certification: (a) at Day 30: new employee completes role-based competency assessment in LMS: (i) knowledge quiz (minimum 80% pass required), (ii) practical skills checklist verified by Department Supervisor (POS operation, receiving procedure, customer interaction), (iii) safety certification quiz (100% pass required for safety-critical items); (b) if employee passes: &quot;Certified&quot; status — authorized for independent work without supervision; (c) if employee fails knowledge quiz: retake allowed within 7 days after remedial study; if fails again: HR Training Manager intervenes with coaching plan; (d) if employee fails practical skills: extended buddy period (additional 2 weeks) with targeted skill development
+        <bpmn:documentation>Step 4: Competency assessment &amp; certification: (a) at Day 30: new employee completes role-based competency assessment in OLA: (i) knowledge quiz (minimum 80% pass required), (ii) practical skills checklist verified by Department Supervisor (POS operation, receiving procedure, customer interaction), (iii) safety certification quiz (100% pass required for safety-critical items); (b) if employee passes: &quot;Certified&quot; status — authorized for independent work without supervision; (c) if employee fails knowledge quiz: retake allowed within 7 days after remedial study; if fails again: HR Training Manager intervenes with coaching plan; (d) if employee fails practical skills: extended buddy period (additional 2 weeks) with targeted skill development
 Responsible (R): New Employee / Department Supervisor / HR Training Manager
 Accountable (A): Store Manager
 Duration: 1–2 hours/employee</bpmn:documentation>
@@ -1056,7 +1056,7 @@ Duration: 4 hours/quarter</bpmn:documentation>
         <bpmn:incoming>W1484_Flow21</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1484_Annotation13">
-        <bpmn:text>Controls: - CTL-333 (ensure controlled execution — Document &amp; Knowledge Management (PA-30.3).) | - operational: mobile-friendly LMS and in-person alternatives for critical modules; operational: updates occur 2–3 times/year, requiring training content updates to match; operational: practical skills assessment as the primary certification gate
+        <bpmn:text>Controls: - CTL-333 (ensure controlled execution — Document &amp; Knowledge Management (PA-30.3).) | - operational: mobile-friendly OLA delivery and in-person alternatives for critical modules; operational: updates occur 2–3 times/year, requiring training content updates to match; operational: practical skills assessment as the primary certification gate
 Owner: HR Training Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1484_Assoc14" sourceRef="W1484_Annotation13" targetRef="W1484_Start5" associationDirection="None" />

@@ -49,7 +49,7 @@ Source table: Category | Frequency | Audience | Delivery Method | Assessment</de
         <inputEntry><text>&quot;Safety &amp; compliance&quot;</text></inputEntry>
         <inputEntry><text>&quot;Quarterly&quot;</text></inputEntry>
         <outputEntry><text>&quot;All employees&quot;</text></outputEntry>
-        <outputEntry><text>&quot;E-learning (LMS) + annual practical drill&quot;</text></outputEntry>
+        <outputEntry><text>&quot;E-learning (Oracle Learning Management — OLA) + annual practical drill&quot;</text></outputEntry>
         <outputEntry><text>&quot;Mandatory quiz (pass/fail)&quot;</text></outputEntry>
       </rule>
       <rule id="Decision_T01_Rule05">

@@ -4096,7 +4096,7 @@ Duration: 8 hours/year</bpmn:documentation>
         <bpmn:outgoing>W1203_Flow21</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W1203_Task10" name="Employee privacy training">
-        <bpmn:documentation>Step 7: Employee privacy training: DPO conducts annual data privacy training for all employees: (a) online training module covering RA 10173 basics, BuildRight&#x27;s data privacy policy, handling of customer data at POS, and breach reporting procedure, (b) mandatory completion for all 6,911 employees, (c) tracked in LMS per W74 (learning and development), (d) refresher training for roles with high data access (cashiers, HR staff, customer service, IT)
+        <bpmn:documentation>Step 7: Employee privacy training: DPO conducts annual data privacy training for all employees: (a) online training module covering RA 10173 basics, BuildRight&#x27;s data privacy policy, handling of customer data at POS, and breach reporting procedure, (b) mandatory completion for all 6,911 employees, (c) tracked in OLA per W51 (learning and development), (d) refresher training for roles with high data access (cashiers, HR staff, customer service, IT)
 Responsible (R): DPO / HR
 Accountable (A): CHRO
 Duration: 4 hours/year (DPO) + 30 min/employee</bpmn:documentation>

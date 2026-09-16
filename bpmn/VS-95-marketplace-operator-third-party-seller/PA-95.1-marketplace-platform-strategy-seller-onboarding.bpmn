@@ -411,7 +411,7 @@ Source: workflow W3142 — Seller Enablement, Training &amp; Self-Service Portal
         <bpmn:outgoing>W3142_Flow12</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:userTask id="W3142_Task6" name="Enablement delivers seller onboarding/training: catalog management, pricing…">
-        <bpmn:documentation>Step 1: Enablement delivers seller onboarding/training: catalog management, pricing, order management, fulfillment SLA, returns, performance KPIs, policy compliance, analytics; via self-service LMS + live sessions
+        <bpmn:documentation>Step 1: Enablement delivers seller onboarding/training: catalog management, pricing, order management, fulfillment SLA, returns, performance KPIs, policy compliance, analytics; via self-service OLA + live sessions
 Responsible (R): Enablement / Seller Operations
 Accountable (A): Marketplace Manager
 Duration: Per onboarding</bpmn:documentation>

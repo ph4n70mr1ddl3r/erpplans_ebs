@@ -110,8 +110,8 @@ Duration: Annual</bpmn:documentation>
         <bpmn:incoming>W3834_Flow11</bpmn:incoming>
         <bpmn:outgoing>W3834_Flow12</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W3834_Task6" name="Sales Enablement/L&amp;D publish the curriculum and playbooks to the enablement/LMS…">
-        <bpmn:documentation>Step 3: Sales Enablement/L&amp;D publish the curriculum and playbooks to the enablement/LMS platform (links to W3839/VS-19.4), and refresh for new categories/services/promotions (links to VS-01.1/VS-14)
+      <bpmn:userTask id="W3834_Task6" name="Sales Enablement/L&amp;D publish the curriculum and playbooks to the enablement/OLA…">
+        <bpmn:documentation>Step 3: Sales Enablement/L&amp;D publish the curriculum and playbooks to the enablement/OLA platform (links to W3839/VS-19.4), and refresh for new categories/services/promotions (links to VS-01.1/VS-14)
 Responsible (R): Sales Enablement / L&amp;D
 Accountable (A): Sales Enablement Lead
 Duration: Continuous</bpmn:documentation>
@@ -455,7 +455,7 @@ Source: workflow W3839 — Sales Enablement Technology &amp; Content Delivery Pl
         <bpmn:outgoing>W3839_Flow10</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:userTask id="W3839_Task4" name="Sales Enablement/IT/EA manage the enablement technology stack: mobile-first…">
-        <bpmn:documentation>Step 1: Sales Enablement/IT/EA manage the enablement technology stack: mobile-first content/product-info access for associates on the floor (links to VS-75 employee app), micro-learning and refreshers via LMS (links to VS-19.4), clienteling tool (links to W3844), and quick-reference/playbook access — aligned to enterprise architecture (links to VS-113)
+        <bpmn:documentation>Step 1: Sales Enablement/IT/EA manage the enablement technology stack: mobile-first content/product-info access for associates on the floor (links to VS-75 employee app), micro-learning and refreshers via OLA (links to VS-19.4), clienteling tool (links to W3844), and quick-reference/playbook access — aligned to enterprise architecture (links to VS-113)
 Responsible (R): Sales Enablement / IT / EA
 Accountable (A): Sales Enablement Lead / CIO
 Duration: Maintained</bpmn:documentation>

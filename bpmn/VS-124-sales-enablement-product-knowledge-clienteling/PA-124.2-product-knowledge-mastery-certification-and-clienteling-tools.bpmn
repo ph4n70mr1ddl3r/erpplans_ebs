@@ -99,8 +99,8 @@ Duration: Per role</bpmn:documentation>
         <bpmn:incoming>W3842_Flow10</bpmn:incoming>
         <bpmn:outgoing>W3842_Flow11</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W3842_Task5" name="Sales Enablement/L&amp;D deliver certification (via LMS/mobile links to…">
-        <bpmn:documentation>Step 2: Sales Enablement/L&amp;D deliver certification (via LMS/mobile links to W3839/VS-19.4), capture results (links to W683/W3841), and recognize certified associates (recognition links to W630, compensation links to VS-102 where applicable)
+      <bpmn:userTask id="W3842_Task5" name="Sales Enablement/L&amp;D deliver certification (via OLA/mobile links to…">
+        <bpmn:documentation>Step 2: Sales Enablement/L&amp;D deliver certification (via OLA/mobile links to W3839/VS-19.4), capture results (links to W683/W3841), and recognize certified associates (recognition links to W630, compensation links to VS-102 where applicable)
 Responsible (R): Sales Enablement / L&amp;D / HR
 Accountable (A): Sales Enablement Lead
 Duration: Continuous</bpmn:documentation>

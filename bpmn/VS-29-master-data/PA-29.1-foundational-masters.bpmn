@@ -1306,7 +1306,7 @@ Duration: 10 min</bpmn:documentation>
         <bpmn:outgoing>W401_Flow16</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W401_Task9" name="Routing &amp; Capacity Setup">
-        <bpmn:documentation>Step 3: Routing &amp; Capacity Setup: Logistics Manager configures the vehicle in the transportation management system (TMS), defining its route restrictions (e.g., truck ban exemptions) and maximum payload (weight/volume) for load building (W196).
+        <bpmn:documentation>Step 3: Routing &amp; Capacity Setup: Logistics Manager configures the vehicle in Oracle Transportation Execution (in-suite — fit-gap C14), defining its route restrictions (e.g., truck ban exemptions) and maximum payload (weight/volume) for load building (W196).
 Responsible (R): Logistics Manager
 Accountable (A): —
 Duration: 20 min</bpmn:documentation>

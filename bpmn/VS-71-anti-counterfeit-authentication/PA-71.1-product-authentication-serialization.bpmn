@@ -566,7 +566,7 @@ Duration: 4 hours per cohort</bpmn:documentation>
         <bpmn:outgoing>W2557_Flow13</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W2557_Task7" name="LP Manager conducts monthly counterfeit awareness updates: new counterfeiting…">
-        <bpmn:documentation>Step 3: LP Manager conducts monthly counterfeit awareness updates: new counterfeiting trends, specific brand alerts from vendors, recent investigation outcomes; distributes via LMS and store communication system
+        <bpmn:documentation>Step 3: LP Manager conducts monthly counterfeit awareness updates: new counterfeiting trends, specific brand alerts from vendors, recent investigation outcomes; distributes via OLA and store communication system
 Responsible (R): LP Manager
 Accountable (A): COO
 Duration: 1–2 hours/month</bpmn:documentation>

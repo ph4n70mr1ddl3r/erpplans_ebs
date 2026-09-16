@@ -22,7 +22,7 @@
 |---|---|
 | Workflows mapped | 5427 (exactly one Owner each — asserted) |
 | Confirmed Tier register | 5450 rows (Tier 1: 1396 · Tier 2: 3296 · Tier 3: 758) |
-| Distinct resolved actors | 4201 — §5.3 register roles 150 · IT product-model seats 30 · store field 12 · DC field 18 · department-level actors 2994 · system actors 32 · governance 59 · workforce 105 · external 801 · uncharted 0 |
+| Distinct resolved actors | 4200 — §5.3 register roles 150 · IT product-model seats 30 · store field 12 · DC field 18 · department-level actors 2993 · system actors 32 · governance 59 · workforce 105 · external 801 · uncharted 0 |
 
 > Tier mix = confirmed tiers of the workflows a role touches (a workflow
 > counts once per role regardless of how many steps mention it). HC is
@@ -2743,7 +2743,6 @@
 | Contractor Account Manager | Trade / Account Management | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Kam | Trade / Account Management | 0 | 0 | 5 | 2 | 1 | 0 | 1 | 0 |
 | Key Account Vendors | Trade / Account Management | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
-| Lms Vendor Account Manager | Trade / Account Management | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Marketplace Account Manager | Trade / Account Management | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Quotation Specialist | Trade / Account Management | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Sales Ops Mgr | Trade / Account Management | 0 | 0 | 1 | 3 | 1 | 0 | 1 | 0 |

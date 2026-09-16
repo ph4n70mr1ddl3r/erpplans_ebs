@@ -1392,8 +1392,8 @@ Duration: 60-180 min</bpmn:documentation>
         <bpmn:incoming>W625_Flow17</bpmn:incoming>
         <bpmn:outgoing>W625_Flow18</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W625_Task7" name="QA Lab Technician records test results in quality management system with test…">
-        <bpmn:documentation>Step 3: QA Lab Technician records test results in quality management system with test method reference, equipment calibration date, environmental conditions (temperature, humidity), and pass/fail determination against specification
+      <bpmn:userTask id="W625_Task7" name="QA Lab Technician records test results in Oracle Quality (fit-gap C12) with…">
+        <bpmn:documentation>Step 3: QA Lab Technician records test results in Oracle Quality (fit-gap C12) with test method reference, equipment calibration date, environmental conditions (temperature, humidity), and pass/fail determination against specification
 Responsible (R): QA Lab Technician
 Accountable (A): —
 Duration: 15 min</bpmn:documentation>

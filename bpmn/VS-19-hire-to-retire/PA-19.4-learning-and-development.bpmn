@@ -1360,11 +1360,11 @@ Owner: Department Supervisor</bpmn:text>
       </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W5525" name="W5525. Learning Platform (LMS) Administration, Integration &amp; Learning-Records Operations" isExecutable="false">
-      <bpmn:documentation>Trigger: LMS outage, integration failure or completion-data discrepancy (W48 ticket); new-hire enrollment event from W15/W152; annual LMS vendor renewal &amp; security review; or the quarterly learning-records integrity audit
-Frequency: Continuous platform monitoring; per-enrollment event; quarterly records audit; annual vendor review
+      <bpmn:documentation>Trigger: OLA outage, integration failure or completion-data discrepancy (W48 ticket); new-hire enrollment event from W15/W152; annual OLA currency &amp; security review (RUP/CPU intake); or the quarterly learning-records integrity audit
+Frequency: Continuous platform monitoring; per-enrollment event; quarterly records audit; annual currency review
 Volume: ~6,911 employees enrolled across ~180 active courses; ~1,200–1,600 new hires/year auto-enrolled; ~40 integration/exception events/month; 200 stores + 4 DCs + HQ
 Owner: HR Technology Manager
-Participants: LMS Administrator, Training Manager, HR Training Manager, IT Application Manager (integration &amp; SSO), LMS vendor account manager, HR Manager, Data Protection Officer
+Participants: LMS Administrator, Training Manager, HR Training Manager, IT Application Manager (integration &amp; SSO), HR Manager, Data Protection Officer
 Source: workflow W5525 — Learning Platform (LMS) Administration, Integration &amp; Learning-Records Operations</bpmn:documentation>
       <bpmn:laneSet id="W5525_LaneSet5">
         <bpmn:lane id="W5525_Lane1" name="System">
@@ -1384,11 +1384,11 @@ Source: workflow W5525 — Learning Platform (LMS) Administration, Integration &
         <bpmn:flowNodeRef>W5525_End13</bpmn:flowNodeRef>
         </bpmn:lane>
       </bpmn:laneSet>
-      <bpmn:startEvent id="W5525_Start6" name="LMS outage, integration failure or completion-data discrepancy (W48 ticket); new-hire…">
+      <bpmn:startEvent id="W5525_Start6" name="OLA outage, integration failure or completion-data discrepancy (W48 ticket); new-hire…">
         <bpmn:outgoing>W5525_Flow16</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:serviceTask id="W5525_Task7" name="Platform monitoring &amp; incident triage">
-        <bpmn:documentation>Step 1: Platform monitoring &amp; incident triage: LMS availability, SSO login failures and course-playback errors watched daily; anomalies auto-ticket to W48 with platform telemetry; outage communications to Training Manager and store L&amp;D coordinators
+        <bpmn:documentation>Step 1: Platform monitoring &amp; incident triage: OLA availability, SSO login failures and course-playback errors watched daily; anomalies auto-ticket to W48 with platform telemetry; outage communications to Training Manager and store L&amp;D coordinators
 Responsible (R): System / LMS Administrator
 Accountable (A): HR Technology Manager
 Duration: 15 min/day</bpmn:documentation>
@@ -1420,15 +1420,15 @@ Duration: 4 hours/quarter</bpmn:documentation>
         <bpmn:outgoing>W5525_Flow20</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W5525_Task11" name="Configuration &amp; release management">
-        <bpmn:documentation>Step 5: Configuration &amp; release management: course-catalog configuration changes and LMS vendor upgrades ride W1409 CAB approval; user-acceptance testing with the Training Manager; sandbox refresh; release notes to the L&amp;D community
+        <bpmn:documentation>Step 5: Configuration &amp; release management: course-catalog configuration changes and OLA patch/RUP upgrades ride W1409 CAB approval; user-acceptance testing with the Training Manager; sandbox refresh; release notes to the L&amp;D community
 Responsible (R): HR Technology Manager / Training Manager
 Accountable (A): HR Technology Manager
 Duration: 6 hours/release × ~6/year</bpmn:documentation>
         <bpmn:incoming>W5525_Flow20</bpmn:incoming>
         <bpmn:outgoing>W5525_Flow21</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W5525_Task12" name="Vendor &amp; contract management">
-        <bpmn:documentation>Step 6: Vendor &amp; contract management: annual LMS vendor review (SLA performance, security attestation collected into the W4730 TPRM repository, roadmap, seat-banding and renewal terms); coordination with W3782 for the candidate/pre-boarding learning slice
+      <bpmn:userTask id="W5525_Task12" name="In-suite currency &amp; security review">
+        <bpmn:documentation>Step 6: In-suite currency &amp; security review: annual OLA currency review (RUP/CPU calendar intake; Oracle Critical Patch Updates into the W1409 release calendar; license/seat posture under the enterprise EBS estate — Oracle security-alert documentation filed to the W4730 evidence repository); coordination with W3782 for the candidate/pre-boarding learning slice
 Responsible (R): HR Technology Manager
 Accountable (A): HR Head
 Duration: 8 hours/year</bpmn:documentation>
@@ -1439,7 +1439,7 @@ Duration: 8 hours/year</bpmn:documentation>
         <bpmn:incoming>W5525_Flow22</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W5525_Annotation14">
-        <bpmn:text>Controls: - CTL-299 (ensure controlled execution — Learning &amp; Development (PA-19.4).) | - operational: LMS configuration and upgrade changes ride W1409 CAB approval | - operational: quarterly learning-records reconciliation signed off by the HR Manager
+        <bpmn:text>Controls: - CTL-299 (ensure controlled execution — Learning &amp; Development (PA-19.4).) | - operational: OLA configuration and upgrade changes ride W1409 CAB approval | - operational: quarterly learning-records reconciliation signed off by the HR Manager
 Owner: HR Technology Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W5525_Assoc15" sourceRef="W5525_Annotation14" targetRef="W5525_Start6" associationDirection="None" />
@@ -1509,7 +1509,7 @@ Duration: 2 hours/course × ~35/year</bpmn:documentation>
         <bpmn:outgoing>W5526_Flow15</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W5526_Task6" name="Content production">
-        <bpmn:documentation>Step 2: Content production: SME interviews, storyboards and build in the LMS authoring tool or vendor commission; product-knowledge modules co-created with Category Managers (aligned to W1 assortment updates); safety modules co-created with the Safety Officer
+        <bpmn:documentation>Step 2: Content production: SME interviews, storyboards and build in the OLA authoring tool or vendor commission; product-knowledge modules co-created with Category Managers (aligned to W1 assortment updates); safety modules co-created with the Safety Officer
 Responsible (R): Training Officer / SME
 Accountable (A): HR Training Manager
 Duration: 12–20 hours/course (midpoint 16) × ~35/year</bpmn:documentation>

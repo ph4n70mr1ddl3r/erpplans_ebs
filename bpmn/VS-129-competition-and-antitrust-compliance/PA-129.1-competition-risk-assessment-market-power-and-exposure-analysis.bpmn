@@ -539,8 +539,8 @@ Duration: Annual</bpmn:documentation>
         <bpmn:incoming>W3960_Flow11</bpmn:incoming>
         <bpmn:outgoing>W3960_Flow12</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W3960_Task6" name="Legal/L&amp;D deliver training via the LMS (links to VS-19.4), embed competition…">
-        <bpmn:documentation>Step 2: Legal/L&amp;D deliver training via the LMS (links to VS-19.4), embed competition scenarios into role onboarding (links to VS-121/VS-123), and track completion by risk role with attestation
+      <bpmn:userTask id="W3960_Task6" name="Legal/L&amp;D deliver training via OLA (links to VS-19.4), embed competition…">
+        <bpmn:documentation>Step 2: Legal/L&amp;D deliver training via OLA (links to VS-19.4), embed competition scenarios into role onboarding (links to VS-121/VS-123), and track completion by risk role with attestation
 Responsible (R): L&amp;D / Legal / HR
 Accountable (A): VP Legal
 Duration: Continuous</bpmn:documentation>

@@ -408,7 +408,7 @@ Duration: Ongoing</bpmn:documentation>
         <bpmn:outgoing>W2683_Flow12</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W2683_Task6" name="Legal trains Category Managers and Procurement annually: no price-fixing…">
-        <bpmn:documentation>Step 2: Legal trains Category Managers and Procurement annually: no price-fixing discussions with competitors, no market-allocation agreements, no abuse-of-dominant-position conduct, proper conduct at industry-association meetings (a high-risk venue for inadvertent coordination); refresher delivered via the LMS
+        <bpmn:documentation>Step 2: Legal trains Category Managers and Procurement annually: no price-fixing discussions with competitors, no market-allocation agreements, no abuse-of-dominant-position conduct, proper conduct at industry-association meetings (a high-risk venue for inadvertent coordination); refresher delivered via OLA
 Responsible (R): Legal
 Accountable (A): VP Legal
 Duration: Annual</bpmn:documentation>

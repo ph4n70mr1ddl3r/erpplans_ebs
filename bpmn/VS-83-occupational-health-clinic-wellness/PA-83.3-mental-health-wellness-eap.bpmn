@@ -656,7 +656,7 @@ Duration: 5–8 days/year</bpmn:documentation>
         <bpmn:outgoing>W5502_Flow19</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W5502_Task7" name="Financial literacy education: quarterly modules — budgeting, debt management…">
-        <bpmn:documentation>Step 2: Financial literacy education: quarterly modules — budgeting, debt management, saving, SSS/Pag-IBIG/PhilHealth benefits literacy, scam and predatory-lending-app awareness — via LMS with completion records (W51 pattern) plus store huddle kits for frontline reach (VS-63 delivery); BSP-aligned consumer-protection content standards
+        <bpmn:documentation>Step 2: Financial literacy education: quarterly modules — budgeting, debt management, saving, SSS/Pag-IBIG/PhilHealth benefits literacy, scam and predatory-lending-app awareness — via OLA with completion records (W51 pattern) plus store huddle kits for frontline reach (VS-63 delivery); BSP-aligned consumer-protection content standards
 Responsible (R): EAP Manager / L&amp;D / External Provider
 Accountable (A): CHRO
 Duration: 8–10 days/quarter (team effort)</bpmn:documentation>

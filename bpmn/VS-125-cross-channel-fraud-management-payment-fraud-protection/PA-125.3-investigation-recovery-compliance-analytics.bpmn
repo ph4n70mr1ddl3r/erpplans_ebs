@@ -462,8 +462,8 @@ Duration: Annual</bpmn:documentation>
         <bpmn:incoming>W3879_Flow10</bpmn:incoming>
         <bpmn:outgoing>W3879_Flow11</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W3879_Task5" name="Fraud Management/Store-Ops deliver training via LMS (links to VS-19.4)…">
-        <bpmn:documentation>Step 2: Fraud Management/Store-Ops deliver training via LMS (links to VS-19.4), micro-learning and huddle alerts (links to VS-63 store comms / VS-124 enablement), and brief on emerging schemes (links to W3858)
+      <bpmn:userTask id="W3879_Task5" name="Fraud Management/Store-Ops deliver training via OLA (links to VS-19.4)…">
+        <bpmn:documentation>Step 2: Fraud Management/Store-Ops deliver training via OLA (links to VS-19.4), micro-learning and huddle alerts (links to VS-63 store comms / VS-124 enablement), and brief on emerging schemes (links to W3858)
 Responsible (R): Fraud Management / L&amp;D / Store Ops
 Accountable (A): Fraud Management Lead
 Duration: Continuous</bpmn:documentation>

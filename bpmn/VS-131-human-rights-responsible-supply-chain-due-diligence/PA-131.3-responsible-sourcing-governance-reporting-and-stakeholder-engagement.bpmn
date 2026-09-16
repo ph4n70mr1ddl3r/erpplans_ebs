@@ -461,8 +461,8 @@ Duration: Annual</bpmn:documentation>
         <bpmn:incoming>W4023_Flow11</bpmn:incoming>
         <bpmn:outgoing>W4023_Flow12</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W4023_Task6" name="Sustainability/L&amp;D deliver via LMS (links to VS-19.4), embed in role onboarding…">
-        <bpmn:documentation>Step 2: Sustainability/L&amp;D deliver via LMS (links to VS-19.4), embed in role onboarding (links to VS-121/VS-123/VS-122), and track completion with attestation
+      <bpmn:userTask id="W4023_Task6" name="Sustainability/L&amp;D deliver via OLA (links to VS-19.4), embed in role onboarding…">
+        <bpmn:documentation>Step 2: Sustainability/L&amp;D deliver via OLA (links to VS-19.4), embed in role onboarding (links to VS-121/VS-123/VS-122), and track completion with attestation
 Responsible (R): L&amp;D / Sustainability / HR
 Accountable (A): Sustainability/ESG Manager
 Duration: Continuous</bpmn:documentation>

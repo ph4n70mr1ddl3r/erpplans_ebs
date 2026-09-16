@@ -315,8 +315,8 @@ Duration: Maintained</bpmn:documentation>
         <bpmn:incoming>W3829_Flow10</bpmn:incoming>
         <bpmn:outgoing>W3829_Flow11</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W3829_Task5" name="Trade Capability/IT/Merchandising publish and deliver content via mobile/LMS…">
-        <bpmn:documentation>Step 2: Trade Capability/IT/Merchandising publish and deliver content via mobile/LMS (links to VS-75/VS-19.4/W51), ensure accessibility across stores/DCs, and keep content current with products/categories (links to VS-01.1)
+      <bpmn:userTask id="W3829_Task5" name="Trade Capability/IT/Merchandising publish and deliver content via mobile/OLA…">
+        <bpmn:documentation>Step 2: Trade Capability/IT/Merchandising publish and deliver content via mobile/OLA (links to VS-75/VS-19.4/W51), ensure accessibility across stores/DCs, and keep content current with products/categories (links to VS-01.1)
 Responsible (R): Trade Capability / IT / Merchandising
 Accountable (A): Trade Capability Lead
 Duration: Continuous</bpmn:documentation>
