@@ -1887,7 +1887,13 @@ def ebs_blueprint_hits():
     # plus five realization-note trues (A3 Bills Receivable, A13 rental family,
     # C1 Product Hub, C3 Site Hub, H6 GoldenGate); BUILD unchanged at 14.
     # Pins re-based to the re-derived arithmetic (73 standard = 76.0% of 96).
-    expect = {"FIT-STD": 37, "FIT-CFG": 36, "PER": 2, "EXT": 1, "LOC": 1,
+    # 2026-09-16 sixth-pass EBS-exhaustion audit: register 96 → 97 rows — H11
+    # Oracle Internal Controls Manager adopted as the VS-21 audit-management/GRC
+    # surface (the workflows' 'Audit Management portal / GRC Tool' touchpoints
+    # named the suite's own GRC module); H8's environment lifecycle trued to
+    # Rapid Clone + Oracle iSetup. Pins re-based to the re-derived arithmetic
+    # (74 standard = 76.3% of 97).
+    expect = {"FIT-STD": 37, "FIT-CFG": 37, "PER": 2, "EXT": 1, "LOC": 1,
               "INT": 5, "BUILD": 14, "EDGE": 0, "OPEN": 0}
     for cls, want in expect.items():
         got = counts.get(cls, 0)
@@ -1895,10 +1901,10 @@ def ebs_blueprint_hits():
             add("fit-gap-analysis.md", 0,
                 f"register re-derives {got} {cls} rows but §3 pins {want} — the "
                 f"class-count table no longer foots against the §2 register")
-    if total != 96:
+    if total != 97:
         add("fit-gap-analysis.md", 0,
             f"register re-derives {total} disposition rows but the pinned register "
-            f"total is 96")
+            f"total is 97")
     # every §3 class-count cell must equal the §2 re-derivation (the rule's first
     # draft pinned only the standard-total and grand-total rows; a corrupted single
     # class cell sailed through — caught by this wave's own teeth suite, T4)

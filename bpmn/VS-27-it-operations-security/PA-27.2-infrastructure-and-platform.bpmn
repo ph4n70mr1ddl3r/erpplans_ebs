@@ -89,7 +89,7 @@ Duration: 15 min</bpmn:documentation>
         <bpmn:outgoing>W55_Flow31</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W55_Task16" name="Recovery execution">
-        <bpmn:documentation>Step 7: Recovery execution: IT Infrastructure initiates failover to DR site or secondary cloud region: (a) verify DR environment is current (data replication lag ≤ RPO), (b) switch DNS and network routing to DR environment, (c) validate core services: authentication, POS sync, inventory, financial posting, (d) incremental data replay from primary if replication lag exists
+        <bpmn:documentation>Step 7: Recovery execution: IT Infrastructure initiates failover to the DR site — the Data Guard twin on the BuildRight data-center estate (on-premises canon A6.2; colocation permitted, no public-cloud hosting): (a) verify DR environment is current (data replication lag ≤ RPO), (b) switch DNS and network routing to DR environment, (c) validate core services: authentication, POS sync, inventory, financial posting, (d) incremental data replay from primary if replication lag exists
 Responsible (R): IT Infrastructure
 Accountable (A): CIO
 Duration: 1–3 hours</bpmn:documentation>
@@ -742,7 +742,7 @@ Duration: 30 min/day</bpmn:documentation>
         <bpmn:outgoing>W382_Flow15</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:serviceTask id="W382_Task7" name="Off-site/Immutability">
-        <bpmn:documentation>Step 3: Off-site/Immutability: Ensure backups are replicated to a secondary region or &quot;air-gapped&quot; vault to protect against ransomware
+        <bpmn:documentation>Step 3: Off-site/Immutability: Ensure backups are replicated to the secondary BuildRight data-center estate (colocation twin) or an &quot;air-gapped&quot; vault to protect against ransomware
 Responsible (R): System
 Accountable (A): IT Infra Mgr
 Duration: Automated</bpmn:documentation>
@@ -1171,7 +1171,7 @@ Duration: 8–12 hours</bpmn:documentation>
         <bpmn:outgoing>W396_Flow17</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W396_Task8" name="Tiering Optimization">
-        <bpmn:documentation>Step 4: Tiering Optimization: Move archived data to lower-cost storage (e.g., S3 Glacier) while maintaining read access
+        <bpmn:documentation>Step 4: Tiering Optimization: Move archived data to lower-cost storage tiers on the BuildRight data-center estate (on-premises canon A6.2 — no public-cloud hosting) while maintaining read access
 Responsible (R): Cloud Arch
 Accountable (A): CIO
 Duration: 4 hours</bpmn:documentation>
