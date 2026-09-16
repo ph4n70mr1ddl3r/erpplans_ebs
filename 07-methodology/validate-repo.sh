@@ -1228,6 +1228,99 @@ for _vs, _name in _tcells:
     elif _name.strip() != _want:
         errors.append(f"touchpoint map VS-{_vs} title cell '{_name.strip()}' != canonical '{_want}'")
 
+# ---- E: §2 intro population re-derived (2026-09-17 forty-eighth-wave) ----
+# The §2 intro's population figure is a live count of the ## W headers across the
+# VS-79..max-VS directories' PA files; it shipped at the v74.0 snapshot (2,744) and
+# drifted behind the post-catalog gap-fill batches (live 2,767) — the same
+# anchor-satisfying-itself-off-history class the thirty-seventh wave named on the
+# gap-analysis totals literal. The live figure ('N across those value streams today'),
+# the '~N workflow IDs' mention, the pinned v74.0 authoring figure and the 114-VS span
+# must all hold every run, so a gap-fill batch inside VS-79+ forces a conscious re-point.
+import glob as _glob
+_live = 0
+for _d in sorted(_glob.glob(f"{WF}/VS-*")):
+    _mvs = re.search(r'VS-(\d+)-', _d)
+    if not _mvs or not (79 <= int(_mvs.group(1)) <= max_vs):
+        continue
+    for _pf in _glob.glob(f"{_d}/PA-*.md"):
+        _live += len(re.findall(r'^## W\d', open(_pf, encoding='utf-8').read(), re.M))
+_qlines = []
+for _ln in tmap.split('## Statutory', 1)[1].split('\n'):
+    if _ln.startswith('|'):
+        break
+    if _ln.startswith('>'):
+        _qlines.append(_ln.lstrip('> ').rstrip())
+_intro_txt = ' '.join(_qlines)
+_m114 = re.search(r'added (\d[\d,]*) value streams', _intro_txt)
+_mlive = re.search(r'(\d[\d,]*) across those value streams today', _intro_txt)
+_mauth = re.search(r'(\d[\d,]*) workflows at the v74\.0 reconciliation', _intro_txt)
+_mids = re.search(r'~(\d[\d,]*) workflow IDs', _intro_txt)
+_span = max_vs - 79 + 1
+for _lbl, _mm in (('added-N-value-streams', _m114), ('live-N-today', _mlive),
+                  ('authoring-N-v74.0', _mauth), ('tilde-N-workflow-IDs', _mids)):
+    if not _mm:
+        errors.append(f"touchpoint map §2 intro: cannot find the {_lbl} anchor (intro re-worded? re-point the arm)")
+if _m114 and int(_m114.group(1).replace(',', '')) != _span:
+    errors.append(f"touchpoint map §2 intro claims {_m114.group(1)} value streams but VS-79..VS-{max_vs} spans {_span}")
+if _mlive and int(_mlive.group(1).replace(',', '')) != _live:
+    errors.append(f"touchpoint map §2 intro live population {_mlive.group(1)} != re-derived {_live} (## W headers across VS-79..VS-{max_vs} PA files — re-point the intro after a gap-fill batch)")
+if _mids and int(_mids.group(1).replace(',', '')) != _live:
+    errors.append(f"touchpoint map §2 intro '~N workflow IDs' {_mids.group(1)} != re-derived {_live}")
+if _mauth and int(_mauth.group(1).replace(',', '')) != 2744:
+    errors.append(f"touchpoint map §2 intro authoring figure {_mauth.group(1)} != the pinned v74.0 snapshot 2,744 (history must not be silently rewritten)")
+
+# ---- F: §2 module cells resolve through the documented alias set (forty-eighth-wave) ----
+# The VS-table module cells carry the module-row headings in three documented forms
+# (exact / light form / parenthetical sense qualifier) plus four broader-heading domain
+# labels — the convention the §2 intro note now states. Every cell must resolve to a
+# module-row heading through that convention, the nine-alias set is pinned (a lost alias
+# or a phantom target fires), and the 36-row module population is asserted.
+_tmap_main = tmap.split('## Statutory', 1)[0]
+_mods = re.findall(r'^\| \*\*([^*]+)\*\* \|', _tmap_main, re.M)
+if len(_mods) != 36:
+    errors.append(f"touchpoint map module table parses to {len(_mods)} module rows, expected 36 (module-arm population)")
+_modset = set(_mods)
+_alias = {
+    'Financials': 'Financials (GL/AP/AR)',
+    'Inventory': 'Inventory Management',
+    'Innovation': 'Innovation & Digital Transformation',
+    'Customer Order Mgmt': 'Customer Order Management',
+    'Vendor Contract Mgmt': 'Vendor Contract Management',
+    'Corporate Account Mgmt': 'Corporate Account Management',
+    'Customer Account Mgmt': 'CRM / Loyalty',
+    'Logistics / Transportation': 'Fleet Management',
+    'B2B Sales / Trade': 'Wholesale / B2B',
+}
+if len(_alias) != 9:
+    errors.append(f"touchpoint-map module alias set has {len(_alias)} entries, expected 9 (alias-arm population)")
+for _a, _t in _alias.items():
+    if _t not in _modset:
+        errors.append(f"touchpoint-map module alias '{_a}' targets '{_t}' which is not a module row (phantom alias)")
+for _acon in ('Customer Account Mgmt → CRM / Loyalty',
+              'Corporate Account Mgmt → Corporate Account Management',
+              'Logistics / Transportation → Fleet Management',
+              'B2B Sales / Trade → Wholesale / B2B'):
+    if _acon not in _intro_txt:
+        errors.append(f"touchpoint map §2 intro: convention anchor '{_acon}' missing (the note and the cells must agree)")
+_vsrows = re.findall(r'^\| (VS-\d+) \| [^|]+ \| ([^|]+) \|$', tmap, re.M)
+if len(_vsrows) != 114:
+    errors.append(f"touchpoint map §2 table parses to {len(_vsrows)} module-cell rows, expected 114 (module-arm population)")
+for _vs, _cell in _vsrows:
+    for _part in _cell.split(';'):
+        _p = _part.strip()
+        if not _p:
+            continue
+        _base = re.sub(r'\s*\([^)]*\)\s*$', '', _p).strip()
+        if _p in _modset:
+            continue
+        if _base in _modset:
+            continue
+        _res = _alias.get(_base)
+        if _res is None:
+            errors.append(f"touchpoint map VS-{_vs} module cell '{_p}' resolves to no module row (exact, light form or documented alias — extend the §2 note and the alias set consciously)")
+        elif _res not in _modset:
+            errors.append(f"touchpoint map VS-{_vs} module cell '{_p}' resolves to '{_res}' which is not a module row")
+
 print(f"A_ERRS={len(errors)}")
 for e in errors: print(f"A_ERR|{e}")
 print(f"B_STALE={len(stale)}")
@@ -1239,7 +1332,7 @@ A_ERRS=$(echo "$CHECK25" | sed -n 's/^A_ERRS=//p')
 B_STALE=$(echo "$CHECK25" | sed -n 's/^B_STALE=//p')
 MAX_VS=$(echo "$CHECK25" | sed -n 's/^MAX_VS=//p')
 if [ "$A_ERRS" -eq 0 ]; then
-    ok "Proposed-register mirror & touchpoint-map reconciliation claims match canonical figures (register tiers/total; footer 'Reconciled to' == index grand totals; section range ends at VS-$MAX_VS with full VS-row coverage; and all 114 per-VS title cells equal the canonical value-stream-index summary-row names — title arm added by the 2026-09-15 thirty-third-wave review after 64 compressed authoring-time forms were found stranded on the surface no rule read while 50 sibling rows were already byte-exact)"
+    ok "Proposed-register mirror & touchpoint-map reconciliation claims match canonical figures (register tiers/total; footer 'Reconciled to' == index grand totals; section range ends at VS-$MAX_VS with full VS-row coverage; and all 114 per-VS title cells equal the canonical value-stream-index summary-row names — title arm added by the 2026-09-15 thirty-third-wave review after 64 compressed authoring-time forms were found stranded on the surface no rule read while 50 sibling rows were already byte-exact; the §2 intro's live population and its 114-VS span re-derived every run against the VS-79..VS-$MAX_VS PA ## W-header count with the v74.0 authoring figure pinned as history, and every §2 module cell resolved to a module-row heading through the documented nine-alias set with the 36-row module population and the intro's four convention anchors asserted — arms E/F added by the 2026-09-17 forty-eighth-wave review after the intro stranded at its v74.0 snapshot (2,744 vs live 2,767) and its 'Module names match the section headings' claim proved false for 58 rows: six light forms, parenthetical sense qualifiers and three no-row domain labels, now the stated exact/light-form/qualifier convention with the four broader-heading aliases named)"
 else
     error "Criticality proposed-register mirror / touchpoint-map reconciliation mismatch ($A_ERRS):
 "
