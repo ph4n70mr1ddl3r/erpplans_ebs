@@ -686,7 +686,28 @@ echo "--- Check 21: Automation/Controls content quality ---"
 # (C26–C33, CTL-240–CTL-808 — one derived control per process area mapped to every workflow
 # of that PA, via 07-methodology/add-pa-controls.py + backfill-controls.py). The check is
 # retained as the regression guard: it WARNs (as before) if any metric slips off target —
-# fragments > 0, CTL citation < 100%, or boilerplate > 0 — and prints a single OK otherwise.
+# CTL citation < 100%, or boilerplate > 0 — and prints a single OK otherwise. With the
+# 2026-09-16 forty-fourth-wave extension the fragment metric is promoted WARN → ERROR
+# (the 2026-06-28 backlog has been closed for months; a re-minted fragment is now a
+# retired-defect regression, not a live draft metric), reported with file:line:bullet.
+# 2026-09-16 forty-fourth-wave extension (by direction: review everything for consistency,
+# correctness, completeness; implement): the sweep found the residual vacuous/defective
+# classes the fragment metric could not see and retires them as ERROR arms (each named by
+# its repair): (a) the generic placeholder pair the original backfill emitted —
+#   '- auto-integration; real-time data sync' / '- auto-report generation and distribution'
+#   and its sibling '- workflow automation; rule-based routing' — 28 bullets across 14
+#   workflows whose entire automation content was boilerplate (the format guide's own
+#   'Automation Opportunity: Automate manual steps — vacuous' genre, invisible to the
+#   fragment regex because it carries no paren); (b) one corrupted paste fragment
+#   ('- System auto-validate - System auto-capture' in W907 — two bare auto-verbs joined,
+#   no object, no step link, trailing whitespace); (c) one empty Automation Opportunity
+#   section (W1210 — heading with zero bullets); (d) one hyphenated-verb fragment
+#   ('- auto-follow-up (cross-sell/upsell, and customer-follow-up — distinct from)' in
+#   W3834) that the legacy `auto-\w+ \(` regex missed because the verb itself is
+#   hyphenated — the verb pattern now `auto-[\w-]+`; and (e) trailing whitespace on any
+#   Automation-section line (the corrupted-generator-tail signature). The quality metrics
+# below stay WARN-armed as before; the five retired classes are ERROR-armed with
+# file:line:bullet named.
 # Metrics:
 #   (a) Automation bullets that are broken fragments (auto-X (lowercase fragment, no period)
 #   (b) Controls sections citing >=1 real CTL-XX  (coverage of the controls register)
@@ -699,9 +720,20 @@ BOILERPLATE = {
     "operational: standard operating procedures; system-enforced validation rules",
     "operational: periodic reconciliation against source documents",
 }
+# The generic placeholder pair the original automation backfill emitted (retired 2026-09-16
+# forty-fourth wave: 28 bullets across 14 workflows — W42/W49/W71/W73/W75/W83/W85/W86/W87/
+# W90/W98/W525/W534/W535/W536 — replaced with step-quoting bullets per the house form).
+VACUOUS = {
+    "- auto-integration; real-time data sync",
+    "- auto-report generation and distribution",
+    "- workflow automation; rule-based routing",
+}
+# Corrupted-paste join: two bare auto-verb fragments with no object/step link (W907's
+# '- System auto-validate - System auto-capture ' form).
+GARBLED = re.compile(r"^- System auto-\S+ - System")
 frag = 0; auto_bullets = 0
 ctrl_total = 0; ctrl_with_ctl = 0; ctrl_boiler = 0
-# Broad fragment detector: any bullet emitted by add-automation-controls.py in its legacy
+bad = []# Broad fragment detector: any bullet emitted by add-automation-controls.py in its legacy
 # fragment form. Matches every verb prefix in the generator's MANUAL_VERBS vocabulary
 # ('auto-X', 'rule-based auto-X', 'workflow notification', 'continuous audit', etc.)
 # followed by an opening paren — the signature of a mid-phrase snippet. The narrow regex
@@ -709,16 +741,32 @@ ctrl_total = 0; ctrl_with_ctl = 0; ctrl_boiler = 0
 # prefixes and nested parens); this broad form is aligned with defragment-automation.py and
 # catches every generator-fragment form so the metric is an honest regression guard.
 # Complete sentences (hand-written like VS-73, or regenerated '- System ...' drafts) never match.
-frag_re = re.compile(r'^- (?:auto-\w+|rule-based auto-\w+|rule-based authorization|workflow (?:notification|orchestration)|continuous audit|auto-flag for investigation) [\(\)]')
+# Forty-fourth wave: the verb pattern is `auto-[\w-]+` so hyphenated verbs ('auto-follow-up')
+# are covered — W3834's fragment sailed through the `auto-\w+ ` form.
+frag_re = re.compile(r"^- (?:auto-[\w-]+|rule-based auto-[\w-]+|rule-based authorization|workflow (?:notification|orchestration)|continuous audit|auto-flag for investigation) [\(\)]")
 for f in files:
     txt = open(f, encoding="utf-8", errors="replace").read()
     for m in re.finditer(r'^### Automation Opportunity\n(.*?)(?=^### |^---|^## |\Z)', txt, re.M | re.S):
-        for line in m.group(1).split("\n"):
-            line = line.strip()
-            if line.startswith("- "):
-                auto_bullets += 1
-                if frag_re.match(line):
-                    frag += 1
+        sec_line = txt.count("\n", 0, m.start()) + 1
+        bullets = 0
+        for i, line in enumerate(m.group(1).split("\n")):
+            stripped = line.strip()
+            ln = sec_line + 1 + i
+            if line != line.rstrip():
+                bad.append(f"{f}:{ln}: trailing whitespace in Automation section: {stripped[:80]!r}")
+            if not stripped.startswith("- "):
+                continue
+            bullets += 1
+            auto_bullets += 1
+            if stripped in VACUOUS:
+                bad.append(f"{f}:{ln}: retired vacuous placeholder bullet: {stripped}")
+            if GARBLED.match(stripped):
+                bad.append(f"{f}:{ln}: corrupted auto-verb join fragment: {stripped}")
+            if frag_re.match(stripped):
+                frag += 1
+                bad.append(f"{f}:{ln}: mid-phrase fragment bullet: {stripped}")
+        if bullets == 0:
+            bad.append(f"{f}:{sec_line}: empty Automation Opportunity section (0 bullets)")
     for m in re.finditer(r'^### Controls\n(.*?)(?=^### |^---|^## |\Z)', txt, re.M | re.S):
         ctrl_total += 1
         body = m.group(1).strip()
@@ -728,19 +776,27 @@ for f in files:
         elif any(b in body for b in BOILERPLATE) and '\n' not in body.strip():
             ctrl_boiler += 1
 pct_ctl = (100 * ctrl_with_ctl // ctrl_total) if ctrl_total else 0
-print(f"{frag}|{auto_bullets}|{ctrl_with_ctl}|{ctrl_total}|{pct_ctl}|{ctrl_boiler}")
+print(f"METRICS|{frag}|{auto_bullets}|{ctrl_with_ctl}|{ctrl_total}|{pct_ctl}|{ctrl_boiler}")
+for b in bad:
+    print("BAD|" + b)
 PY
 )
-FRAG_BULLETS=$(echo "$QUALITY" | cut -d'|' -f1)
-AUTO_TOTAL=$(echo "$QUALITY" | cut -d'|' -f2)
-CTRL_WITH_CTL=$(echo "$QUALITY" | cut -d'|' -f3)
-CTRL_TOTAL=$(echo "$QUALITY" | cut -d'|' -f4)
-CTRL_PCT=$(echo "$QUALITY" | cut -d'|' -f5)
-CTRL_BOILER=$(echo "$QUALITY" | cut -d'|' -f6)
-if [ "$FRAG_BULLETS" -eq 0 ] && [ "$CTRL_WITH_CTL" -eq "$CTRL_TOTAL" ] && [ "$CTRL_BOILER" -eq 0 ]; then
-    ok "Automation/Controls quality targets met: 0/$AUTO_TOTAL fragment bullets; $CTRL_WITH_CTL/$CTRL_TOTAL Controls sections cite a CTL-XX ($CTRL_PCT%); $CTRL_BOILER pure-boilerplate. (Register: 67 core + 172 domain anchors + 569 process-area operating controls = 808; PA controls are honest-draft derived mappings pending per-workflow review — see WORKFLOW-FORMAT-GUIDE.md 'Quality bar'. This check remains the regression guard for all three metrics.)"
+C21_BAD=$(echo "$QUALITY" | grep '^BAD|' || true)
+METRICS=$(echo "$QUALITY" | grep '^METRICS|')
+FRAG_BULLETS=$(echo "$METRICS" | cut -d'|' -f2)
+AUTO_TOTAL=$(echo "$METRICS" | cut -d'|' -f3)
+CTRL_WITH_CTL=$(echo "$METRICS" | cut -d'|' -f4)
+CTRL_TOTAL=$(echo "$METRICS" | cut -d'|' -f5)
+CTRL_PCT=$(echo "$METRICS" | cut -d'|' -f6)
+CTRL_BOILER=$(echo "$METRICS" | cut -d'|' -f7)
+if [ -n "$C21_BAD" ]; then
+    echo "$C21_BAD" | sed 's/^BAD|/    /' | sed "s#|$REPO_ROOT/##"
+    error "Automation-section retired-defect classes present: $(echo "$C21_BAD" | wc -l) hit(s) — the vacuous placeholder pair ('auto-integration; real-time data sync' / 'auto-report generation and distribution' / 'workflow automation; rule-based routing'), corrupted auto-verb joins, empty Automation Opportunity sections, mid-phrase fragment bullets (incl. the hyphenated-verb forms), and trailing whitespace are retired (forty-fourth-wave arms, 2026-09-16 — the fragment metric itself promoted from WARN to ERROR with the backlog long closed); repair with step-quoting bullets per the house form '- System auto-<verb> of <step quote> (replaces manual Step N).' / '(Step N, already system-executed).'"
+fi
+if [ "$CTRL_WITH_CTL" -eq "$CTRL_TOTAL" ] && [ "$CTRL_BOILER" -eq 0 ]; then
+    ok "Automation/Controls quality targets met: 0/$AUTO_TOTAL fragment bullets; $CTRL_WITH_CTL/$CTRL_TOTAL Controls sections cite a CTL-XX ($CTRL_PCT%); $CTRL_BOILER pure-boilerplate; 0 vacuous placeholder / corrupted-join / empty-section / fragment / trailing-whitespace hits (the forty-fourth-wave retired classes, 2026-09-16 — 28 placeholder bullets across 14 workflows, one corrupted W907 paste, one empty W1210 section and one hyphenated W3834 fragment repaired to the step-quoting house form, and the legacy fragment metric promoted WARN → ERROR with the 2026-06-28 backlog long closed). (Register: 67 core + 172 domain anchors + 569 process-area operating controls = 808; PA controls are honest-draft derived mappings pending per-workflow review — see WORKFLOW-FORMAT-GUIDE.md 'Quality bar'. This check remains the regression guard for all metrics plus the retired classes.)"
 else
-    warn "Automation/Controls draft-field quality: $FRAG_BULLETS/$AUTO_TOTAL Automation bullets are mid-phrase fragments (target 0); $CTRL_WITH_CTL/$CTRL_TOTAL Controls sections cite a CTL-XX ($CTRL_PCT% — target 100%); $CTRL_BOILER are pure-boilerplate (target 0). See WORKFLOW-FORMAT-GUIDE.md 'Quality bar'; run defragment-automation.py / backfill-controls.py as appropriate."
+    warn "Automation/Controls draft-field quality: $CTRL_WITH_CTL/$CTRL_TOTAL Controls sections cite a CTL-XX ($CTRL_PCT% — target 100%); $CTRL_BOILER are pure-boilerplate (target 0); fragments: $FRAG_BULLETS/$AUTO_TOTAL (also ERROR-armed above). See WORKFLOW-FORMAT-GUIDE.md 'Quality bar'; run defragment-automation.py / backfill-controls.py as appropriate."
 fi
 
 # --- Check 22: Required-field completeness (WORKFLOW-FORMAT-GUIDE 9 fields) ---
