@@ -25,7 +25,7 @@ Source: workflow W2118 — POS Warranty Capture at Checkout</bpmn:documentation>
         <bpmn:outgoing>W2118_Flow13</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:serviceTask id="W2118_Task6" name="POS auto-identifies warranty-eligible SKU at scan; prompts cashier; captures…">
-        <bpmn:documentation>Step 1: POS auto-identifies warranty-eligible SKU at scan; prompts cashier; captures transaction date, SKU, serial number, store, loyalty ID; generates warranty record in CRM
+        <bpmn:documentation>Step 1: POS auto-identifies warranty-eligible SKU at scan; prompts cashier; captures transaction date, SKU, serial number, store, loyalty ID; generates the warranty record on the Oracle Install Base item instance (fit-gap D16)
 Responsible (R): POS System
 Accountable (A): Cashier
 Duration: 30–60 sec</bpmn:documentation>
@@ -125,8 +125,8 @@ Duration: &lt;1 min</bpmn:documentation>
         <bpmn:incoming>W2119_Flow11</bpmn:incoming>
         <bpmn:outgoing>W2119_Flow12</bpmn:outgoing>
       </bpmn:serviceTask>
-      <bpmn:serviceTask id="W2119_Task6" name="Warranty data pushed to vendor portal; record linked to customer profile in CRM…">
-        <bpmn:documentation>Step 3: Warranty data pushed to vendor portal; record linked to customer profile in CRM and visible in mobile app
+      <bpmn:serviceTask id="W2119_Task6" name="Warranty data pushed to vendor portal; record created on the Install Base…">
+        <bpmn:documentation>Step 3: Warranty data pushed to vendor portal; record created on the Install Base instance (fit-gap D16), linked to the customer profile in CRM and visible in mobile app
 Responsible (R): System
 Accountable (A): CRM
 Duration: Automated</bpmn:documentation>
@@ -183,8 +183,8 @@ Source: workflow W2120 — Bulk Warranty Registration for Trade Accounts</bpmn:d
       <bpmn:startEvent id="W2120_Start4" name="Trade/corporate account purchases warranty items in bulk">
         <bpmn:outgoing>W2120_Flow11</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:userTask id="W2120_Task5" name="Account Manager creates project warranty file in CRM: links all items to…">
-        <bpmn:documentation>Step 1: Account Manager creates project warranty file in CRM: links all items to project ID, customer account, delivery addresses
+      <bpmn:userTask id="W2120_Task5" name="Account Manager creates the project warranty file as linked Install Base…">
+        <bpmn:documentation>Step 1: Account Manager creates the project warranty file as linked Install Base instances (fit-gap D16): links all items to project ID, customer account, delivery addresses
 Responsible (R): Trade Account Mgr
 Accountable (A): Head of Trade / Account Management
 Duration: 15–30 min</bpmn:documentation>
@@ -257,8 +257,8 @@ Source: workflow W2121 — Warranty Transfer for Resold Properties</bpmn:documen
       <bpmn:startEvent id="W2121_Start4" name="Homeowner requests warranty transfer to new property owner">
         <bpmn:outgoing>W2121_Flow10</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:userTask id="W2121_Task5" name="CSR verifies original purchase in CRM; confirms warranty status, remaining…">
-        <bpmn:documentation>Step 1: CSR verifies original purchase in CRM; confirms warranty status, remaining coverage; creates transfer record with new owner details
+      <bpmn:userTask id="W2121_Task5" name="CSR verifies original purchase on the Install Base instance (fit-gap D16)…">
+        <bpmn:documentation>Step 1: CSR verifies original purchase on the Install Base instance (fit-gap D16); confirms warranty status, remaining coverage; creates transfer record with new owner details
 Responsible (R): CSR
 Accountable (A): Customer Service Dir
 Duration: 10–15 min</bpmn:documentation>

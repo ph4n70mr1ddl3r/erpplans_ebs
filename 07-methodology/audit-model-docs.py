@@ -1879,7 +1879,15 @@ def ebs_blueprint_hits():
     # In-Memory Cost Management, F6 GL budgets + budgetary control, G9 Oracle
     # Alert); EXT 2 → 1, BUILD unchanged at 14. The pins below re-based to the
     # re-derived arithmetic (67 standard = 74.4% of 90).
-    expect = {"FIT-STD": 34, "FIT-CFG": 33, "PER": 2, "EXT": 1, "LOC": 1,
+    # 2026-09-16 third-pass EBS-exhaustion audit: register 90 → 96 rows — six
+    # native vehicles adopted where the workflows invoked capabilities without
+    # naming them (A14 AR Lockbox + Balance Forward Billing + iReceivables,
+    # B13 Purchasing Contingent Labor, C17 Engineering ECO/ECN, D16 Install
+    # Base + Service Contracts, D17 Depot Repair, E10 Compensation Workbench)
+    # plus five realization-note trues (A3 Bills Receivable, A13 rental family,
+    # C1 Product Hub, C3 Site Hub, H6 GoldenGate); BUILD unchanged at 14.
+    # Pins re-based to the re-derived arithmetic (73 standard = 76.0% of 96).
+    expect = {"FIT-STD": 37, "FIT-CFG": 36, "PER": 2, "EXT": 1, "LOC": 1,
               "INT": 5, "BUILD": 14, "EDGE": 0, "OPEN": 0}
     for cls, want in expect.items():
         got = counts.get(cls, 0)
@@ -1887,10 +1895,10 @@ def ebs_blueprint_hits():
             add("fit-gap-analysis.md", 0,
                 f"register re-derives {got} {cls} rows but §3 pins {want} — the "
                 f"class-count table no longer foots against the §2 register")
-    if total != 90:
+    if total != 96:
         add("fit-gap-analysis.md", 0,
             f"register re-derives {total} disposition rows but the pinned register "
-            f"total is 90")
+            f"total is 96")
     # every §3 class-count cell must equal the §2 re-derivation (the rule's first
     # draft pinned only the standard-total and grand-total rows; a corrupted single
     # class cell sailed through — caught by this wave's own teeth suite, T4)

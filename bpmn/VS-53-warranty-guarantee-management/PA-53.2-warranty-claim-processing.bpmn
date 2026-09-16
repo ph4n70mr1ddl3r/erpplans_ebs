@@ -22,8 +22,8 @@ Source: workflow W2126 — In-Store Warranty Claim Initiation</bpmn:documentatio
       <bpmn:startEvent id="W2126_Start4" name="Customer brings defective product with proof of purchase to store">
         <bpmn:outgoing>W2126_Flow12</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:userTask id="W2126_Task5" name="CSR verifies warranty in CRM; inspects product; photographs defect; checks…">
-        <bpmn:documentation>Step 1: CSR verifies warranty in CRM; inspects product; photographs defect; checks serial number match
+      <bpmn:userTask id="W2126_Task5" name="CSR verifies warranty coverage on the Install Base instance (fit-gap D16)…">
+        <bpmn:documentation>Step 1: CSR verifies warranty coverage on the Install Base instance (fit-gap D16); inspects product; photographs defect; checks serial number match
 Responsible (R): CSR
 Accountable (A): Store Manager
 Duration: 10–15 min</bpmn:documentation>

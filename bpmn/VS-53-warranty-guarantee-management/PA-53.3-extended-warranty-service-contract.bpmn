@@ -93,7 +93,7 @@ Duration: 30–60 sec</bpmn:documentation>
         <bpmn:outgoing>W2135_Flow12</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:serviceTask id="W2135_Task6" name="Customer accepts: warranty added to transaction, contract printed on receipt…">
-        <bpmn:documentation>Step 2: Customer accepts: warranty added to transaction, contract printed on receipt, digital acknowledgment signed; auto-registered in CRM
+        <bpmn:documentation>Step 2: Customer accepts: warranty added to transaction, contract printed on receipt, digital acknowledgment signed; auto-registered as a Service Contract on the Install Base instance (fit-gap D16)
 Responsible (R): Cashier / System
 Accountable (A): Cashier
 Duration: 30 sec</bpmn:documentation>
