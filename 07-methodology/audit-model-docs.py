@@ -1840,7 +1840,11 @@ def ebs_blueprint_hits():
           Total-Ecommerce-Orders canon (the review found the e-wallet subset
           quoted as the total);
       (e) the README §4 realization-wave prose ↔ the classification register's
-          re-derived tier ladder."""
+          re-derived tier ladder; and, since the 2026-09-16 forty-third-wave
+          consistency review, (f) every README document-map row is paren-balanced
+          (the eighth pass's append to the fit-gap row shipped a doubled
+          close-paren — the doubled-join genre on the document the forty-first
+          wave's fit-gap-scoped join-hygiene arm did not read)."""
     hits = []
 
     def ebs(name):
@@ -2073,6 +2077,21 @@ def ebs_blueprint_hits():
             add("README.md (02-oracle-ebs)", 0,
                 f"realization-wave prose does not carry the classification "
                 f"register's re-derived Tier-{t} figure ({tiers[t]})")
+
+    # ---- (f) README document-map rows are paren-balanced — 2026-09-16
+    # forty-third-wave consistency review: the eighth pass's append to the fit-gap
+    # document-map row shipped its segment-final parenthetical double-closed
+    # ('§4 resolution 32))') against the row's own balanced-nesting convention — the
+    # same doubled-join genre the forty-first wave retired in the fit-gap intro, on
+    # the sibling document the join-hygiene arm's fit-gap scope did not read. Every
+    # document-map row must carry balanced parentheses so a future append that
+    # drifts the row's paren nesting fires here.
+    for ln_i, ln in enumerate(rd.splitlines(), 1):
+        if ln.startswith("| [`") and ln.count("(") != ln.count(")"):
+            add("README.md (02-oracle-ebs)", ln_i,
+                f"document-map row is not paren-balanced "
+                f"({ln.count('(')} open / {ln.count(')')} close) — appended clauses "
+                f"must preserve the row's nesting (forty-third-wave arm)")
     return hits
 
 

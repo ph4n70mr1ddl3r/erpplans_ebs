@@ -3,7 +3,7 @@
 > Methodology and results of the operational workflow gap analysis (Pass 1, Pass 2, Pass 3, Pass 4,
 > Pass 5, Pass 6, Pass 7, Pass 8, Pass 9 (all 2026-06-14), Pass 10, Pass 11, and Pass 12 (2026-06-15),
 > Pass 13 and Pass 14 (2026-06-16), Pass 15, Pass 16, and Pass 17 (all 2026-06-17), Pass 18 (2026-06-18),
-> Pass 19, Pass 20, Pass 21, and Pass 22 (all 2026-06-19), Pass 23, Pass 24, Pass 25, Pass 26, Pass 27, Pass 28, and Pass 29 (all 2026-06-20), and Pass 30 (2026-06-21).
+> Pass 19, Pass 20, Pass 21, and Pass 22 (all 2026-06-19), Pass 23, Pass 24, Pass 25, Pass 26, Pass 27, Pass 28, and Pass 29 (all 2026-06-20), and Pass 30 (2026-06-21)).
 > Companion document to [value-stream-index.md](value-stream-index.md) and
 > [workflow-criticality-classification.md](workflow-criticality-classification.md).
 

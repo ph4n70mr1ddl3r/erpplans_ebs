@@ -728,7 +728,7 @@ Duration: Varies by intervention</bpmn:documentation>
         <bpmn:documentation>Step 6: Stretching &amp; exercise program: Safety Officer implements stretching break program for high-risk roles: (a) 5-minute group stretching sessions at start of shift and mid-shift for DC and lumber yard staff; (b) posted stretching exercise guides at cash registers and DC workstations; (c) incorporate ergonomic awareness into W655 safety training curriculum
 Responsible (R): Safety Officer / Department Supervisor
 Accountable (A): CHRO
-Duration: Ongoing (~10 min/day per team</bpmn:documentation>
+Duration: Ongoing (~10 min/day per team)</bpmn:documentation>
         <bpmn:incoming>W697_Flow23</bpmn:incoming>
         <bpmn:outgoing>W697_Flow24</bpmn:outgoing>
       </bpmn:userTask>
