@@ -558,8 +558,8 @@ Duration: 2 hours</bpmn:documentation>
         <bpmn:incoming>W5247_Flow12</bpmn:incoming>
         <bpmn:outgoing>W5247_Flow13</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W5247_Task6" name="Register materials serial numbers and batches in warranty tracking module.">
-        <bpmn:documentation>Step 2: Register materials serial numbers and batches in warranty tracking module.
+      <bpmn:userTask id="W5247_Task6" name="Register materials serial numbers and batches in Oracle Install Base (warranty…">
+        <bpmn:documentation>Step 2: Register materials serial numbers and batches in Oracle Install Base (warranty tracking — fit-gap D16).
 Responsible (R): B2B Sourcing Manager
 Accountable (A): Key Account Manager
 Duration: 2 hours</bpmn:documentation>

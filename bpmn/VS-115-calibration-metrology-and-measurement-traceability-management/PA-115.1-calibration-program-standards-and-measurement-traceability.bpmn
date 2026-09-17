@@ -466,7 +466,7 @@ Duration: Annual</bpmn:documentation>
         <bpmn:outgoing>W3623_Flow11</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W3623_Task5" name="Metrology Manager/L&amp;D deliver training: classroom and hands-on, device-class…">
-        <bpmn:documentation>Step 2: Metrology Manager/L&amp;D deliver training: classroom and hands-on, device-class procedures, software/CMMS, standards handling, and safety (electrical/pressure for some instruments); certify technicians and record competency; manage external certifications where required
+        <bpmn:documentation>Step 2: Metrology Manager/L&amp;D deliver training: classroom and hands-on, device-class procedures, software/Oracle eAM, standards handling, and safety (electrical/pressure for some instruments); certify technicians and record competency; manage external certifications where required
 Responsible (R): Metrology Manager / L&amp;D / Standards Lab
 Accountable (A): Quality Manager
 Duration: Per technician + recurring</bpmn:documentation>

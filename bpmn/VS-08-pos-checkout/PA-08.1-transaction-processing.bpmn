@@ -1714,7 +1714,7 @@ Duration: &lt; 60 sec from sale</bpmn:documentation>
         <bpmn:outgoing>W533_Flow22</bpmn:outgoing>
       </bpmn:serviceTask>
       <bpmn:serviceTask id="W533_Task9" name="Loyalty consumer">
-        <bpmn:documentation>Step 6: Loyalty consumer: ERP loyalty module consumes event; posts points earned to customer account; processes points redeemed (if applicable); updates customer tier progress
+        <bpmn:documentation>Step 6: Loyalty consumer: Loyalty engine (in-house stack — fit-gap D9) consumes event; posts points earned to customer account; processes points redeemed (if applicable); updates customer tier progress
 Responsible (R): System
 Accountable (A): —
 Duration: &lt; 60 sec from sale</bpmn:documentation>

@@ -1046,7 +1046,7 @@ Source: workflow W222 — DC Container Yard &amp; Chassis Management</bpmn:docum
         <bpmn:outgoing>W222_Flow16</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:userTask id="W222_Task7" name="Gate-In Registration">
-        <bpmn:documentation>Step 1: Gate-In Registration: Gate Guard inspects seal integrity, container physical state, and chassis lease records; scan-registers container number in Yard Management System (YMS); records gate-in timestamp
+        <bpmn:documentation>Step 1: Gate-In Registration: Gate Guard inspects seal integrity, container physical state, and chassis lease records; scan-registers container number in Oracle WMS Yard Management (fit-gap C6); records gate-in timestamp
 Responsible (R): Gate Guard
 Accountable (A): Yard Superintendent
 Duration: 10 min</bpmn:documentation>

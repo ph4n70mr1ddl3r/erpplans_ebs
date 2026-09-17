@@ -1399,7 +1399,7 @@ Duration: 20 min</bpmn:documentation>
         <bpmn:outgoing>W402_Flow16</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W402_Task9" name="Lease Accounting Linkage">
-        <bpmn:documentation>Step 3: Lease Accounting Linkage: For real estate contracts, Finance Controller maps the lease terms (monthly rent, escalation clauses) to the IFRS 16 / PFRS 16 lease accounting module (W275) to generate ROU asset schedules.
+        <bpmn:documentation>Step 3: Lease Accounting Linkage: For real estate contracts, Finance Controller maps the lease terms (monthly rent, escalation clauses) to the GL/FA ROU schedules (the A12 EXT — W275) to generate ROU asset schedules.
 Responsible (R): Finance Controller
 Accountable (A): —
 Duration: 30 min</bpmn:documentation>

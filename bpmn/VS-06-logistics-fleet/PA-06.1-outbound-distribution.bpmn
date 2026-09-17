@@ -42,7 +42,7 @@ Duration: Automated</bpmn:documentation>
         <bpmn:outgoing>W196_Flow16</bpmn:outgoing>
       </bpmn:serviceTask>
       <bpmn:serviceTask id="W196_Task8" name="Optimization">
-        <bpmn:documentation>Step 3: Optimization: Route optimization engine calculates most efficient sequence to minimize kilometers and fuel; accounts for traffic patterns and delivery windows
+        <bpmn:documentation>Step 3: Optimization: Route Optimization Engine (in-house build — fit-gap C14) calculates most efficient sequence to minimize kilometers and fuel; accounts for traffic patterns and delivery windows
 Responsible (R): System
 Accountable (A): Logistics Planner
 Duration: 5 min</bpmn:documentation>

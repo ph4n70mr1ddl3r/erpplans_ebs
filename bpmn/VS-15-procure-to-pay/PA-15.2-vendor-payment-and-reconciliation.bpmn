@@ -1371,7 +1371,7 @@ Duration: 1 day</bpmn:documentation>
         <bpmn:outgoing>W635_Flow19</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W635_Task8" name="Senior Accountant calculates initial right-of-use (ROU) asset and lease…">
-        <bpmn:documentation>Step 2: Senior Accountant calculates initial right-of-use (ROU) asset and lease liability using incremental borrowing rate per entity; inputs into lease accounting module
+        <bpmn:documentation>Step 2: Senior Accountant calculates initial right-of-use (ROU) asset and lease liability using incremental borrowing rate per entity; inputs into the GL/FA ROU schedules (the A12 EXT)
 Responsible (R): Senior Accountant
 Accountable (A): Accounting Manager
 Duration: 1 day/lease</bpmn:documentation>
@@ -1430,7 +1430,7 @@ Duration: During annual audit</bpmn:documentation>
         <bpmn:incoming>W635_Flow26</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W635_Annotation16">
-        <bpmn:text>Controls: - CTL-285 (ensure controlled execution — Vendor Payment &amp; Reconciliation (PA-15.2).) | - operational: standardized lease abstraction template and lease accounting module; operational: automated IC elimination in consolidation module; operational: standard modification workflow and system-driven remeasurement
+        <bpmn:text>Controls: - CTL-285 (ensure controlled execution — Vendor Payment &amp; Reconciliation (PA-15.2).) | - operational: standardized lease abstraction template and the GL/FA ROU schedules (the A12 EXT); operational: automated IC elimination in consolidation module; operational: standard modification workflow and system-driven remeasurement
 Owner: Accounting Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W635_Assoc17" sourceRef="W635_Annotation16" targetRef="W635_Start6" associationDirection="None" />

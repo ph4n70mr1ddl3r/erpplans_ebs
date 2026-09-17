@@ -512,7 +512,15 @@ DOCS = ["mobile-app-strategy.md", "data-migration-mapping.md",
         "../02-oracle-ebs/fit-gap-analysis.md",
         "../02-oracle-ebs/customization-governance.md",
         "../02-oracle-ebs/integrations.md",
-        "../02-oracle-ebs/data-migration.md"]
+        "../02-oracle-ebs/data-migration.md",
+        # 2026-09-17 fifty-third-wave consistency review: the licensing BOM joins
+        # the doc set — it shipped with the fifty-second-wave session but was left
+        # untracked, unmapped and unintegrated (the nineteenth-wave 'entire files'
+        # class one layer out: a folder document no check read). Generic sweeps
+        # verified clean on dry-run; the guard gains the licensing_bom_hits
+        # structural rule (every scenario total re-derived from the doc's own
+        # line items, per the dv_volume_hits arithmetic precedent).
+        "../02-oracle-ebs/licensing-bom.md"]
 RETIRED_FIGURES = ["6,757", "6,715", "5,357", "5,362", "5,349", "5,341",
                    "80,000 SKU", "1,000 POS terminal"]
 
@@ -2097,6 +2105,169 @@ def ebs_blueprint_hits():
     return hits
 
 
+def licensing_bom_hits():
+    """2026-09-17 fifty-third-wave consistency review — structural guard for the
+    02-oracle-ebs licensing BOM (the quantitative doc joined the DOCS set after
+    shipping untracked and unintegrated; the dv_volume_hits precedent: the
+    doc whose arithmetic no rule re-derives is the one that drifts). Re-derives
+    every stated total from the doc's own line items on every run:
+      (a) Scenario A: every 6-column line item's price × quantity must equal its
+          license-$ cell, and every §2.8 Employee-metric HRMS row must equal
+          list × 6,911; the line items must sum to the §2.10 perpetual total,
+          with support (22%), 3-yr and 5-yr TCO following;
+      (b) Scenario B1/B2: each option's monthly column must sum to its stated
+          **Total**, and the stated /yr · 3-yr · 5-yr bold line must follow;
+      (c) §4's comparison table must quote the re-derived totals at their
+          stated rounding."""
+    rel = "licensing-bom.md"
+    hits = []
+    path = os.path.normpath(os.path.join(MC, "..", "02-oracle-ebs", rel))
+    text = open(path, encoding="utf-8").read()
+
+    def num(s):
+        return float(s.replace(",", ""))
+
+    def section(start_pat, end_pat):
+        m1 = re.search(start_pat, text)
+        if not m1:
+            return None
+        m2 = re.search(end_pat, text[m1.end():])
+        return text[m1.end(): m1.end() + m2.start()] if m2 else text[m1.end():]
+
+    def add(doc, ln, msg):
+        hits.append((doc, ln, msg))
+
+    # ---- (a) Scenario A line items → §2.10 stated totals
+    stated = sup = t3 = t5 = None
+    livetot = 0.0
+    sec_a = section(r"## 2\. Scenario A", r"## 3\. Scenario B")
+    if sec_a is None:
+        hits.append((rel, 0, "Scenario A section not found"))
+    else:
+        total = 0.0
+        for m in re.finditer(
+                r"\| ([^|]+) \| ([^|]+) \| [^|]+ \| ([\d,]+(?:\.\d+)?) \| "
+                r"([\d,]+)[^|]*\| ([\d,]+) \|", sec_a):
+            name = m.group(1).strip()
+            price, qty, lic = num(m.group(3)), int(num(m.group(4))), num(m.group(5))
+            if abs(price * qty - lic) > 0.5:
+                add(rel, text[:m.start()].count("\n") + 1,
+                    f"Scenario A line item '{name}': {price} × {qty} != {lic}")
+            total += lic
+        for m in re.finditer(
+                r"\| ([^|]+) \| ([A-Z][A-Z0-9]+) \| ([\d,]+) \| ([\d,]+) \|", sec_a):
+            name = m.group(1).strip()
+            if name.startswith("~~") or "Total" in name:
+                continue
+            price, lic = num(m.group(3)), num(m.group(4))
+            if abs(price * 6911 - lic) > 0.5:
+                add(rel, text[:m.start()].count("\n") + 1,
+                    f"Employee-metric HRMS row '{name}': {price} × 6,911 != {lic}")
+            total += lic
+        stated = re.search(r"\*\*Perpetual license total\*\* \| \*\*\$([\d,]+)\*\*", sec_a)
+        if not stated:
+            hits.append((rel, 0, "§2.10 perpetual-license-total row not found"))
+        elif abs(total - num(stated.group(1))) > 0.5:
+            hits.append((rel, 0,
+                         f"Scenario A line items sum to {total:,.0f} but §2.10 states "
+                         f"{stated.group(1)}"))
+        livetot = num(stated.group(1)) if stated else total
+        sup = re.search(r"Annual SUL&S \(22%\) \| \$([\d,]+)/yr", sec_a)
+        t3 = re.search(r"3-yr TCO \(license \+ 3× support\) \| \$([\d,]+)", sec_a)
+        t5 = re.search(r"5-yr TCO \(license \+ 5× support\) \| \*\*\$([\d,]+)\*\*", sec_a)
+        for pat, name, want in ((sup, "support", livetot * 0.22),
+                                (t3, "3-yr TCO", livetot * 1.66),
+                                (t5, "5-yr TCO", livetot * 2.1)):
+            if not pat:
+                hits.append((rel, 0, f"§2.10 {name} row not found"))
+            elif abs(num(pat.group(1)) - want) > 1.5:
+                hits.append((rel, 0, f"§2.10 {name} states {pat.group(1)} but the "
+                                     f"re-derivation is {want:,.0f}"))
+
+    # ---- (b) Scenario B1/B2 monthly columns → stated totals
+    for opt, sec_pat, total_pat, bold_pat in (
+            ("B1", r"### 3\.1 ", r"### 3\.2 ",
+             r"\*\*B1 totals: \$([\d,]+)/yr · \$([\d,]+) \(3-yr\) · \$([\d,]+) \(5-yr\)\*\*"),
+            ("B2", r"### 3\.2 ", r"## 4\.",
+             r"\*\*B2 totals: \$([\d,]+)/yr · \$([\d,]+) \(3-yr\) · \$([\d,]+) \(5-yr\)\*\*")):
+        sec = section(sec_pat + r"[^\n]*\n", total_pat)
+        if sec is None:
+            hits.append((rel, 0, f"Scenario {opt} section not found"))
+            continue
+        monthly = 0.0
+        for m in re.finditer(
+                r"\| ([^|]+) \| [^|]+ \| [^|]+ \| ([\d,]+(?:\.\d+)?) \| "
+                r"([\d,]+)[^|]*\| ([\d,]+) \|", sec):
+            name = m.group(1).strip()
+            if name.startswith("**Total**"):
+                continue
+            price, qty, mo = num(m.group(2)), int(num(m.group(3))), num(m.group(4))
+            if abs(price * qty - mo) > 0.5:
+                add(rel, text[:m.start()].count("\n") + 1,
+                    f"Scenario {opt} line item '{name}': {price} × {qty} != {mo}")
+            monthly += mo
+        stated = re.search(r"\*\*Total\*\* \|(?:[^|]*\|){4}\s*\*\*\$([\d,]+)/mo\*\*", sec)
+        if not stated:
+            hits.append((rel, 0, f"Scenario {opt} monthly-total row not found"))
+        elif abs(monthly - num(stated.group(1))) > 0.5:
+            hits.append((rel, 0,
+                         f"Scenario {opt} line items sum to {monthly:,.0f}/mo but the "
+                         f"stated total is {stated.group(1)}/mo"))
+        bold = re.search(bold_pat, text)
+        if not stated:
+            continue
+        mo = num(stated.group(1))
+        if not bold:
+            hits.append((rel, 0, f"Scenario {opt} bold totals line not found"))
+        else:
+            yr, t3v, t5v = (num(bold.group(i)) for i in (1, 2, 3))
+            if abs(mo * 12 - yr) > 2 or abs(mo * 36 - t3v) > 3 or abs(mo * 60 - t5v) > 3:
+                hits.append((rel, 0,
+                             f"Scenario {opt} bold totals ({yr:,.0f}/yr, {t3v:,.0f}, "
+                             f"{t5v:,.0f}) do not follow from the monthly total "
+                             f"{mo:,.0f}"))
+
+    # ---- (c) §4 comparison table at the stated cells' own rounding
+    sec4 = text.split("## 4. Comparison", 1)[-1]
+
+    def roundcmp(row_name, quoted, wants):
+        if quoted is None:
+            hits.append((rel, 0, f"§4 comparison row for scenario {row_name!r} not found"))
+            return
+        strs = re.findall(r"\$([\d.]+)M", quoted)
+        if len(strs) != len(wants):
+            hits.append((rel, 0,
+                         f"§4 comparison row for {row_name!r} quotes {strs} — expected "
+                         f"{len(wants)} figures (the re-derived cells)"))
+            return
+        for fs, w in zip(strs, wants):
+            dec = len(fs.split(".")[1]) if "." in fs else 0
+            if abs(float(fs) - round(w, dec)) > 0.005:
+                hits.append((rel, 0,
+                             f"§4 comparison row for {row_name!r} quotes ${fs}M — the "
+                             f"re-derived cell is {w:,.4f}M (not equal at the quoted "
+                             f"precision)"))
+
+    if stated and sup and t3 and t5:
+        roundcmp("A — EBS 12.2 perpetual",
+                 next((l for l in sec4.splitlines() if "A — EBS 12.2 perpetual" in l), None),
+                 (livetot / 1e6, num(sup.group(1)) / 1e6,
+                  num(t3.group(1)) / 1e6, num(t5.group(1)) / 1e6))
+    b1_bold = re.search(r"\*\*B1 totals: \$([\d,]+)/yr · \$([\d,]+) \(3-yr\) · \$([\d,]+) \(5-yr\)\*\*", text)
+    b2_bold = re.search(r"\*\*B2 totals: \$([\d,]+)/yr · \$([\d,]+) \(3-yr\) · \$([\d,]+) \(5-yr\)\*\*", text)
+    if b1_bold:
+        roundcmp("B1 — Fusion Cloud",
+                 next((l for l in sec4.splitlines() if "B1 — Fusion Cloud" in l), None),
+                 (num(b1_bold.group(1)) / 1e6, num(b1_bold.group(2)) / 1e6,
+                  num(b1_bold.group(3)) / 1e6))
+    if b2_bold:
+        roundcmp("B2 — Fusion Suite bundle",
+                 next((l for l in sec4.splitlines() if "B2 — Fusion Suite bundle" in l), None),
+                 (num(b2_bold.group(1)) / 1e6, num(b2_bold.group(2)) / 1e6,
+                  num(b2_bold.group(3)) / 1e6))
+    return hits
+
+
 def integration_mirror_hits():
     """2026-09-14 twenty-first-wave consistency review — the doctrine cascade
     extended the integration estate (fit-gap E8: the in-house Payroll PH build
@@ -2333,6 +2504,8 @@ def main():
     # 2026-09-14 twenty-first-wave consistency review additions
     hits.extend(integration_mirror_hits())
     hits.extend(migration_template_hits())
+    # 2026-09-17 fifty-third-wave consistency review addition (licensing BOM)
+    hits.extend(licensing_bom_hits())
     for doc, line, detail in hits:
         print(f"model-doc: {doc}:{line}: {detail}")
     print(f"audit-model-docs: {len(hits)} hit(s) across {len(DOCS)} documents")
