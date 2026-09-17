@@ -218,17 +218,104 @@ echo "--- Check 10: Boilerplate analysis fields ---"
 # templated value streams to workflow-specific content, so this check now passes; it is
 # retained as a regression guard that surfaces any boilerplate reintroduced by a future
 # generation artifact. See WORKFLOW-FORMAT-GUIDE.md "Quality bar for the three analysis fields".
+#
+# Fiftieth-wave extension (2026-09-17): the rework itself replaced the detectable boilerplate
+# with a DIFFERENT verbatim paste — every workflow in the seven Python-assisted value streams
+# (VS-65/66/68/74/75/77/78) got one of a handful of 2-bullet template Pain sections
+# (Data-quality+Integration-failure dominating at 152 identical copies), invisible to this
+# check's single literal and to Check 21 (which reads only Automation/Controls). 187 workflows
+# across 23 PA files now carry workflow-specific sections and the whole class is guarded:
+#   (a) the retired-literal probe — the 27 template bullets (plus the original marker) are
+#       retired verbatim: any re-mint fires even at a single instance;
+#   (b) the verbatim-sharing arm — NO Pain bullet text may appear in more than one workflow
+#       corpus-wide (the format guide's workflow-specific bar, enforced at the paste class);
+#   (c) population assertions — the parse must see all 5,427 Pain-bearing workflows, so a
+#       future format drift cannot silently void the arms (the wave-27 probe lesson).
 BP_MARKER='Operational variability mitigated by standard procedures and system controls'
 BP_FILES=$(grep -rlF "$BP_MARKER" "$REPO_ROOT"/01-model-company/workflows/VS-*/PA-*.md 2>/dev/null || true)
 BP_INSTANCES=$(grep -rhF "$BP_MARKER" "$REPO_ROOT"/01-model-company/workflows/VS-*/PA-*.md 2>/dev/null | wc -l | tr -d ' ' || true)
-if [ "$BP_INSTANCES" -eq 0 ]; then
-    ok "No boilerplate analysis fields detected"
+BP10=$(python3 - "$REPO_ROOT" <<'PY'
+import glob, os, re, sys
+ROOT = sys.argv[1]
+RETIRED = [
+ "- **Data-quality risk**: incomplete or inaccurate master data (pricing, inventory, customer) corrupts the workflow output; mitigated by the master-data governance (VS-29 / W291) and the periodic audit",
+ "- **Scope-creep risk**: the project scope expands beyond the original quotation, eroding margin; mitigated by the change-order process and the scope-confirmation sign-off",
+ "- **Integration-failure risk**: marketplace API sync fails (catalog, inventory, or order), causing overselling or customer-facing errors; mitigated by real-time sync monitoring and the failover to manual processing",
+ "- **Delivery-failure risk**: a delivery misses its window (traffic, access, scheduling), disrupting the customer/project; mitigated by the real-time tracking and the rescheduling protocol",
+ "- **Credit-default risk**: a trade account defaults on extended credit, creating a bad-debt write-off; mitigated by the credit-scoring model and the credit-limit monitoring",
+ "- **Greenwashing risk**: sustainability claims lack evidence (certificates, audit), damaging credibility; mitigated by the evidence requirement and the third-party certification",
+ "- **Execution risk**: process variability or system failure disrupts the workflow's output; mitigated by the documented procedure and the system controls",
+ "- **Adoption-risk**: the digital feature launches but customers/staff don't adopt it, wasting the investment; mitigated by the user-testing and the adoption-incentive",
+ "- **Metric-gaming risk**: a metric is gamed (marking complete before actual completion, excluding unfavorable data); mitigated by the source-system ground truth and the cross-metric consistency check",
+ "- **Margin-erosion risk**: pricing miscalculation (commission, discount, surcharge) erodes net margin below target; mitigated by the margin-floor guard and pre-launch validation",
+ "- **Inventory-desync risk**: marketplace inventory sync lags, causing overselling (listing items already sold); mitigated by the real-time ATP sync and the buffer-stock reservation",
+ "- **Non-compliance risk**: a regulatory requirement is missed (DTI permit, data privacy, AML), creating a fine or complaint; mitigated by the compliance-checklist and the regulatory-monitoring",
+ "- **Self-assessment bias risk**: Maturity overstated; mitigated by independent audit input",
+ "- **Condition-dispute risk**: the contractor disputes the resaleability assessment or restocking fee at pickup, delaying the credit and stranding the surplus; mitigated by the documented condition inspection with photos at pickup and the pre-agreed restocking terms",
+ "- **Inconsistent-application risk**: Program applied differently across entities; mitigated by group consistency",
+ "- **Assurance risk**: Controls unverified; mitigated by internal-audit review (VS-21)",
+ "- **Finding-backlog risk**: Unremediated findings; mitigated by tracking & board oversight",
+ "- **Governance-bypass risk**: Capex spent without phase-gate review; mitigated by the tiered approval matrix (VS-40)",
+ "- **Hypercare-exit-too-early risk**: Moving to steady-state before stability \u2192 recurring faults; mitigated by stability criteria",
+ "- **Change-blindspot risk**: A regulatory change missed \u2192 non-compliance; mitigated by multi-source monitoring",
+ "- **Audit-finding-backlog risk**: Findings not remediated; mitigated by closure tracking",
+ "- **Control-gap risk**: A material control untested; mitigated by risk-based coverage",
+ "- **Stagnation risk**: Program not maturing/automating; mitigated by the maturity model + improvement pipeline",
+ "- **Benefit-leakage risk**: Improvements not measured/realized; mitigated by OpEx benefit realization (VS-133)",
+ "- **Stranded-capex risk**: Under-performing sites not exited; mitigated by site-level ROI review",
+ "- Lease escalation clause interpretation (percentage vs. fixed)",
+ "- CAM charge disputes with lessors",
+]
+retired_set = set(RETIRED)
+bad = 0
+by_text = {}
+pain_wfs = set()
+for f in sorted(glob.glob(os.path.join(ROOT, "01-model-company", "workflows", "VS-*", "PA-*.md"))):
+    rel = os.path.relpath(f, ROOT)
+    cur = None; in_pain = False
+    for i, ln in enumerate(open(f, encoding="utf-8"), 1):
+        s = ln.rstrip("\n")
+        m = re.match(r"^## (W\d+[A-Z]?)\. ", s)
+        if m:
+            cur = m.group(1); in_pain = False; continue
+        if s.startswith("### "):
+            in_pain = cur is not None and "pain" in s.lower()
+            if in_pain:
+                pain_wfs.add((rel, cur))
+            continue
+        if in_pain and s.startswith("- ") and s.strip():
+            if s in retired_set:
+                bad += 1
+                print(f"BAD|{rel}:{i}: retired template Pain bullet re-minted: '{s[:90]}'")
+            else:
+                by_text.setdefault(s, []).append((rel, i, cur))
+shared = {t: ks for t, ks in by_text.items() if len({wf for _, _, wf in ks}) > 1}
+for t, ks in sorted(shared.items(), key=lambda x: -len(x[1])):
+    bad += 1
+    where = ", ".join(f"{r}:{i} ({w})" for r, i, w in ks[:4])
+    print(f"BAD|verbatim-shared Pain bullet across {len({w for _, _, w in ks})} workflows: '{t[:80]}' at {where}")
+if len(pain_wfs) != 5427:
+    bad += 1
+    print(f"BAD|Pain-section parse population {len(pain_wfs)} != 5427 workflows \u2014 parser or corpus drift, arms void")
+print(f"TOTALS bad={bad} workflows={len(pain_wfs)} shared={len(shared)}")
+PY
+)
+C10_BAD=$(echo "$BP10" | sed -n 's/^TOTALS bad=\([0-9]*\).*/\1/p')
+if [ "$BP_INSTANCES" -eq 0 ] && [ "${C10_BAD:-1}" -eq 0 ]; then
+    ok "No boilerplate analysis fields detected (fiftieth-wave extension, 2026-09-17: the 2026-06-20 Expansion rework's own replacement paste is retired — its 2-bullet template Pain sections ran to 152 verbatim copies of the Data-quality bullet alone across the seven Python-assisted value streams (VS-65/66/68/74/75/77/78), invisible to this check's single literal and to Check 21's Automation/Controls scope; 194 workflows across 42 PA files re-authored workflow-specific, and the class is now guarded by the 27-literal retired probe, the corpus-wide verbatim-sharing arm (no Pain bullet text in more than one workflow) and the 5,427-workflow parse-population assertion)"
 else
-    BP_FILE_COUNT=$(echo -n "$BP_FILES" | grep -cP 'PA-' || true)
-    BP_VS_LIST=$(echo "$BP_FILES" | sed -E 's#.*/(VS-[0-9]+-[^/]+)/.*#\1#' | sort -u)
-    BP_VS_COUNT=$(echo -n "$BP_VS_LIST" | grep -cP '^VS-' || true)
-    warn "$BP_INSTANCES workflows across $BP_FILE_COUNT PA files in $BP_VS_COUNT value streams use verbatim boilerplate for Pain Points / System Touchpoints / Time Estimate (regression — the 2026-06-20 Expansion-block rework removed all known boilerplate; see WORKFLOW-FORMAT-GUIDE.md):"
-    echo "$BP_VS_LIST" | sed 's/^/    /'
+    if [ "$BP_INSTANCES" -gt 0 ]; then
+        BP_FILE_COUNT=$(echo -n "$BP_FILES" | grep -cP 'PA-' || true)
+        BP_VS_LIST=$(echo "$BP_FILES" | sed -E 's#.*/(VS-[0-9]+-[^/]+)/.*#\1#' | sort -u)
+        BP_VS_COUNT=$(echo -n "$BP_VS_LIST" | grep -cP '^VS-' || true)
+        error "$BP_INSTANCES workflows across $BP_FILE_COUNT PA files in $BP_VS_COUNT value streams use verbatim boilerplate for Pain Points / System Touchpoints / Time Estimate (regression — the 2026-06-20 Expansion-block rework removed all known boilerplate; see WORKFLOW-FORMAT-GUIDE.md):"
+        echo "$BP_VS_LIST" | sed 's/^/    /'
+    fi
+    if [ "${C10_BAD:-1}" -ne 0 ]; then
+        error "Pain-Points template/verbatim-sharing violations (the fiftieth-wave retired classes — re-authored workflow-specific 2026-09-17; a re-minted template bullet or a verbatim-shared bullet fires here):"
+        echo "$BP10" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
+        echo "$BP10" | grep -E '^TOTALS' | sed 's/^/    /' || true
+    fi
 fi
 
 # --- Check 12: Automation Opportunity + Controls field adoption ---

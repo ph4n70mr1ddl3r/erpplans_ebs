@@ -309,7 +309,11 @@ erpplans/
     ├── fix-pa211-order.py            One-time PA-21.1 scrambled-section-order canonicalizer (batch-27, review #73)
     ├── fix-controls-bullets.py       Controls-section list-hygiene/paren/bold repairer (Check 43 companion)
     ├── fix-controls-splice-artifacts.py         Forty-ninth-wave Controls-splice repairer, mechanical classes — 50 exact-match repairs (duplicated items, dangling '; .' tails)
-    └── fix-controls-splice-artifacts-2-context.py — Forty-ninth-wave Controls-splice repairer, context class — 49 exact-match repairs (risk-splices, vs.-truncations, re-grounded in each workflow's own Pain Points/Steps)
+    ├── fix-controls-splice-artifacts-2-context.py — Forty-ninth-wave Controls-splice repairer, context class — 49 exact-match repairs (risk-splices, vs.-truncations, re-grounded in each workflow's own Pain Points/Steps)
+    ├── fix-pain-template-engine.py   Fiftieth-wave Pain-Points de-templating engine — corpus-wide template-pool derivation, keep-specific/replace-template semantics, balance+mitigation verification
+    ├── fix-pain-template-vs65.py     Fiftieth-wave Pain de-templating, VS-65 — 24 workflow-specific Pain sections grounded in each workflow's own steps
+    ├── fix-pain-template-vs66-68-74.py — Fiftieth-wave Pain de-templating, VS-66/68/74 — 72 workflow-specific Pain sections
+    └── fix-pain-template-vs75-77-78.py — Fiftieth-wave Pain de-templating, VS-75/77/78 — 72 workflow-specific Pain sections
 ```
 
 ## The Model Company at a Glance

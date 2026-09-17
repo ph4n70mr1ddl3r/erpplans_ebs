@@ -254,8 +254,8 @@ Duration: 1–2 days</bpmn:documentation>
         <bpmn:incoming>W2665_Flow11</bpmn:incoming>
         <bpmn:outgoing>W2665_Flow12</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W2665_Task6" name="Digital Product Manager implements Head of Internal Audit &amp; Risk: guest…">
-        <bpmn:documentation>Step 2: Digital Product Manager implements Head of Internal Audit &amp; Risk: guest checkout, saved payments, one-click reorder, shipping transparency, social proof, urgency elements; A/B tests each
+      <bpmn:userTask id="W2665_Task6" name="Digital Product Manager implements conversion-rate optimizations: guest…">
+        <bpmn:documentation>Step 2: Digital Product Manager implements conversion-rate optimizations: guest checkout, saved payments, one-click reorder, shipping transparency, social proof, urgency elements; A/B tests each
 Responsible (R): Digital Product Manager / Ecommerce Manager
 Accountable (A): CIO / CMO
 Duration: Continuous</bpmn:documentation>
@@ -263,7 +263,7 @@ Duration: Continuous</bpmn:documentation>
         <bpmn:outgoing>W2665_Flow13</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W2665_Task7" name="Ecommerce Manager reports: conversion rate (&gt;3%), cart abandonment, AOV…">
-        <bpmn:documentation>Step 3: Ecommerce Manager reports: conversion rate (&gt;3%), cart abandonment, AOV, payment distribution, mobile vs. web; tracks Head of Internal Audit &amp; Risk impact monthly
+        <bpmn:documentation>Step 3: Ecommerce Manager reports: conversion rate (&gt;3%), cart abandonment, AOV, payment distribution, mobile vs. web; tracks CRO (conversion-rate-optimization) impact monthly
 Responsible (R): Ecommerce Manager
 Accountable (A): CMO
 Duration: Monthly</bpmn:documentation>
