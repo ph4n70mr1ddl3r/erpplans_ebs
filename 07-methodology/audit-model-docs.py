@@ -520,7 +520,8 @@ DOCS = ["mobile-app-strategy.md", "data-migration-mapping.md",
         # verified clean on dry-run; the guard gains the licensing_bom_hits
         # structural rule (every scenario total re-derived from the doc's own
         # line items, per the dv_volume_hits arithmetic precedent).
-        "../02-oracle-ebs/licensing-bom.md"]
+        "../02-oracle-ebs/licensing-bom.md",
+        "../02-oracle-ebs/ebs-vision-verification.md"]
 RETIRED_FIGURES = ["6,757", "6,715", "5,357", "5,362", "5,349", "5,341",
                    "80,000 SKU", "1,000 POS terminal"]
 
@@ -2295,6 +2296,56 @@ def licensing_bom_hits():
     return hits
 
 
+def vision_verification_hits():
+    """2026-09-17 fifty-fourth-wave consistency review — structural guard for the
+    live EBS Vision instance verification report (02-oracle-ebs/ebs-vision-verification.md;
+    the licensing_bom_hits precedent: a quantitative doc joins the DOCS set with a rule
+    that re-derives its own stated counts). Re-derives, every run:
+      (a) the section skeleton (environment / FP footprint / VT transactional / VF
+          findings / artifacts) must be complete;
+      (b) the FP table must hold exactly the pinned 39 conformance rows (unique ids)
+          and the VT table exactly 5 test rows;
+      (c) the §2 tally sentence must equal the count of FP rows whose verdict cell
+          begins CONFIRMED (the licensing_bom_hits arithmetic rule's self-consistency
+          principle applied to the doc's own verdict tally);
+      (d) the required instance-evidence anchors must stay present (release 12.2.12,
+          the AR 'Revenue Management Super User' responsibility evidence, the AMW
+          '(Obsolete)' registry status, and the Order Import wrapper name)."""
+    rel = "ebs-vision-verification.md"
+    hits = []
+    path = os.path.normpath(os.path.join(MC, "..", "02-oracle-ebs", rel))
+    text = open(path, encoding="utf-8").read()
+    body = strip_footer(text)
+    for sec in ("## 1. Environment of record", "## 2. Footprint conformance (FP rows)",
+                "## 3. Transactional verification (VT rows)", "## 4. Findings (VF)",
+                "## 5. Verification artifacts"):
+        if sec not in body:
+            hits.append((rel, 0, f"missing section '{sec}'"))
+    fp = re.findall(r"^\| (FP-\d+) ", body, flags=re.M)
+    vt = re.findall(r"^\| (VT-\d+) ", body, flags=re.M)
+    if len(fp) != 39 or len(set(fp)) != len(fp):
+        hits.append((rel, 0, f"FP table holds {len(fp)} rows "
+                             f"({len(set(fp))} unique) but the doc pins 39 unique rows"))
+    if len(vt) != 5:
+        hits.append((rel, 0, f"VT table holds {len(vt)} rows but the doc pins 5"))
+    confirmed = len(re.findall(r"^\| FP-\d+ \|.*\| CONFIRMED", body, flags=re.M))
+    m = re.search(r"Tally: \*\*(\d+) of the 39 FP rows CONFIRMED", body)
+    if not m:
+        hits.append((rel, 0, "§2 tally sentence ('Tally: **N of the 39 FP rows "
+                             "CONFIRMED ...**') not found"))
+    elif int(m.group(1)) != confirmed:
+        hits.append((rel, 0, f"§2 tally claims {m.group(1)} CONFIRMED rows but the "
+                             f"FP table holds {confirmed}"))
+    for anc in ("12.2.12", "'Revenue Management Super User'",
+                "marked **(Obsolete)**", "ORDER_IMPORT_CONC_PGM"):
+        if anc not in body:
+            hits.append((rel, 0, f'missing required verification anchor "{anc}"'))
+    for vf in range(1, 7):
+        if f"VF-{vf}" not in body:
+            hits.append((rel, 0, f"missing finding VF-{vf}"))
+    return hits
+
+
 def integration_mirror_hits():
     """2026-09-14 twenty-first-wave consistency review — the doctrine cascade
     extended the integration estate (fit-gap E8: the in-house Payroll PH build
@@ -2533,6 +2584,8 @@ def main():
     hits.extend(migration_template_hits())
     # 2026-09-17 fifty-third-wave consistency review addition (licensing BOM)
     hits.extend(licensing_bom_hits())
+    # 2026-09-17 fifty-fourth-wave consistency review addition (Vision verification report)
+    hits.extend(vision_verification_hits())
     for doc, line, detail in hits:
         print(f"model-doc: {doc}:{line}: {detail}")
     print(f"audit-model-docs: {len(hits)} hit(s) across {len(DOCS)} documents")
