@@ -2304,7 +2304,7 @@ def vision_verification_hits():
       (a) the section skeleton (environment / FP footprint / VT transactional / VF
           findings / artifacts) must be complete;
       (b) the FP table must hold exactly the pinned 39 conformance rows (unique ids)
-          and the VT table exactly 5 test rows;
+          and the VT table exactly 10 test rows (v2.0 round-2 extension: 5 → 10);
       (c) the §2 tally sentence must equal the count of FP rows whose verdict cell
           begins CONFIRMED (the licensing_bom_hits arithmetic rule's self-consistency
           principle applied to the doc's own verdict tally);
@@ -2326,8 +2326,8 @@ def vision_verification_hits():
     if len(fp) != 39 or len(set(fp)) != len(fp):
         hits.append((rel, 0, f"FP table holds {len(fp)} rows "
                              f"({len(set(fp))} unique) but the doc pins 39 unique rows"))
-    if len(vt) != 5:
-        hits.append((rel, 0, f"VT table holds {len(vt)} rows but the doc pins 5"))
+    if len(vt) != 10:
+        hits.append((rel, 0, f"VT table holds {len(vt)} rows but the doc pins 10"))
     confirmed = len(re.findall(r"^\| FP-\d+ \|.*\| CONFIRMED", body, flags=re.M))
     m = re.search(r"Tally: \*\*(\d+) of the 39 FP rows CONFIRMED", body)
     if not m:
