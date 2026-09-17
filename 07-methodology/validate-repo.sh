@@ -487,6 +487,21 @@ else
     error "$C16_FIG_BAD PA footer figure drift(s) (count vs the file's own '## W' headers / VS-number vs folder / VS-name vs the canonical index row):"
     echo "$C16_FIG" | grep '^BAD|' | sed 's/^BAD|/    /' | head -20
 fi
+# ---- Part C (2026-09-17 fifty-first-wave consistency review): the final-newline
+# convention. All 1,469 tracked files end with a newline byte except the two PA files
+# the review found (PA-08.1, PA-189.3) — a defect readable by no check: the shape arm
+# above greps the last non-empty LINE, the figure arm reads the footer's text, and the
+# generators parse structure, never the file tail. Every PA file must end with '\n'.
+C16_NL=$(for pafile in "$REPO_ROOT"/01-model-company/workflows/VS-*/PA-*.md; do
+  [ -n "$(tail -c 1 "$pafile")" ] && echo "$pafile"
+done || true)
+C16_NL_COUNT=$(printf '%s' "$C16_NL" | grep -cP 'PA-' || true)
+if [ "${C16_NL_COUNT:-0}" -eq 0 ]; then
+    ok "All PA files end with a newline character (final-newline arm added by the 2026-09-17 fifty-first-wave review — two PA files (PA-08.1, PA-189.3) shipped without the trailing newline every other tracked file in the repo carries, readable by no check: the shape arm greps the last non-empty line, the figure arm reads the footer's text, and the generators parse structure, never the file tail)"
+else
+    error "$C16_NL_COUNT PA file(s) do not end with a newline character:"
+    printf '%s\n' "$C16_NL" | sed 's#.*/workflows/##' | sed 's/^/    /' | head -10
+fi
 
 # --- Check 17: Orphan workflow bodies (ghost workflows) ---
 echo "--- Check 17: Orphan workflow bodies (ghost workflows) ---"
@@ -1035,6 +1050,15 @@ echo "--- Check 23: Intra-file TOC anchor resolution ---"
 # and reports any '(#anchor)' link that matches no heading. Treated as an ERROR (a
 # broken navigational link), consistent with the file-resolution checks 19/20. Repaired
 # by `07-methodology/fix-toc-anchors.py`; this check guards against regression.
+# Fifty-first-wave extension (2026-09-17): the guard now reads EVERY tracked .md — the
+# PA files' 5,427 intra-file anchors were the only ones any rule scanned, while the 27
+# intra-file anchor links in the non-PA docs (workflows/ nav docs, 01-model-company
+# docs, 02-oracle-ebs/, 07-methodology/, root README, bpmn/dmn READMEs) were
+# enumerable by nothing: Check 39(d) resolves only cross-file '.md#anchor' links and
+# Check 66 drops fragments entirely. The sweep found the class clean — the sole
+# unresolved intra-file anchor repo-wide was the CHANGELOG's own literal '[W…](#…)'
+# prose example, exempt here per Check 66's CHANGELOG prose-example convention (the
+# CHANGELOG is frozen history in every check that reads it).
 ANCHORS=$(python3 - "$REPO_ROOT" <<'PY'
 import glob, os, re, sys
 ROOT = sys.argv[1]
@@ -1049,14 +1073,23 @@ def gh_slug(s):
     s = re.sub(r'[^\w\s-]', '', s, flags=re.UNICODE)
     return s.replace(' ', '-')
 files_bad = {}
-for f in sorted(glob.glob(f"{ROOT}/01-model-company/workflows/VS-*/PA-*.md")):
+
+def scan_anchors(f):
     txt = open(f, encoding='utf-8', errors='replace').read()
     heads = set(); _seen = {}
     for h in re.findall(r'^#+\s+(.+?)\s*$', txt, re.M):
         s = gh_slug(h); n = _seen.get(s, 0); _seen[s] = n + 1
         heads.add(s if n == 0 else f"{s}-{n}")
-    bad = sorted({anchor for _disp, anchor in re.findall(r'\[([^\]]+)\]\(#([^)]+)\)', txt)
-                  if anchor not in heads})
+    for m in re.finditer(r'<a name="([^"]+)"', txt):
+        heads.add(m.group(1).lower())
+    return sorted({anchor for _disp, anchor in re.findall(r'\[([^\]]+)\]\(#([^)]+)\)', txt)
+                   if anchor not in heads})
+
+pa_set = set(glob.glob(f"{ROOT}/01-model-company/workflows/VS-*/PA-*.md"))
+all_md = [f for f in glob.glob(f"{ROOT}/**/*.md", recursive=True)
+          if '.git' not in f and not os.path.basename(f).startswith('CHANGELOG')]
+for f in sorted(set(all_md) | pa_set):
+    bad = scan_anchors(f)
     if bad:
         files_bad[f.replace(ROOT + '/', '')] = bad
 print(f"{len(files_bad)}|{sum(len(v) for v in files_bad.values())}")
@@ -1069,9 +1102,9 @@ BAD_ANCHOR_FILES=$(echo "$ANCHORS" | head -1 | cut -d'|' -f1)
 BAD_ANCHOR_TOTAL=$(echo "$ANCHORS" | head -1 | cut -d'|' -f2)
 BAD_ANCHOR_SAMPLES=$(echo "$ANCHORS" | tail -n +2)
 if [ "$BAD_ANCHOR_TOTAL" -eq 0 ]; then
-    ok "All intra-file TOC anchors resolve to a heading"
+    ok "All intra-file TOC anchors resolve to a heading — in the PA files (5,427 anchors, the original arm) and across every non-PA .md too (the 27 intra-file anchor links in the nav/doctrine/methodology docs were enumerable by no check: Check 39(d) resolves only cross-file '.md#' anchors and Check 66 drops fragments; fifty-first-wave extension, 2026-09-17 — the sweep found the class clean, the sole unresolved intra-file anchor repo-wide being the CHANGELOG's own literal '[W…](#…)' prose example, exempt per Check 66's convention)"
 else
-    error "$BAD_ANCHOR_TOTAL intra-file TOC anchor(s) across $BAD_ANCHOR_FILES PA file(s) do not resolve to any heading (run 07-methodology/fix-toc-anchors.py to repair):"
+    error "$BAD_ANCHOR_TOTAL intra-file TOC anchor(s) across $BAD_ANCHOR_FILES file(s) do not resolve to any heading (run 07-methodology/fix-toc-anchors.py to repair):"
     echo "$BAD_ANCHOR_SAMPLES" | sed 's/^/    /' | head -20
 fi
 
@@ -2822,6 +2855,16 @@ echo "--- Check 43: Controls-section list hygiene + bold/paren balance ---"
 #      forty-third wave had trued only the two 'auto-countof' instances while thirteen
 #      sibling forms ('auto-logof' ×6, 'auto-fileof' ×2, and one each of create/distribute/
 #      record/schedule/validate) shipped across 11 files
+#   G. (2026-09-17 fifty-first-wave review) the two doctrine/methodology folders no
+#      block-hygiene check read — 02-oracle-ebs/*.md + 07-methodology/*.md sit outside
+#      the C/E glob (01-model-company + root README) and outside Check 72's footer
+#      scope: every paragraph block is paren-, '**'-bold- and '"'-quote-balanced
+#      (fenced code stripped, inline code spans masked, blockquote-wrapped lines
+#      merged; table rows stay row-scoped per part E's convention). Footer/history
+#      blocks ('*Document Version:' / '*Date:') are exempt — Check 72's footer arm is
+#      their adjudicated surface, where the quoted repaired-literal citations
+#      ('§4 resolution 32))' / ').;' / '(vN.M') stand per the forty-third wave's own
+#      adjudication; the sweep found the folders otherwise clean
 # Companion repairer: 07-methodology/fix-controls-bullets.py
 CHECK43=$(python3 - "$REPO_ROOT" <<'PY'
 import glob, os, re, sys
@@ -2915,12 +2958,47 @@ for f in files:
             bad += 1
             print(f"BAD|{rel}:~{text[:text.find(block)].count(chr(10)) + 1}: paren-unbalanced "
                   f"paragraph block ({block.count('(')} open / {block.count(')')} close): '{first}'")
+# G: doctrine/methodology folders — paren/bold/quote balance per paragraph block
+# (fifty-first wave; fenced code stripped, code spans masked, footer blocks exempt)
+for f in sorted(glob.glob(os.path.join(ROOT, "02-oracle-ebs", "*.md"))) + \
+         sorted(glob.glob(os.path.join(ROOT, "07-methodology", "*.md"))):
+    rel = os.path.relpath(f, ROOT)
+    text = re.sub(r"```.*?```", lambda m: "\n" * m.group(0).count("\n"),
+                  open(f, encoding="utf-8").read(), flags=re.S)
+    glines = text.split("\n")
+    gi = 0
+    while gi < len(glines):
+        if ("**" not in glines[gi] and '"' not in glines[gi] and "(" not in glines[gi]):
+            gi += 1
+            continue
+        gstart = gi
+        while gstart > 0 and glines[gstart - 1].strip() and not glines[gstart - 1].lstrip().startswith(("#", "|", "---")):
+            gstart -= 1
+        gend = gi
+        while gend + 1 < len(glines) and glines[gend + 1].strip() and not glines[gend + 1].lstrip().startswith(("#", "|", "---")):
+            gend += 1
+        gi = gend + 1
+        if glines[gstart].lstrip().startswith(("*Document Version: ", "*Date: ")):
+            continue  # footer/history blocks are Check 72's adjudicated surface
+        if glines[gstart].lstrip().startswith("|"):
+            continue  # table rows stay row-scoped per part E's convention
+        gblk = re.sub(r"`[^`]*`", "", "\n".join(glines[gstart:gend + 1]))
+        if gblk.count("(") != gblk.count(")"):
+            bad += 1
+            print(f"BAD|{rel}:~{gstart + 1}: paren-unbalanced block in doctrine/methodology doc "
+                  f"({gblk.count('(')} open / {gblk.count(')')} close): '{glines[gstart].strip()[:80]}'")
+        elif gblk.count("**") % 2 == 1:
+            bad += 1
+            print(f"BAD|{rel}:~{gstart + 1}: odd '**' count in doctrine/methodology block: '{glines[gstart].strip()[:80]}'")
+        elif gblk.count('"') % 2 == 1:
+            bad += 1
+            print(f"BAD|{rel}:~{gstart + 1}: odd quote count in doctrine/methodology block: '{glines[gstart].strip()[:80]}'")
 print(f"TOTALS bad={bad}")
 PY
 )
 C43_BAD=$(echo "$CHECK43" | sed -n 's/^TOTALS bad=\([0-9]*\)/\1/p')
 if [ "${C43_BAD:-1}" -eq 0 ]; then
-    ok "Controls sections bullet-hygenic; all paragraph blocks bold-balanced and Controls parens balanced (forty-third-wave extension, 2026-09-16: Automation Opportunity / Pain Points bullets are paren-balanced per line — four Automation bullets were found quoting their step text truncated mid-paren (the 'for claims > PHP 5' / 'Med-Arbiter' forms) plus two 'auto-countof' missing-space forms, and one Pain-Points bullet carried a corrupted generator tail (the 'calendar and operational: … (PHP' form — the '; operational:' join class one section over) — and every model-company/root-README paragraph block is paren-balanced with code spans stripped (the workflow-gap-analysis intro's pass-list parenthetical shipped unclosed since its initial issue); forty-fourth-wave extension, 2026-09-16: analysis bullets are also quote-balanced per line and the auto-verb missing-space join plus the mid-phrase quote cut are forbidden as classes — the same review found two Automation bullets carrying a stray unbalanced close-quote after their quoted step fragment (the PA-03.1 '"Approved Factory\" status in ERP\"' / PA-22.1 '"Approved Promo Price\" … 20 SKUs\"' forms), two Controls bullets quoting their source disclaimer without ever closing it (the PA-09.2 aftermarket-battery / rebar-disclaimer forms), two Automation fragments cut mid-phrase before the fragment's own noun (both 'across the 5\"' — the step texts continue 'legal entities'), and thirteen sibling 'auto-<verb>of' missing-space forms the forty-third wave's countof-only true had left across 11 files (auto-logof ×6, auto-fileof ×2, and one each of create/distribute/record/schedule/validate)"
+    ok "Controls sections bullet-hygenic; all paragraph blocks bold-balanced and Controls parens balanced (forty-third-wave extension, 2026-09-16: Automation Opportunity / Pain Points bullets are paren-balanced per line — four Automation bullets were found quoting their step text truncated mid-paren (the 'for claims > PHP 5' / 'Med-Arbiter' forms) plus two 'auto-countof' missing-space forms, and one Pain-Points bullet carried a corrupted generator tail (the 'calendar and operational: … (PHP' form — the '; operational:' join class one section over) — and every model-company/root-README paragraph block is paren-balanced with code spans stripped (the workflow-gap-analysis intro's pass-list parenthetical shipped unclosed since its initial issue); forty-fourth-wave extension, 2026-09-16: analysis bullets are also quote-balanced per line and the auto-verb missing-space join plus the mid-phrase quote cut are forbidden as classes — the same review found two Automation bullets carrying a stray unbalanced close-quote after their quoted step fragment (the PA-03.1 '"Approved Factory\" status in ERP\"' / PA-22.1 '"Approved Promo Price\" … 20 SKUs\"' forms), two Controls bullets quoting their source disclaimer without ever closing it (the PA-09.2 aftermarket-battery / rebar-disclaimer forms), two Automation fragments cut mid-phrase before the fragment's own noun (both 'across the 5\"' — the step texts continue 'legal entities'), and thirteen sibling 'auto-<verb>of' missing-space forms the forty-third wave's countof-only true had left across 11 files (auto-logof ×6, auto-fileof ×2, and one each of create/distribute/record/schedule/validate); fifty-first-wave extension, 2026-09-17: the two doctrine/methodology folders no block-hygiene check read (02-oracle-ebs/ + 07-methodology/, 12 files) join the guard — every paragraph block paren-, bold- and quote-balanced with fenced code stripped, code spans masked, table rows row-scoped and footer/history blocks left to Check 72's adjudicated masking (the sweep found the folders clean — the only imbalances were the adjudicated quoted-citation forms '§4 resolution 32))' / ').;' / '(vN.M' inside footers and the methodology-index Contents rows)"
 else
     error "Analysis-section hygiene violations (dangling Controls lines, unbalanced parens, broken '**' bold) — repair via 07-methodology/fix-controls-bullets.py + per-case review:"
     echo "$CHECK43" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
