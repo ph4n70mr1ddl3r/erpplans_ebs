@@ -2118,7 +2118,10 @@ def licensing_bom_hits():
       (b) Scenario B1/B2: each option's monthly column must sum to its stated
           **Total**, and the stated /yr · 3-yr · 5-yr bold line must follow;
       (c) §4's comparison table must quote the re-derived totals at their
-          stated rounding."""
+          stated rounding;
+      (d) fifty-fourth-wave footing arm: the §2 build-up notes must carry their
+          explicit footing clauses and §1's ecommerce driver its derived
+          order-line basis (the unqualified/contradictory forms retired)."""
     rel = "licensing-bom.md"
     hits = []
     path = os.path.normpath(os.path.join(MC, "..", "02-oracle-ebs", rel))
@@ -2265,6 +2268,30 @@ def licensing_bom_hits():
                  next((l for l in sec4.splitlines() if "B2 — Fusion Suite bundle" in l), None),
                  (num(b2_bold.group(1)) / 1e6, num(b2_bold.group(2)) / 1e6,
                   num(b2_bold.group(3)) / 1e6))
+
+    # ---- (d) fifty-fourth-wave footing arm — the explanatory build-up surfaces the
+    # line-item re-derivations above cannot read: the §2 user build-up notes must
+    # carry their explicit footing clauses (the document's own iExpenses 'rounded
+    # to' convention — the fifty-fourth wave found the Financials note silently
+    # 58 seats short of its 650 qty and the MSCA note silently 100 short of its
+    # 2,700 qty with a DC figure contradicting the §1 driver), and §1's ecommerce
+    # driver must keep stating the derived basis its order-line pricing rides
+    # (~4.5 lines/order — no lines-per-order canon exists anywhere; the EOL and
+    # Pooled-line quantities price off it). Anchors and retired forms are checked
+    # against the footer-stripped body — the wave's own first draft satisfied the
+    # anchors off its own change-note quoting them (the sixth-wave
+    # anchor-satisfying-itself-off-history failure, caught by the synthetic
+    # injection before shipping).
+    body = strip_footer(text)
+    for anc in ("= 592, rounded to 650",
+                "= 2,650, rounded to 2,700",
+                "~4.5 lines/order"):
+        if anc not in body:
+            hits.append((rel, 0, f'missing required footing anchor "{anc}"'))
+    for lit in ("DC 550", "(≈2.3M OM order lines) |"):
+        if lit in body:
+            hits.append((rel, body[:body.index(lit)].count("\n") + 1,
+                         f'retired unqualified build-up form "{lit}"'))
     return hits
 
 

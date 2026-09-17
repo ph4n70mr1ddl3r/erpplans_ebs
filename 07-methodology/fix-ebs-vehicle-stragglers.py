@@ -22,7 +22,10 @@ customer-side contract rows, the W1315(W18) 3PL-fleet row and W2976's document-t
 """
 import os, sys, re
 
-ROOT = "/home/alden/erpplans_ebs"
+# 2026-09-17 fifty-fourth-wave consistency review — repo-relative resolution per the
+# eighteenth-wave shipped-tooling portability repair (the authored '/home/alden'
+# absolute path was unrunnable on any other checkout).
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WF = os.path.join(ROOT, "01-model-company", "workflows")
 
 FIXES = [

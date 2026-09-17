@@ -36,7 +36,7 @@
 | Peak *concurrent* users | ~1,000–1,500 — **not the license basis**; Oracle "Application User" / "Hosted Named User" are *named*-user metrics | profile §15.3 |
 | SKU master | 55,000 records (35,000 active) | profile §6.1 |
 | Annual COGS | PHP 42–45B ≈ USD 750–800M @ ₱56/$ (LCM metric) | profile §9.4 |
-| Ecommerce orders | ~515,000/yr (≈2.3M OM order lines) | profile §8.5 |
+| Ecommerce orders | ~515,000/yr (≈2.3M OM order lines at ~4.5 lines/order — a derived planning basis, not a profile figure; the profile carries no lines-per-order canon, so confirm the platform's actual line histogram before ordering) | profile §8.5 |
 | AR invoices | ~42,000/yr | profile §15.1 |
 | Governance/assurance HQ teams (ICM/QA/Credit/RM&I user basis) | Internal Audit & Risk 9 · Quality 5 (+24 DC checkers) · AR & Credit 8 | TO §5.3 |
 
@@ -90,7 +90,7 @@
 | Credit Management (scoring rules, limits, hold/release — D3) | TBD † | Application User | 2,295 | 5 | 11,475 |
 | Revenue Management & Invoicing (PFRS 15 multi-element schedules — A11) | TBD † | Application User | 3,495 | 6 | 20,970 |
 
-*Financials AUs: HQ finance/audit/legal/facilities/QM/LP/IT ≈ 172 + store SM/ASM 400 + DC mgmt 20.
+*Financials AUs: HQ finance/audit/legal/facilities/QM/LP/IT ≈ 172 + store SM/ASM 400 + DC mgmt 20 = 592, rounded to 650.
 Read-only covers merch/store-ops/marketing analytics viewers (cheaper than full AUs).
 Credit users = AR & Credit manager + 2 credit analysts + AR supervisor + trade-ops credit
 liaison (TO §5.3; the 5,200-trade + 200-corporate account base). RM&I users = revenue
@@ -130,8 +130,8 @@ Execution (WSH/OTE, C14) ship inside the OM base — no line.*
 | Engineering (ECO/ECN over kit/BOM revisions — C17) | TBD † | Application User | 1,725 | 12 | 20,700 |
 | In-Memory Cost Management (real-time costing/margin analytics — C15) | TBD † | Application User | 5,750 | 15 | 86,250 |
 
-*INV must cover all WMS/MSCA users. MSCA RF users: store RC/stock/supervisors 2,000 + DC 550 +
-QM/IT 50. LCM quantity tracks COGS — grows with revenue (true-up annually). BOM/WIP users:
+*INV must cover all WMS/MSCA users. MSCA RF users: store RC/stock/supervisors 2,000 + DC 600
+(§1) + QM/IT 50 = 2,650, rounded to 2,700. LCM quantity tracks COGS — grows with revenue (true-up annually). BOM/WIP users:
 DC kit/BTO assembly 32 + fabrication leads 15 + private-label line 3. Quality users: QM team 5
 + DC checkers 24 + fabrication QC 6 + supplier-quality analysts 5. Engineering users: private-
 label product development + kit/BOM master governance (W302/W129). IMC users: logistics &
@@ -401,4 +401,4 @@ Risk, Revenue, Quality, GOP and Transportation Management sit outside the bundle
 
 ---
 
-*Document Version: 2.0 (full-implementation edition) | Date: 2026-09-17 | **v2.0 delta:** licenses the exhaustion-audit adoptions — EBS: RM&I (A11), L&FM (A13), iExpenses (B11), BOM/WIP (C9), Quality (C12), In-Memory Cost (C15), Engineering (C17), Credit Management (D3), Internal Controls Manager (H11), Project Management; Fusion: Risk 20 → 60, Revenue, Quality, GOP, Transportation Management — moving the EBS license base $47,977,560 → $48,685,690 and B1/B2 to $2,416,729 / $1,923,994 per month; † part numbers/prices pending GPL verification; GOP added to the VCP custom-quote register. Prior v1.0 (2026-09-17): initial issue. Sources: model-company-profile.md (§3, §4, §8, §9, §12, §15); module-coverage-map.md v2.0; ebs-platform-architecture.md v2.0 §2; fit-gap-analysis.md §2; optimal-table-of-organization.md §5.3; Oracle E-Business Suite Applications Component Global Price List 2026-09-10; Oracle Fusion Cloud Service Global Price List 2026-09-10; Oracle Technology Global Price List 2026-09-10. Prices are US-Dollar list, subject to change without notice; quantities are planning estimates pending an Oracle License Determination.*
+*Document Version: 2.1 | Date: 2026-09-17 | **Fifty-fourth-wave consistency review (driver/note footing):** the surfaces the §2–§3 line-item re-derivations cannot read trued — §1's ecommerce driver now states the derived basis its order-line pricing rides (≈2.3M OM order lines at ~4.5 lines/order; the profile carries no lines-per-order canon — confirm the line histogram before ordering), §2.1's Financials AU build-up carries its explicit footing (= 592, rounded to 650 — the iExpenses rounding convention the note had silently omitted), and §2.3's MSCA RF build-up is trued to §1's own DC driver (DC 600 per §1, not 550; = 2,650, rounded to 2,700) — no line-item, quantity or total change, EBS/Fusion scenarios untouched. Prior v2.0 (full-implementation edition) | Date: 2026-09-17 | **v2.0 delta:** licenses the exhaustion-audit adoptions — EBS: RM&I (A11), L&FM (A13), iExpenses (B11), BOM/WIP (C9), Quality (C12), In-Memory Cost (C15), Engineering (C17), Credit Management (D3), Internal Controls Manager (H11), Project Management; Fusion: Risk 20 → 60, Revenue, Quality, GOP, Transportation Management — moving the EBS license base $47,977,560 → $48,685,690 and B1/B2 to $2,416,729 / $1,923,994 per month; † part numbers/prices pending GPL verification; GOP added to the VCP custom-quote register. Prior v1.0 (2026-09-17): initial issue. Sources: model-company-profile.md (§3, §4, §8, §9, §12, §15); module-coverage-map.md v2.0; ebs-platform-architecture.md v2.0 §2; fit-gap-analysis.md §2; optimal-table-of-organization.md §5.3; Oracle E-Business Suite Applications Component Global Price List 2026-09-10; Oracle Fusion Cloud Service Global Price List 2026-09-10; Oracle Technology Global Price List 2026-09-10. Prices are US-Dollar list, subject to change without notice; quantities are planning estimates pending an Oracle License Determination.*

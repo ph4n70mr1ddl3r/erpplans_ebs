@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 """Wave-2 straggler repairs (fifty-second wave, part 2) — see fix-ebs-vehicle-stragglers.py."""
 import os
-WF = "/home/alden/erpplans_ebs/01-model-company/workflows/"
+# 2026-09-17 fifty-fourth-wave consistency review — repo-relative resolution per the
+# eighteenth-wave shipped-tooling portability repair (the authored '/home/alden'
+# absolute path was unrunnable on any other checkout).
+WF = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                  "01-model-company", "workflows")
 fixes = [
     ("VS-115-calibration-metrology-and-measurement-traceability-management/PA-115.1-calibration-program-standards-and-measurement-traceability.md",
      "device-class procedures, software/CMMS, standards handling",
@@ -72,7 +76,7 @@ fixes = [
 ]
 applied = 0
 for rel, old, new in fixes:
-    p = WF + rel
+    p = os.path.join(WF, rel)
     t = open(p, encoding="utf-8").read()
     n = t.count(old)
     if n != 1:
