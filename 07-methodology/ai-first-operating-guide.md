@@ -51,8 +51,8 @@ specific platform (deliberately unnamed — see §4), and implementation project
 ### 1.4 The model company reference parameters
 
 The doctrine is calibrated on the reference instantiation — a PHP 62.3B-revenue big-box
-home-improvement retailer: 200 stores × 29 staff, 4 DCs × 150, HQ 511 (promoted from 362 on
-2026-09-14), 6,911
+home-improvement retailer: 200 stores × 29 staff, 4 DCs × 150, HQ 532 (promoted from 362 on 2026-09-14; gap-filled +21 on 2026-09-18 — was
+2026-09-14), 6,932
 employees, 5 legal entities, 35,000 active SKUs, 600 POS terminals, 2.8M
 monthly transactions, ~600K loyalty members. Adopters substitute their own parameters using
 the scaling rules in §11.3; nothing else in the model changes shape.
@@ -382,8 +382,8 @@ not hours — context pre-assembled, decision binary where possible, evidence on
 
 Spans widen and coordinator roles shrink because agents absorb coordination volume; the
  liberated hours fund exception-handling, customer-facing, and trade-skill roles. In the
- reference instantiation this is explicit and quantified: HQ rebalanced 362 → 511 and the total
- 6,762 → 6,911 (promoted to the actual structure 2026-09-14), with the IT function sized at
+ reference instantiation this is explicit and quantified: HQ rebalanced 362 → 532 (promotion 511 2026-09-14, gap-fill +21 2026-09-18) and the total
+ 6,762 → 6,932 (promoted to the actual structure 2026-09-14), with the IT function sized at
  122 FTE inside a 65–130 FTE band
  (including the 7-FTE AAP platform team). Every change of this class passes through change
  management with labor-relations sensitivity assessment before it touches a represented role
@@ -825,7 +825,7 @@ document, not a system.
 |---|---|---|
 | Sites / staff | 200 stores × 29; 4 DCs × 150 | Linear in the catalog's Volume fields; store-standard workflows clone with local parameters |
 | Assortment | 35,000 SKUs | Category structure scales; workflow shapes do not |
-| HQ | 362 → 511 | Re-derived from the catalog at each QBR (§6.6) — never copy another company's HQ |
+| HQ | 362 → 532 | Re-derived from the catalog at each QBR (§6.6) — never copy another company's HQ |
 | IT function | 122 FTE (band 65–130 at ~6,900 staff) | Band scales with estate complexity; the team taxonomy (9–11 domain + platform teams) holds to ~2× the reference scale |
 | Agents | Crawl → walk → run | The ladder, not the count, is the constant; start with five read-only agents, not fifty |
 | Governance | The bodies in §9.2 | Merge bodies below the reference scale (SIB+ARB is viable early); never merge ownership (Law 2) |

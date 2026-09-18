@@ -8,7 +8,7 @@
 
 Dual Training System (DTS) and Technical Education and Skills Development Authority (TESDA) partnership program management for BuildRight Depot Corp. — owning the structured vocational recruitment, training, and operational placement model to secure a high-quality frontline talent pipeline. This includes: TVI partner school accreditation; TESDA training plan design; student selection and store/DC placement; biometric time and attendance logging; stipend disbursement; BIR tax incentive filings (50% deduction on training expenses per RA 7686); skills assessment and competency certification; and transition to permanent hiring.
 
-With **6,911 employees** across 200 stores and 4 DCs, frontline technical expertise is a core brand differentiator. The DTS program under Republic Act 7686 allows BuildRight to build a robust, certified capability pipeline (covering paint mixing, tools expertise, and logistics management) while leveraging statutory tax incentives and stabilizing employee turnover.
+With **6,932 employees** across 200 stores and 4 DCs, frontline technical expertise is a core brand differentiator. The DTS program under Republic Act 7686 allows BuildRight to build a robust, certified capability pipeline (covering paint mixing, tools expertise, and logistics management) while leveraging statutory tax incentives and stabilizing employee turnover.
 
 ---
 

@@ -8,7 +8,7 @@
 
 Operational Excellence (OpEx), Process Mining & Continuous Improvement workflows for BuildRight
 Depot Corp. — owning the enterprise discipline of **systematically discovering, analyzing, and
-improving** the cross-functional processes that run a PHP 62.3B, 200-store, 4-DC, ~6,911-employee,
+improving** the cross-functional processes that run a PHP 62.3B, 200-store, 4-DC, ~6,932-employee,
 ~2.8M-monthly-transaction operation. BuildRight runs ~5,427 documented workflows; without a
 dedicated OpEx/CI program, inefficiency compounds — cycle-time drag, rework, manual handoffs,
 process variants, and unrealized automation collectively erode the 12–14% EBITDA target and the

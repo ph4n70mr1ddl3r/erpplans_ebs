@@ -6,8 +6,8 @@ Consistency review #34 (2026-08-29) reconciled the staffing-team and role-count
 claims scattered through the PA files' Staffing Implication / Time Estimate /
 Volume prose against the canonical headcount registers —
 
-  * `model-company-profile.md` §3.3 (18 HQ departments summing to 511 — the promoted structure of record, 2026-09-14; pre-promotion canon 362 retained in the TO §5.1 reference column),
-    §4 (stores 200 × 29 = 5,800; DCs 4 × 150 = 600; total 6,911),
+  * `model-company-profile.md` §3.3 (18 HQ departments summing to 532 — the promoted structure of record, gap-filled 2026-09-18 by the actual-org benchmark; the 2026-09-14 promotion figure was 511),
+    §4 (stores 200 × 29 = 5,800; DCs 4 × 150 = 600; total 6,932),
     §13.1 (Merchandising 43: 5 Category Managers, 10 Buyers, 6 Merchandise
     Planners/Allocators, 1 Pricing Manager, 4 Pricing Analysts, …);
   * `headcount-reality-check.md` (the historical gap record the rebalances
@@ -53,20 +53,20 @@ PROFILE = os.path.join(REPO, "01-model-company", "model-company-profile.md")
 
 # canonical §3.3 HQ department totals (spot anchors used by prose claims)
 # Re-based 2026-09-14 to the PROMOTED structure of record (TO v2.3 / profile
-# v3.0 §3.3: HQ 511; IT 122 per the 17-team product model, OM v3.13).
+# v3.1 §3.3: HQ 532 (2026-09-18 actual-org gap-fill; the 2026-09-14 promotion figure was 511); IT 122 per the 17-team product model, OM v3.13).
 DEPT_TOTALS = {
     "executive office": 7, "merchandising": 43, "finance & accounting": 62,
     "finance and accounting": 62, "finance": 62, "supply chain & logistics": 46,
     "supply chain and logistics": 46, "supply chain": 46,
-    "information technology": 122, "it": 122, "human resources": 42, "hr": 42,
+    "information technology": 122, "it": 122, "human resources": 55, "hr": 55,
     "marketing": 30, "store operations": 24, "legal & compliance": 20,
-    "legal and compliance": 20, "legal": 20, "internal audit & risk": 9,
-    "internal audit and risk": 9, "internal audit": 9,
-    "customer service / call center": 34, "call center": 34,
+    "legal and compliance": 20, "legal": 20, "internal audit & risk": 14,
+    "internal audit and risk": 14, "internal audit": 14,
+    "customer service / call center": 35, "call center": 35,
     "regional loss prevention": 27, "loss prevention": 27,
     "health, safety & environment": 13, "hse": 13,
     "quality management": 5, "facilities & real estate": 12,
-    "sustainability / esg": 4, "strategy / corporate planning": 4,
+    "sustainability / esg": 4, "strategy / corporate planning": 6,
     "trade / account management": 7,
 }
 

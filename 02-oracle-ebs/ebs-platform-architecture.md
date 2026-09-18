@@ -145,7 +145,7 @@ engineering (W4129–W4136); license cost is a FinOps decision, not a sourcing d
 |---|---|---|
 | **DEV** | Configuration build, extension development | Refresh-masked clones per W384 |
 | **TEST/SIT** | Integration testing with the integrated platforms (POS/ecommerce/WMS stubs) | IAP contract tests run here (sourcing model §7 rule 3) |
-| **UAT/TRAIN** | Business validation + the 6,911-user training estate | W73 parallel-run rehearsals |
+| **UAT/TRAIN** | Business validation + the 6,932-user training estate | W73 parallel-run rehearsals |
 | **PATCH** | ADOP patch/upgrade rehearsal (RUP, CPU) | Mandatory gate before any PROD patch |
 | **PROD** | Production | DR twin via Data Guard |
 

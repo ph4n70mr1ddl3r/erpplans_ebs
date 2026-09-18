@@ -87,7 +87,7 @@ platform-level wave shape is:
 | **W1 — Financial core & P2P** | AP/AR/GL close, procurement, iProcurement, iSupplier, treasury cash | AP, AR, PO, CE, XTR, AME | VS-15, VS-17, VS-18; 5-day close (FIN KPI) |
 | **W2 — Supply chain ledger** | Item master, inventory orgs, receiving, costing, landed cost, transfers | INV, PO, LCM, BOM, QA | VS-01–VS-05, VS-29; 35,000 active SKUs |
 | **W3 — Order-to-cash & retail spine** | Trade/corporate orders, advanced pricing, credit, collections; POS/ecommerce integration go-live | OM, QP, AR, IBY | VS-07/08/10/11/16; 200 stores |
-| **W4 — People** | Core HR + in-house payroll build integration (posting, statutory outputs live in the build) | PER + payroll-build interfaces | VS-19, VS-79; 6,911 employees |
+| **W4 — People** | Core HR + in-house payroll build integration (posting, statutory outputs live in the build) | PER + payroll-build interfaces | VS-19, VS-79; 6,932 employees |
 | **W5 — Projects, assets, property** | Capex/CIP, fixed assets, lease admin + PFRS 16 extension | PA, FA, PN + EXT | VS-20/35/40/42/148 |
 | **W6 — Optimization** | ECC dashboards, de-customization pass, RUP currency | ECC, Web ADI | Tier 3 analytics |
 

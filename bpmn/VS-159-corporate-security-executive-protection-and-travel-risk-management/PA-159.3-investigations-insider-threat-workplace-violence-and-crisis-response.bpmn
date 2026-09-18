@@ -78,7 +78,7 @@ Owner: CSO / Corporate Investigations Manager</bpmn:text>
     <bpmn:process id="W_W4690" name="W4690. Insider-Threat Detection, Background Re-Check &amp; Offboarding Risk" isExecutable="false">
       <bpmn:documentation>Trigger: Insider-threat indicator; role change (to sensitive role); offboarding (VS-19)
 Frequency: Continuous + per indicator
-Volume: ~ indicators across ~6,911 employees + contingent (VS-98) + sensitive-role population
+Volume: ~ indicators across ~6,932 employees + contingent (VS-98) + sensitive-role population
 Owner: CSO / Insider-Threat Program Manager
 Participants: HR (VS-19/VS-103), IT/cyber (VS-27.3 — user-behavior analytics), Ethics (VS-119), Legal (VS-100.3)
 Source: workflow W4690 — Insider-Threat Detection, Background Re-Check &amp; Offboarding Risk</bpmn:documentation>

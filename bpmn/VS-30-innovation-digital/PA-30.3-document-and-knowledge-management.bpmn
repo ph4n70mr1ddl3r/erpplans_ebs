@@ -980,8 +980,8 @@ Owner: Procurement Manager</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W1484" name="W1484. Employee Onboarding Knowledge Path, Role-Based Training Curriculum &amp; Competency Assessment" isExecutable="false">
       <bpmn:documentation>Trigger: New employee onboarding per W19.1; employee role change; or annual competency reassessment cycle
-Frequency: ~1,200–1,600 new hires/year (turnover replacement + growth); annual competency reassessment for all 6,911 employees
-Volume: ~1,400 new hire training paths/year + 6,911 annual reassessments; 8 role-based curricula covering store, DC, and HQ roles
+Frequency: ~1,200–1,600 new hires/year (turnover replacement + growth); annual competency reassessment for all 6,932 employees
+Volume: ~1,400 new hire training paths/year + 6,932 annual reassessments; 8 role-based curricula covering store, DC, and HQ roles
 Owner: HR Training Manager
 Participants: HR Training Manager, Department Supervisor, Store Manager, Department Head (HQ), LMS Administrator, New Employee
 Source: workflow W1484 — Employee Onboarding Knowledge Path, Role-Based Training Curriculum &amp; Competency Assessment</bpmn:documentation>

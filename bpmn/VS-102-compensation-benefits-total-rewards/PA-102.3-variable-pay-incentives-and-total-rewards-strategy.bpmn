@@ -306,7 +306,7 @@ Owner: CHRO</bpmn:text>
     <bpmn:process id="W_W3325" name="W3325. Total Rewards Statement Generation &amp; Value-Proposition Communication" isExecutable="false">
       <bpmn:documentation>Trigger: Annual; on hire; on major change
 Frequency: Annual + on event
-Volume: 6,911 employees
+Volume: 6,932 employees
 Owner: Compensation &amp; Benefits Manager
 Participants: C&amp;B Manager, HRBP, Internal Comms (links to VS-103.2), Payroll (links to VS-19.2), Employees
 Source: workflow W3325 — Total Rewards Statement Generation &amp; Value-Proposition Communication</bpmn:documentation>

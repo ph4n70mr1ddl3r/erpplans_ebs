@@ -40,7 +40,7 @@ Measurement assumptions (printed with every run):
     signal for its department, not a payroll defect.
 
 Read-only: exits 0 on success; exits 1 with a diagnostic if the canonical
-populations it asserts (5,427 workflows / HQ 511 / stores 5,800 / DCs 600) do
+populations it asserts (5,427 workflows / HQ 532 / stores 5,800 / DCs 600 — HQ re-based 2026-09-18 actual-org gap-fill) do
 not hold, so a corpus that has moved invalidates the analysis loudly.
 """
 
@@ -57,7 +57,7 @@ WF = os.path.join(REPO, "01-model-company", "workflows")
 TO = os.path.join(REPO, "01-model-company", "optimal-table-of-organization.md")
 
 CANON_WORKFLOWS = 5427
-CANON_HQ_HC = 511
+CANON_HQ_HC = 532
 CANON_STORE_HC = 5800          # 200 stores x 29
 CANON_DC_HC = 600              # 4 DCs x 150
 HQ_NET_HOURS = 1800            # net productive hours/FTE/year (assumption)

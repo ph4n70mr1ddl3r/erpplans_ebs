@@ -378,7 +378,7 @@ Owner: Facilities Site Coordinator / Waste (VS-73) / Energy (VS-120)</bpmn:text>
     <bpmn:process id="W_W4182" name="W4182. Workplace Services — Cafeteria, Canteen &amp; Employee Amenities" isExecutable="false">
       <bpmn:documentation>Trigger: Service setup; vendor cycle; employee-feedback review
 Frequency: Daily (service) + periodic (review)
-Volume: HQ (~511 staff, profile §3.3) + DC canteens; store break-rooms
+Volume: HQ (~532 staff, profile §3.3) + DC canteens; store break-rooms
 Owner: Facilities Workplace-Services Lead / Admin
 Participants: Catering Vendor, Wellness (VS-83), HSE (VS-24), HR (VS-19), Finance (VS-34.3)
 Source: workflow W4182 — Workplace Services — Cafeteria, Canteen &amp; Employee Amenities</bpmn:documentation>

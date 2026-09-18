@@ -34,7 +34,7 @@ It is distinct from **VS-130 (M&A)** — captive formation is a *corporate-trans
 commercial M&A.
 
 BuildRight's exposure is structural: at PHP 62.3B revenue, 205 sites in a typhoon/earthquake-prone
-archipelago, 600 POS, ~42.9K monthly ecommerce orders, ~6,911 employees, and ~5,200 trade accounts,
+archipelago, 600 POS, ~42.9K monthly ecommerce orders, ~6,932 employees, and ~5,200 trade accounts,
 the total cost of risk (property catastrophe, liability, fleet, crime, cyber, D&O, employee) is a
 material opex line; the PH commercial market has limited capacity and high pricing for catastrophe
 and specialty lines (typhoon/flood property, cyber), making a captive a standard risk-financing

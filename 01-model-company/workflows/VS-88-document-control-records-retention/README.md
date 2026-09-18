@@ -8,7 +8,7 @@
 
 Document Control, Records Management & Retention workflows for BuildRight Depot Corp. —
 covering the enterprise document and records lifecycle across 5 legal entities, 205 locations,
-and 6,911 employees, in compliance with Philippine retention mandates: BIR (10 years for
+and 6,932 employees, in compliance with Philippine retention mandates: BIR (10 years for
 accounting/tax records), SEC (corporate), DOLE (payroll/employment 3–5+ years), NPC/Data
 Privacy Act, DENR, and LGU requirements.
 

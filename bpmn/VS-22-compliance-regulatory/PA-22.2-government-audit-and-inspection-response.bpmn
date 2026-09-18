@@ -921,7 +921,7 @@ Owner: Legal &amp; Compliance — Regulatory Officer</bpmn:text>
     <bpmn:process id="W_W483" name="W483. DOLE Drug-Free Workplace Program Compliance" isExecutable="false">
       <bpmn:documentation>Trigger: Annual drug testing cycle; new hire onboarding (W15); reasonable suspicion event
 Frequency: Annual (scheduled testing); event-driven (reasonable suspicion, post-accident)
-Volume: ~6,911 employees across 5 entities; annual testing targets ~20–30% random sample (~1,300–2,000 tests/year)
+Volume: ~6,932 employees across 5 entities; annual testing targets ~20–30% random sample (~1,300–2,000 tests/year)
 Owner: HR Compliance Manager
 Participants: CHRO, DOLE-accredited drug testing laboratory, Store Managers, DC Managers, Legal, Security
 Source: workflow W483 — DOLE Drug-Free Workplace Program Compliance</bpmn:documentation>

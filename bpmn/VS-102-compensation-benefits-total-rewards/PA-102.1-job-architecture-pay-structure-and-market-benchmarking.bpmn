@@ -3,7 +3,7 @@
     <bpmn:process id="W_W3305" name="W3305. Job Analysis, Documentation &amp; Job Description Management" isExecutable="false">
       <bpmn:documentation>Trigger: New role creation; role change; annual job-architecture refresh
 Frequency: Continuous + annual
-Volume: ~250–350 distinct jobs across 6,911 employees
+Volume: ~250–350 distinct jobs across 6,932 employees
 Owner: Compensation &amp; Benefits Manager
 Participants: C&amp;B Manager, HR Business Partners, Hiring Managers, Master Data (links to VS-29)
 Source: workflow W3305 — Job Analysis, Documentation &amp; Job Description Management</bpmn:documentation>
@@ -297,7 +297,7 @@ Owner: Compensation &amp; Benefits Manager</bpmn:text>
     <bpmn:process id="W_W3309" name="W3309. Pay Equity, Equal-Pay-for-Equal-Work Analysis &amp; Gender/Wage-Gap Remediation" isExecutable="false">
       <bpmn:documentation>Trigger: Annual; legal/compliance trigger; merger/acquisition
 Frequency: Annual + on trigger
-Volume: All 6,911 employees
+Volume: All 6,932 employees
 Owner: Compensation &amp; Benefits Manager
 Participants: C&amp;B Manager, Legal (links to VS-100), CHRO, Internal Audit (links to VS-21.1), Data Privacy (links to VS-91)
 Source: workflow W3309 — Pay Equity, Equal-Pay-for-Equal-Work Analysis &amp; Gender/Wage-Gap Remediation</bpmn:documentation>
@@ -441,7 +441,7 @@ Owner: Compensation &amp; Benefits Manager</bpmn:text>
     <bpmn:process id="W_W3311" name="W3311. Pay Range Administration, Promotion/Merit Increase &amp; Range-Outlier Management" isExecutable="false">
       <bpmn:documentation>Trigger: Annual merit cycle; promotion; hire-in; off-cycle
 Frequency: Annual + on event
-Volume: 6,911 employees (merit) + ~1,200–1,600 hires (per profile §11.4)
+Volume: 6,932 employees (merit) + ~1,200–1,600 hires (per profile §11.4)
 Owner: Compensation &amp; Benefits Manager
 Participants: C&amp;B Manager, Managers, HRBP, Payroll (links to VS-19.2), CHRO
 Source: workflow W3311 — Pay Range Administration, Promotion/Merit Increase &amp; Range-Outlier Management</bpmn:documentation>

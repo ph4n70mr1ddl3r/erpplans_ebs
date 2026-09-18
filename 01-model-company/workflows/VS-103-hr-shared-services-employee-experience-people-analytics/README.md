@@ -7,7 +7,7 @@
 ## Overview
 
 HR Shared Services, Employee Experience (EX) & People Analytics workflows for BuildRight Depot Corp. —
-governing the **HR service-delivery and insight layer** for 6,911 employees across 5 legal entities
+governing the **HR service-delivery and insight layer** for 6,932 employees across 5 legal entities
 and 205 locations: the employee/manager service center (HR helpdesk), case management and tiered
 escalation, employee self-service (ESS) and manager self-service (MSS) portal operations, multi-entity
 shared-services delivery and cross-entity case routing, HR transaction processing (verifications,
@@ -25,7 +25,7 @@ Benefits)** which owns pay/benefits design; from **VS-72 (Cross-Entity Shared Se
 *finance/shared-services chargeback* across entities; and from **VS-29 (Master Data)** which owns the
 *data masters*. This value stream owns the *HR service-delivery operations, employee-experience
 program, and people-analytics function* — the front door for employee HR requests and the analytics
-that inform workforce decisions. At 6,911 employees with 15–20% turnover and a distributed 200-store
+that inform workforce decisions. At 6,932 employees with 15–20% turnover and a distributed 200-store
 footprint, a structured HR shared-services and analytics function is essential to service quality,
 self-service adoption, compliance, and data-driven people decisions.
 

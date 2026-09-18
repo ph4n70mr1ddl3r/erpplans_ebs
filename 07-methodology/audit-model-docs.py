@@ -632,9 +632,9 @@ ANCHORS = {
     ],
     "optimal-table-of-organization.md": [
         "Outbound (50)",
-        "**511** | **6,911**",
-        "**Total HQ** | **362** | **~440–515** | **511**",
-        "**504 + 7 = 511**",
+        "**532** | **6,932**",
+        "**Total HQ** | **362** | **~440–515** | **532**",
+        "**525 + 7 = 532**",
         "× 4 DCs = **600**",
     ],
     # 2026-09-07 eighth-wave review — the corrected forms the data-volumes doc's own
@@ -916,7 +916,7 @@ def to_register_hits():
     at 7' vs the register's 8 reporting rows; the §5.2 GL & Consolidation mix cell still
     pre-register). Rules: (a) §5.1's 18 numbered department rows must sum to the stated
     current (362) and target (511) columns, with the Total-HQ / store / DC / Total-company
-    rows present and cross-footing (6,762 = 362 + 5,800 + 600; 6,911 = 511 + 5,800 + 600);
+    rows present and cross-footing (6,762 = 362 + 5,800 + 600; 6,932 = 532 + 5,800 + 600);
     (b) each §5.2 sub-team table's HC column must foot to its own declared department
     total, which must be a §5.1 target cell; (c) every §5.3 '#### <Department> (N)' table
     must foot to its own N (the IT table is by-reference and exempt), the 18 declarations
@@ -942,8 +942,8 @@ def to_register_hits():
     tgt = [int(r[2]) for r in rows]
     if sum(cur) != 362:
         hits.append((rel, 0, f"§5.1 current column sums to {sum(cur)}, canonical 362"))
-    if sum(tgt) != 511:
-        hits.append((rel, 0, f"§5.1 target column sums to {sum(tgt)}, canonical 511"))
+    if sum(tgt) != 532:
+        hits.append((rel, 0, f"§5.1 target column sums to {sum(tgt)}, canonical 532 (re-based 2026-09-18 actual-org gap-fill; the 2026-09-14 promotion figure was 511)"))
 
     def total_row(label):
         m = re.search(rf"^\|\s*\|\s*\*\*{label}\*\*\s*\|\s*\*\*([\d,]+)\*\*\s*\|[^|]*\|\s*\*\*([\d,]+)\*\*\s*\|",
@@ -954,11 +954,11 @@ def to_register_hits():
         return (int(m.group(1).replace(",", "")), int(m.group(2).replace(",", "")))
 
     hq = total_row("Total HQ")
-    if hq and hq != (362, 511):
-        hits.append((rel, 0, f"§5.1 Total HQ row reads {hq}, canonical (362, 511)"))
+    if hq and hq != (362, 532):
+        hits.append((rel, 0, f"§5.1 Total HQ row reads {hq}, canonical (362, 532)"))
     comp = total_row("Total company")
-    if comp and comp != (6762, 6911):
-        hits.append((rel, 0, f"§5.1 Total company row reads {comp}, canonical (6,762, 6,911)"))
+    if comp and comp != (6762, 6932):
+        hits.append((rel, 0, f"§5.1 Total company row reads {comp}, canonical (6,762, 6,932)"))
     for label, want in (("Store personnel", 5800), ("DC personnel", 600)):
         m = re.search(rf"^\| \| {label} \| ([\d,]+) \| [^|]* \| \*\*([\d,]+)\*\* \|", s51, re.M)
         if not m or int(m.group(1).replace(",", "")) != want \
@@ -2164,9 +2164,9 @@ def licensing_bom_hits():
             if name.startswith("~~") or "Total" in name:
                 continue
             price, lic = num(m.group(3)), num(m.group(4))
-            if abs(price * 6911 - lic) > 0.5:
+            if abs(price * 6932 - lic) > 0.5:
                 add(rel, text[:m.start()].count("\n") + 1,
-                    f"Employee-metric HRMS row '{name}': {price} × 6,911 != {lic}")
+                    f"Employee-metric HRMS row '{name}': {price} × 6,932 != {lic}")
             total += lic
         stated = re.search(r"\*\*Perpetual license total\*\* \| \*\*\$([\d,]+)\*\*", sec_a)
         if not stated:
@@ -2284,7 +2284,7 @@ def licensing_bom_hits():
     # anchor-satisfying-itself-off-history failure, caught by the synthetic
     # injection before shipping).
     body = strip_footer(text)
-    for anc in ("= 592, rounded to 650",
+    for anc in ("= 597, rounded to 650",
                 "= 2,650, rounded to 2,700",
                 "~4.5 lines/order"):
         if anc not in body:

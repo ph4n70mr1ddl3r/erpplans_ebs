@@ -3,7 +3,7 @@
     <bpmn:process id="W_W4089" name="W4089. Digital Adoption Strategy &amp; In-App Guidance (Digital Adoption Platform)" isExecutable="false">
       <bpmn:documentation>Trigger: Major system deployment (ERP, POS, ecommerce, WMS, CRM)
 Frequency: Per deployment + maintained
-Volume: Enterprise systems (ERP for ~6,911 users; POS for cashiers; CRM/app for staff)
+Volume: Enterprise systems (ERP for ~6,932 users; POS for cashiers; CRM/app for staff)
 Owner: OCM Lead / IT Adoption Lead (links to VS-27)
 Participants: IT (VS-27), Enterprise Architecture (VS-113), L&amp;D (VS-19.4), process owners
 Source: workflow W4089 — Digital Adoption Strategy &amp; In-App Guidance (Digital Adoption Platform)</bpmn:documentation>
@@ -75,7 +75,7 @@ Owner: OCM Lead / IT Adoption Lead (links to VS-27)</bpmn:text>
     <bpmn:process id="W_W4090" name="W4090. Role-Based Learning, Training &amp; Enablement for Change" isExecutable="false">
       <bpmn:documentation>Trigger: Change requiring new capability; go-live approach
 Frequency: Per initiative + maintained
-Volume: ~6,911 employees + contingent (links to VS-98); role-based curricula
+Volume: ~6,932 employees + contingent (links to VS-98); role-based curricula
 Owner: OCM Lead / L&amp;D (links to VS-19.4)
 Participants: L&amp;D (VS-19.4/VS-124), HR (VS-103), champions (W4084), process owners
 Source: workflow W4090 — Role-Based Learning, Training &amp; Enablement for Change</bpmn:documentation>
@@ -147,7 +147,7 @@ Owner: OCM Lead / L&amp;D (links to VS-19.4)</bpmn:text>
     <bpmn:process id="W_W4091" name="W4091. User Adoption Measurement, System Usage &amp; Adoption Analytics" isExecutable="false">
       <bpmn:documentation>Trigger: Go-live; continuous
 Frequency: Continuous (daily/weekly)
-Volume: Enterprise systems (~6,911 users across ERP/POS/WMS/CRM/app)
+Volume: Enterprise systems (~6,932 users across ERP/POS/WMS/CRM/app)
 Owner: OCM Data Lead / BI (links to VS-28)
 Participants: BI (VS-28), IT (VS-27), HR analytics (VS-103.3), process owners
 Source: workflow W4091 — User Adoption Measurement, System Usage &amp; Adoption Analytics</bpmn:documentation>
@@ -363,7 +363,7 @@ Owner: OCM Lead / OpEx (VS-133)</bpmn:text>
     <bpmn:process id="W_W4094" name="W4094. Employee Experience &amp; Change Fatigue Monitoring" isExecutable="false">
       <bpmn:documentation>Trigger: Transformation intensity; engagement signals
 Frequency: Continuous + periodic pulse
-Volume: ~6,911 employees + contingent (VS-98)
+Volume: ~6,932 employees + contingent (VS-98)
 Owner: OCM Lead / HR-EX (links to VS-103.2)
 Participants: HR (VS-103), EX (VS-103.2), people analytics (VS-103.3), managers
 Source: workflow W4094 — Employee Experience &amp; Change Fatigue Monitoring</bpmn:documentation>

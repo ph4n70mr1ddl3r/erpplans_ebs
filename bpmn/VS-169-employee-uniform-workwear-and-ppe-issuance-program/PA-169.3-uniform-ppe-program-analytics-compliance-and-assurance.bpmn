@@ -3,7 +3,7 @@
     <bpmn:process id="W_W4929" name="W4929. Uniform / PPE Program Cost, Spend &amp; TCO Analytics" isExecutable="false">
       <bpmn:documentation>Trigger: Program live (W4913); monthly/quarterly review; FP&amp;A cycle (VS-17.4)
 Frequency: Continuous analytics + monthly/quarterly review
-Volume: 1 group cost/TCO program × ~6,911 employees + contingent
+Volume: 1 group cost/TCO program × ~6,932 employees + contingent
 Owner: Uniform Program Manager / Finance (VS-17.4) / HR Finance / Analytics
 Participants: Finance (VS-17.4), HR (VS-19/VS-102), Procurement (VS-03/VS-34), Analytics (VS-28), Shared Services (VS-72)
 Source: workflow W4929 — Uniform / PPE Program Cost, Spend &amp; TCO Analytics</bpmn:documentation>
@@ -306,7 +306,7 @@ Owner: Uniform Program Manager / Inventory (VS-05) / DC Ops (VS-04) / Store Ops 
     <bpmn:process id="W_W4933" name="W4933. Employee Satisfaction, Fit &amp; Comfort Feedback" isExecutable="false">
       <bpmn:documentation>Trigger: EX survey (VS-103.2); onboarding; fit-complaint; wear-period
 Frequency: Periodic survey + continuous feedback
-Volume: ~6,911 employees × satisfaction/fit feedback
+Volume: ~6,932 employees × satisfaction/fit feedback
 Owner: Uniform Program Manager / HR / Employee Experience (VS-103.2)
 Participants: EX (VS-103.2), HR (VS-19), Store Ops (VS-07), Supplier (W4917), Analytics (VS-28)
 Source: workflow W4933 — Employee Satisfaction, Fit &amp; Comfort Feedback</bpmn:documentation>
@@ -459,7 +459,7 @@ Owner: Uniform Program Manager / Sustainability (VS-25) / ESG</bpmn:text>
     <bpmn:process id="W_W4935" name="W4935. Data Privacy &amp; Employee Records (Sizing/Health Data, RA 10173)" isExecutable="false">
       <bpmn:documentation>Trigger: Program data collection (W4918 sizing); privacy review (VS-91); DPIA; records policy (VS-88)
 Frequency: Continuous governance + per change
-Volume: ~6,911 employees&#x27; sizing/issuance/PPE-fit/health-linked data
+Volume: ~6,932 employees&#x27; sizing/issuance/PPE-fit/health-linked data
 Owner: Privacy/DPO (VS-91) / Uniform Program Manager / HR / Legal
 Participants: DPO (VS-91), HR (VS-19), Legal (VS-100), IT (VS-27), Records (VS-88), Supplier (W4917)
 Source: workflow W4935 — Data Privacy &amp; Employee Records (Sizing/Health Data, RA 10173)</bpmn:documentation>

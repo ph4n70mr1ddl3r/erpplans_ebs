@@ -150,7 +150,7 @@ Owner: Ethics &amp; Compliance Officer / Legal</bpmn:text>
     <bpmn:process id="W_W3715" name="W3715. Speak-Up Channel Operations &amp; Multi-Channel Intake" isExecutable="false">
       <bpmn:documentation>Trigger: Reporter contacts a channel
 Frequency: Continuous (intake as reports arrive)
-Volume: Report volume across the workforce (~6,911 + contingent + vendors)
+Volume: Report volume across the workforce (~6,932 + contingent + vendors)
 Owner: Ethics &amp; Compliance Officer / Speak-Up Intake
 Participants: Ethics &amp; Compliance Officer, Speak-Up Intake team, third-party hotline vendor (links to W3720), HR (links to VS-103.1), IT (links to VS-27), Legal (links to VS-100.3), Cross-Entity (links to VS-72)
 Source: workflow W3715 — Speak-Up Channel Operations &amp; Multi-Channel Intake</bpmn:documentation>
@@ -366,7 +366,7 @@ Owner: Ethics &amp; Compliance Officer</bpmn:text>
     <bpmn:process id="W_W3718" name="W3718. Ethics Awareness, Training &amp; Culture Program" isExecutable="false">
       <bpmn:documentation>Trigger: Onboarding; annual cycle; case learning; policy change
 Frequency: Annual + onboarding + on change
-Volume: ~6,911 employees + contingent + key vendors
+Volume: ~6,932 employees + contingent + key vendors
 Owner: Ethics &amp; Compliance Officer / HR-L&amp;D
 Participants: Ethics &amp; Compliance Officer, HR/L&amp;D (links to VS-19.4/VS-103), Communications (links to VS-14.3/VS-103.2), Store Ops (links to VS-07), Legal (links to VS-100.3), ABC (links to VS-86.3)
 Source: workflow W3718 — Ethics Awareness, Training &amp; Culture Program</bpmn:documentation>

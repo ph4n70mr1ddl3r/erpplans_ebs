@@ -10,7 +10,7 @@ Unified workforce background-screening, credentialing & personnel-vetting workfl
 BuildRight Depot Corp. — owning the **enterprise-wide cross-category discipline** that screens,
 verifies, and continuously monitors the trustworthiness and credentials of every individual
 granted access to BuildRight's people, assets, cash, data, and customers — across **employees**
-(~6,911 + ~1,200–1,600 hires/yr), **contingent/outsourced workers** (~10–20% of store/DC labor),
+(~6,932 + ~1,200–1,600 hires/yr), **contingent/outsourced workers** (~10–20% of store/DC labor),
 **vendor/3PL personnel with site access** (delivery drivers, service technicians, promodizers),
 and **executives/sensitive roles** — through a centralized screening program, role-based
 screening packages, screening-vendor governance, consent/privacy (RA 10173) compliance,

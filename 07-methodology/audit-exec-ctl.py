@@ -50,7 +50,7 @@ import argparse, glob, os, re, sys
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MC = os.path.join(REPO, "01-model-company")
 
-ANCHORS = ["| Employees | 6,911 |", "| Active SKUs | 35,000 |",
+ANCHORS = ["| Employees | 6,932 |", "| Active SKUs | 35,000 |",
            "| Stores | 200 (nationwide: Luzon, Visayas, Mindanao) |",
            "| POS Terminals | 600 (3 per store) |",
            "| Monthly Transactions | 2.8 million |",

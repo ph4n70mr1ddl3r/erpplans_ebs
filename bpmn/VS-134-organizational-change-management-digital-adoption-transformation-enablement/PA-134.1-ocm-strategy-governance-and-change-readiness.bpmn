@@ -3,7 +3,7 @@
     <bpmn:process id="W_W4073" name="W4073. OCM Strategy, Operating Model &amp; Transformation Governance" isExecutable="false">
       <bpmn:documentation>Trigger: Program stand-up; transformation portfolio established; annual review
 Frequency: Annual + on major transformation
-Volume: Enterprise OCM function (5 entities, ~6,911 employees, 200 stores)
+Volume: Enterprise OCM function (5 entities, ~6,932 employees, 200 stores)
 Owner: CHRO
 Participants: CEO, CHRO (links to VS-103), PMO (VS-112), Innovation/Digital (VS-30), OpEx (VS-133), Communications (VS-14.3/VS-103.1)
 Source: workflow W4073 — OCM Strategy, Operating Model &amp; Transformation Governance</bpmn:documentation>
