@@ -56,7 +56,7 @@ coverage failures.
 | **G14** | Field Service Cloud (D13 parity on Fusion — repo Fusion BOM line B110413; installation dispatch VS-12) | **Absent**; §4 acknowledged the gap ("floor-bound") without pricing a line | Added committed line 47 (360 Pooled NU ⚠min floor = $81,000/mo ≈ ₱33.6M/yr); floor-relief question Q15 | **CLOSED** (relief Q15) |
 | **G15** | Fusion Transportation Management (freight audit — VS-110, PA-15.1; EBS shapes carry OTE inside the OM base, Fusion shapes had nothing) | **"Out of scope (transport stays with warehouse decision)"** | Priced as PD under the F-PARITY block (25 HNU @ $650 TBD† ≈ ₱6.7M/yr); decision Q14 | **OPEN — decision** |
 | **G16** | WMS Labor Management parity on Fusion (repo C6/W796 — engineered standards, real-time productivity) in the WMS-replaced shapes F2/F4 | Priced only as swing (`WWM` B90537, ₱9.0M/yr) — not selecting it silently drops an adopted C6 surface | Re-tiered **committed in F2/F4**; swing remainder restated (₱76.1M/yr common + ₱4.1M/yr WMS Automation) | **CLOSED** |
-| **G17** | Doctrine R1 (adopted = licensed at go-live — licensing-bom decision 5 / v2 companion rule R1) | **$887,920 of adopted EBS products** (Treasury A8, Credit Mgmt D3, RM&I A11, iReceivables A14, ICM H11, Quality C12, Site Hub C3 ×3, SLM B6, Project Mgmt) sat in the optional select-at-PO swing | §2.4 renamed **E-SCOPE**, re-tiered committed; §2.5/§4 totals restated so committed = former max (plus closure lines); the select-at-PO mechanism survives only for genuinely optional Fusion lines and the PD block | **CLOSED** |
+| **G17** | Doctrine R1 (adopted = licensed at go-live — licensing-bom decision 5 / v2 companion rule R1) | **$887,920 of adopted EBS products** (Treasury A8, Credit Mgmt D3, RM&I A11, iReceivables A14, ICM H11, Quality C12, Site Hub C3 ×3, SLM B6, Project Mgmt) sat in the optional select-at-PO swing | RFQ section 2.4 renamed **E-SCOPE**, re-tiered committed; section 2.5/4 totals restated so committed = former max (plus closure lines); the select-at-PO mechanism survives only for genuinely optional Fusion lines and the PD block | **CLOSED** |
 
 **Aligned and sound (no action):** the Financials spine and AR instruments via base entitlements
 (Bills Receivable/Lockbox/Balance Forward Billing ride Financials — R6); the procurement family;
@@ -111,16 +111,22 @@ decision (RF-capable stores or not) should be recorded before the PO.
    plausibly the current-GPL one; the repo row trues at its next pass. Verify at quote.
 2. **† lines needing part #/price:** Discrete Mfg bundle (line 6), AMS (line 13), L&FM (line
    51), In-Memory Cost (line 54), Credit Mgmt/RM&I/ICM/Quality/Project Mgmt (as before), and
-   Fusion parity lines 43/44/45 + TMS PD.
+   Fusion parity lines 43/44/45 + TMS PD. *RFQ v2.0.2 status (2026-09-18): six of these resolved
+   on the September 10, 2026 EBS GPL — Discrete Manufacturing A81412, AMS L93139, L&FM L10090
+   (re-metric'd to the GPL managed-asset SKU, qty TBC pending our managed-asset figure, excluded
+   from totals), In-Memory Cost L98184 (trued to $25,000/user, min 25 — qty 15, $625,000), Load
+   Testing L107647, Internet Expenses A85655; the TBC set shrinks to Credit Mgmt, RM&I, ICM,
+   Oracle Quality and Project Management (not on the EBS GPL) plus Fusion GOP/Revenue
+   Management/Quality Management.*
 3. **ICM on 12.2.12** — availability check stands (Vision-instance findings, VF register).
 4. **PD block pricing** is repo-canon sizing (200-store CZ users; 50/15/25 service users) —
-   resize to the actual operation when the §6 decisions land.
+   resize to the actual operation when the section-6 decisions land.
 
 ## 6. Decisions required (the PD register — no silent drops)
 
 | # | Decision | RFQ vehicle | Repo anchor | Owner |
 |---|---|---|---|---|
-| D-1 | In-store fabrication quoting: adopt Configurator CZ or de-scope (Fusion fallback CPQ B111751) | PD-1 / §3.4 note | C16, W1009 family | Store Ops + IT |
+| D-1 | In-store fabrication quoting: adopt Configurator CZ or de-scope (Fusion fallback CPQ B111751) | PD-1 / RFQ section-3.4 note | C16, W1009 family | Store Ops + IT |
 | D-2 | Service family: adopt TeleService/Service Contracts/Depot Repair for W41 complaints, VS-53 warranty, VS-155 refurbish — or record the re-homing (build/POS side) | PD-2/3/4 | D14/D16/D17 | Customer Experience + Service |
 | D-3 | Field Service foundation: if PD-2/3/4 are dropped, confirm with Oracle that Field Service functions without the SR/Install-Base foundation (Q12) | Q12 | D13 | IT Licensing |
 | D-4 | Project Billing: adopt for W165 retention/milestone billing or re-route via OM milestone invoicing | PD-5 | §2.7, VS-11 | Finance + Trade Sales |
@@ -132,24 +138,43 @@ decision (RF-capable stores or not) should be recorded before the PO.
 
 ## 7. RFQ v2 amendment summary (what changed in the quote document)
 
-- **§2.4** renamed **E-SCOPE** and re-tiered committed (G17); coverage-closure lines 50–54 added
+- RFQ **section 2.4** renamed **E-SCOPE** and re-tiered committed (G17); coverage-closure lines 50–54 added
   (G1–G5); the blanket out-of-scope note replaced by the priced PD-1–PD-5 block (G6–G10).
-- **§3.4** gains the committed **F-PARITY block** (lines 43–47: GOP, Revenue Mgmt, Quality,
+- RFQ **section 3.4** gains the committed **F-PARITY block** (lines 43–47: GOP, Revenue Mgmt, Quality,
   Pooled Order Lines, Field Service Cloud — $100,650/mo ≈ ₱41.7M/yr, all four F shapes) with
   TMS as PD (G11–G15); `WWM` re-tiered committed in F2/F4 (G16); swing restated to
   ₱76.1M/yr common + ₱4.1M/yr WMS Automation.
-- **§2.5 / §3.5 / §4** totals restated: EBS E4 committed $18,774,765 → **$19,771,525**
+- RFQ **sections 2.5 / 3.5 / 4** totals restated: EBS E4 committed $18,774,765 → **$19,771,525**
   (≈ ₱648.7M → **₱683.1M** one-time; ₱142.7M → **₱150.3M/yr** support); Fusion max F4
   ₱501.3M → **₱543.0M/yr** (committed ₱416.2M → **₱466.9M/yr**). PD block carried outside the
   committed columns: +$1,099,475 ≈ ₱38.0M one-time · ₱8.4M/yr if all five PD lines are adopted
   (EBS 5-yr ≈ ₱1,515M with PD vs ≈ ₱1,435M without).
-- **§6** gains **Q11–Q15** (ecommerce order-line metric; Field Service foundation; Services
+- RFQ **section 6** gains **Q11–Q15** (ecommerce order-line metric; Field Service foundation; Services
   Procurement vs contingent labor; recorded de-scope decisions; Fusion parity pricing and
   floor relief). Q6's † list extended with the closure/parity lines.
 
+> **Post-review RFQ movement (recorded 2026-09-18, fifty-fifth-wave review).** The RFQ has
+> evolved past the v2 amendment this section summarizes, in two same-day revisions in its own
+> repository: **v2.0.1** (consistency pass — WWM re-housed from the swing table into the
+> F-PARITY block as line 48, F2 & F4 only, parity total restated $122,325/mo ≈ ₱50.7M/yr;
+> E-HR minimum-quantity flags; the support-convention and per-line-PHP-rounding sentences; Q5
+> floor-relief list completed; Q11 split into the derived ~2.3M-line and licensed 2.5M-line
+> counts) and **v2.0.2** (GPL-verification errata — the six formerly-TBC part #s resolved on
+> the September 10, 2026 EBS GPL per §5.2 above; L&FM re-metric'd and excluded from totals
+> pending the managed-asset figure; In-Memory Cost trued to $625,000; E-SCOPE $1,884,680 →
+> $2,386,670; E1–E4 committed restated to $9,550,365 / $14,149,800 / $15,674,080 /
+> **$20,273,515** ≈ ₱330.0 / 488.9 / 541.6 / **₱700.5M** one-time · 72.6 / 107.6 / 119.1 /
+> **₱154.1M**/yr support — superseding the v2-amendment figures quoted above, whose E4 read
+> $19,771,525 ≈ ₱683.1M · ₱150.3M/yr; §4 decision table restated at EBS 5-yr ₱1,471M, ₱1,551M
+> with PD; TMS PD trued to B91099). The **coverage dispositions stand unchanged** — every
+> G1–G17 gap and its v2 resolution, the PD register D-1–D-9 and the quantity reconciliation
+> are unaffected by the repricing; the audited licensing-bom baseline itself moved v2.1 →
+> v2.2 the same day (the actual-org gap-fill re-base — quantities and footings only, no
+> product-set change), so no disposition moves on that account either.
+
 ---
 
-*Document Version: 1.0 | Date: 2026-09-18 | Initial issue — the cross-repo coverage audit of the
+*Document Version: 1.1 | Date: 2026-09-18 | **Fifty-fifth-wave consistency review (post-review RFQ movement recorded):** the RFQ's own v2.0.1 (WWM re-housed as F-PARITY line 48, E-HR min-quantity flags, Q5/Q11 completions) and v2.0.2 (September 2026 GPL errata — six part #s resolved, L&FM re-metric'd qty-TBC, In-Memory Cost trued $625,000, E-SCOPE $2,386,670, E1–E4 committed restated with E4 at $20,273,515 ≈ ₱700.5M · ₱154.1M/yr, §4 restated ₱1,471M/₱1,551M, TMS PD B91099) revisions supersede the v2-amendment figures the §7 summary quotes — recorded as a dated status note in §7 with the §5.2 † list trued to the resolved part-# set; the G1–G17 dispositions, the PD register and the quantity reconciliation stand unchanged, as does the licensing-bom baseline movement v2.1 → v2.2 (quantity-only re-base, no product-set change). No repo canon change: no requirement, workflow, control, register-row, disposition, HC, role or count movement. Prior v1.0 | Date: 2026-09-18 | Initial issue — the cross-repo coverage audit of the
 8-scenario license RFQ against the adopted footprint (licensing-bom v2.1, fit-gap resolutions
 9–34, coverage-map v2.0); register G1–G17 with dispositions, the quantity reconciliation
 (Q10 divergence), the metric-verification items, the PD decision register D-1–D-9, and the RFQ

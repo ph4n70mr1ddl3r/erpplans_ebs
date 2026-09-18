@@ -521,7 +521,14 @@ DOCS = ["mobile-app-strategy.md", "data-migration-mapping.md",
         # structural rule (every scenario total re-derived from the doc's own
         # line items, per the dv_volume_hits arithmetic precedent).
         "../02-oracle-ebs/licensing-bom.md",
-        "../02-oracle-ebs/ebs-vision-verification.md"]
+        "../02-oracle-ebs/ebs-vision-verification.md",
+        # 2026-09-18 fifty-fifth-wave consistency review: the cross-repo
+        # quote-coverage review joins the doc set — it shipped mapped but unguarded
+        # (the licensing_bom_hits precedent), and its quoted RFQ figures had already
+        # drifted once against the RFQ's own v2.0.1/v2.0.2 revisions. The guard
+        # gains the quote_coverage_hits structural rule (register skeletons + the
+        # canon/anchors + the supersession note).
+        "../02-oracle-ebs/quote-coverage-review.md"]
 RETIRED_FIGURES = ["6,757", "6,715", "5,357", "5,362", "5,349", "5,341",
                    "80,000 SKU", "1,000 POS terminal"]
 
@@ -1088,7 +1095,7 @@ def methodology_index_hits():
     for ln, l in enumerate(open(index_path, encoding="utf-8").read().splitlines(), 1):
         if "469/6,869" in l:
             hits.append((rel, ln, 'retired TO-anchor pair "469/6,869" (the guard\'s '
-                         'two-state anchors are 362/6,762 → 511/6,911)'))
+                         'two-state anchors are 362/6,762 → 532/6,932)'))
         for name, ver in current.items():
             if name not in l:
                 continue
@@ -2289,10 +2296,27 @@ def licensing_bom_hits():
                 "~4.5 lines/order"):
         if anc not in body:
             hits.append((rel, 0, f'missing required footing anchor "{anc}"'))
-    for lit in ("DC 550", "(≈2.3M OM order lines) |"):
+    for lit in ("DC 550", "(≈2.3M OM order lines) |", "+ 511 HQ"):
         if lit in body:
             hits.append((rel, body[:body.index(lit)].count("\n") + 1,
                          f'retired unqualified build-up form "{lit}"'))
+
+    # ---- (e) fifty-fifth-wave driver-row arm — the §1 Total-employees driver row
+    # must carry its store/DC/HQ breakdown parenthetical and the breakdown must
+    # foot to the row's own leading figure. The 2026-09-18 gap-fill re-based the
+    # leading figure to 6,932 but left the parenthetical at the retired
+    # '+ 511 HQ' — a 21-seat contradiction inside the one row every employee-
+    # derived quantity prices off, invisible to the line-item arms above.
+    m = re.search(r"\| Total employees \| \*\*([\d,]+)\*\* \(([\d,]+) store \+ ([\d,]+) DC \+ ([\d,]+) HQ\)",
+                  body)
+    if not m:
+        hits.append((rel, 0, '§1 Total-employees driver row: breakdown form not found '
+                             '(expected "**N** (S store + D DC + H HQ)")'))
+    else:
+        tot, store, dc, hq = (int(num(g)) for g in m.groups())
+        if store + dc + hq != tot:
+            hits.append((rel, 0, f"§1 driver breakdown {store} + {dc} + {hq} "
+                                 f"!= stated total {tot}"))
     return hits
 
 
@@ -2429,6 +2453,77 @@ def integration_mirror_hits():
                              f"matrix row {i + 1} '{cs} → {ct}' — the Flow column must "
                              f"quote the canonical endpoints verbatim, in the matrix's "
                              f"own order"))
+    return hits
+
+
+def gap_fill_straggler_hits():
+    """2026-09-18 fifty-fifth-wave consistency review — the actual-org gap-fill's
+    own live-surface stragglers, the class its 294-replacement corpus sweep
+    missed: (a) the classification register's live table cells — the W10
+    Payroll-Processing 'Operational Significance' cell still carried the retired
+    6,911 employee total after the sweep (the file's dated batch-note blockquotes
+    and version footer are the frozen-history surfaces and stay exempt); (b) the
+    official TO's §1 design stance — still reading 'lands at HQ 511' two lines
+    under a states table the gap-fill had re-pointed (the promoted-structure
+    rationale the gap-fill superseded; no rule read the stance prose)."""
+    hits = []
+    # (a) classification register — live (non-blockquote, pre-footer) lines only
+    cpath = os.path.join(REPO, "01-model-company", "workflows",
+                         "workflow-criticality-classification.md")
+    lines = open(cpath, encoding="utf-8").read().split("\n")
+    fi = next((i for i, l in enumerate(lines)
+               if l.startswith("*Document Version:") or l.startswith("*Date:")),
+              len(lines))
+    for i, l in enumerate(lines[:fi]):
+        if l.startswith(">"):
+            continue
+        if "6,911" in l:
+            hits.append(("workflow-criticality-classification.md", i + 1,
+                         'retired 6,911 employee total on a live line (the dated '
+                         'batch-note blockquotes are the frozen-history surfaces)'))
+    if not any("6,932 employees" in l for l in lines[:fi]):
+        hits.append(("workflow-criticality-classification.md", 0,
+                     'missing live "6,932 employees" W10 significance cell'))
+    # (b) TO §1 design stance — footer-stripped body
+    tpath = os.path.join(REPO, "01-model-company", "optimal-table-of-organization.md")
+    tbody = open(tpath, encoding="utf-8").read().split("*Document Version:")[0]
+    if "lands at **HQ 511**" in tbody:
+        hits.append(("optimal-table-of-organization.md",
+                     tbody[:tbody.index("lands at **HQ 511**")].count("\n") + 1,
+                     'retired §1 design stance "lands at **HQ 511**" (the 2026-09-18 '
+                     'gap-fill raised the promoted 511 to HQ 532)'))
+    if "raised it to **HQ 532**" not in tbody:
+        hits.append(("optimal-table-of-organization.md", 0,
+                     'missing §1 design-stance gap-fill anchor "raised it to **HQ 532**"'))
+    return hits
+
+
+def quote_coverage_hits():
+    """2026-09-18 fifty-fifth-wave consistency review — structural guard for the
+    cross-repo quote-coverage review (02-oracle-ebs/quote-coverage-review.md; it
+    joined the DOCS set one wave after shipping, the licensing_bom_hits precedent
+    — and its quoted RFQ figures had already drifted once against the RFQ's own
+    v2.0.1/v2.0.2 revisions). Re-derives, every run: the G1–G17 coverage register
+    (17 unique ids, no gaps), the PD decision register D-1–D-9, the §4
+    quantity-reconciliation canon row (RFQ go-live 7,247 employees vs the 6,932
+    repo canon), and the v1.1 post-review status note's supersession anchors."""
+    rel = "quote-coverage-review.md"
+    hits = []
+    path = os.path.normpath(os.path.join(MC, "..", "02-oracle-ebs", rel))
+    text = open(path, encoding="utf-8").read()
+    body = text.split("*Document Version:")[0]
+    ids = [int(m) for m in re.findall(r"\| \*\*G(\d+)\*\* \|", body)]
+    if ids != list(range(1, 18)):
+        hits.append((rel, 0, f"G-register ids {ids} != 1..17"))
+    dids = sorted(int(m.group(1)) for m in re.finditer(r"\| D-(\d) \|", body))
+    if dids != list(range(1, 10)):
+        hits.append((rel, 0, f"PD decision register ids {dids} != D-1..D-9"))
+    for anc in ("Post-review RFQ movement (recorded 2026-09-18",
+                "**$20,273,515**",
+                "coverage dispositions stand unchanged",
+                "7,247 | 9,271 | 6,932"):
+        if anc not in body:
+            hits.append((rel, 0, f'missing required anchor "{anc}"'))
     return hits
 
 
@@ -2586,6 +2681,9 @@ def main():
     hits.extend(licensing_bom_hits())
     # 2026-09-17 fifty-fourth-wave consistency review addition (Vision verification report)
     hits.extend(vision_verification_hits())
+    # 2026-09-18 fifty-fifth-wave consistency review additions
+    hits.extend(gap_fill_straggler_hits())
+    hits.extend(quote_coverage_hits())
     for doc, line, detail in hits:
         print(f"model-doc: {doc}:{line}: {detail}")
     print(f"audit-model-docs: {len(hits)} hit(s) across {len(DOCS)} documents")

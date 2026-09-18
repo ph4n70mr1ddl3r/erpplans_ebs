@@ -1,17 +1,30 @@
 #!/usr/bin/env python3
 """SSH helper for the EBS Vision VM (password auth via the WSL->Windows-host route).
 
-Usage: python3 .ebs-ssh.py 'remote command'
-       python3 .ebs-ssh.py --put local remote
-       python3 .ebs-ssh.py --get remote local
+The VM password is read from the EBS_VM_PASS environment variable — never hardcoded
+(fifty-fifth-wave consistency review: the credential shipped in the tracked file;
+the git history still carries it, so rotate the VM password when convenient).
+
+Usage: EBS_VM_PASS=... python3 .ebs-ssh.py 'remote command'
+       EBS_VM_PASS=... python3 .ebs-ssh.py --put local remote
+       EBS_VM_PASS=... python3 .ebs-ssh.py --get remote local
 """
+import os
 import sys
 import socket
 import paramiko
 from subprocess import run
 
 VM_USER = "oracle"
-VM_PASS = "Samurai1975@!"
+
+
+def vm_pass():
+    pw = os.environ.get("EBS_VM_PASS")
+    if not pw:
+        print("error: set EBS_VM_PASS in the environment (no hardcoded credential)",
+              file=sys.stderr)
+        sys.exit(2)
+    return pw
 
 
 def gateway():
@@ -28,7 +41,7 @@ def connect():
 def main():
     client, sock = connect()
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    client.connect(gateway(), port=2222, username=VM_USER, password=VM_PASS, sock=sock,
+    client.connect(gateway(), port=2222, username=VM_USER, password=vm_pass(), sock=sock,
                    allow_agent=False, look_for_keys=False)
     args = sys.argv[1:]
     if not args:

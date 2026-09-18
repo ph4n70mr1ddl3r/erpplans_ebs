@@ -52,12 +52,15 @@
 | **Actual (this document)** | **532** | **6,932** | Adopted 2026-09-02 (HQ 469 / 6,869); revised 2026-09-03 for the capability-sourcing model (+35 IT) and agentic-AI extension (+7 IT); conformed to the two-tier sourcing doctrine and **promoted to the actual structure 2026-09-14** (OM v3.13); **revised 2026-09-18 for the actual-org gap-fill (+21: IA +5, HR +13, CS +1, Strategy +2)**; scales per §12 |
 
 **Design stance.** The pre-optimization baseline (HQ 362) was the *minimum-viable* TO — the floor that
-resolved the known gaps. The promoted structure lands at **HQ 511** — the upper edge of the
+resolved the known gaps. The promoted structure landed at **HQ 511** — the upper edge of the
 reality-check's comfortable band (~440–515 after the 2026-09-03 capability-sourcing + agentic revisions under the two-tier doctrine;
 the band was ~440–470 under the unified-ERP model, when IT = 80), pushed to the top by
 IT = 122 per the product
-operating model. The three build-up phases of §11 are the **hiring-execution record** —
-structure first, talent acquisition in sequence, never big-bang hiring.
+operating model — and the **2026-09-18 actual-org gap-fill** raised it to **HQ 532**
+(+21: IA +5, HR +13, CS +1, Strategy +2), deliberately above the band on actual-operator
+evidence (the four store-embedded workload cells the workflow-derived bands could not see —
+§5.3; the reality-check's 2026-09-18 update). The three build-up phases of §11 are the
+**hiring-execution record** — structure first, talent acquisition in sequence, never big-bang hiring.
 
 ---
 

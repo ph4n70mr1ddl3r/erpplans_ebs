@@ -245,7 +245,8 @@ erpplans/
 │   ├── integrations.md                IAP-first integration patterns for every flow in the canonical integration matrix
 │   ├── data-migration.md              Object → EBS load-path register (interfaces/APIs only), validation gates, cutover
 │   ├── licensing-bom.md               License bill of materials — EBS perpetual + support vs Fusion Cloud scenarios, from the module footprint & user/volume drivers (negotiation baseline; totals re-derived by audit-model-docs)
-│   └── ebs-vision-verification.md     Live verification of the documentation set against the Oracle EBS 12.2.12 Vision instance — footprint conformance, ten end-to-end transactional paths, findings register (six v1.0 entries, extended to eleven by verification round 2) (regenerated per verification run)
+│   ├── ebs-vision-verification.md     Live verification of the documentation set against the Oracle EBS 12.2.12 Vision instance — footprint conformance, ten end-to-end transactional paths, findings register (six v1.0 entries, extended to eleven by verification round 2) (regenerated per verification run)
+│   └── quote-coverage-review.md       Cross-repo coverage audit of the 8-scenario license RFQ (erp_compare_infor) against the adopted footprint — gap register G1–G17, quantity reconciliation, PD decision register D-1–D–9, RFQ v2 amendment summary (+ v2.0.1/v2.0.2 status)
 ├── dmn/                         ← Generated DMN 1.3 decision models (79 decisions across 40 process areas; rule tables + tiered PHP authorization thresholds; mirrors the workflows/ tree; regenerates via 07-methodology/generate-dmn.py)
 ├── bpmn/                        ← Generated BPMN 2.0 models (5,450 processes; mirrors the workflows/ tree; regenerates via 07-methodology/generate-bpmn.py)
 ├── CHANGELOG.md                 ← Revision history
