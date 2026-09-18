@@ -3,7 +3,7 @@
     <bpmn:process id="W_W10" name="W10. Payroll Processing" isExecutable="false">
       <bpmn:documentation>Trigger: Semi-monthly payroll calendar (15th and 30th)
 Frequency: 10 payroll runs/month (5 entities × 2)
-Volume: ~6,911 employees total
+Volume: ~6,932 employees total
 Owner: Payroll Manager
 Participants: Payroll Officer, HR Assistant, Department Heads (OT/leave approval), Finance (bank file)
 Source: workflow W10 — Payroll Processing</bpmn:documentation>
@@ -612,7 +612,7 @@ Owner: Payroll Specialist</bpmn:text>
     <bpmn:process id="W_W644" name="W644. 13th Month Pay Reconciliation &amp; Compliance" isExecutable="false">
       <bpmn:documentation>Trigger: Monthly accrual cycle; December payment preparation
 Frequency: Monthly accrual booking; November review and reconciliation; December payment
-Volume: 6,911 employees across 5 entities
+Volume: 6,932 employees across 5 entities
 Owner: Payroll Specialist
 Participants: Payroll Manager, Finance Analyst, HR Business Partner
 Source: workflow W644 — 13th Month Pay Reconciliation &amp; Compliance</bpmn:documentation>
@@ -697,7 +697,7 @@ Duration: 1 day</bpmn:documentation>
         <bpmn:outgoing>W644_Flow26</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W644_Task14" name="December 15–24: Finance Analyst executes payment via bank transfer; ensures all…">
-        <bpmn:documentation>Step 8: December 15–24: Finance Analyst executes payment via bank transfer; ensures all 6,911 employees receive payment by December 24 deadline per PD 851
+        <bpmn:documentation>Step 8: December 15–24: Finance Analyst executes payment via bank transfer; ensures all 6,932 employees receive payment by December 24 deadline per PD 851
 Responsible (R): Finance Analyst
 Accountable (A): Finance Manager
 Duration: 1 day</bpmn:documentation>
@@ -1074,7 +1074,7 @@ Owner: Payroll Manager</bpmn:text>
     <bpmn:process id="W_W1306" name="W1306. Multi-Entity Statutory Benefits Consolidation, Remittance Reconciliation &amp; Government Portal Compliance" isExecutable="false">
       <bpmn:documentation>Trigger: Monthly statutory benefits remittance deadline (SSS: last day of month; PhilHealth: every 10th; Pag-IBIG: every 10th of following month); or quarterly reconciliation cycle
 Frequency: Monthly remittance across 5 entities (15 separate filings/month: 5 entities × 3 agencies); quarterly reconciliation
-Volume: 6,911 employees across 5 entities; ~PHP 100–120M/month in total statutory contributions (employee + employer share)
+Volume: 6,932 employees across 5 entities; ~PHP 100–120M/month in total statutory contributions (employee + employer share)
 Owner: Payroll Manager
 Participants: Payroll Manager, Payroll Analyst, HR Data Specialist, Finance Controller, SSS/PhilHealth/Pag-IBIG branch representatives
 Source: workflow W1306 — Multi-Entity Statutory Benefits Consolidation, Remittance Reconciliation &amp; Government Portal Compliance</bpmn:documentation>
@@ -1176,7 +1176,7 @@ Owner: Payroll Manager</bpmn:text>
     <bpmn:process id="W_W1416" name="W1416. Philippine 13th Month Pay Computation, Monthly Accrual Booking &amp; Year-End Compliance Processing" isExecutable="false">
       <bpmn:documentation>Trigger: Monthly accrual cycle (ongoing); year-end payment processing (November–December); or employee separation (W643) triggering pro-rated 13th month payout
 Frequency: Monthly accrual; annual computation and payment (paid by December 24 per Presidential Decree No. 851)
-Volume: 6,911 employees across 5 legal entities; ~1,200–1,600 separations/year requiring pro-rated computation
+Volume: 6,932 employees across 5 legal entities; ~1,200–1,600 separations/year requiring pro-rated computation
 Owner: Payroll Manager
 Participants: Payroll Manager, HR Specialist, Controller, FP&amp;A Analyst, DOLE Compliance Officer
 Source: workflow W1416 — Philippine 13th Month Pay Computation, Monthly Accrual Booking &amp; Year-End Compliance Processing</bpmn:documentation>
@@ -1290,7 +1290,7 @@ Owner: Payroll Manager</bpmn:text>
     <bpmn:process id="W_W1527" name="W1527. Employee SSS, PhilHealth, Pag-IBIG Monthly Contribution Filing, Remittance &amp; Reconciliation" isExecutable="false">
       <bpmn:documentation>Trigger: Semi-monthly payroll processing cycle (15th and 30th pay periods)
 Frequency: Monthly filing and remittance (contributions deducted from payroll must be remitted to each agency by specified deadlines: SSS by last day of following month, PhilHealth by end of following month, Pag-IBIG by 10th of following month)
-Volume: ~6,911 employees across 5 legal entities (200 stores + 4 DCs + HQ)
+Volume: ~6,932 employees across 5 legal entities (200 stores + 4 DCs + HQ)
 Owner: Payroll Manager
 Participants: Payroll Manager, Payroll Clerks, HR Business Partner, Finance Controller, SSS/PhilHealth/Pag-IBIG portal administrators
 Source: workflow W1527 — Employee SSS, PhilHealth, Pag-IBIG Monthly Contribution Filing, Remittance &amp; Reconciliation</bpmn:documentation>
@@ -1403,8 +1403,8 @@ Owner: Payroll Manager</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W5540" name="W5540. Payroll Run Failure, Correction &amp; Emergency Off-Cycle Payment" isExecutable="false">
       <bpmn:documentation>Trigger: A payroll run aborts or is compromised inside the payroll window: validation failure on the payroll register, bank-file (credit/debit-advice) rejection by the disbursement bank, funding shortblock, payroll-system/ERP outage at cut-off, or a disbursement-partner platform outage
-Frequency: ~2–6 failure events chain-wide per year across the 6,911-employee estate (monthly run × 5 entities; most aborts caught at validation and re-run inside the window)
-Volume: 1 run × affected population (a validation abort typically hits 1–3 batches; a bank-file reject or provider outage hits up to all ~6,911 payslips for that entity-run) × statutory remittance deadlines (W1527/W1306) that keep running regardless
+Frequency: ~2–6 failure events chain-wide per year across the 6,932-employee estate (monthly run × 5 entities; most aborts caught at validation and re-run inside the window)
+Volume: 1 run × affected population (a validation abort typically hits 1–3 batches; a bank-file reject or provider outage hits up to all ~6,932 payslips for that entity-run) × statutory remittance deadlines (W1527/W1306) that keep running regardless
 Owner: Payroll Manager
 Participants: Payroll Specialist, HR Shared Services (employee comms per VS-103), Finance Controller (funding release), Treasury (funding/debit account status per VS-18), IT Service Desk &amp; ERP payroll support (system restoration), disbursement bank / payroll funding partner, CHRO (communications), HR Benefits (SSS/PhilHealth/Pag-IBIG desk), Audit (post-mortem for material events)
 Source: workflow W5540 — Payroll Run Failure, Correction &amp; Emergency Off-Cycle Payment</bpmn:documentation>

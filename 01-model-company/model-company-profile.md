@@ -110,14 +110,14 @@ The company operates through **5 legal entities** organized as follows:
 |---|---|
 | **Location** | Davao City, Philippines |
 | **Office Size** | ~3,000 sqm |
-| **HQ Headcount** | 511 |
+| **HQ Headcount** | 532 |
 
 #### HQ Departments
 
 > **Promoted to the actual structure 2026-09-14.** The department list below IS the company's
 > actual organization of record — the official table of organization
 > ([`optimal-table-of-organization.md`](optimal-table-of-organization.md), promoted by executive
-> direction 2026-09-14 from the adopted 2026-09-02 target state), with every one of the 511 HQ
+> direction 2026-09-14 from the adopted 2026-09-02 target state), with every one of the 532 HQ
 > roles defined at role level in its §5.3 register. The department's sizing history — the
 > 2026-06-20/25 minimum-coverage rebalance (HQ 315 → 357 → 362) and the 2026-09-02/03
 > target-state adoption — is retained in the TO's §5.1 reference column and §11 promotion
@@ -132,18 +132,18 @@ The company operates through **5 legal entities** organized as follows:
 - **Finance & Accounting**: Controller, technical accounting, GL (per-entity), AP/AR, treasury, tax, FP&A, revenue assurance, logistics & cost finance (62)
 - **Supply Chain & Logistics**: S&OP/IBP & demand planning, supply & allocation planning, DC operations, fleet & logistics, procurement, imports & customs, vendor management, inventory planning (46; breakdown below)
 - **Information Technology**: the product-centric operating model — 9 stream-aligned domain product teams (MSC · WLI · SSP · CCP · FIN · CORP · PEO · OMO · TPS), 7 platform teams (IAP · INFRA · SEC · DP · SEP · AAP · FS), CIO Office (122; [`../07-methodology/it-product-operating-model.md`](../07-methodology/it-product-operating-model.md))
-- **Human Resources**: Talent acquisition, HRBPs (field), comp & ben, payroll ops, HR shared services, L&D, labor relations, HRIS & analytics (42)
+- **Human Resources**: Talent acquisition, HRBPs (field), store HR coordinators (one per district), comp & ben, payroll ops, HR shared services, L&D, labor relations, HRIS & analytics (55)
 - **Marketing**: Brand, promotions, loyalty/CRM, digital, retail media & marketplace, insights, marketing ops (30; led by a **VP Marketing** under the CMO, mirroring the VP-for-Merchandising convention at §13.1 — the department-head tier the workflow catalog's escalation seats refer to)
 - **Store Operations**: VP Store Operations, regional managers, district managers, store support center (24)
 - **Legal & Compliance**: Corporate secretary, regulatory & government affairs, contracts, DPO/privacy, AML/MLRO, litigation & IP (20)
-- **Internal Audit & Risk**: (9; incl. IT/ERP auditors, ERM/TPRM, forensics)
-- **Customer Service / Call Center**: (34; hybrid central contact center + B2B desk + ecommerce support)
+- **Internal Audit & Risk**: (14; incl. IT/ERP auditors, ERM/TPRM, forensics, and the operations-compliance cell seated 2026-09-18 — Lead + 4 field auditors for the store-audit cycle)
+- **Customer Service / Call Center**: (35; hybrid central contact center + B2B desk + ecommerce support + services manager)
 - **Regional Loss Prevention**: Director, 20 regional LP officers, investigations, analytics (27)
 - **Health, Safety & Environment**: Safety officers (regional), company nurse, wellness (13)
 - **Quality Management**: Incoming inspection, vendor QA, metrology (5)
 - **Facilities & Real Estate**: Facilities, maintenance, property/lease admin, energy, surety (12)
 - **Sustainability / ESG**: Environmental, social, governance reporting (4)
-- **Strategy / Corporate Planning**: Annual planning, CPM, competitive intelligence (4)
+- **Strategy / Corporate Planning**: Annual planning, CPM, competitive intelligence, BPM/IMS + document control (6)
 - **Trade / Account Management**: Trade professional program, key accounts, trade ops (7)
 
 #### Supply Chain & Logistics Team Structure (46 total)
@@ -180,10 +180,10 @@ The company operates through **5 legal entities** organized as follows:
 |---|---|
 | Store Personnel | 5,800 (200 stores × 29) |
 | Distribution Center Personnel | 600 (4 DCs × 150) |
-| Corporate HQ Personnel | 511 (the promoted structure of record — see §3.3 and `optimal-table-of-organization.md`) |
-| **Total Company Headcount** | **6,911** |
+| Corporate HQ Personnel | 532 (the promoted structure of record, gap-filled 2026-09-18 — see §3.3 and `optimal-table-of-organization.md`) |
+| **Total Company Headcount** | **6,932** |
 
-> **Revenue per employee**: ~PHP 9.01M/year (~PHP 62.3B ÷ 6,911) — driven by BuildRight's optimized store staffing model (29 per store). The headcount per store was increased from 28 to 29 to implement the recommendation for an additional Stock Associate (4 total per store) to ensure adequate coverage for continuous replenishment, cycle counting, and omnichannel fulfillment. HQ headcount was rebalanced from 315 to 357 (2026-06-20), then to 362 (2026-06-25), then to the adopted optimal structure (2026-09-02/03) — and **promoted to the actual structure of record on 2026-09-14** ([`optimal-table-of-organization.md`](optimal-table-of-organization.md), §5.1/§5.3; the pre-optimization 362/6,762 figures are retained there as the superseded reference column).
+> **Revenue per employee**: ~PHP 8.99M/year (~PHP 62.3B ÷ 6,932) — driven by BuildRight's optimized store staffing model (29 per store). The headcount per store was increased from 28 to 29 to implement the recommendation for an additional Stock Associate (4 total per store) to ensure adequate coverage for continuous replenishment, cycle counting, and omnichannel fulfillment. HQ headcount was rebalanced from 315 to 357 (2026-06-20), then to 362 (2026-06-25), then to the adopted optimal structure (2026-09-02/03) — and **promoted to the actual structure of record on 2026-09-14** ([`optimal-table-of-organization.md`](optimal-table-of-organization.md), §5.1/§5.3; the pre-optimization 362/6,762 figures are retained there as the superseded reference column), then **gap-filled +21 on 2026-09-18** by the actual-org benchmark (IA 14 · HR 55 · CS 35 · Strategy 6 — store-embedded workload the workflow-derived bands could not see).
 
 > **IT note:** the Information Technology department runs the product-centric operating model as its actual structure — 17 product teams, 122 FTE ([`../07-methodology/it-product-operating-model.md`](../07-methodology/it-product-operating-model.md) §9.1; two-tier sourcing doctrine: in-suite Oracle EBS incl. Oracle WMS/MSCA and Shipping/OTE, in-house and already-built products around the EBS core, AI & Agent Platform for governed automation; see `07-methodology/capability-sourcing-and-engineering-model.md`).
 
@@ -538,14 +538,14 @@ BuildRight Holdings, Inc.
 
 | Executive | HQ Departments Overseen | Dept HC |
 |---|---|---|
-| CEO / President | Merchandising & Buying; Strategy / Corporate Planning | 47 |
-| CFO | Finance & Accounting; Internal Audit & Risk ¹ | 71 |
-| COO | Store Operations; Supply Chain & Logistics; Facilities & Real Estate; Quality Management; Regional Loss Prevention; Customer Service / Call Center; Trade / Account Management | 155 |
+| CEO / President | Merchandising & Buying; Strategy / Corporate Planning | 49 |
+| CFO | Finance & Accounting; Internal Audit & Risk ¹ | 76 |
+| COO | Store Operations; Supply Chain & Logistics; Facilities & Real Estate; Quality Management; Regional Loss Prevention; Customer Service / Call Center; Trade / Account Management | 156 |
 | CIO | Information Technology (the 17-team product portfolio) | 122 |
 | CMO | Marketing | 30 |
-| CHRO | Human Resources; Health, Safety & Environment | 55 |
+| CHRO | Human Resources; Health, Safety & Environment | 68 |
 | VP Legal & Compliance | Legal & Compliance; Sustainability / ESG | 24 |
-| **Total** | **17 departments** here + Executive Office = **18 total HQ departments** (the 7 executives themselves are counted in Executive Office) | **504 + 7 = 511** |
+| **Total** | **17 departments** here + Executive Office = **18 total HQ departments** (the 7 executives themselves are counted in Executive Office) | **525 + 7 = 532** |
 
 > Department headcounts are taken from §3.3. **¹ Internal Audit independence:** the Head of
 > Internal Audit reports **functionally to the Board's Audit Committee** (dotted line) and
@@ -563,7 +563,7 @@ BuildRight Holdings, Inc.
 | Parameter | Value |
 |---|---|
 | **Payroll Frequency** | Semi-monthly (15th and 30th) |
-| **Total Employees** | 6,911 |
+| **Total Employees** | 6,932 |
 | **Payroll Entities** | 5 (one per legal entity) |
 | **Statutory Benefits** | SSS, PhilHealth, Pag-IBIG (HDMF) |
 | **13th Month Pay** | Mandatory (1/12 of annual basic salary, paid by Dec 24) |
@@ -803,7 +803,7 @@ The following external systems are actively integrated with the core ERP system.
 | Customers (B2B Corporate) | 200 |
 | Vendors / Suppliers | 1,000 |
 | Locations (Stores + DCs + HQ) | 205 |
-| Employees | 6,911 |
+| Employees | 6,932 |
 | Chart of Accounts | ~500–800 per entity |
 | GL Accounts (consolidated) | ~2,000–3,000 |
 
@@ -852,7 +852,7 @@ The following external systems are actively integrated with the core ERP system.
 7. **Offline POS resilience**: Stores must sell during outages
 8. **Intercompany automation**: 5-entity consolidation
 9. **Supply chain optimization**: Demand planning, auto-replenishment
-10. **User adoption**: ~6,911 users across varying tech literacy levels
+10. **User adoption**: ~6,932 users across varying tech literacy levels
 
 ---
 
@@ -896,7 +896,7 @@ The following external systems are actively integrated with the core ERP system.
 
 ---
 
-*Document Version: 3.0 | Date: 2026-09-14 | **Structure promotion — the optimal TO is the actual organization of record.** By executive direction the two-state discipline collapses: the adopted target-state table of organization ([`optimal-table-of-organization.md`](optimal-table-of-organization.md)) is **promoted to the actual structure** — §3.3 HQ Headcount 362 → **511** with all 18 department bullets re-based to the promoted values (Merch 43 · Finance 62 · SC 46 · IT 122 · HR 42 · Marketing 30 · Store Ops 24 · Legal 20 · IA 9 · CS 34 · LP 27 · HSE 13 · Quality 5 · Facilities 12 · ESG 4 · Strategy 4 · Trade 7 + Executive Office 7), §3.3's SC sub-team table re-based to 46 and §13.1's merchandising breakdown to 43 (both instantiating the TO §5.2 register mix), §4 total 6,762 → **6,911** with the revenue-per-employee division re-derived **~PHP 62.3B ÷ 6,911 ≈ PHP 9.01M**, §11.1's per-executive table re-footed (CEO 47 · CFO 71 · COO 155 · CIO 122 · CMO 30 · CHRO 55 · VP Legal 24; **504 + 7 = 511**), and the three remaining live employee-count rows re-based to the same canon (§11.2 Payroll-Parameters Total Employees, §15.2 Master-Data Employees row, §17 user-adoption bullet). The IT department runs the product-centric operating model as its actual structure (17 teams / 122 FTE, OM v3.13). Store (5,800) and DC (600) staffing unchanged; revenue canon unchanged. Prior v2.28 | Date: 2026-09-14 | Two-tier sourcing doctrine trued (sourcing model
+*Document Version: 3.1 | Date: 2026-09-18 | **Actual-org gap-fill (+21 HQ).** Benchmarking the TO against the operating company's actual table of organization (CitiHardware TOM workbook) surfaced four store-embedded workload cells the workflow-derived sizing had left to unseated ghost titles or unbased absorption claims — confirmed by the repo's own virtual-gemba/time-and-motion staffing-claim audit (PA-22.2's 10-audits/month cadence ≈ a 20-month network cycle; the unseated 'Store HR Administrator' owner in VS-183; the unseated VS-12 'Services Manager'; ownerless PA-30.3/VS-88 document control). §3.3 HQ 511 → **532** (IA 9 → **14** ops-compliance cell; HR 42 → **55** store HR coordinators; CS 34 → **35** services manager; Strategy 4 → **6** BPM/IMS cell), §4 total 6,911 → **6,932** with the quotient re-derived **~PHP 62.3B ÷ 6,932 ≈ PHP 8.99M**, §11.1 per-executive table re-footed (CEO 49 · CFO 76 · COO 156 · CIO 122 · CMO 30 · CHRO 68 · VP Legal 24; **525 + 7 = 532**), §11.2/§15.2/§17 employee-count rows re-based. Store (5,800) and DC (600) staffing unchanged; revenue canon unchanged; the store-side density delta vs the actual operator (≈40/store incl. SP labor vs 29/store) is flagged as a labor-model decision, not adopted. Prior v3.0 (2026-09-14) | **Structure promotion — the optimal TO is the actual organization of record.** By executive direction the two-state discipline collapses: the adopted target-state table of organization ([`optimal-table-of-organization.md`](optimal-table-of-organization.md)) is **promoted to the actual structure** — §3.3 HQ Headcount 362 → **511** with all 18 department bullets re-based to the promoted values (Merch 43 · Finance 62 · SC 46 · IT 122 · HR 42 · Marketing 30 · Store Ops 24 · Legal 20 · IA 9 · CS 34 · LP 27 · HSE 13 · Quality 5 · Facilities 12 · ESG 4 · Strategy 4 · Trade 7 + Executive Office 7), §3.3's SC sub-team table re-based to 46 and §13.1's merchandising breakdown to 43 (both instantiating the TO §5.2 register mix), §4 total 6,762 → **6,911** with the revenue-per-employee division re-derived **~PHP 62.3B ÷ 6,911 ≈ PHP 9.01M**, §11.1's per-executive table re-footed (CEO 47 · CFO 71 · COO 155 · CIO 122 · CMO 30 · CHRO 55 · VP Legal 24; **504 + 7 = 511**), and the three remaining live employee-count rows re-based to the same canon (§11.2 Payroll-Parameters Total Employees, §15.2 Master-Data Employees row, §17 user-adoption bullet). The IT department runs the product-centric operating model as its actual structure (17 teams / 122 FTE, OM v3.13). Store (5,800) and DC (600) staffing unchanged; revenue canon unchanged. Prior v2.28 | Date: 2026-09-14 | Two-tier sourcing doctrine trued (sourcing model
 v3.0, OM v3.11): §14.1 re-issued under the two-tier doctrine — the TO banner re-pointed; the
 Active-ERP-Landscape table re-issued (Warehouse & Transport rows → in-suite Oracle WMS/MSCA
 + Shipping/OTE; Planning/Trade-Management row → the EBS-family stack; the POS estate,

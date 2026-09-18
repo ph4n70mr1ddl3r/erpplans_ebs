@@ -120,7 +120,7 @@ Owner: Store Manager (store-level); Facilities Coordinator (HQ oversight)</bpmn:
     <bpmn:process id="W_W71" name="W71. Store Physical Security &amp; Access Control" isExecutable="false">
       <bpmn:documentation>Trigger: Daily security operations; alarm events; periodic access audits; security incidents
 Frequency: Continuous; daily guard operations; monthly access reviews; quarterly security audits
-Volume: 200 stores × 24/7 security; 4 DCs × 24/7 security; ~6,911 active access credentials
+Volume: 200 stores × 24/7 security; 4 DCs × 24/7 security; ~6,932 active access credentials
 Owner: Store Manager (store-level); DC Manager (DC-level); Facilities Coordinator (oversight)
 Participants: Security guards (contracted), Store Manager, DC Manager, Facilities Coordinator, HR, IT, Loss Prevention Officer
 Source: workflow W71 — Store Physical Security &amp; Access Control</bpmn:documentation>

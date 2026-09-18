@@ -909,7 +909,7 @@ Owner: Corporate Secretary</bpmn:text>
     <bpmn:process id="W_W5544" name="W5544. Emergency Executive Succession &amp; Decision-Rights Continuity Protocol" isExecutable="false">
       <bpmn:documentation>Trigger: Death, sudden medical incapacitation, immediate-effect resignation, or board removal of the CEO or any C-level executive; or the simultaneous unavailability of a quorum-critical set of officers (e.g. CEO + CFO) in a single event
 Frequency: Rare; realistically &lt; 1 C-level event per decade; the succession register and tabletop are exercised annually
-Volume: 1 event × the decision-rights surface across 5 legal entities (signing authorities, bank mandates, BIR-accredited and eFPS-authorized signatories, SEC/GIS officer records, board quorum, ERP approval chains) × ~6,911 employees whose payroll, approvals and reporting lines route through the affected office
+Volume: 1 event × the decision-rights surface across 5 legal entities (signing authorities, bank mandates, BIR-accredited and eFPS-authorized signatories, SEC/GIS officer records, board quorum, ERP approval chains) × ~6,932 employees whose payroll, approvals and reporting lines route through the affected office
 Owner: Board Chair / CEO / Corporate Secretary
 Participants: Board Chair, Corporate Secretary, Nomination/Governance function per W1721, CFO, CHRO, VP Legal, affected-function deputies, Treasury (bank mandates per W317), Tax Manager (BIR signatory continuity), IT (access/approval-workflow reassignment), IR (disclosure), Communications (W855/W134 discipline)
 Source: workflow W5544 — Emergency Executive Succession &amp; Decision-Rights Continuity Protocol</bpmn:documentation>

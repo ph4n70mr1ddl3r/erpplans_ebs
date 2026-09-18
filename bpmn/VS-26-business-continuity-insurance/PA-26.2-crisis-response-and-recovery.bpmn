@@ -795,7 +795,7 @@ Owner: CEO / COO</bpmn:text>
     <bpmn:process id="W_W855" name="W855. Communication Tree Activation &amp; Crisis Communication Management" isExecutable="false">
       <bpmn:documentation>Trigger: Any event requiring coordinated communication to multiple stakeholder groups simultaneously — natural disaster, system outage, product recall, workplace safety incident, or PR crisis
 Frequency: 3–5 activations per year (major); 10–15 minor activations
-Volume: Each major activation reaches 6,911 employees, 200 Store Managers, 4 DC Managers, and potentially 600,000 loyalty customers
+Volume: Each major activation reaches 6,932 employees, 200 Store Managers, 4 DC Managers, and potentially 600,000 loyalty customers
 Owner: COO / Corporate Communications Manager
 Participants: CEO, CHRO, CIO, Legal Counsel, BC Manager, Store Managers, External PR Agency (for public-facing crises)
 Source: workflow W855 — Communication Tree Activation &amp; Crisis Communication Management</bpmn:documentation>

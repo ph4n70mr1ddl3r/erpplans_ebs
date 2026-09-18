@@ -4002,7 +4002,7 @@ echo "--- Check 61: Matrix rows, gap-analysis & tech-guidelines anchors ---"
 # W463, W520, W528, W1282/W1485, W1425, W9, W14); (b) workflow-gap-analysis.md
 # current-state line must quote the canonical 188/569/5,363 totals (per-pass
 # historical totals exempt); (c) technical-guidelines.md must carry its verified
-# anchor figures (~511 HQ staff ≈460 concurrent users, ~640 Mbps aggregate, >= 8h
+# anchor figures (~532 HQ staff ≈480 concurrent users, ~640 Mbps aggregate, >= 8h
 # offline, 933 peak-day/store, 10-year retention — re-pointed by the 2026-09-14
 # structure-promotion re-base). The 2026-09-15 thirty-seventh-wave review
 # extended the script with the matrix's own section-numbering layer — every

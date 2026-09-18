@@ -297,7 +297,7 @@ Owner: Procurement (VS-34) / Occupational Health (VS-83) / HR</bpmn:text>
     <bpmn:process id="W_W4461" name="W4461. Drug-Free Workplace Training, Communication &amp; Culture" isExecutable="false">
       <bpmn:documentation>Trigger: Onboarding (VS-19); annual cycle; policy change
 Frequency: Onboarding + annual + on change
-Volume: ~6,911 employees + contingent trained
+Volume: ~6,932 employees + contingent trained
 Owner: L&amp;D (VS-19.4) / HR (VS-103) / HSE (VS-24)
 Participants: L&amp;D (VS-19.4), HR (VS-103), HSE (VS-24), Compliance (VS-22), Supervisors/Managers, Occupational Health (VS-83)
 Source: workflow W4461 — Drug-Free Workplace Training, Communication &amp; Culture</bpmn:documentation>

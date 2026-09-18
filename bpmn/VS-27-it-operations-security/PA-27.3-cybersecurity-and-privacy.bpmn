@@ -257,7 +257,7 @@ Duration: Daily</bpmn:documentation>
         <bpmn:outgoing>W367_Flow19</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W367_Task10" name="Phishing Simulation">
-        <bpmn:documentation>Step 5: Phishing Simulation: Conduct quarterly phishing tests for all 6,911 employees; assign remedial training to users who fail
+        <bpmn:documentation>Step 5: Phishing Simulation: Conduct quarterly phishing tests for all 6,932 employees; assign remedial training to users who fail
 Responsible (R): Security Analyst
 Accountable (A): IT Security Mgr
 Duration: 4 hours/quarter</bpmn:documentation>
@@ -1512,7 +1512,7 @@ Owner: IT Security Manager</bpmn:text>
     <bpmn:process id="W_W5522" name="W5522. ISMS Program, Security Certification &amp; Security-Policy Lifecycle (ISO/IEC 27001)" isExecutable="false">
       <bpmn:documentation>Trigger: Annual ISMS risk-assessment &amp; management-review cycle; ISO/IEC 27001 surveillance or recertification audit; new NPC advisory or material scope change (new built product, VS-190 OT interface); or a material security-policy review falling due
 Frequency: Annual risk assessment &amp; management review; annual surveillance audit on a 3-year recertification cycle; continuous policy upkeep
-Volume: ISMS scope: HQ + 4 DCs + 200 stores (~2,500 endpoints, ~6,911 identities) plus VS-190 OT interfaces; ~93 Annex A controls in the SoA; ~15–25 policy documents
+Volume: ISMS scope: HQ + 4 DCs + 200 stores (~2,500 endpoints, ~6,932 identities) plus VS-190 OT interfaces; ~93 Annex A controls in the SoA; ~15–25 policy documents
 Owner: IT Compliance Lead (accountable: CIO)
 Participants: IT Security Manager, Data Protection Officer, Internal Audit, Head of Engineering, IT Infrastructure Manager, HR/L&amp;D (W372 awareness program), TPRM Program Manager (W4730)
 Source: workflow W5522 — ISMS Program, Security Certification &amp; Security-Policy Lifecycle (ISO/IEC 27001)</bpmn:documentation>
@@ -1731,7 +1731,7 @@ Owner: IT Security Manager</bpmn:text>
     <bpmn:process id="W_W5524" name="W5524. Enterprise DLP &amp; Insider-Risk Monitoring (Endpoint/Email/Cloud)" isExecutable="false">
       <bpmn:documentation>Trigger: DLP policy-hit alert (endpoint/email/cloud); flagged separation of a privileged user (W152 T-0); insider-risk referral from VS-23/VS-159/HR; or the monthly policy-tuning review
 Frequency: Continuous alerting; daily triage; monthly policy tuning; ~12 case investigations/year
-Volume: ~2,500 endpoints; ~6,911 identities; ~40–60 triaged hits/month after tuning; ~10 flagged departure windows/year
+Volume: ~2,500 endpoints; ~6,932 identities; ~40–60 triaged hits/month after tuning; ~10 flagged departure windows/year
 Owner: IT Security Manager
 Participants: Security Analyst, Data Protection Officer, HR, Legal, Loss Prevention Manager (VS-23), IT Infrastructure Manager (endpoint agents per W367 EDR)
 Source: workflow W5524 — Enterprise DLP &amp; Insider-Risk Monitoring (Endpoint/Email/Cloud)</bpmn:documentation>

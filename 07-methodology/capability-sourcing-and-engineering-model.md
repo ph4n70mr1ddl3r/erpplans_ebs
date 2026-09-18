@@ -334,7 +334,7 @@ Hard boundaries regardless of tier: no agent owns a statutory filing path (BIR/S
 
 Augmentation-first sequencing; VS-134 owns task redesign, reskilling, and adoption metrics;
 CBA/labor-relations sensitivity (VS-84) is assessed before any agent that materially changes
-a represented role; the Change & Training Lead pool carries rollout for the 6,911-user base.
+a represented role; the Change & Training Lead pool carries rollout for the 6,932-user base.
 
 ## 13. Related Documents
 

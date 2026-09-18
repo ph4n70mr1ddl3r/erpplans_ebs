@@ -28,9 +28,9 @@
 
 | Driver | Value | Source |
 |---|---|---|
-| Total employees | **6,911** (5,800 store + 600 DC + 511 HQ) | profile §4 |
-| ERP authorized (named) users | **3,511** → licensed **3,600** | build-up below |
-| — HQ staff | 511 (all 18 departments touch the ERP) | profile §3.3 |
+| Total employees | **6,932** (5,800 store + 600 DC + 511 HQ) | profile §4 |
+| ERP authorized (named) users | **3,532** → licensed **3,600** | build-up below |
+| — HQ staff | 532 (all 18 departments touch the ERP; 2026-09-18 actual-org gap-fill) | profile §3.3 |
 | — Store ERP users | 2,400 = 12/store × 200 (SM, ASM, 4 dept supervisors, 2 receiving clerks, 4 stock associates) | profile §12.1 |
 | — DC staff (WMS/RF users) | 600 = 150/DC × 4 | profile §3.2 |
 | Peak *concurrent* users | ~1,000–1,500 — **not the license basis**; Oracle "Application User" / "Hosted Named User" are *named*-user metrics | profile §15.3 |
@@ -38,11 +38,11 @@
 | Annual COGS | PHP 42–45B ≈ USD 750–800M @ ₱56/$ (LCM metric) | profile §9.4 |
 | Ecommerce orders | ~515,000/yr (≈2.3M OM order lines at ~4.5 lines/order — a derived planning basis, not a profile figure; the profile carries no lines-per-order canon, so confirm the platform's actual line histogram before ordering) | profile §8.5 |
 | AR invoices | ~42,000/yr | profile §15.1 |
-| Governance/assurance HQ teams (ICM/QA/Credit/RM&I user basis) | Internal Audit & Risk 9 · Quality 5 (+24 DC checkers) · AR & Credit 8 | TO §5.3 |
+| Governance/assurance HQ teams (ICM/QA/Credit/RM&I user basis) | Internal Audit & Risk 14 · Quality 5 (+24 DC checkers) · AR & Credit 8 | TO §5.3 |
 
 > **Metric rule that dominates the HRMS lines:** the "Employee" / "Hosted Employee" metric counts
 > **all** employees (plus any tracked contractors) — *not* actual users. Every Employee-metric
-> product therefore licenses 6,911, even if only managers use it.
+> product therefore licenses 6,932, even if only managers use it.
 
 ### Design decisions embedded in this BOM
 
@@ -60,7 +60,7 @@
    Supply Planning, S&OP Cloud). Note EBS OM's *embedded* multi-org ATP covers W56 back-order
    promising without standalone GOP.
 4. Employee-metric counts assume **no tracked contractors**; every contractor/agent tracked by
-   HR programs adds to the 6,911.
+   HR programs adds to the 6,932.
 5. **Full-implementation edition:** the BOM now licenses **every product the fit-gap register
    adopts** — the v1.0 footprint plus Revenue Management & Invoicing (A11), Lease & Finance
    Management (A13), Internet Expenses (B11), BOM/WIP (C9), Oracle Quality (C12), In-Memory
@@ -90,7 +90,7 @@
 | Credit Management (scoring rules, limits, hold/release — D3) | TBD † | Application User | 2,295 | 5 | 11,475 |
 | Revenue Management & Invoicing (PFRS 15 multi-element schedules — A11) | TBD † | Application User | 3,495 | 6 | 20,970 |
 
-*Financials AUs: HQ finance/audit/legal/facilities/QM/LP/IT ≈ 172 + store SM/ASM 400 + DC mgmt 20 = 592, rounded to 650.
+*Financials AUs: HQ finance/audit/legal/facilities/QM/LP/IT ≈ 177 + store SM/ASM 400 + DC mgmt 20 = 597, rounded to 650.
 Read-only covers merch/store-ops/marketing analytics viewers (cheaper than full AUs).
 Credit users = AR & Credit manager + 2 credit analysts + AR supervisor + trade-ops credit
 liaison (TO §5.3; the 5,200-trade + 200-corporate account base). RM&I users = revenue
@@ -151,8 +151,8 @@ cost finance + merch-finance margin analysts (W85/W633/VS-101); enterprise BI st
 | Internet Expenses (T&E reports + corporate-card program — B11) | TBD † | Application User | 115 | 700 | 80,500 |
 
 *⚠ minimum-bound at 10,000 records (actual vendor master ~1,000). iSupplier external supplier
-users are included with the internal AU licenses. iExpenses users: all HQ 511 + DC office
-staff ~100 + district/region field ~25, rounded to 700. Contingent labor (B13) ships inside
+users are included with the internal AU licenses. iExpenses users: all HQ 532 + DC office
+staff ~100 + district/region field ~25 = 657, rounded to 700. Contingent labor (B13) ships inside
 Purchasing — no separate line.*
 
 ### 2.5 Asset lifecycle & real estate
@@ -192,19 +192,19 @@ family (no separate GPL line).*
 
 *PM users: corporate PMO (VS-112) + construction/capex project controllers (VS-20/40/109).*
 
-### 2.8 HRMS — all Employee-metric @ 6,911
+### 2.8 HRMS — all Employee-metric @ 6,932
 
 | Product | Part # | List $/emp | License $ |
 |---|---|---:|---:|
-| Human Resources (PER) | L31953 | 185 | 1,278,535 |
-| Self-Service Human Resources | L31958 | 40 | 276,440 |
-| Advanced Benefits (OAB) | A92408 | 85 | 587,435 |
-| Compensation Workbench | L46808 | 70 | 483,770 |
-| iRecruitment | L31969 | 75 | 518,325 |
-| Performance Management | L46799 | 105 | 725,655 |
-| Time and Labor | A92407 | 110 | 760,210 |
-| Succession Planning | L74875 | 70 | 483,770 |
-| Learning Management (OLA) | L44374 | 105 | 725,655 |
+| Human Resources (PER) | L31953 | 185 | 1,282,420 |
+| Self-Service Human Resources | L31958 | 40 | 277,280 |
+| Advanced Benefits (OAB) | A92408 | 85 | 589,220 |
+| Compensation Workbench | L46808 | 70 | 485,240 |
+| iRecruitment | L31969 | 75 | 519,900 |
+| Performance Management | L46799 | 105 | 727,860 |
+| Time and Labor | A92407 | 110 | 762,520 |
+| Succession Planning | L74875 | 70 | 485,240 |
+| Learning Management (OLA) | L44374 | 105 | 727,860 |
 | ~~Payroll~~ — **not licensed** (in-house Payroll PH) | A74656 | (225) | 0 |
 
 ### 2.9 Master data management
@@ -226,10 +226,10 @@ before budgeting**; not included in the totals below.*
 
 | Product | Part # | Metric | List $/unit | Qty | License $ |
 |---|---|---|---:|---:|---:|
-| Internal Controls Manager (audit-management/GRC surface; hosts the CTL-01–808 register — H11) | TBD † | Application User | 2,875 | 40 | 115,000 |
+| Internal Controls Manager (audit-management/GRC surface; hosts the CTL-01–808 register — H11) | TBD † | Application User | 2,875 | 45 | 129,375 |
 
-*ICM users: Internal Audit & Risk 9 (TO §5.3) + finance process owners 21 + business control
-owners 10 — assessment performers and CAPA approvers, not the whole control population.
+*ICM users: Internal Audit & Risk 14 (TO §5.3, 2026-09-18 gap-fill) + finance process owners 21 + business control
+owners 10 = 45 — assessment performers and CAPA approvers, not the whole control population.
 Oracle Alert (G9) rides the base applications; GL budgets/budgetary control (F6) rides GL —
 no lines.*
 
@@ -237,20 +237,21 @@ no lines.*
 
 | | USD list |
 |---|---:|
-| **Perpetual license total** | **$48,685,690** |
-| Annual SUL&S (22%) | $10,710,852/yr |
-| 3-yr TCO (license + 3× support) | $80,818,246 |
-| 5-yr TCO (license + 5× support) | **$102,239,950** |
+| **Perpetual license total** | **$48,717,810** |
+| Annual SUL&S (22%) | $10,717,918/yr |
+| 3-yr TCO (license + 3× support) | $80,871,565 |
+| 5-yr TCO (license + 5× support) | **$102,307,401** |
 
 *Full-implementation delta vs v1.0: **+$708,130** of perpetual license (+$155,789/yr support)
-across the ten newly licensed products — ~1.5% of the license base; ranking vs Fusion is
-unchanged.*
+across the ten newly licensed products — ~1.5% of the license base; the 2026-09-18 actual-org
+gap-fill adds a further **+$32,120** of perpetual (+$7,066/yr support: HRMS re-based to 6,932
+employees, ICM 40 → 45 with Internal Audit & Risk 14) — ranking vs Fusion is unchanged.*
 
 ***Custom-quote register (adopted, unpriced — excluded from the totals):** the EBS-family
 Value Chain Planning stack — ASCP, Demantra, Inventory Optimization/Rapid Planning (C5) — and
 **Global Order Promising** (D15) are off the current public GPL; budget placeholder $2–4M
 perpetual pending the Oracle VCP quote. Payroll A74656 remains unadopted — reversing decision 2
-would add $225/emp × 6,911 = **$1,554,975** (+$342,095/yr support).*
+would add $225/emp × 6,932 = **$1,559,700** (+$343,134/yr support).*
 
 ### 2.12 Technology stack (EBS scenario — illustrative, from Technology GPL)
 
@@ -294,20 +295,20 @@ but quantity depends entirely on the DB server sizing (architecture §4).*
 | Fusion Enterprise Contracts | B86732 | Hosted Named User | 150 | 30 | 4,500 |
 | Fusion Supply Chain Collaboration (iSupplier eq.) | B87862 | Hosted Named User | 625 | 20 | 12,500 |
 | Fusion CPQ (Configurator eq., in-store quotes) | B111751 | Hosted Named User | 240 | 200 | 48,000 |
-| Fusion HCM Base (Global HR/absence/benefits) | B85800 | Hosted Employee | 15 | 6,911 | 103,665 |
+| Fusion HCM Base (Global HR/absence/benefits) | B85800 | Hosted Employee | 15 | 6,932 | 103,980 |
 | Fusion Time and Labor | B75365 | Hosted Named User | 3 | 3,000 | 9,000 |
-| Fusion Workforce Compensation (CWB eq.) | B109620 | Hosted Comp. Individual | 4 | 6,911 | 27,644 |
-| Fusion Learning (OLA eq.) | B85242 | Hosted Named User | 5 | 6,911 | 34,555 |
-| Fusion Recruiting (iRecruitment eq.) | B87675 | Hosted Employee | 8 | 6,911 | 55,288 |
-| Fusion Talent Management (perf + succession) | B94925 | Hosted Named User | 7 | 6,911 | 48,377 |
+| Fusion Workforce Compensation (CWB eq.) | B109620 | Hosted Comp. Individual | 4 | 6,932 | 27,728 |
+| Fusion Learning (OLA eq.) | B85242 | Hosted Named User | 5 | 6,932 | 34,660 |
+| Fusion Recruiting (iRecruitment eq.) | B87675 | Hosted Employee | 8 | 6,932 | 55,456 |
+| Fusion Talent Management (perf + succession) | B94925 | Hosted Named User | 7 | 6,932 | 48,524 |
 | Field Service Cloud (dispatch core, D13) | B110413 | Pooled Named User | 225 | 360 ⚠ | 81,000 |
 | Fusion Revenue Management (RM&I eq., PFRS 15 — A11) | TBD † | Hosted Named User | 150 | 6 | 900 |
 | Fusion Quality Management (Oracle Quality eq. — C12) | TBD † | Hosted Named User | 200 | 40 | 8,000 |
 | Fusion Global Order Promising (GOP eq. — D15) | TBD † | Hosted Named User | 425 | 10 | 4,250 |
 | Fusion Transportation Management (OTE eq., freight audit — C14) | TBD † | Hosted Named User | 650 | 25 | 16,250 |
-| **Total** | | | | | **$2,416,729/mo** |
+| **Total** | | | | | **$2,417,548/mo** |
 
-**B1 totals: $29,000,748/yr · $87,002,244 (3-yr) · $145,003,740 (5-yr)**
+**B1 totals: $29,010,576/yr · $87,031,728 (3-yr) · $145,052,880 (5-yr)**
 
 *⚠ Field Service Cloud minimum-bound at 360 pooled users (~100 techs assumed).
 Full-implementation parity: Risk Management 20 → 60 (audit + process/control owners hosting
@@ -330,10 +331,10 @@ Service are *not* in the bundle and price as add-ons:
 | Fusion Supply Planning | B91059 | Hosted Named User | 1,250 | 10 | 12,500 |
 | Fusion S&OP Cloud | B91061 | Hosted Named User | 625 | 15 | 9,375 |
 | Fusion Time and Labor | B75365 | Hosted Named User | 3 | 3,000 | 9,000 |
-| Fusion Learning | B85242 | Hosted Named User | 5 | 6,911 | 34,555 |
-| Fusion Recruiting | B87675 | Hosted Employee | 8 | 6,911 | 55,288 |
-| Fusion Talent Management | B94925 | Hosted Named User | 7 | 6,911 | 48,377 |
-| Fusion Workforce Compensation | B109620 | Hosted Comp. Individual | 4 | 6,911 | 27,644 |
+| Fusion Learning | B85242 | Hosted Named User | 5 | 6,932 | 34,660 |
+| Fusion Recruiting | B87675 | Hosted Employee | 8 | 6,932 | 55,456 |
+| Fusion Talent Management | B94925 | Hosted Named User | 7 | 6,932 | 48,524 |
+| Fusion Workforce Compensation | B109620 | Hosted Comp. Individual | 4 | 6,932 | 27,728 |
 | WMS Enterprise add-on | B90536 | Hosted Named User | 550 | 620 | 341,000 |
 | Fusion CPQ add-on | B111751 | Hosted Named User | 240 | 200 | 48,000 |
 | Field Service Cloud add-on | B110413 | Pooled Named User | 225 | 360 | 81,000 |
@@ -342,9 +343,9 @@ Service are *not* in the bundle and price as add-ons:
 | Fusion Quality Management add-on (C12) | TBD † | Hosted Named User | 200 | 40 | 8,000 |
 | Fusion Global Order Promising add-on (D15) | TBD † | Hosted Named User | 425 | 10 | 4,250 |
 | Fusion Transportation Management add-on (C14) | TBD † | Hosted Named User | 650 | 25 | 16,250 |
-| **Total** | | | | | **$1,923,994/mo** |
+| **Total** | | | | | **$1,924,498/mo** |
 
-**B2 totals: $23,087,928/yr · $69,263,784 (3-yr) · $115,439,640 (5-yr)**
+**B2 totals: $23,093,976/yr · $69,281,928 (3-yr) · $115,469,880 (5-yr)**
 
 *The bundle's ERP+SCM+HCM bases already cover Expenses, Credit, costing and PLM change orders;
 Risk, Revenue, Quality, GOP and Transportation Management sit outside the bundle and price
@@ -376,11 +377,11 @@ Risk, Revenue, Quality, GOP and Transportation Management sit outside the bundle
 
 | Scenario | Up-front | Annual | 3-yr list TCO | 5-yr list TCO |
 |---|---:|---:|---:|---:|
-| **A — EBS 12.2 perpetual + 22% SUL&S** | $48.69M | $10.71M (support) | $80.8M | $102.2M |
-| **B1 — Fusion Cloud à-la-carte** | — | $29.00M | $87.0M | $145.0M |
-| **B2 — Fusion Suite bundle (36-mo)** | — | $23.09M | $69.3M | $115.4M |
+| **A — EBS 12.2 perpetual + 22% SUL&S** | $48.72M | $10.72M (support) | $80.9M | $102.3M |
+| **B1 — Fusion Cloud à-la-carte** | — | $29.01M | $87.0M | $145.1M |
+| **B2 — Fusion Suite bundle (36-mo)** | — | $23.09M | $69.3M | $115.5M |
 
-1. **At list price, EBS is cheapest over 5 years** (~$102.2M vs $115.4M Suite / $145.0M
+1. **At list price, EBS is cheapest over 5 years** (~$102.3M vs $115.5M Suite / $145.1M
    à-la-carte) and becomes more so after year 5 (support-only vs perpetual subscription).
    The EBS cash profile is also front-loaded — relevant at ~PHP 62B revenue. The
    full-implementation delta (v1.0 → v2.0: +$708K EBS license; +$0.44–0.48M/yr Fusion) does
@@ -395,10 +396,10 @@ Risk, Revenue, Quality, GOP and Transportation Management sit outside the bundle
    typically 20–50% off list with support capped; the Employee-metric HRMS block (~$5.8M
    license + $1.3M/yr support) is the natural discount anchor; Performance/Succession/Learning
    (≈$1.9M license) could be deferred or replaced by the in-house builds if adoption is thin.
-5. All quantities include a ~3% growth buffer but assume 200 stores / 6,911 employees —
+5. All quantities include a ~3% growth buffer but assume 200 stores / 6,932 employees —
    growing to 300 stores adds ~1,200 store users (+INV/MSCA/iProc/iExpenses-class licenses)
    and is **metric-true-up free on EBS perpetual** but re-priced every renewal on Fusion.
 
 ---
 
-*Document Version: 2.1 | Date: 2026-09-17 | **Fifty-fourth-wave consistency review (driver/note footing):** the surfaces the §2–§3 line-item re-derivations cannot read trued — §1's ecommerce driver now states the derived basis its order-line pricing rides (≈2.3M OM order lines at ~4.5 lines/order; the profile carries no lines-per-order canon — confirm the line histogram before ordering), §2.1's Financials AU build-up carries its explicit footing (= 592, rounded to 650 — the iExpenses rounding convention the note had silently omitted), and §2.3's MSCA RF build-up is trued to §1's own DC driver (DC 600 per §1, not 550; = 2,650, rounded to 2,700) — no line-item, quantity or total change, EBS/Fusion scenarios untouched. Prior v2.0 (full-implementation edition) | Date: 2026-09-17 | **v2.0 delta:** licenses the exhaustion-audit adoptions — EBS: RM&I (A11), L&FM (A13), iExpenses (B11), BOM/WIP (C9), Quality (C12), In-Memory Cost (C15), Engineering (C17), Credit Management (D3), Internal Controls Manager (H11), Project Management; Fusion: Risk 20 → 60, Revenue, Quality, GOP, Transportation Management — moving the EBS license base $47,977,560 → $48,685,690 and B1/B2 to $2,416,729 / $1,923,994 per month; † part numbers/prices pending GPL verification; GOP added to the VCP custom-quote register. Prior v1.0 (2026-09-17): initial issue. Sources: model-company-profile.md (§3, §4, §8, §9, §12, §15); module-coverage-map.md v2.0; ebs-platform-architecture.md v2.0 §2; fit-gap-analysis.md §2; optimal-table-of-organization.md §5.3; Oracle E-Business Suite Applications Component Global Price List 2026-09-10; Oracle Fusion Cloud Service Global Price List 2026-09-10; Oracle Technology Global Price List 2026-09-10. Prices are US-Dollar list, subject to change without notice; quantities are planning estimates pending an Oracle License Determination.*
+*Document Version: 2.2 | Date: 2026-09-18 | **Actual-org gap-fill re-base (+$32,120 EBS perpetual; B1/B2 employee-metric rows):** the 2026-09-18 HQ gap-fill (511 → 532; IA 14) re-based every employee-derived cell — §1 drivers (HQ staff 532, ERP named users 3,532 → licensed 3,600, governance teams IA 14), §2.1 Financials-AU footing (≈ 177 + 400 + 20 = 597, rounded to 650), §2.1 iExpenses footing (all HQ 532 + ~100 + ~25 = 657, rounded to 700), §2.8 HRMS @ 6,932 employees (+$17,745), §2.10 ICM 40 → 45 (+$14,375) — moving the Scenario-A base $48,685,690 → $48,717,810 and B1/B2 to $2,417,548 / $1,924,498 per month; §4 comparison cells re-derived at their stated rounding. Prior v2.1 (2026-09-17) | **Fifty-fourth-wave consistency review (driver/note footing):** the surfaces the §2–§3 line-item re-derivations cannot read trued — §1's ecommerce driver now states the derived basis its order-line pricing rides (≈2.3M OM order lines at ~4.5 lines/order; the profile carries no lines-per-order canon — confirm the line histogram before ordering), §2.1's Financials AU build-up carries its explicit footing (= 592, rounded to 650 — the iExpenses rounding convention the note had silently omitted), and §2.3's MSCA RF build-up is trued to §1's own DC driver (DC 600 per §1, not 550; = 2,650, rounded to 2,700) — no line-item, quantity or total change, EBS/Fusion scenarios untouched. Prior v2.0 (full-implementation edition) | Date: 2026-09-17 | **v2.0 delta:** licenses the exhaustion-audit adoptions — EBS: RM&I (A11), L&FM (A13), iExpenses (B11), BOM/WIP (C9), Quality (C12), In-Memory Cost (C15), Engineering (C17), Credit Management (D3), Internal Controls Manager (H11), Project Management; Fusion: Risk 20 → 60, Revenue, Quality, GOP, Transportation Management — moving the EBS license base $47,977,560 → $48,685,690 and B1/B2 to $2,416,729 / $1,923,994 per month; † part numbers/prices pending GPL verification; GOP added to the VCP custom-quote register. Prior v1.0 (2026-09-17): initial issue. Sources: model-company-profile.md (§3, §4, §8, §9, §12, §15); module-coverage-map.md v2.0; ebs-platform-architecture.md v2.0 §2; fit-gap-analysis.md §2; optimal-table-of-organization.md §5.3; Oracle E-Business Suite Applications Component Global Price List 2026-09-10; Oracle Fusion Cloud Service Global Price List 2026-09-10; Oracle Technology Global Price List 2026-09-10. Prices are US-Dollar list, subject to change without notice; quantities are planning estimates pending an Oracle License Determination.*

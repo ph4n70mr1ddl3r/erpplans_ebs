@@ -1209,7 +1209,7 @@ Owner: Project Management Office (PMO) Lead</bpmn:text>
     <bpmn:process id="W_W175" name="W175. Employee Gratuity &amp; Retirement Fund Management (RA 7641)" isExecutable="false">
       <bpmn:documentation>Trigger: Employee retirement; annual actuarial valuation; monthly fund contribution
 Frequency: Monthly provision posting; quarterly fund remittance; annual actuarial valuation; retirement events as-needed (~50–80 retirements/year based on workforce demographics)
-Volume: ~6,911 employees across 5 entities; retirement trust fund balance estimated PHP 150–250M
+Volume: ~6,932 employees across 5 entities; retirement trust fund balance estimated PHP 150–250M
 Owner: CFO
 Participants: HR Manager, Controller, External Actuary, Trust Bank, Finance Clerk
 Source: workflow W175 — Employee Gratuity &amp; Retirement Fund Management (RA 7641)</bpmn:documentation>
@@ -1830,7 +1830,7 @@ Owner: Legal Counsel (Claims/Litigation)</bpmn:text>
     <bpmn:process id="W_W426" name="W426. Annual Conflict of Interest (COI) &amp; Gift Policy Disclosure" isExecutable="false">
       <bpmn:documentation>Trigger: Annual corporate governance calendar (typically Q1)
 Frequency: Annual
-Volume: ~6,911 employees (all regular staff) + ~800–1,000 active vendors
+Volume: ~6,932 employees (all regular staff) + ~800–1,000 active vendors
 Owner: Compliance Manager
 Participants: All Employees, All Vendors, VP Legal &amp; Compliance, Internal Audit
 Source: workflow W426 — Annual Conflict of Interest (COI) &amp; Gift Policy Disclosure</bpmn:documentation>

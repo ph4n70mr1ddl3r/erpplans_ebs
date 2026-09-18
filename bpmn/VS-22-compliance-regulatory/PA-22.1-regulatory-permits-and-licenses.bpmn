@@ -2325,7 +2325,7 @@ Owner: Import Coordinator</bpmn:text>
     <bpmn:process id="W_W448" name="W448. LGU Sanitary &amp; Health Permit Management" isExecutable="false">
       <bpmn:documentation>Trigger: Annual LGU Business Permit renewal cycle (January) or new hire onboarding
 Frequency: Annual for all staff; per-hire for new employees
-Volume: ~6,911 employees across 200 stores
+Volume: ~6,932 employees across 200 stores
 Owner: Store Manager
 Participants: HR Assistant, Store Staff, LGU Health Office, Accredited Clinic
 Source: workflow W448 — LGU Sanitary &amp; Health Permit Management</bpmn:documentation>
@@ -4026,7 +4026,7 @@ Owner: Data Protection Officer (DPO)</bpmn:text>
     <bpmn:process id="W_W1203" name="W1203. Philippine Data Privacy Act (RA 10173) Compliance Audit, DPO Reporting &amp; NPC Registration" isExecutable="false">
       <bpmn:documentation>Trigger: Annual compliance audit cycle; or triggered by new NPC circular, data breach incident, or new data processing activity
 Frequency: Annual comprehensive audit; quarterly DPO report; continuous monitoring
-Volume: Covers 600,000 loyalty customer records, 6,911 employee records, 5,200 trade account records, 200 corporate account records, ~42,900 ecommerce customer records/month
+Volume: Covers 600,000 loyalty customer records, 6,932 employee records, 5,200 trade account records, 200 corporate account records, ~42,900 ecommerce customer records/month
 Owner: Data Protection Officer (DPO)
 Participants: DPO, CIO, VP Legal, CHRO, Marketing Manager (Loyalty), Ecommerce Ops Manager, IT Security Manager
 Source: workflow W1203 — Philippine Data Privacy Act (RA 10173) Compliance Audit, DPO Reporting &amp; NPC Registration</bpmn:documentation>
@@ -4096,7 +4096,7 @@ Duration: 8 hours/year</bpmn:documentation>
         <bpmn:outgoing>W1203_Flow21</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W1203_Task10" name="Employee privacy training">
-        <bpmn:documentation>Step 7: Employee privacy training: DPO conducts annual data privacy training for all employees: (a) online training module covering RA 10173 basics, BuildRight&#x27;s data privacy policy, handling of customer data at POS, and breach reporting procedure, (b) mandatory completion for all 6,911 employees, (c) tracked in OLA per W51 (learning and development), (d) refresher training for roles with high data access (cashiers, HR staff, customer service, IT)
+        <bpmn:documentation>Step 7: Employee privacy training: DPO conducts annual data privacy training for all employees: (a) online training module covering RA 10173 basics, BuildRight&#x27;s data privacy policy, handling of customer data at POS, and breach reporting procedure, (b) mandatory completion for all 6,932 employees, (c) tracked in OLA per W51 (learning and development), (d) refresher training for roles with high data access (cashiers, HR staff, customer service, IT)
 Responsible (R): DPO / HR
 Accountable (A): CHRO
 Duration: 4 hours/year (DPO) + 30 min/employee</bpmn:documentation>

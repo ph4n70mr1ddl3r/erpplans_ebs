@@ -9,7 +9,7 @@
 Drug-Free Workplace & Substance Abuse Program workflows for BuildRight Depot Corp. — owning the
 **drug-free workplace discipline** mandated for Philippine employers by DOLE Department Order No.
 53-03 (series of 2003) and Article V of RA 9165 (Comprehensive Dangerous Drugs Act), which require
-covered employers to formulate and implement a drug-free workplace policy and program. At ~6,911
+covered employers to formulate and implement a drug-free workplace policy and program. At ~6,932
 employees across 5 entities and ~205 sites (200 stores + 4 DCs + HQ), plus ~10–20% contingent
 labor (VS-98) and a large **safety-sensitive** population (forklift/reach-truck operators,
 delivery drivers under LTFRB/DOTr rules, paint/chemical handlers, equipment operators) inside a

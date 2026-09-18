@@ -230,7 +230,7 @@ erpplans/
 │   ├── executive-summary.md            1-page C-suite overview
 │   ├── assumptions-and-design-decisions.md  Consolidated assumptions & rationale
 │   ├── headcount-reality-check.md     HQ headcount vs. workflow-coverage gap analysis
-│   ├── optimal-table-of-organization.md  OFFICIAL table of organization of record — THE ACTUAL STRUCTURE (promoted 2026-09-14): HQ 511 / total 6,911, every HQ role defined in §5.3 (pre-optimization 362 / 6,762 retained as the §5.1 reference column; official elevation 2026-09-09; two-tier IT sourcing + agentic-AI model)
+│   ├── optimal-table-of-organization.md  OFFICIAL table of organization of record — THE ACTUAL STRUCTURE (promoted 2026-09-14; gap-filled 2026-09-18): HQ 532 / total 6,932, every HQ role defined in §5.3 (pre-optimization 362 / 6,762 retained as the §5.1 reference column; official elevation 2026-09-09; two-tier IT sourcing + agentic-AI model)
 │   ├── requirement-workflow-matrix.md  Cross-reference: requirements ↔ workflows
 │   ├── internal-controls-matrix.md     808 internal controls by objective
 │   ├── role-coverage-matrix.md         GENERATED role ↔ workflow coverage matrix (per-role owned/participated/step/tier-mix; regenerate via 07-methodology/generate-role-coverage.py — do not hand-edit)
@@ -336,7 +336,7 @@ erpplans/
 | Active SKUs | 35,000 |
 | Monthly Trade Purchase Orders | ~1,200 merchandise; ~1,400–1,600 total |
 | Legal Entities | 5 |
-| Total Headcount | 6,911 (200 stores × 29 + 600 DC + 511 HQ) |
+| Total Headcount | 6,932 (200 stores × 29 + 600 DC + 532 HQ) |
 | Ecommerce | Yes (with BOPIS) |
 | Country | Philippines |
 

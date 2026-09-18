@@ -22,7 +22,7 @@
 |---|---|
 | Workflows mapped | 5427 (exactly one Owner each — asserted) |
 | Confirmed Tier register | 5450 rows (Tier 1: 1396 · Tier 2: 3296 · Tier 3: 758) |
-| Distinct resolved actors | 4199 — §5.3 register roles 150 · IT product-model seats 30 · store field 12 · DC field 18 · department-level actors 2993 · system actors 31 · governance 59 · workforce 105 · external 801 · uncharted 0 |
+| Distinct resolved actors | 4199 — §5.3 register roles 152 · IT product-model seats 30 · store field 12 · DC field 18 · department-level actors 2991 · system actors 31 · governance 59 · workforce 105 · external 801 · uncharted 0 |
 
 > Tier mix = confirmed tiers of the workflows a role touches (a workflow
 > counts once per role regardless of how many steps mention it). HC is
@@ -109,6 +109,7 @@
 | Talent Acquisition Manager | Human Resources | 1 | 3 | 3 | 9 | 34 | 16 | 0 | 13 | 3 |
 | Talent Acquisition Specialist | Human Resources | 5 | 3 | 2 | 9 | 8 | 5 | 1 | 2 | 2 |
 | HR Services Specialist | Human Resources | 4 | 2 | 1 | 8 | 8 | 3 | 2 | 1 | 0 |
+| Store HR Coordinator (one per district) | Human Resources | 13 | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 |
 | Marketplace Manager | Marketing | 2 | 34 | 66 | 59 | 92 | 79 | 10 | 53 | 16 |
 | Loyalty & CRM Manager | Marketing | 1 | 25 | 30 | 68 | 41 | 43 | 3 | 28 | 12 |
 | Retail Media & Marketplace Manager | Marketing | 1 | 23 | 3 | 47 | 19 | 26 | 2 | 19 | 5 |
@@ -150,6 +151,7 @@
 | Senior Internal Auditor | Internal Audit & Risk | 1 | 3 | 0 | 2 | 45 | 21 | 0 | 0 | 21 |
 | Customer Service Representative | Customer Service | 22 | 58 | 116 | 305 | 39 | 160 | 39 | 106 | 15 |
 | Contact Center Supervisor | Customer Service | 2 | 8 | 17 | 14 | 25 | 24 | 8 | 12 | 4 |
+| Services Manager | Customer Service | 1 | 5 | 10 | 15 | 45 | 24 | 9 | 10 | 5 |
 | Head of Customer Service | Customer Service | 1 | 5 | 1 | 6 | 30 | 17 | 0 | 15 | 2 |
 | Director, Regional Loss Prevention | Regional Loss Prevention | 1 | 54 | 28 | 101 | 169 | 103 | 24 | 70 | 9 |
 | LP Analytics Analyst | Regional Loss Prevention | 2 | 20 | 30 | 95 | 9 | 50 | 20 | 23 | 7 |
@@ -1424,7 +1426,6 @@
 | Hr Compliance Manager | Human Resources | 5 | 4 | 10 | 8 | 9 | 4 | 5 | 0 |
 | Hr Operations Manager | Human Resources | 5 | 1 | 7 | 0 | 5 | 0 | 5 | 0 |
 | Eap Manager | Human Resources | 4 | 2 | 15 | 4 | 7 | 2 | 4 | 1 |
-| Store Hr Administrator | Human Resources | 4 | 2 | 12 | 16 | 6 | 1 | 5 | 0 |
 | Recruiting | Human Resources | 3 | 13 | 12 | 0 | 13 | 0 | 13 | 0 |
 | Compensation | Human Resources | 3 | 5 | 2 | 0 | 7 | 1 | 6 | 0 |
 | Hr-Ex | Human Resources | 3 | 0 | 3 | 0 | 3 | 0 | 2 | 1 |
@@ -1584,8 +1585,6 @@
 | Schooling | Human Resources | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Separation | Human Resources | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Staffing | Human Resources | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
-| Store Hr Administrators | Human Resources | 0 | 0 | 1 | 0 | 1 | 1 | 0 | 0 |
-| Store Hr Coordinator | Human Resources | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 |
 | Store Managers And Hr Front Desk | Human Resources | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Succession Committee | Human Resources | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 1 |
 | Talent Acquisition Operations | Human Resources | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 |
@@ -1769,7 +1768,6 @@
 | Rental Fleet Manager | Store Operations | 9 | 10 | 35 | 24 | 16 | 4 | 8 | 4 |
 | Director, Storage & Rental Services | Store Operations | 8 | 0 | 0 | 0 | 8 | 1 | 6 | 1 |
 | Uniform & Workwear Program Manager | Store Operations | 8 | 0 | 0 | 0 | 8 | 0 | 8 | 0 |
-| Services Manager | Store Operations | 5 | 10 | 15 | 45 | 24 | 9 | 10 | 5 |
 | Store Operations | Store Operations | 3 | 41 | 17 | 2 | 51 | 10 | 34 | 7 |
 | Director Storage | Store Operations | 3 | 1 | 16 | 30 | 11 | 2 | 6 | 3 |
 | Store | Store Operations | 2 | 69 | 32 | 33 | 84 | 26 | 47 | 11 |
@@ -2692,7 +2690,6 @@
 | Customer Site Coordinator | Trade / Account Management | 1 | 0 | 3 | 4 | 1 | 0 | 1 | 0 |
 | Estimating Specialist | Trade / Account Management | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 |
 | Installation Services | Trade / Account Management | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 |
-| Installation Services Manager | Trade / Account Management | 1 | 0 | 5 | 0 | 1 | 0 | 0 | 1 |
 | Msme Operations Manager | Trade / Account Management | 1 | 0 | 0 | 3 | 1 | 0 | 1 | 0 |
 | Project Sales Lead | Trade / Account Management | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Sales Operations Manager | Trade / Account Management | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 |
@@ -2774,6 +2771,7 @@
 | Loyalty | Marketing (Loyalty) | 4 | 56 | 26 | 0 | 56 | 15 | 30 | 11 |
 | Payroll | Human Resources (Payroll) | 4 | 43 | 46 | 1 | 49 | 16 | 33 | 0 |
 | Department Heads | Generic / cross-department | 4 | 33 | 15 | 3 | 44 | 15 | 22 | 7 |
+| Store Hr Administrator | Store HR Coordinator | 4 | 2 | 12 | 16 | 6 | 1 | 5 | 0 |
 | Cross-Entity | Generic / cross-department | 3 | 9 | 12 | 0 | 14 | 6 | 7 | 1 |
 | Requesting Department Head | Generic / cross-department | 3 | 3 | 0 | 0 | 5 | 2 | 2 | 1 |
 | E-Commerce Operations Manager | Digital Commerce (IT-built platforms) | 3 | 1 | 3 | 1 | 3 | 2 | 0 | 1 |
@@ -2834,6 +2832,7 @@
 | Head Of Digital Commerce | Digital Commerce (IT-built platforms) | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Hq Function Manager | Generic / cross-department | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Incident Owner | Generic / cross-department | 1 | 0 | 0 | 0 | 1 | 1 | 0 | 0 |
+| Installation Services Manager | Services Manager | 1 | 0 | 5 | 0 | 1 | 0 | 0 | 1 |
 | Jv Gm | Generic / cross-department | 1 | 0 | 2 | 0 | 1 | 0 | 1 | 0 |
 | Loyalty-Gift-Card | Marketing (Loyalty) | 1 | 0 | 0 | 0 | 1 | 1 | 0 | 0 |
 | Order Mgmt | Digital Commerce (IT-built platforms) | 1 | 0 | 2 | 0 | 1 | 0 | 1 | 0 |
@@ -3197,6 +3196,7 @@
 | Specialist Teams | Generic / cross-department | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Stakeholder Representatives | Generic / cross-department | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Statistics | Generic / cross-department | 0 | 1 | 1 | 0 | 1 | 0 | 0 | 1 |
+| Store Hr Administrators | Store HR Coordinator | 0 | 0 | 1 | 0 | 1 | 1 | 0 | 0 |
 | Subcontractor Mgmt | Generic / cross-department | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Subject Matter Expert | Generic / cross-department | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 1 |
 | Subject Matter Experts | Generic / cross-department | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 1 |

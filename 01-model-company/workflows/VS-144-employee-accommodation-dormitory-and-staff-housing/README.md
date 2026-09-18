@@ -10,7 +10,7 @@ Employee Accommodation, Dormitory & Staff Housing workflows for BuildRight Depot
 the **workforce-housing discipline** that provides accommodation to employees at BuildRight's
 ~205 distributed sites (200 stores + 4 DCs + HQ) where provincial/island locations, transferees,
 and rotating shift staff (including the 10 PM–6 AM night-differential window) make commute-only
-staffing infeasible or a documented attrition driver. With ~6,911 employees across Mindanao,
+staffing infeasible or a documented attrition driver. With ~6,932 employees across Mindanao,
 Visayas, Luzon-outside-NCR, Metro Manila, and North/Central Luzon — and a 15–20% frontline
 turnover rate — staff housing is a frontline-attrition and site-staffing lever comparable to the
 daily-transport discipline now owned by VS-141.

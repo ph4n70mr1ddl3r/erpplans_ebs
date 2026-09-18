@@ -128,7 +128,7 @@ the CIO Office. Two consequences worth stating explicitly:
 | 13 | Data Platform & MDM | DP | Platform | All product teams; Strategy/CPM; Marketing | 7 | 189 |
 | 14 | Software Engineering Platform | SEP | Platform | Build squads (OMO, TPS); all product teams | 0 | 0 |
 | 15 | AI & Agent Platform | AAP | Platform | All product teams (agent enablement); VS-128 governance | 0 | 0 |
-| 16 | Field & End-User Services | FS | Platform | All 205 locations; 6,911 users | 1 | 24 |
+| 16 | Field & End-User Services | FS | Platform | All 205 locations; 6,932 users | 1 | 24 |
 | | CIO Office (EA, Portfolio Governance, FinOps, Vendor Portfolio) | CIO | Enabling | CIO; CEO; Finance | 3 | 81 |
 | | **Platform + CIO subtotal** | | | | **17** | **492** |
 | | **Total** | | | | **188** | **5,427** |
@@ -458,7 +458,7 @@ squads on the SEP paved road (sourcing model §5–§7):
 |---|---|---|---|
 | **Business Product Owner (BPO)** | The department named "Business Process Owner" in §4 | ~30–50% | Owns requirements and business value; accepts releases into the business; drives user adoption; decides process-change vs configuration-change trade-offs; co-signs the roadmap. Named individuals, e.g., the S&OP/IBP Lead is the standing BPO for MSC's VS-127 scope; the Controller for FIN. |
 | **Business SMEs** | Named per sub-domain (a buyer, a DC manager, a store manager, an AP clerk, a payroll officer) | ~5–10% each, 2–4 people per team | Consulted continuously on design; participate in UAT as first users; validate training content; feed pain points into the backlog. |
-| **Change & Training Lead** | Shared pool under HR (Training) with CIO Office funding | ~0.25–0.5 FTE per team | Training curriculum and materials per release, adoption metrics, floor-walking for major rollouts — essential for 6,911 users of varying tech literacy across the archipelago. |
+| **Change & Training Lead** | Shared pool under HR (Training) with CIO Office funding | ~0.25–0.5 FTE per team | Training curriculum and materials per release, adoption metrics, floor-walking for major rollouts — essential for 6,932 users of varying tech literacy across the archipelago. |
 
 > These roles sit in their own §3.3 departments and are **not** counted in the 122-FTE IT
 > sizing (§9). Their time commitments are agreed in each BPO's objectives, reviewed at the
@@ -687,7 +687,7 @@ peak** (§13.2 seasonal calendar):
 | Pre-promotion IT department | 50 | `model-company-profile.md` §3.3 (superseded 2026-09-14 — the promotion is §9.1's 122) |
 | Gap-record need band (pre-hybrid, single-vendor model) | 65–80 | `headcount-reality-check.md` §3.2 (table row "Information Technology") |
 | Two-tier-model need band (in-suite EBS + in-house builds; issued 2026-09-03 as the 'hybrid' amendment, collapsed to two tiers 2026-09-14) | 65–130 | `headcount-reality-check.md` §3.2 amendment (2026-09-03) |
-| Industry benchmark | 100–168 (1.5–2.5% of 6,911 headcount); lean outsourced floor ~60–70 | `headcount-reality-check.md` §3.2 |
+| Industry benchmark | 100–168 (1.5–2.5% of 6,932 headcount); lean outsourced floor ~60–70 | `headcount-reality-check.md` §3.2 |
 | This design, v1.x (unified model) | 80 | OM v1.x §9 |
 | This design, v2.0 (hybrid) | 115 | OM v2.0 §9 |
 | This design, v2.1 (hybrid + agentic) | 122 | §9.1 |
@@ -699,7 +699,7 @@ concentrated exactly where the sourcing strategy creates permanent work: two bui
 contracts and dual-record MDM stewardship (DP +2), and product/vendor management in the
 integrate domains (+4, net of configure-side relief — re-pointed by the two-tier doctrine to
 the Oracle relationship, in-suite currency and the already-built platforms). The v2.1 agentic extension adds the AAP platform
-(+7) — still mid-band (65–130), because agents substitute for task hours across the 6,911-user
+(+7) — still mid-band (65–130), because agents substitute for task hours across the 6,932-user
 base rather than adding transaction-processing headcount. The v1.x argument that single-vendor SaaS
 transfers DBA, OS, and availability operations away still holds for the ERP core — which is
 why the design sits mid-benchmark and below the 130 ceiling of the two-tier band rather than
@@ -770,7 +770,7 @@ three-tier landscape (unified ERP core, BoB WMS/TMS/WFM/FSM edges, in-house OMO/
 16 teams (reconciliation unchanged 171 + 17 = 188 VS / 4,865 + 499 = 5,364 workflows),
 archetypes + Vendor PM + build squads, SIB governance, per-archetype release cadences,
 sizing 80 → 115. Prior v1.1 (2026-09-02, review #68) and v1.0 (2026-09-01): unified-model
-12-team design at 80 FTE. Downstream: `optimal-table-of-organization.md` v2.5 (HQ 511 /
-total 6,911 — the actual structure of record), `model-company-profile.md` v3.0,
+12-team design at 80 FTE. Downstream: `optimal-table-of-organization.md` v2.6 (HQ 532 /
+total 6,932 — the actual structure of record, gap-filled 2026-09-18), `model-company-profile.md` v3.1,
 `technical-guidelines.md` v3.4,
 `capability-sourcing-and-engineering-model.md` v3.3.*

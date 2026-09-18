@@ -16,7 +16,7 @@
 | HQ | Davao City, Philippines |
 | Legal Entities | 5 (Holdings, Depot, Logistics, Digital Commerce, Property Mgmt) |
 | Annual Revenue | ~PHP 62.3 Billion |
-| Employees | 6,911 |
+| Employees | 6,932 |
 | Active SKUs | 35,000 |
 | POS Terminals | 600 (3 per store) |
 | Monthly Transactions | 2.8 million |

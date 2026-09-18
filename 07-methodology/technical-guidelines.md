@@ -84,7 +84,7 @@ The following is the infrastructure topology that satisfies the NFRs in [erp-req
 | 200 store locations with POS | Requires reliable connectivity or robust offline mode |
 | 4 DCs with WMS/RF guns | Low-latency connection needed for real-time pick/ship |
 | 600 POS terminals | Centralized management is essential |
-| 6,911 employees | Core HR lives in the on-premises EBS suite; statutory payroll is computed on the in-house Payroll PH build on BuildRight-run infrastructure — nothing rides a public cloud (the platform of record is not a cloud/SaaS ERP) |
+| 6,932 employees | Core HR lives in the on-premises EBS suite; statutory payroll is computed on the in-house Payroll PH build on BuildRight-run infrastructure — nothing rides a public cloud (the platform of record is not a cloud/SaaS ERP) |
 | Philippine regulatory filing | BIR, SSS, PhilHealth, Pag-IBIG file generation |
 | Data residency | The platform of record (Oracle EBS 12.2) runs **on-premises** in BuildRight-controlled facilities per [`02-oracle-ebs/`](../02-oracle-ebs/README.md) §1; Philippine facility placement favored for latency |
 
@@ -97,7 +97,7 @@ ERP's data sync requirements.
 |---|---|---|---|
 | Store | 200 | ≥ 2 Mbps stable + failover link | POS sync, price updates, inventory updates |
 | DC | 4 | ≥ 10 Mbps stable, redundant | WMS real-time operations, ~80 RF guns per DC |
-| HQ | 1 | ≥ 200 Mbps | ~511 HQ staff (≈460 concurrent users), reporting, batch processing |
+| HQ | 1 | ≥ 200 Mbps | ~532 HQ staff (≈480 concurrent users), reporting, batch processing |
 | **Total WAN** | **205** | **~640 Mbps aggregate** | |
 
 ### 2.3 DR & Business Continuity Reference

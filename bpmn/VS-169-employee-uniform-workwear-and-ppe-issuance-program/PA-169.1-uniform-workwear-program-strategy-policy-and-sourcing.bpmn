@@ -3,7 +3,7 @@
     <bpmn:process id="W_W4913" name="W4913. Uniform, Workwear &amp; PPE Program Strategy &amp; Operating Model" isExecutable="false">
       <bpmn:documentation>Trigger: Program launch; annual HR/brand review; format evolution (VS-109); cost-pressure
 Frequency: Annual + on launch
-Volume: 1 group program applied to ~6,911 employees + ~10–20% contingent + vendor personnel across 205 sites
+Volume: 1 group program applied to ~6,932 employees + ~10–20% contingent + vendor personnel across 205 sites
 Owner: CHRO / Uniform &amp; Workwear Program Manager (HR Shared Services VS-103)
 Participants: HR (VS-19/VS-103), HSE (VS-24), Brand/Marketing (VS-14), Procurement (VS-03/VS-34), Finance (VS-17.4), Store Ops (VS-07)
 Source: workflow W4913 — Uniform, Workwear &amp; PPE Program Strategy &amp; Operating Model</bpmn:documentation>
@@ -222,7 +222,7 @@ Owner: HSE (VS-24) / Uniform &amp; Workwear Program Manager</bpmn:text>
     <bpmn:process id="W_W4916" name="W4916. Uniform Allowance, Replenishment Cycle &amp; Policy Framework" isExecutable="false">
       <bpmn:documentation>Trigger: Strategy set (W4913); annual policy review; total-rewards review (VS-102)
 Frequency: Annual + on policy change
-Volume: ~6,911 employees + contingent × allowance/replenishment policy
+Volume: ~6,932 employees + contingent × allowance/replenishment policy
 Owner: Uniform &amp; Workwear Program Manager / HR / Total Rewards (VS-102) / Finance
 Participants: HR (VS-19/VS-102), Finance (VS-17.4), Store Ops (VS-07), Payroll (VS-19.2)
 Source: workflow W4916 — Uniform Allowance, Replenishment Cycle &amp; Policy Framework</bpmn:documentation>
@@ -450,7 +450,7 @@ Owner: Uniform &amp; Workwear Program Manager / HR Shared Services (VS-103)</bpm
     <bpmn:process id="W_W4919" name="W4919. Branded Apparel Design, Procurement &amp; Quality" isExecutable="false">
       <bpmn:documentation>Trigger: Brand refresh (VS-14); season/format; wear-rate issue; supplier change (W4917)
 Frequency: Per design refresh + procurement cycle
-Volume: ~15–20 garment types × annual design refresh × ~6,911 employees + buffer
+Volume: ~15–20 garment types × annual design refresh × ~6,932 employees + buffer
 Owner: Uniform &amp; Workwear Program Manager / Brand / Procurement
 Participants: Brand/Marketing (VS-14), Procurement (VS-03/VS-34), Supplier (W4917), Quality (VS-31), HSE (VS-24)
 Source: workflow W4919 — Branded Apparel Design, Procurement &amp; Quality</bpmn:documentation>
