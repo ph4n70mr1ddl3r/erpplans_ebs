@@ -34,6 +34,15 @@ Measurement assumptions (printed with every run):
   * capacity: 1,800 net productive hours/FTE/year (HQ knowledge work) and
     1,900 (field shift roles) after PH holidays/leave — tool assumptions for
     decision support, not payroll actuals.
+  * duration cells carrying an explicit period qualifier ('30 min/month',
+    '2 hours/week', '8-12 h/month') mark regional/periodic steps: annual
+    demand = duration x 12/52/4/1, NOT duration x the workflow's store-event
+    count (fifty-sixth-wave store-scope review — the per-store ladder was
+    multiplying such steps by store-day events).
+  * demand keys fold onto their bucket-preferred capacity entry (exact form,
+    then singular/plural variants) — the store and DC rosters carry same-noun
+    titles ('Receiving Clerks'), and without bucket preference store
+    receiving demand priced against the DC roster.
   * the wave-31 contract applies when reading narrow-title utilization:
     specialist/deputy titles are legitimately exercised through their
     department's broader titles, so a narrow title reading hot is a workload
@@ -128,6 +137,24 @@ def parse_minutes(cell):
 PERIOD_DAYS = {"day": 1, "week": 7, "month": 30, "quarter": 91, "year": 365}
 PERIOD_MULT = {"day": 365, "week": 52, "month": 12, "quarter": 4, "year": 1}
 WORKDAYS = {"day": 250, "week": 50, "month": 12, "quarter": 4, "year": 1}
+
+
+PERIOD_QUALIFIER = re.compile(r"(?:/|per\s+)\s*(month|week|year|quarter)\b", re.I)
+PERIOD_MULT_Q = {"month": 12.0, "week": 52.0, "quarter": 4.0, "year": 1.0}
+
+
+def step_period_qualifier(cell):
+    """Duration cells carrying an explicit period qualifier ('30 min/month',
+    '2 hours/week', '8-12 h/month chain-wide') mark REGIONAL/PERIODIC steps:
+    the step runs N times per period chain-wide (or per region), NOT once per
+    workflow event. Fifty-sixth-wave store-scope review: the per-store ladder
+    was multiplying such steps by the workflow's store-day events (W69's
+    monthly 30-min regional price-audit review read as 30 min x 73,000
+    store-events/yr). Returns the annual multiplier (12/52/4/1) or None."""
+    m = PERIOD_QUALIFIER.search(cell or "")
+    if not m:
+        return None
+    return PERIOD_MULT_Q[m.group(1).lower()]
 
 
 def events_per_year(freq, field_exec):
@@ -285,6 +312,26 @@ def lookup_capacity(cap, title):
     return None
 
 
+def fold_capacity_key(cap, k, bucket):
+    """Fold a demand key onto its bucket-preferred capacity entry (exact form,
+    then singular/plural variants). The store and DC rosters carry same-noun
+    titles ('Receiving Clerks' x4 DCs vs the store receiving pair), and step
+    cells mix singular/plural forms — without bucket preference, store
+    receiving demand priced against the DC roster. Fifty-sixth-wave
+    store-scope review."""
+    variants = [k]
+    if k.endswith("s"):
+        variants.append(k[:-1])
+    variants.append(k + "s")
+    for c in variants:
+        if c in cap and cap.get("_bucket:" + c) == bucket:
+            return c
+    for c in variants:
+        if c in cap:
+            return c
+    return k
+
+
 # --------------------------------------------------------------- walk mode --
 
 def role_parts(cell, res):
@@ -403,7 +450,7 @@ def mode_motion(grc, res, wfs):
     if hq_total != CANON_HQ_HC or store_total != CANON_STORE_HC or dc_total != CANON_DC_HC:
         print("ERROR: canonical headcount mismatch — analysis invalid for this corpus revision.")
         return 1
-    demand = collections.defaultdict(float)       # title-key → annual minutes
+    demand = collections.defaultdict(float)       # (bucket, folded-key) → annual minutes
     events_cov = {"parsed": 0, "total": 0}
     touch_total = 0.0
     unattributed = 0.0
@@ -421,24 +468,27 @@ def mode_motion(grc, res, wfs):
         if ev is None:
             continue
         events_cov["parsed"] += 1
-        for dur, r, a in w["steps"]:
+        periods = w.get("step_period") or [None] * len(w["steps"])
+        for si, (dur, r, a) in enumerate(w["steps"]):
             if dur <= 0:
                 continue
-            touch_total += dur
+            pm = periods[si] if si < len(periods) else None
+            mult = pm if pm else ev
             roles = role_parts(r, res)
             if not roles:
-                unattributed += dur * ev
+                unattributed += dur * mult
                 continue
             share = dur / len(roles)
             for _p, _b, t in roles:
                 k = re.sub(r"\s+", " ", t).strip().lower()
-                demand[k] += share * ev
+                k = fold_capacity_key(cap, k, exec_bucket)
+                demand[(exec_bucket, k)] += share * mult
     print(f"Annualization coverage: {events_cov['parsed']}/{events_cov['total']} workflows "
           f"({events_cov['parsed']/events_cov['total']*100:.0f}%) had a parseable frequency; "
           f"unattributed step time {unattributed/60:,.0f} h/yr.")
     rows = []
-    for k, mins in demand.items():
-        c = lookup_capacity(cap, k)
+    for (_bucket, k), mins in demand.items():
+        c = cap.get(k) or lookup_capacity(cap, k)
         if c is None:
             rows.append((k, mins, None, None))
         else:

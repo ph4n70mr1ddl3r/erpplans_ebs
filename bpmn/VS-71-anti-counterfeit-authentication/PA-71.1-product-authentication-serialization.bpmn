@@ -157,7 +157,7 @@ Owner: IT Application Manager</bpmn:text>
       <bpmn:documentation>Trigger: Customer reports suspected counterfeit product or requests verification
 Frequency: ~50–100 inquiries/month
 Volume: ~50–100/month via customer service, in-store, online
-Owner: Customer Service Representative
+Owner: Customer Service Rep
 Participants: Customer Service Rep, LP Officer, Category Manager, Vendor
 Source: workflow W2552 — Customer Product Verification Support</bpmn:documentation>
       <bpmn:laneSet id="W2552_LaneSet3">
@@ -203,7 +203,7 @@ Duration: 15–30 min</bpmn:documentation>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W2552_Annotation9">
         <bpmn:text>Controls: - CTL-442 (ensure controlled execution — Product Authentication &amp; Serialization (PA-71.1).) | - operational: Customer Service Representative review and approval gate
-Owner: Customer Service Representative</bpmn:text>
+Owner: Customer Service Rep</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W2552_Assoc10" sourceRef="W2552_Annotation9" targetRef="W2552_Start4" associationDirection="None" />
       <bpmn:sequenceFlow id="W2552_Flow11" sourceRef="W2552_Start4" targetRef="W2552_Task5" />

@@ -4,7 +4,7 @@
       <bpmn:documentation>Trigger: Customer brings purchased item(s) to customer service counter for return
 Frequency: ~56,000 returns/month across 200 stores (~2% return rate on 2.8M transactions)
 Volume: ~280 returns/store/month (~9/day); seasonal spikes post-promotion
-Owner: Customer Service Representative (CSR)
+Owner: Customer Service Rep
 Participants: CSR, Customer Service Manager, Store Manager (overrides)
 Source: workflow W1622 — In-Store Customer Return Processing</bpmn:documentation>
       <bpmn:laneSet id="W1622_LaneSet3">
@@ -85,8 +85,8 @@ Duration: 2 min + restock time</bpmn:documentation>
         <bpmn:incoming>W1622_Flow22</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1622_Annotation13">
-        <bpmn:text>Controls: - CTL-179 (ensure returns integrity &amp; refund-fraud prevention.) | - operational: Customer Service Representative review and approval gate
-Owner: Customer Service Representative (CSR)</bpmn:text>
+        <bpmn:text>Controls: - CTL-179 (ensure returns integrity &amp; refund-fraud prevention.) | - operational: Customer Service Rep review and approval gate
+Owner: Customer Service Rep</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1622_Assoc14" sourceRef="W1622_Annotation13" targetRef="W1622_Start4" associationDirection="None" />
       <bpmn:sequenceFlow id="W1622_Flow15" sourceRef="W1622_Start4" targetRef="W1622_Task5" />

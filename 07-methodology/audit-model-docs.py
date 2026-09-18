@@ -2527,6 +2527,112 @@ def quote_coverage_hits():
     return hits
 
 
+def store_scope_hits():
+    """2026-09-18 fifty-sixth-wave consistency review — guard for the
+    store-layer role-scope true-up (the wave that made the store time-and-
+    motion attribution honest):
+      (a) the 9 unambiguous store-execution PA files carry the store roster
+          title 'Customer Service Rep' everywhere — the HQ
+          'Customer Service Representative' form (the 22-HC HQ register row)
+          is retired there; store counter/desk cells resolving to the HQ
+          bucket mispriced 1.65M h/yr of store demand;
+      (b) 'Floor Associate' step role cells are retired repo-wide (uncharted
+          vocabulary; the duties are Sales Associate work per the §12.1
+          roster) — prose mentions stand per the sweep's own adjudication;
+      (c) W562's store-daily LP routine executes as the Store Manager per the
+          workflow's own no-dedicated-officer Owner clause — the 9 pure
+          'LP Officer' Role (R) cells are retired (compound steps 1/9/12
+          keep the officer);
+      (d) the four dual-scope Frequency fields lead with the per-store figure
+          the analyzer's documented cadence ladder parses — the retired
+          network-total-first forms are forbidden."""
+    hits = []
+    wf = os.path.join(REPO, "01-model-company", "workflows")
+
+    # (a) store-file CSR title form
+    for rel in ("VS-07-store-operations/PA-07.1-store-daily-management.md",
+                "VS-07-store-operations/PA-07.3-store-receiving-and-replenishment.md",
+                "VS-08-pos-checkout/PA-08.1-transaction-processing.md",
+                "VS-09-in-store-services/PA-09.1-custom-fabrication-and-processing.md",
+                "VS-09-in-store-services/PA-09.2-project-estimation-and-advisory.md",
+                "VS-09-in-store-services/PA-09.3-customer-amenities-and-assistance.md",
+                "VS-12-installation-services/PA-12.1-installation-and-repair-services.md",
+                "VS-32-returns-reverse-logistics/PA-32.1-customer-returns-processing.md",
+                "VS-78-green-building-advisory/PA-78.2-green-building-project-consultation.md"):
+        text = open(os.path.join(wf, rel), encoding="utf-8").read()
+        if "Customer Service Representative" in text:
+            hits.append((rel, text[:text.index("Customer Service Representative")].count("\n") + 1,
+                         'retired HQ title form "Customer Service Representative" in a '
+                         'store-execution file (store roster title: "Customer Service Rep")'))
+        if "Customer Service Rep" not in text:
+            hits.append((rel, 0, 'missing store roster title "Customer Service Rep"'))
+
+    # (b) Floor Associate role cells repo-wide (step-table rows only)
+    step_row = re.compile(r"^\| \d+ \|")
+    for vd in sorted(os.listdir(wf)):
+        if not vd.startswith("VS-"):
+            continue
+        vd_path = os.path.join(wf, vd)
+        for fn in sorted(os.listdir(vd_path)):
+            if not (fn.startswith("PA-") and fn.endswith(".md")):
+                continue
+            for ln_no, ln in enumerate(open(os.path.join(vd_path, fn), encoding="utf-8"), 1):
+                if step_row.match(ln) and "Floor Associate" in ln:
+                    hits.append((fn, ln_no, 'retired "Floor Associate" step role cell '
+                                             '(Sales Associate per the §12.1 roster)'))
+
+    # (c) W562 pure LP Officer cells
+    c1 = os.path.join(wf, "VS-07-store-operations/PA-07.1-store-daily-management.md")
+    text = open(c1, encoding="utf-8").read()
+    m = re.search(r"^## W562\..*$", text, flags=re.M)
+    if not m:
+        hits.append(("PA-07.1-store-daily-management.md", 0, "W562 block not found"))
+    else:
+        body = text[m.start():]
+        block = body.split("\n## W")[0]
+        pure = 0
+        sm_cells = 0
+        for ln in block.splitlines():
+            sm = re.match(r"^\| (\d+) \|", ln)
+            if not sm:
+                continue
+            if int(sm.group(1)) not in (2, 3, 4, 5, 6, 7, 8, 10, 11):
+                continue
+            # exact-cell match: descriptions may carry literal '|' characters,
+            # so positional indexing is not row-safe here
+            if re.search(r"\| LP Officer \|", ln):
+                pure += 1
+            elif re.search(r"\| Store Manager \|", ln):
+                sm_cells += 1
+        if pure:
+            hits.append(("PA-07.1-store-daily-management.md", 0,
+                         f"W562 store-daily LP routine: {pure} pure 'LP Officer' Role (R) "
+                         f"cells (retired — Store Manager per the Owner's "
+                         f"no-dedicated-officer clause)"))
+        if sm_cells != 9:
+            hits.append(("PA-07.1-store-daily-management.md", 0,
+                         f"W562 expects 9 Store Manager routine cells, found {sm_cells}"))
+
+    # (d) retired dual-scope frequency fragments
+    retired_freq = [
+        ("VS-07-store-operations/PA-07.2-store-facility-and-safety.md",
+         "~400–600 incidents per month across 200 stores (~2–3 per store per month)"),
+        ("VS-06-logistics-fleet/PA-06.1-outbound-distribution.md",
+         "~500–600 DSD receipts/month across all stores (~2–3 DSD deliveries per store per month)"),
+        ("VS-13-customer-experience/PA-13.3-customer-data-and-crm.md",
+         "~400–600 visits per month (~2–3 visits per store per month)"),
+        ("VS-07-store-operations/PA-07.4-store-staffing-and-people.md",
+         "~1,200–1,600 new hires/year across 200 stores (~6–8 per store per year per profile §11.4)"),
+    ]
+    for rel, frag in retired_freq:
+        text = open(os.path.join(wf, rel), encoding="utf-8").read()
+        if frag in text:
+            hits.append((rel, text[:text.index(frag)].count("\n") + 1,
+                         'retired dual-scope Frequency form (lead with the per-store figure): '
+                         '"' + frag[:50] + '…"'))
+    return hits
+
+
 def migration_template_hits():
     """2026-09-14 twenty-first-wave consistency review — the two-tier doctrine
     moved payroll balances (02-oracle-ebs/data-migration.md v1.1 row 11: payroll
@@ -2684,6 +2790,8 @@ def main():
     # 2026-09-18 fifty-fifth-wave consistency review additions
     hits.extend(gap_fill_straggler_hits())
     hits.extend(quote_coverage_hits())
+    # 2026-09-18 fifty-sixth-wave consistency review addition (store role scope)
+    hits.extend(store_scope_hits())
     for doc, line, detail in hits:
         print(f"model-doc: {doc}:{line}: {detail}")
     print(f"audit-model-docs: {len(hits)} hit(s) across {len(DOCS)} documents")

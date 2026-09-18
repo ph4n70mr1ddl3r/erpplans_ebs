@@ -2032,7 +2032,7 @@ Owner: Customer Service Manager</bpmn:text>
       <bpmn:documentation>Trigger: Customer returns item without receipt; or customer elects store credit instead of refund; or service recovery per W660
 Frequency: Daily; ~20 store credit issuances per day chain-wide (~600/month per the Volume)
 Volume: 200 stores × ~3 issuances/store/month = ~600 issuances/month (~PHP 2-4M outstanding at any time)
-Owner: Customer Service Representative
+Owner: Customer Service Rep
 Participants: CSR, Customer, Store Manager, AR Accountant
 Source: workflow W781 — Customer Store Credit Issuance &amp; Lifecycle Management</bpmn:documentation>
       <bpmn:laneSet id="W781_LaneSet5">
@@ -2118,7 +2118,7 @@ Duration: 2 hours/month</bpmn:documentation>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W781_Annotation15">
         <bpmn:text>Controls: - CTL-278 (ensure controlled execution — Customer Support &amp; Complaints (PA-13.1).) | - operational: validation mitigate
-Owner: Customer Service Representative</bpmn:text>
+Owner: Customer Service Rep</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W781_Assoc16" sourceRef="W781_Annotation15" targetRef="W781_Start6" associationDirection="None" />
       <bpmn:sequenceFlow id="W781_Flow17" sourceRef="W781_Start6" targetRef="W781_Task7" />

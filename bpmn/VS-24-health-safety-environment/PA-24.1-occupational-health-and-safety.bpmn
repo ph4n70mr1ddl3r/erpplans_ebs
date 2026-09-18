@@ -1160,7 +1160,7 @@ Owner: HR Benefits Officer</bpmn:text>
 Frequency: As-needed; estimated 30–50 customer safety incidents per month chain-wide (minor: slips, falls, minor cuts; major: fractures, head injuries, chemical exposure)
 Volume: ~400–600 customer incidents per year across 200 stores; ~90% minor (first aid only), ~10% requiring medical facility referral
 Owner: Store Manager
-Participants: First Aid Certified Staff, Customer Service Representative, LP Officer, Store Manager, Insurance Claims Coordinator, Legal Counsel, Safety Officer
+Participants: First Aid Certified Staff, Customer Service Rep, LP Officer, Store Manager, Insurance Claims Coordinator, Legal Counsel, Safety Officer
 Source: workflow W1266 — Store-Level Customer Safety Incident Management, First Aid Response &amp; Liability Documentation</bpmn:documentation>
       <bpmn:laneSet id="W1266_LaneSet3">
         <bpmn:lane id="W1266_Lane1" name="First Aid Certified Staff">
@@ -1204,7 +1204,7 @@ Duration: 30–60 min</bpmn:documentation>
       </bpmn:userTask>
       <bpmn:userTask id="W1266_Task8" name="Customer follow-up">
         <bpmn:documentation>Step 4: Customer follow-up: Within 24 hours: (a) Store Manager contacts customer to check on condition; (b) if customer visited hospital, obtain medical certificate and diagnosis; (c) if customer incurred medical expenses, offer to reimburse reasonable first aid/consultation costs per company policy (up to PHP 5,000 without Legal approval); (d) for incidents involving potential liability (moderate-to-severe injury): (i) notify Insurance Claims Coordinator per W285, (ii) notify Legal Counsel for documentation review, (iii) do not admit liability or make promises — express concern and support only; (e) document all follow-up communications in incident file
-Responsible (R): Store Manager / Customer Service Representative
+Responsible (R): Store Manager / Customer Service Rep
 Accountable (A): Regional Manager
 Duration: 30 min</bpmn:documentation>
         <bpmn:incoming>W1266_Flow16</bpmn:incoming>

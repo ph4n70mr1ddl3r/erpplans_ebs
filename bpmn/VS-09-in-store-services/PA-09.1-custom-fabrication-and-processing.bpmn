@@ -980,7 +980,7 @@ Owner: Department Supervisor
 Participants: Floor Associate, Department Supervisor, Store Manager (escalation), Customer
 Source: workflow W740 — Store-Level Customer Complaint On-the-Spot Resolution &amp; Floor Staff Empowerment</bpmn:documentation>
       <bpmn:laneSet id="W740_LaneSet5">
-        <bpmn:lane id="W740_Lane1" name="Floor Associate">
+        <bpmn:lane id="W740_Lane1" name="Sales Associate">
         <bpmn:flowNodeRef>W740_Task7</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W740_Task8</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W740_Task9</bpmn:flowNodeRef>
@@ -1004,7 +1004,7 @@ Source: workflow W740 — Store-Level Customer Complaint On-the-Spot Resolution 
       </bpmn:startEvent>
       <bpmn:userTask id="W740_Task7" name="Issue identification — Floor associate observes or is informed of customer…">
         <bpmn:documentation>Step 1: Issue identification — Floor associate observes or is informed of customer dissatisfaction; determines issue category (pricing, availability, quality, service, policy)
-Responsible (R): Floor Associate
+Responsible (R): Sales Associate
 Accountable (A): Department Supervisor
 Duration: 2 min</bpmn:documentation>
         <bpmn:incoming>W740_Flow18</bpmn:incoming>
@@ -1012,7 +1012,7 @@ Duration: 2 min</bpmn:documentation>
       </bpmn:userTask>
       <bpmn:userTask id="W740_Task8" name="Empathy &amp; acknowledgment — Associate acknowledges the concern using trained…">
         <bpmn:documentation>Step 2: Empathy &amp; acknowledgment — Associate acknowledges the concern using trained empathy phrases; assures customer the issue will be addressed immediately
-Responsible (R): Floor Associate
+Responsible (R): Sales Associate
 Accountable (A): —
 Duration: 1 min</bpmn:documentation>
         <bpmn:incoming>W740_Flow19</bpmn:incoming>
@@ -1020,7 +1020,7 @@ Duration: 1 min</bpmn:documentation>
       </bpmn:userTask>
       <bpmn:userTask id="W740_Task9" name="Issue assessment — Associate determines if within their resolution authority…">
         <bpmn:documentation>Step 3: Issue assessment — Associate determines if within their resolution authority: pricing discrepancy ≤ PHP 500, product exchange of same value, rain check for out-of-stock, fetching item from backroom, calling department expert
-Responsible (R): Floor Associate
+Responsible (R): Sales Associate
 Accountable (A): Department Supervisor
 Duration: 2 min</bpmn:documentation>
         <bpmn:incoming>W740_Flow20</bpmn:incoming>
@@ -1028,7 +1028,7 @@ Duration: 2 min</bpmn:documentation>
       </bpmn:userTask>
       <bpmn:userTask id="W740_Task10" name="Resolution execution — If within authority: apply resolution immediately (price…">
         <bpmn:documentation>Step 4: Resolution execution — If within authority: apply resolution immediately (price adjustment via W5B, exchange via W12A, rain check issuance, expedited retrieval); if outside authority, escalate to Step 5
-Responsible (R): Floor Associate
+Responsible (R): Sales Associate
 Accountable (A): Department Supervisor
 Duration: 5 min</bpmn:documentation>
         <bpmn:incoming>W740_Flow21</bpmn:incoming>
@@ -1052,7 +1052,7 @@ Duration: 10 min</bpmn:documentation>
       </bpmn:userTask>
       <bpmn:userTask id="W740_Task13" name="Resolution logging — Regardless of resolution level, associate logs the issue…">
         <bpmn:documentation>Step 7: Resolution logging — Regardless of resolution level, associate logs the issue in the system: category, resolution type, time to resolve, customer satisfaction indicator (satisfied/neutral/dissatisfied)
-Responsible (R): Floor Associate
+Responsible (R): Sales Associate
 Accountable (A): Department Supervisor
 Duration: 2 min</bpmn:documentation>
         <bpmn:incoming>W740_Flow24</bpmn:incoming>
@@ -2462,7 +2462,7 @@ Owner: Head of Trade / Account Management</bpmn:text>
 Frequency: ~24,000–29,000 follow-ups/month (covering ~17,200 ecommerce home deliveries + 5,000–8,000 in-store delivery orders + 2,200–3,500 installations)
 Volume: 1 follow-up per delivery/installation event
 Owner: Customer Experience Manager
-Participants: Customer, Customer Service Representative, Installation Technician, Category Manager (quality issues), Store Manager (delivery issues)
+Participants: Customer, Customer Service Rep, Installation Technician, Category Manager (quality issues), Store Manager (delivery issues)
 Source: workflow W954 — Customer Delivery &amp; Installation Quality Follow-Up Verification</bpmn:documentation>
       <bpmn:laneSet id="W954_LaneSet5">
         <bpmn:lane id="W954_Lane1" name="System">
@@ -2493,7 +2493,7 @@ Duration: Automated</bpmn:documentation>
         <bpmn:outgoing>W954_Flow16</bpmn:outgoing>
       </bpmn:serviceTask>
       <bpmn:serviceTask id="W954_Task8" name="Customer Response Collection">
-        <bpmn:documentation>Step 2: Customer Response Collection: Customer responds: (a) positive response (4–5 stars, no issues reported) → system sends thank-you message, offers related product recommendations, and credits loyalty points (25 points for survey completion); triggers review solicitation (W510) for positive experiences; (b) neutral response (3 stars, no specific issues) → system sends thank-you and invites detailed feedback; Customer Service Representative reviews within 48 hours; (c) negative response (1–2 stars OR specific issue reported) → immediately escalated to Customer Service Representative for live follow-up per step 3
+        <bpmn:documentation>Step 2: Customer Response Collection: Customer responds: (a) positive response (4–5 stars, no issues reported) → system sends thank-you message, offers related product recommendations, and credits loyalty points (25 points for survey completion); triggers review solicitation (W510) for positive experiences; (b) neutral response (3 stars, no specific issues) → system sends thank-you and invites detailed feedback; Customer Service Rep reviews within 48 hours; (c) negative response (1–2 stars OR specific issue reported) → immediately escalated to Customer Service Rep for live follow-up per step 3
 Responsible (R): Customer / System
 Accountable (A): Customer Experience Manager
 Duration: 2–5 min (customer)</bpmn:documentation>
@@ -2501,7 +2501,7 @@ Duration: 2–5 min (customer)</bpmn:documentation>
         <bpmn:outgoing>W954_Flow17</bpmn:outgoing>
       </bpmn:serviceTask>
       <bpmn:userTask id="W954_Task9" name="Issue Resolution Follow-Up">
-        <bpmn:documentation>Step 3: Issue Resolution Follow-Up: For negative responses: (a) Customer Service Representative calls customer within 4 hours of negative response during business hours; (b) documents issue: delivery damage, wrong item, missing item, installation quality, installation behavior/professionalism, timing/punctuality; (c) categorizes issue per root cause taxonomy (delivery, installation, product, logistics); (d) resolves or escalates: (i) delivery damage → claim per W860 insurance or W91 disposition; (ii) wrong/missing item → replacement per W12 returns; (iii) installation quality → service rework per W795; (iv) technician behavior → escalated to the Installation Services Coordinator per W600 contractor management; (e) resolution tracked per W597 SLA (target: 48-hour resolution for delivery issues, 72-hour for installation issues)
+        <bpmn:documentation>Step 3: Issue Resolution Follow-Up: For negative responses: (a) Customer Service Rep calls customer within 4 hours of negative response during business hours; (b) documents issue: delivery damage, wrong item, missing item, installation quality, installation behavior/professionalism, timing/punctuality; (c) categorizes issue per root cause taxonomy (delivery, installation, product, logistics); (d) resolves or escalates: (i) delivery damage → claim per W860 insurance or W91 disposition; (ii) wrong/missing item → replacement per W12 returns; (iii) installation quality → service rework per W795; (iv) technician behavior → escalated to the Installation Services Coordinator per W600 contractor management; (e) resolution tracked per W597 SLA (target: 48-hour resolution for delivery issues, 72-hour for installation issues)
 Responsible (R): Customer Service Rep
 Accountable (A): Customer Experience Manager
 Duration: 15–30 min/case</bpmn:documentation>
@@ -2567,7 +2567,7 @@ Owner: Customer Experience Manager</bpmn:text>
 Frequency: ~8,000–12,000 hiring facilitations/month chain-wide (~40–60/store/month)
 Volume: 1–5 workers per hiring request
 Owner: Store Manager
-Participants: Customer, Construction Worker (applicant), Customer Service Representative, Store Manager
+Participants: Customer, Construction Worker (applicant), Customer Service Rep, Store Manager
 Source: workflow W955 — Customer Daily-Wage Construction Worker Hiring Facilitation Service</bpmn:documentation>
       <bpmn:laneSet id="W955_LaneSet5">
         <bpmn:lane id="W955_Lane1" name="Customer Service Rep">
@@ -2590,7 +2590,7 @@ Source: workflow W955 — Customer Daily-Wage Construction Worker Hiring Facilit
         <bpmn:outgoing>W955_Flow15</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:userTask id="W955_Task7" name="Worker Registration">
-        <bpmn:documentation>Step 1: Worker Registration: Construction worker visits BuildRight customer service counter to register: (a) provides: full name, mobile number, barangay/address, trade/skill (carpenter, mason, plumber, electrician, painter, tile setter, laborer/handyman, welder), years of experience, daily rate expectation, availability (Mon–Sat selection), and preferred BuildRight store; (b) Customer Service Representative verifies: valid government ID (presented and visually verified — PhilHealth, barangay clearance, voter&#x27;s ID, or any valid ID); (c) system creates worker profile — NOT an employee record, but a facilitation directory entry; (d) worker receives BuildRight loyalty card enrollment per W551 (optional but encouraged — tracks store visits for activity-based availability status); (e) worker receives printed registration card with BuildRight registration ID; (f) worker profile active for 90 days, renewable with re-verification; (g) registration is FREE — no fee to worker or customer
+        <bpmn:documentation>Step 1: Worker Registration: Construction worker visits BuildRight customer service counter to register: (a) provides: full name, mobile number, barangay/address, trade/skill (carpenter, mason, plumber, electrician, painter, tile setter, laborer/handyman, welder), years of experience, daily rate expectation, availability (Mon–Sat selection), and preferred BuildRight store; (b) Customer Service Rep verifies: valid government ID (presented and visually verified — PhilHealth, barangay clearance, voter&#x27;s ID, or any valid ID); (c) system creates worker profile — NOT an employee record, but a facilitation directory entry; (d) worker receives BuildRight loyalty card enrollment per W551 (optional but encouraged — tracks store visits for activity-based availability status); (e) worker receives printed registration card with BuildRight registration ID; (f) worker profile active for 90 days, renewable with re-verification; (g) registration is FREE — no fee to worker or customer
 Responsible (R): Customer Service Rep / Worker
 Accountable (A): Store Manager
 Duration: 10–15 min/worker</bpmn:documentation>
@@ -4885,8 +4885,8 @@ Owner: Trade Counter / Pro Desk Supervisor</bpmn:text>
       <bpmn:documentation>Trigger: Customer inquiring about major home construction, renovation, or appliance purchase expresses interest in financing options, or Sales Associate identifies that the customer&#x27;s project budget exceeds their immediate purchasing capacity
 Frequency: ~3,000–5,000 referral interactions/month across all stores (driven by B2C customers undertaking major home improvement projects with average project cost of PHP 50,000–500,000)
 Volume: 1 referral per customer interaction
-Owner: Customer Service Representative
-Participants: Sales Associate, Customer Service Representative, Partner Bank/Financing Representative
+Owner: Customer Service Rep
+Participants: Sales Associate, Customer Service Rep, Partner Bank/Financing Representative
 Source: workflow W1088 — Customer Mortgage &amp; Housing Loan Partner Bank Referral Desk Operations</bpmn:documentation>
       <bpmn:laneSet id="W1088_LaneSet4">
         <bpmn:lane id="W1088_Lane1" name="Sales Associate">
@@ -4907,9 +4907,9 @@ Source: workflow W1088 — Customer Mortgage &amp; Housing Loan Partner Bank Ref
         <bpmn:outgoing>W1088_Flow14</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:userTask id="W1088_Task6" name="Customer Financing Need Identification">
-        <bpmn:documentation>Step 1: Customer Financing Need Identification: (a) Sales Associate identifies financing need during project consultation: customer mentions budget constraint, asks about installment options, or the project estimate exceeds PHP 50,000; (b) Associate introduces financing options: &quot;BuildRight has partner banks that offer home improvement loans with competitive rates. Would you like me to connect you with our financing desk?&quot;; (c) Customer Service Representative (or dedicated Financing Desk Associate in high-volume stores) conducts preliminary assessment: (i) customer type: employed, self-employed, OFW, pensioner; (ii) estimated project cost; (iii) desired loan amount; (iv) preferred repayment term; (v) existing bank relationships; (vi) Pag-IBIG membership status; (d) system displays recommended financing options based on assessment
+        <bpmn:documentation>Step 1: Customer Financing Need Identification: (a) Sales Associate identifies financing need during project consultation: customer mentions budget constraint, asks about installment options, or the project estimate exceeds PHP 50,000; (b) Associate introduces financing options: &quot;BuildRight has partner banks that offer home improvement loans with competitive rates. Would you like me to connect you with our financing desk?&quot;; (c) Customer Service Rep (or dedicated Financing Desk Associate in high-volume stores) conducts preliminary assessment: (i) customer type: employed, self-employed, OFW, pensioner; (ii) estimated project cost; (iii) desired loan amount; (iv) preferred repayment term; (v) existing bank relationships; (vi) Pag-IBIG membership status; (d) system displays recommended financing options based on assessment
 Responsible (R): Sales Associate / Customer Service Rep
-Accountable (A): Customer Service Representative
+Accountable (A): Customer Service Rep
 Duration: 5–8 min</bpmn:documentation>
         <bpmn:incoming>W1088_Flow14</bpmn:incoming>
         <bpmn:outgoing>W1088_Flow15</bpmn:outgoing>
@@ -4917,23 +4917,23 @@ Duration: 5–8 min</bpmn:documentation>
       <bpmn:serviceTask id="W1088_Task7" name="Financing Option Matching &amp; Partner Bank Selection">
         <bpmn:documentation>Step 2: Financing Option Matching &amp; Partner Bank Selection: System matches customer profile to available financing products: (a) Bank Home Improvement Loan — for project costs PHP 100K+: requirements include proof of income (latest ITR or BIR Form 2316, latest 3 months payslips, COE), 2 valid government IDs, proof of billing address, marriage certificate (if applicable); processing time: 5–7 banking days; banks: BDO Home Loan, BPI Family Savings, Metrobank Home Improvement; (b) Pag-IBIG Home Improvement Loan — for qualified Pag-IBIG members: requires 24 monthly contributions, updated membership, property titled under borrower&#x27;s name or relative&#x27;s name with consent; processing time: 10–15 working days; (c) Credit Card Installment — for purchases PHP 5,000+: instant approval, 0% interest for 3/6/12 months (during promotional periods), no additional documents; (d) In-Store Financing (Partner Bank Desk) — some stores host a partner bank representative 2–3 days per week for on-the-spot application processing; (e) system displays comparison table: product, amount range, interest rate, term, processing time, monthly payment estimate
 Responsible (R): System
-Accountable (A): Customer Service Representative
+Accountable (A): Customer Service Rep
 Duration: 3–5 min (automated)</bpmn:documentation>
         <bpmn:incoming>W1088_Flow15</bpmn:incoming>
         <bpmn:outgoing>W1088_Flow16</bpmn:outgoing>
       </bpmn:serviceTask>
       <bpmn:userTask id="W1088_Task8" name="Application Facilitation &amp; Document Assistance">
-        <bpmn:documentation>Step 3: Application Facilitation &amp; Document Assistance: (a) Customer Service Representative assists customer with financing application: (i) provides partner bank application form (pre-printed with BuildRight referral code for commission tracking); (ii) reviews customer&#x27;s documents for completeness; (iii) for Pag-IBIG loans: assists with HDMF form verification and member contribution printout; (iv) for bank loans: explains income documentation requirements and assists with self-employed customer&#x27;s financial statement preparation (basic guidance); (b) for in-store bank desk days: schedules appointment with partner bank representative at the store; (c) system generates project cost estimate on BuildRight letterhead (required by banks as proof of purpose) linked to quotation per W162; (d) Customer Service Representative submits application to partner bank via email or in-person (on bank desk days); (e) system logs referral in CRM with: customer name, project description, estimated loan amount, partner bank, submission date, referral code
+        <bpmn:documentation>Step 3: Application Facilitation &amp; Document Assistance: (a) Customer Service Rep assists customer with financing application: (i) provides partner bank application form (pre-printed with BuildRight referral code for commission tracking); (ii) reviews customer&#x27;s documents for completeness; (iii) for Pag-IBIG loans: assists with HDMF form verification and member contribution printout; (iv) for bank loans: explains income documentation requirements and assists with self-employed customer&#x27;s financial statement preparation (basic guidance); (b) for in-store bank desk days: schedules appointment with partner bank representative at the store; (c) system generates project cost estimate on BuildRight letterhead (required by banks as proof of purpose) linked to quotation per W162; (d) Customer Service Rep submits application to partner bank via email or in-person (on bank desk days); (e) system logs referral in CRM with: customer name, project description, estimated loan amount, partner bank, submission date, referral code
 Responsible (R): Customer Service Rep
-Accountable (A): Customer Service Representative
+Accountable (A): Customer Service Rep
 Duration: 15–25 min per application</bpmn:documentation>
         <bpmn:incoming>W1088_Flow16</bpmn:incoming>
         <bpmn:outgoing>W1088_Flow17</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:serviceTask id="W1088_Task9" name="Loan Tracking &amp; Purchase Conversion">
-        <bpmn:documentation>Step 4: Loan Tracking &amp; Purchase Conversion: (a) system tracks loan application status via partner bank API (where available) or manual status update by Customer Service Representative; (b) system sends periodic status updates to customer: &quot;Your home improvement loan application with [Bank] is being processed. Expected decision by [date].&quot;; (c) upon loan approval: system notifies Customer Service Representative and Sales Associate who initiated the referral; (d) Customer Service Representative contacts customer: &quot;Congratulations! Your loan has been approved for PHP [amount]. You can now proceed with your project purchase at BuildRight.&quot;; (e) customer returns to store (or purchases online) to complete the material order; system links the original project estimate to the final purchase; (f) bank disburses loan amount: either directly to customer&#x27;s account (customer pays BuildRight) or via manager&#x27;s check payable to BuildRight (for large B2B projects); (g) BuildRight earns referral commission from partner bank (typically 0.5–1.5% of loan amount, paid quarterly by the bank)
+        <bpmn:documentation>Step 4: Loan Tracking &amp; Purchase Conversion: (a) system tracks loan application status via partner bank API (where available) or manual status update by Customer Service Rep; (b) system sends periodic status updates to customer: &quot;Your home improvement loan application with [Bank] is being processed. Expected decision by [date].&quot;; (c) upon loan approval: system notifies Customer Service Rep and Sales Associate who initiated the referral; (d) Customer Service Rep contacts customer: &quot;Congratulations! Your loan has been approved for PHP [amount]. You can now proceed with your project purchase at BuildRight.&quot;; (e) customer returns to store (or purchases online) to complete the material order; system links the original project estimate to the final purchase; (f) bank disburses loan amount: either directly to customer&#x27;s account (customer pays BuildRight) or via manager&#x27;s check payable to BuildRight (for large B2B projects); (g) BuildRight earns referral commission from partner bank (typically 0.5–1.5% of loan amount, paid quarterly by the bank)
 Responsible (R): System / Customer Service Rep
-Accountable (A): Customer Service Representative
+Accountable (A): Customer Service Rep
 Duration: Ongoing: ~10 min per status check/approval follow-up</bpmn:documentation>
         <bpmn:incoming>W1088_Flow17</bpmn:incoming>
         <bpmn:outgoing>W1088_Flow18</bpmn:outgoing>
@@ -4950,8 +4950,8 @@ Duration: Monthly report: 30 min; Quarterly review: 2–3 hrs</bpmn:documentatio
         <bpmn:incoming>W1088_Flow19</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1088_Annotation12">
-        <bpmn:text>Controls: - CTL-266 (ensure controlled execution — Custom Fabrication &amp; Processing (PA-09.1).) | - operational: Customer Service Representative review and approval gate
-Owner: Customer Service Representative</bpmn:text>
+        <bpmn:text>Controls: - CTL-266 (ensure controlled execution — Custom Fabrication &amp; Processing (PA-09.1).) | - operational: Customer Service Rep review and approval gate
+Owner: Customer Service Rep</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1088_Assoc13" sourceRef="W1088_Annotation12" targetRef="W1088_Start5" associationDirection="None" />
       <bpmn:sequenceFlow id="W1088_Flow14" sourceRef="W1088_Start5" targetRef="W1088_Task6" />
@@ -5194,11 +5194,11 @@ Owner: Trade Counter / Pro Desk Supervisor</bpmn:text>
       <bpmn:documentation>Trigger: Customer returns a rented tool or equipment at the store customer service counter
 Frequency: ~3,000–4,000 rental returns/month across all stores (complement to W139 tool rental operations)
 Volume: 1–3 tools per return transaction
-Owner: Customer Service Representative
-Participants: Customer Service Representative, Department Supervisor (Tools), Customer
+Owner: Customer Service Rep
+Participants: Customer Service Rep, Department Supervisor (Tools), Customer
 Source: workflow W1104 — Customer Tool Rental Return Damage Assessment &amp; Billing</bpmn:documentation>
       <bpmn:laneSet id="W1104_LaneSet3">
-        <bpmn:lane id="W1104_Lane1" name="Customer Service Representative">
+        <bpmn:lane id="W1104_Lane1" name="Customer Service Rep">
         <bpmn:flowNodeRef>W1104_Task5</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W1104_Task6</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W1104_Task7</bpmn:flowNodeRef>
@@ -5214,16 +5214,16 @@ Source: workflow W1104 — Customer Tool Rental Return Damage Assessment &amp; B
         <bpmn:outgoing>W1104_Flow13</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:userTask id="W1104_Task5" name="Rental Record Retrieval &amp; Pre-Return Verification">
-        <bpmn:documentation>Step 1: Rental Record Retrieval &amp; Pre-Return Verification: (a) Customer Service Representative (CSR) scans the customer&#x27;s rental agreement barcode or looks up by loyalty card/phone number; (b) system displays: tool ID, tool description, rental start date/time, agreed return date/time, rental rate, security deposit amount, pre-rental condition notes, and photos of tool at issuance; (c) CSR verifies customer identity (government ID matching rental agreement); (d) system auto-calculates elapsed rental time and any overdue charges: overdue rate = 1.5× standard daily rate per day late
-Responsible (R): Customer Service Representative
-Accountable (A): Customer Service Representative
+        <bpmn:documentation>Step 1: Rental Record Retrieval &amp; Pre-Return Verification: (a) Customer Service Rep scans the customer&#x27;s rental agreement barcode or looks up by loyalty card/phone number; (b) system displays: tool ID, tool description, rental start date/time, agreed return date/time, rental rate, security deposit amount, pre-rental condition notes, and photos of tool at issuance; (c) CSR verifies customer identity (government ID matching rental agreement); (d) system auto-calculates elapsed rental time and any overdue charges: overdue rate = 1.5× standard daily rate per day late
+Responsible (R): Customer Service Rep
+Accountable (A): Customer Service Rep
 Duration: 3–5 min</bpmn:documentation>
         <bpmn:incoming>W1104_Flow13</bpmn:incoming>
         <bpmn:outgoing>W1104_Flow14</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W1104_Task6" name="Physical Tool Inspection &amp; Condition Comparison">
         <bpmn:documentation>Step 2: Physical Tool Inspection &amp; Condition Comparison: CSR inspects returned tool against pre-rental condition: (a) visual inspection for new scratches, dents, cracks, or missing parts; (b) functional test: power on, run for 30 seconds, check for unusual noise or vibration; (c) accessory check: verify all accessories listed at issuance are returned (blades, bits, chargers, batteries, cables, manuals, carrying case); (d) cleanliness check: tool should be returned free of excessive concrete dust, paint, or mud (reasonable use debris is acceptable); (e) for electrical tools: inspect cord for cuts, check plug integrity; (f) for gas-powered equipment: check fuel level (should be returned with minimum fuel), oil condition; (g) for scaffolding: verify all pins, braces, and platforms are present and undamaged; (h) CSR photographs any damage or missing items using store tablet
-Responsible (R): Customer Service Representative
+Responsible (R): Customer Service Rep
 Accountable (A): Department Supervisor (Tools)
 Duration: 5–10 min</bpmn:documentation>
         <bpmn:incoming>W1104_Flow14</bpmn:incoming>
@@ -5231,7 +5231,7 @@ Duration: 5–10 min</bpmn:documentation>
       </bpmn:userTask>
       <bpmn:userTask id="W1104_Task7" name="Damage Classification &amp; Assessment">
         <bpmn:documentation>Step 3: Damage Classification &amp; Assessment: CSR classifies tool condition: (a) Normal Wear — minor cosmetic scratches, expected consumable wear (blade dulling, brush wear), dust/debris from normal use → no additional charge; (b) Minor Damage — small dent, scuffed housing, missing low-value accessory (screw, washer) → flat PHP 150–500 cleaning/minor repair surcharge; (c) Moderate Damage — cracked housing, damaged cord, bent blade, broken accessory → repair cost estimate generated by system based on tool type and damage code, typically PHP 500–2,000; (d) Major Damage — motor burnout, cracked frame, missing major component (battery, blade guard) → full repair or replacement cost, capped at the tool&#x27;s current replacement value; (e) Total Loss — tool returned non-functional, submerged in water, dropped from height, or stolen → security deposit forfeited + additional charge up to replacement value per rental agreement terms. For categories (c)–(e), Department Supervisor is called for visual confirmation and approval
-Responsible (R): Customer Service Representative
+Responsible (R): Customer Service Rep
 Accountable (A): Department Supervisor (Tools)
 Duration: 5–8 min</bpmn:documentation>
         <bpmn:incoming>W1104_Flow15</bpmn:incoming>
@@ -5239,7 +5239,7 @@ Duration: 5–8 min</bpmn:documentation>
       </bpmn:userTask>
       <bpmn:userTask id="W1104_Task8" name="Security Deposit Settlement &amp; Additional Billing">
         <bpmn:documentation>Step 4: Security Deposit Settlement &amp; Additional Billing: (a) system calculates final bill: base rental charge + overdue charges (if any) + damage surcharge (if any) - security deposit held; (b) if net amount is positive (customer owes more): customer pays balance via POS (W5B); (c) if net amount is negative (deposit exceeds charges): refund processed to original payment method per W101 (customer refund processing), or issued as store credit per W781; (d) system generates itemized rental return receipt with condition assessment details; (e) customer signs digital acknowledgment of return condition; (f) if customer disputes damage assessment, escalate to Store Manager per dispute resolution hierarchy
-Responsible (R): Customer Service Representative / POS
+Responsible (R): Customer Service Rep / POS
 Accountable (A): Department Supervisor (Tools)
 Duration: 5–7 min</bpmn:documentation>
         <bpmn:incoming>W1104_Flow16</bpmn:incoming>
@@ -5257,8 +5257,8 @@ Duration: 10–20 min (for normal wear); varies for repair</bpmn:documentation>
         <bpmn:incoming>W1104_Flow18</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1104_Annotation11">
-        <bpmn:text>Controls: - CTL-266 (ensure controlled execution — Custom Fabrication &amp; Processing (PA-09.1).) | - operational: Customer Service Representative review and approval gate
-Owner: Customer Service Representative</bpmn:text>
+        <bpmn:text>Controls: - CTL-266 (ensure controlled execution — Custom Fabrication &amp; Processing (PA-09.1).) | - operational: Customer Service Rep review and approval gate
+Owner: Customer Service Rep</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1104_Assoc12" sourceRef="W1104_Annotation11" targetRef="W1104_Start4" associationDirection="None" />
       <bpmn:sequenceFlow id="W1104_Flow13" sourceRef="W1104_Start4" targetRef="W1104_Task5" />
@@ -5293,11 +5293,11 @@ Owner: Customer Service Representative</bpmn:text>
       <bpmn:documentation>Trigger: Customer brings unused/surplus building materials to store for buy-back, or customer requests a project completion surplus pickup
 Frequency: ~3,000–5,000 surplus buy-back transactions/month across all stores
 Volume: 1–10 items per transaction
-Owner: Customer Service Representative
-Participants: Customer Service Representative, Department Supervisor, Customer
+Owner: Customer Service Rep
+Participants: Customer Service Rep, Department Supervisor, Customer
 Source: workflow W1109 — Customer Project Material Surplus Buy-Back &amp; Recycling Program</bpmn:documentation>
       <bpmn:laneSet id="W1109_LaneSet4">
-        <bpmn:lane id="W1109_Lane1" name="Customer Service Representative">
+        <bpmn:lane id="W1109_Lane1" name="Customer Service Rep">
         <bpmn:flowNodeRef>W1109_Task6</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W1109_Task7</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W1109_Start5</bpmn:flowNodeRef>
@@ -5315,15 +5315,15 @@ Source: workflow W1109 — Customer Project Material Surplus Buy-Back &amp; Recy
       </bpmn:startEvent>
       <bpmn:userTask id="W1109_Task6" name="Surplus Material Intake &amp; Eligibility Check">
         <bpmn:documentation>Step 1: Surplus Material Intake &amp; Eligibility Check: (a) Customer brings surplus materials to the customer service counter; (b) CSR verifies eligibility: (i) items must be BuildRight-branded or identifiable as BuildRight inventory (receipt, loyalty account purchase history, or SKU barcode scan); (ii) items must be in resalable condition: unopened packaging (cement bags intact, tile boxes sealed, paint cans unopened) or minimally used and clean (lumber without damage, full-length); (iii) items must not be hazardous materials requiring special handling (paint/chemicals must be unopened); (iv) items must be in the current active catalog (not discontinued); (c) system looks up original purchase price from customer&#x27;s transaction history; (d) items not meeting eligibility criteria are declined with explanation and disposal guidance offered per W502 (non-hazardous waste management)
-Responsible (R): Customer Service Representative
-Accountable (A): Customer Service Representative
+Responsible (R): Customer Service Rep
+Accountable (A): Customer Service Rep
 Duration: 5–8 min</bpmn:documentation>
         <bpmn:incoming>W1109_Flow13</bpmn:incoming>
         <bpmn:outgoing>W1109_Flow14</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W1109_Task7" name="Condition Grading &amp; Buy-Back Valuation">
         <bpmn:documentation>Step 2: Condition Grading &amp; Buy-Back Valuation: (a) CSR grades each item&#x27;s condition: Grade A — unopened, original packaging intact, current catalog item → buy-back at 70% of original purchase price; Grade B — opened but complete and undamaged, or minor cosmetic imperfection → buy-back at 50% of original purchase price; Grade C — partial quantity (e.g., half a bag of cement, cut lumber), clean and usable → buy-back at 30% of original purchase price; (b) system auto-calculates buy-back values based on grade and original purchase price; (c) customer chooses compensation: (i) store credit (additional 10% bonus on buy-back value, incentivizing reinvestment at BuildRight), (ii) cash refund via GCash or bank transfer (3–5 day processing), (iii) loyalty points (converted at standard rate); (d) Department Supervisor reviews and approves any single transaction exceeding PHP 10,000 in buy-back value
-Responsible (R): Customer Service Representative
+Responsible (R): Customer Service Rep
 Accountable (A): Department Supervisor (if &gt; PHP 10K)
 Duration: 5–10 min</bpmn:documentation>
         <bpmn:incoming>W1109_Flow14</bpmn:incoming>
@@ -5349,8 +5349,8 @@ Duration: automated monthly</bpmn:documentation>
         <bpmn:incoming>W1109_Flow17</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1109_Annotation11">
-        <bpmn:text>Controls: - CTL-266 (ensure controlled execution — Custom Fabrication &amp; Processing (PA-09.1).) | - operational: Customer Service Representative review and approval gate
-Owner: Customer Service Representative</bpmn:text>
+        <bpmn:text>Controls: - CTL-266 (ensure controlled execution — Custom Fabrication &amp; Processing (PA-09.1).) | - operational: Customer Service Rep review and approval gate
+Owner: Customer Service Rep</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1109_Assoc12" sourceRef="W1109_Annotation11" targetRef="W1109_Start5" associationDirection="None" />
       <bpmn:sequenceFlow id="W1109_Flow13" sourceRef="W1109_Start5" targetRef="W1109_Task6" />
@@ -5485,8 +5485,8 @@ Owner: Ecommerce Operations Manager</bpmn:text>
       <bpmn:documentation>Trigger: Customer inquiry about product availability via mobile app, website, phone call, or in-store associate
 Frequency: ~50,000–80,000 stock lookup requests/month across all channels
 Volume: 1–5 SKUs per lookup
-Owner: Ecommerce Operations Manager (digital channels); Customer Service Representative (phone/in-store)
-Participants: Customer, Sales Associate, Customer Service Representative, E-commerce Platform
+Owner: Ecommerce Operations Manager (digital channels); Customer Service Rep (phone/in-store)
+Participants: Customer, Sales Associate, Customer Service Rep, E-commerce Platform
 Source: workflow W1114 — Customer Product Availability Real-Time Stock Lookup &amp; Reservation Service</bpmn:documentation>
       <bpmn:laneSet id="W1114_LaneSet3">
         <bpmn:lane id="W1114_Lane1" name="System">
@@ -5521,8 +5521,8 @@ Duration: 1–2 min</bpmn:documentation>
       </bpmn:serviceTask>
       <bpmn:serviceTask id="W1114_Task7" name="Reservation Fulfillment &amp; Expiry Management">
         <bpmn:documentation>Step 3: Reservation Fulfillment &amp; Expiry Management: (a) customer arrives at store and presents reservation ID (SMS on phone) at customer service counter; (b) CSR verifies reservation: (i) reservation ID matches active reservation; (ii) customer name/ID matches; (iii) reservation has not expired; (c) CSR directs customer to the item&#x27;s aisle location or retrieves from backroom if pre-staged; (d) customer proceeds to POS for purchase — reservation ID scanned, hold released, inventory deducted; (e) if customer does not arrive before expiration: (i) system automatically releases the reservation; (ii) ATP quantity restored; (iii) customer receives SMS notification: &quot;Your reservation for [Item] at [Store] has expired. The item is now available to other customers.&quot;; (iv) if reservation fee was paid (PHP 50): fee forfeited and recorded as miscellaneous revenue
-Responsible (R): System / Customer Service Representative
-Accountable (A): Customer Service Representative
+Responsible (R): System / Customer Service Rep
+Accountable (A): Customer Service Rep
 Duration: 3–5 min at pickup</bpmn:documentation>
         <bpmn:incoming>W1114_Flow14</bpmn:incoming>
         <bpmn:outgoing>W1114_Flow15</bpmn:outgoing>
@@ -5540,7 +5540,7 @@ Duration: automated</bpmn:documentation>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1114_Annotation10">
         <bpmn:text>Controls: - CTL-266 (ensure controlled execution — Custom Fabrication &amp; Processing (PA-09.1).) | - operational: POS-level ATP deduction prevents sale of reserved stock to walk-in customers; operational: inventory record accuracy target ≥ 97%
-Owner: Ecommerce Operations Manager (digital channels); Customer Service Representative (phone/in-store)</bpmn:text>
+Owner: Ecommerce Operations Manager (digital channels); Customer Service Rep (phone/in-store)</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1114_Assoc11" sourceRef="W1114_Annotation10" targetRef="W1114_Start4" associationDirection="None" />
       <bpmn:sequenceFlow id="W1114_Flow12" sourceRef="W1114_Start4" targetRef="W1114_Task5" />

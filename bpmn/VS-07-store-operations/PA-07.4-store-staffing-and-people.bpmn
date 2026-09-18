@@ -818,7 +818,7 @@ Owner: Store Manager</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W609" name="W609. Store-Level New Employee Buddy System &amp; First-Week Onboarding" isExecutable="false">
       <bpmn:documentation>Trigger: New hire first day at store (following HQ onboarding per W15)
-Frequency: As needed; ~1,200–1,600 new hires/year across 200 stores (~6–8 per store per year per profile §11.4)
+Frequency: As needed; ~6–8 new hires per store per year per profile §11.4 (~1,200–1,600/year across 200 stores)
 Volume: 1 new hire per event; ~100–130 active buddy assignments at any time (~30-day window on ~1,200–1,600 hires/year)
 Owner: Store Manager
 Participants: New employee, assigned Buddy (experienced Sales Associate), Department Supervisor, Store Manager

@@ -499,11 +499,11 @@ Owner: LP Officer (Store-Level) / Store Manager</bpmn:text>
       <bpmn:documentation>Trigger: Scheduled — daily BOPIS staging area audit; ad-hoc triggered by customer complaint of order tampering, inventory variance at staging, or LP exception alert
 Frequency: Daily monitoring at all 200 stores; investigation as needed
 Volume: ~25,700 BOPIS orders/month; estimated 50–80 staging-related incidents/month chain-wide
-Owner: Customer Service Representative / LP Analyst
+Owner: Customer Service Rep / LP Analyst
 Participants: Store Manager, Stock Associate, LP Analyst, Ecommerce Operations Manager
 Source: workflow W1248 — BOPIS Staging Area Security &amp; Omnichannel Fulfillment Fraud Prevention</bpmn:documentation>
       <bpmn:laneSet id="W1248_LaneSet4">
-        <bpmn:lane id="W1248_Lane1" name="Customer Service Representative">
+        <bpmn:lane id="W1248_Lane1" name="Customer Service Rep">
         <bpmn:flowNodeRef>W1248_Task6</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W1248_Task8</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W1248_Task9</bpmn:flowNodeRef>
@@ -523,7 +523,7 @@ Source: workflow W1248 — BOPIS Staging Area Security &amp; Omnichannel Fulfill
       </bpmn:startEvent>
       <bpmn:userTask id="W1248_Task6" name="Daily staging area opening audit">
         <bpmn:documentation>Step 1: Daily staging area opening audit: Customer Service Representative verifies staging area readiness: (a) confirm BOPIS holding shelves/lockers are empty from previous day or contain only active orders within hold period; (b) verify CCTV coverage of staging area; (c) check that staged orders are in sealed bags/containers with order number label; (d) report any unsealed or unlabeled staged goods to Store Manager
-Responsible (R): Customer Service Representative
+Responsible (R): Customer Service Rep
 Accountable (A): Store Manager
 Duration: 15 min</bpmn:documentation>
         <bpmn:incoming>W1248_Flow15</bpmn:incoming>
@@ -531,7 +531,7 @@ Duration: 15 min</bpmn:documentation>
       </bpmn:userTask>
       <bpmn:userTask id="W1248_Task7" name="BOPIS pick verification">
         <bpmn:documentation>Step 2: BOPIS pick verification: When Stock Associate completes BOPIS pick, system requires: (a) scan each item barcode to confirm correct SKU and quantity; (b) photograph staged order (mobile app) as pick verification evidence; (c) system generates tamper-evident bag seal number or locker code; (d) Stock Associate and Customer Service Representative both verify staged order count matches pick list
-Responsible (R): Stock Associate / Customer Service Representative
+Responsible (R): Stock Associate / Customer Service Rep
 Accountable (A): Store Manager
 Duration: 5 min per order</bpmn:documentation>
         <bpmn:incoming>W1248_Flow16</bpmn:incoming>
@@ -539,7 +539,7 @@ Duration: 5 min per order</bpmn:documentation>
       </bpmn:userTask>
       <bpmn:userTask id="W1248_Task8" name="Customer pickup identity verification">
         <bpmn:documentation>Step 3: Customer pickup identity verification: At BOPIS pickup: (a) customer presents government-issued ID matching order name; (b) Customer Service Representative scans order QR code and verifies customer identity; (c) system displays order contents — representative opens sealed bag in customer presence; (d) customer confirms item count and condition; (e) system records pickup timestamp and customer acknowledgment
-Responsible (R): Customer Service Representative
+Responsible (R): Customer Service Rep
 Accountable (A): Store Manager
 Duration: 5 min per pickup</bpmn:documentation>
         <bpmn:incoming>W1248_Flow17</bpmn:incoming>
@@ -547,7 +547,7 @@ Duration: 5 min per pickup</bpmn:documentation>
       </bpmn:userTask>
       <bpmn:userTask id="W1248_Task9" name="Anti-impersonation controls">
         <bpmn:documentation>Step 4: Anti-impersonation controls: For high-value BOPIS orders (&gt; PHP 10,000): (a) system sends SMS OTP to order phone number at pickup — customer must provide OTP; (b) if third-party pickup authorized, system requires pickup authorization code from order owner; (c) flag attempts to collect multiple orders under different names from same ID; (d) flag pickup attempts within 30 min of order placement (insufficient time for legitimate pick)
-Responsible (R): Customer Service Representative
+Responsible (R): Customer Service Rep
 Accountable (A): LP Manager (Regional)
 Duration: 3 min per high-value pickup</bpmn:documentation>
         <bpmn:incoming>W1248_Flow18</bpmn:incoming>
@@ -555,7 +555,7 @@ Duration: 3 min per high-value pickup</bpmn:documentation>
       </bpmn:userTask>
       <bpmn:userTask id="W1248_Task10" name="Staged order tampering detection">
         <bpmn:documentation>Step 5: Staged order tampering detection: Daily reconciliation of staged orders: (a) system compares pick-scan log to current staged inventory; (b) flag any staged order with item count discrepancy; (c) for sealed bags: verify seal number matches system record; (d) for open-shelf staging: spot-check item SKUs against pick list; (e) investigate any tampered seals or mismatched items as potential theft per W839
-Responsible (R): LP Analyst / Customer Service Representative
+Responsible (R): LP Analyst / Customer Service Rep
 Accountable (A): Store Manager
 Duration: 30 min/day</bpmn:documentation>
         <bpmn:incoming>W1248_Flow19</bpmn:incoming>
@@ -574,7 +574,7 @@ Duration: 10 min per abandoned order</bpmn:documentation>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1248_Annotation13">
         <bpmn:text>Controls: - CTL-225 (ensure shrinkage detection &amp; case governance.) | - operational: periodic reconciliation against source documents
-Owner: Customer Service Representative / LP Analyst</bpmn:text>
+Owner: Customer Service Rep / LP Analyst</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1248_Assoc14" sourceRef="W1248_Annotation13" targetRef="W1248_Start5" associationDirection="None" />
       <bpmn:sequenceFlow id="W1248_Flow15" sourceRef="W1248_Start5" targetRef="W1248_Task6" />

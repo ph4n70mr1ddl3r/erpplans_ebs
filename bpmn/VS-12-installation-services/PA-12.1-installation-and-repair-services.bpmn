@@ -2005,7 +2005,7 @@ Owner: Installation Services Manager</bpmn:text>
       <bpmn:documentation>Trigger: Installation job completion and customer quality sign-off (W1171)
 Frequency: Per installation job; ~2,200–3,500 installation jobs per month chain-wide (per the 500–800/week canon)
 Volume: ~4,500 completion certificates per month; ~4,500 warranty registrations per month
-Owner: Customer Service Representative / Installation Services Coordinator
+Owner: Customer Service Rep / Installation Services Coordinator
 Participants: Subcontractor, Customer, Store Manager, Category Manager, Warranty Administrator
 Source: workflow W1254 — Customer Project Digital Completion Certificate &amp; Post-Installation Warranty Registration</bpmn:documentation>
       <bpmn:laneSet id="W1254_LaneSet4">
@@ -2018,7 +2018,7 @@ Source: workflow W1254 — Customer Project Digital Completion Certificate &amp;
         <bpmn:lane id="W1254_Lane2" name="System">
         <bpmn:flowNodeRef>W1254_Task7</bpmn:flowNodeRef>
         </bpmn:lane>
-        <bpmn:lane id="W1254_Lane3" name="Customer Service Representative">
+        <bpmn:lane id="W1254_Lane3" name="Customer Service Rep">
         <bpmn:flowNodeRef>W1254_Task8</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W1254_End11</bpmn:flowNodeRef>
         </bpmn:lane>
@@ -2044,7 +2044,7 @@ Duration: 5 min per job (automated)</bpmn:documentation>
       </bpmn:serviceTask>
       <bpmn:userTask id="W1254_Task8" name="Warranty registration &amp; customer notification">
         <bpmn:documentation>Step 3: Warranty registration &amp; customer notification: (a) register warranty in Oracle Install Base with unique warranty ID (fit-gap D16); (b) link warranty to customer record in CRM (loyalty member or new customer); (c) send warranty confirmation to customer: email with digital warranty certificate, SMS with warranty ID and expiry date; (d) for loyalty members: auto-link warranty to customer profile for future claim reference; (e) schedule warranty expiry reminder notification (30 days before expiry)
-Responsible (R): Customer Service Representative
+Responsible (R): Customer Service Rep
 Accountable (A): Installation Services Coordinator
 Duration: 5 min per job</bpmn:documentation>
         <bpmn:incoming>W1254_Flow16</bpmn:incoming>
@@ -2071,7 +2071,7 @@ Duration: 4 hours/month</bpmn:documentation>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1254_Annotation12">
         <bpmn:text>Controls: - CTL-186 (ensure installation quality &amp; warranty registration.) | - operational: standard operating procedures; system-enforced validation rules
-Owner: Customer Service Representative / Installation Services Coordinator</bpmn:text>
+Owner: Customer Service Rep / Installation Services Coordinator</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1254_Assoc13" sourceRef="W1254_Annotation12" targetRef="W1254_Start5" associationDirection="None" />
       <bpmn:sequenceFlow id="W1254_Flow14" sourceRef="W1254_Start5" targetRef="W1254_Task6" />

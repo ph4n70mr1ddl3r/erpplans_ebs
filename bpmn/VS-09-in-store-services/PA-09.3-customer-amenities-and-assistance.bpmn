@@ -8,7 +8,7 @@ Owner: Department Supervisor (Building Materials)
 Participants: Floor Associate, Department Supervisor, Customer, Merchandising (W1)
 Source: workflow W746 — Store-Level Building Material Sample Management &amp; Customer Selection Assistance</bpmn:documentation>
       <bpmn:laneSet id="W746_LaneSet4">
-        <bpmn:lane id="W746_Lane1" name="Floor Associate">
+        <bpmn:lane id="W746_Lane1" name="Sales Associate">
         <bpmn:flowNodeRef>W746_Task6</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W746_Task7</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W746_Task8</bpmn:flowNodeRef>
@@ -28,33 +28,33 @@ Source: workflow W746 — Store-Level Building Material Sample Management &amp; 
       <bpmn:startEvent id="W746_Start5" name="Customer requests to view or compare material samples (tiles, countertops, wood, paint…">
         <bpmn:outgoing>W746_Flow17</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:userTask id="W746_Task6" name="Sample library maintenance — Daily: Floor Associate verifies sample board…">
-        <bpmn:documentation>Step 1: Sample library maintenance — Daily: Floor Associate verifies sample board displays are complete, organized, and labeled; reports missing or damaged samples for replacement
-Responsible (R): Floor Associate
+      <bpmn:userTask id="W746_Task6" name="Sample library maintenance — Daily: Sales Associate verifies sample board…">
+        <bpmn:documentation>Step 1: Sample library maintenance — Daily: Sales Associate verifies sample board displays are complete, organized, and labeled; reports missing or damaged samples for replacement
+Responsible (R): Sales Associate
 Accountable (A): Department Supervisor
 Duration: 15 min</bpmn:documentation>
         <bpmn:incoming>W746_Flow17</bpmn:incoming>
         <bpmn:outgoing>W746_Flow18</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W746_Task7" name="Customer sample request — Customer requests to view samples; Floor Associate…">
-        <bpmn:documentation>Step 2: Customer sample request — Customer requests to view samples; Floor Associate guides customer to sample display area, provides sample boards, and offers to check inventory availability for preferred options
-Responsible (R): Floor Associate
+      <bpmn:userTask id="W746_Task7" name="Customer sample request — Customer requests to view samples; Sales Associate…">
+        <bpmn:documentation>Step 2: Customer sample request — Customer requests to view samples; Sales Associate guides customer to sample display area, provides sample boards, and offers to check inventory availability for preferred options
+Responsible (R): Sales Associate
 Accountable (A): —
 Duration: 10 min</bpmn:documentation>
         <bpmn:incoming>W746_Flow18</bpmn:incoming>
         <bpmn:outgoing>W746_Flow19</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W746_Task8" name="Sample checkout — For take-home samples (tile pieces, wood samples, paint…">
-        <bpmn:documentation>Step 3: Sample checkout — For take-home samples (tile pieces, wood samples, paint swatches), Floor Associate checks out sample against customer loyalty account; system tracks sample borrower and due date (7-day loan period)
-Responsible (R): Floor Associate
+        <bpmn:documentation>Step 3: Sample checkout — For take-home samples (tile pieces, wood samples, paint swatches), Sales Associate checks out sample against customer loyalty account; system tracks sample borrower and due date (7-day loan period)
+Responsible (R): Sales Associate
 Accountable (A): Department Supervisor
 Duration: 5 min</bpmn:documentation>
         <bpmn:incoming>W746_Flow19</bpmn:incoming>
         <bpmn:outgoing>W746_Flow20</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W746_Task9" name="Selection consultation — Floor Associate assists with quantity calculation…">
-        <bpmn:documentation>Step 4: Selection consultation — Floor Associate assists with quantity calculation (square meters of tiles, linear meters of lumber, liters of paint), provides product specifications from W50 PIM, and generates quotation (W542)
-Responsible (R): Floor Associate
+      <bpmn:userTask id="W746_Task9" name="Selection consultation — Sales Associate assists with quantity calculation…">
+        <bpmn:documentation>Step 4: Selection consultation — Sales Associate assists with quantity calculation (square meters of tiles, linear meters of lumber, liters of paint), provides product specifications from W50 PIM, and generates quotation (W542)
+Responsible (R): Sales Associate
 Accountable (A): —
 Duration: 15 min</bpmn:documentation>
         <bpmn:incoming>W746_Flow20</bpmn:incoming>
@@ -142,7 +142,7 @@ Owner: Department Supervisor (Building Materials)</bpmn:text>
       <bpmn:documentation>Trigger: Customer requests promotional item that is out of stock during promotional period
 Frequency: During promotional periods; ~5–10 rain check requests per store per promotional event
 Volume: 200 stores × ~7 rain checks per promo event × 6 major promos/year = ~8,400 rain checks/year
-Owner: Customer Service Representative
+Owner: Customer Service Rep
 Participants: CSR, Department Supervisor, Customer
 Source: workflow W772 — Store-Level Rain Check Issuance for Out-of-Stock Promotional Items</bpmn:documentation>
       <bpmn:laneSet id="W772_LaneSet4">
@@ -234,8 +234,8 @@ Duration: 30 min/month</bpmn:documentation>
         <bpmn:incoming>W772_Flow25</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W772_Annotation15">
-        <bpmn:text>Controls: - CTL-268 (ensure controlled execution — Customer Amenities &amp; Assistance (PA-09.3).) | - operational: Customer Service Representative review and approval gate
-Owner: Customer Service Representative</bpmn:text>
+        <bpmn:text>Controls: - CTL-268 (ensure controlled execution — Customer Amenities &amp; Assistance (PA-09.3).) | - operational: Customer Service Rep review and approval gate
+Owner: Customer Service Rep</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W772_Assoc16" sourceRef="W772_Annotation15" targetRef="W772_Start5" associationDirection="None" />
       <bpmn:sequenceFlow id="W772_Flow17" sourceRef="W772_Start5" targetRef="W772_Task6" />
@@ -280,7 +280,7 @@ Owner: Customer Service Representative</bpmn:text>
       <bpmn:documentation>Trigger: Customer requests item be held for later pickup; or customer special order (W545) arrives and needs staging
 Frequency: Daily; ~3–5 will-call orders per store per day
 Volume: 200 stores × ~4 will-call orders/day = ~800 will-call orders/day chain-wide
-Owner: Customer Service Representative
+Owner: Customer Service Rep
 Participants: CSR, Stock Associate, Customer
 Source: workflow W773 — Store-Level Customer Hold &amp; Will-Call Order Management</bpmn:documentation>
       <bpmn:laneSet id="W773_LaneSet5">
@@ -375,7 +375,7 @@ Duration: 15 min/week</bpmn:documentation>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W773_Annotation16">
         <bpmn:text>Controls: - CTL-268 (ensure controlled execution — Customer Amenities &amp; Assistance (PA-09.3).) | - operational: must enforce inventory reservation across all channels
-Owner: Customer Service Representative</bpmn:text>
+Owner: Customer Service Rep</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W773_Assoc17" sourceRef="W773_Annotation16" targetRef="W773_Start6" associationDirection="None" />
       <bpmn:sequenceFlow id="W773_Flow18" sourceRef="W773_Start6" targetRef="W773_Task7" />
@@ -421,7 +421,7 @@ Owner: Customer Service Representative</bpmn:text>
       <bpmn:documentation>Trigger: Customer reports lost, damaged, or defective loyalty card; or customer forgets loyalty number
 Frequency: Daily; ~3–5 replacement requests per store per day
 Volume: 200 stores × ~4 replacements/day = ~800 replacements/day chain-wide (~292,000/year)
-Owner: Customer Service Representative
+Owner: Customer Service Rep
 Participants: CSR, Customer
 Source: workflow W775 — Store-Level Customer Loyalty Card Replacement &amp; Account Recovery</bpmn:documentation>
       <bpmn:laneSet id="W775_LaneSet3">
@@ -503,7 +503,7 @@ Duration: Automated</bpmn:documentation>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W775_Annotation13">
         <bpmn:text>Controls: - CTL-268 (ensure controlled execution — Customer Amenities &amp; Assistance (PA-09.3).) | - operational: standard operating procedures; system-enforced validation rules
-Owner: Customer Service Representative</bpmn:text>
+Owner: Customer Service Rep</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W775_Assoc14" sourceRef="W775_Annotation13" targetRef="W775_Start4" associationDirection="None" />
       <bpmn:sequenceFlow id="W775_Flow15" sourceRef="W775_Start4" targetRef="W775_Task5" />
