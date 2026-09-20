@@ -17,8 +17,8 @@
 |---|---|
 | BPMN files | 569 (one per process-area `PA-*.md`) |
 | BPMN processes | 5,450 (one per workflow block, incl. the 23 `###`/`####` sub-workflows such as W5A) |
-| Tasks | 23,016 |
-| Sequence flows | 28,466 (= tasks + one task→end flow per process) |
+| Tasks | 23,022 |
+| Sequence flows | 28,472 (= tasks + one task→end flow per process) |
 | Diagrams (DI) | 5,450 — every process carries full BPMNDiagram/BPMNPlane/shape/edge interchange |
 
 The directory structure mirrors the source: `bpmn/VS-<NN>-<slug>/PA-<VS>.<n>-<slug>.bpmn`.

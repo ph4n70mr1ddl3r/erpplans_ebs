@@ -150,7 +150,7 @@ Duration: 1–3 days</bpmn:documentation>
         <bpmn:outgoing>W195_Flow16</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W195_Task8" name="Corrective Action">
-        <bpmn:documentation>Step 4: Corrective Action: If non-compliance found, vendor must execute CAPA (Corrective Action Plan) or face de-listing (W36.12)
+        <bpmn:documentation>Step 4: Corrective Action: If non-compliance found, vendor must execute CAPA (Corrective Action Plan) per W110.5 or face de-listing per W36
 Responsible (R): Vendor
 Accountable (A): Sustainability Lead
 Duration: 30 days</bpmn:documentation>

@@ -246,7 +246,7 @@ erpplans/
 │   ├── data-migration.md              Object → EBS load-path register (interfaces/APIs only), validation gates, cutover
 │   ├── licensing-bom.md               License bill of materials — EBS perpetual + support vs Fusion Cloud scenarios, from the module footprint & user/volume drivers (negotiation baseline; totals re-derived by audit-model-docs)
 │   └── ebs-vision-verification.md     Live verification of the documentation set against the Oracle EBS 12.2.12 Vision instance — footprint conformance, five transactional smoke tests, findings VF-1…VF-6 (regenerated per verification run)
-├── dmn/                         ← Generated DMN 1.3 decision models (79 decisions across 40 process areas; rule tables + tiered PHP authorization thresholds; mirrors the workflows/ tree; regenerates via 07-methodology/generate-dmn.py)
+├── dmn/                         ← Generated DMN 1.3 decision models (80 decisions across 41 process areas; rule tables + tiered PHP authorization thresholds; mirrors the workflows/ tree; regenerates via 07-methodology/generate-dmn.py)
 ├── bpmn/                        ← Generated BPMN 2.0 models (5,450 processes; mirrors the workflows/ tree; regenerates via 07-methodology/generate-bpmn.py)
 ├── CHANGELOG.md                 ← Revision history
 └── 07-methodology/              ← Technical system architecture and guidelines
@@ -255,9 +255,9 @@ erpplans/
     ├── capability-sourcing-and-engineering-model.md  Two-tier sourcing decision gate (in EBS → use it; otherwise build), sourcing register, build squads, SEP
     ├── it-product-operating-model.md IT product teams (two-tier: in-suite EBS core + in-house built & already-built platforms + AI agent platform), roles, RACI, governance, sizing (50 → 122 FTE)
     ├── ai-first-operating-guide.md   The AI-first operating guide — ERP-agnostic doctrine (ten laws, six layers, capability contracts), sourcing neutrality, autonomy ladder, agent factory, the EKB as persistent memory + consistency engine, the no-confusion decision system, and the seven-phase adoption path (v1.12)
-    ├── validate-repo.sh              Cross-reference validation (77 checks)
+    ├── validate-repo.sh              Cross-reference validation (78 checks)
     ├── generate-bpmn.py             BPMN 2.0 generator — converts every workflow block in 01-model-company/workflows into validated .bpmn files under bpmn/ (5,450 processes, lanes, DI)
-    ├── generate-dmn.py             DMN 1.3 generator — extracts rule tables and tiered PHP authorization rules from workflow markdown into validated .dmn files under dmn/ (79 decisions, decision tables, DMNDI)
+    ├── generate-dmn.py             DMN 1.3 generator — extracts rule tables and tiered PHP authorization rules from workflow markdown into validated .dmn files under dmn/ (80 decisions, decision tables, DMNDI)
     ├── generate-role-coverage.py   Role–workflow coverage generator — parses PA RACI fields + tier register + the official TO into 01-model-company/role-coverage-matrix.md (per-role owned/participated/step/tier-mix, --check byte-verify)
     ├── classify-workflows.py         Keyword-driven criticality classifier
     ├── confirm-all-workflows.py      One-time full-coverage confirmation pass (2,596 → 0 unclassified)

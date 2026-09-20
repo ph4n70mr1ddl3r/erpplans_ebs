@@ -6039,6 +6039,137 @@ else
     echo "$CHECK77" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
 fi
 
+# --- Check 78: Step-level W-reference resolution (W<id>.<step> dotted form) ---
+echo "--- Check 78: Step-level W-reference resolution ---"
+# Checks 6/7/33 validate the BARE W<id> namespace, and Check 35 the VS… namespace, but
+# nothing ever validated the dotted step-level citation form documented in the
+# WORKFLOW-FORMAT-GUIDE's own cross-reference table (`W<number>.<step>` — 'used in
+# cross-references and the requirement-workflow matrix'). The fifty-fifth-wave review
+# (2026-09-18, by direction: review everything) built the corpus's first step-reference
+# resolver — mirroring generate-bpmn.py's canonical step model (a steps table is any
+# table whose header row matches the 5-column '# | Activity | Role (R) | Role (A) |
+# Duration|Frequency|Latency' shape under any ### section of the workflow block; a step
+# row is a first cell of bare digits, optionally letter-suffixed) — and swept every
+# dotted reference in every live markdown document. 17 defect instances in one class
+# family were found and repaired: W37's six steps-table rows keyed with the full W-id
+# ('| W37.11 |'…'| W37.16 |' — off the house '#' column convention, invisible to BOTH
+# generators, so W37's bpmn process shipped 10 tasks and the tiered write-off approval
+# ladder shipped neither a task nor a decision; renumbered to bare 11–16, +6 tasks at
+# PA-22.1 and +1 dmn decision / +4 rules), four mis-namespace PA citations written with
+# a W prefix ('W12.3' for the VS-12.3 Workshops & Events process area ×3, 'W29.1–29.3'
+# and a bare 'W29' for VS-29 master data — W12 is Returns and W29 is Product Recall, so
+# the glosses contradicted their own citations), two phantom sub-item/step cites
+# ('W285.6a' — step 6 has no sub-item (a); the settlement-execution sense IS step 6 —
+# and 'W36.12' — W36 has no step 12; the CAPA/de-listing pair re-pointed to the blessed
+# W110.5/W36 targets), one wrong-workflow cite ('W2.5–6' — W2 has no own steps table;
+# the PO-approval tiers are W2A steps 5–6, the form the internal-controls-matrix already
+# uses) and one wrong-domain cite ('W12.2' cited for daily backroom cleanup under the
+# salvage workflow's Time Estimate; trued to W743 Store-Level Daily Cleaning). This
+# check enforces the invariant that fixed: every dotted `W<id>.<step>` token in every
+# live markdown document must resolve against the parent workflow's own steps table —
+# letter forms resolve row-first (a `6a` ROW, as in W3) and fall back to a sub-item
+# `(a)` enumerated inside step 6's activity text (as in W470's touchpoints); range
+# endpoints must each resolve. CHANGELOG is exempt as frozen history; the
+# methodology-index README (07-methodology/README.md) is exempt because its
+# validate-repo row legitimately QUOTES the retired unresolvable literals in its own
+# guard list — the same doctrine-document adjudication Check 46 applied by scoping the
+# vehicle-literal probe to the workflows tree (the arm caught its own author here
+# exactly as the wave-9 precedent predicts); code spans and fences are masked (the
+# format guide's own pattern documentation lives in one).
+CHECK78=$(python3 - "$REPO_ROOT" <<'PY'
+import os, re, sys, collections
+ROOT = sys.argv[1]
+WF = os.path.join(ROOT, "01-model-company", "workflows")
+STEPS_HEADER = re.compile(
+    r"^\|\s*#\s*\|\s*Activity\s*\|\s*Role \(R\)\s*\|\s*Role \(A\)\s*\|\s*(?:Duration|Frequency|Latency)\s*\|\s*$",
+    re.IGNORECASE,
+)
+WF_HEADER = re.compile(r"^(#{2,4}) (W\d+[A-Za-z]?)\. ")
+steps_by_wf = {}
+for dirpath, _d, fns in os.walk(WF):
+    for fn in sorted(fns):
+        if not (fn.startswith("PA-") and fn.endswith(".md")):
+            continue
+        cur = None
+        in_steps = False
+        for ln in open(os.path.join(dirpath, fn), encoding="utf-8"):
+            ln = ln.rstrip("\n")
+            m = WF_HEADER.match(ln)
+            if m:
+                cur = m.group(2)
+                in_steps = False
+                continue
+            if STEPS_HEADER.match(ln):
+                in_steps = True
+                continue
+            if in_steps:
+                s = ln.strip()
+                if s.startswith("|"):
+                    cells = [c.strip() for c in s.strip("|").split("|")]
+                    if len(cells) >= 5 and re.fullmatch(r"\d{1,3}[a-z]?", cells[0] or ""):
+                        steps_by_wf.setdefault(cur, {})[cells[0]] = cells[1]
+                    continue
+                in_steps = False
+REF = re.compile(r"\b(W\d+[A-Za-z]?)\.(\d{1,3})(?:([a-z])(?![a-z]))?(?:[\u2013-]([a-z])(?![a-z]))?(?:[\u2013-](\d{1,3})(?:([a-z])(?![a-z]))?)?")
+errs = []
+for dirpath, _d, fns in os.walk(ROOT):
+    if os.sep + ".git" in dirpath or "__pycache__" in dirpath:
+        continue
+    for fn in sorted(fns):
+        if not fn.endswith(".md") or fn == "CHANGELOG.md":
+            continue
+        if os.path.join(dirpath, fn) == os.path.join(ROOT, "07-methodology", "README.md"):
+            continue  # methodology-index: its validate-repo row quotes the retired literals (Check-46-style doctrine scope)
+        path = os.path.join(dirpath, fn)
+        txt = open(path, encoding="utf-8", errors="replace").read()
+        txt = re.sub(r"```.*?```", "", txt, flags=re.S)
+        txt = re.sub(r"`[^`]*`", "", txt)
+        lines = txt.split("\n")
+        offset = 0
+        for ln_no, line in enumerate(lines, 1):
+            for m in REF.finditer(line):
+                wf, n, l1, l2, n2, l3 = m.groups()
+                steps = steps_by_wf.get(wf)
+                tok = m.group(0)
+                def why():
+                    return f"{path}:{ln_no}: {tok}"
+                if steps is None:
+                    errs.append(why() + " — parent workflow id not found in the corpus")
+                    continue
+                def resolve(num, letter):
+                    if letter:
+                        if (num + letter) in steps:
+                            return None
+                        if num in steps and re.search(r"\(" + letter + r"\)", steps[num]):
+                            return None
+                        return f"step {num}{letter} is neither a row nor a sub-item of step {num}"
+                    return None if num in steps else f"step {num} row missing"
+                r = resolve(n, l1)
+                if r:
+                    errs.append(why() + " — " + r)
+                    continue
+                if l2:
+                    r = resolve(n, l2)
+                    if r:
+                        errs.append(why() + " — " + r)
+                        continue
+                if n2:
+                    r = resolve(n2, l3)
+                    if r:
+                        errs.append(why() + " — " + r)
+print(f"C78_BAD={len(errs)}")
+for e in errs:
+    print('BAD|' + e)
+PY
+)
+C78_BAD=$(echo "$CHECK78" | sed -n 's/^C78_BAD=\([0-9]*\).*/\1/p')
+if [ "${C78_BAD:-1}" -eq 0 ]; then
+    ok "Step-level W-reference resolution clean: every dotted W<id>.<step> token across all live markdown documents resolves against the parent workflow's own steps table under generate-bpmn.py's canonical step model — letter forms resolve row-first (a '6a' row, as in W3) then as a sub-item enumerated in the step's activity text (as in W470's touchpoints), and range endpoints must each resolve (guard added by the 2026-09-18 fifty-fifth-wave review, which found and repaired the family's 17 defect instances: six W-keyed steps-table rows at W37 ('| W37.11 |'–'| W37.16 |', invisible to both generators — W37's process shipped 10 tasks and the tiered write-off approval ladder shipped no decision; renumbered to bare 11–16, +6 bpmn tasks at PA-22.1 and +1 dmn decision / +4 rules), four mis-namespace PA citations written with a W prefix (three 'W12.3' forms and 'W29.1–29.3' plus a bare 'W29' for the VS-12.3 workshops-and-events and VS-29 master-data process areas — W12 is Returns and W29 is Product Recall, so each gloss contradicted its own citation), two phantom sub-item/step cites ('W285.6a' — step 6 has no sub-item (a); the settlement-execution sense IS step 6 — and 'W36.12' — W36 has no step 12; the CAPA/de-listing pair re-pointed to the blessed W110.5/W36 targets), one wrong-workflow cite ('W2.5–6' trued to 'W2A.5–6', the form the internal-controls-matrix already uses for the PO-approval tiers) and one wrong-domain cite (the salvage workflow's Time Estimate cited 'W12.2' for daily backroom cleanup; trued to W743 Store-Level Daily Cleaning & Sanitation Checklist Execution); the methodology-index README is exempt from the sweep as its validate-repo row quotes the retired literals in its own guard list (the Check-46 doctrine-scope adjudication — the arm caught its own author there pre-ship, the wave-9 precedent))"
+else
+    error "Unresolvable step-level W-references ($C78_BAD) — each cited step must exist as a row (or letter sub-item) of the parent workflow:"
+    echo "$CHECK78" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
+fi
+
 echo ""
 echo "=== Validation Complete ==="
 echo "Errors: $ERRORS, Warnings: $WARNINGS"

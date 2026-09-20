@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/"
+             xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/"
+             xmlns:dc="https://www.omg.org/spec/DMN/20181101/DC/"
+             xmlns:di="https://www.omg.org/spec/DMN/20181101/DI/"
+             id="Definitions_PA-22.1-regulatory-permits-and-licenses"
+             name="PA 22.1 regulatory permits and licenses"
+             namespace="https://erpplans.local/dmn/PA-22.1-regulatory-permits-and-licenses"
+             exporter="erpplans generate-dmn.py" exporterVersion="1.0">
+  <decision id="Decision_W37_01" name="Authorization threshold — W37">
+    <description>Source: VS-22-compliance-regulatory/PA-22.1-regulatory-permits-and-licenses.md · workflow W37 · step row (authorization thresholds)
+Verbatim: Approval per tier: (a) total loss ≤ PHP 10,000: Store Manager, (b) PHP 10,001–50,000: Regional Manager + Internal Audit, (c) PHP 50,001–500,000: Controller + Internal Audit, (d) &gt; PHP 500,000: CFO + CEO | Approver | Approver | 15 min/case</description>
+    <decisionTable hitPolicy="U">
+      <input id="Decision_W37_01_In01" label="Amount (PHP)">
+        <inputExpression id="Decision_W37_01_InExpr01" typeRef="number">
+          <text>Amount</text>
+        </inputExpression>
+      </input>
+      <output id="Decision_W37_01_Out01" label="Approver" name="Approver" typeRef="string"/>
+      <rule id="Decision_W37_01_Rule01">
+        <inputEntry><text>&lt;= 10000</text></inputEntry>
+        <outputEntry><text>&quot;Store Manager&quot;</text></outputEntry>
+      </rule>
+      <rule id="Decision_W37_01_Rule02">
+        <inputEntry><text>[10001..50000]</text></inputEntry>
+        <outputEntry><text>&quot;Regional Manager&quot;</text></outputEntry>
+      </rule>
+      <rule id="Decision_W37_01_Rule03">
+        <inputEntry><text>[50001..500000]</text></inputEntry>
+        <outputEntry><text>&quot;Controller&quot;</text></outputEntry>
+      </rule>
+      <rule id="Decision_W37_01_Rule04">
+        <inputEntry><text>&gt; 500000</text></inputEntry>
+        <outputEntry><text>&quot;CFO + CEO&quot;</text></outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="Diagram_1">
+      <dmndi:DMNShape id="Decision_W37_01_di" dmnElementRef="Decision_W37_01">
+        <dc:Bounds x="160" y="80" width="200" height="90"/>
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

@@ -7,162 +7,237 @@ Volume: ~500–1,000 exception events/day chain-wide across all 200 stores
 Owner: Loss Prevention Officer (LPO)
 Participants: LPO, Store Manager, Regional Manager, Internal Audit, Cashier, Department Supervisor
 Source: workflow W37 — Loss Prevention &amp; Exception Reporting</bpmn:documentation>
-      <bpmn:laneSet id="W37_LaneSet5">
+      <bpmn:laneSet id="W37_LaneSet6">
         <bpmn:lane id="W37_Lane1" name="System">
-        <bpmn:flowNodeRef>W37_Task7</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W37_Task8</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W37_Task12</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W37_Task16</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W37_Start6</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W37_Task9</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W37_Task13</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W37_Task17</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W37_Task21</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W37_Start7</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W37_Lane2" name="LPO">
-        <bpmn:flowNodeRef>W37_Task9</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W37_Task10</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W37_Task11</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W37_Task13</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W37_Task12</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W37_Task14</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W37_Task18</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W37_Task19</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W37_Task22</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W37_Task23</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W37_Lane3" name="LPO + Regional Manager">
-        <bpmn:flowNodeRef>W37_Task14</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W37_Task15</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W37_Lane4" name="Internal Audit">
-        <bpmn:flowNodeRef>W37_Task15</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W37_End17</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W37_Task16</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W37_Lane5" name="Approver">
+        <bpmn:flowNodeRef>W37_Task20</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W37_End24</bpmn:flowNodeRef>
         </bpmn:lane>
       </bpmn:laneSet>
-      <bpmn:startEvent id="W37_Start6" name="Daily exception report generation; or real-time alert triggered by POS exception">
-        <bpmn:outgoing>W37_Flow20</bpmn:outgoing>
+      <bpmn:startEvent id="W37_Start7" name="Daily exception report generation; or real-time alert triggered by POS exception">
+        <bpmn:outgoing>W37_Flow27</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:serviceTask id="W37_Task7" name="System automatically monitors POS transactions in real-time and generates…">
+      <bpmn:serviceTask id="W37_Task8" name="System automatically monitors POS transactions in real-time and generates…">
         <bpmn:documentation>Step 1: System automatically monitors POS transactions in real-time and generates exception alerts for: (a) excessive voids/cancels per cashier, (b) high-value refunds without manager override, (c) manual price overrides, (d) sweet-hearting (repeated transactions with loyalty card of same employee or family), (e) excessive no-sale drawer opens, (f) post-void patterns, (g) high ratio of discount transactions
 Responsible (R): System
 Accountable (A): —
 Duration: Real-time</bpmn:documentation>
-        <bpmn:incoming>W37_Flow20</bpmn:incoming>
-        <bpmn:outgoing>W37_Flow21</bpmn:outgoing>
+        <bpmn:incoming>W37_Flow27</bpmn:incoming>
+        <bpmn:outgoing>W37_Flow28</bpmn:outgoing>
       </bpmn:serviceTask>
-      <bpmn:serviceTask id="W37_Task8" name="System generates daily exception summary report per store: top exception…">
+      <bpmn:serviceTask id="W37_Task9" name="System generates daily exception summary report per store: top exception…">
         <bpmn:documentation>Step 2: System generates daily exception summary report per store: top exception categories, top cashiers by exception count, transaction drill-down capability
 Responsible (R): System
 Accountable (A): —
 Duration: Automated (daily)</bpmn:documentation>
-        <bpmn:incoming>W37_Flow21</bpmn:incoming>
-        <bpmn:outgoing>W37_Flow22</bpmn:outgoing>
+        <bpmn:incoming>W37_Flow28</bpmn:incoming>
+        <bpmn:outgoing>W37_Flow29</bpmn:outgoing>
       </bpmn:serviceTask>
-      <bpmn:userTask id="W37_Task9" name="LPO reviews daily exception report; prioritizes investigation of high-risk…">
+      <bpmn:userTask id="W37_Task10" name="LPO reviews daily exception report; prioritizes investigation of high-risk…">
         <bpmn:documentation>Step 3: LPO reviews daily exception report; prioritizes investigation of high-risk patterns (e.g., one cashier with 5× average void rate)
 Responsible (R): LPO
 Accountable (A): Internal Audit
 Duration: 1–2 hours/day</bpmn:documentation>
-        <bpmn:incoming>W37_Flow22</bpmn:incoming>
-        <bpmn:outgoing>W37_Flow23</bpmn:outgoing>
+        <bpmn:incoming>W37_Flow29</bpmn:incoming>
+        <bpmn:outgoing>W37_Flow30</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W37_Task10" name="For flagged exceptions: LPO pulls transaction details, CCTV timestamps…">
+      <bpmn:userTask id="W37_Task11" name="For flagged exceptions: LPO pulls transaction details, CCTV timestamps…">
         <bpmn:documentation>Step 4: For flagged exceptions: LPO pulls transaction details, CCTV timestamps (cross-reference with security footage), and employee history
 Responsible (R): LPO
 Accountable (A): Internal Audit
 Duration: 30 min/case</bpmn:documentation>
-        <bpmn:incoming>W37_Flow23</bpmn:incoming>
-        <bpmn:outgoing>W37_Flow24</bpmn:outgoing>
+        <bpmn:incoming>W37_Flow30</bpmn:incoming>
+        <bpmn:outgoing>W37_Flow31</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W37_Task11" name="If investigation confirms irregularity: LPO documents findings; escalates to…">
+      <bpmn:userTask id="W37_Task12" name="If investigation confirms irregularity: LPO documents findings; escalates to…">
         <bpmn:documentation>Step 5: If investigation confirms irregularity: LPO documents findings; escalates to Regional Manager and Internal Audit for disciplinary action
 Responsible (R): LPO
 Accountable (A): Internal Audit
 Duration: 1 hour/case</bpmn:documentation>
-        <bpmn:incoming>W37_Flow24</bpmn:incoming>
-        <bpmn:outgoing>W37_Flow25</bpmn:outgoing>
+        <bpmn:incoming>W37_Flow31</bpmn:incoming>
+        <bpmn:outgoing>W37_Flow32</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:serviceTask id="W37_Task12" name="For receiving dock exceptions: system monitors GR short shipments, frequent…">
+      <bpmn:serviceTask id="W37_Task13" name="For receiving dock exceptions: system monitors GR short shipments, frequent…">
         <bpmn:documentation>Step 6: For receiving dock exceptions: system monitors GR short shipments, frequent damage claims from same vendor, and receiving patterns outside scheduled appointments
 Responsible (R): System
 Accountable (A): DC Manager
 Duration: Automated</bpmn:documentation>
-        <bpmn:incoming>W37_Flow25</bpmn:incoming>
-        <bpmn:outgoing>W37_Flow26</bpmn:outgoing>
+        <bpmn:incoming>W37_Flow32</bpmn:incoming>
+        <bpmn:outgoing>W37_Flow33</bpmn:outgoing>
       </bpmn:serviceTask>
-      <bpmn:userTask id="W37_Task13" name="Monthly: LPO generates shrinkage report per store (inventory adjustment value ÷…">
+      <bpmn:userTask id="W37_Task14" name="Monthly: LPO generates shrinkage report per store (inventory adjustment value ÷…">
         <bpmn:documentation>Step 7: Monthly: LPO generates shrinkage report per store (inventory adjustment value ÷ sales); flags stores exceeding 1.5% threshold
 Responsible (R): LPO
 Accountable (A): Internal Audit
 Duration: 2 hours/month</bpmn:documentation>
-        <bpmn:incoming>W37_Flow26</bpmn:incoming>
-        <bpmn:outgoing>W37_Flow27</bpmn:outgoing>
+        <bpmn:incoming>W37_Flow33</bpmn:incoming>
+        <bpmn:outgoing>W37_Flow34</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W37_Task14" name="Monthly: LPO and Regional Manager review top shrinkage stores; develop action…">
+      <bpmn:userTask id="W37_Task15" name="Monthly: LPO and Regional Manager review top shrinkage stores; develop action…">
         <bpmn:documentation>Step 8: Monthly: LPO and Regional Manager review top shrinkage stores; develop action plans (additional training, CCTV repositioning, staffing adjustments)
 Responsible (R): LPO + Regional Manager
 Accountable (A): Internal Audit
 Duration: 1 hour/month per high-shrinkage store</bpmn:documentation>
-        <bpmn:incoming>W37_Flow27</bpmn:incoming>
-        <bpmn:outgoing>W37_Flow28</bpmn:outgoing>
+        <bpmn:incoming>W37_Flow34</bpmn:incoming>
+        <bpmn:outgoing>W37_Flow35</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W37_Task15" name="Quarterly: Internal Audit includes POS exception trends in audit findings…">
+      <bpmn:userTask id="W37_Task16" name="Quarterly: Internal Audit includes POS exception trends in audit findings…">
         <bpmn:documentation>Step 9: Quarterly: Internal Audit includes POS exception trends in audit findings; recommends system configuration changes (e.g., tighten void approval rules)
 Responsible (R): Internal Audit
 Accountable (A): CFO
 Duration: Quarterly report</bpmn:documentation>
-        <bpmn:incoming>W37_Flow28</bpmn:incoming>
-        <bpmn:outgoing>W37_Flow29</bpmn:outgoing>
+        <bpmn:incoming>W37_Flow35</bpmn:incoming>
+        <bpmn:outgoing>W37_Flow36</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:serviceTask id="W37_Task16" name="System tracks all investigation cases: status (open/investigating/closed)…">
+      <bpmn:serviceTask id="W37_Task17" name="System tracks all investigation cases: status (open/investigating/closed)…">
         <bpmn:documentation>Step 10: System tracks all investigation cases: status (open/investigating/closed), resolution, recovery amount, disciplinary action taken
 Responsible (R): System
 Accountable (A): —
 Duration: Automated</bpmn:documentation>
-        <bpmn:incoming>W37_Flow29</bpmn:incoming>
-        <bpmn:outgoing>W37_Flow30</bpmn:outgoing>
+        <bpmn:incoming>W37_Flow36</bpmn:incoming>
+        <bpmn:outgoing>W37_Flow37</bpmn:outgoing>
       </bpmn:serviceTask>
-      <bpmn:endEvent id="W37_End17" name="Complete">
-        <bpmn:incoming>W37_Flow30</bpmn:incoming>
+      <bpmn:userTask id="W37_Task18" name="LPO documents confirmed loss: investigation findings, supporting evidence (CCTV…">
+        <bpmn:documentation>Step 11: LPO documents confirmed loss: investigation findings, supporting evidence (CCTV footage, transaction records, witness statements); for theft, files police report with local PNP station
+Responsible (R): LPO
+Accountable (A): Internal Audit
+Duration: 1 hour/case</bpmn:documentation>
+        <bpmn:incoming>W37_Flow37</bpmn:incoming>
+        <bpmn:outgoing>W37_Flow38</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W37_Task19" name="LPO submits inventory write-off request: SKU, quantity, value at WAC, root…">
+        <bpmn:documentation>Step 12: LPO submits inventory write-off request: SKU, quantity, value at WAC, root cause classification (internal theft, external shoplifting, vendor fraud, unexplained loss)
+Responsible (R): LPO
+Accountable (A): Internal Audit
+Duration: 15 min/case</bpmn:documentation>
+        <bpmn:incoming>W37_Flow38</bpmn:incoming>
+        <bpmn:outgoing>W37_Flow39</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W37_Task20" name="Approval per tier: (a) total loss ≤ PHP 10,000: Store Manager, (b) PHP…">
+        <bpmn:documentation>Step 13: Approval per tier: (a) total loss ≤ PHP 10,000: Store Manager, (b) PHP 10,001–50,000: Regional Manager + Internal Audit, (c) PHP 50,001–500,000: Controller + Internal Audit, (d) &gt; PHP 500,000: CFO + CEO
+Responsible (R): Approver
+Accountable (A): Approver
+Duration: 15 min/case</bpmn:documentation>
+        <bpmn:incoming>W37_Flow39</bpmn:incoming>
+        <bpmn:outgoing>W37_Flow40</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:serviceTask id="W37_Task21" name="System posts write-off: Dr. Inventory Loss / Cr. Inventory; removes items from…">
+        <bpmn:documentation>Step 14: System posts write-off: Dr. Inventory Loss / Cr. Inventory; removes items from inventory register; records loss in shrinkage tracking for store KPI
+Responsible (R): System
+Accountable (A): —
+Duration: Automated</bpmn:documentation>
+        <bpmn:incoming>W37_Flow40</bpmn:incoming>
+        <bpmn:outgoing>W37_Flow41</bpmn:outgoing>
+      </bpmn:serviceTask>
+      <bpmn:userTask id="W37_Task22" name="If loss is insured (e.g., large robbery, transit theft): LPO files insurance…">
+        <bpmn:documentation>Step 15: If loss is insured (e.g., large robbery, transit theft): LPO files insurance claim per W3.6a insurance claim process; Finance posts recovery upon settlement
+Responsible (R): LPO / Finance
+Accountable (A): Controller
+Duration: Per W3.6a</bpmn:documentation>
+        <bpmn:incoming>W37_Flow41</bpmn:incoming>
+        <bpmn:outgoing>W37_Flow42</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W37_Task23" name="Quarterly: LPO includes confirmed theft and write-off totals in shrinkage…">
+        <bpmn:documentation>Step 16: Quarterly: LPO includes confirmed theft and write-off totals in shrinkage report (W37.7); feeds into store KPI scoring and loss prevention action plans
+Responsible (R): LPO
+Accountable (A): Internal Audit
+Duration: Part of existing reporting</bpmn:documentation>
+        <bpmn:incoming>W37_Flow42</bpmn:incoming>
+        <bpmn:outgoing>W37_Flow43</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:endEvent id="W37_End24" name="Complete">
+        <bpmn:incoming>W37_Flow43</bpmn:incoming>
       </bpmn:endEvent>
-      <bpmn:textAnnotation id="W37_Annotation18">
+      <bpmn:textAnnotation id="W37_Annotation25">
         <bpmn:text>Controls: - CTL-23 (detect POS fraud / theft.); CTL-24 (detect receiving fraud.); CTL-46 (ensure loyalty fraud investigation and resolution.); CTL-49 (prevent unauthorized gift card balance manipulation.) | - operational: Loss Prevention Officer (LPO) review and approval gate
 Owner: Loss Prevention Officer (LPO)</bpmn:text>
       </bpmn:textAnnotation>
-      <bpmn:association id="W37_Assoc19" sourceRef="W37_Annotation18" targetRef="W37_Start6" associationDirection="None" />
-      <bpmn:sequenceFlow id="W37_Flow20" sourceRef="W37_Start6" targetRef="W37_Task7" />
-      <bpmn:sequenceFlow id="W37_Flow21" sourceRef="W37_Task7" targetRef="W37_Task8" />
-      <bpmn:sequenceFlow id="W37_Flow22" sourceRef="W37_Task8" targetRef="W37_Task9" />
-      <bpmn:sequenceFlow id="W37_Flow23" sourceRef="W37_Task9" targetRef="W37_Task10" />
-      <bpmn:sequenceFlow id="W37_Flow24" sourceRef="W37_Task10" targetRef="W37_Task11" />
-      <bpmn:sequenceFlow id="W37_Flow25" sourceRef="W37_Task11" targetRef="W37_Task12" />
-      <bpmn:sequenceFlow id="W37_Flow26" sourceRef="W37_Task12" targetRef="W37_Task13" />
-      <bpmn:sequenceFlow id="W37_Flow27" sourceRef="W37_Task13" targetRef="W37_Task14" />
-      <bpmn:sequenceFlow id="W37_Flow28" sourceRef="W37_Task14" targetRef="W37_Task15" />
-      <bpmn:sequenceFlow id="W37_Flow29" sourceRef="W37_Task15" targetRef="W37_Task16" />
-      <bpmn:sequenceFlow id="W37_Flow30" sourceRef="W37_Task16" targetRef="W37_End17" />
+      <bpmn:association id="W37_Assoc26" sourceRef="W37_Annotation25" targetRef="W37_Start7" associationDirection="None" />
+      <bpmn:sequenceFlow id="W37_Flow27" sourceRef="W37_Start7" targetRef="W37_Task8" />
+      <bpmn:sequenceFlow id="W37_Flow28" sourceRef="W37_Task8" targetRef="W37_Task9" />
+      <bpmn:sequenceFlow id="W37_Flow29" sourceRef="W37_Task9" targetRef="W37_Task10" />
+      <bpmn:sequenceFlow id="W37_Flow30" sourceRef="W37_Task10" targetRef="W37_Task11" />
+      <bpmn:sequenceFlow id="W37_Flow31" sourceRef="W37_Task11" targetRef="W37_Task12" />
+      <bpmn:sequenceFlow id="W37_Flow32" sourceRef="W37_Task12" targetRef="W37_Task13" />
+      <bpmn:sequenceFlow id="W37_Flow33" sourceRef="W37_Task13" targetRef="W37_Task14" />
+      <bpmn:sequenceFlow id="W37_Flow34" sourceRef="W37_Task14" targetRef="W37_Task15" />
+      <bpmn:sequenceFlow id="W37_Flow35" sourceRef="W37_Task15" targetRef="W37_Task16" />
+      <bpmn:sequenceFlow id="W37_Flow36" sourceRef="W37_Task16" targetRef="W37_Task17" />
+      <bpmn:sequenceFlow id="W37_Flow37" sourceRef="W37_Task17" targetRef="W37_Task18" />
+      <bpmn:sequenceFlow id="W37_Flow38" sourceRef="W37_Task18" targetRef="W37_Task19" />
+      <bpmn:sequenceFlow id="W37_Flow39" sourceRef="W37_Task19" targetRef="W37_Task20" />
+      <bpmn:sequenceFlow id="W37_Flow40" sourceRef="W37_Task20" targetRef="W37_Task21" />
+      <bpmn:sequenceFlow id="W37_Flow41" sourceRef="W37_Task21" targetRef="W37_Task22" />
+      <bpmn:sequenceFlow id="W37_Flow42" sourceRef="W37_Task22" targetRef="W37_Task23" />
+      <bpmn:sequenceFlow id="W37_Flow43" sourceRef="W37_Task23" targetRef="W37_End24" />
     </bpmn:process>
     <bpmndi:BPMNDiagram id="W37_diag">
       <bpmndi:BPMNPlane id="W37_plane" bpmnElement="W_W37">
-        <bpmndi:BPMNShape id="W37_Lane1_di" bpmnElement="W37_Lane1" isHorizontal="true"><dc:Bounds x="160" y="80" width="2420" height="170" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W37_Lane2_di" bpmnElement="W37_Lane2" isHorizontal="true"><dc:Bounds x="160" y="250" width="2420" height="170" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W37_Lane3_di" bpmnElement="W37_Lane3" isHorizontal="true"><dc:Bounds x="160" y="420" width="2420" height="170" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W37_Lane4_di" bpmnElement="W37_Lane4" isHorizontal="true"><dc:Bounds x="160" y="590" width="2420" height="170" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W37_Task7_di" bpmnElement="W37_Task7"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W37_Task8_di" bpmnElement="W37_Task8"><dc:Bounds x="610" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W37_Task9_di" bpmnElement="W37_Task9"><dc:Bounds x="820" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W37_Task10_di" bpmnElement="W37_Task10"><dc:Bounds x="1030" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W37_Task11_di" bpmnElement="W37_Task11"><dc:Bounds x="1240" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W37_Task12_di" bpmnElement="W37_Task12"><dc:Bounds x="1450" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W37_Task13_di" bpmnElement="W37_Task13"><dc:Bounds x="1660" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W37_Task14_di" bpmnElement="W37_Task14"><dc:Bounds x="1870" y="465" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W37_Task15_di" bpmnElement="W37_Task15"><dc:Bounds x="2080" y="635" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W37_Task16_di" bpmnElement="W37_Task16"><dc:Bounds x="2290" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W37_Start6_di" bpmnElement="W37_Start6"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W37_End17_di" bpmnElement="W37_End17"><dc:Bounds x="2520" y="657" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W37_Annotation18_di" bpmnElement="W37_Annotation18"><dc:Bounds x="160" y="800" width="360" height="86" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNEdge id="W37_Flow20_di" bpmnElement="W37_Flow20"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W37_Flow21_di" bpmnElement="W37_Flow21"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W37_Flow22_di" bpmnElement="W37_Flow22"><di:waypoint x="790" y="165" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W37_Flow23_di" bpmnElement="W37_Flow23"><di:waypoint x="1000" y="335" /><di:waypoint x="1030" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W37_Flow24_di" bpmnElement="W37_Flow24"><di:waypoint x="1210" y="335" /><di:waypoint x="1240" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W37_Flow25_di" bpmnElement="W37_Flow25"><di:waypoint x="1420" y="335" /><di:waypoint x="1450" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W37_Flow26_di" bpmnElement="W37_Flow26"><di:waypoint x="1630" y="165" /><di:waypoint x="1660" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W37_Flow27_di" bpmnElement="W37_Flow27"><di:waypoint x="1840" y="335" /><di:waypoint x="1870" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W37_Flow28_di" bpmnElement="W37_Flow28"><di:waypoint x="2050" y="505" /><di:waypoint x="2080" y="675" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W37_Flow29_di" bpmnElement="W37_Flow29"><di:waypoint x="2260" y="675" /><di:waypoint x="2290" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W37_Flow30_di" bpmnElement="W37_Flow30"><di:waypoint x="2470" y="165" /><di:waypoint x="2520" y="675" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W37_Assoc19_di" bpmnElement="W37_Assoc19"><di:waypoint x="340" y="800" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNShape id="W37_Lane1_di" bpmnElement="W37_Lane1" isHorizontal="true"><dc:Bounds x="160" y="80" width="3680" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W37_Lane2_di" bpmnElement="W37_Lane2" isHorizontal="true"><dc:Bounds x="160" y="250" width="3680" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W37_Lane3_di" bpmnElement="W37_Lane3" isHorizontal="true"><dc:Bounds x="160" y="420" width="3680" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W37_Lane4_di" bpmnElement="W37_Lane4" isHorizontal="true"><dc:Bounds x="160" y="590" width="3680" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W37_Lane5_di" bpmnElement="W37_Lane5" isHorizontal="true"><dc:Bounds x="160" y="760" width="3680" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W37_Task8_di" bpmnElement="W37_Task8"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W37_Task9_di" bpmnElement="W37_Task9"><dc:Bounds x="610" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W37_Task10_di" bpmnElement="W37_Task10"><dc:Bounds x="820" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W37_Task11_di" bpmnElement="W37_Task11"><dc:Bounds x="1030" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W37_Task12_di" bpmnElement="W37_Task12"><dc:Bounds x="1240" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W37_Task13_di" bpmnElement="W37_Task13"><dc:Bounds x="1450" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W37_Task14_di" bpmnElement="W37_Task14"><dc:Bounds x="1660" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W37_Task15_di" bpmnElement="W37_Task15"><dc:Bounds x="1870" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W37_Task16_di" bpmnElement="W37_Task16"><dc:Bounds x="2080" y="635" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W37_Task17_di" bpmnElement="W37_Task17"><dc:Bounds x="2290" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W37_Task18_di" bpmnElement="W37_Task18"><dc:Bounds x="2500" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W37_Task19_di" bpmnElement="W37_Task19"><dc:Bounds x="2710" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W37_Task20_di" bpmnElement="W37_Task20"><dc:Bounds x="2920" y="805" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W37_Task21_di" bpmnElement="W37_Task21"><dc:Bounds x="3130" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W37_Task22_di" bpmnElement="W37_Task22"><dc:Bounds x="3340" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W37_Task23_di" bpmnElement="W37_Task23"><dc:Bounds x="3550" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W37_Start7_di" bpmnElement="W37_Start7"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W37_End24_di" bpmnElement="W37_End24"><dc:Bounds x="3780" y="827" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W37_Annotation25_di" bpmnElement="W37_Annotation25"><dc:Bounds x="160" y="970" width="360" height="86" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="W37_Flow27_di" bpmnElement="W37_Flow27"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W37_Flow28_di" bpmnElement="W37_Flow28"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W37_Flow29_di" bpmnElement="W37_Flow29"><di:waypoint x="790" y="165" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W37_Flow30_di" bpmnElement="W37_Flow30"><di:waypoint x="1000" y="335" /><di:waypoint x="1030" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W37_Flow31_di" bpmnElement="W37_Flow31"><di:waypoint x="1210" y="335" /><di:waypoint x="1240" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W37_Flow32_di" bpmnElement="W37_Flow32"><di:waypoint x="1420" y="335" /><di:waypoint x="1450" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W37_Flow33_di" bpmnElement="W37_Flow33"><di:waypoint x="1630" y="165" /><di:waypoint x="1660" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W37_Flow34_di" bpmnElement="W37_Flow34"><di:waypoint x="1840" y="335" /><di:waypoint x="1870" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W37_Flow35_di" bpmnElement="W37_Flow35"><di:waypoint x="2050" y="505" /><di:waypoint x="2080" y="675" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W37_Flow36_di" bpmnElement="W37_Flow36"><di:waypoint x="2260" y="675" /><di:waypoint x="2290" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W37_Flow37_di" bpmnElement="W37_Flow37"><di:waypoint x="2470" y="165" /><di:waypoint x="2500" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W37_Flow38_di" bpmnElement="W37_Flow38"><di:waypoint x="2680" y="335" /><di:waypoint x="2710" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W37_Flow39_di" bpmnElement="W37_Flow39"><di:waypoint x="2890" y="335" /><di:waypoint x="2920" y="845" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W37_Flow40_di" bpmnElement="W37_Flow40"><di:waypoint x="3100" y="845" /><di:waypoint x="3130" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W37_Flow41_di" bpmnElement="W37_Flow41"><di:waypoint x="3310" y="165" /><di:waypoint x="3340" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W37_Flow42_di" bpmnElement="W37_Flow42"><di:waypoint x="3520" y="335" /><di:waypoint x="3550" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W37_Flow43_di" bpmnElement="W37_Flow43"><di:waypoint x="3730" y="335" /><di:waypoint x="3780" y="845" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W37_Assoc26_di" bpmnElement="W37_Assoc26"><di:waypoint x="340" y="970" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
       </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W49" name="W49. Natural Disaster / Typhoon Business Continuity" isExecutable="false">

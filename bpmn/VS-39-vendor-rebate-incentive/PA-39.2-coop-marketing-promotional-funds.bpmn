@@ -38,7 +38,7 @@ Duration: 30 min/agreement</bpmn:documentation>
         <bpmn:outgoing>W1795_Flow13</bpmn:outgoing>
       </bpmn:serviceTask>
       <bpmn:userTask id="W1795_Task7" name="CMO allocates co-op budget across marketing calendar: (a) bi-monthly catalog…">
-        <bpmn:documentation>Step 3: CMO allocates co-op budget across marketing calendar: (a) bi-monthly catalog: vendor co-op for product feature space (full page: PHP 50–100K; half page: PHP 25–50K), (b) social media campaigns: vendor co-op for sponsored posts, (c) in-store displays: vendor co-op for endcap and feature display materials, (d) events: vendor co-op for workshop sponsorship per W12.3, (e) seasonal campaigns: vendor co-op for holiday promotions
+        <bpmn:documentation>Step 3: CMO allocates co-op budget across marketing calendar: (a) bi-monthly catalog: vendor co-op for product feature space (full page: PHP 50–100K; half page: PHP 25–50K), (b) social media campaigns: vendor co-op for sponsored posts, (c) in-store displays: vendor co-op for endcap and feature display materials, (d) events: vendor co-op for workshop sponsorship per VS-12.3, (e) seasonal campaigns: vendor co-op for holiday promotions
 Responsible (R): CMO
 Accountable (A): VP Merchandising
 Duration: Quarterly planning</bpmn:documentation>
