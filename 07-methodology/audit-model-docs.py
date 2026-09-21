@@ -1875,7 +1875,14 @@ def ebs_blueprint_hits():
           consistency review, (f) every README document-map row is paren-balanced
           (the eighth pass's append to the fit-gap row shipped a doubled
           close-paren — the doubled-join genre on the document the forty-first
-          wave's fit-gap-scoped join-hygiene arm did not read)."""
+          wave's fit-gap-scoped join-hygiene arm did not read); and, since the
+          2026-09-21 sixty-first-wave consistency review, (g) the two README
+          navigation rows quoting the fit-gap register — the root-README tree row
+          and this document map's fit-gap row — carry the §2-re-derived register
+          total and, on the root row, the standard-total class cell, with the
+          retired 97/74 forms forbidden (batch 26's cascade re-pointed both
+          READMEs' workflow-count surfaces but stranded the fit-gap counts on the
+          two rows no check read at register-count grain)."""
     hits = []
 
     def ebs(name):
@@ -2130,6 +2137,40 @@ def ebs_blueprint_hits():
                 f"document-map row is not paren-balanced "
                 f"({ln.count('(')} open / {ln.count(')')} close) — appended clauses "
                 f"must preserve the row's nesting (forty-third-wave arm)")
+
+    # ---- (g) the two README navigation rows quoting the fit-gap register carry
+    # the re-derived register counts — 2026-09-21 sixty-first-wave consistency
+    # review: batch 26's re-point cascade moved the root-README's workflow-count
+    # rows and this README's Tier-2 census line but stranded the fit-gap counts
+    # on both READMEs' own rows — the root tree row read '97-row capability
+    # disposition register (74 standard ...' and the document-map row read 'the
+    # capability disposition register (97 rows incl.' against the register's 103
+    # (80 standard): no check read either row at register-count grain (Check 70
+    # pins the five workflow-figure annotations; arm (f) pins this row's paren
+    # balance, not its numbers). Rule: each row naming fit-gap-analysis.md and a
+    # 'disposition register' must state the re-derived total ('{total}-row' /
+    # '({total} rows') and, on the root tree row, the '({std} standard' class
+    # cell; the retired 97/74 forms are banned on both.
+    root_rd = strip_footer(open(os.path.join(REPO, "README.md"), encoding="utf-8").read())
+    for row_doc, row_body in (("README.md (root)", root_rd),
+                              ("README.md (02-oracle-ebs)", rd)):
+        for ln_i, ln in enumerate(row_body.splitlines(), 1):
+            if "fit-gap-analysis.md" not in ln or "disposition register" not in ln:
+                continue
+            for retired in ("97-row", "(97 rows", "(74 standard"):
+                if retired in ln:
+                    add(row_doc, ln_i,
+                        f"fit-gap navigation row carries the retired '{retired}' "
+                        f"form — the register-count cascade must reach the README "
+                        f"tree/document-map rows (sixty-first-wave arm)")
+            if f"{total}-row" not in ln and f"({total} rows" not in ln:
+                add(row_doc, ln_i,
+                    f"fit-gap navigation row does not state the re-derived register "
+                    f"total ({total} rows)")
+            if row_doc == "README.md (root)" and f"({std} standard" not in ln:
+                add(row_doc, ln_i,
+                    f"root-README fit-gap tree row does not state the re-derived "
+                    f"standard total ({std} standard)")
     return hits
 
 
