@@ -536,7 +536,11 @@ DOCS = ["mobile-app-strategy.md", "data-migration-mapping.md",
         # skeleton, the 39-row FP x rig re-map, the 10-row VT x rig matrix and
         # its GREEN/PARTIAL tally, the OR findings register and the rig-marker
         # anchors, per the vision_verification_hits precedent.
-        "../02-oracle-ebs/ebs-oratest-verification.md"]
+        "../02-oracle-ebs/ebs-oratest-verification.md",
+        # 2026-09-21: the inward-direction reconciliation of the official R12.2
+        # documentation library (ebs_docs/) against this model joins the doc set at
+        # issue, not a wave later -- the licensing_bom/oratest precedent.
+        "../02-oracle-ebs/ebs-documentation-coverage.md"]
 RETIRED_FIGURES = ["6,757", "6,715", "5,357", "5,362", "5,349", "5,341",
                    "80,000 SKU", "1,000 POS terminal"]
 
@@ -2637,6 +2641,82 @@ def quote_coverage_hits():
     return hits
 
 
+
+def ebs_doc_coverage_hits():
+    """2026-09-21 -- structural guard for the EBS documentation coverage register
+    (02-oracle-ebs/ebs-documentation-coverage.md). The register is the only surface
+    that reads the official R12.2 library (ebs_docs/) against this model, so its
+    own figures must re-derive from disk rather than from its authoring snapshot
+    (the licensing_bom_hits principle: the quantitative doc no rule re-derives is
+    the one that drifts). Re-derived every run:
+      (a) the §1 inventory's guide total and page total equal the PDFs on disk;
+      (b) the §1 class rows sum to those totals;
+      (c) the §4 EDC ids are contiguous 1..N with no duplicates, and the §2
+          outcome arithmetic (adjudicated + recorded + open = products) holds
+          with `open` equal to the EDC row count;
+      (d) every backtick-quoted guide basename in the register exists in
+          ebs_docs/current/acrobat/ -- a citation to a file that is not in the
+          library is the register's own dangling-reference class."""
+    rel = "ebs-documentation-coverage.md"
+    hits = []
+    path = os.path.normpath(os.path.join(MC, "..", "02-oracle-ebs", rel))
+    lib = os.path.normpath(os.path.join(MC, "..", "ebs_docs", "current", "acrobat"))
+    text = open(path, encoding="utf-8").read()
+    body = text.split("*Document Version:")[0]
+
+    def num(s):
+        return int(s.replace(",", ""))
+
+    # ---- (a)/(b) inventory vs disk
+    pdfs = [f for f in os.listdir(lib) if f.endswith(".pdf")] if os.path.isdir(lib) else []
+    if not pdfs:
+        hits.append((rel, 0, "ebs_docs/current/acrobat/ holds no PDFs -- the register's "
+                             "source of record is missing"))
+    rows = re.findall(r"^\| (?!Class\b)(?!\*\*Total)[^|]+\| (\*\*)?([\d,]+)(?:\*\*)? \| "
+                      r"(\*\*)?([\d,]+)(?:\*\*)? \|", body, flags=re.M)
+    tot = re.search(r"\| \*\*Total\*\* \| \*\*([\d,]+)\*\* \| \*\*([\d,]+)\*\* \|", body)
+    if not tot:
+        hits.append((rel, 0, "§1 inventory Total row not found"))
+    else:
+        g, pg = num(tot.group(1)), num(tot.group(2))
+        if pdfs and g != len(pdfs):
+            hits.append((rel, 0, f"§1 Total declares {g:,} guides but "
+                                 f"ebs_docs/current/acrobat/ holds {len(pdfs):,} PDFs"))
+        sg = sum(num(r[1]) for r in rows)
+        sp = sum(num(r[3]) for r in rows)
+        if sg != g or sp != pg:
+            hits.append((rel, 0, f"§1 class rows sum to {sg:,} guides / {sp:,} pages but the "
+                                 f"Total row declares {g:,} / {pg:,}"))
+    # ---- (c) EDC contiguity + outcome arithmetic
+    ids = [int(m) for m in re.findall(r"\*\*EDC-(\d+)\*\*", body)]
+    if ids != list(range(1, len(ids) + 1)):
+        hits.append((rel, 0, f"§4 EDC ids are not contiguous 1..N: {ids}"))
+    m = re.search(r"\*\*Result: (\d+) of (\d+) products already adjudicated; (\d+) were not\.\*\* "
+                  r"Of the \d+, (\d+) are\s+recorded not-needed in §5, and \*\*(\d+) are open gap rows",
+                  re.sub(r"\s+", " ", body))
+    if not m:
+        hits.append((rel, 0, "§2 outcome sentence not found or not parseable"))
+    else:
+        adj, prod, notadj, rec, opn = (int(m.group(i)) for i in range(1, 6))
+        if adj + notadj != prod:
+            hits.append((rel, 0, f"§2 outcome: {adj} adjudicated + {notadj} not "
+                                 f"!= {prod} products"))
+        if rec + opn != notadj:
+            hits.append((rel, 0, f"§2 outcome: {rec} recorded + {opn} open != {notadj} "
+                                 f"un-adjudicated"))
+        if opn != len(ids):
+            hits.append((rel, 0, f"§2 declares {opn} open gap rows but §4 holds "
+                                 f"{len(ids)} EDC rows"))
+    # ---- (d) cited guide basenames must exist in the library
+    have = {os.path.splitext(f)[0] for f in pdfs}
+    for mm in re.finditer(r"`(122[a-z0-9]+|12[a-z0-9]{3,})`", body):
+        stem = mm.group(1)
+        if have and stem not in have:
+            hits.append((rel, body[:mm.start()].count("\n") + 1,
+                         f"cites guide `{stem}` -- no such PDF in "
+                         f"ebs_docs/current/acrobat/"))
+    return hits
+
 def oratest_hits():
     """2026-09-21 oratest capability verification — structural guard for the
     rig capability report (02-oracle-ebs/ebs-oratest-verification.md; the
@@ -2963,6 +3043,7 @@ def main():
     hits.extend(store_scope_hits())
     # 2026-09-21 oratest capability verification addition (rig capability report)
     hits.extend(oratest_hits())
+    hits.extend(ebs_doc_coverage_hits())
     for doc, line, detail in hits:
         print(f"model-doc: {doc}:{line}: {detail}")
     print(f"audit-model-docs: {len(hits)} hit(s) across {len(DOCS)} documents")
