@@ -4173,14 +4173,24 @@ echo "--- Check 64: Event-custody register guards ---"
 #            (`VS-A ↔ VS-B` rows) must cross-reference bidirectionally: at least one file of
 #            VS-A's folder cites `\bVS-B\b` and vice versa, so a declared split can never ship
 #            one-sided again.
+#   Part C (2026-09-21 fifty-ninth wave) — no cross-block hard-prerequisite cycle: under the
+#            map's own semantics ('A → B: B cannot function until A is operational') any →-cycle
+#            is a logical impossibility, and a genuine circular data flow must be declared in §6
+#            CIRC with mitigation (the CIRC-002/CIRC-005 house), not encoded as two contradicting
+#            hard edges. The W31 ⇄ W312 pair (§1.1's 'W312 → W31 (parameter inputs)' back-edge
+#            vs §5's own chain running W31 → W312) shipped from the initial commit and was
+#            invisible to the self-loop arm; the DFS cycle arm now reports any →-cycle with its
+#            full path and the offending line number ('⇢' soft and '↔' bidirectional-integration
+#            edges are exempt by type — mutual degradation and declared simultaneity are legal).
 CHECK64=$(python3 - "$REPO_ROOT" <<'PY'
 import os, re, glob, sys
 ROOT = sys.argv[1]
 errs = []
 
-# ---- Part A: dependency-map self-loop edges ----
+# ---- Part A: dependency-map self-loop edges + hard-edge collection (for Part C) ----
 dep = os.path.join(ROOT, "01-model-company", "workflows", "workflow-dependency-map.md")
 parent = None
+hard_edges = []  # (parent, child, lineno) — '→' only; '⇢' soft and '↔' bidirectional integration exempt by type (Part C, fifty-ninth wave)
 for i, line in enumerate(open(dep, encoding="utf-8"), 1):
     pm = re.match(r"^\s*(W\d+[A-Z]?)\s*\(", line)
     if pm and not re.match(r"^\s*(\u2192|\u21e2|\u2194)", line):
@@ -4189,6 +4199,31 @@ for i, line in enumerate(open(dep, encoding="utf-8"), 1):
     em = re.match(r"^\s*(\u2192|\u21e2|\u2194)\s*(W\d+[A-Z]?)", line)
     if em and parent and em.group(2) == parent:
         errs.append(f"workflow-dependency-map.md:{i}: self-loop edge {parent} {em.group(1)} {em.group(2)} (a block may not depend on itself; re-home the back-edge in \u00a76 CIRC like CIRC-005 or drop it)")
+    if em and parent and em.group(1) == "\u2192":
+        hard_edges.append((parent, em.group(2), i))
+# ---- Part C: cross-block hard-prerequisite cycle detection (fifty-ninth wave, 2026-09-21) ----
+# The W31 ⇄ W312 2-cycle (§1.1 back-edge vs §5's own chain) shipped from the initial commit
+# because only parent→itself edges were banned. DFS over the hard-edge adjacency; every cycle
+# fires with its full path and the line of the edge that closed it.
+_adj = {}
+for _p, _c, _i in hard_edges:
+    _adj.setdefault(_p, []).append((_c, _i))
+_color = {}
+_path = []
+def _dfs_cyc(u):
+    _color[u] = 1
+    _path.append(u)
+    for v, li in sorted(_adj.get(u, [])):
+        if _color.get(v, 0) == 1:
+            cyc = _path[_path.index(v):] + [v]
+            errs.append("workflow-dependency-map.md:" + str(li) + ": hard-prerequisite cycle " + " -> ".join(cyc) + " ('A → B' means B cannot function until A is operational — a →-cycle is impossible; the pair contradicts itself; declare the loop in §6 CIRC with mitigation per the CIRC-002/CIRC-005 house or drop the contradicted edge; fifty-ninth-wave arm)")
+        elif _color.get(v, 0) == 0:
+            _dfs_cyc(v)
+    _path.pop()
+    _color[u] = 2
+for _u in sorted(_adj):
+    if _color.get(_u, 0) == 0:
+        _dfs_cyc(_u)
 
 # ---- Part B: declared overlap pairs must cross-reference bidirectionally ----
 reg = os.path.join(ROOT, "01-model-company", "workflows", "event-custody-and-precedence-register.md")
@@ -4223,9 +4258,9 @@ PY
 C64_BAD=$(echo "$CHECK64" | sed -n 's/^TOTALS .* problems=\([0-9]*\)/\1/p')
 C64_PAIRS=$(echo "$CHECK64" | sed -n 's/^TOTALS pairs=\([0-9]*\) .*/\1/p')
 if [ "${C64_BAD:-1}" -eq 0 ]; then
-    ok "No dependency-map self-loop edges and all ${C64_PAIRS} declared event-custody overlap pairs cross-reference bidirectionally (guard added by the 2026-09-03 event-custody pass)"
+    ok "No dependency-map self-loop edges, no cross-block hard-prerequisite cycles (→-graph acyclic under DFS), and all ${C64_PAIRS} declared event-custody overlap pairs cross-reference bidirectionally (guard added by the 2026-09-03 event-custody pass; cycle arm added by the 2026-09-21 fifty-ninth-wave review after §1.1's 'W312 → W31' back-edge was found contradicting §5's own W31 → W312 chain — an undeclared hard 2-cycle stranded from the initial commit that the self-loop arm could not see; W312's own file reads 'forecast feeds parameter calculation', so the tree edge was the contradicted direction and was removed)"
 else
-    error "$C64_BAD event-custody violation(s) (dependency-map self-loop / one-sided overlap pair):"
+    error "$C64_BAD event-custody violation(s) (dependency-map self-loop / hard-prerequisite cycle / one-sided overlap pair):"
     echo "$CHECK64" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
 fi
 
