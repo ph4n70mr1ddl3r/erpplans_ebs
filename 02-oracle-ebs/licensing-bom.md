@@ -334,7 +334,7 @@ Service are *not* in the bundle and price as add-ons:
 | Service | Part # | Metric | List $/mo | Qty | $/month |
 |---|---|---|---:|---:|---:|
 | Fusion Suite Professional (ERP+SCM+HCM bases) | B108674 | Hosted Named User | 330 | 3,600 | 1,188,000 |
-| Fusion Suite Employee (self-service tier) | B108675 | Hosted Employee | 5 | 3,311 | 16,555 |
+| Fusion Suite Employee (self-service tier) | B108675 | Hosted Employee | 5 | 3,332 | 16,660 |
 | Fusion Demand Management | B91060 | Hosted Named User | 1,250 | 10 | 12,500 |
 | Fusion Supply Planning | B91059 | Hosted Named User | 1,250 | 10 | 12,500 |
 | Fusion S&OP Cloud | B91061 | Hosted Named User | 625 | 15 | 9,375 |
@@ -351,13 +351,15 @@ Service are *not* in the bundle and price as add-ons:
 | Fusion Quality Management add-on (C12) | TBD † | Hosted Named User | 200 | 40 | 8,000 |
 | Fusion Global Order Promising add-on (D15) | TBD † | Hosted Named User | 425 | 10 | 4,250 |
 | Fusion Transportation Management add-on (C14) | TBD † | Hosted Named User | 650 | 25 | 16,250 |
-| **Total** | | | | | **$1,924,498/mo** |
+| **Total** | | | | | **$1,924,603/mo** |
 
-**B2 totals: $23,093,976/yr · $69,281,928 (3-yr) · $115,469,880 (5-yr)**
+**B2 totals: $23,095,236/yr · $69,285,708 (3-yr) · $115,476,180 (5-yr)**
 
-*The bundle's ERP+SCM+HCM bases already cover Expenses, Credit, costing and PLM change orders;
-Risk, Revenue, Quality, GOP and Transportation Management sit outside the bundle and price
-à-la-carte as add-ons.*
+*Suite Employee tier = the employee population outside the professional tier: 6,932 − 3,600 =
+3,332 (§1 drivers; the §1 Employee-metric rule governs the HRMS product lines, not this bundle
+tier, which is a complement by construction). The bundle's ERP+SCM+HCM bases already cover
+Expenses, Credit, costing and PLM change orders; Risk, Revenue, Quality, GOP and Transportation
+Management sit outside the bundle and price à-la-carte as add-ons.*
 
 ### 3.3 Fusion functional gaps vs the EBS footprint (quote/decide)
 
@@ -387,7 +389,7 @@ Risk, Revenue, Quality, GOP and Transportation Management sit outside the bundle
 |---|---:|---:|---:|---:|
 | **A — EBS 12.2 perpetual + 22% SUL&S** | $48.72M | $10.72M (support) | $80.9M | $102.3M |
 | **B1 — Fusion Cloud à-la-carte** | — | $29.01M | $87.0M | $145.1M |
-| **B2 — Fusion Suite bundle (36-mo)** | — | $23.09M | $69.3M | $115.5M |
+| **B2 — Fusion Suite bundle (36-mo)** | — | $23.10M | $69.3M | $115.5M |
 
 1. **At list price, EBS is cheapest over 5 years** (~$102.3M vs $115.5M Suite / $145.1M
    à-la-carte) and becomes more so after year 5 (support-only vs perpetual subscription).
@@ -410,4 +412,4 @@ Risk, Revenue, Quality, GOP and Transportation Management sit outside the bundle
 
 ---
 
-*Document Version: 2.2 | Date: 2026-09-18 | **Actual-org gap-fill re-base (+$32,120 EBS perpetual; B1/B2 employee-metric rows):** the 2026-09-18 HQ gap-fill (511 → 532; IA 14) re-based every employee-derived cell — §1 drivers (HQ staff 532, ERP named users 3,532 → licensed 3,600, governance teams IA 14), §2.1 Financials-AU footing (≈ 177 + 400 + 20 = 597, rounded to 650), §2.1 iExpenses footing (all HQ 532 + ~100 + ~25 = 657, rounded to 700), §2.8 HRMS @ 6,932 employees (+$17,745), §2.10 ICM 40 → 45 (+$14,375) — moving the Scenario-A base $48,685,690 → $48,717,810 and B1/B2 to $2,417,548 / $1,924,498 per month; §4 comparison cells re-derived at their stated rounding. Prior v2.1 (2026-09-17) | **Fifty-fourth-wave consistency review (driver/note footing):** the surfaces the §2–§3 line-item re-derivations cannot read trued — §1's ecommerce driver now states the derived basis its order-line pricing rides (≈2.3M OM order lines at ~4.5 lines/order; the profile carries no lines-per-order canon — confirm the line histogram before ordering), §2.1's Financials AU build-up carries its explicit footing (= 592, rounded to 650 — the iExpenses rounding convention the note had silently omitted), and §2.3's MSCA RF build-up is trued to §1's own DC driver (DC 600 per §1, not 550; = 2,650, rounded to 2,700) — no line-item, quantity or total change, EBS/Fusion scenarios untouched. Prior v2.0 (full-implementation edition) | Date: 2026-09-17 | **v2.0 delta:** licenses the exhaustion-audit adoptions — EBS: RM&I (A11), L&FM (A13), iExpenses (B11), BOM/WIP (C9), Quality (C12), In-Memory Cost (C15), Engineering (C17), Credit Management (D3), Internal Controls Manager (H11), Project Management; Fusion: Risk 20 → 60, Revenue, Quality, GOP, Transportation Management — moving the EBS license base $47,977,560 → $48,685,690 and B1/B2 to $2,416,729 / $1,923,994 per month; † part numbers/prices pending GPL verification; GOP added to the VCP custom-quote register. Prior v1.0 (2026-09-17): initial issue. Sources: model-company-profile.md (§3, §4, §8, §9, §12, §15); module-coverage-map.md v2.0; ebs-platform-architecture.md v2.0 §2; fit-gap-analysis.md §2; optimal-table-of-organization.md §5.3; Oracle E-Business Suite Applications Component Global Price List 2026-09-10; Oracle Fusion Cloud Service Global Price List 2026-09-10; Oracle Technology Global Price List 2026-09-10. Prices are US-Dollar list, subject to change without notice; quantities are planning estimates pending an Oracle License Determination.*
+*Document Version: 2.3 | Date: 2026-09-21 | **Sixtieth-wave consistency review (gap-fill straggler — the derived employee cell):** the v2.2 re-base moved every cell that states the employee total as a literal but missed the one that derives it by arithmetic — §3.2's Fusion Suite Employee (self-service tier) quantity, the complement of the professional tier, still stood at 3,311 = 6,911 − 3,600 under the retired headcount canon; re-based to 3,332 = 6,932 − 3,600 (+$105/mo), moving the B2 monthly total $1,924,498 → $1,924,603 and its bold chain to $23,095,236/yr · $69,285,708 (3-yr) · $115,476,180 (5-yr), with the §4 comparison cell re-derived at its stated rounding ($23.09M → $23.10M; the 3-yr/5-yr cells hold at $69.3M / $115.5M and the A-vs-B ranking is unchanged). §3.2 gains the explicit footing clause the §2 build-up notes already carry, so the complement is stated rather than implied. No other line item, quantity, price or total changed; Scenario A and B1 untouched. Prior v2.2 | Date: 2026-09-18 | **Actual-org gap-fill re-base (+$32,120 EBS perpetual; B1/B2 employee-metric rows):** the 2026-09-18 HQ gap-fill (511 → 532; IA 14) re-based every employee-derived cell — §1 drivers (HQ staff 532, ERP named users 3,532 → licensed 3,600, governance teams IA 14), §2.1 Financials-AU footing (≈ 177 + 400 + 20 = 597, rounded to 650), §2.1 iExpenses footing (all HQ 532 + ~100 + ~25 = 657, rounded to 700), §2.8 HRMS @ 6,932 employees (+$17,745), §2.10 ICM 40 → 45 (+$14,375) — moving the Scenario-A base $48,685,690 → $48,717,810 and B1/B2 to $2,417,548 / $1,924,498 per month; §4 comparison cells re-derived at their stated rounding. Prior v2.1 (2026-09-17) | **Fifty-fourth-wave consistency review (driver/note footing):** the surfaces the §2–§3 line-item re-derivations cannot read trued — §1's ecommerce driver now states the derived basis its order-line pricing rides (≈2.3M OM order lines at ~4.5 lines/order; the profile carries no lines-per-order canon — confirm the line histogram before ordering), §2.1's Financials AU build-up carries its explicit footing (= 592, rounded to 650 — the iExpenses rounding convention the note had silently omitted), and §2.3's MSCA RF build-up is trued to §1's own DC driver (DC 600 per §1, not 550; = 2,650, rounded to 2,700) — no line-item, quantity or total change, EBS/Fusion scenarios untouched. Prior v2.0 (full-implementation edition) | Date: 2026-09-17 | **v2.0 delta:** licenses the exhaustion-audit adoptions — EBS: RM&I (A11), L&FM (A13), iExpenses (B11), BOM/WIP (C9), Quality (C12), In-Memory Cost (C15), Engineering (C17), Credit Management (D3), Internal Controls Manager (H11), Project Management; Fusion: Risk 20 → 60, Revenue, Quality, GOP, Transportation Management — moving the EBS license base $47,977,560 → $48,685,690 and B1/B2 to $2,416,729 / $1,923,994 per month; † part numbers/prices pending GPL verification; GOP added to the VCP custom-quote register. Prior v1.0 (2026-09-17): initial issue. Sources: model-company-profile.md (§3, §4, §8, §9, §12, §15); module-coverage-map.md v2.0; ebs-platform-architecture.md v2.0 §2; fit-gap-analysis.md §2; optimal-table-of-organization.md §5.3; Oracle E-Business Suite Applications Component Global Price List 2026-09-10; Oracle Fusion Cloud Service Global Price List 2026-09-10; Oracle Technology Global Price List 2026-09-10. Prices are US-Dollar list, subject to change without notice; quantities are planning estimates pending an Oracle License Determination.*

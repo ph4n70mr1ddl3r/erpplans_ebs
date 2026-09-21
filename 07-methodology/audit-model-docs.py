@@ -2129,7 +2129,16 @@ def licensing_bom_hits():
           stated rounding;
       (d) fifty-fourth-wave footing arm: the §2 build-up notes must carry their
           explicit footing clauses and §1's ecommerce driver its derived
-          order-line basis (the unqualified/contradictory forms retired)."""
+          order-line basis (the unqualified/contradictory forms retired);
+      (e) fifty-fifth-wave driver arm: the §1 Total-employees row's store/DC/HQ
+          parenthetical must foot to its own leading figure;
+      (f) sixtieth-wave Fusion employee-metric arm: in §3.1/§3.2 every
+          Employee-metric quantity must equal the §1 canon, and the Suite
+          Employee tier — the one cell that DERIVES the headcount rather than
+          stating it — must equal canon − the professional tier and state that
+          footing in prose (it had survived the 2026-09-18 literal re-base at
+          3,311 = 6,911 − 3,600, arithmetically consistent with its own totals
+          and therefore invisible to arms (a)–(c))."""
     rel = "licensing-bom.md"
     hits = []
     path = os.path.normpath(os.path.join(MC, "..", "02-oracle-ebs", rel))
@@ -2317,6 +2326,66 @@ def licensing_bom_hits():
         if store + dc + hq != tot:
             hits.append((rel, 0, f"§1 driver breakdown {store} + {dc} + {hq} "
                                  f"!= stated total {tot}"))
+
+    # ---- (f) sixtieth-wave Fusion employee-metric arm — the §2.8 HRMS rows are
+    # anchored to the employee canon by arm (a) (list × 6,932), but nothing
+    # anchored the Fusion side's employee-metric quantities, so a headcount
+    # re-base that swept literals left the one DERIVED cell behind: §3.2's
+    # 'Fusion Suite Employee (self-service tier)' quantity is the complement of
+    # the professional tier, and it still read 3,311 = 6,911 − 3,600 under the
+    # retired canon long after every literal 6,911 had become 6,932 — arithmetically
+    # self-consistent with its own totals, so arms (a)–(c) could not see it
+    # (the '+ 511 HQ' straggler of arm (e), one level further down).
+    # Rule: in §3.1/§3.2 every Employee-metric row carries the §1 canon, except
+    # the Suite Employee tier, which must equal canon − the Suite Professional
+    # quantity and must state that footing in prose (the §2 build-up convention).
+    canon = int(num(m.group(1))) if m else 6932
+    for opt, sec_pat, end_pat in (("B1", r"### 3\.1 ", r"### 3\.2 "),
+                                  ("B2", r"### 3\.2 ", r"### 3\.3 ")):
+        sec = section(sec_pat + r"[^\n]*\n", end_pat)
+        if sec is None:
+            continue
+        prof = None
+        rows = []
+        for mm in re.finditer(
+                r"\| ([^|]+) \| [^|]+ \| ([^|]+) \| ([\d,]+(?:\.\d+)?) \| "
+                r"([\d,]+)[^|]*\| ([\d,]+) \|", sec):
+            name, metric, qty = mm.group(1).strip(), mm.group(2).strip(), int(num(mm.group(4)))
+            if name.startswith("Fusion Suite Professional"):
+                prof = qty
+            rows.append((name, metric, qty, sec[:mm.start()].count("\n")))
+        base = text[:text.index(sec)].count("\n") + 1 if sec in text else 0
+        for name, metric, qty, off in rows:
+            if "Employee" not in metric and "Comp. Individual" not in metric:
+                continue
+            if name.startswith("Fusion Suite Employee"):
+                if prof is None:
+                    hits.append((rel, base + off,
+                                 f"Scenario {opt} Suite Employee tier present but the "
+                                 f"Suite Professional row it complements was not found"))
+                elif qty != canon - prof:
+                    hits.append((rel, base + off,
+                                 f"Scenario {opt} '{name}' quantity {qty:,} != the §1 "
+                                 f"employee canon less the professional tier "
+                                 f"({canon:,} − {prof:,} = {canon - prof:,}) — the derived "
+                                 f"employee cell is stranded on a retired headcount"))
+                continue
+            if qty != canon:
+                hits.append((rel, base + off,
+                             f"Scenario {opt} Employee-metric row '{name}' quantity "
+                             f"{qty:,} != the §1 employee canon {canon:,}"))
+    fm = re.search(r"Suite Employee tier = the employee population outside the "
+                   r"professional tier: ([\d,]+) − ([\d,]+) =\s*([\d,]+)", body)
+    if not fm:
+        hits.append((rel, 0, "§3.2 Suite Employee footing clause not found "
+                             "(expected 'Suite Employee tier = the employee population "
+                             "outside the professional tier: C − P = Q')"))
+    else:
+        fc, fp_, fq = (int(num(g)) for g in fm.groups())
+        if fc != canon or fc - fp_ != fq:
+            hits.append((rel, body[:fm.start()].count("\n") + 1,
+                         f"§3.2 Suite Employee footing clause states {fc:,} − {fp_:,} = "
+                         f"{fq:,} — does not foot against the §1 employee canon {canon:,}"))
     return hits
 
 
@@ -2465,7 +2534,10 @@ def gap_fill_straggler_hits():
     and version footer are the frozen-history surfaces and stay exempt); (b) the
     official TO's §1 design stance — still reading 'lands at HQ 511' two lines
     under a states table the gap-fill had re-pointed (the promoted-structure
-    rationale the gap-fill superseded; no rule read the stance prose)."""
+    rationale the gap-fill superseded; no rule read the stance prose); and
+    (c) 2026-09-21 sixtieth-wave — the requirement register, whose own v24.2
+    footer names seven employee/user-count rows but whose sweep re-based only
+    two of them, leaving five live rows at 6,911 beside two siblings at 6,932."""
     hits = []
     # (a) classification register — live (non-blockquote, pre-footer) lines only
     cpath = os.path.join(REPO, "01-model-company", "workflows",
@@ -2495,6 +2567,33 @@ def gap_fill_straggler_hits():
     if "raised it to **HQ 532**" not in tbody:
         hits.append(("optimal-table-of-organization.md", 0,
                      'missing §1 design-stance gap-fill anchor "raised it to **HQ 532**"'))
+    # (c) 2026-09-21 sixtieth-wave arm — the requirement register. Its own v24.2
+    # footer names SEVEN rows as the employee/user-count family, but the gap-fill
+    # sweep re-based only two of them (MDM-011, HR-036), leaving five live
+    # requirement rows (HR-039, HSE-004, HR-041, HR-045, NFR-041) stating 6,911
+    # employees beside two siblings stating 6,932 — one register, two headcounts.
+    # Rule: no retired 6,911 anywhere in the live body, and all seven declared
+    # rows carry the canon.
+    # (the register interleaves per-round '*Document Version:' footers mid-file,
+    # so the frozen-history surface is those lines themselves, not a tail slice)
+    rpath = os.path.join(REPO, "01-model-company", "erp-requirements.md")
+    rlines = open(rpath, encoding="utf-8").read().split("\n")
+    live = [(i + 1, l) for i, l in enumerate(rlines)
+            if not l.startswith("*Document Version:")]
+    for ln, l in live:
+        if "6,911" in l:
+            hits.append(("erp-requirements.md", ln,
+                         'retired 6,911 employee/user total on a live requirement row '
+                         '(the version-footer lines are the frozen-history surface)'))
+    for rid in ("MDM-011", "HR-036", "HR-039", "HSE-004", "HR-041", "HR-045", "NFR-041"):
+        row = next(((ln, l) for ln, l in live if l.startswith(f"| {rid} |")), None)
+        if row is None:
+            hits.append(("erp-requirements.md", 0,
+                         f"employee-count requirement row {rid} not found"))
+        elif "6,932" not in row[1]:
+            hits.append(("erp-requirements.md", row[0],
+                         f"requirement row {rid} is in the v24.2-declared "
+                         f"employee/user-count family but does not carry the 6,932 canon"))
     return hits
 
 
