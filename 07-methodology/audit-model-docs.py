@@ -528,7 +528,15 @@ DOCS = ["mobile-app-strategy.md", "data-migration-mapping.md",
         # drifted once against the RFQ's own v2.0.1/v2.0.2 revisions. The guard
         # gains the quote_coverage_hits structural rule (register skeletons + the
         # canon/anchors + the supersession note).
-        "../02-oracle-ebs/quote-coverage-review.md"]
+        "../02-oracle-ebs/quote-coverage-review.md",
+        # 2026-09-21 oratest capability verification: the CitiHardware R12.2.4
+        # PROD-clone rig becomes the second installation of record and the
+        # capability of record for 'what can be executed today' — the doc ships
+        # with its own structural rule (oratest_hits) re-deriving the section
+        # skeleton, the 39-row FP x rig re-map, the 10-row VT x rig matrix and
+        # its GREEN/PARTIAL tally, the OR findings register and the rig-marker
+        # anchors, per the vision_verification_hits precedent.
+        "../02-oracle-ebs/ebs-oratest-verification.md"]
 RETIRED_FIGURES = ["6,757", "6,715", "5,357", "5,362", "5,349", "5,341",
                    "80,000 SKU", "1,000 POS terminal"]
 
@@ -2626,6 +2634,65 @@ def quote_coverage_hits():
     return hits
 
 
+def oratest_hits():
+    """2026-09-21 oratest capability verification — structural guard for the
+    rig capability report (02-oracle-ebs/ebs-oratest-verification.md; the
+    vision_verification_hits precedent — a verification report joins the DOCS
+    set with a rule that re-derives its own stated counts). Re-derives, every
+    run:
+      (a) the section skeleton (rig environment / FP x rig footprint / VT x rig
+          transactional / OR findings / artifacts) must be complete;
+      (b) the FP x rig table must hold exactly the pinned 39 conformance rows
+          (unique ids, mirroring the Vision report's FP set) and the VT x rig
+          table exactly 10 rows (unique ids);
+      (c) the section-3 rig tally sentence must equal the count of VT rows whose
+          verdict cell begins GREEN / PARTIAL (the vision_verification_hits
+          self-consistency principle applied to the rig verdicts);
+      (d) the required rig-evidence anchors must stay present (release 12.2.4,
+          business group 81, the VT-9 employee marker 10029015, the VT-10 asset
+          marker E2E-ERP-F-001 and posting request 76976818, the APXIIMPT
+          history anchor); and the OR-1..OR-6 findings register must be
+          complete."""
+    rel = "ebs-oratest-verification.md"
+    hits = []
+    path = os.path.normpath(os.path.join(MC, "..", "02-oracle-ebs", rel))
+    text = open(path, encoding="utf-8").read()
+    body = strip_footer(text)
+    for sec in ("## 1. Environment of record (rig)",
+                "## 2. Footprint conformance on the rig (FP \u00d7 rig)",
+                "## 3. Transactional cross-verification (VT \u00d7 rig)",
+                "## 4. Findings and consistency dispositions",
+                "## 5. Verification artifacts"):
+        if sec not in body:
+            hits.append((rel, 0, f"missing section '{sec}'"))
+    fp = re.findall(r"^\| (FP-\d+) ", body, flags=re.M)
+    vt = re.findall(r"^\| (VT-\d+) ", body, flags=re.M)
+    if len(fp) != 39 or len(set(fp)) != len(fp):
+        hits.append((rel, 0, f"FP x rig table holds {len(fp)} rows "
+                             f"({len(set(fp))} unique) but the doc pins 39 unique rows"))
+    if len(vt) != 10 or len(set(vt)) != len(vt):
+        hits.append((rel, 0, f"VT x rig table holds {len(vt)} rows "
+                             f"({len(set(vt))} unique) but the doc pins 10 unique rows"))
+    green = len(re.findall(r"^\| VT-\d+ \|.*\| GREEN", body, flags=re.M))
+    partial = len(re.findall(r"^\| VT-\d+ \|.*\| PARTIAL", body, flags=re.M))
+    m = re.search(r"Rig tally: (\d+) GREEN \+ (\d+) PARTIAL of the 10 paths", body)
+    if not m:
+        hits.append((rel, 0, "section-3 tally sentence ('Rig tally: **N GREEN + M "
+                             "PARTIAL of the 10 paths**') not found"))
+    elif (int(m.group(1)), int(m.group(2))) != (green, partial):
+        hits.append((rel, 0, f"section-3 tally claims {m.group(1)} GREEN + "
+                             f"{m.group(2)} PARTIAL but the VT table holds "
+                             f"{green} GREEN / {partial} PARTIAL"))
+    for anc in ("12.2.4", "81 — CITIHARDWARE INC", "10029015", "E2E-ERP-F-001",
+                "76976818", "APXIIMPT"):
+        if anc not in body:
+            hits.append((rel, 0, f'missing required rig-evidence anchor "{anc}"'))
+    for i in range(1, 7):
+        if f"OR-{i}" not in body:
+            hits.append((rel, 0, f"missing finding OR-{i}"))
+    return hits
+
+
 def store_scope_hits():
     """2026-09-18 fifty-sixth-wave consistency review — guard for the
     store-layer role-scope true-up (the wave that made the store time-and-
@@ -2891,6 +2958,8 @@ def main():
     hits.extend(quote_coverage_hits())
     # 2026-09-18 fifty-sixth-wave consistency review addition (store role scope)
     hits.extend(store_scope_hits())
+    # 2026-09-21 oratest capability verification addition (rig capability report)
+    hits.extend(oratest_hits())
     for doc, line, detail in hits:
         print(f"model-doc: {doc}:{line}: {detail}")
     print(f"audit-model-docs: {len(hits)} hit(s) across {len(DOCS)} documents")
