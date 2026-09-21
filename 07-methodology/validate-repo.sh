@@ -2673,6 +2673,15 @@ echo "--- Check 40: Validator self-description agreement ---"
 # in validate-repo.sh and validates every quoted check-count figure against it.
 # Per-version history notes (footer '*Date: ...' lines carrying frozen
 # 'across N checks' status records) and CHANGELOG/gap-analysis are exempt.
+# The fifty-eighth-wave review (2026-09-21) added the builder-attribution arm:
+# the divergence-reconciliation round two had declared the Check-78 builder
+# attribution re-pointed 'fifty-fifth' -> 'fifty-seventh' but shipped the re-point
+# only as an uncommitted working-tree edit — the commit tree contradicted its own
+# message. The validator's own self-descriptions are exactly this check's subject
+# matter, so the Check-78 block must carry the reconciled 'fifty-seventh-wave
+# review' form on both declared surfaces (comment + ok-message) and never the
+# retired form (the remote chain's own fifty-fifth-wave guard clauses live outside
+# the block, at Check 59's ok-message, and are unaffected).
 IMPLEMENTED_CHECKS=$(grep -c '^# --- Check ' "$REPO_ROOT/07-methodology/validate-repo.sh")
 CHECK40=$(python3 - "$REPO_ROOT" "$IMPLEMENTED_CHECKS" <<'PY'
 import re, os, glob, sys
@@ -2696,6 +2705,20 @@ for f in glob.glob(ROOT + "/**/*.md", recursive=True):
             for m in pat.finditer(line):
                 if int(m.group(1)) != IMPL:
                     bad.append(f"{rel}:{i}: '{m.group(0)}' != {IMPL} implemented checks")
+# builder-attribution arm (fifty-eighth wave, 2026-09-21): the Check-78 block's
+# own builder attribution is pinned at the reconciled numbering — see comment above.
+vsh = open(os.path.join(ROOT, "07-methodology", "validate-repo.sh"), encoding="utf-8").read().splitlines()
+c78 = next((i for i, l in enumerate(vsh) if l.startswith("# --- Check 78:")), None)
+if c78 is None:
+    bad.append("07-methodology/validate-repo.sh:0: Check 78 block marker not found — the builder-attribution arm cannot run")
+else:
+    scope = vsh[c78:]
+    for off, l in enumerate(scope):
+        if "fifty-fifth" in l:
+            bad.append(f"07-methodology/validate-repo.sh:{c78+off+1}: retired 'fifty-fifth' builder attribution inside the Check-78 block (the 2026-09-18 step-citation review is the reconciled fifty-seventh wave; re-point per the round-two reconciliation)")
+    anchors = "\n".join(scope).count("fifty-seventh-wave review")
+    if anchors < 2:
+        bad.append(f"07-methodology/validate-repo.sh:{c78+1}: required anchor 'fifty-seventh-wave review' found {anchors}/2 in the Check-78 block (comment + ok-message) — the reconciliation's declared re-point has been lost")
 print(f"TOTALS implemented={IMPL} mismatches={len(bad)}")
 for b in bad:
     print("BAD|" + b)
@@ -2703,9 +2726,9 @@ PY
 )
 C40_BAD=$(echo "$CHECK40" | sed -n 's/^TOTALS .* mismatches=\([0-9]*\)/\1/p')
 if [ "${C40_BAD:-1}" -eq 0 ]; then
-    ok "All quoted validator check counts equal the ${IMPLEMENTED_CHECKS} checks implemented in validate-repo.sh"
+    ok "All quoted validator check counts equal the ${IMPLEMENTED_CHECKS} checks implemented in validate-repo.sh, and the Check-78 builder attribution sits at the reconciled fifty-seventh-wave review form on both declared surfaces (builder-attribution arm added by the 2026-09-21 fifty-eighth-wave review — the round-two reconciliation had declared the re-point but shipped it only as an uncommitted working-tree edit)"
 else
-    error "Quoted validator check counts disagree with the ${IMPLEMENTED_CHECKS} checks implemented in validate-repo.sh:"
+    error "Validator self-description disagreement (a quoted check count != the ${IMPLEMENTED_CHECKS} implemented checks, or a lost Check-78 builder-attribution re-point):"
     echo "$CHECK40" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
 fi
 
@@ -6044,7 +6067,7 @@ echo "--- Check 78: Step-level W-reference resolution ---"
 # Checks 6/7/33 validate the BARE W<id> namespace, and Check 35 the VS… namespace, but
 # nothing ever validated the dotted step-level citation form documented in the
 # WORKFLOW-FORMAT-GUIDE's own cross-reference table (`W<number>.<step>` — 'used in
-# cross-references and the requirement-workflow matrix'). The fifty-fifth-wave review
+# cross-references and the requirement-workflow matrix'). The fifty-seventh-wave review
 # (2026-09-18, by direction: review everything) built the corpus's first step-reference
 # resolver — mirroring generate-bpmn.py's canonical step model (a steps table is any
 # table whose header row matches the 5-column '# | Activity | Role (R) | Role (A) |
@@ -6164,7 +6187,7 @@ PY
 )
 C78_BAD=$(echo "$CHECK78" | sed -n 's/^C78_BAD=\([0-9]*\).*/\1/p')
 if [ "${C78_BAD:-1}" -eq 0 ]; then
-    ok "Step-level W-reference resolution clean: every dotted W<id>.<step> token across all live markdown documents resolves against the parent workflow's own steps table under generate-bpmn.py's canonical step model — letter forms resolve row-first (a '6a' row, as in W3) then as a sub-item enumerated in the step's activity text (as in W470's touchpoints), and range endpoints must each resolve (guard added by the 2026-09-18 fifty-fifth-wave review, which found and repaired the family's 17 defect instances: six W-keyed steps-table rows at W37 ('| W37.11 |'–'| W37.16 |', invisible to both generators — W37's process shipped 10 tasks and the tiered write-off approval ladder shipped no decision; renumbered to bare 11–16, +6 bpmn tasks at PA-22.1 and +1 dmn decision / +4 rules), four mis-namespace PA citations written with a W prefix (three 'W12.3' forms and 'W29.1–29.3' plus a bare 'W29' for the VS-12.3 workshops-and-events and VS-29 master-data process areas — W12 is Returns and W29 is Product Recall, so each gloss contradicted its own citation), two phantom sub-item/step cites ('W285.6a' — step 6 has no sub-item (a); the settlement-execution sense IS step 6 — and 'W36.12' — W36 has no step 12; the CAPA/de-listing pair re-pointed to the blessed W110.5/W36 targets), one wrong-workflow cite ('W2.5–6' trued to 'W2A.5–6', the form the internal-controls-matrix already uses for the PO-approval tiers) and one wrong-domain cite (the salvage workflow's Time Estimate cited 'W12.2' for daily backroom cleanup; trued to W743 Store-Level Daily Cleaning & Sanitation Checklist Execution); the methodology-index README is exempt from the sweep as its validate-repo row quotes the retired literals in its own guard list (the Check-46 doctrine-scope adjudication — the arm caught its own author there pre-ship, the wave-9 precedent))"
+    ok "Step-level W-reference resolution clean: every dotted W<id>.<step> token across all live markdown documents resolves against the parent workflow's own steps table under generate-bpmn.py's canonical step model — letter forms resolve row-first (a '6a' row, as in W3) then as a sub-item enumerated in the step's activity text (as in W470's touchpoints), and range endpoints must each resolve (guard added by the 2026-09-18 fifty-seventh-wave review, which found and repaired the family's 17 defect instances: six W-keyed steps-table rows at W37 ('| W37.11 |'–'| W37.16 |', invisible to both generators — W37's process shipped 10 tasks and the tiered write-off approval ladder shipped no decision; renumbered to bare 11–16, +6 bpmn tasks at PA-22.1 and +1 dmn decision / +4 rules), four mis-namespace PA citations written with a W prefix (three 'W12.3' forms and 'W29.1–29.3' plus a bare 'W29' for the VS-12.3 workshops-and-events and VS-29 master-data process areas — W12 is Returns and W29 is Product Recall, so each gloss contradicted its own citation), two phantom sub-item/step cites ('W285.6a' — step 6 has no sub-item (a); the settlement-execution sense IS step 6 — and 'W36.12' — W36 has no step 12; the CAPA/de-listing pair re-pointed to the blessed W110.5/W36 targets), one wrong-workflow cite ('W2.5–6' trued to 'W2A.5–6', the form the internal-controls-matrix already uses for the PO-approval tiers) and one wrong-domain cite (the salvage workflow's Time Estimate cited 'W12.2' for daily backroom cleanup; trued to W743 Store-Level Daily Cleaning & Sanitation Checklist Execution); the methodology-index README is exempt from the sweep as its validate-repo row quotes the retired literals in its own guard list (the Check-46 doctrine-scope adjudication — the arm caught its own author there pre-ship, the wave-9 precedent))"
 else
     error "Unresolvable step-level W-references ($C78_BAD) — each cited step must exist as a row (or letter sub-item) of the parent workflow:"
     echo "$CHECK78" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
