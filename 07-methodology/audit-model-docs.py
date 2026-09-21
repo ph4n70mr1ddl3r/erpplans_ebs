@@ -641,13 +641,13 @@ ANCHORS = {
         # 2026-09-21 batch-25 re-pin: W5575-W5577 (PA-113.1, VS-113 -> CIO Office)
         # true CIO 81 -> 84, so the subtotals re-foot to 4,935 + 495 and the total
         # to 5,430.
-        "**4,935 + 495 = 5,430**",
+        "**4,937 + 495 = 5,432**",
         # §3.2 portfolio-table subtotal/total rows (structurally re-derived from the
         # §4 mapping + disk by om_reconciliation_hits — these pin the corrected forms'
         # presence)
-        "**171** | **4,935**",
+        "**171** | **4,937**",
         "**17** | **495**",
-        "**188** | **5,430**",
+        "**188** | **5,432**",
         # v2.0 hybrid sizing anchor (66 domain + platform/CIO = 115 FTE); v2.1 agentic
         # re-bases it to 122 (66 + 56, AAP +7)
         "**66 + 56 = 122**",
@@ -1927,8 +1927,13 @@ def ebs_blueprint_hits():
     # surface (the workflows' 'Audit Management portal / GRC Tool' touchpoints
     # named the suite's own GRC module); H8's environment lifecycle trued to
     # Rapid Clone + Oracle iSetup. Pins re-based to the re-derived arithmetic
-    # (74 standard = 76.3% of 97).
-    expect = {"FIT-STD": 37, "FIT-CFG": 37, "PER": 2, "EXT": 1, "LOC": 1,
+    # (74 standard = 76.3% of 97). 2026-09-21 batch-26 re-base: the
+    # ebs-documentation-coverage register closed its six highest-confidence
+    # rows as H12-H17 (Price Protection, Environmental Accounting & Reporting,
+    # Incentive Compensation, Bill Presentment Architecture, E-Business Tax
+    # Reporting, Copy Inventory Organization) -- register 97 -> 103 rows,
+    # FIT-STD/FIT-CFG 37 -> 40 each, 80 standard = 77.7% of 103.
+    expect = {"FIT-STD": 40, "FIT-CFG": 40, "PER": 2, "EXT": 1, "LOC": 1,
               "INT": 5, "BUILD": 14, "EDGE": 0, "OPEN": 0}
     for cls, want in expect.items():
         got = counts.get(cls, 0)
@@ -1936,10 +1941,10 @@ def ebs_blueprint_hits():
             add("fit-gap-analysis.md", 0,
                 f"register re-derives {got} {cls} rows but §3 pins {want} — the "
                 f"class-count table no longer foots against the §2 register")
-    if total != 97:
+    if total != 103:
         add("fit-gap-analysis.md", 0,
             f"register re-derives {total} disposition rows but the pinned register "
-            f"total is 97")
+            f"total is 103")
     # every §3 class-count cell must equal the §2 re-derivation (the rule's first
     # draft pinned only the standard-total and grand-total rows; a corrupted single
     # class cell sailed through — caught by this wave's own teeth suite, T4)

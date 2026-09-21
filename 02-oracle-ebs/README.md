@@ -79,7 +79,7 @@ rights); the sourcing-model rewrite shipped the same day (sourcing v3.0, OM v3.1
 Go-live follows the workflow criticality tiers
 ([`workflow-criticality-classification.md`](../01-model-company/workflows/workflow-criticality-classification.md)):
 Tier 1 (1,396 workflows) reaches production first or is protected by an equivalent manual
-procedure during cutover; Tier 2 (3,299) and Tier 3 (758) follow. The wave plan in full
+procedure during cutover; Tier 2 (3,301) and Tier 3 (758) follow. The wave plan in full
 detail is an implementation-phase deliverable (07-methodology "Future Additions"); the
 platform-level wave shape is:
 

@@ -280,6 +280,26 @@ identify capability gaps not addressed by any existing value stream.
 > Canonical totals are now **188 value streams · 569 process areas · 5,426 workflows** (5,449 confirmed register
 > rows; Tier 1 1,394 → 1,396, Tier 2 3,293 → 3,295).
 >
+> **Post-Pass-30 workflow-level additions, batch 26 (2026-09-21) — EBS documentation-coverage gap fill.**
+> The first pass run in the INWARD direction. Every prior gap pass started from the workflow catalog and asked what it needed; the
+> official Oracle R12.2 documentation library committed to `ebs_docs/` (376 guides / 133,782 pages) makes the opposite question
+> answerable — what does the suite document that this business needs, and which workflow says so? The reconciliation
+> ([`../../02-oracle-ebs/ebs-documentation-coverage.md`](../../02-oracle-ebs/ebs-documentation-coverage.md)) triaged 164 distinct
+> business products and opened 25 rows; the six highest-confidence rows close in this batch as fit-gap H12–H17. Four were **class-B**
+> defects — the workflow existed but named a generic vehicle instead of the documented EBS product — and were repaired in place:
+> W161 vendor price protection ('automated claim calculation module' → Oracle Price Protection), W3322 sales commission
+> ('commission/sales-performance module' → Oracle Incentive Compensation), W1334/W1396 carbon accounting (W1334's touchpoint read
+> literally 'spreadsheet or specialized platform' → Oracle Environmental Accounting and Reporting), W5481 fleet MRV, W2754 VAT return
+> (→ the E-Business Tax Reporting Ledger) and W16 new-store org (→ the Copy Inventory Organization utility). Two surfaces were
+> genuinely unowned and gained workflows: **W5578** Environmental Data Capture, Emission-Factor Governance & GHG Transaction Batch
+> Processing (VS-25.3 — the ESG reporting family consumed environmental quantities that no workflow captured into a system of record)
+> and **W5579** Customer Bill Presentment Template, Assignment-Rule & Data-Source Governance (VS-16.2 — iReceivables is adopted at
+> fit-gap A14 and renders through Bill Presentment Architecture, which nothing owned). Workflow-ID allocation: W5578–W5579 (next
+> available). Both ship **directly confirmed Tier 2**; the rails they invoke (Payables capture, the AR billing rail, the W132/W1409
+> change route) are already in place, so nothing is go-live blocking. Absorbed within sized teams (OM stays 122 FTE / 17 teams; TO
+> stays HQ 532 / 6,932). Canonical totals are now **188 value streams · 569 process areas · 5,432 workflows** (5,455 confirmed
+> register rows; Tier 1 1,396 unchanged, Tier 2 3,299 → 3,301).
+>
 > **Post-Pass-30 workflow-level additions, batch 25 (2026-09-21) — ERP customization-governance gap fill.**
 > A fresh corpus-wide re-sweep of the §2 methodology against the surface no prior pass had read — the EBS blueprint layer issued
 > from 2026-09-14, whose documents define recurring post-go-live processes rather than one-time implementation activity — found one

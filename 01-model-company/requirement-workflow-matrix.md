@@ -1010,7 +1010,7 @@
 
 - **Total requirements**: 728 across 38 distinct requirement-ID prefixes, organized into 32 sections (R1–R32, of which R19–R24 and R32 are gap-closure rounds)
 - **Requirements with primary workflow mapping**: All ✅
-- **Total workflows referenced**: the core foundational workflows; mappings for the Expansion / Statutory / Gap-analysis value streams (VS-53–VS-192) are added incrementally and remain pending. The full 5,430-workflow / 188-value-stream inventory is in [value-stream-index.md](workflows/value-stream-index.md)
+- **Total workflows referenced**: the core foundational workflows; mappings for the Expansion / Statutory / Gap-analysis value streams (VS-53–VS-192) are added incrementally and remain pending. The full 5,432-workflow / 188-value-stream inventory is in [value-stream-index.md](workflows/value-stream-index.md)
 - **Must Have requirements**: 429 (any scored 0 is a disqualifier)
 - **Should Have requirements**: 293
 - **Nice to Have requirements**: 6

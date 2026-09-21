@@ -81,7 +81,7 @@ Owner: COO / CHRO</bpmn:text>
     <bpmn:process id="W_W4050" name="W4050. Enterprise Process Architecture, Ownership &amp; RACI Governance" isExecutable="false">
       <bpmn:documentation>Trigger: Program stand-up; major re-org; new capability
 Frequency: Maintained + annual refresh
-Volume: ~5,430 workflows across 188 value streams (single enterprise process map)
+Volume: ~5,432 workflows across 188 value streams (single enterprise process map)
 Owner: COO
 Participants: All process owners (function VPs), Enterprise Architecture (links to VS-113), Master Data (links to VS-29)
 Source: workflow W4050 — Enterprise Process Architecture, Ownership &amp; RACI Governance</bpmn:documentation>

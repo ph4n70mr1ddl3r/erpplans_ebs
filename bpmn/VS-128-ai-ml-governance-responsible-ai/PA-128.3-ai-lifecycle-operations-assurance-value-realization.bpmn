@@ -582,7 +582,7 @@ Owner: AI Governance / CIO</bpmn:text>
     <bpmn:process id="W_W5512" name="W5512. Agentic Candidate Intake, Sourcing Routing &amp; Agent Registry Registration" isExecutable="false">
       <bpmn:documentation>Trigger: Automation-Opportunity intake cycle (the per-workflow automation inventory refresh) or a VS-133 process-mining candidate surfacing an agentic opportunity
 Frequency: Quarterly intake cycle + continuous candidate surfacing
-Volume: Scored against the full 5,430-workflow Automation Opportunity inventory; ~15–25 new candidates scored/quarter; ~30–45 agent registrations/year at the walk/run phases
+Volume: Scored against the full 5,432-workflow Automation Opportunity inventory; ~15–25 new candidates scored/quarter; ~30–45 agent registrations/year at the walk/run phases
 Owner: AAP Platform Lead
 Participants: AAP Platform Lead, Evaluation/AI-QA Engineer (AAP), AI-Governance Liaison, owning product team Product Manager &amp; Business Process Owner, SIB (Head of EA assessment lead; AAP seat per OM §7), AI Ethics Review Board (links to W3952), Data Protection Officer (links to VS-91)
 Source: workflow W5512 — Agentic Candidate Intake, Sourcing Routing &amp; Agent Registry Registration</bpmn:documentation>

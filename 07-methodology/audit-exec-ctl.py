@@ -56,7 +56,7 @@ ANCHORS = ["| Employees | 6,932 |", "| Active SKUs | 35,000 |",
            "| Monthly Transactions | 2.8 million |",
            "| Annual Revenue | ~PHP 62.3 Billion |",
            "| Loyalty Members | ~600,000 |",
-           "728 requirements, 5,430 workflows across 188 value streams, 6,762 employees"]
+           "728 requirements, 5,432 workflows across 188 value streams, 6,762 employees"]
 RETIRED = ["6,757", "6,715", "5,357", "5,362", "5,349", "5,341", "5,364", "5,367", "5,384"]
 SPEND = ("purchase", "purchasing", "procurement", "capex", "capital", "spend",
          "expenditure", "buying", "vendor", "supplier", "po ", "order")

@@ -5493,3 +5493,11 @@ W5517
 # 5,370/5,370. They are NOT yet in the audited registry; admission follows the documented
 # W5511 transition path (full read + D1–D4 detector sweep). The "5,370 of 5,370 (100%)"
 # total above is the closed-loop historical record at closure time.
+
+# Post-closure additions (transition-path pending): W5578–W5579 (EBS
+# documentation-coverage gap fill — environmental data capture & emission-factor
+# governance (VS-25.3 ×1), customer bill presentment governance (VS-16.2 ×1),
+# 2026-09-21 — workflow-gap-analysis.md batch 26) shipped after the loop closed at
+# 5,370/5,370. They are NOT yet in the audited registry; admission follows the
+# documented W5511 transition path (full read + D1–D4 detector sweep). The
+# "5,370 of 5,370 (100%)" total above is the closed-loop historical record.

@@ -20,9 +20,9 @@
 
 | Measure | Value |
 |---|---|
-| Workflows mapped | 5430 (exactly one Owner each — asserted) |
-| Confirmed Tier register | 5453 rows (Tier 1: 1396 · Tier 2: 3299 · Tier 3: 758) |
-| Distinct resolved actors | 4199 — §5.3 register roles 152 · IT product-model seats 30 · store field 12 · DC field 18 · department-level actors 2991 · system actors 31 · governance 59 · workforce 105 · external 801 · uncharted 0 |
+| Workflows mapped | 5432 (exactly one Owner each — asserted) |
+| Confirmed Tier register | 5455 rows (Tier 1: 1396 · Tier 2: 3301 · Tier 3: 758) |
+| Distinct resolved actors | 4200 — §5.3 register roles 153 · IT product-model seats 30 · store field 12 · DC field 18 · department-level actors 2991 · system actors 31 · governance 59 · workforce 105 · external 801 · uncharted 0 |
 
 > Tier mix = confirmed tiers of the workflows a role touches (a workflow
 > counts once per role regardless of how many steps mention it). HC is
@@ -39,13 +39,13 @@
 | Chief Information Officer (CIO) | Executive Office | 1 | 31 | 88 | 75 | 582 | 328 | 71 | 200 | 57 |
 | Chief Marketing Officer (CMO) | Executive Office | 1 | 26 | 72 | 73 | 361 | 228 | 21 | 135 | 72 |
 | CEO / President | Executive Office | 1 | 10 | 113 | 62 | 651 | 457 | 87 | 265 | 105 |
-| VP Finance & Accounting / Corporate Controller | Finance & Accounting | 1 | 83 | 272 | 318 | 858 | 538 | 226 | 261 | 51 |
+| VP Finance & Accounting / Corporate Controller | Finance & Accounting | 1 | 83 | 274 | 318 | 863 | 540 | 226 | 263 | 51 |
 | Treasury Manager | Finance & Accounting | 1 | 66 | 57 | 205 | 205 | 133 | 38 | 79 | 16 |
 | Tax Manager | Finance & Accounting | 1 | 46 | 59 | 143 | 132 | 96 | 73 | 21 | 2 |
 | Tax Accountant | Finance & Accounting | 4 | 44 | 62 | 216 | 33 | 87 | 69 | 16 | 2 |
 | Revenue Assurance Lead | Finance & Accounting | 1 | 40 | 47 | 106 | 119 | 69 | 26 | 33 | 10 |
-| AR & Credit Manager | Finance & Accounting | 1 | 38 | 49 | 106 | 239 | 103 | 36 | 59 | 8 |
-| AR Supervisor | Finance & Accounting | 1 | 29 | 33 | 99 | 97 | 56 | 39 | 17 | 0 |
+| AR & Credit Manager | Finance & Accounting | 1 | 38 | 50 | 107 | 243 | 104 | 36 | 60 | 8 |
+| AR Supervisor | Finance & Accounting | 1 | 30 | 34 | 103 | 97 | 57 | 39 | 18 | 0 |
 | Credit Analyst | Finance & Accounting | 2 | 27 | 62 | 149 | 21 | 85 | 28 | 50 | 7 |
 | FP&A Manager | Finance & Accounting | 1 | 26 | 13 | 51 | 9 | 34 | 6 | 23 | 5 |
 | Senior Revenue Accountant | Finance & Accounting | 1 | 26 | 6 | 74 | 0 | 30 | 9 | 20 | 1 |
@@ -55,7 +55,7 @@
 | AP Manager | Finance & Accounting | 1 | 17 | 33 | 65 | 30 | 41 | 18 | 20 | 3 |
 | Logistics & Cost Finance Analyst | Finance & Accounting | 3 | 15 | 4 | 26 | 14 | 16 | 5 | 7 | 4 |
 | FP&A Analyst | Finance & Accounting | 3 | 12 | 20 | 34 | 2 | 27 | 8 | 8 | 11 |
-| AP Supervisor | Finance & Accounting | 2 | 11 | 25 | 51 | 70 | 50 | 28 | 21 | 1 |
+| AP Supervisor | Finance & Accounting | 2 | 11 | 26 | 52 | 70 | 51 | 28 | 22 | 1 |
 | Consolidation & Intercompany Accountant | Finance & Accounting | 1 | 7 | 16 | 22 | 1 | 19 | 15 | 4 | 0 |
 | AP Clerk | Finance & Accounting | 13 | 6 | 69 | 119 | 8 | 93 | 44 | 42 | 7 |
 | Collections Specialist | Finance & Accounting | 2 | 4 | 13 | 16 | 1 | 15 | 7 | 8 | 0 |
@@ -167,24 +167,25 @@
 | Quality Inspector (Incoming Inspection) | Quality Management | 2 | 3 | 15 | 27 | 1 | 20 | 5 | 13 | 2 |
 | Supplier-Quality (Vendor QA) Auditor | Quality Management | 1 | 1 | 2 | 5 | 4 | 3 | 0 | 3 | 0 |
 | Energy Manager | Facilities & Real Estate | 1 | 28 | 42 | 71 | 43 | 50 | 2 | 36 | 12 |
-| Facilities Manager | Facilities & Real Estate | 2 | 24 | 22 | 89 | 67 | 59 | 7 | 35 | 17 |
+| Facilities Manager | Facilities & Real Estate | 2 | 24 | 23 | 90 | 67 | 60 | 7 | 36 | 17 |
 | Surety Program Manager | Facilities & Real Estate | 1 | 23 | 24 | 65 | 1 | 24 | 4 | 16 | 4 |
 | Director, Facilities & Real Estate (dual-hat GM, BuildRight Property Mgmt, Inc.) | Facilities & Real Estate | 1 | 14 | 0 | 0 | 0 | 14 | 3 | 10 | 1 |
 | Lease Administrator | Facilities & Real Estate | 1 | 13 | 25 | 35 | 4 | 30 | 4 | 24 | 2 |
 | Facilities Coordinator | Facilities & Real Estate | 3 | 8 | 27 | 40 | 23 | 35 | 10 | 24 | 1 |
-| Head of Sustainability / ESG (Sustainability/ESG Manager) | Sustainability / ESG | 1 | 74 | 50 | 168 | 179 | 137 | 16 | 75 | 46 |
+| Head of Sustainability / ESG (Sustainability/ESG Manager) | Sustainability / ESG | 1 | 75 | 51 | 173 | 182 | 138 | 16 | 76 | 46 |
 | Environmental Compliance Specialist | Sustainability / ESG | 1 | 25 | 13 | 84 | 59 | 37 | 15 | 19 | 3 |
 | Sustainability Coordinator | Sustainability / ESG | 1 | 20 | 40 | 77 | 3 | 49 | 2 | 33 | 14 |
 | ESG Reporting & Data Analyst | Sustainability / ESG | 1 | 1 | 0 | 5 | 0 | 1 | 1 | 0 | 0 |
 | Competitive Intelligence Manager | Strategy / Corporate Planning | 1 | 2 | 4 | 0 | 1 | 5 | 0 | 3 | 2 |
 | Head of Strategy & Corporate Planning | Strategy / Corporate Planning | 1 | 1 | 1 | 0 | 1 | 2 | 0 | 2 | 0 |
-| Trade Account Manager | Trade / Account Management | 2 | 22 | 53 | 90 | 13 | 55 | 13 | 37 | 5 |
+| Trade Account Manager | Trade / Account Management | 2 | 22 | 54 | 90 | 13 | 56 | 13 | 38 | 5 |
 | Key Account Manager | Trade / Account Management | 2 | 16 | 25 | 52 | 18 | 34 | 7 | 25 | 2 |
 | Head of Trade & Account Management | Trade / Account Management | 1 | 11 | 4 | 20 | 58 | 41 | 2 | 29 | 10 |
 | Trade Operations & Analytics Specialist | Trade / Account Management | 1 | 7 | 8 | 27 | 19 | 10 | 2 | 8 | 0 |
 | Trade Professional Program Coordinator | Trade / Account Management | 1 | 3 | 2 | 7 | 5 | 4 | 0 | 3 | 1 |
 | Shift Supervisor (DC roster) | Information Technology (product model) | — | 11 | 32 | 57 | 129 | 81 | 39 | 41 | 1 |
 | Board of Directors | Information Technology (product model) | — | 1 | 20 | 6 | 37 | 31 | 5 | 18 | 8 |
+| Tax Compliance Manager | Information Technology (product model) | — | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 |
 
 ## Information Technology product-model seats (§5.3 by reference)
 
@@ -201,7 +202,7 @@
 | IT Operations (FS/INFRA) | Information Technology (product model) | 15 | 39 | 50 | 29 | 63 | 16 | 37 | 10 |
 | SEC OT Security Lead | Information Technology (product model) | 13 | 0 | 30 | 76 | 24 | 4 | 17 | 3 |
 | SEC (Cybersecurity, Privacy & OT Security) | Information Technology (product model) | 11 | 179 | 164 | 2 | 206 | 62 | 135 | 9 |
-| DP Data Scientist / ML | Information Technology (product model) | 11 | 17 | 49 | 7 | 22 | 5 | 4 | 13 |
+| DP Data Scientist / ML | Information Technology (product model) | 11 | 18 | 50 | 7 | 23 | 5 | 5 | 13 |
 | IT Helpdesk Agent (FS) | Information Technology (product model) | 9 | 34 | 69 | 17 | 47 | 19 | 25 | 3 |
 | DP / Data & Analytics (VS-28) | Information Technology (product model) | 8 | 28 | 22 | 0 | 38 | 6 | 20 | 12 |
 | INFRA System Administrator | Information Technology (product model) | 6 | 12 | 29 | 6 | 17 | 8 | 7 | 2 |
@@ -696,7 +697,7 @@
 | S&Op | Supply Chain & Logistics | 13 | 5 | 41 | 0 | 25 | 9 | 14 | 2 |
 | Supply Planning Manager | Supply Chain & Logistics | 12 | 21 | 45 | 49 | 42 | 19 | 17 | 6 |
 | Fleet | Supply Chain & Logistics | 11 | 36 | 46 | 0 | 50 | 11 | 34 | 5 |
-| Fleet Manager | Supply Chain & Logistics | 10 | 18 | 46 | 34 | 28 | 10 | 10 | 8 |
+| Fleet Manager | Supply Chain & Logistics | 10 | 19 | 46 | 34 | 29 | 10 | 11 | 8 |
 | Procurement Director | Supply Chain & Logistics | 10 | 16 | 5 | 38 | 24 | 3 | 20 | 1 |
 | Packaging Engineering | Supply Chain & Logistics | 10 | 0 | 0 | 0 | 10 | 0 | 5 | 5 |
 | Inventory | Supply Chain & Logistics | 9 | 50 | 50 | 0 | 54 | 19 | 33 | 2 |
@@ -1057,8 +1058,8 @@
 | Integration Lead | Information Technology | 5 | 5 | 13 | 0 | 8 | 0 | 7 | 1 |
 | It Project Manager | Information Technology | 3 | 2 | 1 | 2 | 5 | 2 | 2 | 1 |
 | It System Admin | Information Technology | 3 | 1 | 2 | 2 | 4 | 0 | 3 | 1 |
+| It Application Manager | Information Technology | 2 | 3 | 3 | 0 | 5 | 1 | 4 | 0 |
 | Cio Office | Information Technology | 2 | 2 | 4 | 0 | 4 | 0 | 3 | 1 |
-| It Application Manager | Information Technology | 2 | 1 | 2 | 0 | 3 | 1 | 2 | 0 |
 | It Integration Manager | Information Technology | 2 | 1 | 3 | 0 | 3 | 1 | 2 | 0 |
 | Facilities-It | Information Technology | 2 | 0 | 0 | 0 | 2 | 0 | 2 | 0 |
 | It Change Manager | Information Technology | 2 | 1 | 5 | 3 | 2 | 0 | 2 | 0 |
@@ -2138,7 +2139,7 @@
 | The Business Compliance Partners | Legal & Compliance | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Trade Compliance Mgr | Legal & Compliance | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
 | Vendor Compliance | Legal & Compliance | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
-| Internal Audit | Internal Audit & Risk | 54 | 154 | 137 | 19 | 214 | 57 | 108 | 49 |
+| Internal Audit | Internal Audit & Risk | 54 | 155 | 137 | 19 | 215 | 57 | 109 | 49 |
 | Risk | Internal Audit & Risk | 36 | 120 | 129 | 1 | 148 | 25 | 103 | 20 |
 | Audit | Internal Audit & Risk | 13 | 122 | 136 | 0 | 148 | 45 | 84 | 19 |
 | Bc Manager | Internal Audit & Risk | 5 | 12 | 31 | 2 | 17 | 16 | 1 | 0 |
@@ -2599,6 +2600,7 @@
 | Environmental Officer | Sustainability / ESG | 0 | 1 | 1 | 0 | 2 | 1 | 0 | 1 |
 | Esg Analyst | Sustainability / ESG | 0 | 0 | 6 | 0 | 2 | 0 | 0 | 2 |
 | Esg Committee | Sustainability / ESG | 0 | 2 | 0 | 0 | 2 | 0 | 0 | 2 |
+| External Carbon Verification Auditor | Sustainability / ESG | 0 | 2 | 0 | 0 | 2 | 0 | 1 | 1 |
 | Foundation | Sustainability / ESG | 0 | 2 | 0 | 0 | 2 | 0 | 2 | 0 |
 | Foundation Board Programs Committee | Sustainability / ESG | 0 | 0 | 0 | 2 | 2 | 0 | 2 | 0 |
 | Human Rights | Sustainability / ESG | 0 | 2 | 0 | 0 | 2 | 0 | 2 | 0 |
@@ -2619,7 +2621,6 @@
 | Esg Mgr | Sustainability / ESG | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Esg Reporting | Sustainability / ESG | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Esg Reporting Analyst | Sustainability / ESG | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 |
-| External Carbon Verification Auditor | Sustainability / ESG | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 1 |
 | External Environmental Auditor | Sustainability / ESG | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
 | External Esg Advisors | Sustainability / ESG | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | External Esg Auditor | Sustainability / ESG | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
@@ -3261,7 +3262,7 @@
 
 | Role | Dept / source | Owns | Participant | Step-R | Step-A | Touched | T1 | T2 | T3 |
 |---|---|---|---|---|---|---|---|---|---|
-| System | System & automated actors | 8 | 29 | 2478 | 5 | 1191 | 394 | 625 | 172 |
+| System | System & automated actors | 8 | 29 | 2479 | 5 | 1192 | 394 | 626 | 172 |
 | Order Management System | System & automated actors | 6 | 0 | 0 | 0 | 6 | 0 | 6 | 0 |
 | Pos | System & automated actors | 4 | 37 | 9 | 0 | 42 | 27 | 11 | 4 |
 | Ecommerce System | System & automated actors | 4 | 0 | 5 | 0 | 5 | 0 | 5 | 0 |

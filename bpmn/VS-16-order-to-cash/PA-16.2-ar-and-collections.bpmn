@@ -1161,4 +1161,118 @@ Owner: AR Supervisor</bpmn:text>
         <bpmndi:BPMNEdge id="W1540_Assoc14_di" bpmnElement="W1540_Assoc14"><di:waypoint x="340" y="630" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
       </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
+    <bpmn:process id="W_W5579" name="W5579. Customer Bill Presentment Template, Assignment-Rule &amp; Data-Source Governance" isExecutable="false">
+      <bpmn:documentation>Trigger: A new customer segment or billing arrangement needs its own bill layout; a statutory format change (BIR invoice content per VS-79.1); a trade account disputes what its bill shows; a new attachment class must ride the bill; the quarterly template and rule review
+Frequency: Per change request; quarterly template/rule review; annual statutory-format re-verification
+Volume: ~5,400 billed accounts (~5,200 trade + ~200 corporate), ~42,000 AR invoices/year rendered through the presentment layer, across the trade, project-billing, concession and intercompany bill classes
+Owner: AR Supervisor
+Participants: AR Supervisor, AR &amp; Credit Manager, Finance Controller, Tax Compliance Officer (statutory content — links to VS-79.1), Trade Account Manager (links to VS-11), IT Application Manager (links to W132), Internal Audit (links to VS-21)
+Source: workflow W5579 — Customer Bill Presentment Template, Assignment-Rule &amp; Data-Source Governance</bpmn:documentation>
+      <bpmn:laneSet id="W5579_LaneSet4">
+        <bpmn:lane id="W5579_Lane1" name="AR Supervisor">
+        <bpmn:flowNodeRef>W5579_Task6</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W5579_Task8</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W5579_Task9</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W5579_Task11</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W5579_Start5</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W5579_Lane2" name="Tax Compliance Officer">
+        <bpmn:flowNodeRef>W5579_Task7</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W5579_Lane3" name="AR &amp; Credit Manager">
+        <bpmn:flowNodeRef>W5579_Task10</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W5579_End12</bpmn:flowNodeRef>
+        </bpmn:lane>
+      </bpmn:laneSet>
+      <bpmn:startEvent id="W5579_Start5" name="A new customer segment or billing arrangement needs its own bill layout; a statutory…">
+        <bpmn:outgoing>W5579_Flow15</bpmn:outgoing>
+      </bpmn:startEvent>
+      <bpmn:userTask id="W5579_Task6" name="AR Supervisor take the change request — a new bill class, a layout change, a…">
+        <bpmn:documentation>Step 1: AR Supervisor take the change request — a new bill class, a layout change, a statutory content change or a disputed presentation — and state which template it affects, which accounts the assignment rule will match, and what the bill must show that it does not show today
+Responsible (R): AR Supervisor
+Accountable (A): AR &amp; Credit Manager
+Duration: 2–4 hours/request</bpmn:documentation>
+        <bpmn:incoming>W5579_Flow15</bpmn:incoming>
+        <bpmn:outgoing>W5579_Flow16</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W5579_Task7" name="Tax Compliance Officer verify the statutory content the bill must carry for a…">
+        <bpmn:documentation>Step 2: Tax Compliance Officer verify the statutory content the bill must carry for a Philippine sales invoice or billing statement (links to VS-79.1) before any layout work begins; a template that would drop a required field is rejected at this gate rather than found at an audit
+Responsible (R): Tax Compliance Officer
+Accountable (A): Finance Controller
+Duration: 1–2 hours/request</bpmn:documentation>
+        <bpmn:incoming>W5579_Flow16</bpmn:incoming>
+        <bpmn:outgoing>W5579_Flow17</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W5579_Task8" name="AR Supervisor and IT Application Manager build the change in the suite…">
+        <bpmn:documentation>Step 3: AR Supervisor and IT Application Manager build the change in the suite: register the data source and its view where the content is not already available, define or amend the template with its grouping attributes and page setups, configure hyperlinks and register the attachment categories the bill class carries, and preview against live transactions of that class
+Responsible (R): AR Supervisor / IT Application Manager
+Accountable (A): AR &amp; Credit Manager
+Duration: 6–12 hours/change</bpmn:documentation>
+        <bpmn:incoming>W5579_Flow17</bpmn:incoming>
+        <bpmn:outgoing>W5579_Flow18</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W5579_Task9" name="AR Supervisor define or amend the assignment rule that selects the template…">
+        <bpmn:documentation>Step 4: AR Supervisor define or amend the assignment rule that selects the template, and state its precedence against the rules already in place; every rule change is reviewed for what it *stops* matching as well as what it starts matching, since an unmatched transaction falls to the default template
+Responsible (R): AR Supervisor
+Accountable (A): AR &amp; Credit Manager
+Duration: 2–4 hours/change</bpmn:documentation>
+        <bpmn:incoming>W5579_Flow18</bpmn:incoming>
+        <bpmn:outgoing>W5579_Flow19</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W5579_Task10" name="AR &amp; Credit Manager approve and release through the standard change rail (links…">
+        <bpmn:documentation>Step 5: AR &amp; Credit Manager approve and release through the standard change rail (links to W132/W1409), with a sample of each affected bill class rendered before and after and retained as the evidence of what changed
+Responsible (R): AR &amp; Credit Manager
+Accountable (A): Finance Controller
+Duration: 1–2 hours/change</bpmn:documentation>
+        <bpmn:incoming>W5579_Flow19</bpmn:incoming>
+        <bpmn:outgoing>W5579_Flow20</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W5579_Task11" name="AR Supervisor run the quarterly review: every live template and assignment…">
+        <bpmn:documentation>Step 6: AR Supervisor run the quarterly review: every live template and assignment rule, the transactions that fell to the default template in the quarter, the disputes that named a presentation defect (links to W1504-class investigation), and the statutory content re-verification; unused templates are retired so the rule set stays readable
+Responsible (R): AR Supervisor
+Accountable (A): AR &amp; Credit Manager
+Duration: 6–10 hours/quarter</bpmn:documentation>
+        <bpmn:incoming>W5579_Flow20</bpmn:incoming>
+        <bpmn:outgoing>W5579_Flow21</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:endEvent id="W5579_End12" name="Complete">
+        <bpmn:incoming>W5579_Flow21</bpmn:incoming>
+      </bpmn:endEvent>
+      <bpmn:textAnnotation id="W5579_Annotation13">
+        <bpmn:text>Controls: - CTL-287 (ensure controlled execution — AR &amp; Collections (PA-16.2).) | - operational: no template reaches production without the statutory-content verification gate | - operational: every assignment-rule change is released with a before/after rendered sample of each affected bill class | - operational: transactions falling to the default template are reported and cleared each quarter
+Owner: AR Supervisor</bpmn:text>
+      </bpmn:textAnnotation>
+      <bpmn:association id="W5579_Assoc14" sourceRef="W5579_Annotation13" targetRef="W5579_Start5" associationDirection="None" />
+      <bpmn:sequenceFlow id="W5579_Flow15" sourceRef="W5579_Start5" targetRef="W5579_Task6" />
+      <bpmn:sequenceFlow id="W5579_Flow16" sourceRef="W5579_Task6" targetRef="W5579_Task7" />
+      <bpmn:sequenceFlow id="W5579_Flow17" sourceRef="W5579_Task7" targetRef="W5579_Task8" />
+      <bpmn:sequenceFlow id="W5579_Flow18" sourceRef="W5579_Task8" targetRef="W5579_Task9" />
+      <bpmn:sequenceFlow id="W5579_Flow19" sourceRef="W5579_Task9" targetRef="W5579_Task10" />
+      <bpmn:sequenceFlow id="W5579_Flow20" sourceRef="W5579_Task10" targetRef="W5579_Task11" />
+      <bpmn:sequenceFlow id="W5579_Flow21" sourceRef="W5579_Task11" targetRef="W5579_End12" />
+    </bpmn:process>
+    <bpmndi:BPMNDiagram id="W5579_diag">
+      <bpmndi:BPMNPlane id="W5579_plane" bpmnElement="W_W5579">
+        <bpmndi:BPMNShape id="W5579_Lane1_di" bpmnElement="W5579_Lane1" isHorizontal="true"><dc:Bounds x="160" y="80" width="1580" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5579_Lane2_di" bpmnElement="W5579_Lane2" isHorizontal="true"><dc:Bounds x="160" y="250" width="1580" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5579_Lane3_di" bpmnElement="W5579_Lane3" isHorizontal="true"><dc:Bounds x="160" y="420" width="1580" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5579_Task6_di" bpmnElement="W5579_Task6"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5579_Task7_di" bpmnElement="W5579_Task7"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5579_Task8_di" bpmnElement="W5579_Task8"><dc:Bounds x="820" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5579_Task9_di" bpmnElement="W5579_Task9"><dc:Bounds x="1030" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5579_Task10_di" bpmnElement="W5579_Task10"><dc:Bounds x="1240" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5579_Task11_di" bpmnElement="W5579_Task11"><dc:Bounds x="1450" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5579_Start5_di" bpmnElement="W5579_Start5"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5579_End12_di" bpmnElement="W5579_End12"><dc:Bounds x="1680" y="487" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5579_Annotation13_di" bpmnElement="W5579_Annotation13"><dc:Bounds x="160" y="630" width="360" height="114" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="W5579_Flow15_di" bpmnElement="W5579_Flow15"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5579_Flow16_di" bpmnElement="W5579_Flow16"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5579_Flow17_di" bpmnElement="W5579_Flow17"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5579_Flow18_di" bpmnElement="W5579_Flow18"><di:waypoint x="1000" y="165" /><di:waypoint x="1030" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5579_Flow19_di" bpmnElement="W5579_Flow19"><di:waypoint x="1210" y="165" /><di:waypoint x="1240" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5579_Flow20_di" bpmnElement="W5579_Flow20"><di:waypoint x="1420" y="505" /><di:waypoint x="1450" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5579_Flow21_di" bpmnElement="W5579_Flow21"><di:waypoint x="1630" y="165" /><di:waypoint x="1680" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5579_Assoc14_di" bpmnElement="W5579_Assoc14"><di:waypoint x="340" y="630" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
+      </bpmndi:BPMNPlane>
+    </bpmndi:BPMNDiagram>
 </bpmn:definitions>

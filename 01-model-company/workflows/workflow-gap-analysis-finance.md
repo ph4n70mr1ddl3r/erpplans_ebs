@@ -17,7 +17,7 @@ All workflows governing the **finance function** of the model company (PHP 62.3B
 entities, ~210 bank accounts, ~800–1,000 vendors, ~5,400 trade accounts, ~450–700 utility/telecom
 deposit accounts), across:
 
-- The **Finance family** — 29 dedicated value streams, **785 workflows**: VS-15 (43), VS-16 (31),
+- The **Finance family** — 29 dedicated value streams, **786 workflows**: VS-15 (43), VS-16 (32),
   VS-17 (70), VS-18 (35), VS-34 (22), VS-38 (24), VS-39 (24), VS-40 (24), VS-54 (26), VS-68 (24),
   VS-72 (24), VS-79 (28), VS-80 (24), VS-96 (24), VS-105 (25), VS-116 (24), VS-118 (25),
   VS-125 (24), VS-142 (24), VS-148 (24), VS-153 (24), VS-154 (24), VS-157 (24), VS-158 (24),
@@ -29,7 +29,7 @@ deposit accounts), across:
 
 ## 2. Method
 
-1. **Inventory** every `## W` header in the 29 Finance value streams (785 workflows) plus
+1. **Inventory** every `## W` header in the 29 Finance value streams (786 workflows) plus
    finance-scoped workflows hosted elsewhere (payroll accounting in VS-19.2, landlord deposits in
    VS-42.2, BIR response in VS-22.2).
 2. **Map** each capability of a reference corporate-finance operating model for a Philippine
