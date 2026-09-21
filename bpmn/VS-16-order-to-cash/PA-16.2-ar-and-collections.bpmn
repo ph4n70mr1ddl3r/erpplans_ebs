@@ -1212,7 +1212,7 @@ Duration: 6–12 hours/change</bpmn:documentation>
         <bpmn:outgoing>W5579_Flow18</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W5579_Task9" name="AR Supervisor define or amend the assignment rule that selects the template…">
-        <bpmn:documentation>Step 4: AR Supervisor define or amend the assignment rule that selects the template, and state its precedence against the rules already in place; every rule change is reviewed for what it *stops* matching as well as what it starts matching, since an unmatched transaction falls to the default template
+        <bpmn:documentation>Step 4: AR Supervisor define or amend the assignment rule that selects the template, and set its rule order against the rules already in place — online and printed bills carry separate rule orders; every rule change is reviewed for what it *stops* matching as well as what it starts matching, since an unmatched transaction falls to the default template
 Responsible (R): AR Supervisor
 Accountable (A): AR &amp; Credit Manager
 Duration: 2–4 hours/change</bpmn:documentation>

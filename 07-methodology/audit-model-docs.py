@@ -1882,7 +1882,12 @@ def ebs_blueprint_hits():
           total and, on the root row, the standard-total class cell, with the
           retired 97/74 forms forbidden (batch 26's cascade re-pointed both
           READMEs' workflow-count surfaces but stranded the fit-gap counts on the
-          two rows no check read at register-count grain)."""
+          two rows no check read at register-count grain); and, since the
+          2026-09-21 sixty-first-wave manuals sweep, (h) the two disposition
+          POS rows (fit-gap D6, coverage-map POS/Retail) carry the checkout
+          qualifier ('No EBS POS checkout product') — the library's POS-named
+          Channel Rebate & POS guides make the bare absence form false — and
+          the retired bare 'No EBS POS exists' form is banned on both."""
     hits = []
 
     def ebs(name):
@@ -2171,6 +2176,30 @@ def ebs_blueprint_hits():
                 add(row_doc, ln_i,
                     f"root-README fit-gap tree row does not state the re-derived "
                     f"standard total ({std} standard)")
+
+    # ---- (h) the disposition POS rows carry the checkout qualifier — 2026-09-21
+    # sixty-first-wave manuals sweep: the library ships a POS-named product
+    # (Oracle Channel Rebate and Point-of-Sale Management, supplier-side,
+    # recorded not-needed in the coverage register §5), so the bare 'No EBS POS
+    # exists' form is false and retired on the two disposition surfaces; each
+    # must state the checkout sense the D6 decision actually rests on.
+    cm = strip_footer(open(ebs("module-coverage-map.md"), encoding="utf-8").read())
+    for row_doc, txt, marker in (("fit-gap-analysis.md", fg_body, "| D6 |"),
+                                 ("module-coverage-map.md", cm, "| **POS / Retail** |")):
+        row_i = next((i for i, l in enumerate(txt.splitlines(), 1)
+                      if l.startswith(marker)), 0)
+        if not row_i:
+            add(row_doc, 0, f"POS disposition row starting '{marker.strip()}' not found")
+            continue
+        row = txt.splitlines()[row_i - 1]
+        if "No EBS POS checkout product" not in row:
+            add(row_doc, row_i,
+                "POS row does not carry the checkout qualifier ('No EBS POS checkout "
+                "product') — the library's POS-named Channel Rebate & POS guides "
+                "make the bare absence form false")
+        if "No EBS POS exists" in row:
+            add(row_doc, row_i,
+                "retired bare 'No EBS POS exists' form is back on the POS row")
     return hits
 
 
@@ -2702,7 +2731,13 @@ def ebs_doc_coverage_hits():
           with `open` equal to the EDC row count;
       (d) every backtick-quoted guide basename in the register exists in
           ebs_docs/current/acrobat/ -- a citation to a file that is not in the
-          library is the register's own dangling-reference class."""
+          library is the register's own dangling-reference class; and, since the
+          2026-09-21 sixty-first-wave manuals sweep, (e) the §3 POS-confirmation
+          row states the library truthfully -- it must cite the one POS-named
+          product the library actually ships (`122crposig`/`122crposug`, the
+          supplier-side Channel Rebate & POS engine, recorded not-needed in §5),
+          must carry the checkout-sense anchor, and the retired bare
+          'No EBS POS product exists in the library' form is banned."""
     rel = "ebs-documentation-coverage.md"
     hits = []
     path = os.path.normpath(os.path.join(MC, "..", "02-oracle-ebs", rel))
@@ -2761,6 +2796,38 @@ def ebs_doc_coverage_hits():
             hits.append((rel, body[:mm.start()].count("\n") + 1,
                          f"cites guide `{stem}` -- no such PDF in "
                          f"ebs_docs/current/acrobat/"))
+    # ---- (e) the §3 POS-confirmation row must state the library truthfully --
+    # 2026-09-21 sixty-first-wave manuals sweep: the v1.0 confirmation 'No EBS
+    # POS product exists in the library' was false as stated (Oracle Channel
+    # Rebate and Point-of-Sale Management ships in the library), so the corrected
+    # row must cite both crpos guides (arm (d) verifies they exist), must carry
+    # the checkout-sense anchor, and the retired bare form is banned; the §5
+    # not-needed record for the product must stay.
+    pos_rows = [ln for ln in body.splitlines() if "No EBS POS" in ln]
+    if len(pos_rows) != 1:
+        hits.append((rel, 0, f"§3 holds {len(pos_rows)} POS-confirmation rows, "
+                             f"expected exactly 1"))
+    else:
+        ln_i = body[:body.index(pos_rows[0])].count("\n") + 1
+        if "`122crposig`" not in pos_rows[0] or "`122crposug`" not in pos_rows[0]:
+            hits.append((rel, ln_i,
+                         "POS-confirmation row does not cite the library's POS-named "
+                         "guides (`122crposig`/`122crposug`)"))
+        if "Channel Rebate" not in pos_rows[0]:
+            hits.append((rel, ln_i,
+                         "POS-confirmation row does not name the Channel Rebate & POS "
+                         "product the library actually ships"))
+        if "checkout" not in pos_rows[0]:
+            hits.append((rel, ln_i,
+                         "POS-confirmation row lost the checkout-sense anchor"))
+    if "No EBS POS product exists in the library" in body:
+        hits.append((rel, 0, "retired bare POS-absence form 'No EBS POS product "
+                             "exists in the library' is back (the library ships "
+                             "122crposig/122crposug — state the checkout sense)"))
+    if not any(ln.startswith("| Oracle Channel Rebate and Point-of-Sale Management")
+               for ln in body.splitlines()):
+        hits.append((rel, 0, "§5 lost the Channel Rebate and Point-of-Sale "
+                             "Management not-needed record"))
     return hits
 
 def oratest_hits():
