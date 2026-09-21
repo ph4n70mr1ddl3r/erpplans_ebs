@@ -245,7 +245,8 @@ erpplans/
 │   ├── integrations.md                IAP-first integration patterns for every flow in the canonical integration matrix
 │   ├── data-migration.md              Object → EBS load-path register (interfaces/APIs only), validation gates, cutover
 │   ├── licensing-bom.md               License bill of materials — EBS perpetual + support vs Fusion Cloud scenarios, from the module footprint & user/volume drivers (negotiation baseline; totals re-derived by audit-model-docs)
-│   └── ebs-vision-verification.md     Live verification of the documentation set against the Oracle EBS 12.2.12 Vision instance — footprint conformance, five transactional smoke tests, findings VF-1…VF-6 (regenerated per verification run)
+│   ├── ebs-vision-verification.md     Live verification of the documentation set against the Oracle EBS 12.2.12 Vision instance — footprint conformance, ten end-to-end transactional paths, findings register (six v1.0 entries, extended to eleven by verification round 2) (regenerated per verification run)
+│   └── quote-coverage-review.md       Cross-repo coverage audit of the 8-scenario license RFQ (erp_compare_infor) against the adopted footprint — gap register G1–G17, quantity reconciliation, PD decision register D-1–D–9, RFQ v2 amendment summary (+ v2.0.1/v2.0.2 status)
 ├── dmn/                         ← Generated DMN 1.3 decision models (80 decisions across 41 process areas; rule tables + tiered PHP authorization thresholds; mirrors the workflows/ tree; regenerates via 07-methodology/generate-dmn.py)
 ├── bpmn/                        ← Generated BPMN 2.0 models (5,450 processes; mirrors the workflows/ tree; regenerates via 07-methodology/generate-bpmn.py)
 ├── CHANGELOG.md                 ← Revision history
@@ -314,6 +315,7 @@ erpplans/
     ├── fix-controls-splice-artifacts-2-context.py — Forty-ninth-wave Controls-splice repairer, context class — 49 exact-match repairs (risk-splices, vs.-truncations, re-grounded in each workflow's own Pain Points/Steps)
     ├── fix-ebs-vehicle-stragglers.py  Fifty-second-wave EBS-exhaustion straggler repairer — 87 exact-match vehicle re-points across 41 PA files (132 across 61 for the wave with part 2 + 23 inline context repairs) (eAM, Quality, Demantra, XTR/CE, AGIS, Procurement Contracts, Product Hub/SLM, Property Manager/A12 EXT, iRecruitment, Advanced Pricing, In-Memory Cost, DQM/SLM, OLA, Payroll PH, ROE/OTE, Oracle Alert); forms guarded by Check 46
     ├── fix-ebs-vehicle-stragglers-2.py — Fifty-second-wave part 2 — 22 further re-points from the whole-corpus scan (CMMS residuals, 'ERP loyalty module' conflicts, RM&I, Trade Management, Succession, ICM, Quality, WMS Yard, Sourcing, Install Base)
+    ├── fix-store-role-scope.py     Fifty-sixth-wave store-layer role-scope true-up — 93 structured-cell edits: store CS Rep title form (Owner/Participants/Role cells + prose, 9 store files), Floor Associate → Sales Associate (14 cells), W562 LP daily routine → Store Manager (9 cells), 4 dual-scope Frequency fields re-scoped (forms guarded by audit-model-docs store_scope_hits)
     ├── fix-pain-template-engine.py   Fiftieth-wave Pain-Points de-templating engine — corpus-wide template-pool derivation, keep-specific/replace-template semantics, balance+mitigation verification
     ├── fix-pain-template-vs65.py     Fiftieth-wave Pain de-templating, VS-65 — 24 workflow-specific Pain sections grounded in each workflow's own steps
     ├── fix-pain-template-vs66-68-74.py — Fiftieth-wave Pain de-templating, VS-66/68/74 — 72 workflow-specific Pain sections

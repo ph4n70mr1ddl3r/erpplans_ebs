@@ -149,13 +149,13 @@
 | Internal Auditor | Internal Audit & Risk | 2 | 7 | 8 | 25 | 14 | 14 | 5 | 8 | 1 |
 | IT / ERP Auditor | Internal Audit & Risk | 2 | 6 | 0 | 25 | 6 | 13 | 0 | 0 | 13 |
 | Senior Internal Auditor | Internal Audit & Risk | 1 | 3 | 0 | 2 | 45 | 21 | 0 | 0 | 21 |
-| Customer Service Representative | Customer Service | 22 | 58 | 116 | 305 | 39 | 160 | 39 | 106 | 15 |
+| Customer Service Representative | Customer Service | 22 | 24 | 44 | 54 | 3 | 64 | 9 | 48 | 7 |
 | Contact Center Supervisor | Customer Service | 2 | 8 | 17 | 14 | 25 | 24 | 8 | 12 | 4 |
 | Services Manager | Customer Service | 1 | 5 | 10 | 15 | 45 | 24 | 9 | 10 | 5 |
 | Head of Customer Service | Customer Service | 1 | 5 | 1 | 6 | 30 | 17 | 0 | 15 | 2 |
 | Director, Regional Loss Prevention | Regional Loss Prevention | 1 | 54 | 28 | 101 | 169 | 103 | 24 | 70 | 9 |
 | LP Analytics Analyst | Regional Loss Prevention | 2 | 20 | 30 | 95 | 9 | 50 | 20 | 23 | 7 |
-| Regional LP Officer | Regional Loss Prevention | 20 | 12 | 47 | 86 | 26 | 59 | 29 | 29 | 1 |
+| Regional LP Officer | Regional Loss Prevention | 20 | 12 | 47 | 77 | 26 | 59 | 29 | 29 | 1 |
 | LP Investigator | Regional Loss Prevention | 2 | 3 | 8 | 25 | 0 | 12 | 8 | 3 | 1 |
 | Senior LP Investigator | Regional Loss Prevention | 1 | 3 | 3 | 7 | 0 | 3 | 3 | 0 | 0 |
 | Head of HSE | Health, Safety & Environment | 1 | 24 | 9 | 35 | 163 | 86 | 28 | 53 | 5 |
@@ -225,12 +225,12 @@
 
 | Role | Dept / source | Owns | Participant | Step-R | Step-A | Touched | T1 | T2 | T3 |
 |---|---|---|---|---|---|---|---|---|---|
-| Store Manager | Store (field, per-store roster) | 257 | 677 | 1018 | 1195 | 998 | 354 | 549 | 95 |
+| Store Manager | Store (field, per-store roster) | 257 | 677 | 1027 | 1195 | 998 | 354 | 549 | 95 |
 | Department Supervisor | Store (field, per-store roster) | 120 | 57 | 190 | 316 | 238 | 53 | 167 | 18 |
 | Department Supervisors | Store (field, per-store roster) | 117 | 190 | 275 | 477 | 290 | 83 | 185 | 22 |
-| Sales Associate | Store (field, per-store roster) | 78 | 288 | 786 | 98 | 373 | 84 | 251 | 38 |
+| Sales Associate | Store (field, per-store roster) | 78 | 288 | 799 | 99 | 376 | 85 | 253 | 38 |
+| Customer Service Rep | Store (field, per-store roster) | 60 | 99 | 293 | 36 | 135 | 44 | 81 | 10 |
 | Cashiers | Store (field, per-store roster) | 31 | 106 | 273 | 11 | 169 | 69 | 84 | 16 |
-| Customer Service Rep | Store (field, per-store roster) | 26 | 27 | 42 | 0 | 55 | 17 | 34 | 4 |
 | Cashier | Store (field, per-store roster) | 26 | 26 | 77 | 18 | 45 | 19 | 19 | 7 |
 | Maintenance | Store (field, per-store roster) | 24 | 87 | 164 | 18 | 109 | 34 | 62 | 13 |
 | Assistant Store Manager | Store (field, per-store roster) | 10 | 15 | 14 | 20 | 25 | 11 | 13 | 1 |
@@ -1806,7 +1806,7 @@
 | Booth Staff | Store Operations | 0 | 3 | 3 | 0 | 3 | 0 | 3 | 0 |
 | Cashier Supervisor | Store Operations | 0 | 1 | 2 | 5 | 3 | 0 | 2 | 1 |
 | Dept Manager | Store Operations | 0 | 0 | 3 | 2 | 3 | 2 | 0 | 1 |
-| Floor Associate | Store Operations | 0 | 3 | 13 | 1 | 3 | 1 | 2 | 0 |
+| Floor Associate | Store Operations | 0 | 3 | 0 | 0 | 3 | 1 | 2 | 0 |
 | Front-End | Store Operations | 0 | 1 | 4 | 0 | 3 | 1 | 2 | 0 |
 | Pro Desk Staff | Store Operations | 0 | 3 | 4 | 0 | 3 | 0 | 2 | 1 |
 | Regional Teams | Store Operations | 0 | 3 | 1 | 0 | 3 | 2 | 1 | 0 |

@@ -2164,7 +2164,7 @@ Owner: Ecommerce Fulfillment Coordinator</bpmn:text>
       <bpmn:documentation>Trigger: Customer brings an ecommerce purchase to a BuildRight store for return, having initiated the return online (RMA) or walking in without prior online initiation
 Frequency: ~3,300–4,200 ecommerce store drop-offs/month (~8–10% of ~42,900 ecommerce orders — the store drop-off subset of the ≈ 4,000–5,000 total ecommerce return requests per the W1623 canon; ≈ 17–21 drop-offs/store/month)
 Volume: ~17–21 in-store ecommerce return drop-offs per store per month; ~3,300–4,200 chain-wide/month (the W12B canon; the courier-pickup remainder ≈ 800–1,700/month rides W215)
-Owner: Customer Service Representative (CSR)
+Owner: Customer Service Rep
 Participants: CSR, Store Manager (approval override), Department Supervisor (quality inspection), Ecommerce Operations (system verification)
 Source: workflow W1273 — Customer E-Commerce In-Store Return Drop-Off Processing &amp; Cross-Channel Refund</bpmn:documentation>
       <bpmn:laneSet id="W1273_LaneSet3">
@@ -2246,7 +2246,7 @@ Duration: Automated</bpmn:documentation>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1273_Annotation13">
         <bpmn:text>Controls: - CTL-270 (ensure controlled execution — Order Fulfillment &amp; Delivery (PA-10.2).) | - operational: Customer Service Representative review and approval gate
-Owner: Customer Service Representative (CSR)</bpmn:text>
+Owner: Customer Service Rep</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1273_Assoc14" sourceRef="W1273_Annotation13" targetRef="W1273_Start4" associationDirection="None" />
       <bpmn:sequenceFlow id="W1273_Flow15" sourceRef="W1273_Start4" targetRef="W1273_Task5" />

@@ -5509,8 +5509,8 @@ Owner: Department Supervisor (Lumber &amp; Building Materials)</bpmn:text>
       <bpmn:documentation>Trigger: Customer arrives at store with an urgent home repair need (leaking pipe, broken window, electrical issue, roof leak, clogged drain, etc.), or customer calls/uses the app requesting an emergency repair material bundle
 Frequency: ~8,000–12,000 emergency repair interactions/month across all stores (home repair emergencies are a consistent high-frequency retail traffic driver)
 Volume: 1 bundle per emergency
-Owner: Customer Service Representative
-Participants: Sales Associate, Customer Service Representative, Customer
+Owner: Customer Service Rep
+Participants: Sales Associate, Customer Service Rep, Customer
 Source: workflow W1098 — Customer Emergency Home Repair Quick-Fix Bundle Curation &amp; Package Service</bpmn:documentation>
       <bpmn:laneSet id="W1098_LaneSet3">
         <bpmn:lane id="W1098_Lane1" name="Sales Associate">
@@ -5528,9 +5528,9 @@ Source: workflow W1098 — Customer Emergency Home Repair Quick-Fix Bundle Curat
         <bpmn:outgoing>W1098_Flow12</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:userTask id="W1098_Task5" name="Emergency Diagnosis &amp; Bundle Selection">
-        <bpmn:documentation>Step 1: Emergency Diagnosis &amp; Bundle Selection: (a) Customer Service Representative or Sales Associate quickly diagnoses the emergency: &quot;What&#x27;s the problem? Where is it? How urgent?&quot;; (b) Associate maps the problem to a Quick-Fix Bundle: (i) Roof Leak Bundle: G.I. sheet patch (matching existing profile), roofing screws with rubber washers, butyl tape (for flashing repair), wire brush (for rust removal), rust converter, roofing sealant, and a set of basic hand tools if needed; (ii) Pipe Leak Bundle: pipe repair clamp or self-fusing silicone tape, pipe cutter (for GI pipe), replacement pipe section (GI or PPR), fittings, Teflon tape, pipe wrench, and a bucket (for residual water); (iii) Faucet Leak Bundle: replacement washer set (universal rubber washers), faucet cartridge (if known brand), adjustable wrench, Teflon tape, plumber&#x27;s putty; (iv) Clogged Drain Bundle: drain snake (hand-crank, 6m), chemical drain cleaner (caustic soda or enzymatic), plunger, rubber gloves, bucket; (v) Electrical Tripped Breaker: circuit tester, replacement breaker (if customer knows panel type — Schneider, ABB, etc.), wire nuts, electrical tape; (vi) Broken Window Bundle: glass cutter (if cutting own glass), replacement glass pane (standard sizes pre-cut per W943 glass cutting service), glazing points, window putty/glazing compound, putty knife; (vii) Wall Crack / Leak Bundle: hydraulic cement (for active leaks), crack injection polyurethane foam, wire brush, trowel, bonding agent, and wall patch compound; (viii) Flood Cleanup Bundle: wet/dry shop vacuum rental per W139, squeegee, heavy-duty mop, chlorine bleach for disinfection, rubber boots, nitrile gloves, N95 mask; (ix) Door/Hinge Repair Bundle: replacement hinges (brass or stainless), wood screws, wood filler (for stripped screw holes), screwdriver set, door stopper; (x) Toilet Repair Bundle: toilet fill valve replacement kit, flush valve/flapper, toilet wax ring, supply hose, adjustable wrench, sponge (for bowl water removal)
+        <bpmn:documentation>Step 1: Emergency Diagnosis &amp; Bundle Selection: (a) Customer Service Rep or Sales Associate quickly diagnoses the emergency: &quot;What&#x27;s the problem? Where is it? How urgent?&quot;; (b) Associate maps the problem to a Quick-Fix Bundle: (i) Roof Leak Bundle: G.I. sheet patch (matching existing profile), roofing screws with rubber washers, butyl tape (for flashing repair), wire brush (for rust removal), rust converter, roofing sealant, and a set of basic hand tools if needed; (ii) Pipe Leak Bundle: pipe repair clamp or self-fusing silicone tape, pipe cutter (for GI pipe), replacement pipe section (GI or PPR), fittings, Teflon tape, pipe wrench, and a bucket (for residual water); (iii) Faucet Leak Bundle: replacement washer set (universal rubber washers), faucet cartridge (if known brand), adjustable wrench, Teflon tape, plumber&#x27;s putty; (iv) Clogged Drain Bundle: drain snake (hand-crank, 6m), chemical drain cleaner (caustic soda or enzymatic), plunger, rubber gloves, bucket; (v) Electrical Tripped Breaker: circuit tester, replacement breaker (if customer knows panel type — Schneider, ABB, etc.), wire nuts, electrical tape; (vi) Broken Window Bundle: glass cutter (if cutting own glass), replacement glass pane (standard sizes pre-cut per W943 glass cutting service), glazing points, window putty/glazing compound, putty knife; (vii) Wall Crack / Leak Bundle: hydraulic cement (for active leaks), crack injection polyurethane foam, wire brush, trowel, bonding agent, and wall patch compound; (viii) Flood Cleanup Bundle: wet/dry shop vacuum rental per W139, squeegee, heavy-duty mop, chlorine bleach for disinfection, rubber boots, nitrile gloves, N95 mask; (ix) Door/Hinge Repair Bundle: replacement hinges (brass or stainless), wood screws, wood filler (for stripped screw holes), screwdriver set, door stopper; (x) Toilet Repair Bundle: toilet fill valve replacement kit, flush valve/flapper, toilet wax ring, supply hose, adjustable wrench, sponge (for bowl water removal)
 Responsible (R): Sales Associate / Customer Service Rep
-Accountable (A): Customer Service Representative
+Accountable (A): Customer Service Rep
 Duration: 3–5 min</bpmn:documentation>
         <bpmn:incoming>W1098_Flow12</bpmn:incoming>
         <bpmn:outgoing>W1098_Flow13</bpmn:outgoing>
@@ -5538,7 +5538,7 @@ Duration: 3–5 min</bpmn:documentation>
       <bpmn:serviceTask id="W1098_Task6" name="Bundle Assembly &amp; Customization">
         <bpmn:documentation>Step 2: Bundle Assembly &amp; Customization: (a) system retrieves the Quick-Fix Bundle template from product master: pre-defined SKU list per emergency type with standard quantities; (b) Associate customizes based on customer&#x27;s specific situation: (i) for roof leak: &quot;What&#x27;s your roof profile? (corrugated, rib-type, tile?) What color?&quot; — system substitutes matching G.I. sheet; (ii) for pipe leak: &quot;What pipe material? (GI, PPR, PVC, copper?) What diameter?&quot; — system substitutes matching pipe and fittings; (iii) for electrical: &quot;What breaker brand? How many amps?&quot; — system substitutes matching breaker; (c) system checks real-time inventory for all bundle items at the store per W533; if any item is out of stock, system suggests nearest alternative or offers to order for DC delivery per W19; (d) Associate adds items not in the standard bundle that the customer may need based on conversation (e.g., safety glasses for roof work, a longer pipe section than standard, additional roofing screws)
 Responsible (R): Sales Associate / System
-Accountable (A): Customer Service Representative
+Accountable (A): Customer Service Rep
 Duration: 3–5 min</bpmn:documentation>
         <bpmn:incoming>W1098_Flow13</bpmn:incoming>
         <bpmn:outgoing>W1098_Flow14</bpmn:outgoing>
@@ -5546,7 +5546,7 @@ Duration: 3–5 min</bpmn:documentation>
       <bpmn:serviceTask id="W1098_Task7" name="Quick-Fix Instruction Card &amp; Advisory">
         <bpmn:documentation>Step 3: Quick-Fix Instruction Card &amp; Advisory: (a) system prints a Quick-Fix Instruction Card specific to the emergency type: single-page, illustrated, step-by-step guide in English and Filipino/Tagalog; (b) example — Roof Leak Quick-Fix Card: &quot;Step 1: Safety first — do not climb on the roof during rain. Wait for dry weather. Step 2: Locate the leak source from inside the attic or ceiling. Step 3: Wire-brush the rust/corrosion area. Step 4: Apply rust converter and wait 30 minutes. Step 5: Cut butyl tape to cover the hole plus 5cm overlap on all sides. Step 6: Press firmly and smooth from center outward. Step 7: If replacing a G.I. sheet section, remove screws, position new sheet with 1.5 corrugation overlap, secure with roofing screws. Step 8: Apply sealant to screw heads and overlap edges. WARNING: For roofs higher than 3 meters, BuildRight recommends hiring a professional roofer. Safety harness required.&quot;; (c) safety warnings printed in bold on every card: appropriate PPE, fall hazard warnings for roof/height work, electrical shock warnings for electrical repairs (&quot;Turn off the main breaker before touching any wiring&quot;), and chemical hazard warnings for drain cleaner and solvents; (d) system prints &quot;When to Call a Professional&quot; guidance: conditions where the repair exceeds DIY capability (e.g., &quot;If the pipe leak is at a joint inside the wall, call a licensed plumber. Do not break open walls unless you can identify the exact leak location.&quot;)
 Responsible (R): System / Sales Associate
-Accountable (A): Customer Service Representative
+Accountable (A): Customer Service Rep
 Duration: 2–3 min</bpmn:documentation>
         <bpmn:incoming>W1098_Flow14</bpmn:incoming>
         <bpmn:outgoing>W1098_Flow15</bpmn:outgoing>
@@ -5554,7 +5554,7 @@ Duration: 2–3 min</bpmn:documentation>
       <bpmn:userTask id="W1098_Task8" name="Fast-Track Checkout &amp; Loyalty Tracking">
         <bpmn:documentation>Step 4: Fast-Track Checkout &amp; Loyalty Tracking: (a) bundle is processed at POS as a single transaction with all items pre-grouped for fast scanning (pre-printed bundle barcode or quick-scan list on cashier terminal); (b) emergency repair bundles qualify for BuildRight&#x27;s &quot;Rush Repair&quot; priority checkout lane (no queuing during emergencies); (c) for loyalty members: system automatically saves the repair details and materials purchased to the customer&#x27;s account — useful for future maintenance tracking (e.g., &quot;You repaired your roof with butyl tape on [date]. Roof patches typically last 1–2 years. Consider a professional roof inspection.&quot;); (d) system tracks emergency repair bundle sales data: bundle type, frequency by store, seasonal spikes (roof leak bundles spike during rainy season, flood cleanup bundles spike after typhoons), and average bundle value
 Responsible (R): Sales Associate / Cashier
-Accountable (A): Customer Service Representative
+Accountable (A): Customer Service Rep
 Duration: 3–5 min</bpmn:documentation>
         <bpmn:incoming>W1098_Flow15</bpmn:incoming>
         <bpmn:outgoing>W1098_Flow16</bpmn:outgoing>
@@ -5564,7 +5564,7 @@ Duration: 3–5 min</bpmn:documentation>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W1098_Annotation10">
         <bpmn:text>Controls: - CTL-267 (ensure controlled execution — Project Estimation &amp; Advisory (PA-09.2).) | - operational: standard operating procedures; system-enforced validation rules
-Owner: Customer Service Representative</bpmn:text>
+Owner: Customer Service Rep</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W1098_Assoc11" sourceRef="W1098_Annotation10" targetRef="W1098_Start4" associationDirection="None" />
       <bpmn:sequenceFlow id="W1098_Flow12" sourceRef="W1098_Start4" targetRef="W1098_Task5" />

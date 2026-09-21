@@ -276,7 +276,7 @@ Source: workflow W759 — Store-Level Hazardous Material Customer Advisory &amp;
         <bpmn:flowNodeRef>W759_Task13</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W759_Start5</bpmn:flowNodeRef>
         </bpmn:lane>
-        <bpmn:lane id="W759_Lane2" name="Floor Associate">
+        <bpmn:lane id="W759_Lane2" name="Sales Associate">
         <bpmn:flowNodeRef>W759_Task8</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W759_Task9</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W759_Task10</bpmn:flowNodeRef>
@@ -299,7 +299,7 @@ Duration: Instant</bpmn:documentation>
       </bpmn:serviceTask>
       <bpmn:serviceTask id="W759_Task7" name="Customer advisory prompt — Floor associate receives system prompt with key…">
         <bpmn:documentation>Step 2: Customer advisory prompt — Floor associate receives system prompt with key safety information: (a) primary hazards, (b) required PPE, (c) safe handling procedures, (d) first aid measures, (e) proper disposal guidance
-Responsible (R): System / Floor Associate
+Responsible (R): System / Sales Associate
 Accountable (A): —
 Duration: 1 min</bpmn:documentation>
         <bpmn:incoming>W759_Flow18</bpmn:incoming>
@@ -307,7 +307,7 @@ Duration: 1 min</bpmn:documentation>
       </bpmn:serviceTask>
       <bpmn:userTask id="W759_Task8" name="Verbal safety briefing — Floor associate provides verbal safety briefing to…">
         <bpmn:documentation>Step 3: Verbal safety briefing — Floor associate provides verbal safety briefing to customer covering: (a) what the product is designed for, (b) what NOT to do with it, (c) required ventilation and PPE, (d) storage away from children and pets, (e) proper disposal per LGU regulations
-Responsible (R): Floor Associate
+Responsible (R): Sales Associate
 Accountable (A): —
 Duration: 3 min</bpmn:documentation>
         <bpmn:incoming>W759_Flow19</bpmn:incoming>
@@ -315,7 +315,7 @@ Duration: 3 min</bpmn:documentation>
       </bpmn:userTask>
       <bpmn:userTask id="W759_Task9" name="SDS offer — Floor associate offers customer a printed Safety Data Sheet (SDS)…">
         <bpmn:documentation>Step 4: SDS offer — Floor associate offers customer a printed Safety Data Sheet (SDS) per W698 SDS lifecycle management; for regular trade customers, associate confirms they have current SDS on file
-Responsible (R): Floor Associate
+Responsible (R): Sales Associate
 Accountable (A): —
 Duration: 1 min</bpmn:documentation>
         <bpmn:incoming>W759_Flow20</bpmn:incoming>
@@ -323,7 +323,7 @@ Duration: 1 min</bpmn:documentation>
       </bpmn:userTask>
       <bpmn:userTask id="W759_Task10" name="Alternative suggestion — For high-hazard products where a safer alternative…">
         <bpmn:documentation>Step 5: Alternative suggestion — For high-hazard products where a safer alternative exists (e.g., water-based vs. solvent-based paint), floor associate suggests the safer alternative
-Responsible (R): Floor Associate
+Responsible (R): Sales Associate
 Accountable (A): —
 Duration: 2 min</bpmn:documentation>
         <bpmn:incoming>W759_Flow21</bpmn:incoming>
@@ -340,7 +340,7 @@ Duration: 1 min</bpmn:documentation>
       <bpmn:userTask id="W759_Task12" name="Customer acknowledgment — For high-hazard purchases, customer signs digital…">
         <bpmn:documentation>Step 7: Customer acknowledgment — For high-hazard purchases, customer signs digital acknowledgment of receiving safety guidance; archived per W256 retention policy for W185 product liability defense
 Responsible (R): Customer
-Accountable (A): Floor Associate
+Accountable (A): Sales Associate
 Duration: 1 min</bpmn:documentation>
         <bpmn:incoming>W759_Flow23</bpmn:incoming>
         <bpmn:outgoing>W759_Flow24</bpmn:outgoing>

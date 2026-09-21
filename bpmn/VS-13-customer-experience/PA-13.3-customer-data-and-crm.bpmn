@@ -776,7 +776,7 @@ Owner: CRM Manager / AR Supervisor (for B2B accounts)</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W566" name="W566. Mystery Shopping Program &amp; CX Compliance Audit" isExecutable="false">
       <bpmn:documentation>Trigger: Monthly mystery shopping visit schedule; quarterly program review
-Frequency: ~400–600 visits per month (~2–3 visits per store per month); quarterly program review
+Frequency: ~2–3 visits per store per month (~400–600 visits per month chain-wide); quarterly program review
 Volume: 200 stores covered; higher frequency for underperforming stores (4–5 visits/month) and newly opened stores (6 visits for first 3 months)
 Owner: CX Manager / Head of Customer Service
 Participants: Mystery Shopping Agency (R — third-party provider), CX Manager, Store Manager (I — does not know visit schedule), Regional Manager (I — receives results), Department Supervisors (I — action items)

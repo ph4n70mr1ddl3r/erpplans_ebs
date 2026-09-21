@@ -28,7 +28,7 @@
 
 | Driver | Value | Source |
 |---|---|---|
-| Total employees | **6,932** (5,800 store + 600 DC + 511 HQ) | profile §4 |
+| Total employees | **6,932** (5,800 store + 600 DC + 532 HQ) | profile §4 |
 | ERP authorized (named) users | **3,532** → licensed **3,600** | build-up below |
 | — HQ staff | 532 (all 18 departments touch the ERP; 2026-09-18 actual-org gap-fill) | profile §3.3 |
 | — Store ERP users | 2,400 = 12/store × 200 (SM, ASM, 4 dept supervisors, 2 receiving clerks, 4 stock associates) | profile §12.1 |
@@ -95,7 +95,11 @@ Read-only covers merch/store-ops/marketing analytics viewers (cheaper than full 
 Credit users = AR & Credit manager + 2 credit analysts + AR supervisor + trade-ops credit
 liaison (TO §5.3; the 5,200-trade + 200-corporate account base). RM&I users = revenue
 accounting (manager + 3) + project billing 2 — the PFRS-15 schedules for project sales,
-service bundles and subscription deferrals (VS-157). AGIS, Bills Receivable/Payable, Lockbox,
+service bundles and subscription deferrals (VS-157). Charter note (2026-09-18,
+Vision verification VF-1, pending execution): the A11 vehicle is AR's in-suite Revenue
+Management capability, not a standalone product — this separate RM&I line folds into the
+AR/Financials base at the re-disposition pass (no separate license line, per this BOM's own
+included-entitlements convention). AGIS, Bills Receivable/Payable, Lockbox,
 Balance Forward Billing and GL budgetary control ship inside the Financials/AR/AP/CE bases —
 no lines.*
 
@@ -230,6 +234,10 @@ before budgeting**; not included in the totals below.*
 
 *ICM users: Internal Audit & Risk 14 (TO §5.3, 2026-09-18 gap-fill) + finance process owners 21 + business control
 owners 10 = 45 — assessment performers and CAPA approvers, not the whole control population.
+Charter note (2026-09-18, Vision verification VF-2, pending execution): ICM/AMW is registered
+'(Obsolete)' with no installation record in the designated 12.2.12 instance — at the
+re-disposition pass this line and its totals re-house onto the build-side audit-management
+surface (fit-gap H11 → BUILD; register standard 74 → 73).
 Oracle Alert (G9) rides the base applications; GL budgets/budgetary control (F6) rides GL —
 no lines.*
 

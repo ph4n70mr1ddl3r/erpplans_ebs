@@ -307,7 +307,7 @@ Owner: Marketing Manager</bpmn:text>
       <bpmn:documentation>Trigger: Customer returns green product or recycling event
 Frequency: Ad-hoc returns; quarterly events
 Volume: 200 stores
-Owner: Customer Service Representative
+Owner: Customer Service Rep
 Participants: Customer Service Rep, Sustainability Coordinator, Store Manager
 Source: workflow W2730 — Sustainable Product Return &amp; Recycling Program</bpmn:documentation>
       <bpmn:laneSet id="W2730_LaneSet3">
@@ -352,8 +352,8 @@ Duration: Quarterly</bpmn:documentation>
         <bpmn:incoming>W2730_Flow14</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W2730_Annotation9">
-        <bpmn:text>Controls: - CTL-464 (ensure controlled execution — Green Building Project Consultation (PA-78.2).) | - operational: Customer Service Representative sign-off on the workflow output
-Owner: Customer Service Representative</bpmn:text>
+        <bpmn:text>Controls: - CTL-464 (ensure controlled execution — Green Building Project Consultation (PA-78.2).) | - operational: Customer Service Rep sign-off on the workflow output
+Owner: Customer Service Rep</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W2730_Assoc10" sourceRef="W2730_Annotation9" targetRef="W2730_Start4" associationDirection="None" />
       <bpmn:sequenceFlow id="W2730_Flow11" sourceRef="W2730_Start4" targetRef="W2730_Task5" />

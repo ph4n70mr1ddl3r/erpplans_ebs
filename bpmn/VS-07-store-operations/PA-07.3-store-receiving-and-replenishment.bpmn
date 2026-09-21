@@ -2089,7 +2089,7 @@ Owner: Stock Associate / Department Supervisor</bpmn:text>
       <bpmn:documentation>Trigger: BOPIS order exceeds 5-day hold period without customer pickup
 Frequency: Daily; ~200–300 abandoned BOPIS orders per week chain-wide
 Volume: ~200–300 aged BOPIS orders/week across 200 stores (~1–2 per store per week)
-Owner: Customer Service Representative
+Owner: Customer Service Rep
 Participants: Customer Service Rep, Stock Associate, Store Manager, Customer
 Source: workflow W771 — Store-Level BOPIS Order Aging &amp; Abandoned Pickup Processing</bpmn:documentation>
       <bpmn:laneSet id="W771_LaneSet6">
@@ -2185,8 +2185,8 @@ Duration: 2 hours/month</bpmn:documentation>
         <bpmn:incoming>W771_Flow27</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W771_Annotation17">
-        <bpmn:text>Controls: - CTL-261 (ensure controlled execution — Store Receiving &amp; Replenishment (PA-07.3).) | - operational: Customer Service Representative review and approval gate
-Owner: Customer Service Representative</bpmn:text>
+        <bpmn:text>Controls: - CTL-261 (ensure controlled execution — Store Receiving &amp; Replenishment (PA-07.3).) | - operational: Customer Service Rep review and approval gate
+Owner: Customer Service Rep</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W771_Assoc18" sourceRef="W771_Annotation17" targetRef="W771_Start7" associationDirection="None" />
       <bpmn:sequenceFlow id="W771_Flow19" sourceRef="W771_Start7" targetRef="W771_Task8" />
