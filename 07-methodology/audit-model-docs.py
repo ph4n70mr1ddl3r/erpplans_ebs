@@ -2293,6 +2293,25 @@ def licensing_bom_hits():
             elif abs(num(pat.group(1)) - want) > 1.5:
                 hits.append((rel, 0, f"§2.10 {name} states {pat.group(1)} but the "
                                      f"re-derivation is {want:,.0f}"))
+        # 2026-09-21 sixty-second-wave tightening: once the support row parses, the
+        # 3-yr/5-yr cells derive from the section's own stated components (license +
+        # N × the STATED support, tolerance ±0.5) — the ×1.66/×2.1 approximations at
+        # ±1.5 above had let the batch-26 restatement ship a 5-yr TCO of 102,504,244
+        # whose own components give 102,504,245 (the approximation product 102,504,244.5
+        # straddled both integers, so the tolerance ate the off-by-one).
+        if sup:
+            sup_v = num(sup.group(1))
+            chain = [(t3, "3-yr TCO", livetot + 3 * sup_v, 0.5),
+                     (t5, "5-yr TCO", livetot + 5 * sup_v, 0.5)]
+        else:
+            chain = [(t3, "3-yr TCO", livetot * 1.66, 1.5),
+                     (t5, "5-yr TCO", livetot * 2.1, 1.5)]
+        for pat, name, want, tol in chain:
+            if not pat:
+                hits.append((rel, 0, f"§2.10 {name} row not found"))
+            elif abs(num(pat.group(1)) - want) > tol:
+                hits.append((rel, 0, f"§2.10 {name} states {pat.group(1)} but the "
+                                     f"re-derivation is {want:,.0f}"))
 
     # ---- (b) Scenario B1/B2 monthly columns → stated totals
     for opt, sec_pat, total_pat, bold_pat in (
@@ -2684,6 +2703,100 @@ def gap_fill_straggler_hits():
             hits.append(("erp-requirements.md", row[0],
                          f"requirement row {rid} is in the v24.2-declared "
                          f"employee/user-count family but does not carry the 6,932 canon"))
+    # (d) 2026-09-21 sixty-second-wave arm — the live workflow-census canon. Batch 26
+    # moved the corpus 5,430 → 5,432 and its cascade trued each document's headline
+    # figures, but the present-tense count cells no rule read at that grain kept the
+    # retired totals: the fit-gap intro's two census mentions, the coverage register's
+    # framing sentence, the blueprint README's §1/§5 corpus cells, the AI-first guide's
+    # Law-2/D1 rows, the OM's §11 companion-artifacts quote, the methodology index's
+    # two tool rows, the TO's §5.3 census parenthetical and the virtual-gemba population
+    # pin (the tool exited 1 on every run). Rule: the retired totals (5,426/5,427/5,430)
+    # are banned on the footer-stripped live bodies of the census documents, the current
+    # canon is required at the repaired cells, the TO parenthetical must read
+    # '5,432 of 5,432 owner cells' across its wrapped lines, and the tool pin must equal
+    # the corpus re-derivation. (When a future batch moves the canon, these anchors
+    # re-fire until consciously re-pointed — the Check-71 CENSUS-pin contract.)
+    census_docs = [
+        "02-oracle-ebs/fit-gap-analysis.md",
+        "02-oracle-ebs/ebs-documentation-coverage.md",
+        "02-oracle-ebs/README.md",
+        "02-oracle-ebs/module-coverage-map.md",
+        "07-methodology/ai-first-operating-guide.md",
+        "07-methodology/it-product-operating-model.md",
+        "07-methodology/README.md",
+        "01-model-company/optimal-table-of-organization.md",
+    ]
+    bodies = {}
+    # contextual retired-count forms - bare historical integers in wave-narration
+    # rows (the methodology index quotes each wave's then-canonical totals) stay legal
+    retired_forms = [f"{bad} workflows" for bad in ("5,426", "5,427", "5,430")]
+    retired_forms += [f"{bad}-workflow" for bad in ("5,426", "5,427", "5,430")]
+    retired_forms += [f"{bad}-WF" for bad in ("5,426", "5,427", "5,430")]
+    retired_forms += ["5,427 of 5,427", "5,426 of 5,426", "5,430 of 5,430"]
+    for relp in census_docs:
+        body = re.split(r"(?m)^\*Document Version:", open(
+            os.path.join(REPO, relp), encoding="utf-8").read())[0]
+        bodies[relp] = body
+        for bad in retired_forms:
+            if bad in body:
+                hits.append((os.path.basename(relp), body[:body.index(bad)].count("\n") + 1,
+                             f"retired workflow-census form '{bad}' on a live line (the "
+                             f"canon is 5,432 workflows since batch 26; the version "
+                             f"footers are the frozen-history surfaces)"))
+    fit_b = bodies["02-oracle-ebs/fit-gap-analysis.md"]
+    if "5,432 workflows demand" not in fit_b:
+        hits.append(("fit-gap-analysis.md", 0,
+                     'missing intro census anchor "5,432 workflows demand"'))
+    if "5,432 workflows invoke without naming" not in fit_b:
+        hits.append(("fit-gap-analysis.md", 0,
+                     'missing intro census anchor "5,432 workflows invoke without naming"'))
+    if ("The register above now stands at 103 rows / 80 standard = 77.7%"
+            not in fit_b):
+        hits.append(("fit-gap-analysis.md", 0,
+                     'missing §7 charter-note register-state anchor (the retired '
+                     'form is "stands at the pre-verification canon (97 rows, '
+                     '74 standard = 76.3%)"'))
+    if "5,432 workflows" not in bodies["02-oracle-ebs/ebs-documentation-coverage.md"]:
+        hits.append(("ebs-documentation-coverage.md", 0,
+                     'missing §1 framing census anchor "5,432 workflows"'))
+    br_b = bodies["02-oracle-ebs/README.md"]
+    for anchor in ("188 value streams · 5,432 workflows · 808 controls",
+                   "workflows (5,432)"):
+        if anchor not in br_b:
+            hits.append(("README.md (02-oracle-ebs)", 0,
+                         f'missing live corpus cell anchor "{anchor}"'))
+    guide_b = bodies["07-methodology/ai-first-operating-guide.md"]
+    for anchor in ("on all 5,432 workflows", "100% of 5,432 workflows"):
+        if anchor not in guide_b:
+            hits.append(("ai-first-operating-guide.md", 0,
+                         f'missing guide census anchor "{anchor}"'))
+    if "5,432-WF catalog" not in bodies["07-methodology/it-product-operating-model.md"]:
+        hits.append(("it-product-operating-model.md", 0,
+                     'missing §11 companion-artifacts census anchor "5,432-WF catalog"'))
+    idx_b = bodies["07-methodology/README.md"]
+    for anchor in ("5,432-workflow corpus", "Population-pinned (5,432 workflows"):
+        if anchor not in idx_b:
+            hits.append(("README.md (07-methodology)", 0,
+                         f'missing tool-row census anchor "{anchor}"'))
+    to_joined = " ".join(re.sub(r"(?m)^>\s?", "", bodies[
+        "01-model-company/optimal-table-of-organization.md"]).split())
+    if "5,432 of 5,432 owner cells resolved" not in to_joined:
+        hits.append(("optimal-table-of-organization.md", 0,
+                     '§5.3 census parenthetical must read "5,432 of 5,432 owner cells '
+                     'resolved" across its wrapped lines (the retired form is '
+                     '"5,427 of 5,427")'))
+    vg = open(os.path.join(REPO, "07-methodology", "virtual-gemba-walk.py"),
+              encoding="utf-8").read()
+    if "CANON_WORKFLOWS = 5432" not in vg:
+        hits.append(("virtual-gemba-walk.py", 0,
+                     'population pin must read CANON_WORKFLOWS = 5432 (the tool '
+                     'exits 1 on every run while it disagrees with the corpus)'))
+    if "CANON_WORKFLOWS = 5430" in vg:
+        hits.append(("virtual-gemba-walk.py", 0,
+                     "retired population pin CANON_WORKFLOWS = 5430"))
+    if "5,432 workflows" not in vg:
+        hits.append(("virtual-gemba-walk.py", 0,
+                     'docstring population line must state "5,432 workflows"'))
     return hits
 
 
