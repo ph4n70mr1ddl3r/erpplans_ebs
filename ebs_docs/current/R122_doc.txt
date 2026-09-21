@@ -1,0 +1,371 @@
+Title,Part Number,File Name
+Oracle HRMS Approvals Management Implementation Guide,E59054-06,122ameig.pdf
+Oracle Payables Implementation Guide,E48761-13,122apig.pdf
+Oracle Payables User's Guide,E48760-18,122apug.pdf
+Oracle Receivables Reference Guide,F10312-08,122arrg.pdf
+Oracle Cash Management User Guide,E48900-14,122ceug.pdf
+Oracle Contract Lifecycle Management for Public Sector iProcurement User Guide,E48938-17,122clmicxug.pdf
+Oracle Contract Lifecycle Management for Public Sector Implementation Guide,E48935-23,122clmig.pdf
+Oracle Contract Lifecycle Management for Public Sector Sourcing User Guide,E48936-14,122clmponug.pdf
+Oracle Contract Lifecycle Management for Public Sector Purchasing User Guide,E48927-22,122clmpoug.pdf
+Oracle Channel Rebate and Point-of-Sale Management User Guide,E49077-11,122crposug.pdf
+Oracle TeleService Implementation and User Guide,E48987-20,122csig.pdf
+Oracle Cost Management User's Guide,E48829-25,122cstug.pdf
+Oracle Configure to Order Process Guide,E48832-11,122ctopg.pdf
+Oracle Enterprise Asset Management Implementation Guide,E48782-31,122eamig.pdf
+Oracle Enterprise Asset Management User's Guide,E48789-30,122eamug.pdf
+Oracle E-Business Suite Maintenance Guide,E22954-33,122ebsmt.pdf
+Oracle E-Business Suite Security Guide,E22952-40,122ebssc.pdf
+Oracle E-Business Suite Setup Guide,E22953-36,122ebssu.pdf
+Oracle E-Business Suite Administering Enterprise Command Centers,F34732-07,122eccadm.pdf
+Oracle E-Business Suite Extending Oracle Enterprise Command Centers,F21671-12,122eccext.pdf
+Oracle e-Commerce Gateway Implementation Guide,E20932-09,122eccig.pdf
+Oracle XML Gateway User's Guide,E20929-20,122ecxug.pdf
+Oracle Electronic Kanban User's Guide,E49049-13,122ekflmug.pdf
+Oracle Application Framework Personalization Guide,E22031-20,122fwkpg.pdf
+Oracle E-Business Suite G-Invoicing Process Guide,F58859-11,122ginpg.pdf
+Oracle General Ledger Implementation Guide,E48747-13,122glig.pdf
+Oracle General Ledger User's Guide,E48748-12,122glug.pdf
+Oracle Process Manufacturing Process Execution User's Guide,E49068-24,122gmepeug.pdf
+Oracle Process Manufacturing Cost Management User's Guide,E49061-22,122gmfcmug.pdf
+"Oracle HRMS Configuring, Reporting, and System Administration Guide",E59056-11,122hradm.pdf
+Oracle HRMS Compensation and Benefits Management Guide (Canada),E59086-12,122hrcbcaug.pdf
+Oracle HRMS Compensation and Benefits Management Guide (India),E59097-11,122hrcbinug.pdf
+Oracle HRMS Compensation and Benefits Management Guide,E59055-11,122hrcbug.pdf
+Oracle HRMS Compensation and Benefits Management Guide (US),E59076-10,122hrcbusug.pdf
+Oracle HRMS Enterprise and Workforce Management Guide (Australia),E59092-12,122hrewauug.pdf
+Oracle HRMS Enterprise and Workforce Management Guide (Canada),E59087-12,122hrewcaug.pdf
+Oracle HRMS Enterprise and Workforce Management Guide,E59057-14,122hrewug.pdf
+Oracle HRMS Enterprise and Workforce Management Guide (US),E59077-18,122hrewusug.pdf
+Oracle HRMS Implementation Guide,E59059-20,122hrmsig.pdf
+Oracle HRMS Implementation Guide (US),E59078-15,122hrusig.pdf
+"Oracle HRMS Workforce Sourcing, Deployment, and Talent Management Guide (Australia)",E59094-10,122hrwsdtauug.pdf
+"Oracle HRMS Workforce Sourcing, Deployment, and Talent Management Guide (Canada)",E59090-10,122hrwsdtcaug.pdf
+"Oracle HRMS Workforce Sourcing, Deployment, and Talent Management Guide",E59062-16,122hrwsdtug.pdf
+"Oracle HRMS Workforce Sourcing, Deployment, and Talent Management Guide (US)",E59080-13,122hrwsdtusug.pdf
+Oracle Time & Labor Implementation and User Guide,E59070-10,122hxtig.pdf
+Oracle Trading Community Architecture Administration Guide,E48940-11,122hzag.pdf
+Oracle Trading Community Architecture Reference Guide,E48941-05,122hzrg.pdf
+Oracle Advanced Collections Implementation Guide,E48898-13,122iexig.pdf
+Oracle Advanced Collections User Guide,E48897-13,122iexug.pdf
+Oracle Customers Online User Guide,E48937-06,122imcug.pdf
+Oracle Inventory User's Guide,E48820-22,122invug.pdf
+Oracle iProcurement Implementation and Administration Guide,E48969-14,122ipiag.pdf
+Oracle iProcurement User Guide,E48970-19,122ipug.pdf
+Oracle E-Business Suite Integrated SOA Gateway Developer's Guide,E20927-23,122isgdg.pdf
+Oracle E-Business Suite Integrated SOA Gateway Implementation Guide,E20925-22,122isgig.pdf
+Oracle E-Business Suite Integrated SOA Gateway User's Guide,E20923-20,122isgug.pdf
+Oracle MRP User's Guide,E48795-07,122mrpug.pdf
+Oracle Mobile Supply Chain Applications User's Guide,E48826-11,122mscaug.pdf
+Oracle Inventory Movement Statistics User's Guide,E48824-06,122mvstatug.pdf
+Oracle E-Business Suite Installation Guide Using Rapid Install,E22950-44,122oaig.pdf
+Oracle E-Business Suite User's Guide,E22956-28,122oaug.pdf
+Oracle Credit Management User Guide,E48901-13,122ocmug.pdf
+Oracle Internet Expenses Implementation and Administration Guide,E48899-12,122oieig.pdf
+Oracle Service Contracts Implementation Guide,E48995-17,122oksig.pdf
+Oracle Service Contracts User Guide,E48992-18,122oksug.pdf
+Oracle Learning Management Implementation Guide,E59065-10,122olmig.pdf
+Oracle Learning Management User Guide,E59064-13,122olmug.pdf
+Oracle Order Management Implementation Manual,E48842-25,122ontig.pdf
+Oracle Order Management User's Guide,E48843-27,122ontug.pdf
+Oracle Succession Planning Implementation and User Guide,E59066-07,122osupiug.pdf
+Integrating Oracle Transportation Management with Oracle E-Business Suite,E48827-07,122otmintg.pdf
+Oracle Projects Implementation Guide,E49019-26,122paig.pdf
+Oracle HRMS Payroll Processing Management Guide (Canada),E59089-12,122paycaug.pdf
+Oracle HRMS Payroll Processing Management Guide (India),E59099-09,122payinug.pdf
+Oracle HRMS Payroll (Core) Processing Management Guide,E59060-14,122payug.pdf
+Oracle HRMS Payroll Processing Management Guide (UK),E76111-11,122payukug.pdf
+Oracle HRMS Payroll Processing Management Guide (US),E59079-18,122payusug.pdf
+Oracle Product Hub User's Guide,E48837-14,122pimug.pdf
+Oracle Project Billing User Guide,E49079-21,122pjbug.pdf
+Oracle Project Manufacturing Implementation Guide,E48955-10,122pjmig.pdf
+Oracle Project Manufacturing User's Guide,E48956-11,122pjmug.pdf
+Oracle Property Manager Implementation Guide,E48924-08,122pnig.pdf
+Oracle Property Manager User Guide,E48922-12,122pnug.pdf
+Oracle Supplier Management Implementation and Administration Guide,E48850-09,122pohig.pdf
+Oracle Supplier Management User's Guide,E48851-14,122pohug.pdf
+Oracle Sourcing User Guide,E48968-12,122ponug.pdf
+Oracle iSupplier Portal Implementation Guide,E48971-06,122posig.pdf
+Oracle iSupplier Portal User's Guide,E48972-11,122posug.pdf
+Oracle Purchasing User's Guide,E48931-19,122poug.pdf
+Oracle Advanced Pricing Implementation Guide,E48846-13,122qpig.pdf
+Oracle Advanced Pricing User's Guide,E48845-14,122qpug.pdf
+Oracle Services Procurement Process Guide,E68109-03,122sppg.pdf
+Oracle Self-Service Human Resources Deploy Self-Service Capability Guide,E59068-16,122sshrig.pdf
+Oracle E-Business Suite Upgrade Guide Release Release 12.0 and 12.1 to 12.2,E73540-23,122upgd.pdf
+Oracle E-Business Suite Upgrade Guide Release 11i to 12.2,E87011-19,122upgd11i.pdf
+Oracle Workflow Administrator's Guide,E22008-22,122wfag.pdf
+Oracle Workflow API Reference,E22009-20,122wfapi.pdf
+Oracle Workflow Client Installation Guide,E22010-09,122wfins.pdf
+Oracle Work in Process User's Guide,E48905-23,122wipug.pdf
+Oracle Warehouse Management Implementation Guide,E48828-15,122wmsig.pdf
+Oracle Warehouse Management User's Guide,E48830-13,122wmsug.pdf
+Oracle Shipping Execution User's Guide,E48847-14,122wshug.pdf
+Oracle E-Business Suite Cloud Manager Guide,F35809-30,12ebscmg.pdf
+"Oracle E-Business Suite Mobile Apps Administrator's Guide, Release 12.1 and 12.2",E64384-23,12ebsmb.pdf
+Oracle E-Business Suite Electronic Technical Reference Manual User's Guide,F53031-03,12etrmug.pdf
+Oracle HRMS Japan Supplement Guide,F17363-03,
+Oracle HRMS Payroll Processing Management Guide (Australia),E59093-09,
+Oracle HRMS Enterprise and Workforce Management Guide (UK),E76109-08,
+Oracle HRMS Implementation Guide (UK),E76110-08,
+"Oracle E-Business Suite Information Discovery Integration and System Administration Guide, Release R12.2 V9",E79121-04,
+Oracle Project Procurement Command Center Plus Process Guide,E79122-05,
+Oracle Application Management Pack for Oracle E-Business Suite Metric Reference Manual Release 13c,E80932-02,
+Oracle Application Integration Architecture Oracle Value Chain Planning Integration Base Pack Implementation Guide,E96000-01,
+Oracle Application Management Pack for Oracle E-Business Suite Guide (12.1),121_F32518-01,
+Oracle Labor Distribution User Guide,E59069-04,
+"Oracle US Federal Human Resources Configuring, Reporting, and System Administration",E59082-07,
+Oracle US Federal Human Resources Enterprise and Workforce Management Guide,E59083-07,
+Oracle US Federal Human Resources Implementation Guide,E59084-07,
+"Oracle US Federal Human Resources Workforce Sourcing, Deployment, and Talent Management Guide",E59085-05,
+Oracle HRMS Implementation Guide (Canada),E59088-09,
+"Oracle Complex Maintenance, Repair, and Overhaul Implementation Guide",E49040-10,
+Oracle HRMS Enterprise and Workforce Management Guide (India),E59098-11,
+"Oracle HRMS Workforce Sourcing, Deployment, and Talent Management Guide (India)",E59100-08,
+Oracle HRMS Compensation and Benefits Management Guide (Mexico),E59101-09,
+Oracle HRMS Implementation Guide (Mexico),E59105-09,
+Oracle HRMS Payroll Processing Management Guide (Mexico),E59106-11,
+Oracle HRMS Enterprise and Workforce Management Guide (New Zealand),E59109-09,
+Oracle HRMS Payroll Processing Management Guide (New Zealand),E59110-06,
+"Oracle HRMS Workforce Sourcing, Deployment, and Talent Management Guide (New Zealand)",E59111-06,
+"Oracle E-Business Suite Mobile Apps Developer's Guide, Release 12.1 and 12.2",E69284-16,
+Oracle Application Management Pack for Oracle E-Business Suite Metric Reference Manual,E80932-02,
+Oracle Trading Community Architecture User Guide,E48950-07,
+Oracle Human Resources Management System Strategic Reporting (HRMSi) User's Guide,E48869-04,
+Oracle Common Application Calendar Implementation Guide,E48919-03,
+Oracle Shop Floor Management User's Guide,E48944-01,
+Oracle Outsourced Manufacturing for Discrete Industries User's Guide,E48953-17,
+Oracle Quality Implementation Guide,E48959-01,
+Oracle Depot Repair User Guide,E48965-18,
+Oracle Universal Work Queue Implementation Guide,E48975-02,
+Oracle Territory Manager User Guide,E48991-01,
+Oracle Mobile Field Service Implementation Guide,E48994-10,
+Oracle Price Protection User Guide,E49017-03,
+Oracle TeleSales User Guide,E49020-01,
+Oracle Sales User Guide,E49026-02,
+Oracle Sales Offline User Guide,E49029-01,
+Oracle Sales for Handhelds User Guide,E49033-01,
+Oracle Proposals User Guide,E49037-01,
+Oracle Performance Management Implementation and User Guide,E59067-06,
+Oracle US Federal Human Resources Compensation and Benefits Management Guide,E59081-05,
+Oracle HRMS Compensation and Benefits Management Guide (Australia),E59091-09,
+Oracle HRMS Enterprise and Workforce Management Guide (Mexico),E59103-12,
+Oracle HRMS Compensation and Benefits Management Guide (New Zealand),E59108-06,
+Oracle Procurement Command Center Plus Process Guide,E79124-04,
+Oracle Project Contracts Implementation Guide,E48928-05,
+Oracle Process Manufacturing Regulatory Management User's Guide,E49056-01,
+Oracle Process Manufacturing Quality Management User's Guide,E49067-15,
+Oracle Quoting User Guide,E49071-07,
+Oracle Channel Rebate and Point-of-Sale Management Implementation Guide,E49075-08,
+Oracle Project Portfolio Analysis User Guide,E49082-03,
+Oracle Field Service Implementation Guide,E49088-15,
+Oracle Scripting Implementation Guide,E49093-01,
+Oracle Interaction Blending Implementation Guide,E49098-01,
+Oracle Knowledge Management User's Guide,E49103-01,
+Oracle Number Portability Concepts and Procedures,E49148-01,
+Oracle Incentive Compensation Analytics for Oracle Data Integrator User and Implementation Guide,E49152-02,
+Oracle Functional Testing Suite Advanced Pack for Oracle E-Business Suite Channel Revenue Management,E56949-05,
+Oracle Site Hub User's Guide,E48911-08,
+Oracle Functional Testing Suite Advanced Pack for Oracle E-Business Suite Process Manufacturing,E56961-06,
+Oracle HRMS Compensation and Benefits Management Guide (UK),E76108-08,
+"Oracle HRMS Workforce Sourcing, Deployment, and Talent Management Guide (UK)",E76112-06,
+Oracle Project Resource Management User Guide,E49083-03,
+Oracle Functional Testing Suite Advanced Pack for Oracle E-Business Suite - Interfaces,E89328-02,
+Oracle Manufacturing Implementing Oracle E-Records in Discrete Manufacturing Guide,E48951-01,
+Oracle iStore Implementation and Administration Guide,E49076-16,
+Oracle Demantra Integration Guide,E41575-05,
+Oracle Demand Signal Repository User's Guide,E48765-03,
+Oracle Configurator Constraint Definition Language Guide,E48811-01,
+Oracle Engineering User's Guide,E48939-09,
+Oracle Contract Lifecycle Management for Public Sector iSupplier Portal User Guide,E48934-05,
+Oracle Scripting User Guide,E49092-02,
+"Oracle HRMS Workforce Sourcing, Deployment, and Talent Management Guide (Mexico)",E59107-08,
+Oracle e-Commerce Gateway User's Guide,E20931-08,
+Oracle Diagnostics Framework User's Guide,E22959-07,
+Oracle Receivables User Guide,F10570-16,
+Oracle E-Business Suite Desktop Integration Framework Developer's Guide,E22005-17,
+Oracle Demantra Implementation Guide,E22232-12,
+Oracle Demantra System Requirements Guide,E22751-14,
+Oracle iSetup User's Guide,E22958-10,
+Oracle E-Business Tax Reporting Guide,E48752-05,
+Oracle Advanced Planning Command Center User's Guide,E48757-09,
+Oracle Financials for the Americas User Guide,E48764-09,
+Oracle Payments Implementation Guide,E48768-05,
+Oracle Subledger Accounting Implementation Guide,E48771-04,
+Oracle Lease and Finance Management Implementation Guide,E48777-22,
+Oracle Advanced Global Intercompany System User's Guide,E48781-06,
+Oracle Strategic Network Optimization Implementation Guide,E48785-01,
+Oracle Value Chain Planning Installation Guide,E48790-07,
+Oracle Production Scheduling Installation Guide,E48798-02,
+Oracle Demantra Demand Management User's Guide,E48802-06,
+Oracle Public Sector Financials (International) User Guide,E48808-04,
+Oracle Public Sector Financials (International) Implementation Guide,E48814-05,
+Oracle Receivables: Golden Tax Adaptor for Mainland China User's Guide,E48840-04,
+Oracle Order Management Using Oracle Workflow in Oracle Order Management,E48844-08,
+Oracle Financial Services Reporting Administration Guide,E48861-01,
+Oracle Receivables Implementation Guide,F10310-11,
+Oracle Alert User's Guide,E20930-09,
+Oracle Report Manager User's Guide,E22006-18,
+Oracle Web Applications Desktop Integrator Implementation and Administration Guide,E22007-19,
+Oracle Workflow Developer's Guide,E22011-24,
+Oracle Workflow User's Guide,E22012-17,
+Oracle Demantra User's Guide,E22231-12,
+Oracle Demantra Predictive Trade Planning User's Guide,E22233-13,
+Oracle Demantra Installation Guide,E22516-16,
+Oracle E-Business Suite Concepts,E22949-22,
+Oracle E-Business Suite User Interface Standards for Forms-Based Products,E22955-05,
+Oracle iSetup Developer's Guide,E22957-06,
+Oracle E-Business Suite CRM System Administrator's Guide,E22960-10,
+Oracle E-Business Suite Developer's Guide,E22961-21,
+Oracle E-Business Suite Flexfields Guide,E22963-12,
+Oracle Application Management Pack for Oracle E-Business Suite Guide,F32518-01,
+Oracle Demantra Analytical Engine Guide,E44444-05,
+Oracle General Ledger Reference Guide,E48749-01,
+Oracle E-Business Tax Implementation Guide,E48750-02,
+Oracle E-Business Tax User Guide,E48751-05,
+Oracle E-Business Tax: Vertex Q-Series and Taxware Sales/Use Tax System Implementation Guide,E48753-01,
+Oracle Financials and Oracle Procurement Functional Upgrade Guide: Release 11i to Release 12,E48754-02,
+Oracle Assets User Guide,E48755-15,
+Oracle Advanced Supply Chain Planning Implementation and User's Guide,E48756-15,
+Oracle Collaborative Planning Implementation and User's Guide,E48758-02,
+Oracle Financials for Asia/Pacific User Guide,E48762-03,
+Oracle Payables Reference Guide,E48763-03,
+Oracle Payments User's Guide,E48766-02,
+Oracle Financials for Europe User Guide,E48767-12,
+Oracle Financials Country-Specific Installation Supplement,E48769-01,
+Oracle Global Order Promising Implementation and User's Guide,E48770-05,
+Oracle Financials RXi Reports Administration Tool User Guide,E48772-01,
+Oracle iAssets User Guide,E48773-01,
+Oracle Inventory Optimization User's Guide,E48774-07,
+Oracle Lease and Finance Management User's Guide,E48775-22,
+Oracle Service Parts Planning Implementation and User's Guide,E48778-07,
+Oracle Financials for India User Guide,E48779-03,
+Oracle Financials for India Implementation Guide,E48780-02,
+Oracle Financials Implementation Guide,E48783-07,
+Oracle Bill Presentment Architecture User Guide,E48784-01,
+Oracle Strategic Network Optimization Installation Guide,E48786-01,
+Oracle Rapid Planning Implementation and User's Guide,E48787-07,
+Oracle Rapid Planning Installation Guide,E48788-06,
+Oracle Value Chain Planning Collections Implementation Guide,E48791-05,
+Oracle Capacity User's Guide,E48792-01,
+Oracle Public Sector Financials User Guide,E48793-01,
+Oracle U.S. Federal Financials User Guide,E48796-06,
+Oracle Production Scheduling Implementation Guide,E48797-04,
+Oracle Landed Cost Management Process Guide,E48799-12,
+Oracle Environmental Accounting and Reporting User's Guide,E48800-07,
+Oracle Demantra Deduction and Settlement Management User's Guide,E48801-03,
+Oracle Asset Tracking User's Guide,E48803-12,
+Oracle U.S. Federal Financials Implementation Guide,E48804-06,
+Oracle Demantra Real-Time Sales and Operations Planning User's Guide,E48807-03,
+Oracle Asset Tracking Implementation Guide,E48810-12,
+Oracle Configurator Developer User's Guide,E48812-01,
+Oracle Configurator Extensions and Interface Object Developer's Guide,E48813-01,
+Oracle Configurator Fusion Configurator Engine Guide,E48815-01,
+Oracle Configurator Implementation Guide,E48816-01,
+Oracle Configurator Installation Guide,E48817-01,
+Oracle Configurator Modeling Guide,E48818-01,
+Oracle Inventory Consigned Inventory from Supplier Process Guide,E48822-03,
+Oracle Inventory Copy Inventory Organization Implementation Guide,E48823-01,
+Oracle Mobile Supply Chain Applications Implementation Guide,E48825-07,
+Oracle Financial Accounting Hub Implementation Guide,E48831-04,
+Oracle E-Business Suite Multiple Organizations Implementation Guide,E48833-01,
+Oracle Financials Concepts Guide,E48836-03,
+Oracle Product Hub Implementation Guide,E48841-09,
+Oracle Release Management Implementation Guide,E48848-01,
+Oracle Release Management User's Guide,E48849-01,
+Oracle iReceivables Implementation Guide,E48858-17,
+Oracle Financial Services Implementation Guide,E48859-01,
+Oracle Financial Services Reference Guide,E48860-01,
+Oracle Treasury User Guide,E48862-03,
+Oracle Loans User Guide,E48863-05,
+Oracle Human Resources Management System Deploy Strategic Reporting (HRMSi) Guide,E48865-04,
+Oracle Manufacturing Execution System for Discrete Manufacturing User's Guide,E48906-16,
+Oracle Flow Manufacturing User's Guide,E48907-06,
+Oracle Project Costing User Guide,E48918-22,
+Oracle Common Application Calendar User Guide,E48920-03,
+Oracle Content Manager Implementation and Administration Guide,E48921-01,
+Oracle Customer Data Librarian Implementation Guide,E48923-04,
+Oracle Customer Data Librarian User Guide,E48926-06,
+Oracle Contracts Implementation and Administration Guide,E48929-09,
+Oracle Customer Interaction History Implementation Guide,E48930-01,
+Oracle Customers Online Implementation Guide,E48933-04,
+Oracle Price Protection Implementation Guide,E48942-02,
+Oracle Trading Community Architecture Technical Implementation Guide,E48943-07,
+Oracle Manufacturing Operations Center Implementation Guide,E48945-06,
+Oracle Procurement Contracts Implementation and Administration Guide,E48946-11,
+Oracle Manufacturing Operations Center User's Guide,E48947-09,
+Oracle Bills of Material User's Guide,E48954-12,
+Oracle Project Contracts User Guide,E48960-05,
+Oracle Quality User's Guide,E48961-17,
+Oracle Depot Repair Implementation Guide,E48963-19,
+Oracle Sourcing Implementation and Administration Guide,E48967-07,
+Oracle Universal Work Queue User Guide,E48979-02,
+Oracle Territory Manager Implementation Guide,E48989-04,
+Oracle Sales Contracts Implementation and Administration Guide,E48990-06,
+Oracle One-to-One Fulfillment Implementation Guide,E48993-01,
+Oracle Mobile Field Service User's Guide,E48996-10,
+Oracle Grants Accounting User Guide,E49015-06,
+Oracle Project Planning and Control User Guide,E49016-09,
+Oracle Projects Fundamentals,E49018-11,
+Oracle TeleSales Implementation Guide,E49023-01,
+Oracle Marketing Implementation Guide,E49024-05,
+Oracle Marketing User Guide,E49025-03,
+Oracle Partner Management Implementation and Administration Guide,E49027-01,
+"Oracle Complex Maintenance, Repair, and Overhaul User's Guide",E49039-12,
+Oracle Proposals Implementation Guide,E49046-01,
+Oracle E-Records Implementation Guide,E49052-02,
+Oracle Process Manufacturing: Mobile Supply Chain Applications for Oracle Process Manufacturing,E49055-04,
+Oracle Manufacturing Execution System for Process Manufacturing User's Guide,E49057-13,
+Oracle Process Manufacturing Product Development User's Guide,E49064-11,
+Oracle Process Manufacturing Process Planning User's Guide,E49065-06,
+Oracle Process Manufacturing System Administration User's Guide,E49069-04,
+Oracle Quoting Implementation Guide,E49070-09,
+Oracle Accounts Receivable Deductions Settlement Implementation Guide,E49072-09,
+Oracle iStore Quick Reference Guide,E49073-03,
+Oracle Accounts Receivable Deductions Settlement User Guide,E49074-11,
+Oracle Channel Revenue Management Implementation and Administration Guide,E49078-05,
+Oracle Supplier Ship and Debit Implementation Guide,E49080-03,
+Oracle Supplier Ship and Debit User Guide,E49081-03,
+Oracle Telecommunications Service Ordering Process Guide,E49084-01,
+Oracle Advanced Scheduler User Guide,E49087-05,
+Oracle Field Service User Guide,E49089-11,
+Oracle Partner Management Vendor User Guide,E49028-01,
+Oracle Leads Management Implementation and Administration Guide,E49030-01,
+Oracle Sales Offline Implementation Guide,E49031-01,
+Oracle Sales Implementation Guide,E49032-02,
+Oracle Sales for Handhelds Implementation Guide,E49034-03,
+Oracle Telephony Adapter SDK Developers Reference Guide,E49091-01,
+"Oracle Complex Maintenance, Repair, and Overhaul Process Guide",E49035-06,
+Oracle Installed Base User's Guide,E49036-14,
+Oracle Installed Base Implementation Guide,E49038-15,
+Oracle Scripting Developer's Guide,E49094-01,
+Oracle Advanced Inbound Telephony Implementation Guide,E49095-01,
+Oracle Advanced Outbound Telephony Implementation Guide,E49096-01,
+Oracle Interaction Center Server Manager Implementation Guide,E49100-01,
+Oracle iSupport Implementation and Administration Guide,E49101-06,
+Oracle Knowledge Management Implementation and Administration Guide,E49102-03,
+Oracle Email Center Implementation Guide,E49104-04,
+Oracle Email Center User's Guide,E49105-02,
+Oracle Spares Management User Guide,E49147-07,
+Oracle Service Fulfillment Manager Concepts and Procedures,E49149-01,
+Oracle Service Fulfillment Manager Implementation Guide,E49150-01,
+Oracle Telecommunications Billing Integrator Implementation Guide,E49151-02,
+Oracle Incentive Compensation Implementation Guide,E49153-13,
+Oracle Incentive Compensation User Guide,E49154-12,
+Oracle Demantra Security Guide,E49182-04,
+Oracle In-Memory Consumption Driven Planning User's Guide,E52281-02,
+Oracle In-Memory Performance-Driven Planning Systems Guide,E52287-01,
+Oracle Yard Management Process Guide,E53453-05,
+Oracle In-Memory Cost Management for Discrete Industries User's Guide,E53484-07,
+Oracle In-Memory Cost Management for Process Industries User's Guide,E53485-04,
+Oracle Functional Testing Suite Advanced Pack for Oracle E-Business Suite Asset Lifecycle Management,E56948-06,
+Oracle Functional Testing Suite Advanced Pack for Oracle E-Business Suite Discrete Manufacturing,E56955-05,
+Oracle Functional Testing Suite Advanced Pack for Oracle E-Business Suite Lease and Finance Management,E56958-06,
+Oracle Functional Testing Suite Advanced Pack for Oracle E-Business Suite Incentive Compensation,E56959-04,
+Oracle Functional Testing Suite Advanced Pack for Oracle E-Business Suite Project Management,E56960-05,
+Oracle Functional Testing Suite Advanced Pack for Oracle E-Business Suite Property Manager,E56963-05,
+Oracle Functional Testing Suite Advanced Pack for Oracle E-Business Suite Procurement,E56964-06,
+Oracle Functional Testing Suite Advanced Pack for Oracle E-Business Suite Service,E56965-05,
+Oracle HRMS FastFormula User Guide,E59058-08,
+Oracle HRMS Window Navigation and Reports Guide,E59061-09,
+Oracle iRecruitment Implementation and User Guide,E59063-06,

@@ -1,0 +1,51 @@
+/*
+** Oracle E-Business Suite Release 12.2 Documentation Style Sheet
+*/
+
+A.book             { font:normal 10pt/12pt Arial; }
+A.book:link        { color:#606060}
+A.book:active      { color:#606060}
+A.book:visited     { color:#999999}
+A.book:hover       { color:#000000}
+
+A.NavFam           { text-decoration:none; font:bold 10pt/12pt Arial;  }
+A.NavFam:link      { color:#336699 }
+A.NavFam:active    { color:#336699 }
+A.NavFam:visited   { color:#336699 }
+A.NavFam:hover     { color:#000000}
+
+A.NavProd           { text-decoration:none; font:normal 10pt/12pt Arial; }
+A.NavProd:link      { color:#336699 }
+A.NavProd:active    { color:#336699 }
+A.NavProd:visited   { color:#336699 }
+A.NavProd:hover     { color:#333333}
+
+A.Tab           { text-decoration:none; font:bold 10pt/normal Arial;  ; color: #666666}
+A.Tab:link      { color:#003366 }
+A.Tab:active    { color:#666666}
+A.Tab:visited   { color:#003366 }
+A.Tab:hover     { color:#666666}
+
+P                       { font:normal 10pt/12pt Arial; }
+P.BigFirst:first-letter { font-size: 200%; float: left; color:#336699 }
+
+
+TD             { font:normal 10pt/12pt Arial; }
+TD.sand        { background-color:#F2F2F5}
+TD.ActiveTab   { font:bold 10pt/17px Arial; background-color:#336699;
+                 color:#234A82; text-align:center; }
+TD.InactiveTab   { font:bold 10pt/17px Arial;
+                   text-align:center; ; color: #666666}
+TD.indented    { padding-left:5%; background-color:#F2F2F5; color:#000000;}
+TD.bluewhite   { background-color:#C3D4E8; color:#234A82}
+TD.beigeblue   { background-color:#f2f2f5; color:#336699 }
+TD.bluewhiteBig   { font:bold 12pt/14pt Arial; background-color:#C3D4E8; color:#666666}
+TD.beigeblueBold  { font-weight:bold; background-color:#C3D4E8; color:#336699 }
+TD.beigeblueindented   { background-color:#f2f2f5; color:#336699; padding-left:20% }
+TD.sandblueItalic  { font-style:italic; font-weight:normal; 
+                     background-color:#f2f2f5; color:#336699 }
+TD.sandblueItalicBold  { font-style:italic; font-weight:bold; 
+                     background-color:#f2f2f5; color:#336699 }
+
+.beigeback    { background-color:#f2f2f5}
+
