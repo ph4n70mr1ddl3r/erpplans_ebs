@@ -19,7 +19,7 @@
 
 This guide is the **operating system of the company** — the single, complete description of how
 the enterprise runs when it is AI-first. It synthesizes the reference corpus into portable
-doctrine: the process catalog (188 value streams, 569 process areas, 5,427 workflows), the
+doctrine: the process catalog (188 value streams, 569 process areas, 5,430 workflows), the
 control register (808 controls), the sourcing model, the IT product operating model, and the
 AI/ML governance discipline are the **evidence base**; this document is the **playbook** an
 adopting company runs.
@@ -193,7 +193,7 @@ The company is ERP-agnostic in architecture, not merely in procurement posture. 
 1. **Describe capabilities, not products.** Requirements, workflows, controls, and tests are
    written in capability language ("reserve inventory across origins within 2 seconds"), never
    in product language ("the ERP module does X"). The reference corpus demonstrates this at
-   scale: 728 requirements in 38 categories and 5,427 workflows whose System-Touchpoints fields
+   scale: 728 requirements in 38 categories and 5,430 workflows whose System-Touchpoints fields
    name capabilities and objects, not vendors.
 2. **One system of record per data domain** (§4.2). Everything else subscribes. There is no
    such thing as "the same data in two systems" — only a system of record and its subscribers.
@@ -342,7 +342,7 @@ registry ID. No workflow may assign A to an agent (Law 7).
 
 Agent autonomy is wired to the workflow criticality tiers — the same register that drives
 regression coverage and incident SLAs (reference counts: Tier 1 = 1,396 register rows, Tier 2 =
-3,296, Tier 3 = 758 of 5,450 rows over 5,427 unique workflows):
+3,299, Tier 3 = 758 of 5,453 rows over 5,430 unique workflows):
 
 | Workflow tier | Agent autonomy | Rule |
 |---|---|---|
@@ -501,7 +501,7 @@ Every artifact class has exactly one canonical source, one accountable owner, an
 
 | Artifact class | Canonical content | Owner (reference) | Reference instantiation |
 |---|---|---|---|
-| Process catalog | Value streams → process areas → workflows, each with the required fields (trigger, frequency, volume, owner, participants, steps with RACI and durations, system touchpoints, time estimate, pain points/risks, automation opportunity, controls, cross-references) | The owning business-product owner, paired with IT | `workflows/` — 188 VS / 569 PA / 5,427 W |
+| Process catalog | Value streams → process areas → workflows, each with the required fields (trigger, frequency, volume, owner, participants, steps with RACI and durations, system touchpoints, time estimate, pain points/risks, automation opportunity, controls, cross-references) | The owning business-product owner, paired with IT | `workflows/` — 188 VS / 569 PA / 5,430 W |
 | Workflow metadata registers | Criticality tiers, dependency map, system-touchpoint map, event custody & precedence | EA / owning teams | `workflows/workflow-*.md`, `event-custody-and-precedence-register.md` |
 | Requirements register | Capability requirements with priority and traceability | Business + EA | `erp-requirements.md` (728 / 38 categories) |
 | Control register | Control objectives, type, owner, mapped workflows | Finance/GRC with process owners | `internal-controls-matrix.md` (808) |
@@ -889,7 +889,7 @@ Fourteen of fifteen at any audit is the working bar; item 9 is non-waivable.
 | Document | Relationship |
 |---|---|
 | [`../01-model-company/model-company-profile.md`](../01-model-company/model-company-profile.md) | The reference company this doctrine is calibrated on (§1.4 parameters) |
-| [`../01-model-company/workflows/value-stream-index.md`](../01-model-company/workflows/value-stream-index.md) | The process catalog — the EKB's largest canon artifact (188 VS / 569 PA / 5,427 W) |
+| [`../01-model-company/workflows/value-stream-index.md`](../01-model-company/workflows/value-stream-index.md) | The process catalog — the EKB's largest canon artifact (188 VS / 569 PA / 5,430 W) |
 | [`../01-model-company/erp-requirements.md`](../01-model-company/erp-requirements.md) | The capability-language requirements register (728 across 38 categories) demonstrating §4.1 rule 1 |
 | [`../01-model-company/internal-controls-matrix.md`](../01-model-company/internal-controls-matrix.md) | The 808-control register behind Laws 7–8 |
 | [`capability-sourcing-and-engineering-model.md`](capability-sourcing-and-engineering-model.md) | The reference sourcing gate, register, SEP paved road, and agentic program (§5, §7 instantiated) |

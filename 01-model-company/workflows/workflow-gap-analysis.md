@@ -280,6 +280,30 @@ identify capability gaps not addressed by any existing value stream.
 > Canonical totals are now **188 value streams · 569 process areas · 5,426 workflows** (5,449 confirmed register
 > rows; Tier 1 1,394 → 1,396, Tier 2 3,293 → 3,295).
 >
+> **Post-Pass-30 workflow-level additions, batch 25 (2026-09-21) — ERP customization-governance gap fill.**
+> A fresh corpus-wide re-sweep of the §2 methodology against the surface no prior pass had read — the EBS blueprint layer issued
+> from 2026-09-14, whose documents define recurring post-go-live processes rather than one-time implementation activity — found one
+> genuine capability gap. `customization-governance.md` defines the customization decision record (CDR) and its eight-gate
+> admissibility test, a hard extension budget (10 extension builds / 150 page-level personalizations / 120 custom schema objects)
+> with a retire-one-to-add-one rule, the customization register audited quarterly against the databases by object-inventory diff (an
+> unregistered object in the custom schema is an incident, not a finding), and a de-customization programme with five named
+> retirement triggers; `integrations.md` §7 makes the CDR a ship gate for every new interface touching a custom object. Keyword
+> verification: 'CEMLI' (0 PA files), 'de-customization'/'decustomization' (0), 'extension budget' (0), 'customization governance'
+> (0), and 'customization' in 8 PA files with **zero** dedicated `## W` headers — every hit incidental (product/bundle
+> customization, the software-capitalization gray area in W-level capex prose, an over-customization risk bullet). The adjacent
+> owners were each read in full and each governs a different boundary: W5515 decides use-EBS versus build (the sourcing gate),
+> W3571 reviews initiative solution architectures and W3573 their deviations and waivers, W132/W1409 deliver and approve a change,
+> W495 checks custom-code compatibility inside a patch cycle, and W3578 manages application lifecycle and technical debt — nothing
+> owned the gate between *configure* and *extend* inside the suite, nor the register and retirement loops that keep the extension
+> estate from accreting. Three workflows added to PA-113.1: **W5575** Customization Decision Record (CDR) Intake, Admissibility Gate
+> & ARB Approval; **W5576** CEMLI Register Maintenance & Quarterly Object-Inventory Audit; **W5577** Extension De-Customization,
+> Retirement & Budget Reclamation — split by their differing cadences (event-driven at the ARB cycle, quarterly audit, and
+> trigger-driven retirement at the QBR). Workflow-ID allocation: W5575–W5577 (next available). All three ship **directly confirmed
+> Tier 2** (the W5515–W5517 architecture-governance sibling class; the ARB, change-management and patch rails they invoke are
+> already in place, so nothing is go-live blocking). Absorbed within sized teams (OM stays 122 FTE / 17 teams; TO stays HQ 532 /
+> 6,932). Canonical totals are now **188 value streams · 569 process areas · 5,430 workflows** (5,453 confirmed register rows;
+> Tier 1 1,396 unchanged, Tier 2 3,296 → 3,299).
+>
 > **Post-Pass-30 workflow-level additions, batch 24 (2026-09-10) — concessionaire connectivity request,
 > approval & independent-circuit governance gap fill.**
 > A concessionaire operating-model review (the batch-3 concession-catalog lineage) found the connectivity-exception

@@ -20,8 +20,8 @@
 
 | Measure | Value |
 |---|---|
-| Workflows mapped | 5427 (exactly one Owner each — asserted) |
-| Confirmed Tier register | 5450 rows (Tier 1: 1396 · Tier 2: 3296 · Tier 3: 758) |
+| Workflows mapped | 5430 (exactly one Owner each — asserted) |
+| Confirmed Tier register | 5453 rows (Tier 1: 1396 · Tier 2: 3299 · Tier 3: 758) |
 | Distinct resolved actors | 4199 — §5.3 register roles 152 · IT product-model seats 30 · store field 12 · DC field 18 · department-level actors 2991 · system actors 31 · governance 59 · workforce 105 · external 801 · uncharted 0 |
 
 > Tier mix = confirmed tiers of the workflows a role touches (a workflow
@@ -36,10 +36,10 @@
 | Chief Finance Officer (CFO) | Executive Office | 1 | 63 | 357 | 265 | 1832 | 1210 | 318 | 686 | 206 |
 | Chief Operating Officer (COO) | Executive Office | 1 | 59 | 161 | 129 | 1080 | 680 | 109 | 409 | 162 |
 | Chief Human Resources Officer (CHRO) | Executive Office | 1 | 35 | 87 | 92 | 675 | 368 | 78 | 236 | 54 |
-| Chief Information Officer (CIO) | Executive Office | 1 | 31 | 88 | 75 | 574 | 325 | 71 | 197 | 57 |
+| Chief Information Officer (CIO) | Executive Office | 1 | 31 | 88 | 75 | 582 | 328 | 71 | 200 | 57 |
 | Chief Marketing Officer (CMO) | Executive Office | 1 | 26 | 72 | 73 | 361 | 228 | 21 | 135 | 72 |
 | CEO / President | Executive Office | 1 | 10 | 113 | 62 | 651 | 457 | 87 | 265 | 105 |
-| VP Finance & Accounting / Corporate Controller | Finance & Accounting | 1 | 83 | 270 | 318 | 858 | 536 | 226 | 259 | 51 |
+| VP Finance & Accounting / Corporate Controller | Finance & Accounting | 1 | 83 | 272 | 318 | 858 | 538 | 226 | 261 | 51 |
 | Treasury Manager | Finance & Accounting | 1 | 66 | 57 | 205 | 205 | 133 | 38 | 79 | 16 |
 | Tax Manager | Finance & Accounting | 1 | 46 | 59 | 143 | 132 | 96 | 73 | 21 | 2 |
 | Tax Accountant | Finance & Accounting | 4 | 44 | 62 | 216 | 33 | 87 | 69 | 16 | 2 |
@@ -191,7 +191,7 @@
 | Role | Dept / source | Owns | Participant | Step-R | Step-A | Touched | T1 | T2 | T3 |
 |---|---|---|---|---|---|---|---|---|---|
 | DP BI Platform | Information Technology (product model) | 98 | 255 | 521 | 67 | 378 | 39 | 154 | 185 |
-| Head of Enterprise Architecture (CIO Office) | Information Technology (product model) | 44 | 76 | 123 | 43 | 84 | 6 | 68 | 10 |
+| Head of Enterprise Architecture (CIO Office) | Information Technology (product model) | 47 | 79 | 132 | 50 | 87 | 6 | 71 | 10 |
 | AAP AI-Governance Liaison | Information Technology (product model) | 28 | 25 | 72 | 56 | 27 | 13 | 10 | 4 |
 | SEC Security Engineer | Information Technology (product model) | 27 | 16 | 83 | 47 | 50 | 13 | 31 | 6 |
 | FS ITAM Administrator | Information Technology (product model) | 25 | 40 | 68 | 66 | 58 | 8 | 44 | 6 |
@@ -200,11 +200,11 @@
 | Build-Squad Software Engineer | Information Technology (product model) | 21 | 27 | 49 | 6 | 34 | 11 | 18 | 5 |
 | IT Operations (FS/INFRA) | Information Technology (product model) | 15 | 39 | 50 | 29 | 63 | 16 | 37 | 10 |
 | SEC OT Security Lead | Information Technology (product model) | 13 | 0 | 30 | 76 | 24 | 4 | 17 | 3 |
-| SEC (Cybersecurity, Privacy & OT Security) | Information Technology (product model) | 11 | 178 | 164 | 2 | 205 | 62 | 134 | 9 |
+| SEC (Cybersecurity, Privacy & OT Security) | Information Technology (product model) | 11 | 179 | 164 | 2 | 206 | 62 | 135 | 9 |
 | DP Data Scientist / ML | Information Technology (product model) | 11 | 17 | 49 | 7 | 22 | 5 | 4 | 13 |
 | IT Helpdesk Agent (FS) | Information Technology (product model) | 9 | 34 | 69 | 17 | 47 | 19 | 25 | 3 |
 | DP / Data & Analytics (VS-28) | Information Technology (product model) | 8 | 28 | 22 | 0 | 38 | 6 | 20 | 12 |
-| INFRA System Administrator | Information Technology (product model) | 6 | 9 | 27 | 6 | 14 | 8 | 4 | 2 |
+| INFRA System Administrator | Information Technology (product model) | 6 | 12 | 29 | 6 | 17 | 8 | 7 | 2 |
 | IT Product Owner | Information Technology (product model) | 6 | 0 | 1 | 0 | 7 | 0 | 7 | 0 |
 | SEC Security Analyst | Information Technology (product model) | 4 | 9 | 52 | 15 | 31 | 5 | 22 | 4 |
 | INFRA DBA / SaaS Administrator | Information Technology (product model) | 4 | 22 | 35 | 3 | 25 | 15 | 10 | 0 |
@@ -1067,15 +1067,15 @@
 | Store Operations It | Information Technology | 2 | 0 | 0 | 0 | 2 | 0 | 2 | 0 |
 | It Manager | Information Technology | 1 | 11 | 13 | 22 | 22 | 9 | 10 | 3 |
 | It Infrastructure Lead | Information Technology | 1 | 6 | 4 | 0 | 9 | 4 | 5 | 0 |
+| Application Manager | Information Technology | 1 | 7 | 2 | 0 | 8 | 1 | 6 | 1 |
 | Domain Owner | Information Technology | 1 | 0 | 13 | 1 | 8 | 0 | 8 | 0 |
 | Pos-It | Information Technology | 1 | 0 | 7 | 0 | 6 | 5 | 1 | 0 |
-| Application Manager | Information Technology | 1 | 4 | 0 | 0 | 5 | 1 | 3 | 1 |
 | Data Office | Information Technology | 1 | 5 | 3 | 0 | 5 | 0 | 5 | 0 |
 | It Analyst | Information Technology | 1 | 3 | 9 | 2 | 5 | 2 | 1 | 2 |
 | Pos Administrator | Information Technology | 1 | 4 | 5 | 5 | 5 | 5 | 0 | 0 |
 | Application Owners | Information Technology | 1 | 4 | 3 | 0 | 4 | 0 | 4 | 0 |
+| Solution Architect | Information Technology | 1 | 1 | 7 | 0 | 4 | 0 | 4 | 0 |
 | Domain Architects | Information Technology | 1 | 3 | 4 | 0 | 3 | 0 | 3 | 0 |
-| Solution Architect | Information Technology | 1 | 1 | 6 | 0 | 3 | 0 | 3 | 0 |
 | Knowledge Mgmt | Information Technology | 1 | 2 | 4 | 0 | 2 | 0 | 2 | 0 |
 | Automation Coe | Information Technology | 1 | 1 | 2 | 0 | 1 | 0 | 0 | 1 |
 | B2B Portal Administrator | Information Technology | 1 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
@@ -1103,7 +1103,7 @@
 | It Training Specialist | Information Technology | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 |
 | It – Applications | Information Technology | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 |
 | Lead Solution Architect | Information Technology | 1 | 1 | 3 | 0 | 1 | 0 | 1 | 0 |
-| Finops | Information Technology | 0 | 8 | 4 | 0 | 10 | 0 | 8 | 2 |
+| Finops | Information Technology | 0 | 9 | 4 | 0 | 11 | 0 | 9 | 2 |
 | It Infrastructure | Information Technology | 0 | 6 | 13 | 0 | 10 | 7 | 3 | 0 |
 | Data Engineering | Information Technology | 0 | 7 | 4 | 0 | 9 | 1 | 7 | 1 |
 | It Leadership | Information Technology | 0 | 8 | 2 | 0 | 9 | 0 | 7 | 2 |
@@ -1134,6 +1134,8 @@
 | It Database Administrator | Information Technology | 0 | 4 | 1 | 0 | 4 | 2 | 1 | 1 |
 | It Integration Specialist | Information Technology | 0 | 4 | 1 | 0 | 4 | 4 | 0 | 0 |
 | It Leads | Information Technology | 0 | 3 | 5 | 1 | 4 | 0 | 4 | 0 |
+| Owning Po & Bpo | Information Technology | 0 | 2 | 7 | 0 | 4 | 0 | 4 | 0 |
+| Owning Team It Po | Information Technology | 0 | 2 | 2 | 5 | 4 | 0 | 4 | 0 |
 | Portal System | Information Technology | 0 | 0 | 5 | 0 | 4 | 2 | 2 | 0 |
 | Service Desk | Information Technology | 0 | 3 | 4 | 0 | 4 | 1 | 3 | 0 |
 | Ux Designer | Information Technology | 0 | 4 | 4 | 0 | 4 | 0 | 1 | 3 |
@@ -1189,12 +1191,12 @@
 | Marketing Analytics | Information Technology | 0 | 1 | 1 | 0 | 2 | 0 | 0 | 2 |
 | Mdm Manager | Information Technology | 0 | 0 | 0 | 2 | 2 | 0 | 2 | 0 |
 | Network Team | Information Technology | 0 | 1 | 1 | 0 | 2 | 1 | 1 | 0 |
-| Owning Po & Bpo | Information Technology | 0 | 0 | 3 | 0 | 2 | 0 | 2 | 0 |
-| Owning Team It Po | Information Technology | 0 | 1 | 0 | 5 | 2 | 0 | 2 | 0 |
 | Recovery | Information Technology | 0 | 2 | 0 | 0 | 2 | 0 | 2 | 0 |
 | Resolver | Information Technology | 0 | 0 | 3 | 0 | 2 | 0 | 1 | 1 |
+| Sec Lead | Information Technology | 0 | 1 | 0 | 1 | 2 | 0 | 2 | 0 |
 | Source System Owner | Information Technology | 0 | 2 | 0 | 0 | 2 | 0 | 0 | 2 |
 | Support Center Agent | Information Technology | 0 | 0 | 3 | 0 | 2 | 1 | 1 | 0 |
+| Tbm Analyst | Information Technology | 0 | 2 | 0 | 0 | 2 | 0 | 2 | 0 |
 | Technical Specialist | Information Technology | 0 | 2 | 2 | 0 | 2 | 0 | 2 | 0 |
 | Affected Data Subjects | Information Technology | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
 | Ai | Information Technology | 0 | 1 | 2 | 0 | 1 | 0 | 1 | 0 |
@@ -1379,7 +1381,6 @@
 | Resilience | Information Technology | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Sam | Information Technology | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Sec Grc Cell | Information Technology | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
-| Sec Lead | Information Technology | 0 | 0 | 0 | 1 | 1 | 0 | 1 | 0 |
 | Sep | Information Technology | 0 | 0 | 1 | 0 | 1 | 0 | 1 | 0 |
 | Sep Build Sre | Information Technology | 0 | 0 | 1 | 0 | 1 | 0 | 1 | 0 |
 | Sep Devex Engineers | Information Technology | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
@@ -1394,7 +1395,6 @@
 | Stock Transfer Agent | Information Technology | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Store Network | Information Technology | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Surety Company Agent | Information Technology | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
-| Tbm Analyst | Information Technology | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Tester | Information Technology | 0 | 0 | 1 | 0 | 1 | 0 | 1 | 0 |
 | The Caretaker Network | Information Technology | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Tps Tech Leads & Squad Pms | Information Technology | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
@@ -2138,7 +2138,7 @@
 | The Business Compliance Partners | Legal & Compliance | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Trade Compliance Mgr | Legal & Compliance | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
 | Vendor Compliance | Legal & Compliance | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
-| Internal Audit | Internal Audit & Risk | 54 | 152 | 137 | 19 | 212 | 57 | 106 | 49 |
+| Internal Audit | Internal Audit & Risk | 54 | 154 | 137 | 19 | 214 | 57 | 108 | 49 |
 | Risk | Internal Audit & Risk | 36 | 120 | 129 | 1 | 148 | 25 | 103 | 20 |
 | Audit | Internal Audit & Risk | 13 | 122 | 136 | 0 | 148 | 45 | 84 | 19 |
 | Bc Manager | Internal Audit & Risk | 5 | 12 | 31 | 2 | 17 | 16 | 1 | 0 |
@@ -3299,7 +3299,7 @@
 |---|---|---|---|---|---|---|---|---|---|
 | Captive Board | Governance bodies | 7 | 4 | 11 | 19 | 15 | 2 | 13 | 0 |
 | Board | Governance bodies | 1 | 59 | 26 | 154 | 166 | 27 | 102 | 37 |
-| Arb | Governance bodies | 1 | 5 | 5 | 0 | 5 | 0 | 5 | 0 |
+| Arb | Governance bodies | 1 | 7 | 6 | 1 | 7 | 0 | 7 | 0 |
 | Architecture Review Board | Governance bodies | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Ethics Committee Chair | Governance bodies | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 |
 | Audit Committee | Governance bodies | 0 | 6 | 1 | 70 | 56 | 8 | 35 | 13 |
@@ -3313,6 +3313,7 @@
 | Executives | Governance bodies | 0 | 6 | 5 | 0 | 8 | 1 | 6 | 1 |
 | Board Risk Committee | Governance bodies | 0 | 3 | 0 | 4 | 6 | 0 | 5 | 1 |
 | Shareholders | Governance bodies | 0 | 5 | 1 | 1 | 6 | 0 | 6 | 0 |
+| SIB | Governance bodies | 0 | 6 | 4 | 0 | 6 | 0 | 6 | 0 |
 | Board Audit & Risk Committee | Governance bodies | 0 | 2 | 0 | 3 | 5 | 1 | 2 | 2 |
 | Change Advisory Board | Governance bodies | 0 | 4 | 0 | 2 | 5 | 1 | 4 | 0 |
 | Credit Committee | Governance bodies | 0 | 2 | 3 | 1 | 4 | 1 | 3 | 0 |
@@ -3320,7 +3321,6 @@
 | Site Leadership | Governance bodies | 0 | 0 | 4 | 0 | 4 | 1 | 2 | 1 |
 | Steering Committee | Governance bodies | 0 | 3 | 2 | 0 | 4 | 1 | 2 | 1 |
 | Dept. Heads | Governance bodies | 0 | 0 | 5 | 0 | 3 | 3 | 0 | 0 |
-| SIB | Governance bodies | 0 | 3 | 4 | 0 | 3 | 0 | 3 | 0 |
 | Cab | Governance bodies | 0 | 0 | 2 | 0 | 2 | 1 | 1 | 0 |
 | Chairman | Governance bodies | 0 | 0 | 0 | 3 | 2 | 0 | 0 | 2 |
 | Committee | Governance bodies | 0 | 0 | 4 | 0 | 2 | 1 | 1 | 0 |

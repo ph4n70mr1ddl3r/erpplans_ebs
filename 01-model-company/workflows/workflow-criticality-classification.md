@@ -1,7 +1,7 @@
 # Workflow Criticality Classification
 
-> Classifies all 5,427 unique operational workflows into criticality tiers (the confirmed
-> register holds 5,450 rows, of which 23 are `###` parent/summary sub-workflows double-counted
+> Classifies all 5,430 unique operational workflows into criticality tiers (the confirmed
+> register holds 5,453 rows, of which 23 are `###` parent/summary sub-workflows double-counted
 > against a `##` parent). Zero workflows remain unclassified: the 2026-06-28 Full-Coverage
 > Confirmation Pass promoted every then-existing keyword-proposed workflow (unclassified
 > 2,596 → 0), the fourteen post-catalog workflows W5497–W5510 (added 2026-08-24/26) were
@@ -299,9 +299,9 @@ Failure in any of these workflows would disrupt store operations or legal compli
 
 ---
 
-## Tier 2: Standard Support (3,296 Workflows)
+## Tier 2: Standard Support (3,299 Workflows)
 
-These 3,296 workflows are needed for standard operational support, cost controls, and category management.
+These 3,299 workflows are needed for standard operational support, cost controls, and category management.
 
 ### Merchandising & Pricing (15 workflows)
 
@@ -798,12 +798,12 @@ These 758 workflows deliver advanced capabilities for competitive differentiatio
 | Phase | Label | Workflow Count | % of Classified |
 |---|---|---|---|
 | Phase 1 | Go-Live Critical (Tier 1) | 1,396 | 25.6% |
-| Phase 2 | Operational Excellence (Tier 2) | 3,296 | 60.5% |
+| Phase 2 | Operational Excellence (Tier 2) | 3,299 | 60.5% |
 | Phase 3 | Innovation & Optimization (Tier 3) | 758 | 13.9% |
-| **Confirmed Total** | | **5,450** | 100% |
+| **Confirmed Total** | | **5,453** | 100% |
 
 > Counts include 23 `###` parent/summary sub-workflows (e.g. W5A/W9A/W54A) that receive their
-> own classification row; the remaining 5,427 are canonical `##` workflows.
+> own classification row; the remaining 5,430 are canonical `##` workflows.
 
 ### Proposed classification (keyword-driven, pending human review)
 
@@ -827,14 +827,14 @@ whenever new workflows ship unclassified.
 
 | Coverage | Workflows |
 |---|---|
-| Confirmed (hand-reviewed) | 5,450 rows (5,427 unique `##` workflows) |
+| Confirmed (hand-reviewed) | 5,453 rows (5,430 unique `##` workflows) |
 | Proposed (keyword, pending review) | 0 |
 | Without even a proposal | 0 |
-| **Grand Total** | **5,427** unique `##` workflows (5,427 confirmed + 0 unclassified) |
+| **Grand Total** | **5,430** unique `##` workflows (5,430 confirmed + 0 unclassified) |
 
 ### Domain Breakdown
 
-The per-tier subsection headings above (Core Finance, Extended Store Operations, Internal Audit, etc.) provide the authoritative domain-and-phase breakdown of the 5,450 classified register rows (5,427 unique workflows), and the [value-stream-index.md](./value-stream-index.md) provides the authoritative value-stream/process-area breakdown of all 5,427 workflows. A rolled-up "by domain" summary table was removed during consistency review because it could not be reconciled with the tier totals and presented stale partial counts.
+The per-tier subsection headings above (Core Finance, Extended Store Operations, Internal Audit, etc.) provide the authoritative domain-and-phase breakdown of the 5,453 classified register rows (5,430 unique workflows), and the [value-stream-index.md](./value-stream-index.md) provides the authoritative value-stream/process-area breakdown of all 5,430 workflows. A rolled-up "by domain" summary table was removed during consistency review because it could not be reconciled with the tier totals and presented stale partial counts.
 
 > **2026-09-05 addition (cyber-extortion, payment-diversion, land-occupation & water-continuity gap fill, batch 20):** Four workflow-level gap fills — W5558 (Ransomware & Destructive Cyber-Attack Enterprise Response Protocol; PA-27.3), W5559 (Vendor Payment-Diversion & Business Email Compromise (BEC) Fraud Event Response & Recovery Protocol; PA-18.2), W5560 (Informal-Settler Invasion & Illegal Occupation of Banked Land — Detection, Relocation & Ejection Protocol; PA-178.1), and W5561 (Sustained Water-Service Interruption Response & Store Continuity Protocol; PA-07.2) — were added after the batch-16/17/18/19 edge-case sweeps were re-run across scenario families not yet probed (destructive cyber attack with extortion, disbursement-diversion fraud, vacant-land occupation, utility-service failure beyond power): the ransomware/destructive-attack event ('ransomware'/'extortion demand'/'data-destruction' in zero dedicated headers — only PA-27.2's DR pain point naming the isolate-DR-before-failover trap, W1330's exercise inject, W5529's OT drill; nobody owned the extortion-decision law, the DR-isolation sequencing, chain-wide manual trading mode, the privileged forensics clock, or the insurance/disclosure chain), the payment-diversion/BEC event (BEC named only in PA-18.2 pain points with a one-bullet callback mitigation, and VS-125.2 watching only the customer-side diversion class — nobody owned the after-prevention-fails event: the same-day recall race, the honest-ledger treatment, the insider-vs-mailbox forensics, or the cooling-off retrofit), the informal-settler invasion event ('informal settler'/'squatter'/'illegal occupation'/'adverse possession' in zero PA files — nobody owned the prescription-interruption evidence discipline, the RA 7279 syndicate-vs-settler classification, the no-self-help eviction rule, or the caretaker-fraud variant on parcels held vacant for years), and the sustained water-interruption event ('water interruption'/'water rationing' only as product-selling context in PA-09.2 — nobody owned the sanitation decision law, the live-goods watering priority, emergency trucked-water sourcing, or the flush-and-confirm recovery gate). The same analysis produced the custody register's seventh wave (event-custody-and-precedence-register.md v1.7, events E-34–E-37). W5558 ships **directly confirmed Tier 1** (the enterprise-trading-halt & statutory-continuity class of the W5545/W5546 precedent — the data-privacy core rides the Tier-1 W53 chain, the OT variant rides W5529); W5559/W5560/W5561 ship **directly confirmed Tier 2** (the financial-crime contingency class of W5541/W2814, the landbanking asset-protection class of W5133/W5143, and the facility-continuity class of the W470 power analog).
 >
@@ -843,6 +843,23 @@ The per-tier subsection headings above (Core Finance, Extended Store Operations,
 > **2026-09-05 addition (terminal-tampering, procurement-impersonation, account-takeover & commute-disruption gap fill, batch 22):** Four workflow-level gap fills — W5566 (Payment-Terminal Tampering & Card-Skimmer Response (PIN-Pad Compromise Event); PA-08.2), W5567 (Procurement-Impersonation & Fake-PO Goods-Diversion Response; PA-03.2), W5568 (Official-Channel Account-Takeover Response (Brand-Account Hijack); PA-14.2), and W5569 (Mass-Commute Disruption & Transport-Strike Continuity Protocol; PA-141.2) — were added after the batch-16/17/18/19/20/21 edge-case sweeps were re-run across scenario families not yet probed (payment-device compromise at the lane, fraudsters impersonating BuildRight as the buyer, takeover of BuildRight's own verified accounts, and commute interruptions that strand crews while sites stay undamaged): the device-compromise event ('card skimmer'/'tampered terminal' in zero PA files — W537 owns terminal operations, W1205 the PCI program, VS-125.2 transaction-level fraud; nobody owned the freeze-in-place evidence rule, the fleet sweep, the acquirer notification clock, or the seal retrofit), the procurement-impersonation event ('fake PO'/'fraudulent purchase order' in zero PA files — the mirror image of W5559's diverted payments and W5563's fake sellers; nobody owned the void-order posture, the supplier wave, the receiving holds, or the order-code retrofit), the brand-account hijack event (W5563 covers pages that pretend to be BuildRight; nobody covered the real accounts turned against their followers — the credential kill-chain, the platform appeal, the unaffected-channel advisory, or the W53 clock on exposed follower data), and the mass-commute disruption event ('transport strike'/'commute disruption' in zero PA files — W4255 is vehicle-level and the closure canon is site-level; nobody owned the attendance-forecast call, the critical-role matrix, the W4253-gated surge, or the no-penalty coding). The same analysis produced the custody register's ninth wave (event-custody-and-precedence-register.md v1.9, events E-42–E-45). All four ship **directly confirmed Tier 2** (W5566 the payment-device security class of W1205/W5547, W5567 the procurement-fraud contingency class of W5559/W5563, W5568 the brand-integrity channel-contingency class of W5563/W5550, and W5569 the workforce-continuity class of W5561/W4255).
 >
 > **2026-09-05 addition (gas-leak, tsunami/storm-surge, media-exposé & server-room-environmental gap fill, batch 23):** Four workflow-level gap fills — W5570 (Gas-Leak Event Response (LPG/Natural-Gas Odor on Premises); PA-24.2), W5571 (Tsunami & Storm-Surge Coastal-Intrusion Response Protocol (PHIVOLCS Advisory / PAGASA Storm-Surge Warning); PA-26.1), W5572 (Undercover-Investigation & Media-Exposé Response Protocol (Investigative-Newsroom Event); PA-14.3), and W5573 (Server-Room & Data-Center Environmental Event Response (Cooling Failure, Water Intrusion, Fire-Suppression Discharge); PA-27.2) — were added after the batch-16/17/18/19/20/21/22 edge-case sweeps were re-run across scenario families not yet probed (pre-ignition gas events at sites with LPG exchange cages, coastal water intrusion by tsunami or storm surge, genuine-fault investigative journalism, and physical-room failures inside the IT estate): the gas-leak event ('gas leak'/'gas odor'/'smell of gas' in zero PA files — W5069 owns cylinder leak inspection/quarantine as intake QC and W5537 the fire event after ignition; nobody owned the pre-ignition odor event: the odor-is-real law, the ignition-source ban, the heavier-than-air evacuation, the trained-only isolation boundary, or the detector-clear reopen gate), the coastal-intrusion event ('tsunami' in zero PA files, 'storm surge' only as PA-09.2 product-advisory context — W1450's quake canon ends at structural assessment and W1387 owns rainfall/riverine flooding; nobody owned the quake-is-the-warning law, vertical move-up, the no-return rule until PHIVOLCS cancellation, the surge-forecast closure ladder, or the salt-intrusion desalination gate), the media-exposé event ('undercover'/'hidden camera'/'investigative report'/'right of reply' in zero PA files — W1562 owns recall/safety media response and W3271/W3272 the fake-content class; nobody owned genuine-fault journalism: the authentication-before-response law, the no-obstruction rule, the right-of-reply discipline, the self-report calculus, or the remediation track), and the server-room environmental event ('server room'/'cooling failure'/'fire-suppression discharge' in zero PA files — W55 owns failover execution once declared and W380 alert triage; nobody owned the thermal-runaway clock, the power-before-water rule, the suppression re-arm discipline, the RTO-bounded failover boundary, or the staged repower). The same analysis produced the custody register's tenth wave (event-custody-and-precedence-register.md v1.10, events E-46–E-49). W5570/W5571 ship **directly confirmed Tier 1** (the pre-ignition life-safety class of the W5537/W5538 precedent and the coastal-water evacuation-and-clearance class of the W1449/W5562 precedent — each gates a physical-state transition on documented external assessment); W5572/W5573 ship **directly confirmed Tier 2** (the brand-integrity comms-contingency class of W5563/W5568 and the IT-facility-contingency class of W5547/W5564).
+>
+> **2026-09-21 addition (batch 25) — ERP customization governance (the CDR/customization-register loop).**
+> The EBS blueprint layer issued from 2026-09-14 defines a set of recurring post-go-live processes that no gap pass had yet read:
+> the customization decision record and its eight-gate admissibility test, the hard extension budget with its retire-one-to-add-one
+> rule, the customization register and its quarterly object-inventory audit against the databases, and the de-customization
+> programme with its five retirement triggers. Keyword verification: 'CEMLI', 'de-customization', 'extension budget' and
+> 'customization governance' appear in zero PA files, and 'customization' in eight with no dedicated `## W` header (all incidental —
+> product/bundle customization, the software-capitalization gray area, an over-customization risk bullet). The adjacent owners each
+> govern a different boundary: W5515 decides use-EBS versus build, W3571 reviews initiative architectures and W3573 their
+> deviations, W132/W1409 deliver a change, and W495 checks custom-code compatibility during a patch cycle — nothing owned the gate
+> between configure and extend inside the suite. **W5575** Customization Decision Record (CDR) Intake, Admissibility Gate & ARB
+> Approval, **W5576** CEMLI Register Maintenance & Quarterly Object-Inventory Audit and **W5577** Extension De-Customization,
+> Retirement & Budget Reclamation (all VS-113.1) fill the surface and ship **directly confirmed Tier 2** (the architecture-governance
+> class of the W5515–W5517 siblings; the ARB, change-management and patch rails they invoke are already in place, so nothing here is
+> go-live blocking). All absorbed within sized teams (OM stays 122 FTE / 17 teams; TO stays HQ 532 / 6,932). Canonical totals are now
+> **188 value streams · 569 process areas · 5,430 workflows** (5,453 confirmed register rows; Tier 1 1,396 unchanged, Tier 2
+> 3,296 → 3,299).
 >
 > **2026-09-10 addition (batch 24) — concessionaire connectivity request, approval & independent-circuit governance.**
 > A concessionaire operating-model review (the batch-3 concession-catalog lineage) found the connectivity question unowned: W177
@@ -1438,7 +1455,7 @@ The batch-23 gap fill added two workflows confirmed directly **Tier 1** — the 
 | W5570 | Gas-Leak Event Response (LPG/Natural-Gas Odor on Premises) | Health, Safety & Environment |
 | W5571 | Tsunami & Storm-Surge Coastal-Intrusion Response Protocol (PHIVOLCS Advisory / PAGASA Storm-Surge Warning) | Business Continuity & Insurance |
 
-### Tier 2 Additions (541 Workflows)
+### Tier 2 Additions (544 Workflows)
 
 #### Plan & Source
 
@@ -2136,6 +2153,14 @@ The batch-24 gap fill added one workflow confirmed directly **Tier 2** — the c
 | ID | Workflow | Value Stream |
 |---|---|---|
 | W5574 | Concessionaire Connectivity Request, Approval & Independent-Circuit Governance | Store Operations |
+
+The batch-25 gap fill added three workflows confirmed directly **Tier 2** — the in-suite customization-governance class of the W5515–W5517 siblings: W5575 the customization decision record's intake and admissibility gate, W5576 the customization register's quarterly object-inventory audit, and W5577 the de-customization and extension-retirement programme; the ARB, change-management and patch rails they invoke are already in place, so nothing here is go-live blocking.
+
+| ID | Workflow | Value Stream |
+|---|---|---|
+| W5575 | Customization Decision Record (CDR) Intake, Admissibility Gate & ARB Approval | Enterprise Architecture, Application Portfolio & Technology Strategy |
+| W5576 | CEMLI Register Maintenance & Quarterly Object-Inventory Audit | Enterprise Architecture, Application Portfolio & Technology Strategy |
+| W5577 | Extension De-Customization, Retirement & Budget Reclamation | Enterprise Architecture, Application Portfolio & Technology Strategy |
 
 ### Tier 3 Additions (132 Workflows)
 
@@ -6932,6 +6957,8 @@ The 336 workflows added across gap-analysis Passes 26–29 (VS-178–VS-191; W51
 
 
 *Date: 2026-09-03 | Workflow Criticality Classification v7.47 — people-capability & reporting-policy gap fill (batch 9): the dedicated People/organization-domain gap analysis (workflow-gap-analysis-people.md) re-ran the §2 gap methodology across the People family and adjacent corporate/finance-policy streams and found four workflow-level surfaces unowned — the LMS platform & learning-records layer, the learning-content/course-catalog production lifecycle, the leadership-development program, and the accounting-policy/technical-accounting (PFRS) layer ('LMS' 58 PA files / 101 hits / zero dedicated `## W` headers with even an LMS Administrator role named in W1484's staffing; 'instructional design'/'course catalog'/a true 'accounting-policy owner' all absent — PFRS appears in 93 PA files but every dedicated owner is transaction-specific: VS-157 PFRS 15, VS-148 PFRS 16, W407 PAS 12, W1875 lease policy; adjacent slices program-generic: W51 training programs, W178 succession planning, W645 workforce planning, W3351 HRIS, W9 financial close). Four workflows added — W5525 Learning Platform (LMS) Administration, Integration & Learning-Records Operations, W5526 Learning-Content Development, Course-Catalog & Certification-Program Lifecycle, W5527 Leadership Development & Management-Capability Program (HiPo Development) (all PA-19.4), and W5528 Accounting Policy, Technical Accounting (PFRS) Position & New-Standard Adoption Governance (PA-17.4) — and confirmed directly **Tier 2 (4)** (the platform-operations/governance-layer/program-support class of their siblings W3351/W51/W9); statutory dimensions (OSH training-record evidence, mandatory pass/fail regulatory courses) ride verification steps inside the workflows, matching the W5513/W5515/W5518 precedent. All four absorbed within sized teams (OM stays 122 FTE / 17 teams; TO stays HQ 511 / 6,911). Register 5,400 → 5,404 rows (5,377 → 5,381 unique; T2 3,261 → 3,265); proposed register stays empty (0 unclassified). Downstream figures re-pointed (workflows/README Quick Stats + Finance/People families + reconciliation line, value-stream-index header/VS-17+VS-19 rows/grand total/footer/detailed sections, VS-19 README 75 → 78, VS-17 README 67 → 68, root-README tree/Key-Metrics/coverage rows, WORKFLOW-FORMAT-GUIDE anchors, requirement-matrix inventory line, dependency-map intro, touchpoint-map reconciliation footer, gap-analysis batch-9 note + companion doc, executive-summary footer, OM v2.6 FIN 798 → 799 / PEO 437 → 440 and 4,868+509 → 4,872+509=5,381, sourcing-model v1.6 §12.1 ladder 3,261 → 3,265, semantic-audit-coverage registry annotated). `validate-repo.sh`: 0 errors / 0 warnings.*
+
+*Date: 2026-09-21 | Workflow Criticality Classification v7.61 — ERP customization-governance gap fill (batch 25): the EBS blueprint layer issued from 2026-09-14 defines recurring post-go-live processes no gap pass had read — the customization decision record and its eight-gate admissibility test, the hard extension budget with its retire-one-to-add-one rule, the customization register and its quarterly object-inventory audit against the databases, and the de-customization programme with its five retirement triggers ('CEMLI'/'de-customization'/'extension budget'/'customization governance' in zero PA files; 'customization' in eight with no dedicated `## W` header, all incidental). Three workflows added to PA-113.1 and confirmed directly **Tier 2** (the W5515–W5517 architecture-governance sibling class): **W5575** Customization Decision Record (CDR) Intake, Admissibility Gate & ARB Approval; **W5576** CEMLI Register Maintenance & Quarterly Object-Inventory Audit; **W5577** Extension De-Customization, Retirement & Budget Reclamation. Register 5,450 → 5,453 rows (5,427 → 5,430 unique; T2 3,296 → 3,299); proposed register stays empty (0 unclassified); the `### Tier 2 Additions` sub-heading trued 541 → 544. All absorbed within sized teams (OM stays 122 FTE / 17 teams; TO stays HQ 532 / 6,932). `validate-repo.sh`: 0 errors / 0 warnings.*
 
 *Date: 2026-09-15 | Workflow Criticality Classification v7.60 — thirtieth-wave consistency review (title-only register change, v7.34 precedent): all 49 drifted W-title cells trued to the exact PA `##`/`###` W-header canon (the generator-read primary source and the bpmn process names) — four token defects the semantic batches had repaired in the PA files but never re-pointed into the register (W2904 'DTI/NCSD' → the web-verified NCSC form per review #60; W3673 'I-SEAL' → the PCIMS portal named by PA-117.2's own steps and PA-117.1's instrument map; W4955 'PAS 39' → PAS 37, the contingent-liability standard its own title names; W2791 'Intercharge' → 'Interchange' per the card-scheme fee canon), plus the stranded abbreviation/prefix/spacing drifts (initial-commit short forms such as W26/W30/W2C/W271 and the 'Ecommerce —'/'E-commerce' prefix and W99 spacing families). No tier assignments, register-row counts, or totals changed; W423/W425's treasury-companion annotated titles stand per v7.31 and are now pinned by literal in the new Check-18 title mirror. `validate-repo.sh`: 0 errors / 0 warnings across 77 checks.*
 

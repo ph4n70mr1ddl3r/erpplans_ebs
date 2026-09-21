@@ -70,7 +70,7 @@ Roll-up by the workflow catalog's 8 value-stream families
 | **People** (445 WF) | Core EBS + in-house payroll/workforce builds | Core HR data of record in EBS (PER); the payroll engine, its statutory outputs and the store workforce platform are in-house builds posting into EBS (E3–E8) |
 | **Asset & Infrastructure** (323 WF) | Core EBS | eAM carries facility/equipment work orders and PM (F5); Property Manager, FA and Projects carry leases, right-of-use schedules (the A12 EXT), capex/CIP, store construction and facilities |
 | **Governance & Assurance** (976 WF) | Process + EBS evidence | Registers, filings and assurance workflows are process-owned; EBS supplies the evidence layer (FND audit, ERES, AME logs), the audit-management surface (Internal Controls Manager — H11) and the financial termini (shrinkage write-offs, claims, quarantine) |
-| **Technology & Data** (390 WF) | Process + platform | EBS is itself the governed platform (W384/W396); DP/IAP in-house per register |
+| **Technology & Data** (393 WF) | Process + platform | EBS is itself the governed platform (W384/W396); DP/IAP in-house per register |
 
 ---
 

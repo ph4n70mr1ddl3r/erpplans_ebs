@@ -25,7 +25,7 @@ Per-pass history: [workflow-gap-analysis.md](workflow-gap-analysis.md) §4.
 ## Value Stream Architecture
 
 ```
-8 Families · 188 Value Streams · 569 Process Areas · 5,427 Workflows
+8 Families · 188 Value Streams · 569 Process Areas · 5,430 Workflows
 ```
 
 > **Coverage note:** VS-49–VS-52 were retired after a 2026-06-14 review found their 96 workflow files contained only auto-generated placeholder content; the numbers remain unused. The resulting capability gaps — plus additional uncovered capabilities — were subsequently filled across thirty gap-analysis passes (2026-06-14 → 2026-06-21), growing the active inventory from 84 to 188 value streams (VS-89–VS-192; W2993–W5488). The canonical per-pass history — candidates considered and rejected-as-covered, workflow-ID allocation, and the family-subtotal impact — lives in [workflow-gap-analysis.md](workflow-gap-analysis.md) §3–§4 and [CHANGELOG.md](../../CHANGELOG.md).
@@ -219,7 +219,7 @@ Per-pass history: [workflow-gap-analysis.md](workflow-gap-analysis.md) §4.
 |  | [VS-29](VS-29-master-data/README.md) | Master Data Management | Core | 3 | 43 |
 |  | [VS-30](VS-30-innovation-digital/README.md) | Innovation & Digital Transformation | Core | 3 | 29 |
 |  | [VS-99](VS-99-it-asset-technology-lifecycle-management/README.md) | IT Asset & Technology Lifecycle Management | Gap analysis | 3 | 24 |
-|  | [VS-113](VS-113-enterprise-architecture-application-portfolio-and-technology-strategy/README.md) | Enterprise Architecture, Application Portfolio & Technology Strategy | Gap analysis | 3 | 28 |
+|  | [VS-113](VS-113-enterprise-architecture-application-portfolio-and-technology-strategy/README.md) | Enterprise Architecture, Application Portfolio & Technology Strategy | Gap analysis | 3 | 31 |
 |  | [VS-115](VS-115-calibration-metrology-and-measurement-traceability-management/README.md) | Calibration, Metrology & Measurement Traceability Management | Gap analysis | 3 | 24 |
 |  | [VS-126](VS-126-customer-data-platform-single-customer-view-identity-resolution/README.md) | Customer Data Platform, Single Customer View & Identity Resolution | Gap analysis | 3 | 24 |
 |  | [VS-128](VS-128-ai-ml-governance-responsible-ai/README.md) | AI/ML Governance & Responsible AI | Gap analysis | 3 | 27 |
@@ -227,8 +227,8 @@ Per-pass history: [workflow-gap-analysis.md](workflow-gap-analysis.md) §4.
 |  | [VS-137](VS-137-product-information-management-and-digital-asset-management/README.md) | Product Information Management (PIM) & Digital Asset Management (DAM) | Gap analysis | 3 | 24 |
 |  | [VS-151](VS-151-auto-id-barcode-rfid-labeling-and-eas-operations/README.md) | Auto-ID, Barcode, RFID, Price-Tag Labeling & EAS Operations | Gap analysis | 3 | 24 |
 |  | [VS-190](VS-190-operational-technology-ot-ics-cybersecurity-and-retail-technology-asset-protection/README.md) | Operational Technology (OT) / ICS Cybersecurity & Retail Technology Asset Protection | Gap analysis | 3 | 24 |
-| | | | **Subtotal** | **39** | **390** |
-| | | | **Grand Total** | **569** | **5,427** |
+| | | | **Subtotal** | **39** | **393** |
+| | | | **Grand Total** | **569** | **5,430** |
 
 ---
 
@@ -1339,9 +1339,9 @@ Per-pass history: [workflow-gap-analysis.md](workflow-gap-analysis.md) §4.
 - **PA-99.2** [Software Asset Management & License Compliance](./VS-99-it-asset-technology-lifecycle-management/PA-99.2-software-asset-management-license-compliance.md) — 8 workflows
 - **PA-99.3** [Technology Asset Security, Cost & Governance Analytics](./VS-99-it-asset-technology-lifecycle-management/PA-99.3-technology-asset-security-cost-governance-analytics.md) — 8 workflows
 
-**[VS-113: Enterprise Architecture, Application Portfolio & Technology Strategy](./VS-113-enterprise-architecture-application-portfolio-and-technology-strategy/README.md)** (28 workflows)
+**[VS-113: Enterprise Architecture, Application Portfolio & Technology Strategy](./VS-113-enterprise-architecture-application-portfolio-and-technology-strategy/README.md)** (31 workflows)
 
-- **PA-113.1** [Enterprise Architecture Framework, Standards & Governance](./VS-113-enterprise-architecture-application-portfolio-and-technology-strategy/PA-113.1-enterprise-architecture-framework-standards-and-governance.md) — 9 workflows
+- **PA-113.1** [Enterprise Architecture Framework, Standards & Governance](./VS-113-enterprise-architecture-application-portfolio-and-technology-strategy/PA-113.1-enterprise-architecture-framework-standards-and-governance.md) — 12 workflows
 - **PA-113.2** [Application Portfolio, Integration & Solution Architecture](./VS-113-enterprise-architecture-application-portfolio-and-technology-strategy/PA-113.2-application-portfolio-integration-and-solution-architecture.md) — 10 workflows
 - **PA-113.3** [Technology Strategy, Innovation Governance & Architecture Analytics](./VS-113-enterprise-architecture-application-portfolio-and-technology-strategy/PA-113.3-technology-strategy-innovation-governance-and-architecture-analytics.md) — 9 workflows
 
@@ -1415,4 +1415,4 @@ Does it involve control/governance/risk?     → Governance & Assurance (VS-21 t
 Is it about technology/data/platforms?   → Technology & Data (VS-27 to VS-30, VS-99, VS-113, VS-115, VS-126, VS-128, VS-135, VS-137, VS-190)
 ```
 
-*Total: 5,427 workflows across 188 value streams · Date: 2026-09-10*
+*Total: 5,430 workflows across 188 value streams · Date: 2026-09-21*

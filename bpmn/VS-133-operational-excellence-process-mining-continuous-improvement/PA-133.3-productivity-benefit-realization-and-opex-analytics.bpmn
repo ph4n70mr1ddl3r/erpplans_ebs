@@ -78,7 +78,7 @@ Owner: OpEx Finance Partner / COO</bpmn:text>
     <bpmn:process id="W_W4066" name="W4066. Process Performance Monitoring &amp; Control Tower Dashboard" isExecutable="false">
       <bpmn:documentation>Trigger: Program stand-up; continuous
 Frequency: Continuous (real-time/daily) + weekly review
-Volume: Enterprise process performance (~5,427 workflows across 188 value streams)
+Volume: Enterprise process performance (~5,430 workflows across 188 value streams)
 Owner: OpEx Data Lead / BI (links to VS-28)
 Participants: BI (VS-28), process owners, Ops leadership
 Source: workflow W4066 — Process Performance Monitoring &amp; Control Tower Dashboard</bpmn:documentation>

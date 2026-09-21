@@ -5485,3 +5485,11 @@ W5517
 # 5,370/5,370. It is NOT yet in the audited registry; admission follows the documented
 # W5511 transition path (full read + D1–D4 detector sweep). The "5,370 of 5,370 (100%)"
 # total above is the closed-loop historical record at closure time.
+
+# Post-closure additions (transition-path pending): W5575–W5577 (ERP
+# customization-governance gap fill — CDR intake & admissibility gate, CEMLI register
+# quarterly object-inventory audit, extension de-customization & retirement, VS-113.1 ×3,
+# 2026-09-21 — workflow-gap-analysis.md batch 25) shipped after the loop closed at
+# 5,370/5,370. They are NOT yet in the audited registry; admission follows the documented
+# W5511 transition path (full read + D1–D4 detector sweep). The "5,370 of 5,370 (100%)"
+# total above is the closed-loop historical record at closure time.

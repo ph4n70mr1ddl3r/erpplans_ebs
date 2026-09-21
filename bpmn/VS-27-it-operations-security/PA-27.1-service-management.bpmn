@@ -2676,7 +2676,7 @@ Duration: 3–5 days/release</bpmn:documentation>
         <bpmn:outgoing>W495_Flow21</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:serviceTask id="W495_Task9" name="Customization &amp; Integration Compatibility Check">
-        <bpmn:documentation>Step 3: Customization &amp; Integration Compatibility Check: Application Support Team verifies: (a) all custom ABAP/SQL code, enhancements, and user exits are compatible with the new release; (b) all integration interfaces (POS, ecommerce, bank, BIR eFPS, EIS, SSS/PhilHealth/Pag-IBIG) are compatible; (c) all third-party add-ons and bolt-on solutions are certified for the new release version; (d) all modified reports, forms, and BIR-registered invoice layouts render correctly; (e) if incompatibilities found: work with vendor or internal development (W132) to remediate before production deployment
+        <bpmn:documentation>Step 3: Customization &amp; Integration Compatibility Check: Application Support Team verifies: (a) all custom PL/SQL code, extensions, personalizations, and interfaces are compatible with the new release; (b) all integration interfaces (POS, ecommerce, bank, BIR eFPS, EIS, SSS/PhilHealth/Pag-IBIG) are compatible; (c) all third-party add-ons and bolt-on solutions are certified for the new release version; (d) all modified reports, forms, and BIR-registered invoice layouts render correctly; (e) if incompatibilities found: work with vendor or internal development (W132) to remediate before production deployment
 Responsible (R): Application Support Team
 Accountable (A): ERP System Admin
 Duration: 2–3 days/release</bpmn:documentation>

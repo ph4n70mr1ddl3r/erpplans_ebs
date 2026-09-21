@@ -633,14 +633,17 @@ ANCHORS = {
         # 2026-09-07 tenth-wave review: re-pinned again after the VS-151 adjudication
         # (SSP 906 / DP 189) re-based the subtotals to their member sums 4,934 + 492.
         # 2026-09-10 batch-24 re-pin: W5574 (PA-07.1, VS-07 -> SSP) trues SSP 906 -> 907;
-        # the subtotals re-foot to 4,935 + 492 and the total to 5,427.
-        "**4,935 + 492 = 5,427**",
+        # the subtotals re-foot to 4,935 + 492 and the total to 5,427; the
+        # 2026-09-21 batch-25 re-pin: W5575-W5577 (PA-113.1, VS-113 -> CIO Office)
+        # true CIO 81 -> 84, so the subtotals re-foot to 4,935 + 495 and the total
+        # to 5,430.
+        "**4,935 + 495 = 5,430**",
         # §3.2 portfolio-table subtotal/total rows (structurally re-derived from the
         # §4 mapping + disk by om_reconciliation_hits — these pin the corrected forms'
         # presence)
         "**171** | **4,935**",
-        "**17** | **492**",
-        "**188** | **5,427**",
+        "**17** | **495**",
+        "**188** | **5,430**",
         # v2.0 hybrid sizing anchor (66 domain + platform/CIO = 115 FTE); v2.1 agentic
         # re-bases it to 122 (66 + 56, AAP +7)
         "**66 + 56 = 122**",

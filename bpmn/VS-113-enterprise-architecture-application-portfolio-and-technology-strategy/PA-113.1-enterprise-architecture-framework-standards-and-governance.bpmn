@@ -693,4 +693,322 @@ Owner: Head of Engineering (SEP)</bpmn:text>
         <bpmndi:BPMNEdge id="W5517_Assoc15_di" bpmnElement="W5517_Assoc15"><di:waypoint x="340" y="970" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
       </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
+    <bpmn:process id="W_W5575" name="W5575. Customization Decision Record (CDR) Intake, Admissibility Gate &amp; ARB Approval" isExecutable="false">
+      <bpmn:documentation>Trigger: A configuration-exhausted gap proposes an in-suite extension (EXT/PER/LOC/INT class); a new interface requiring a custom schema object; a fit-gap register row re-dispositioned away from the standard tier
+Frequency: Per proposal (event-driven) at the ARB cycle; quarterly register report to the SIB
+Volume: ~15–25 CDRs/year across the EXT/PER/LOC/INT classes against a standing extension budget of 10 EXT builds, 150 page-level personalizations and 120 custom schema objects
+Owner: Head of Enterprise Architecture (CDR gate lead)
+Participants: Head of Enterprise Architecture, ARB (approves the CDR — links to W3571), Owning PO &amp; BPO, Application Manager (links to W132), ERP System Administrator (upgrade-safety opinion — links to W495), SEC lead (controls/PII pre-read), Finance Controller (accounting-adjacent extensions), SIB (quarterly register review), FinOps/TBM analyst (links to VS-135/W4100)
+Source: workflow W5575 — Customization Decision Record (CDR) Intake, Admissibility Gate &amp; ARB Approval</bpmn:documentation>
+      <bpmn:laneSet id="W5575_LaneSet4">
+        <bpmn:lane id="W5575_Lane1" name="Owning PO &amp; BPO">
+        <bpmn:flowNodeRef>W5575_Task6</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W5575_Task9</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W5575_Start5</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W5575_Lane2" name="Head of EA">
+        <bpmn:flowNodeRef>W5575_Task7</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W5575_Task8</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W5575_Task11</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W5575_Lane3" name="ARB">
+        <bpmn:flowNodeRef>W5575_Task10</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W5575_End12</bpmn:flowNodeRef>
+        </bpmn:lane>
+      </bpmn:laneSet>
+      <bpmn:startEvent id="W5575_Start5" name="A configuration-exhausted gap proposes an in-suite extension (EXT/PER/LOC/INT class); a…">
+        <bpmn:outgoing>W5575_Flow15</bpmn:outgoing>
+      </bpmn:startEvent>
+      <bpmn:userTask id="W5575_Task6" name="Owning PO &amp; BPO raise the customization proposal once the in-suite ladder is…">
+        <bpmn:documentation>Step 1: Owning PO &amp; BPO raise the customization proposal once the in-suite ladder is exhausted: the gap statement, the affected workflows and control ids, and the documented standard/configuration/personalization attempts with the reason each was inadequate — a proposal without the exhausted-ladder evidence is returned, not assessed
+Responsible (R): Owning PO &amp; BPO
+Accountable (A): Head of EA
+Duration: 4–6 hours/proposal</bpmn:documentation>
+        <bpmn:incoming>W5575_Flow15</bpmn:incoming>
+        <bpmn:outgoing>W5575_Flow16</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W5575_Task7" name="Head of EA run the eight-gate admissibility assessment: gap is real and no…">
+        <bpmn:documentation>Step 2: Head of EA run the eight-gate admissibility assessment: gap is real and no build product is register-assigned to it (links to W5515); the extension is edge-clean with a defined input, output and trigger and does not fork a process; objects are registered in the custom application registry only; the design is upgrade-safe under online patching; every touched control of the 808-control register is named with its post-change evidence path; a named owning team accepts run cost, monitoring and re-attestation; a retirement trigger and plan exist; and three-year build-and-run cost is below the value of closing the gap
+Responsible (R): Head of EA / Owning PO &amp; BPO
+Accountable (A): ARB
+Duration: 6–10 hours/CDR</bpmn:documentation>
+        <bpmn:incoming>W5575_Flow16</bpmn:incoming>
+        <bpmn:outgoing>W5575_Flow17</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W5575_Task8" name="Head of EA test the proposal against the standing extension budget by class; a…">
+        <bpmn:documentation>Step 3: Head of EA test the proposal against the standing extension budget by class; a proposal that would exceed a cap is admissible only with CIO sign-off and the paired retirement of another extension of the same class, booked as a commitment in the retirement backlog (links to W5577)
+Responsible (R): Head of EA
+Accountable (A): CIO
+Duration: 1–2 hours/CDR</bpmn:documentation>
+        <bpmn:incoming>W5575_Flow17</bpmn:incoming>
+        <bpmn:outgoing>W5575_Flow18</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W5575_Task9" name="Owning PO author the Customization Decision Record — context with workflow ids…">
+        <bpmn:documentation>Step 4: Owning PO author the Customization Decision Record — context with workflow ids and gap statement, alternatives tried, design with objects and integration points, control mapping and evidence path, operations with owning team and runbook, retirement trigger and migration-out plan, and the sign-off block
+Responsible (R): Owning PO &amp; BPO / Solution Architect
+Accountable (A): Head of EA
+Duration: 6–10 hours/CDR</bpmn:documentation>
+        <bpmn:incoming>W5575_Flow18</bpmn:incoming>
+        <bpmn:outgoing>W5575_Flow19</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W5575_Task10" name="ARB decide at the architecture cycle — approve, approve with conditions, defer…">
+        <bpmn:documentation>Step 5: ARB decide at the architecture cycle — approve, approve with conditions, defer or deny; a denied proposal returns to the standard or configuration tier and a conditional approval carries its conditions into the delivery change record (links to W132/W1409); the architecture opinion is recorded against the repository (links to W3575)
+Responsible (R): ARB
+Accountable (A): Head of EA
+Duration: 1 hour/CDR</bpmn:documentation>
+        <bpmn:incoming>W5575_Flow19</bpmn:incoming>
+        <bpmn:outgoing>W5575_Flow20</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W5575_Task11" name="Head of EA open the register entry for the approved record and report the…">
+        <bpmn:documentation>Step 6: Head of EA open the register entry for the approved record and report the quarter&#x27;s CDR decisions, budget consumption by class and cycle-time performance to the SIB; denied and deferred proposals are reported with the ladder tier they returned to, so the gate&#x27;s own conversion rate stays visible
+Responsible (R): Head of EA
+Accountable (A): CIO
+Duration: 3 hours/quarter</bpmn:documentation>
+        <bpmn:incoming>W5575_Flow20</bpmn:incoming>
+        <bpmn:outgoing>W5575_Flow21</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:endEvent id="W5575_End12" name="Complete">
+        <bpmn:incoming>W5575_Flow21</bpmn:incoming>
+      </bpmn:endEvent>
+      <bpmn:textAnnotation id="W5575_Annotation13">
+        <bpmn:text>Controls: - CTL-568 (ensure controlled execution — Enterprise Architecture Framework, Standards &amp; Governance (PA-113.1).) | - operational: no extension without an approved Customization Decision Record naming its controls, owner and retirement trigger | - operational: extension budget enforced by class — exceeding a cap requires CIO sign-off and a paired retirement commitment | - operational: product-modifying changes are inadmissible — the gate may approve extension, personalization, localization and interface classes only
+Owner: Head of Enterprise Architecture (CDR gate lead)</bpmn:text>
+      </bpmn:textAnnotation>
+      <bpmn:association id="W5575_Assoc14" sourceRef="W5575_Annotation13" targetRef="W5575_Start5" associationDirection="None" />
+      <bpmn:sequenceFlow id="W5575_Flow15" sourceRef="W5575_Start5" targetRef="W5575_Task6" />
+      <bpmn:sequenceFlow id="W5575_Flow16" sourceRef="W5575_Task6" targetRef="W5575_Task7" />
+      <bpmn:sequenceFlow id="W5575_Flow17" sourceRef="W5575_Task7" targetRef="W5575_Task8" />
+      <bpmn:sequenceFlow id="W5575_Flow18" sourceRef="W5575_Task8" targetRef="W5575_Task9" />
+      <bpmn:sequenceFlow id="W5575_Flow19" sourceRef="W5575_Task9" targetRef="W5575_Task10" />
+      <bpmn:sequenceFlow id="W5575_Flow20" sourceRef="W5575_Task10" targetRef="W5575_Task11" />
+      <bpmn:sequenceFlow id="W5575_Flow21" sourceRef="W5575_Task11" targetRef="W5575_End12" />
+    </bpmn:process>
+    <bpmndi:BPMNDiagram id="W5575_diag">
+      <bpmndi:BPMNPlane id="W5575_plane" bpmnElement="W_W5575">
+        <bpmndi:BPMNShape id="W5575_Lane1_di" bpmnElement="W5575_Lane1" isHorizontal="true"><dc:Bounds x="160" y="80" width="1580" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5575_Lane2_di" bpmnElement="W5575_Lane2" isHorizontal="true"><dc:Bounds x="160" y="250" width="1580" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5575_Lane3_di" bpmnElement="W5575_Lane3" isHorizontal="true"><dc:Bounds x="160" y="420" width="1580" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5575_Task6_di" bpmnElement="W5575_Task6"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5575_Task7_di" bpmnElement="W5575_Task7"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5575_Task8_di" bpmnElement="W5575_Task8"><dc:Bounds x="820" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5575_Task9_di" bpmnElement="W5575_Task9"><dc:Bounds x="1030" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5575_Task10_di" bpmnElement="W5575_Task10"><dc:Bounds x="1240" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5575_Task11_di" bpmnElement="W5575_Task11"><dc:Bounds x="1450" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5575_Start5_di" bpmnElement="W5575_Start5"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5575_End12_di" bpmnElement="W5575_End12"><dc:Bounds x="1680" y="487" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5575_Annotation13_di" bpmnElement="W5575_Annotation13"><dc:Bounds x="160" y="630" width="360" height="114" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="W5575_Flow15_di" bpmnElement="W5575_Flow15"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5575_Flow16_di" bpmnElement="W5575_Flow16"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5575_Flow17_di" bpmnElement="W5575_Flow17"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5575_Flow18_di" bpmnElement="W5575_Flow18"><di:waypoint x="1000" y="335" /><di:waypoint x="1030" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5575_Flow19_di" bpmnElement="W5575_Flow19"><di:waypoint x="1210" y="165" /><di:waypoint x="1240" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5575_Flow20_di" bpmnElement="W5575_Flow20"><di:waypoint x="1420" y="505" /><di:waypoint x="1450" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5575_Flow21_di" bpmnElement="W5575_Flow21"><di:waypoint x="1630" y="335" /><di:waypoint x="1680" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5575_Assoc14_di" bpmnElement="W5575_Assoc14"><di:waypoint x="340" y="630" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
+      </bpmndi:BPMNPlane>
+    </bpmndi:BPMNDiagram>
+    <bpmn:process id="W_W5576" name="W5576. CEMLI Register Maintenance &amp; Quarterly Object-Inventory Audit" isExecutable="false">
+      <bpmn:documentation>Trigger: Quarterly register audit cycle; a completed patch rehearsal; an object discovered in the custom schema with no register row
+Frequency: Quarterly audit; per-rehearsal verification; continuous on object discovery
+Volume: The full non-configuration inventory — extension, personalization, localization-pack and interface rows with their schema objects, programs, templates and personalization paths — re-verified across 4 audits and ~5 patch rehearsals a year
+Owner: Head of Enterprise Architecture (customization register custodian)
+Participants: Head of Enterprise Architecture, ERP System Administrator (object-inventory diff — links to W495), Application Manager (links to W132), Owning Team IT PO (per-row re-attestation), IT Security (links to W367), Internal Audit (links to VS-21/W387), SIB (quarterly review)
+Source: workflow W5576 — CEMLI Register Maintenance &amp; Quarterly Object-Inventory Audit</bpmn:documentation>
+      <bpmn:laneSet id="W5576_LaneSet4">
+        <bpmn:lane id="W5576_Lane1" name="ERP System Administrator">
+        <bpmn:flowNodeRef>W5576_Task6</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W5576_Start5</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W5576_Lane2" name="Head of EA">
+        <bpmn:flowNodeRef>W5576_Task7</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W5576_Task9</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W5576_Task10</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W5576_Lane3" name="Owning Team IT PO">
+        <bpmn:flowNodeRef>W5576_Task8</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W5576_End11</bpmn:flowNodeRef>
+        </bpmn:lane>
+      </bpmn:laneSet>
+      <bpmn:startEvent id="W5576_Start5" name="Quarterly register audit cycle; a completed patch rehearsal; an object discovered in the…">
+        <bpmn:outgoing>W5576_Flow14</bpmn:outgoing>
+      </bpmn:startEvent>
+      <bpmn:serviceTask id="W5576_Task6" name="ERP System Administrator extract the current object inventory from the…">
+        <bpmn:documentation>Step 1: ERP System Administrator extract the current object inventory from the production and patch environments (links to W384) and diff it against the register&#x27;s declared objects, programs, templates and personalization paths
+Responsible (R): ERP System Administrator
+Accountable (A): Head of EA
+Duration: 6–10 hours/quarter</bpmn:documentation>
+        <bpmn:incoming>W5576_Flow14</bpmn:incoming>
+        <bpmn:outgoing>W5576_Flow15</bpmn:outgoing>
+      </bpmn:serviceTask>
+      <bpmn:userTask id="W5576_Task7" name="Head of EA adjudicate every diff line in both directions: an object present in…">
+        <bpmn:documentation>Step 2: Head of EA adjudicate every diff line in both directions: an object present in the estate with no register row is raised as an incident rather than logged as a finding and routed to the gate for retrospective record or removal (links to W5575); a register row whose objects no longer exist is closed as retired and its budget reclaimed (links to W5577)
+Responsible (R): Head of EA / Application Manager
+Accountable (A): CIO
+Duration: Per diff line</bpmn:documentation>
+        <bpmn:incoming>W5576_Flow15</bpmn:incoming>
+        <bpmn:outgoing>W5576_Flow16</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W5576_Task8" name="Owning Team IT PO re-attest each active row: the runbook is current, monitoring…">
+        <bpmn:documentation>Step 3: Owning Team IT PO re-attest each active row: the runbook is current, monitoring is in place, the named controls and their evidence paths still hold, and the retirement trigger is still the right one; an unattested row escalates to the owning team&#x27;s leadership at the next cycle
+Responsible (R): Owning Team IT PO
+Accountable (A): Head of EA
+Duration: 0.5 hours/row</bpmn:documentation>
+        <bpmn:incoming>W5576_Flow16</bpmn:incoming>
+        <bpmn:outgoing>W5576_Flow17</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:serviceTask id="W5576_Task9" name="Head of EA verify that the patch rehearsal applied the register&#x27;s full…">
+        <bpmn:documentation>Step 4: Head of EA verify that the patch rehearsal applied the register&#x27;s full inventory and record the rehearsal that last proved each row; a row unproven by any rehearsal in the current cycle blocks the production patch until it is rehearsed or retired (links to W495)
+Responsible (R): Head of EA / ERP System Administrator
+Accountable (A): CIO
+Duration: 4–8 hours/rehearsal</bpmn:documentation>
+        <bpmn:incoming>W5576_Flow17</bpmn:incoming>
+        <bpmn:outgoing>W5576_Flow18</bpmn:outgoing>
+      </bpmn:serviceTask>
+      <bpmn:userTask id="W5576_Task10" name="Head of EA report the audit to the SIB with the exception count, the incident…">
+        <bpmn:documentation>Step 5: Head of EA report the audit to the SIB with the exception count, the incident register for unregistered objects, per-class budget consumption and rehearsal coverage; unresolved exceptions carry into the next cycle with a named remediation owner and date
+Responsible (R): Head of EA
+Accountable (A): CIO
+Duration: Per quarter</bpmn:documentation>
+        <bpmn:incoming>W5576_Flow18</bpmn:incoming>
+        <bpmn:outgoing>W5576_Flow19</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:endEvent id="W5576_End11" name="Complete">
+        <bpmn:incoming>W5576_Flow19</bpmn:incoming>
+      </bpmn:endEvent>
+      <bpmn:textAnnotation id="W5576_Annotation12">
+        <bpmn:text>Controls: - CTL-568 (ensure controlled execution — Enterprise Architecture Framework, Standards &amp; Governance (PA-113.1).) | - operational: an object in the custom schema with no register row is an incident, not an audit finding | - operational: quarterly per-row owner re-attestation covering runbook, monitoring, controls and retirement trigger | - operational: production patching is blocked until the register&#x27;s full inventory has been rehearsed in the patch environment
+Owner: Head of Enterprise Architecture (customization register custodian)</bpmn:text>
+      </bpmn:textAnnotation>
+      <bpmn:association id="W5576_Assoc13" sourceRef="W5576_Annotation12" targetRef="W5576_Start5" associationDirection="None" />
+      <bpmn:sequenceFlow id="W5576_Flow14" sourceRef="W5576_Start5" targetRef="W5576_Task6" />
+      <bpmn:sequenceFlow id="W5576_Flow15" sourceRef="W5576_Task6" targetRef="W5576_Task7" />
+      <bpmn:sequenceFlow id="W5576_Flow16" sourceRef="W5576_Task7" targetRef="W5576_Task8" />
+      <bpmn:sequenceFlow id="W5576_Flow17" sourceRef="W5576_Task8" targetRef="W5576_Task9" />
+      <bpmn:sequenceFlow id="W5576_Flow18" sourceRef="W5576_Task9" targetRef="W5576_Task10" />
+      <bpmn:sequenceFlow id="W5576_Flow19" sourceRef="W5576_Task10" targetRef="W5576_End11" />
+    </bpmn:process>
+    <bpmndi:BPMNDiagram id="W5576_diag">
+      <bpmndi:BPMNPlane id="W5576_plane" bpmnElement="W_W5576">
+        <bpmndi:BPMNShape id="W5576_Lane1_di" bpmnElement="W5576_Lane1" isHorizontal="true"><dc:Bounds x="160" y="80" width="1370" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5576_Lane2_di" bpmnElement="W5576_Lane2" isHorizontal="true"><dc:Bounds x="160" y="250" width="1370" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5576_Lane3_di" bpmnElement="W5576_Lane3" isHorizontal="true"><dc:Bounds x="160" y="420" width="1370" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5576_Task6_di" bpmnElement="W5576_Task6"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5576_Task7_di" bpmnElement="W5576_Task7"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5576_Task8_di" bpmnElement="W5576_Task8"><dc:Bounds x="820" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5576_Task9_di" bpmnElement="W5576_Task9"><dc:Bounds x="1030" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5576_Task10_di" bpmnElement="W5576_Task10"><dc:Bounds x="1240" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5576_Start5_di" bpmnElement="W5576_Start5"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5576_End11_di" bpmnElement="W5576_End11"><dc:Bounds x="1470" y="487" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5576_Annotation12_di" bpmnElement="W5576_Annotation12"><dc:Bounds x="160" y="630" width="360" height="114" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="W5576_Flow14_di" bpmnElement="W5576_Flow14"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5576_Flow15_di" bpmnElement="W5576_Flow15"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5576_Flow16_di" bpmnElement="W5576_Flow16"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5576_Flow17_di" bpmnElement="W5576_Flow17"><di:waypoint x="1000" y="505" /><di:waypoint x="1030" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5576_Flow18_di" bpmnElement="W5576_Flow18"><di:waypoint x="1210" y="335" /><di:waypoint x="1240" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5576_Flow19_di" bpmnElement="W5576_Flow19"><di:waypoint x="1420" y="335" /><di:waypoint x="1470" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5576_Assoc13_di" bpmnElement="W5576_Assoc13"><di:waypoint x="340" y="630" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
+      </bpmndi:BPMNPlane>
+    </bpmndi:BPMNDiagram>
+    <bpmn:process id="W_W5577" name="W5577. Extension De-Customization, Retirement &amp; Budget Reclamation" isExecutable="false">
+      <bpmn:documentation>Trigger: A vendor release ships equivalent standard function; a register row&#x27;s usage falls below threshold for two consecutive quarters; a process-mining finding shows the forked path costs more than the gap; a Philippine statute or format change supersedes a localization component; a module re-tiering re-scopes the in-suite footprint
+Frequency: Trigger-driven; retirement review at the quarterly business review; standing target of at least one completion per half-year
+Volume: ~6–10 fired retirement triggers/year against the standing inventory, converting to ~2 completed retirements/year at the steady-state extension budget
+Owner: Head of Enterprise Architecture (retirement backlog owner)
+Participants: Head of Enterprise Architecture, Owning PO &amp; BPO (retirement execution), ARB (initiates retirement on a process-mining finding — links to W3571), Application Manager (links to W132), ERP System Administrator (links to W495), Finance Controller (accounting-adjacent rows), SIB (quarterly review), Internal Audit (links to VS-21)
+Source: workflow W5577 — Extension De-Customization, Retirement &amp; Budget Reclamation</bpmn:documentation>
+      <bpmn:laneSet id="W5577_LaneSet4">
+        <bpmn:lane id="W5577_Lane1" name="Head of EA">
+        <bpmn:flowNodeRef>W5577_Task6</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W5577_Task8</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W5577_Task10</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W5577_Start5</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W5577_Lane2" name="Owning PO &amp; BPO">
+        <bpmn:flowNodeRef>W5577_Task7</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W5577_Lane3" name="Owning Team IT PO">
+        <bpmn:flowNodeRef>W5577_Task9</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W5577_End11</bpmn:flowNodeRef>
+        </bpmn:lane>
+      </bpmn:laneSet>
+      <bpmn:startEvent id="W5577_Start5" name="A vendor release ships equivalent standard function; a register row&#x27;s usage falls below…">
+        <bpmn:outgoing>W5577_Flow14</bpmn:outgoing>
+      </bpmn:startEvent>
+      <bpmn:userTask id="W5577_Task6" name="Head of EA monitor the register&#x27;s retirement triggers against vendor release…">
+        <bpmn:documentation>Step 1: Head of EA monitor the register&#x27;s retirement triggers against vendor release content, usage telemetry, process-mining findings (links to W3577/W3592), Philippine regulatory change and in-suite footprint decisions (links to W5515); a fired trigger opens a retirement assessment rather than a discussion
+Responsible (R): Head of EA
+Accountable (A): CIO
+Duration: Continuous</bpmn:documentation>
+        <bpmn:incoming>W5577_Flow14</bpmn:incoming>
+        <bpmn:outgoing>W5577_Flow15</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W5577_Task7" name="Owning PO &amp; BPO assess the fired trigger: does the standard function reach…">
+        <bpmn:documentation>Step 2: Owning PO &amp; BPO assess the fired trigger: does the standard function reach parity on the workflows and controls the extension carries, what data migrates out, which interfaces and reports depend on the objects, and what the cutover window costs; the assessment ends in a retirement plan with a date or a documented reason the trigger does not apply this cycle
+Responsible (R): Owning PO &amp; BPO
+Accountable (A): Head of EA
+Duration: 4–8 hours/trigger</bpmn:documentation>
+        <bpmn:incoming>W5577_Flow15</bpmn:incoming>
+        <bpmn:outgoing>W5577_Flow16</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W5577_Task8" name="Head of EA set the retirement clock on a parity trigger — the owning team has…">
+        <bpmn:documentation>Step 3: Head of EA set the retirement clock on a parity trigger — the owning team has two quarters to adopt the standard function and retire the extension; a slip is escalated to the SIB with the run cost the estate keeps paying, not renegotiated silently
+Responsible (R): Head of EA
+Accountable (A): CIO
+Duration: Per fired trigger</bpmn:documentation>
+        <bpmn:incoming>W5577_Flow16</bpmn:incoming>
+        <bpmn:outgoing>W5577_Flow17</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W5577_Task9" name="Owning Team IT PO execute the retirement through the standard delivery rails…">
+        <bpmn:documentation>Step 4: Owning Team IT PO execute the retirement through the standard delivery rails (links to W132/W1409): migrate data out, re-point dependent interfaces and reports, re-map the affected controls to their standard-function evidence path, drop the objects, and confirm the drop in the next environment diff (links to W5576)
+Responsible (R): Owning Team IT PO / Application Manager
+Accountable (A): Head of EA
+Duration: 24–60 hours/extension</bpmn:documentation>
+        <bpmn:incoming>W5577_Flow17</bpmn:incoming>
+        <bpmn:outgoing>W5577_Flow18</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W5577_Task10" name="Head of EA close the register row as retired, reclaim its budget slot by class…">
+        <bpmn:documentation>Step 5: Head of EA close the register row as retired, reclaim its budget slot by class, release any paired-retirement commitment the gate booked against it (links to W5575), and report the completion at the quarterly review with the run cost and patch-merge effort the estate stopped carrying
+Responsible (R): Head of EA
+Accountable (A): CIO
+Duration: 2 hours/quarter</bpmn:documentation>
+        <bpmn:incoming>W5577_Flow18</bpmn:incoming>
+        <bpmn:outgoing>W5577_Flow19</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:endEvent id="W5577_End11" name="Complete">
+        <bpmn:incoming>W5577_Flow19</bpmn:incoming>
+      </bpmn:endEvent>
+      <bpmn:textAnnotation id="W5577_Annotation12">
+        <bpmn:text>Controls: - CTL-568 (ensure controlled execution — Enterprise Architecture Framework, Standards &amp; Governance (PA-113.1).) | - operational: every register row carries a retirement trigger; a row without one cannot be approved at the gate | - operational: a parity trigger starts a two-quarter retirement clock, and a slip is escalated to the SIB with its carried run cost | - operational: a row is closed only after the environment diff confirms its objects are gone and its controls are re-mapped
+Owner: Head of Enterprise Architecture (retirement backlog owner)</bpmn:text>
+      </bpmn:textAnnotation>
+      <bpmn:association id="W5577_Assoc13" sourceRef="W5577_Annotation12" targetRef="W5577_Start5" associationDirection="None" />
+      <bpmn:sequenceFlow id="W5577_Flow14" sourceRef="W5577_Start5" targetRef="W5577_Task6" />
+      <bpmn:sequenceFlow id="W5577_Flow15" sourceRef="W5577_Task6" targetRef="W5577_Task7" />
+      <bpmn:sequenceFlow id="W5577_Flow16" sourceRef="W5577_Task7" targetRef="W5577_Task8" />
+      <bpmn:sequenceFlow id="W5577_Flow17" sourceRef="W5577_Task8" targetRef="W5577_Task9" />
+      <bpmn:sequenceFlow id="W5577_Flow18" sourceRef="W5577_Task9" targetRef="W5577_Task10" />
+      <bpmn:sequenceFlow id="W5577_Flow19" sourceRef="W5577_Task10" targetRef="W5577_End11" />
+    </bpmn:process>
+    <bpmndi:BPMNDiagram id="W5577_diag">
+      <bpmndi:BPMNPlane id="W5577_plane" bpmnElement="W_W5577">
+        <bpmndi:BPMNShape id="W5577_Lane1_di" bpmnElement="W5577_Lane1" isHorizontal="true"><dc:Bounds x="160" y="80" width="1370" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5577_Lane2_di" bpmnElement="W5577_Lane2" isHorizontal="true"><dc:Bounds x="160" y="250" width="1370" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5577_Lane3_di" bpmnElement="W5577_Lane3" isHorizontal="true"><dc:Bounds x="160" y="420" width="1370" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5577_Task6_di" bpmnElement="W5577_Task6"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5577_Task7_di" bpmnElement="W5577_Task7"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5577_Task8_di" bpmnElement="W5577_Task8"><dc:Bounds x="820" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5577_Task9_di" bpmnElement="W5577_Task9"><dc:Bounds x="1030" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5577_Task10_di" bpmnElement="W5577_Task10"><dc:Bounds x="1240" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5577_Start5_di" bpmnElement="W5577_Start5"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5577_End11_di" bpmnElement="W5577_End11"><dc:Bounds x="1470" y="487" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5577_Annotation12_di" bpmnElement="W5577_Annotation12"><dc:Bounds x="160" y="630" width="360" height="114" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="W5577_Flow14_di" bpmnElement="W5577_Flow14"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5577_Flow15_di" bpmnElement="W5577_Flow15"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5577_Flow16_di" bpmnElement="W5577_Flow16"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5577_Flow17_di" bpmnElement="W5577_Flow17"><di:waypoint x="1000" y="165" /><di:waypoint x="1030" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5577_Flow18_di" bpmnElement="W5577_Flow18"><di:waypoint x="1210" y="505" /><di:waypoint x="1240" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5577_Flow19_di" bpmnElement="W5577_Flow19"><di:waypoint x="1420" y="165" /><di:waypoint x="1470" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5577_Assoc13_di" bpmnElement="W5577_Assoc13"><di:waypoint x="340" y="630" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
+      </bpmndi:BPMNPlane>
+    </bpmndi:BPMNDiagram>
 </bpmn:definitions>
