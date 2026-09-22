@@ -121,6 +121,18 @@ decision (RF-capable stores or not) should be recorded before the PO.
 3. **ICM on 12.2.12** — availability check stands (Vision-instance findings, VF register).
 4. **PD block pricing** is repo-canon sizing (200-store CZ users; 50/15/25 service users) —
    resize to the actual operation when the section-6 decisions land.
+5. **Asset Tracking rider entitlement (2026-09-23 GPL sweep — coverage register §7 / fit-gap
+   resolution 37):** the no-line treatment rides decision 6, but the GPL sells Asset Tracking
+   separately (`L11496` @ $6,895/AU, min 50 ⇒ ~$344,750) — confirm the Install Base/Inventory
+   entitlement at quote, or add the line.
+6. **Supplier Ship and Debit + the QP EOL component (same sweep):** `L72211` ($3,000/AU min
+   20) is unlicensed while EDC-10/B10 name the accrual-offer mechanism — confirm it rides the
+   licensed `L72178` base + Advanced Pricing; and confirm QP-modified ecommerce order lines
+   consume only the OM EOL metric (`L10128`), not the QP-family component (`L31659`).
+7. **Product Hub Add-on and the `L72189` scope (same sweep):** confirm whether the licensed
+   Product Hub (`L42168`) requires the add-on (`L42175` — the Site Hub precedent licenses
+   `L69447`), and which scope the Channel Rebates & POS Management option carries against
+   coverage register §5's not-needed record of the same-named product.
 
 ## 6. Decisions required (the PD register — no silent drops)
 
@@ -174,7 +186,7 @@ decision (RF-capable stores or not) should be recorded before the PO.
 
 ---
 
-*Document Version: 1.1 | Date: 2026-09-18 | **Fifty-fifth-wave consistency review (post-review RFQ movement recorded):** the RFQ's own v2.0.1 (WWM re-housed as F-PARITY line 48, E-HR min-quantity flags, Q5/Q11 completions) and v2.0.2 (September 2026 GPL errata — six part #s resolved, L&FM re-metric'd qty-TBC, In-Memory Cost trued $625,000, E-SCOPE $2,386,670, E1–E4 committed restated with E4 at $20,273,515 ≈ ₱700.5M · ₱154.1M/yr, §4 restated ₱1,471M/₱1,551M, TMS PD B91099) revisions supersede the v2-amendment figures the §7 summary quotes — recorded as a dated status note in §7 with the §5.2 † list trued to the resolved part-# set; the G1–G17 dispositions, the PD register and the quantity reconciliation stand unchanged, as does the licensing-bom baseline movement v2.1 → v2.2 (quantity-only re-base, no product-set change). No repo canon change: no requirement, workflow, control, register-row, disposition, HC, role or count movement. Prior v1.0 | Date: 2026-09-18 | Initial issue — the cross-repo coverage audit of the
+*Document Version: 1.2 | Date: 2026-09-23 | **GPL sweep verification items (§5.5–5.7).** The coverage register's new §7 sellable-SKU sweep opened four entitlement flags and one naming-collision reconciliation; the three licensing-shaped ones fold into this review's verification register as §5 items 5–7 (Asset Tracking `L11496` rider entitlement; Supplier Ship and Debit `L72211` + the QP EOL component `L31659`; Product Hub Add-on `L42175` + the `L72189` scope question) — no G-item, PD decision, quantity reconciliation or RFQ-amendment figure changed; the flags ride the existing Q6 verification fold-in. Prior v1.1 | Date: 2026-09-18 | **Fifty-fifth-wave consistency review (post-review RFQ movement recorded):** the RFQ's own v2.0.1 (WWM re-housed as F-PARITY line 48, E-HR min-quantity flags, Q5/Q11 completions) and v2.0.2 (September 2026 GPL errata — six part #s resolved, L&FM re-metric'd qty-TBC, In-Memory Cost trued $625,000, E-SCOPE $2,386,670, E1–E4 committed restated with E4 at $20,273,515 ≈ ₱700.5M · ₱154.1M/yr, §4 restated ₱1,471M/₱1,551M, TMS PD B91099) revisions supersede the v2-amendment figures the §7 summary quotes — recorded as a dated status note in §7 with the §5.2 † list trued to the resolved part-# set; the G1–G17 dispositions, the PD register and the quantity reconciliation stand unchanged, as does the licensing-bom baseline movement v2.1 → v2.2 (quantity-only re-base, no product-set change). No repo canon change: no requirement, workflow, control, register-row, disposition, HC, role or count movement. Prior v1.0 | Date: 2026-09-18 | Initial issue — the cross-repo coverage audit of the
 8-scenario license RFQ against the adopted footprint (licensing-bom v2.1, fit-gap resolutions
 9–34, coverage-map v2.0); register G1–G17 with dispositions, the quantity reconciliation
 (Q10 divergence), the metric-verification items, the PD decision register D-1–D-9, and the RFQ

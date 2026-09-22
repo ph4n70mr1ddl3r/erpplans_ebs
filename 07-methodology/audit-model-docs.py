@@ -357,6 +357,14 @@ citations 'sourcing model §12.1' and 'architecture §4' are cross-doc).
  verbatim) and migration_template_hits (the corrected §1/§2.4 anchors
  required, the retired YTD-into-EBS routing forbidden, the 02 row-11 anchor
  required present).
+
+2026-09-23 Component-GPL sellable-SKU sweep: gpl_sku_sweep_hits joins the guard for the
+ coverage register's new §7 — the price-list direction (the third artifact after the
+ workflow corpus and the documentation library): the §7 result sentence re-derived
+ against the part-number universe of applications-price-list-070574.pdf itself
+ (pdftotext every run), every backtick-cited part number existence-checked, the four
+ entitlement-flag pins (L11496, L72211, L31659, L42175) and the L72189 collision pin
+ required, and the UPK band count re-derived from the band-priced lines.
 """
 
 def _doc_versions():
@@ -465,7 +473,7 @@ def live_pin_hits():
     return hits
 
 
-import argparse, glob, os, re, subprocess, sys
+import argparse, glob, os, re, subprocess, sys, tempfile
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MC = os.path.join(REPO, "01-model-company")
@@ -3367,6 +3375,89 @@ def migration_template_hits():
     return hits
 
 
+def gpl_sku_sweep_hits():
+    """2026-09-23 -- structural guard for the Component-GPL sellable-SKU sweep
+    (02-oracle-ebs/ebs-documentation-coverage.md §7). The §7 annex claims 'every priced
+    part number on the GPL carries a recorded disposition' — the one quantitative claim
+    no other rule re-derives — so it re-derives from the price-list PDF itself every run:
+      (a) the part-number universe (every [A-Z][0-9]{4,6} token in the pdftotext text of
+          applications-price-list-070574.pdf) — a missing PDF or extractor is a hit;
+      (b) the §7 arithmetic sentence must state a total equal to that universe and must
+          foot across its components (licensed + read-only-annotation + prior + annexed);
+      (c) every backtick-quoted part number in §7 must exist on the GPL;
+      (d) the flag pins: the four ⚠ rows (L11496, L72211, L31659, L42175) and the
+          L72189 naming-collision item must be present in §7; and
+      (e) the UPK band count stated in the annex must equal the band-priced part-number
+          lines re-derived from the price list.
+    """
+    rel = "ebs-documentation-coverage.md"
+    hits = []
+    path = os.path.normpath(os.path.join(MC, "..", "02-oracle-ebs", rel))
+    pdf = os.path.normpath(os.path.join(MC, "..", "applications-price-list-070574.pdf"))
+    text = open(path, encoding="utf-8").read()
+    body = text.split("*Document Version:")[0]
+    if "## 7. The Component Global Price List sweep" not in body:
+        hits.append((rel, 0, "§7 GPL sellable-SKU sweep section missing"))
+        return hits
+    sec7 = body.split("## 7. The Component Global Price List sweep", 1)[1]
+    if not os.path.isfile(pdf):
+        hits.append((rel, 0, "price-list PDF missing — the §7 sweep's source of record is gone"))
+        return hits
+    try:
+        with tempfile.TemporaryDirectory() as td:
+            out_txt = os.path.join(td, "gpl.txt")
+            r = subprocess.run(["pdftotext", "-layout", pdf, out_txt],
+                               capture_output=True, text=True, timeout=120)
+            if r.returncode != 0:
+                hits.append((rel, 0, "pdftotext failed over the price-list PDF"))
+                return hits
+            gpl = open(out_txt, encoding="utf-8", errors="replace").read()
+    except (OSError, subprocess.SubprocessError):
+        hits.append((rel, 0, "could not run pdftotext over the price-list PDF"))
+        return hits
+    universe = set(re.findall(r"\b[A-Z][0-9]{4,6}\b", gpl))
+    if not universe:
+        hits.append((rel, 0, "part-number universe empty — the price-list text parsed to nothing"))
+        return hits
+    flat = re.sub(r"\s+", " ", sec7)
+    m = re.search(r"Result: the sweep accounts for all ([\d,]+) priced part numbers on the GPL: "
+                  r"([\d,]+) licensed lines, ([\d,]+) "
+                  r"Applications-Read-Only-User annotation parts, ([\d,]+) recorded at prior passes, "
+                  r"([\d,]+) recorded in the table below \((\d+) named \+ (\d+) band-priced UPK modules\)"
+                  r" — 0 unexamined", flat)
+    if not m:
+        hits.append((rel, 0, "§7 result sentence not found in its pinned form"))
+    else:
+        total, lic, ann, prior, tab, named, bands = (int(x.replace(",", "")) for x in m.groups())
+        if total != len(universe):
+            hits.append((rel, 0, f"§7 declares {total} priced part numbers but the GPL text "
+                                 f"holds {len(universe)}"))
+        if lic + ann + prior + tab != total or named + bands != tab:
+            hits.append((rel, 0, f"§7 arithmetic does not foot: {lic}+{ann}+{prior}+{tab} "
+                                 f"(!= {total}) or {named}+{bands} (!= {tab})"))
+        m2 = re.search(r"(\d[\d,]*) band-priced UPK Module part numbers", flat)
+        if not m2 or int(m2.group(1).replace(",", "")) != bands:
+            hits.append((rel, 0, "§7 UPK-module row must restate the band count its arithmetic uses"))
+        band_lines = [l for l in gpl.splitlines()
+                      if re.search(r"\(over 4K|up to 4K", l)
+                      and re.search(r"[A-Z][0-9]{4,6}\s*$", l.rstrip())]
+        derived_bands = {re.findall(r"[A-Z][0-9]{4,6}\s*$", l.rstrip())[0] for l in band_lines}
+        if bands != len(derived_bands):
+            hits.append((rel, 0, f"§7 states {bands} band-priced UPK modules but the price list "
+                                 f"holds {len(derived_bands)}"))
+    have = universe
+    for mm in re.finditer(r"`([A-Z][0-9]{4,6})`", sec7):
+        stem = mm.group(1)
+        if stem not in have:
+            hits.append((rel, body[:mm.start()].count("\n") + 1,
+                         f"§7 cites part `{stem}` — no such part number on the price list"))
+    for pin in ("L11496", "L72211", "L31659", "L42175", "L72189"):
+        if f"`{pin}`" not in sec7:
+            hits.append((rel, 0, f"§7 flag pin `{pin}` missing — the sweep's ⚠/collision items "
+                                 f"must stay on the record"))
+    return hits
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--guard", action="store_true",
@@ -3492,6 +3583,8 @@ def main():
     # 2026-09-21 oratest capability verification addition (rig capability report)
     hits.extend(oratest_hits())
     hits.extend(ebs_doc_coverage_hits())
+    # 2026-09-23 Component-GPL sellable-SKU sweep addition (coverage register §7)
+    hits.extend(gpl_sku_sweep_hits())
     for doc, line, detail in hits:
         print(f"model-doc: {doc}:{line}: {detail}")
     print(f"audit-model-docs: {len(hits)} hit(s) across {len(DOCS)} documents")
