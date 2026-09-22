@@ -650,8 +650,8 @@ Owner: Ecommerce Operations Manager</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W215" name="W215. Customer Home Delivery Reverse Logistics (Returns)" isExecutable="false">
       <bpmn:documentation>Trigger: Customer requests return or exchange for an item delivered to their home (W19/W19B)
-Frequency: ~3–7% of home delivery orders (the courier-pickup leg of the ecommerce returns canon: ≈ 4,000–5,000 total return requests/month per W1623, less the ≈ 3,300–4,200 store drop-offs per W12B)
-Volume: ~800–1,700 returns/month at steady state (the courier-pickup remainder of the W1623 canon; peaks post-holiday and post-promo)
+Frequency: ~0.3–0.6% of home delivery orders (the courier-pickup leg of the ecommerce returns canon: ≈ 250–350 total return requests/month per W1623, less the ≈ 200–250 store drop-offs per W12B)
+Volume: ~50–100 returns/month at steady state (the courier-pickup remainder of the W1623 canon; peaks post-holiday and post-promo)
 Owner: Ecommerce Customer Service Manager
 Participants: Customer, CSR, 3PL Carrier, DC Receiving Team, Finance (Refunds)
 Source: workflow W215 — Customer Home Delivery Reverse Logistics (Returns)</bpmn:documentation>
@@ -2162,8 +2162,8 @@ Owner: Ecommerce Fulfillment Coordinator</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W1273" name="W1273. Customer E-Commerce In-Store Return Drop-Off Processing &amp; Cross-Channel Refund" isExecutable="false">
       <bpmn:documentation>Trigger: Customer brings an ecommerce purchase to a BuildRight store for return, having initiated the return online (RMA) or walking in without prior online initiation
-Frequency: ~3,300–4,200 ecommerce store drop-offs/month (~8–10% of ~42,900 ecommerce orders — the store drop-off subset of the ≈ 4,000–5,000 total ecommerce return requests per the W1623 canon; ≈ 17–21 drop-offs/store/month)
-Volume: ~17–21 in-store ecommerce return drop-offs per store per month; ~3,300–4,200 chain-wide/month (the W12B canon; the courier-pickup remainder ≈ 800–1,700/month rides W215)
+Frequency: ~200–250 ecommerce store drop-offs/month (~0.5–0.6% of ~42,900 ecommerce orders — the store drop-off subset of the ≈ 250–350 total ecommerce return requests per the W1623 canon; ≈ 1–1.25 drop-offs/store/month)
+Volume: ~1 in-store ecommerce return drop-off per store per month (~1–1.25 at the band edges); ~200–250 chain-wide/month (the W12B canon; the courier-pickup remainder ≈ 50–100/month rides W215)
 Owner: Customer Service Rep
 Participants: CSR, Store Manager (approval override), Department Supervisor (quality inspection), Ecommerce Operations (system verification)
 Source: workflow W1273 — Customer E-Commerce In-Store Return Drop-Off Processing &amp; Cross-Channel Refund</bpmn:documentation>

@@ -488,6 +488,46 @@ citations 'sourcing model §12.1' and 'architecture §4' are cross-doc).
  banned-form at :504 + missing-anchor; W1169 re-mint → banned-form at :257 +
  missing-anchor), fixtures restored sha256-verified byte-identical, clean tree silent
  at 0 hits.
+
+ 2026-09-23 seventy-first-wave consistency review: the returns canon — the one §1.1
+ row the production calibration grounded but whose workflow family it never
+ re-derived. The calibration's Customer-Returns row (measured 14,744/13,584 AR
+ credit memos/year at ~1.05 lines/doc → ~40/day ≈ ~1,200/month ≈ ~14,500/year;
+ profile §15.1's AR-Credit-Memos row) sits 47x below the returns workflows'
+ pre-calibration assumption of ~56,000 returns/month (2% × 2.8M transactions),
+ and the ecommerce sub-canon of ~4,000–5,000 return requests/month at ~10–12%
+ of ~42,900 orders is untenable inside a ~1,200/month all-channel universe (the
+ W12B cell even miscited '≈110–140/day per the corpus returns canon' for a SUBSET
+ of a 40/day canon). ~50 cells trued across 16 documents: PA-32.1's W1622 master
+ (~950–1,050 counter returns/month = the canon less W1629's ~100–150 B2B credit
+ notes and W215's ~50–100 courier pickups; ~5/store/month; hours re-footed
+ ~0.8 h/store/month), W1623 (~250–350 requests at ~0.6–0.8%; drop-off subset
+ ~200–250 at ~0.5–0.6%; courier ≈ 50–100), W1624 (~325 exchanges, 27%), W1625
+ (~180–215 no-receipt, 15–18%), W1626 (~180–215 quality, 15–18%), W1627 (~875
+ refunds = the canon less exchanges; ~4–5/store/month), W1628, W1629 (~100–150
+ B2B returns at ~2–4% of the ~3,200–5,200 B2B order universe, one credit note per
+ return at the ~1.05-lines/doc profile); PA-07.1's W12A/W12B/W12C (W12C
+ ~120–240/month at the unchanged 10–20% share); PA-08.3's W540 (~1,200 BIR credit
+ notes/month) and W605 (~36–60 fraudulent at 3–5%); PA-23.3's W1336 (~60–95 at
+ 5–8%; the 'per W1627' miscite trued to W1622); PA-32.3 (~360 disposition
+ exceptions, ~720 h/yr); PA-10.1's W509 (~500–1,000 returned items; 1–2 Returns
+ Inspectors, absorbed); PA-10.2's W215 (~0.3–0.6% of home deliveries, ~50–100/
+ month; staffing re-footed ~17–33/~8–17/~8–17 h/month) and W1273 (~1 drop-off/
+ store/month; ~50–104 h/month chain-wide); PA-13.1's W707 (~40 total returns/day
+ across all channels); PA-60.3's W2308; PA-125.2 (~14,500 returns/yr); PA-118.2;
+ PA-15.2's W101 (~950–1,050 + ~200–250 + ~50–100 + ~100–150 = ~1,300–1,550
+ refund/credit transactions/month; hours re-footed ~76–93); PA-30.2's IDP row
+ (~1,200 return receipts/month beside its already-true receipt canon); the
+ profile's §5 POS transaction-mix bullet (~0.04%, bumped v3.4); the custody
+ register's live E-09 row (bumped v1.11); and erp-requirements GOV-051 (bumped
+ v24.4). Category-level return-rate prose (PA-09.2's 10–15%/8–12% bathroom-
+ fixture/electrical rates) and PA-30.3's training-hours '~56,000 hours' are
+ different, legitimate populations, exempt. Guard: calibrated_volume_hits gains
+ the seventy-first-wave arms — the retired forms banned on live surfaces, the
+ corrected anchors required at the repaired cells, and the custody register's
+ live body (before its dated footer) swept with the E-09 anchor required.
+ Teeth: four synthetic injections through the FULL audit, each caught at its exact
+ arm, fixtures restored sha256-verified byte-identical, clean tree silent at 0 hits.
 """
 
 def _doc_versions():
@@ -3253,6 +3293,35 @@ def calibrated_volume_hits():
             # forward-buy cells are a different, legitimate population)
             "~15 lines per receipt", "15 lines per ASN",
             "4,800 ASN", "~15\u201325 container drayage moves",
+            # seventy-first-wave extension: the returns canon — the §1.1
+            # AR-credit-memo row (~40/day = ~1,200/month at ~1.05 lines/doc)
+            # that the calibration grounded but the returns workflows never
+            # re-derived (the '~56,000/month at ~2%' family and its
+            # 10–12%-of-ecommerce-orders sub-canon; the training-hours
+            # '~56,000 hours' population of PA-30.3 is a different, legitimate
+            # number and stays untouched; PA-09.2's per-category return-rate
+            # prose and PA-08.1's split-tender share are different populations)
+            "~56,000 returns", "56,000 credit notes", "56,000 return receipts",
+            "48,000\u201356,000", "50,000\u201358,000 refund", "~1,867 returns/day",
+            "~280 returns/store", "~2% return rate", "~2% of POS transactions",
+            "~2% of transactions (returns)", "~56K/month", "~670K+ returns/yr",
+            "4,000\u20135,000 ecommerce return", "4,000\u20135,000/month per W1623",
+            "4,000\u20135,000/mo", "4,000\u20135,000 total requests",
+            "10\u201312% ecommerce return", "~10\u201312% return-request rate",
+            "(~10\u201312% return rate)", "8\u201310% of ecommerce orders",
+            "\u2248 8\u201310% subset", "3,300\u20134,200",
+            "8,000\u201315,000 returned items", "800\u20131,700 returns",
+            "800\u20131,700/month", "~41,000 refund transactions",
+            "~15,000 exchanges", "~75 exchanges/store",
+            "~8,000\u201310,000 no-receipt", "~45\u201350 per store/month",
+            "~40\u201350 per store/month", "~205 per store/month",
+            "~17,000 exceptions", "~2,800\u20134,500 fraudulent",
+            "~1,700\u20132,800/month", "~9 per store/day",
+            "~17\u201321 drop-offs/store", "~17\u201321 returns",
+            "~11,500 items/month", "~130\u2013170 ecommerce",
+            "~1,860 POS returns/day", "~2,000 total returns/day",
+            "5,600\u201311,200 returns/month", "~28\u201356 per store per month",
+            "6\u201314 Returns Inspectors", "~500\u2013700 B2B returns",
         ]
         for bad in banned:
             if bad in body:
@@ -3260,8 +3329,9 @@ def calibrated_volume_hits():
                              f"retired calibration form '{bad}' on a live surface "
                              f"(the canon is ~50,000 replenishment orders/month, "
                              f"~12,000 PO lines/month at ~7 lines/PO, ~123 GB/year, "
-                             f"~17,200 home deliveries/month; version footers and "
-                             f"the gap-analysis scenario tables are the "
+                             f"~17,200 home deliveries/month, ~1,200 returns/month "
+                             f"at the ~40/day AR-credit-memo basis; version footers "
+                             f"and the gap-analysis scenario tables are the "
                              f"frozen-history surfaces)"))
 
     # (a) every PA file + VS README — live in full (no history blocks)
@@ -3472,6 +3542,132 @@ def calibrated_volume_hits():
                      'missing W1169 drayage anchor "~20–30 container drayage '
                      'round-trip moves per DC per week" (per its own '
                      '~20–30 containers/DC/week Frequency canon)'))
+
+    # (h) seventy-first-wave anchors — the returns canon the calibration grounded
+    # (§1.1 AR credit memos ~40/day = ~1,200/month at ~1.05 lines/doc) but whose
+    # workflow family it never re-derived: the master counter slice, the
+    # ecommerce sub-canon, the B2B slice, the derived shares and the fraud/
+    # disposition/refund/IDP/P2P dependents (a future calibration moves the
+    # canon → these re-fire until consciously re-pointed — the Check-71
+    # CENSUS-pin contract)
+    pa321 = _pa("VS-32-returns-reverse-logistics",
+                "PA-32.1-customer-returns-processing.md")
+    for anc in ("~950\u20131,050 counter returns/month",
+                "~250\u2013350 ecommerce return requests/month",
+                "~325 exchanges/month",
+                "~180\u2013215 no-receipt returns/month",
+                "~180\u2013215 returns/month require quality assessment",
+                "~875 refund transactions/month",
+                "~100\u2013150 B2B returns/month",
+                "~1,200 returns/month across 200 stores (the AR-credit-memo "
+                "returns canon)"):
+        if anc not in pa321:
+            hits.append(("PA-32.1-customer-returns-processing.md", 0,
+                         f'missing returns-canon anchor "{anc}"'))
+    pa071 = _pa("VS-07-store-operations", "PA-07.1-store-daily-management.md")
+    for anc in ("~950\u20131,050 returns/month chain-wide",
+                "~200\u2013250 online returns/month chain-wide",
+                "\u2248120\u2013240/month chain-wide"):
+        if anc not in pa071:
+            hits.append(("PA-07.1-store-daily-management.md", 0,
+                         f'missing W12 returns-canon anchor "{anc}"'))
+    pa083 = _pa("VS-08-pos-checkout", "PA-08.3-pos-compliance-and-controls.md")
+    for anc in ("~1,200 credit notes/month", "~36\u201360/month"):
+        if anc not in pa083:
+            hits.append(("PA-08.3-pos-compliance-and-controls.md", 0,
+                         f'missing W540/W605 returns-canon anchor "{anc}"'))
+    pa233 = _pa("VS-23-loss-prevention", "PA-23.3-shrinkage-reduction.md")
+    if "~60\u201395 fraudulent returns/month" not in pa233:
+        hits.append(("PA-23.3-shrinkage-reduction.md", 0,
+                     'missing W1336 returns-canon anchor "~60–95 fraudulent '
+                     'returns/month"'))
+    pa323 = _pa("VS-32-returns-reverse-logistics",
+                "PA-32.3-reverse-logistics-disposition.md")
+    if "~360 exceptions/month" not in pa323:
+        hits.append(("PA-32.3-reverse-logistics-disposition.md", 0,
+                     'missing disposition anchor "~360 exceptions/month"'))
+    pa101 = _pa("VS-10-ecommerce-digital",
+                "PA-10.1-ecommerce-platform-operations.md")
+    for anc in ("~500\u20131,000 returned items/month",
+                "~750 items/month average"):
+        if anc not in pa101:
+            hits.append(("PA-10.1-ecommerce-platform-operations.md", 0,
+                         f'missing W509 returns-canon anchor "{anc}"'))
+    for anc in ("~50\u2013100 returns/month at steady state",
+                "~200\u2013250 ecommerce store drop-offs/month"):
+        if anc not in pa102:
+            hits.append(("PA-10.2-order-fulfillment-and-delivery.md", 0,
+                         f'missing W215/W1273 returns-canon anchor "{anc}"'))
+    pa131 = _pa("VS-13-customer-experience",
+                "PA-13.1-customer-support-and-complaints.md")
+    for anc in ("~32\u201335 in-store/POS counter returns/day",
+                "~40 total returns/day across all channels"):
+        if anc not in pa131:
+            hits.append(("PA-13.1-customer-support-and-complaints.md", 0,
+                         f'missing W707 returns-canon anchor "{anc}"'))
+    pa603 = _pa("VS-60-omnichannel-order-routing",
+                "PA-60.3-fulfillment-performance-analytics.md")
+    if "return-request rate ~0.6\u20130.8%" not in pa603:
+        hits.append(("PA-60.3-fulfillment-performance-analytics.md", 0,
+                     'missing W2308 anchor "return-request rate ~0.6–0.8%"'))
+    pa1252 = _pa("VS-125-cross-channel-fraud-management-payment-fraud-"
+                 "protection",
+                 "PA-125.2-channel-fraud-prevention-detection.md")
+    if "~14,500 returns/yr" not in pa1252:
+        hits.append(("PA-125.2-channel-fraud-prevention-detection.md", 0,
+                     'missing returns-canon anchor "~14,500 returns/yr"'))
+    pa1182 = _pa("VS-118-revenue-assurance-pricing-integrity-and-leakage-"
+                 "management",
+                 "PA-118.2-pricing-promotion-loyalty-and-payment-integrity-"
+                 "monitoring.md")
+    if "~0.04% return rate (profile \u00a75 \u2014 the ~40/day AR-credit-memo canon)" \
+            not in pa1182:
+        hits.append(("PA-118.2-pricing-promotion-loyalty-and-payment-integrity-"
+                     "monitoring.md", 0,
+                     'missing returns-canon anchor "~0.04% return rate '
+                     '(profile §5 — the ~40/day AR-credit-memo canon)"'))
+    pa152 = _pa("VS-15-procure-to-pay",
+                "PA-15.2-vendor-payment-and-reconciliation.md")
+    for anc in ("~950\u20131,050 in-store return refunds/credits",
+                "~1,300\u20131,550 refund/credit transactions/month"):
+        if anc not in pa152:
+            hits.append(("PA-15.2-vendor-payment-and-reconciliation.md", 0,
+                         f'missing W101 returns-canon anchor "{anc}"'))
+    pa802 = _pa("VS-80-payment-operations-acquirer-settlement",
+                "PA-80.2-settlement-reconciliation-and-dispute.md")
+    if "~1,200 refund/void events/month" not in pa802:
+        hits.append(("PA-80.2-settlement-reconciliation-and-dispute.md", 0,
+                     'missing W2790 returns-canon anchor "~1,200 refund/void '
+                     'events/month"'))
+    pa302 = _pa("VS-30-innovation-digital", "PA-30.2-ai-ml-and-automation.md")
+    if "~1,200 return receipts/month" not in pa302:
+        hits.append(("PA-30.2-ai-ml-and-automation.md", 0,
+                     'missing IDP returns-canon anchor "~1,200 return '
+                     'receipts/month"'))
+    if "(~0.04% return rate \u2014 ~40 AR credit memos/day, per data-volumes \u00a71.1)" \
+            not in prof:
+        hits.append(("model-company-profile.md", 0,
+                     'missing §5 POS-mix returns anchor "(~0.04% return rate — '
+                     '~40 AR credit memos/day, per data-volumes §1.1)"'))
+    # the custody register's E-09 row — a live navigation surface outside the
+    # PA/README glob (swept live-body only; the dated custody-wave footer
+    # segments are frozen history)
+    custody = os.path.join(REPO, "01-model-company", "workflows",
+                           "event-custody-and-precedence-register.md")
+    clines2 = open(custody, encoding="utf-8").read().split("\n")
+    fi2 = next((i for i, l in enumerate(clines2)
+                if l.startswith("*Date:") and "(v" in l), len(clines2))
+    cbody2 = "\n".join(clines2[:fi2])
+    for bad in ("3,300\u20134,200", "4,000\u20135,000/mo", "8\u201310% subset"):
+        if bad in cbody2:
+            hits.append(("event-custody-and-precedence-register.md",
+                         cbody2[:cbody2.index(bad)].count("\n") + 1,
+                         f"retired returns-canon form '{bad}' on the live "
+                         f"E-09 row"))
+    if "\u2248 250\u2013350/mo, ~0.6\u20130.8% of ~42,900 orders" not in cbody2:
+        hits.append(("event-custody-and-precedence-register.md", 0,
+                     'missing E-09 returns-canon anchor "≈ 250–350/mo, '
+                     '~0.6–0.8% of ~42,900 orders"'))
     return hits
 
 

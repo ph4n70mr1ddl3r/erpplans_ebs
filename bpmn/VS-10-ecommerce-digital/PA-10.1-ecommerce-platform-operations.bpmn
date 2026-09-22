@@ -482,8 +482,8 @@ Owner: AR &amp; Settlement Accountant</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W509" name="W509. Ecommerce Product Return Inspection, Grading &amp; Disposition" isExecutable="false">
       <bpmn:documentation>Trigger: Returned ecommerce item arrives at DC or designated store for inspection
-Frequency: ~8,000–15,000 returned items/month (the W1623 canon: ~4,000–5,000 ecommerce return requests/month ≈ 10–12% of ~42,900 orders, ~2–3 items per return)
-Volume: ~11,500 items/month average; peaks post-holiday and post-promo (+40%)
+Frequency: ~500–1,000 returned items/month (the W1623 canon: ~250–350 ecommerce return requests/month ≈ 0.6–0.8% of ~42,900 orders, ~2–3 items per return)
+Volume: ~750 items/month average; peaks post-holiday and post-promo (+40%)
 Owner: Returns Processing Supervisor (DC)
 Participants: Returns Inspector, Category Specialist, AP Clerk (for vendor returns)
 Source: workflow W509 — Ecommerce Product Return Inspection, Grading &amp; Disposition</bpmn:documentation>

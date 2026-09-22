@@ -290,7 +290,7 @@ Owner: VP Supply Chain</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W2308" name="W2308. Return Rate by Fulfillment Source" isExecutable="false">
       <bpmn:documentation>Trigger: Monthly
-Frequency: Monthly; ecommerce return-request rate ~10–12% (the W1623 canon)
+Frequency: Monthly; ecommerce return-request rate ~0.6–0.8% (the W1623 canon)
 Volume: All fulfillment sources
 Owner: Returns Manager
 Participants: VP Supply Chain

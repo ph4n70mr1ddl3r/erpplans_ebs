@@ -474,7 +474,7 @@ Owner: LP Analyst / Inventory Manager</bpmn:text>
     <bpmn:process id="W_W1336" name="W1336. Return Fraud &amp; Abuse Pattern Detection, Investigation &amp; Prevention" isExecutable="false">
       <bpmn:documentation>Trigger: Return exception alert from POS system (W12); LP Analyst identifies return fraud pattern during weekly exception review (W837); or Store Manager reports suspicious return activity
 Frequency: Weekly pattern analysis; daily exception monitoring; ad-hoc investigation per detected pattern
-Volume: ~56,000 returns/month across 200 stores (~2% of transactions per W1627); estimated 5–8% return fraud/abuse rate = ~2,800–4,500 fraudulent returns/month
+Volume: ~1,200 returns/month across 200 stores (the ~40/day AR-credit-memo returns canon, ~0.04% of transactions, per W1622); estimated 5–8% return fraud/abuse rate = ~60–95 fraudulent returns/month
 Owner: LP Analyst
 Participants: LP Manager (Regional), Store Manager, POS System Administrator, Finance Analyst, VP Legal (for prosecution cases)
 Source: workflow W1336 — Return Fraud &amp; Abuse Pattern Detection, Investigation &amp; Prevention</bpmn:documentation>

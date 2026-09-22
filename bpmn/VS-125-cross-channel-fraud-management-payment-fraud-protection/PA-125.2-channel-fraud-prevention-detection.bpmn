@@ -146,8 +146,8 @@ Owner: Fraud Management / Ecommerce</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W3867" name="W3867. Returns &amp; Refund Abuse Prevention" isExecutable="false">
       <bpmn:documentation>Trigger: Return/refund event (links to VS-32.1); refund request
-Frequency: Continuous (~2% return rate on 33.6M POS txns + ecommerce returns)
-Volume: ~670K+ returns/yr; ~1–3% flagged as abuse
+Frequency: Continuous (~0.04% return rate on 2.8M monthly POS txns — the ~40/day AR-credit-memo returns canon — plus ecommerce returns)
+Volume: ~14,500 returns/yr (the AR-credit-memo canon); ~1–3% flagged as abuse
 Owner: Fraud Management / Returns
 Participants: Fraud Management, Returns/Customer Service (links to VS-32.1/VS-09), Store Ops (links to VS-07), Ecommerce (links to VS-10), Payments (links to VS-80), Loyalty (links to VS-13), LP (links to VS-23)
 Source: workflow W3867 — Returns &amp; Refund Abuse Prevention</bpmn:documentation>

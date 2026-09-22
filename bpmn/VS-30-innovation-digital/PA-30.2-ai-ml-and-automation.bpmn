@@ -677,7 +677,7 @@ Owner: Digital Commerce Manager</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W1341" name="W1341. Intelligent Document Processing (IDP) for Invoice &amp; Receipt Automation" isExecutable="false">
       <bpmn:documentation>Trigger: Vendor invoice received via email, vendor portal, or mail; customer receipt presented for return (W12); or delivery receipt received at DC (W3)
-Frequency: ~8,500–9,500 vendor invoices/month; ~56,000 return receipts/month (~2% of POS volume); ~6,000 DC delivery receipts/month (~6,500–6,600 incl. DSD; canon §15.1)
+Frequency: ~8,500–9,500 vendor invoices/month; ~1,200 return receipts/month (the ~40/day AR-credit-memo canon, ~0.04% of POS volume); ~6,000 DC delivery receipts/month (~6,500–6,600 incl. DSD; canon §15.1)
 Volume: ~70,000–75,000 documents/month requiring data extraction across AP, returns, and receiving (per the Frequency itemization)
 Owner: IT Business Analyst
 Participants: AP Clerk, Data Science Lead, IT Developer, AP Supervisor, Finance Controller

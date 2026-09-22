@@ -974,8 +974,8 @@ Duration: —</bpmn:documentation>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W12A" name="W12A. In-Store Returns" isExecutable="false">
       <bpmn:documentation>Trigger: Customer brings item to Customer Service counter for return/exchange
-Frequency: ~2% of POS transactions ≈ 56,000/month = ~1,867 returns/day chain-wide; ~9 per store/day
-Volume: ~56,000 returns/month chain-wide
+Frequency: ~0.04% of POS transactions — ~950–1,050 counter returns/month chain-wide (the ~1,200/month AR-credit-memo returns canon — ~40/day measured at ~1.05 lines/doc, per data-volumes §1.1 — less W1629&#x27;s ~100–150 B2B credit notes and W215&#x27;s ~50–100 courier pickups; ≈ 32–35/day); ~5 per store/month
+Volume: ~950–1,050 returns/month chain-wide (counter returns incl. W12B&#x27;s ecommerce drop-off slice)
 Owner: Customer Service Rep
 Participants: CSR, Store Manager (approval for high-value or no-receipt returns), Stock Associate (restock)
 Source: workflow W12A — In-Store Returns</bpmn:documentation>
@@ -1118,8 +1118,8 @@ Owner: Customer Service Rep</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W12B" name="W12B. Online-Initiated Returns" isExecutable="false">
       <bpmn:documentation>Trigger: Customer initiates return on website/app
-Frequency: ~8–10% of ecommerce orders ≈ 3,300–4,200/month (~110–140/day, per the Volume/canon)
-Volume: ~3,300–4,200 online returns/month chain-wide (~8–10% of ecommerce orders; ≈110–140/day per the corpus returns canon)
+Frequency: ~0.5–0.6% of ecommerce orders ≈ 200–250/month (~7–8/day chain-wide, per the Volume/canon)
+Volume: ~200–250 online returns/month chain-wide (~0.5–0.6% of ecommerce orders; ≈7–8/day per the corpus returns canon — the ~1,200/month AR-credit-memo canon, ~40/day)
 Owner: Customer Service Rep (receiving store)
 Participants: Customer, CSR, Stock Associate, Ecommerce Team
 Source: workflow W12B — Online-Initiated Returns</bpmn:documentation>
@@ -1235,7 +1235,7 @@ Owner: Customer Service Rep (receiving store)</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W12C" name="W12C. Cross-Store Returns (Purchased at Store A, Returned at Store B)" isExecutable="false">
       <bpmn:documentation>Trigger: Customer brings item to a different store than where it was purchased
-Frequency: ~10–20% of all returns (≈5,600–11,200/month chain-wide)
+Frequency: ~10–20% of all returns (≈120–240/month chain-wide)
 Volume: Common for chain-wide customers (contractors, travelers) and loyalty members
 Owner: Customer Service Rep (receiving store)
 Participants: CSR (Store B), Store Manager (Store B), Stock Associate (Store B)

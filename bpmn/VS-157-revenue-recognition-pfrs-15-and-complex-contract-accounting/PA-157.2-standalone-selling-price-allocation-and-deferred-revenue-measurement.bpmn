@@ -363,7 +363,7 @@ Owner: Revenue Accounting Manager</bpmn:text>
     <bpmn:process id="W_W4638" name="W4638. Variable Consideration, Constraint &amp; Estimate-Update (Rebates, Refunds, SC/PWD, Price-Freeze)" isExecutable="false">
       <bpmn:documentation>Trigger: Variable consideration in a contract (rebates, refunds, volume discounts, SC/PWD mandatory discounts, price-freeze, trade-in top-up); quarterly estimate update
 Frequency: Per contract + quarterly
-Volume: Vendor rebates (VS-39), SC/PWD discounts (VS-85), price-freeze (DTI), refunds/returns (~2% return rate), trade-in variance (VS-155)
+Volume: Vendor rebates (VS-39), SC/PWD discounts (VS-85), price-freeze (DTI), refunds/returns (~0.04% return rate — the ~40/day AR-credit-memo canon), trade-in variance (VS-155)
 Owner: Revenue Accounting Manager
 Participants: Trade/Government ops (VS-11/VS-46), Rebate ops (VS-39), Tax (VS-79/VS-85), Controller
 Source: workflow W4638 — Variable Consideration, Constraint &amp; Estimate-Update (Rebates, Refunds, SC/PWD, Price-Freeze)</bpmn:documentation>

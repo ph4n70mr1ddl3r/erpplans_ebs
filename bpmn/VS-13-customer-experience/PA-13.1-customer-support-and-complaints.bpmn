@@ -1901,8 +1901,8 @@ Owner: CX Recovery Specialist</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W707" name="W707. Omnichannel Returns &amp; Refund Orchestration" isExecutable="false">
       <bpmn:documentation>Trigger: Customer initiates return via any channel: in-store POS, ecommerce website, mobile app, customer service hotline; or automated return trigger (damaged in delivery, wrong item shipped)
-Frequency: Daily; ~93,000 POS transactions/day with ~2% return rate (per profile §5); ~1,400 ecommerce orders/day with ~10–12% return-request rate (the W1623 canon)
-Volume: ~1,860 POS returns/day + ~130–170 ecommerce return requests/day (≈ 4,000–5,000/month per W1623, of which the ≈ 3,300–4,200/month store drop-offs flow through W12B/W1273; the remainder ≈ 800–1,700/month is refunded on courier pickup per W215) ≈ ~2,000 total returns/day across all channels
+Frequency: Daily; ~93,000 POS transactions/day at the measured ~0.04% return rate (per profile §5 — the ~40/day AR-credit-memo canon); ~1,430 ecommerce orders/day at the ~0.6–0.8% return-request rate (the W1623 canon)
+Volume: ~32–35 in-store/POS counter returns/day (the counter slice of the ~1,200/month AR-credit-memo returns canon — ~950–1,050/month, per W12A/W1622) + ~8–12 ecommerce return requests/day (≈ 250–350/month per W1623 — the ≈ 200–250/month store drop-offs flow through W12B/W1273 inside the counter slice; the ≈ 50–100/month courier remainder is refunded on pickup per W215) ≈ ~40 total returns/day across all channels (the AR-credit-memo canon)
 Owner: Customer Service Manager
 Participants: Store Associate (in-store returns), Ecommerce Operations (online returns), DC Returns Team (W651 reverse logistics), AR Clerk (refund processing), Customer Service Rep (hotline/chat returns)
 Source: workflow W707 — Omnichannel Returns &amp; Refund Orchestration</bpmn:documentation>

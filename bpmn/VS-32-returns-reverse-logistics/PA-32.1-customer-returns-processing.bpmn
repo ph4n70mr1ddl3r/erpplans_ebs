@@ -2,8 +2,8 @@
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_PA-32.1-customer-returns-processing" targetNamespace="https://erpplans.local/bpmn" exporter="erpplans generate-bpmn.py" exporterVersion="1.0">
     <bpmn:process id="W_W1622" name="W1622. In-Store Customer Return Processing" isExecutable="false">
       <bpmn:documentation>Trigger: Customer brings purchased item(s) to customer service counter for return
-Frequency: ~56,000 returns/month across 200 stores (~2% return rate on 2.8M transactions)
-Volume: ~280 returns/store/month (~9/day); seasonal spikes post-promotion
+Frequency: ~950–1,050 counter returns/month across 200 stores (the ~1,200/month AR-credit-memo returns canon — ~40/day measured at ~1.05 lines/doc, per data-volumes §1.1 — less W1629&#x27;s ~100–150 B2B credit notes and W215&#x27;s ~50–100 courier pickups; ~0.04% of 2.8M transactions)
+Volume: ~5 returns/store/month (950–1,050 ÷ 200 stores); seasonal spikes post-promotion
 Owner: Customer Service Rep
 Participants: CSR, Customer Service Manager, Store Manager (overrides)
 Source: workflow W1622 — In-Store Customer Return Processing</bpmn:documentation>
@@ -125,7 +125,7 @@ Owner: Customer Service Rep</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W1623" name="W1623. Ecommerce Customer Return Initiation &amp; Authorization" isExecutable="false">
       <bpmn:documentation>Trigger: Customer initiates return request via buildright.com.ph or mobile app
-Frequency: ~4,000–5,000 ecommerce return requests/month (~10–12% ecommerce return rate)
+Frequency: ~250–350 ecommerce return requests/month (~0.6–0.8% ecommerce return rate — re-derived inside the ~1,200/month AR-credit-memo returns canon, per data-volumes §1.1)
 Volume: Variable by category; highest for appliances and power tools
 Owner: Customer Service — Ecommerce Returns Specialist
 Participants: Customer, Ecommerce Returns Specialist, Store CSR, DC Returns Processing
@@ -254,8 +254,8 @@ Owner: Customer Service — Ecommerce Returns Specialist</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W1624" name="W1624. Customer Exchange Processing" isExecutable="false">
       <bpmn:documentation>Trigger: Customer requests exchange (different size, color, or item) instead of refund
-Frequency: ~15,000 exchanges/month (~27% of returns result in exchange)
-Volume: ~75 exchanges/store/month
+Frequency: ~325 exchanges/month (~27% of the ~1,200/month returns canon result in exchange)
+Volume: ~1–2 exchanges/store/month
 Owner: CSR
 Participants: CSR, Customer Service Manager
 Source: workflow W1624 — Customer Exchange Processing</bpmn:documentation>
@@ -341,8 +341,8 @@ Owner: CSR</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W1625" name="W1625. Customer Return Without Receipt Processing" isExecutable="false">
       <bpmn:documentation>Trigger: Customer presents item for return without receipt or proof of purchase
-Frequency: ~8,000–10,000 no-receipt returns/month (~15–18% of all returns)
-Volume: ~45–50 per store/month
+Frequency: ~180–215 no-receipt returns/month (~15–18% of all returns)
+Volume: ~1 per store/month
 Owner: Customer Service Manager
 Participants: Customer Service Manager, Store Manager (authorization)
 Source: workflow W1625 — Customer Return Without Receipt Processing</bpmn:documentation>
@@ -440,8 +440,8 @@ Owner: Customer Service Manager</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W1626" name="W1626. Customer Return Quality Assessment &amp; Disposition" isExecutable="false">
       <bpmn:documentation>Trigger: Returned item fails visual inspection during return processing (W1622 step 3)
-Frequency: ~8,000–10,000 returns/month require quality assessment (~15–18% of returns)
-Volume: ~40–50 per store/month
+Frequency: ~180–215 returns/month require quality assessment (~15–18% of returns)
+Volume: ~1 per store/month
 Owner: Department Supervisor
 Participants: Department Supervisor, CSR, Quality Manager (escalated)
 Source: workflow W1626 — Customer Return Quality Assessment &amp; Disposition</bpmn:documentation>
@@ -533,8 +533,8 @@ Owner: Department Supervisor</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W1627" name="W1627. Customer Return Credit Issuance &amp; Refund Processing" isExecutable="false">
       <bpmn:documentation>Trigger: Return transaction completed (W1622, W1623, or W1625)
-Frequency: ~41,000 refund transactions/month (56,000 returns less ~15,000 exchanges per W1624)
-Volume: ~205 per store/month (41,000 refund transactions/month ÷ 200 stores; the ~280/store figure is the all-returns W1622 canon)
+Frequency: ~875 refund transactions/month (the ~1,200/month returns canon less ~325 exchanges per W1624)
+Volume: ~4–5 per store/month (875 refund transactions/month ÷ 200 stores; the ~5/store figure is the counter-returns W1622 canon)
 Owner: CSR (processing); Finance (reconciliation)
 Participants: CSR, Customer Service Manager, AP/AR Clerk, Controller
 Source: workflow W1627 — Customer Return Credit Issuance &amp; Refund Processing</bpmn:documentation>
@@ -648,7 +648,7 @@ Owner: CSR (processing); Finance (reconciliation)</bpmn:text>
     <bpmn:process id="W_W1628" name="W1628. Customer Return Trend Analysis &amp; Fraud Detection" isExecutable="false">
       <bpmn:documentation>Trigger: Monthly returns analysis cycle or real-time fraud alert
 Frequency: Monthly trend analysis; real-time fraud monitoring
-Volume: ~56,000 returns/month across 200 stores
+Volume: ~1,200 returns/month across 200 stores (the AR-credit-memo returns canon)
 Owner: Loss Prevention Manager
 Participants: Loss Prevention Manager, Store Managers, Customer Service Manager, Finance
 Source: workflow W1628 — Customer Return Trend Analysis &amp; Fraud Detection</bpmn:documentation>
@@ -737,8 +737,8 @@ Owner: Loss Prevention Manager</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W1629" name="W1629. B2B Trade Account Return &amp; Credit Note Processing" isExecutable="false">
       <bpmn:documentation>Trigger: Trade or corporate account customer requests return of purchased goods
-Frequency: ~500–700 B2B returns/month (~5% of B2B order volume)
-Volume: ~100–150 consolidated monthly credit notes (covering the ~500–700 B2B returns/month, one per account per month)
+Frequency: ~100–150 B2B returns/month (~2–4% of the ~3,200–5,200 B2B order universe across wholesale, group-purchase and bulk-delivery orders, per VS-11.2/11.3; one credit note per return at the ~1.05-lines/credit-memo measured profile — B2B credit notes ride inside the ~1,200/month AR-credit-memo returns canon)
+Volume: ~100–150 consolidated monthly credit notes (one per returning account per month; the B2B slice of the ~1,200/month returns canon)
 Owner: AR Clerk
 Participants: AR Clerk, Customer Service Manager, Sales Manager, Controller
 Source: workflow W1629 — B2B Trade Account Return &amp; Credit Note Processing</bpmn:documentation>

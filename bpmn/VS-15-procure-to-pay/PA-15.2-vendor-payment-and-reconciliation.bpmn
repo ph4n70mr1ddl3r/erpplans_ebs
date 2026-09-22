@@ -137,8 +137,8 @@ Owner: Treasury Analyst</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W101" name="W101. Customer Refund &amp; Credit Processing" isExecutable="false">
       <bpmn:documentation>Trigger: Customer return approved (W12), ecommerce cancellation (W98), special order deposit refund (W38), customer deposit refund (W94), loyalty points reversal (W17), or credit note issuance from complaint resolution (W41)
-Frequency: ~50,000–58,000 refund/credit transactions/month across all channels (per the Volume)
-Volume: ~48,000–56,000 in-store return refunds/credits (the W12/W1627 returns canon of ~56,000/month, mostly settled at POS by refund or store credit) + ~3,300–4,200 ecommerce refunds (the W12B store drop-off canon; all ecommerce return requests ≈ 4,000–5,000/month per W1623, the remainder refunded on courier pickup) + ~50–100 deposit refunds + ~50–200 trade credit notes/month
+Frequency: ~1,300–1,550 refund/credit transactions/month across all channels (per the Volume)
+Volume: ~950–1,050 in-store return refunds/credits (the W12/W1627 counter-returns canon — the ~1,200/month AR-credit-memo returns canon less W1629&#x27;s ~100–150 B2B credit notes and W215&#x27;s ~50–100 courier pickups; mostly settled at POS by refund or store credit) + ~200–250 ecommerce refunds (the W12B store drop-off canon; all ecommerce return requests ≈ 250–350/month per W1623, the remainder refunded on courier pickup) + ~50–100 deposit refunds + ~100–150 trade credit notes/month (the W1629 canon)
 Owner: CSR (in-store refunds); Ecommerce Customer Support (online refunds); AR Supervisor (trade/corporate credit notes)
 Participants: CSR, Cashier, Store Manager, AR Supervisor, AR Clerk, Ecommerce Customer Support, Treasury Analyst, Controller
 Source: workflow W101 — Customer Refund &amp; Credit Processing</bpmn:documentation>
