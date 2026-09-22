@@ -2570,7 +2570,8 @@ def licensing_bom_hits():
     # Global Price List) resolved every † placeholder on the EBS side: §2 must
     # carry no 'TBD †' form (the Fusion † rows in §3.1/§3.2 stay — the Fusion
     # Cloud GPL is not in-repo), the eight GPL-verified part numbers are
-    # required on the footer-stripped body, the register clause is required,
+    # required in their §2 line-table cell form ('| PN |' — a prose mention
+    # alone no longer satisfies the anchor), the register clause is required
     # and the five no-SKU products must stay recorded in §2.11's custom-quote
     # register (the retired placeholder lines banned with their section).
     if sec_a is not None:
@@ -2580,17 +2581,17 @@ def licensing_bom_hits():
                 "Scenario A still carries a 'TBD †' placeholder line — the 2026-09-22 "
                 "GPL true-up verified every EBS-side line against the in-repo "
                 "Component GPL (the † rows belong to Fusion §3.1/§3.2 only)")
-        for anc in ("L72200", "A92469", "A81412", "L98184", "L10090",
-                    "A85655", "L42119", "A80531"):
+        for anc in ("| L72200 |", "| A92469 |", "| A81412 |", "| L98184 |", "| L10090 |",
+                    "| A85655 |", "| L42119 |", "| A80531 |"):
             if anc not in body:
                 hits.append((rel, 0,
                              f'missing GPL-verified part-number anchor "{anc}" — the '
                              f'2026-09-22 true-up pinned every EBS-side part number to '
                              f'the in-repo Component GPL'))
-        if "no Component-GPL SKU" not in body:
+        if "no Component-GPL SKU** to the same register" not in body:
             hits.append((rel, 0,
                          'missing the custom-quote register clause ("no Component-GPL '
-                         'SKU") — the no-SKU record is required'))
+                         'SKU** to the same register") — the no-SKU record is required'))
         for prod in ("Credit Management", "Oracle Quality", "Engineering",
                      "Project Management", "Environmental Accounting & Reporting"):
             if prod not in body:
