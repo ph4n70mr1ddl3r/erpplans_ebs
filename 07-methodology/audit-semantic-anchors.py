@@ -545,7 +545,12 @@ RETIRED_LITERALS = [
     # the repair — #66 had canonicalized that very form as the per-department planning convention;
     # the batch-24 flag was the over-correction, caught by the guard's own first run)
     "~320–600 hours across 4 DCs",
-    "4 DCs × ~15–20 loads/day",
+    # "4 DCs × ~15–20 loads/day" WITHDRAWN 2026-09-23 (sixty-seventh wave): the batch-24
+    # ban predates the production-volume calibration, which re-declared the chain-wide
+    # load canon at ~60–80 loads/day (= ~15–20/DC/day — the batch's own 1,800–2,400/month
+    # tail already said so); the batch's ×~10=~40 correction is the retired form now
+    # (calibrated_volume_hits bans "= ~40 loads/day"). Same lesson as the withdrawn
+    # '13 departments/~40 categories' flags below: a guard literal outlives its canon.
     "Primarily with top 50 vendors (by spend)",
     "(PHP 50–200 value)",
     "store/DC staff (98%+ of headcount)",

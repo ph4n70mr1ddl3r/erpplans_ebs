@@ -276,7 +276,7 @@ Owner: DC Manager (DC-level); Store Receiving Clerk (store-level)</bpmn:text>
     <bpmn:process id="W_W584" name="W584. DC Daily Operations &amp; Shift Management" isExecutable="false">
       <bpmn:documentation>Trigger: Daily DC operations cycle; shift start (6:00 AM for Day Shift A, 2:00 PM for Night Shift B)
 Frequency: Continuous; 2 shifts per day, 7 days/week per DC
-Volume: 4 DCs; each DC operates ~16 hours/day; ~40 inbound trucks/day + ~30 outbound loads/day per DC; ~150 DC staff per DC in total across two shifts (~60–80 on duty per shift)
+Volume: 4 DCs; each DC operates ~16 hours/day; ~40 inbound trucks/day + ~15–20 outbound loads/day per DC (the ~60–80 outbound loads/day chain-wide consolidated-drop canon per W836); ~150 DC staff per DC in total across two shifts (~60–80 on duty per shift)
 Owner: DC Manager
 Participants: DC Shift Supervisors (2 per DC), DC Receiving Supervisor, DC Dispatch Supervisor, DC Receiving Clerks, Putaway Staff, Pickers, Loaders, Quality Checkers, Yard Staff, Forklift Operators, Cross-Dock Coordinator, Gate Guard
 Source: workflow W584 — DC Daily Operations &amp; Shift Management</bpmn:documentation>
@@ -461,8 +461,8 @@ Owner: DC Manager</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W585" name="W585. DC Dock Scheduling &amp; Appointment Management" isExecutable="false">
       <bpmn:documentation>Trigger: Inbound delivery appointment request (from vendor, carrier, or Buyer) or outbound dispatch scheduling requirement
-Frequency: Continuous; ~70 appointment slots managed per day per DC (40 inbound + 30 outbound)
-Volume: ~1,200 inbound appointments/month per DC; ~900 outbound load slots/month per DC; peak receiving window 8:00–10:00 AM with 15–20 inbound trucks arriving
+Frequency: Continuous; ~55–60 appointment slots managed per day per DC (40 inbound + 15–20 outbound)
+Volume: ~1,200 inbound appointments/month per DC; ~450–600 outbound load slots/month per DC (the ~60–80 loads/day chain-wide canon); peak receiving window 8:00–10:00 AM with 15–20 inbound trucks arriving
 Owner: DC Receiving Supervisor (inbound) / DC Dispatch Supervisor (outbound)
 Participants: DC Receiving Supervisor, DC Dispatch Supervisor, DC Shift Supervisor, Gate Guard, Buyers, Import Coordinator, Vendors/Carriers, 3PL dispatch, Fleet Manager
 Source: workflow W585 — DC Dock Scheduling &amp; Appointment Management</bpmn:documentation>

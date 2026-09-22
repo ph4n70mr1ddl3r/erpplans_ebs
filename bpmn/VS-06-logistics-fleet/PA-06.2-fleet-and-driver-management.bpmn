@@ -1134,7 +1134,7 @@ Owner: Logistics Manager</bpmn:text>
     <bpmn:process id="W_W1256" name="W1256. Returnable Transport Packaging (RTP) Pool Management, Tracking &amp; Reconciliation" isExecutable="false">
       <bpmn:documentation>Trigger: Scheduled — weekly RTP inventory reconciliation; monthly pool health review; ad-hoc triggered by RTP shortage at DC or store accumulation alert
 Frequency: Weekly reconciliation; monthly pool review; annual procurement cycle for RTP replenishment
-Volume: ~2,000 RTP units (pallets, plastic totes, wire baskets) in circulation across 4 DCs and 200 stores; ~5,000 DC-to-store shipments per month using RTP
+Volume: ~2,000 RTP units (pallets, plastic totes, wire baskets) in circulation across 4 DCs and 200 stores; ~1,800–2,400 DC-to-store delivery loads/month using RTP (the consolidated-drop canon — 2–3 drops/store/week, per data-volumes §1.1)
 Owner: Logistics Planner / DC Operations Manager
 Participants: Store Manager, Receiving Clerk, 3PL Transport Coordinator, Procurement Specialist, Finance Controller
 Source: workflow W1256 — Returnable Transport Packaging (RTP) Pool Management, Tracking &amp; Reconciliation</bpmn:documentation>

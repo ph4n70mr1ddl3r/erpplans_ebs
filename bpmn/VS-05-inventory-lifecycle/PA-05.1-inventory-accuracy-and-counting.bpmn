@@ -3,7 +3,7 @@
     <bpmn:process id="W_W4" name="W4. Store Replenishment (DC → Store)" isExecutable="false">
       <bpmn:documentation>Trigger: System generates replenishment suggestion based on min/max or demand forecast
 Frequency: 2–3 physical deliveries per store per week; ~50,000 replenishment orders/month total (production-calibrated per data-volumes §1.1; each delivery consolidates that store&#x27;s ~20–30 transfer orders since the previous drop)
-Volume: ~167 orders/day across all DCs (~42 per DC/day); avg ~50 lines per order
+Volume: ~1,700 orders/day across all DCs (~415–425 per DC/day); avg ~3 lines per order (the production-measured order profile, per data-volumes §1.1)
 Owner: Supply Planner
 Participants: Supply Planner, DC Pick/Pack/Ship team, Truck Driver, Store Receiving Clerk, Store Manager
 Source: workflow W4 — Store Replenishment (DC → Store)</bpmn:documentation>

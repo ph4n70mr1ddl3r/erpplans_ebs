@@ -382,6 +382,24 @@ citations 'sourcing model §12.1' and 'architecture §4' are cross-doc).
  tables and version footers stay exempt as frozen history (the sixteenth-wave
  convention). Teeth: five synthetic injections through the FULL audit, each caught at
  its exact arm, fixtures restored byte-identical.
+
+ 2026-09-23 sixty-seventh-wave consistency review: calibrated_volume_hits extended for
+ the sibling-cell stragglers the calibration and the sixty-sixth-wave sweep both left
+ inside the very files they repaired — W4's own Volume row + four staffing sentences
+ (~167/day, ~42/DC/day, ~50 lines/order under a Frequency row the wave itself re-pointed),
+ PA-04.2's other six volume-citing workflows (W1352 Frequency vs its own re-based Volume;
+ W1353 ~33+~115; W1369 ~148; W1370 ~5,000/month vs its own re-based Background; W836's
+ 4×~10=~40 loads/day vs its own ~1,800–2,400/month clause), PA-04.3's dock-appointment
+ cells (30 outbound loads/DC/day vs the 60–80/day chain-wide canon), W1256's Volume
+ (~5,000 RTP shipments vs its own re-based Background), W277/W461's freight-billable
+ family (~10,000–17,000 home deliveries; ~12,000–20,000 sum), W919's Background tail
+ (~5,000+ movements vs its own repaired Frequency), W784's ~60,000/year annual form,
+ W1415's ~500–800 SKUs/delivery lines-per-drop and PA-10.2's staffing sentence. The
+ repaired cells state the load/drop canon (load = consolidated drop; 60–80 loads/day
+ chain-wide = 15–20/DC/day; W4 at ~1,700 orders/day, ~3 lines/order → ~1,250 pick
+ lines/DC/day) and are anchor-pinned; the PA-15.1 sum form is file-scoped banned.
+ Teeth: three synthetic injections through the FULL audit, each caught at its exact arm,
+ fixtures restored byte-identical.
 """
 
 def _doc_versions():
@@ -2987,7 +3005,26 @@ def calibrated_volume_hits():
     sizing-basis cells and the profile's own §6.5 band against its restated
     §15.1), the ~100 GB/year and ~1,000 GB storage sizing (2), and the
     pre-ecommerce-canon ~10,000 home deliveries/month family (8; the W19 canon
-    is 17,200/month = 573/day). Rule: the retired forms are banned on live
+    is 17,200/month = 573/day).
+
+    2026-09-23 sixty-seventh-wave extension — the sibling-cell stragglers the (b) pass and
+    the sixty-sixth-wave sweep both left inside the very files they repaired: W4's own
+    Volume row + four staffing sentences (PA-05.1 — ~167/day, ~42/DC/day, ~50 lines/order,
+    directly under a Frequency row the wave itself re-pointed), PA-04.2's other six
+    volume-citing workflows (W1352 Frequency ~1,300+~115 against its own re-based Volume;
+    W1353 ~33+~115; W1369 ~148; W1370 ~5,000/month against its own re-based Background;
+    W836's 4×~10=~40 loads/day against its own ~1,800–2,400/month clause), PA-04.3's
+    appointment/dock cells (30 outbound loads/DC/day = 120/day chain-wide against the
+    60–80/day canon), W1256's Volume (~5,000 DC-to-store shipments against its own re-based
+    Background), W277/W461's freight-billable family (~10,000–17,000 home deliveries;
+    ~12,000–20,000 sum), W919's Background tail (~5,000+ monthly movements against its own
+    repaired Frequency), W784's annual form (~60,000 orders/year), W1415's lines-per-drop
+    (~500–800 SKUs/delivery) and PA-10.2's staffing sentence (~42 orders/day, ~50 lines).
+    The load/drop canon these repairs state: one store-delivery load = one consolidated
+    drop (2–3 drops/store/week → ~60–80 loads/day chain-wide = ~1,800–2,400/month =
+    ~15–20/DC/day; 6–10 truck trips/DC/day at 2–3 drops/trip; W4 at ~1,700 orders/day
+    chain-wide, ~3 lines/order → ~1,250 replenishment pick lines/DC/day).
+    Rule: the retired forms are banned on live
     surfaces (whole PA/README files — they carry no history blocks;
     footer-stripped bodies for the versioned docs; the gap-analysis scenario
     tables stay exempt as dated authoring-time records, the sixteenth-wave
@@ -3008,6 +3045,18 @@ def calibrated_volume_hits():
             "~10,000 deliveries", "~330\u2013350 deliveries/day",
             "~400\u2013500/day", "~80\u201390 home deliveries",
             "~55\u201360 store replenishments", "~40\u201350 per DC per day",
+            # sixty-seventh-wave extension: sibling-cell stragglers of the same canon
+            "~167 orders/day", "(~42 per DC/day)", "~42 orders/day",
+            "with ~50 lines each", "~50 lines per order",
+            "~1,300 store-replenishment pick lines",
+            "~33 store replenishment shipments", "~148 shipments",
+            "~5,000 shipments/month chain-wide", "~40\u201350 shipments/DC/day",
+            "~5,000 DC-to-store shipments",
+            "~60,000 store replenishment orders annually",
+            "~10,000\u201317,000 home delivery", "~5,000+ monthly movements",
+            "= ~40 loads/day", "~30 outbound loads/day",
+            "~900 outbound load slots", "~70 appointment slots",
+            "~500\u2013800 SKUs per delivery",
         ]
         for bad in banned:
             if bad in body:
@@ -3086,6 +3135,66 @@ def calibrated_volume_hits():
     if "~1,230 GB data warehouse" not in it28:
         hits.append(("PA-28.2-data-engineering-and-quality.md", 0,
                      'missing DW-size anchor "~1,230 GB data warehouse"'))
+
+    # (e) sixty-seventh-wave anchors — the sibling-cell repairs' corrected forms
+    # required at their cells (a future calibration moves the canon → these re-fire)
+    def _pa(vs_dir, name):
+        return open(os.path.join(REPO, "01-model-company", "workflows", vs_dir,
+                                 name), encoding="utf-8").read()
+
+    pa051 = _pa("VS-05-inventory-lifecycle",
+                "PA-05.1-inventory-accuracy-and-counting.md")
+    for anc in ("~1,700 orders/day across all DCs (~415\u2013425 per DC/day)",
+                "avg ~3 lines per order (the production-measured order profile, "
+                "per data-volumes \u00a71.1)",
+                "handle ~415\u2013425 orders/day with ~3 lines each"):
+        if anc not in pa051:
+            hits.append(("PA-05.1-inventory-accuracy-and-counting.md", 0,
+                         f'missing W4 calibrated anchor "{anc}"'))
+    pa042 = _pa("VS-04-dc-warehouse", "PA-04.2-dc-outbound-operations.md")
+    for anc in ("~1,250 store-replenishment pick lines + ~140\u2013145 ecommerce picks",
+                "~15\u201320 store-replenishment delivery loads + ~140\u2013145 ecommerce parcels",
+                "~1,800\u20132,400 store-delivery loads/month chain-wide",
+                "~15\u201320 store-delivery loads/DC/day",
+                "4 DCs \u00d7 ~15\u201320 loads/day = ~60\u201380 loads/day",
+                "~600,000 store replenishment orders annually",
+                "~155\u2013165 shipments/DC/day",
+                "60\u201390 order lines at the production-measured ~3 lines/order"):
+        if anc not in pa042:
+            hits.append(("PA-04.2-dc-outbound-operations.md", 0,
+                         f'missing calibrated anchor "{anc}"'))
+    pa151 = _pa("VS-15-procure-to-pay",
+                "PA-15.1-invoice-processing-and-matching.md")
+    for anc in ("~17,200 home delivery shipments/month (the W19 canon)",
+                "~18,900\u201319,900 freight-billable movements",
+                "~50,630\u201350,640 monthly IC inventory movements"):
+        if anc not in pa151:
+            hits.append(("PA-15.1-invoice-processing-and-matching.md", 0,
+                         f'missing calibrated anchor "{anc}"'))
+    if "~12,000\u201320,000" in pa151:
+        hits.append(("PA-15.1-invoice-processing-and-matching.md", 0,
+                     "retired calibration form '~12,000–20,000' on a live "
+                     "surface (the W277/W461 freight-billable sum re-foots to "
+                     "~18,900–19,900 with the 17,200/month W19 home-delivery "
+                     "canon)"))
+    pa062 = _pa("VS-06-logistics-fleet", "PA-06.2-fleet-and-driver-management.md")
+    if "~1,800\u20132,400 DC-to-store delivery loads/month using RTP" not in pa062:
+        hits.append(("PA-06.2-fleet-and-driver-management.md", 0,
+                     'missing W1256 RTP anchor "~1,800–2,400 DC-to-store '
+                     'delivery loads/month using RTP"'))
+    pa043 = _pa("VS-04-dc-warehouse", "PA-04.3-dc-operations-management.md")
+    for anc in ("~15\u201320 outbound loads/day per DC",
+                "~450\u2013600 outbound load slots/month per DC",
+                "~55\u201360 appointment slots"):
+        if anc not in pa043:
+            hits.append(("PA-04.3-dc-operations-management.md", 0,
+                         f'missing calibrated anchor "{anc}"'))
+    pa102 = _pa("VS-10-ecommerce-digital",
+                "PA-10.2-order-fulfillment-and-delivery.md")
+    if "~415\u2013425 orders/day \u2248 ~1,250 pick lines/DC/day" not in pa102:
+        hits.append(("PA-10.2-order-fulfillment-and-delivery.md", 0,
+                     'missing staffing anchor "~415–425 orders/day '
+                     '≈ ~1,250 pick lines/DC/day"'))
     return hits
 
 

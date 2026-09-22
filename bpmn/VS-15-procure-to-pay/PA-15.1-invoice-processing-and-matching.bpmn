@@ -585,7 +585,7 @@ Owner: AP Supervisor</bpmn:text>
     <bpmn:process id="W_W277" name="W277. Freight Bill Audit &amp; Payment (FBAP) Reconciliation" isExecutable="false">
       <bpmn:documentation>Trigger: 3PL or freight forwarder submits a consolidated invoice for hundreds of deliveries/transfers.
 Frequency: Weekly / Monthly
-Volume: Thousands of lines per invoice; estimated ~1,700–2,600 DC-to-store delivery shipments/month (W4: 2–3 deliveries/store/week × 200 stores) + ~30–40 inter-DC transfers/month (W22 canon) + ~10,000–17,000 home delivery shipments/month (W19) = ~12,000–20,000 freight-billable movements/month across 4 DCs and multiple 3PL carriers
+Volume: Thousands of lines per invoice; estimated ~1,700–2,600 DC-to-store delivery loads/month (W4: 2–3 deliveries/store/week × 200 stores) + ~30–40 inter-DC transfers/month (W22 canon) + ~17,200 home delivery shipments/month (the W19 canon) = ~18,900–19,900 freight-billable movements/month across 4 DCs and multiple 3PL carriers
 Owner: Logistics Finance Analyst
 Participants: Logistics Finance Analyst, Logistics Manager (rate card negotiation), 3PL Account Manager (dispute resolution), AP Clerk (payment processing), Controller (variance approval)
 Source: workflow W277 — Freight Bill Audit &amp; Payment (FBAP) Reconciliation</bpmn:documentation>
@@ -786,7 +786,7 @@ Owner: Intercompany Accountant</bpmn:text>
     <bpmn:process id="W_W461" name="W461. Intercompany Fulfillment &amp; Logistics Fee Settlement" isExecutable="false">
       <bpmn:documentation>Trigger: Month-end close cycle
 Frequency: Monthly
-Volume: ~12,000–20,000 movements/month (W4, W19, W22; per W277)
+Volume: ~18,900–19,900 movements/month (W4, W19, W22; per W277)
 Owner: Intercompany Accountant
 Participants: Logistics Finance, Ecom Finance, Controller
 Source: workflow W461 — Intercompany Fulfillment &amp; Logistics Fee Settlement</bpmn:documentation>

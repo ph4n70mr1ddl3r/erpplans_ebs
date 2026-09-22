@@ -312,7 +312,7 @@ Owner: DC Operations Manager</bpmn:text>
     <bpmn:process id="W_W836" name="W836. DC Outbound Load Verification &amp; Pre-Dispatch Quality Check" isExecutable="false">
       <bpmn:documentation>Trigger: DC outbound dispatch ready per W106; truck loaded and awaiting dispatch
 Frequency: Daily; ~60–80 outbound loads per day across 4 DCs
-Volume: 4 DCs × ~10 loads/day (the W106 dispatch basis) = ~40 loads/day; ~1,800–2,400 loads/month
+Volume: 4 DCs × ~15–20 loads/day = ~60–80 loads/day (the consolidated-delivery-load canon — 2–3 store drops per store per week — per data-volumes §1.1); ~1,800–2,400 loads/month
 Owner: DC Shipping Supervisor
 Participants: Shipping Supervisor, Picker, Driver, Store Receiving Clerk
 Source: workflow W836 — DC Outbound Load Verification &amp; Pre-Dispatch Quality Check</bpmn:documentation>
@@ -584,7 +584,7 @@ Owner: DC Supervisor</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W1352" name="W1352. DC Outbound Pick Accuracy Verification, Short-Ship Prevention &amp; Error Reporting" isExecutable="false">
       <bpmn:documentation>Trigger: Outbound pick completion for a replenishment order or ecommerce fulfillment wave
-Frequency: Daily per DC; ~1,300 store-replenishment pick lines + ~115 ecommerce picks per DC/day
+Frequency: Daily per DC; ~1,250 store-replenishment pick lines + ~140–145 ecommerce picks per DC/day (the ~3 lines/order production-measured order profile and the ~17,200/month home-delivery canon, per data-volumes §1.1)
 Volume: ~5,500 picks/day across 4 DCs; ~165,000 picks/month (50,000 replenishment orders × ~3 lines — the production-measured order profile, per data-volumes §1.1 — plus ecommerce waves)
 Owner: DC Outbound Supervisor
 Participants: Picker, Quality Checker, DC Outbound Supervisor, Store Receiving Clerk (downstream)
@@ -714,7 +714,7 @@ Owner: DC Outbound Supervisor</bpmn:text>
     <bpmn:process id="W_W1353" name="W1353. DC Outbound Staging, Loading Bay Scheduling &amp; Dock Door Assignment Management" isExecutable="false">
       <bpmn:documentation>Trigger: Pick completion and verification for outbound orders (store replenishment or ecommerce)
 Frequency: Daily per DC; 2 dispatch waves (morning for store replenishment, afternoon for ecommerce)
-Volume: ~33 store replenishment shipments + ~115 ecommerce parcels per DC/day
+Volume: ~15–20 store-replenishment delivery loads + ~140–145 ecommerce parcels per DC/day (the consolidated-drop canon — 2–3 drops/store/week × ~50 stores/DC; the ~50,000 orders at ~20–30 orders per drop — per data-volumes §1.1)
 Owner: DC Dispatch Coordinator
 Participants: Staging Staff, Truck Drivers, 3PL Drivers, DC Outbound Supervisor
 Source: workflow W1353 — DC Outbound Staging, Loading Bay Scheduling &amp; Dock Door Assignment Management</bpmn:documentation>
@@ -993,7 +993,7 @@ Owner: DC Dispatch Coordinator</bpmn:text>
     <bpmn:process id="W_W1369" name="W1369. DC Outbound Multi-Stop Route Optimization &amp; Philippine Road Constraint Management" isExecutable="false">
       <bpmn:documentation>Trigger: Wave released per W1368; outbound loads require route assignment and multi-stop sequencing
 Frequency: Daily per DC during dispatch planning (6:00–8:00 AM)
-Volume: ~148 shipments/DC/day; average 2–3 store drops per truck = ~300–445 planned stops/DC/day
+Volume: ~155–165 shipments/DC/day (the ~15–20 consolidated store-delivery loads + ~140–145 ecommerce parcels, the W1353 staging basis); average 2–3 store drops per truck (the ~6–10 outbound trucks/DC/day W106 dispatch basis) = ~15–20 planned store stops/DC/day
 Owner: DC Dispatch Coordinator
 Participants: DC Dispatch Coordinator, 3PL Carrier Dispatcher, Store Manager (delivery window coordination)
 Source: workflow W1369 — DC Outbound Multi-Stop Route Optimization &amp; Philippine Road Constraint Management</bpmn:documentation>
@@ -1133,8 +1133,8 @@ Owner: DC Dispatch Coordinator</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W1370" name="W1370. DC Outbound Shipment Tracking, Store Delivery Confirmation &amp; POD Reconciliation" isExecutable="false">
       <bpmn:documentation>Trigger: Outbound shipment dispatched from DC dock per W106; or store fails to confirm receipt within expected delivery SLA (1–3 days per model company profile)
-Frequency: Continuous; ~5,000 shipments/month chain-wide; ~1,250 per DC/month
-Volume: ~40–50 shipments/DC/day; average 2–3 store stops per shipment = ~100–150 delivery confirmations/DC/day
+Frequency: Continuous; ~1,800–2,400 store-delivery loads/month chain-wide (the consolidated-drop canon — 2–3 drops/store/week; ~60–80 loads/day — per data-volumes §1.1); ~450–600 per DC/month
+Volume: ~15–20 store-delivery loads/DC/day — one POD confirmation per load = ~15–20 delivery confirmations/DC/day (the consolidated-drop canon, per data-volumes §1.1)
 Owner: DC Dispatch Coordinator (outbound tracking); Store Receiving Clerk (delivery confirmation)
 Participants: DC Dispatch Coordinator, Carrier Driver, Store Receiving Clerk, Store Manager, Supply Planner
 Source: workflow W1370 — DC Outbound Shipment Tracking, Store Delivery Confirmation &amp; POD Reconciliation</bpmn:documentation>
