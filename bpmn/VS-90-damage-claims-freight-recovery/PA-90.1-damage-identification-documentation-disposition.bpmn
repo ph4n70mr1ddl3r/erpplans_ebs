@@ -156,7 +156,7 @@ Owner: DC Operations Manager</bpmn:text>
     <bpmn:process id="W_W3019" name="W3019. Store-Level Damaged-on-Arrival (DOA) &amp; In-Store Damage Reporting" isExecutable="false">
       <bpmn:documentation>Trigger: Store receives damaged goods or in-store damage occurs
 Frequency: Continuous across 200 stores
-Volume: 200 stores; ~5,000 replenishment orders/month chain-wide + DSD
+Volume: 200 stores; ~50,000 replenishment orders/month chain-wide (production-calibrated per data-volumes §1.1) + DSD
 Owner: Store Manager
 Participants: Store Mgr, Receiving Clerk, Stock Associate, Customer Service
 Source: workflow W3019 — Store-Level Damaged-on-Arrival (DOA) &amp; In-Store Damage Reporting</bpmn:documentation>

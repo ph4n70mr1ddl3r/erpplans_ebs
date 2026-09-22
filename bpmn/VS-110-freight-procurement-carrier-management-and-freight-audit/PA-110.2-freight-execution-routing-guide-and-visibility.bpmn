@@ -3,7 +3,7 @@
     <bpmn:process id="W_W3505" name="W3505. Outbound DC-to-Store Freight Planning &amp; Load Tendering" isExecutable="false">
       <bpmn:documentation>Trigger: Store replenishment wave (links to VS-02/VS-04/W1368); routing guide (W3500)
 Frequency: Daily waves; 2–3 deliveries/store/week
-Volume: ~5,000 replenishment orders/month
+Volume: ~50,000 replenishment orders/month (production-calibrated per data-volumes §1.1; consolidated into ~60–80 store delivery drops/day chain-wide)
 Owner: Logistics / DC Operations
 Participants: Logistics (links to VS-06.1), DC Operations (links to VS-04.2), Supply Planning (links to VS-02), Carrier/3PL, Store (links to VS-07.3)
 Source: workflow W3505 — Outbound DC-to-Store Freight Planning &amp; Load Tendering</bpmn:documentation>

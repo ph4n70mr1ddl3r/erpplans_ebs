@@ -75,7 +75,7 @@ Owner: DG/Hazmat Compliance Officer / Logistics</bpmn:text>
     <bpmn:process id="W_W3602" name="W3602. DG Transport Documentation &amp; Manifest Management" isExecutable="false">
       <bpmn:documentation>Trigger: DG shipment (inbound/inter-DC/store-replenishment/ecommerce/customer-delivery)
 Frequency: Per DG shipment
-Volume: All DG shipments (subset of ~6.5K receipts/month (~72K/year), ~5K replenishment orders/month, ~42.9K ecommerce orders/month)
+Volume: All DG shipments (subset of ~6.5K receipts/month (~72K/year), ~50K replenishment orders/month, ~42.9K ecommerce orders/month)
 Owner: DG Shipper / Logistics
 Participants: DG Shipper (certified W3597), Logistics (links to VS-06/VS-110), DC Operations (links to VS-04), Ecommerce (links to VS-10), Import (links to VS-02.2), DG/Hazmat Compliance Officer, Carrier
 Source: workflow W3602 — DG Transport Documentation &amp; Manifest Management</bpmn:documentation>

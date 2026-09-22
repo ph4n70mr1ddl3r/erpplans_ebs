@@ -708,7 +708,7 @@ Owner: Data Steward (within Master Data Management team)</bpmn:text>
     <bpmn:process id="W_W1481" name="W1481. Data Pipeline Disaster Recovery, Failover Testing &amp; RTO/RPO Validation" isExecutable="false">
       <bpmn:documentation>Trigger: Quarterly DR test schedule; or actual data pipeline failure (DC outage, cloud provider incident); or major system upgrade requiring DR validation
 Frequency: Quarterly DR test; continuous monitoring; ad-hoc for actual incidents
-Volume: ~50–80 ETL pipelines (per W881); ~20,000 job executions/month; ~1,000 GB data warehouse
+Volume: ~50–80 ETL pipelines (per W881); ~20,000 job executions/month; ~1,230 GB data warehouse (the 10-year §1.2 retention sizing)
 Owner: Data Engineer
 Participants: BI Manager, IT Database Administrator, IT Infrastructure, Cloud Provider, Data Quality Analyst
 Source: workflow W1481 — Data Pipeline Disaster Recovery, Failover Testing &amp; RTO/RPO Validation</bpmn:documentation>

@@ -294,7 +294,7 @@ Owner: Logistics / Transportation</bpmn:text>
     <bpmn:process id="W_W3501" name="W3501. Freight Tendering, Spot Quote &amp; Capacity Booking" isExecutable="false">
       <bpmn:documentation>Trigger: Shipment ready (links to VS-04/VS-06); routing guide (W3500)
 Frequency: Per shipment + daily/weekly batches
-Volume: ~5,000 replenishment + ~42.9K ecommerce + imports/month
+Volume: ~50,000 replenishment + ~42.9K ecommerce + imports/month
 Owner: Logistics / Transportation
 Participants: Logistics (links to VS-06), DC Operations (links to VS-04), Carrier/3PL, Procurement (links to VS-03)
 Source: workflow W3501 — Freight Tendering, Spot Quote &amp; Capacity Booking</bpmn:documentation>

@@ -2,7 +2,7 @@
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_PA-05.1-inventory-accuracy-and-counting" targetNamespace="https://erpplans.local/bpmn" exporter="erpplans generate-bpmn.py" exporterVersion="1.0">
     <bpmn:process id="W_W4" name="W4. Store Replenishment (DC → Store)" isExecutable="false">
       <bpmn:documentation>Trigger: System generates replenishment suggestion based on min/max or demand forecast
-Frequency: 2–3 physical deliveries per store per week; ~5,000 replenishment orders/month total (each delivery truck carries 2–3 orders consolidated for that store)
+Frequency: 2–3 physical deliveries per store per week; ~50,000 replenishment orders/month total (production-calibrated per data-volumes §1.1; each delivery consolidates that store&#x27;s ~20–30 transfer orders since the previous drop)
 Volume: ~167 orders/day across all DCs (~42 per DC/day); avg ~50 lines per order
 Owner: Supply Planner
 Participants: Supply Planner, DC Pick/Pack/Ship team, Truck Driver, Store Receiving Clerk, Store Manager

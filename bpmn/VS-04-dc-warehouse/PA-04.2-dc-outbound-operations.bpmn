@@ -3,7 +3,7 @@
     <bpmn:process id="W_W106" name="W106. DC Outbound Dispatch &amp; Load Planning" isExecutable="false">
       <bpmn:documentation>Trigger: Daily outbound dispatch planning cycle (initiated each morning after W4 replenishment orders confirmed)
 Frequency: Daily per DC; 2–3 dispatch waves per day (morning, midday, afternoon)
-Volume: ~33 replenishment orders/DC/day + ~115 home delivery orders/DC/day + occasional inter-DC transfers (W22); loaded onto ~6–10 outbound trucks per DC per day
+Volume: ~425 replenishment orders/DC/day (the ~50,000/month production-calibrated canon, per data-volumes §1.1; ~20–30 orders consolidate into each store delivery drop) + ~140–145 home delivery orders/DC/day (the ~17,200/month canon) + occasional inter-DC transfers (W22); loaded onto ~6–10 outbound trucks per DC per day
 Owner: DC Dispatch Supervisor
 Participants: DC Dispatch Supervisor, DC Supervisor, Loaders, Drivers, Fleet Manager, Supply Planner
 Source: workflow W106 — DC Outbound Dispatch &amp; Load Planning</bpmn:documentation>
@@ -855,7 +855,7 @@ Owner: DC Dispatch Coordinator</bpmn:text>
     <bpmn:process id="W_W1368" name="W1368. DC Store Replenishment Wave Planning, Release &amp; Prioritization Management" isExecutable="false">
       <bpmn:documentation>Trigger: Daily outbound planning cycle starts at DC; replenishment orders (auto-generated per W4) ready for processing; or priority store request (stockout risk, promotional launch)
 Frequency: Daily per DC; morning planning cycle starts at 5:00 AM for same-day dispatch
-Volume: ~1,250 replenishment orders/DC/month (5,000 total across 4 DCs); ~40–50 orders processed per DC per day
+Volume: ~12,500 replenishment orders/DC/month (50,000 total across 4 DCs, production-calibrated per data-volumes §1.1); ~415–425 orders processed per DC per day
 Owner: DC Dispatch Coordinator
 Participants: DC Dispatch Coordinator, DC Manager, Supply Planner, Store Manager (priority requests)
 Source: workflow W1368 — DC Store Replenishment Wave Planning, Release &amp; Prioritization Management</bpmn:documentation>

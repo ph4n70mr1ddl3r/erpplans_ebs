@@ -974,8 +974,8 @@ Owner: Logistics Manager (HQ)</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W1372" name="W1372. Customer Delivery Damage, Loss &amp; Shortage Claim Processing &amp; Carrier Liability Settlement" isExecutable="false">
       <bpmn:documentation>Trigger: Customer reports delivery damage, loss, or shortage upon receipt of ecommerce home delivery (W19); or store reports inbound shipment damage during receiving (W109/W666); or customer reports damage from in-store delivery (W5D)
-Frequency: ~200–350 delivery incidents/month chain-wide (per the Volume&#x27;s damage-rate derivation)
-Volume: Damage rate target &lt; 0.5% of shipments; at ~5,000 store replenishment + ~42,900 ecommerce deliveries/month, expected incidents ~240–350/month
+Frequency: ~225–330 delivery incidents/month chain-wide (per the Volume&#x27;s damage-rate derivation)
+Volume: Damage rate target &lt; 0.5% of shipments; at ~1,800–2,400 consolidated store-replenishment delivery drops (the ~50,000 production-calibrated replenishment orders at 2–3 drops/store/week, per data-volumes §1.1) + ~42,900 ecommerce deliveries/month, expected incidents ~225–330/month
 Owner: DC Dispatch Coordinator (store deliveries); Ecommerce Operations (ecommerce deliveries)
 Participants: Store Receiving Clerk, Store Manager, Carrier, Customer, Ecommerce Team, Finance, Insurance Provider
 Source: workflow W1372 — Customer Delivery Damage, Loss &amp; Shortage Claim Processing &amp; Carrier Liability Settlement</bpmn:documentation>

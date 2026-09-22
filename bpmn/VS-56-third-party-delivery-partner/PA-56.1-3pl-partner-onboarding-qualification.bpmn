@@ -312,7 +312,7 @@ Owner: Logistics Manager</bpmn:text>
     <bpmn:process id="W_W2195" name="W2195. 3PL Capacity Planning &amp; Allocation" isExecutable="false">
       <bpmn:documentation>Trigger: Seasonal capacity review or new store openings
 Frequency: Quarterly; ad-hoc for openings
-Volume: 4 DCs; ~10,000 deliveries/month
+Volume: 4 DCs; ~17,200 deliveries/month (the W19 home-delivery canon)
 Owner: Logistics Manager
 Participants: VP Supply Chain, DC Operations
 Source: workflow W2195 — 3PL Capacity Planning &amp; Allocation</bpmn:documentation>

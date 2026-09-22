@@ -2387,7 +2387,7 @@ Owner: AP Accountant</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W919" name="W919. Intercompany Inventory Movement Accounting &amp; Goods-in-Transit Reconciliation" isExecutable="false">
       <bpmn:documentation>Trigger: Goods movement between BuildRight Depot, Inc. (inventory owner) and BuildRight Logistics, Inc. (DC operator); inter-DC transfer; or store replenishment order dispatch from DC
-Frequency: ~5,000 store replenishment orders/month + ~30–40 inter-DC transfers/month + ~600 DSD receipts/month = ~5,630–5,640 IC inventory movements/month
+Frequency: ~50,000 store replenishment orders/month (production-calibrated per data-volumes §1.1) + ~30–40 inter-DC transfers/month + ~600 DSD receipts/month = ~50,630–50,640 IC inventory movements/month
 Volume: ~PHP 3.5–4.0B/month in inventory value moving through IC supply chain
 Owner: Logistics Finance Analyst
 Participants: DC Operations (BuildRight Logistics), Supply Planning, Logistics Finance Analyst, Intercompany Accountant, AP/AR Team

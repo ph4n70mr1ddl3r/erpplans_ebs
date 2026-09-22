@@ -10,7 +10,7 @@ Damage, Claims & Freight Recovery Management workflows for BuildRight Depot Corp
 the identification, documentation, disposition, and financial recovery of damaged, short-shipped,
 or non-conforming goods across the inbound (vendor → DC, vendor → store DSD), inter-DC and DC →
 store, and outbound (store/DC → customer and job site) legs of the supply chain. Covers ~72,000
-inbound receipts/year, ~5,000 store replenishment orders/month, ~42,900 ecommerce orders/month,
+inbound receipts/year, ~50,000 store replenishment orders/month (production-calibrated), ~42,900 ecommerce orders/month,
 and ~515,000 ecommerce orders/year, against ~800–1,000 vendors, mixed owned/3PL fleet, and
 delivery partners.
 

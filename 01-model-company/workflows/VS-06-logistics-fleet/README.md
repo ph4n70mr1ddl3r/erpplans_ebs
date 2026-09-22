@@ -10,7 +10,7 @@ Logistics & fleet: outbound distribution, fleet & driver management, and last-mi
 
 ## Why it matters
 
-~5,000 replenishment orders/month DC→store plus ~42,900 ecommerce orders/month; ~80% third-party fleet; on-time delivery drives store availability and ecommerce NPS.
+~50,000 replenishment orders/month (production-calibrated per data-volumes §1.1) DC→store plus ~42,900 ecommerce orders/month; ~80% third-party fleet; on-time delivery drives store availability and ecommerce NPS.
 
 ## Owner & participants
 

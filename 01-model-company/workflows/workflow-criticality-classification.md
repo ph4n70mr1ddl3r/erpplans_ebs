@@ -120,7 +120,7 @@ Failure in any of these workflows would disrupt store operations or legal compli
 
 | ID | Workflow | Operational Significance |
 |---|---|---|
-| W4 | Store Replenishment (DC → Store) | ~5,000 replenishment orders/month |
+| W4 | Store Replenishment (DC → Store) | ~50,000 replenishment orders/month (production-calibrated) |
 | W4B | Store-Initiated Replenishment Request | Store-level demand signal |
 | W6 | Cycle Counting & Inventory Accuracy | Weekly counts; ≥97% accuracy target |
 | W22 | Stock Transfers (Store-to-Store & Inter-DC) | Multi-location transfers |

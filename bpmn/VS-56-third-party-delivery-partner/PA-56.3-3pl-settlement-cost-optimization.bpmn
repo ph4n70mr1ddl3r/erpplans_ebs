@@ -51,7 +51,7 @@ Owner: Logistics Finance Analyst</bpmn:text>
     <bpmn:process id="W_W2207" name="W2207. Per-Delivery Cost Analysis" isExecutable="false">
       <bpmn:documentation>Trigger: Monthly analysis cycle — Per-Delivery Cost
 Frequency: Monthly
-Volume: ~10,000 deliveries analyzed
+Volume: ~17,200 deliveries analyzed (the W19 home-delivery canon)
 Owner: Logistics Finance Analyst
 Participants: Finance Manager
 Source: workflow W2207 — Per-Delivery Cost Analysis</bpmn:documentation>

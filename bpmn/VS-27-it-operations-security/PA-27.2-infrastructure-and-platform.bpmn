@@ -1446,7 +1446,7 @@ Owner: ERP System Administrator</bpmn:text>
     <bpmn:process id="W_W614" name="W614. Data Warehouse &amp; ETL Pipeline Daily Operations &amp; Monitoring" isExecutable="false">
       <bpmn:documentation>Trigger: Start of business day; ETL pipeline scheduled execution; pipeline failure alert
 Frequency: Daily monitoring; 24/7 automated pipeline execution
-Volume: ~93,000 POS transactions/day (~2.8M/month); ~1,400 ecommerce orders/day; ~18,000 PO lines/month; ~9,500 AP invoices/month; plus HR, inventory, and master data feeds
+Volume: ~93,000 POS transactions/day (~2.8M/month); ~1,400 ecommerce orders/day; ~12,000 PO lines/month; ~9,500 AP invoices/month; plus HR, inventory, and master data feeds
 Owner: BI/Data Engineer
 Participants: BI/Data Engineer, Database Administrator, IT Integration Specialist, BI Analyst, business data stewards
 Source: workflow W614 — Data Warehouse &amp; ETL Pipeline Daily Operations &amp; Monitoring</bpmn:documentation>

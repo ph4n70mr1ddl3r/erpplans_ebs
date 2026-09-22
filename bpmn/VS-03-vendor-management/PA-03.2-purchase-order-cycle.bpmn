@@ -45,7 +45,7 @@ Duration: —</bpmn:documentation>
     <bpmn:process id="W_W2A" name="W2A. Auto-Replenishment (Stocking Items)" isExecutable="false">
       <bpmn:documentation>Trigger: SKU hits reorder point (ROP) in system
 Frequency: Daily review; POs generated daily
-Volume: ~1,200 merchandise POs/month (auto-replenishment + ad-hoc); ~18,000 PO lines/month; excludes ~80–240 blanket/contract release orders/month (W2C), ~20–30 import POs/month (W2B), and ~30–50 non-merchandise POs/month (capex, IT, supplies); total all types: ~1,400–1,600 POs/month
+Volume: ~1,200 merchandise POs/month (auto-replenishment + ad-hoc; ~8,400 lines at the production-measured ~7 lines/PO); ~12,000 PO lines/month all types (~144,000/year, per profile §6.6); excludes ~80–240 blanket/contract release orders/month (W2C), ~20–30 import POs/month (W2B), and ~30–50 non-merchandise POs/month (capex, IT, supplies); total all types: ~1,600–1,900 POs/month (the production-calibrated 55–65/day canon per data-volumes §1.1 — the merchandise + enumerated-class sum ~1,330–1,520 plus the further release/service PO classes inside the measured total)
 Owner: Buyer
 Participants: System (auto-suggest), Buyer, Category Manager (approval if &gt; PHP 50K)
 Source: workflow W2A — Auto-Replenishment (Stocking Items)</bpmn:documentation>

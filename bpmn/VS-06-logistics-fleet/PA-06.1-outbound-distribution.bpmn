@@ -3,7 +3,7 @@
     <bpmn:process id="W_W196" name="W196. Route Planning &amp; Dispatch Optimization" isExecutable="false">
       <bpmn:documentation>Trigger: Released Home Delivery orders (W19) or Store Replenishment orders (W4)
 Frequency: Daily (Morning and Evening waves)
-Volume: ~80–90 home deliveries/DC/day (the ~10,000 deliveries/month canon); ~55–60 store replenishments/DC/day (the ~5,000 replenishment orders/month canon)
+Volume: ~140–145 home deliveries/DC/day (the ~17,200 deliveries/month canon); ~415–425 store replenishment orders/DC/day (the ~50,000 orders/month production-calibrated canon, per data-volumes §1.1; consolidated into 2–3 delivery drops per store per week)
 Owner: Logistics Planner
 Participants: Logistics Planner, DC Dispatch, Drivers, 3PL Partners
 Source: workflow W196 — Route Planning &amp; Dispatch Optimization</bpmn:documentation>

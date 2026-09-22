@@ -10,7 +10,7 @@ Freight Procurement, Carrier Management & Freight Audit workflows for BuildRight
 governing the **transportation-spend and carrier-relationship discipline** across every leg of the
 supply chain: import ocean freight and drayage (~400–600 TEUs/month, profile §7.1), inbound
 vendor→DC and direct-store delivery (~72K receipts/year, ~500–600 DSD/month), inter-DC/inter-island
-line-haul (W66, ~30–40 transfers/month), DC→store replenishment (~5,000 replenishment orders/month
+line-haul (W66, ~30–40 transfers/month), DC→store replenishment (~50,000 replenishment orders/month
 across a ~80% third-party fleet, profile §7.2), and last-mile/customer delivery (~42.9K ecommerce
 orders/month, profile §8). At BuildRight's scale, freight is a major cost line (typically 3–5% of
 revenue at PHP-hundreds-of-millions to low-billions annually) and the carrier base, contracts,

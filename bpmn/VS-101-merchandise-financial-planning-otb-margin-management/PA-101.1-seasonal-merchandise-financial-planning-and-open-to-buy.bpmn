@@ -231,7 +231,7 @@ Owner: Merchandise Planner</bpmn:text>
     <bpmn:process id="W_W3284" name="W3284. Category &amp; Sub-Class Receipt Planning &amp; Commitment Tracking" isExecutable="false">
       <bpmn:documentation>Trigger: Seasonal plan lock; OTB release
 Frequency: Weekly
-Volume: ~18,000 PO lines/month across categories (per profile §6.6)
+Volume: ~12,000 PO lines/month across categories (per profile §6.6)
 Owner: Merchandise Planner
 Participants: Merchandise Planner, Buyers (links to VS-03), Supply Planning (links to VS-02.1), Import (links to VS-02.2)
 Source: workflow W3284 — Category &amp; Sub-Class Receipt Planning &amp; Commitment Tracking</bpmn:documentation>

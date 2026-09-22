@@ -365,6 +365,23 @@ citations 'sourcing model §12.1' and 'architecture §4' are cross-doc).
  (pdftotext every run), every backtick-cited part number existence-checked, the four
  entitlement-flag pins (L11496, L72211, L31659, L42175) and the L72189 collision pin
  required, and the UPK band count re-derived from the band-priced lines.
+
+2026-09-23 sixty-sixth-wave consistency review: calibrated_volume_hits joins the guard
+ for the production-volume calibration's (data-volumes v4.7) derived-surface stragglers
+ — 46 volume-citing cells across 30 documents kept the retired canons after the §1.1/§1.2
+ rows moved: ~5,000 replenishment orders/month (new canon ~50,000/month, ~1,700/day,
+ ~415–425/DC/day; physical deliveries deliberately unchanged — 2–3 drops/store/week,
+ ~20–30 orders consolidated per drop, ~60–80 loads/day chain-wide), the ~18,000 PO
+ lines/month and ~15-lines-per-PO basis (new canon ~12,000 all types at ~7 lines/PO;
+ the profile's own §6.5 band had been left against its restated §15.1), the ~100 GB/year
+ and ~1,000 GB storage sizing (new canon ~123 GB/year, ~1,230 GB over 10 years), and the
+ pre-ecommerce-canon ~10,000 home deliveries/month family (the W19 canon: 17,200/month
+ = ~573/day). The retired forms are banned on live PA/README surfaces (whole files —
+ no history blocks), footer-stripped bodies and the classification register's live cells;
+ the calibrated anchors are required at the repaired cells; the gap-analysis scenario
+ tables and version footers stay exempt as frozen history (the sixteenth-wave
+ convention). Teeth: five synthetic injections through the FULL audit, each caught at
+ its exact arm, fixtures restored byte-identical.
 """
 
 def _doc_versions():
@@ -2954,6 +2971,124 @@ def gap_fill_straggler_hits():
     return hits
 
 
+def calibrated_volume_hits():
+    """2026-09-23 sixty-sixth-wave consistency review — the production-volume
+    calibration's (data-volumes v4.7, cascade 2026-09-22) derived-surface
+    stragglers: the §1.1 canon moved the replenishment row to 1,700/day
+    (~50,000/month, ~250/store, on the measured STROO run-rate; physical
+    deliveries deliberately unchanged at 2–3 drops/store/week, ~20–30 orders
+    consolidated per drop, ~60–80 loads/day chain-wide) and the PO row to
+    55–65/day at the production-measured ~7 lines/PO (~12,000 PO lines/month
+    all types), the §1.2 storage rows to ~123 GB/year (~1,230 GB over 10
+    years), while the volume-citing cells no rule read at that grain kept the
+    retired figures: ~5,000 replenishment orders/month (25 live surfaces across
+    21 PA files/READMEs and the classification register), the ~18,000 PO
+    lines/month and ~15-lines-per-PO basis (6 surfaces incl. the TO's two
+    sizing-basis cells and the profile's own §6.5 band against its restated
+    §15.1), the ~100 GB/year and ~1,000 GB storage sizing (2), and the
+    pre-ecommerce-canon ~10,000 home deliveries/month family (8; the W19 canon
+    is 17,200/month = 573/day). Rule: the retired forms are banned on live
+    surfaces (whole PA/README files — they carry no history blocks;
+    footer-stripped bodies for the versioned docs; the gap-analysis scenario
+    tables stay exempt as dated authoring-time records, the sixteenth-wave
+    convention; the classification register's dated batch-note segments
+    exempt), and the calibrated anchors are required at the repaired cells
+    (when a future calibration moves the canon these anchors re-fire until
+    consciously re-pointed — the Check-71 CENSUS-pin contract)."""
+    hits = []
+
+    def _sweep(relp, body, label):
+        banned = [
+            "5,000 store replenishment", "5,000 replenishment",
+            "~33 replenishment orders", "~1,250 replenishment orders",
+            "18,000 PO lines", "~15 lines per PO",
+            "carries 2\u20133 orders consolidated",
+            "fulfills 2\u20133 replenishment orders",
+            "grows ~100 GB/year", "~1,000 GB data warehouse",
+            "~10,000 deliveries", "~330\u2013350 deliveries/day",
+            "~400\u2013500/day", "~80\u201390 home deliveries",
+            "~55\u201360 store replenishments", "~40\u201350 per DC per day",
+        ]
+        for bad in banned:
+            if bad in body:
+                hits.append((label, body[:body.index(bad)].count("\n") + 1,
+                             f"retired calibration form '{bad}' on a live surface "
+                             f"(the canon is ~50,000 replenishment orders/month, "
+                             f"~12,000 PO lines/month at ~7 lines/PO, ~123 GB/year, "
+                             f"~17,200 home deliveries/month; version footers and "
+                             f"the gap-analysis scenario tables are the "
+                             f"frozen-history surfaces)"))
+
+    # (a) every PA file + VS README — live in full (no history blocks)
+    for pa in sorted(glob.glob(os.path.join(REPO, "01-model-company", "workflows",
+                                            "VS-*", "*.md"))):
+        txt = open(pa, encoding="utf-8").read()
+        _sweep(pa, txt, os.path.basename(pa))
+    for rd in sorted(glob.glob(os.path.join(REPO, "01-model-company", "workflows",
+                                           "VS-*", "README.md"))):
+        txt = open(rd, encoding="utf-8").read()
+        _sweep(rd, txt, "VS README " + os.path.basename(os.path.dirname(rd)))
+
+    # (b) the classification register — live cells only (dated segments exempt)
+    cpath = os.path.join(REPO, "01-model-company", "workflows",
+                         "workflow-criticality-classification.md")
+    clines = open(cpath, encoding="utf-8").read().split("\n")
+    fi = next((i for i, l in enumerate(clines)
+               if l.startswith("*Document Version:") or l.startswith("*Date:")),
+              len(clines))
+    cbody = "\n".join(l for l in clines[:fi] if not l.startswith(" >"))
+    _sweep(cpath, cbody, "workflow-criticality-classification.md")
+    if "~50,000 replenishment orders/month (production-calibrated)" not in cbody:
+        hits.append(("workflow-criticality-classification.md", 0,
+                     'missing W4 significance anchor "~50,000 replenishment '
+                     'orders/month (production-calibrated)"'))
+
+    # (c) versioned docs — footer-stripped live bodies
+    for relp, label in [
+        ("01-model-company/model-company-profile.md", "model-company-profile.md"),
+        ("01-model-company/optimal-table-of-organization.md",
+         "optimal-table-of-organization.md"),
+        ("01-model-company/data-volumes-and-integrations.md",
+         "data-volumes-and-integrations.md"),
+        ("01-model-company/headcount-reality-check.md",
+         "headcount-reality-check.md"),
+        ("07-methodology/it-product-operating-model.md",
+         "it-product-operating-model.md"),
+    ]:
+        body = re.split(r"(?m)^\*Document Version:", open(
+            os.path.join(REPO, relp), encoding="utf-8").read())[0]
+        _sweep(relp, body, label)
+    prof = re.split(r"(?m)^\*Document Version:", open(
+        os.path.join(REPO, "01-model-company", "model-company-profile.md"),
+        encoding="utf-8").read())[0]
+    if "~1,600\u20131,900 total POs (production-calibrated" not in prof:
+        hits.append(("model-company-profile.md", 0,
+                     'missing §6.5 anchor "~1,600–1,900 total POs '
+                     '(production-calibrated" (the §15.1 all-types canon)'))
+    to_body = re.split(r"(?m)^\*Document Version:", open(
+        os.path.join(REPO, "01-model-company",
+                     "optimal-table-of-organization.md"),
+        encoding="utf-8").read())[0]
+    if "~12,000 PO lines/mo" not in to_body:
+        hits.append(("optimal-table-of-organization.md", 0,
+                     'missing procurement sizing-basis anchor "~12,000 PO lines/mo"'))
+
+    # (d) calibrated storage/PO anchors in the IT PA surfaces
+    it27 = open(os.path.join(REPO, "01-model-company", "workflows", "VS-27-"
+                 "it-operations-security", "PA-27.2-infrastructure-and-platform.md"),
+                encoding="utf-8").read()
+    if "~123 GB/year per the §1.2 canon" not in it27:
+        hits.append(("PA-27.2-infrastructure-and-platform.md", 0,
+                     'missing storage-growth anchor "~123 GB/year per the §1.2 canon"'))
+    it28 = open(os.path.join(REPO, "01-model-company", "workflows", "VS-28-"
+                 "data-analytics-bi", "PA-28.2-data-engineering-and-quality.md"),
+                encoding="utf-8").read()
+    if "~1,230 GB data warehouse" not in it28:
+        hits.append(("PA-28.2-data-engineering-and-quality.md", 0,
+                     'missing DW-size anchor "~1,230 GB data warehouse"'))
+    return hits
+
+
 def quote_coverage_hits():
     """2026-09-18 fifty-fifth-wave consistency review — structural guard for the
     cross-repo quote-coverage review (02-oracle-ebs/quote-coverage-review.md; it
@@ -3585,6 +3720,8 @@ def main():
     hits.extend(ebs_doc_coverage_hits())
     # 2026-09-23 Component-GPL sellable-SKU sweep addition (coverage register §7)
     hits.extend(gpl_sku_sweep_hits())
+    # 2026-09-23 sixty-sixth-wave consistency review addition (calibration volumes)
+    hits.extend(calibrated_volume_hits())
     for doc, line, detail in hits:
         print(f"model-doc: {doc}:{line}: {detail}")
     print(f"audit-model-docs: {len(hits)} hit(s) across {len(DOCS)} documents")

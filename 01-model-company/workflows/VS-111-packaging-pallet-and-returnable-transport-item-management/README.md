@@ -12,7 +12,7 @@ the ~35,000-SKU merchandise across the supply chain: product/transport packaging
 corrugate, stretch wrap, dunnage, protective packaging), pallets (wooden and plastic, owned and
 pooled e.g. CHEP/LOSAL), and returnable transport items / RTIs (totes, cages, stillages, IBCs,
 returnable containers, roll cages). At BuildRight's volume (~72K inbound receipts/year, ~400–600
-import TEUs/month, ~5,000 replenishment orders/month, ~134M POS line items/year), packaging and
+import TEUs/month, ~50,000 replenishment orders/month, ~134M POS line items/year), packaging and
 pallets are a material cost line, a real source of damage/shrink, a freight-cost driver (cube/weight
 utilization), and a sustainability/waste/EPR exposure — yet no existing value stream owns the
 packaging-engineering, pallet/RTI pool, or packaging-compliance/cost discipline end-to-end; it is
