@@ -419,6 +419,32 @@ citations 'sourcing model §12.1' and 'architecture §4' are cross-doc).
  replenishment pick lines/day anchor (the wave-67 withdrawal convention).
  Teeth: four synthetic injections through the FULL audit, each caught at its exact arm
  (banned form + missing anchor), fixtures restored sha256-verified byte-identical.
+
+ 2026-09-23 sixty-ninth-wave consistency review: the calibration straggler one layer
+ further out, plus the GPL sweep's misdirected flag — two repairs and two guard
+ extensions. (1) The root README's at-a-glance PO row ('~1,200 merchandise;
+ ~1,400–1,600 total') still carried the retired total-PO band the sixty-sixth wave
+ retired on profile §6.5/TO/W2 and the sixty-eighth wave retired on W3962 — the one
+ volume-citing surface neither the (b) cascade nor waves 66–68 swept (the README sits
+ outside the PA/README glob in calibrated_volume_hits and outside the versioned-doc
+ list; no check read the row at PO-band grain). Trued to the §15.1 canon (~1,200
+ merchandise; ~1,600–1,900 total production-calibrated); calibrated_volume_hits gains
+ the root-README arm (swept whole — un-versioned), the retired '~1,400–1,600 total'
+ form banned and the calibrated anchor required; the loose numeral pair is deliberately
+ NOT banned repo-wide (PA-79.2's separated-employee cells legitimately use it).
+ (2) The §4-resolution-37 Asset-Tracking entitlement flag (L11496 verify-at-RFQ) was
+ appended to the fit-gap register's D6 POS row — a paste-family misdirection: the flag
+ qualifies F7's own 'rides the Install Base/Inventory bases (BOM decision 6)' clause
+ and has no bearing on D6's in-house-checkout disposition, while F7 carried none and
+ resolution 37's own record declares the flags 'carried on the F7/B10 note cells'.
+ The flag sentence moved D6 → F7 verbatim (fit-gap v2.9 footer segment); ebs_blueprint_hits
+ gains the flag-placement arm (the entitlement-flag/L11496 forms banned on the D6 row,
+ the flag anchor required on the F7 row).
+ Teeth: four synthetic injections through the FULL guard, each caught at its exact arm
+ with file and line named (D6 re-mint → both retired-form arms at :156; F7 flag strip →
+ the missing-anchor arm at :197; README band re-mint → the retired-form arm at :342 plus
+ the missing-anchor arm; README anchor-only strip → the missing-anchor arm), fixtures
+ restored sha256-verified byte-identical, clean tree silent at 0 hits.
 """
 
 def _doc_versions():
@@ -1960,7 +1986,15 @@ def ebs_blueprint_hits():
           since the 2026-09-22 sixty-fifth-wave review, (j) data-migration's
           §2 W0 sequence-tree line names the platform of record (the VF-2
           re-point stranded 'into ICM (24)' one section below its own re-pointed
-          row 24; the retired form banned, the corrected anchor required)."""
+          row 24; the retired form banned, the corrected anchor required); and,
+          since the 2026-09-23 sixty-ninth-wave review, (k) the §4-resolution-37
+          entitlement flags ride their own disposition rows — the Asset-Tracking
+          `L11496` flag (a §4-resolution-37/GPL-sweep paste-family misdirection)
+          sat on the D6 POS row, whose in-house-checkout disposition it has no
+          bearing on, while F7 (the Asset-Tracking row whose own note the flag
+          qualifies) carried none, contradicting resolution 37's own 'carried on
+          the F7/B10 note cells' record: the entitlement-flag/L11496 forms are
+          banned on the D6 row and the flag anchor required on the F7 row."""
     hits = []
 
     def ebs(name):
@@ -2341,6 +2375,38 @@ def ebs_blueprint_hits():
         add("data-migration.md", 0,
             "missing the corrected W0 sequence-tree anchor 'the control register "
             "into the Audit & GRC platform (24)'")
+    # ---- (k) the §4-resolution-37 entitlement flags ride their own disposition
+    # rows — 2026-09-23 sixty-ninth-wave review: the Asset-Tracking L11496 flag
+    # was appended to the D6 POS row (a paste-family misdirection — D6's
+    # in-house-checkout disposition has no Asset-Tracking bearing) while F7, the
+    # Asset-Tracking row whose own 'rides the Install Base/Inventory bases (BOM
+    # decision 6)' clause the flag qualifies, carried none — contradicting
+    # resolution 37's own record ('carried on the F7/B10 note cells'). The flag
+    # sentence moved D6 → F7 verbatim; this arm keeps it there.
+    d6_i = next((i for i, l in enumerate(fg_body.splitlines(), 1)
+                 if l.startswith("| D6 |")), 0)
+    f7_i = next((i for i, l in enumerate(fg_body.splitlines(), 1)
+                 if l.startswith("| F7 |")), 0)
+    if not d6_i or not f7_i:
+        add("fit-gap-analysis.md", 0,
+            "disposition rows D6/F7 not found (register structure changed — "
+            "re-point the flag-placement arm)")
+    else:
+        d6_row = fg_body.splitlines()[d6_i - 1]
+        f7_row = fg_body.splitlines()[f7_i - 1]
+        for bad in ("entitlement flag (2026-09-23", "L11496"):
+            if bad in d6_row:
+                add("fit-gap-analysis.md", d6_i,
+                    f"retired form '{bad}' on the D6 POS row (the Asset-Tracking "
+                    f"entitlement flag is misdirected here — its carrier is the "
+                    f"F7 row, per §4 resolution 37's own F7/B10 record)")
+        if "entitlement flag (2026-09-23, coverage register §7)" not in f7_row or \
+                "L11496" not in f7_row:
+            add("fit-gap-analysis.md", f7_i,
+                "missing the Asset-Tracking entitlement-flag anchor on the F7 row "
+                "('entitlement flag (2026-09-23, coverage register §7)' + L11496 "
+                "— the §4-resolution-37 record declares the flags carried on the "
+                "F7/B10 note cells)")
     return hits
 
 
@@ -3060,6 +3126,32 @@ def calibrated_volume_hits():
     60–90-line consolidated-drop canon (the form is "5,000 replenishment" narrowed to
     "5,000 replenishment orders" — the loose form fired on the corrected ~5,000
     replenishment pick lines/day anchor).
+    2026-09-23 sixty-eighth-wave extension — the calibration's own written-cell drift and
+    the new canon rows' unread derived cells: W1352's Time Estimate (written by the
+    calibration itself at ~5,300/~1,060/~265 chain-wide pick lines against the file's own
+    ~1,250/DC/day Frequency anchor → ~5,000 chain-wide; hours re-footed ~7–14/~6–8/~13–21),
+    W92's adjustment cells (PA-05.3 — ~1,700–2,600/month at 200×8–12 + 4×30–50 against the
+    calibration's new §1.1 IAD row ~30/day ≈ ~900/month, measured 3,508–11,652/yr; re-based
+    to 200×~3–5 + 4×~20–30 = ~680–1,120/month, ~1–2 h/store/month), W270's RTP cell
+    (PA-04.3 — ~40 receipts/day/DC against PA-04.1's canon-citing ~50 ×4 cells + §1.1's
+    200/day row; ~2.5 hours/day re-footed), W3962's Volume (PA-129.2 — the retired
+    ~1,400–1,600 POs/month band the sixty-sixth wave retired on profile §6.5/TO/W2; trued
+    to ~1,200 merchandise POs/month, all types ~1,600–1,900/month production-calibrated per
+    data-volumes §1.1), PA-28.2's two remaining 1,000 GB cells (W881 risk bullet + W1481
+    backup step) against its own ~1,230 GB anchor and A6.5/§1.2, and W109/W666's
+    20–50-lines-per-delivery cells (PA-07.3) against the 60–90-line consolidated-drop canon
+    (the form is "5,000 replenishment" narrowed to "5,000 replenishment orders" — the loose
+    form fired on the corrected ~5,000 replenishment pick lines/day anchor).
+
+    2026-09-23 sixty-ninth-wave extension — the calibration straggler one layer further
+    out: the root README's at-a-glance PO row (the one volume-citing surface neither the
+    (b) cascade nor waves 66–68 swept — the README is outside the PA/README-glob and outside
+    the versioned-doc list, and no check read the row at PO-band grain) still carried the
+    retired ~1,400–1,600 total-PO band the sixty-sixth wave retired on profile §6.5/TO/W2
+    and the sixty-eighth wave retired on W3962. Trued to the §15.1 canon; the retired
+    '~1,400–1,600 total' form banned on the README and the calibrated anchor required (the
+    loose '1,400–1,600' numeral pair is NOT banned repo-wide — PA-79.2's separated-employee
+    cells legitimately use it).
     Rule: the retired forms are banned on live
     surfaces (whole PA/README files — they carry no history blocks;
     footer-stripped bodies for the versioned docs; the gap-analysis scenario
@@ -3100,6 +3192,10 @@ def calibrated_volume_hits():
             "~1,400\u20131,600 POs/month",
             "20\u201350 lines per DC delivery", "~20\u201350 lines/SKUs per delivery",
             "1,700\u20132,600 adjustments", "1,000 GB",
+            # sixty-ninth-wave extension: the root-README at-a-glance PO row (the
+            # loose numeral pair is NOT banned — PA-79.2's separated-employee cells
+            # legitimately use it; only the 'total' form is the retired PO band)
+            "~1,400\u20131,600 total",
         ]
         for bad in banned:
             if bad in body:
@@ -3164,6 +3260,15 @@ def calibrated_volume_hits():
     if "~12,000 PO lines/mo" not in to_body:
         hits.append(("optimal-table-of-organization.md", 0,
                      'missing procurement sizing-basis anchor "~12,000 PO lines/mo"'))
+
+    # (c2) the root README — the at-a-glance row the cascade never reached
+    # (sixty-ninth wave): un-versioned, so swept whole.
+    root_readme = open(os.path.join(REPO, "README.md"), encoding="utf-8").read()
+    _sweep(relp="README.md", body=root_readme, label="README.md")
+    if "~1,600\u20131,900 total (production-calibrated)" not in root_readme:
+        hits.append(("README.md", 0,
+                     'missing at-a-glance PO anchor "~1,600–1,900 total '
+                     '(production-calibrated)" (the §15.1 all-types canon)'))
 
     # (d) calibrated storage/PO anchors in the IT PA surfaces
     it27 = open(os.path.join(REPO, "01-model-company", "workflows", "VS-27-"

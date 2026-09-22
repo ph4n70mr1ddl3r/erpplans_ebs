@@ -339,7 +339,7 @@ erpplans/
 | Avg Lines per Transaction | 4 |
 | Staff per Store | 29 |
 | Active SKUs | 35,000 |
-| Monthly Trade Purchase Orders | ~1,200 merchandise; ~1,400–1,600 total |
+| Monthly Trade Purchase Orders | ~1,200 merchandise; ~1,600–1,900 total (production-calibrated) |
 | Legal Entities | 5 |
 | Total Headcount | 6,932 (200 stores × 29 + 600 DC + 532 HQ) |
 | Ecommerce | Yes (with BOPIS) |
