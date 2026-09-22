@@ -175,7 +175,7 @@ Duration: Daily</bpmn:documentation>
         <bpmn:outgoing>W3507_Flow11</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W3507_Task5" name="Logistics/DC consolidate loads: combine replenishment orders by…">
-        <bpmn:documentation>Step 2: Logistics/DC consolidate loads: combine replenishment orders by store/region/priority into full-truck loads (profile §7.2: each truck fulfills 2–3 replenishment orders), co-load inbound/outbound where backhaul opportunities exist, and manage cube/weight utilization; balance consolidation vs service/urgency
+        <bpmn:documentation>Step 2: Logistics/DC consolidate loads: combine replenishment orders by store/region/priority into full-truck loads (profile §7.2: each truck consolidates a store&#x27;s ~20–30 transfer orders since its previous drop), co-load inbound/outbound where backhaul opportunities exist, and manage cube/weight utilization; balance consolidation vs service/urgency
 Responsible (R): Logistics / DC
 Accountable (A): Logistics Manager
 Duration: Daily</bpmn:documentation>

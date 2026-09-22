@@ -69,7 +69,7 @@
 | A6.2 | On-premises deployment — data residency under BuildRight control | Philippine facilities favored for latency; colocation permitted, no public-cloud hosting | Oracle EBS is an on-premises suite, not a cloud/SaaS ERP — running it in BuildRight-controlled facilities keeps RA 10173 data residency fully under the company's control | Technical Guidelines §2.1; `02-oracle-ebs/` §1 |
 | A6.3 | Ecommerce platform | Already-built in-house platform | The custom ecommerce platform is an existing in-house asset (never rebuilt, never bought under the two-tier doctrine); integrated to the ERP core for real-time inventory and pricing sync | Profile §14.1 |
 | A6.4 | Mobile app: branded native app | iOS + Android | Required for BOPIS pickup notifications, loyalty, and customer engagement; built on ERP-provided APIs or third-party | This document |
-| A6.5 | 10-year data retention | BIR requirement (TRAIN/NIRC — Sec. 235, as amended by RA 10963) | Drives storage sizing (~1,000 GB uncompressed over 10 years) | Profile §15.3 |
+| A6.5 | 10-year data retention | BIR requirement (TRAIN/NIRC — Sec. 235, as amended by RA 10963) | Drives storage sizing (~1,230 GB uncompressed over 10 years) | Profile §15.3 |
 
 
 
@@ -98,4 +98,4 @@
 
 ---
 
-*Date: 2026-06-19 (v2 — A6.5 data-retention assumption updated to **10 years (BIR per TRAIN/NIRC — Sec. 235, as amended by RA 10963)** and storage-sizing recomputed to ~1,000 GB uncompressed over 10 years (was 7 years / ~700 GB); aligns with NFR-006, profile §15.3, data-volumes §1.2, technical-guidelines §2.3. v1: "unified cloud ERP" terminology standardized across all documents; counts reconciled with README.md and model-company-profile.md)*
+*Date: 2026-09-23 (v3 — storage-sizing recomputed to **~1,230 GB uncompressed over 10 years** (was ~1,000 GB), the production-calibrated data-volumes §1.2 annual increment of ~123 GB × 10; the A6.5 requirement/vehicle cells unchanged; aligns with NFR-006, profile §15.3, data-volumes §1.2, technical-guidelines §2.3. v2 (2026-06-19): A6.5 data-retention assumption updated to **10 years (BIR per TRAIN/NIRC — Sec. 235, as amended by RA 10963)** and storage-sizing recomputed to ~1,000 GB uncompressed over 10 years (was 7 years / ~700 GB); aligns with NFR-006, profile §15.3, data-volumes §1.2, technical-guidelines §2.3. v1: "unified cloud ERP" terminology standardized across all documents; counts reconciled with README.md and model-company-profile.md)*

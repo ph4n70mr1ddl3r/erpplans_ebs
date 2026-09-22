@@ -584,8 +584,8 @@ Owner: DC Supervisor</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W1352" name="W1352. DC Outbound Pick Accuracy Verification, Short-Ship Prevention &amp; Error Reporting" isExecutable="false">
       <bpmn:documentation>Trigger: Outbound pick completion for a replenishment order or ecommerce fulfillment wave
-Frequency: Daily per DC; ~33 store replenishment picks + ~115 ecommerce picks per DC/day
-Volume: ~600 picks/day across 4 DCs; ~18,000 picks/month
+Frequency: Daily per DC; ~1,300 store-replenishment pick lines + ~115 ecommerce picks per DC/day
+Volume: ~5,500 picks/day across 4 DCs; ~165,000 picks/month (50,000 replenishment orders × ~3 lines — the production-measured order profile, per data-volumes §1.1 — plus ecommerce waves)
 Owner: DC Outbound Supervisor
 Participants: Picker, Quality Checker, DC Outbound Supervisor, Store Receiving Clerk (downstream)
 Source: workflow W1352 — DC Outbound Pick Accuracy Verification, Short-Ship Prevention &amp; Error Reporting</bpmn:documentation>

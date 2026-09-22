@@ -166,7 +166,7 @@ The company operates through **5 legal entities** organized as follows:
 | **Operational supply chain** | | |
 | &nbsp;&nbsp;DC Operations (Manager + Coordinators ×8 + Analyst) | 10 | DC throughput across 4 DCs (VS-04); 2 coordinators per DC |
 | &nbsp;&nbsp;Fleet & Logistics | 6 | Outbound distribution, 3PL, inter-island freight (VS-06 / VS-66) |
-| &nbsp;&nbsp;Procurement / PO Execution (Mgr + Specialists ×6 + Coordinators ×2) | 9 | Vendor PO/release execution, ~18,000 PO lines/mo (VS-03) |
+| &nbsp;&nbsp;Procurement / PO Execution (Mgr + Specialists ×6 + Coordinators ×2) | 9 | Vendor PO/release execution, ~12,000 PO lines/mo (VS-03) |
 | &nbsp;&nbsp;Imports & Customs (Mgr + Brokers ×2 + Coordinators ×2 + Doc Specialist) | 6 | Import coordination, customs brokerage, 400–600 TEU/mo (VS-122 / VS-87) |
 | &nbsp;&nbsp;Vendor Management (Mgr + Scorecard Analyst + Portal Specialists ×2) | 4 | Vendor scorecard, portal/ASN hygiene (VS-03 / VS-67) |
 | &nbsp;&nbsp;Inventory Planning (Mgr + Planners ×2 + Replenishment/Allocation Analysts ×2) | 5 | ROP/safety-stock policy, replenishment quality, VS-136 multi-echelon (VS-05) |
@@ -300,8 +300,8 @@ The company operates through **5 legal entities** organized as follows:
 | **Reorder Point (ROP)** | Calculated per SKU based on avg daily demand × lead time + safety stock |
 | **Safety Stock Policy** | 1–2 weeks of demand for A-items; 2–4 weeks for B-items; minimal for C-items |
 | **ABC Classification** | A: top 20% SKUs = 80% revenue; B: next 30% = 15% revenue; C: bottom 50% = 5% revenue |
-| **Purchase Order Average Lines** | ~15 lines per PO |
-| **Monthly PO Lines** | ~18,000 |
+| **Purchase Order Average Lines** | ~7 lines per PO (production-measured) |
+| **Monthly PO Lines** | ~12,000 |
 
 ---
 
@@ -317,11 +317,11 @@ The company operates through **5 legal entities** organized as follows:
 - Payment terms: typically 30–60 days for local; LC/TT for imports
 
 ### 7.2 Outbound Logistics (DC → Store)
-- **Replenishment Frequency**: 2–3 deliveries per store per week (each delivery may contain 2–3 replenishment orders combined for efficiency)
+- **Replenishment Frequency**: 2–3 deliveries per store per week (each delivery consolidates the ~20–30 replenishment transfer orders generated since the previous drop)
 - **Fleet**: Mix of owned (20%) and third-party (80%) trucks
 - **Vehicle Types**: 10-wheeler wing vans, 6-wheeler trucks, multi-drop routing
 - **Delivery Lead Time**: 1–3 days from DC order to store receipt
-- **Store Replenishment Orders**: ~4,500–5,500 per month (across all stores); each delivery truck typically fulfills 2–3 replenishment orders (grouped by category or priority into a single shipment), reconciling to 2–3 physical deliveries per store per week
+- **Store Replenishment Orders**: ~48,000–52,000 per month (across all stores; ~250 per store — production-calibrated against the actual operator's STROO inter-branch run-rate of ~480,000–530,000 transfer orders/year at ~3 lines/order, per `data-volumes-and-integrations.md` §1.1); each delivery truck consolidates the transfer orders generated since its last visit into a single shipment, reconciling to 2–3 physical deliveries per store per week
 
 ### 7.3 Store Receiving
 - Each store receives 2–3 trucks per week
@@ -771,9 +771,11 @@ The following external systems are actively integrated with the core ERP system.
 | POS Transactions | 2,800,000 | 33,600,000 |
 | POS Line Items | 11,200,000 | 134,400,000 |
 | Purchase Orders (merchandise) | 1,200 | 14,400 |
-| Purchase Orders (all types) | ~1,400–1,600 | ~17,000–19,000 |
-| Purchase Order Lines | 18,000 | 216,000 |
-| Store Replenishment Orders | ~5,000 | ~60,000 |
+| Purchase Orders (all types) | ~1,600–1,900 | ~19,000–23,000 |
+| Purchase Order Lines | ~12,000 | ~144,000 |
+| Store Replenishment Orders | ~50,000 | ~600,000 |
+| AR Credit Memos (customer returns) | ~1,200 | ~14,500 |
+| Inventory Adjustment Documents | ~900 | ~11,000 |
 | Goods Receipts (Inbound) | ~6,000 | ~72,000 |
 | Ecommerce Orders | ~42,900 | ~515,000 |
 | AR Invoices | ~3,500 | ~42,000 |
@@ -896,7 +898,7 @@ The following external systems are actively integrated with the core ERP system.
 
 ---
 
-*Document Version: 3.1 | Date: 2026-09-18 | **Actual-org gap-fill (+21 HQ).** Benchmarking the TO against the operating company's actual table of organization (CitiHardware TOM workbook) surfaced four store-embedded workload cells the workflow-derived sizing had left to unseated ghost titles or unbased absorption claims — confirmed by the repo's own virtual-gemba/time-and-motion staffing-claim audit (PA-22.2's 10-audits/month cadence ≈ a 20-month network cycle; the unseated 'Store HR Administrator' owner in VS-183; the unseated VS-12 'Services Manager'; ownerless PA-30.3/VS-88 document control). §3.3 HQ 511 → **532** (IA 9 → **14** ops-compliance cell; HR 42 → **55** store HR coordinators; CS 34 → **35** services manager; Strategy 4 → **6** BPM/IMS cell), §4 total 6,911 → **6,932** with the quotient re-derived **~PHP 62.3B ÷ 6,932 ≈ PHP 8.99M**, §11.1 per-executive table re-footed (CEO 49 · CFO 76 · COO 156 · CIO 122 · CMO 30 · CHRO 68 · VP Legal 24; **525 + 7 = 532**), §11.2/§15.2/§17 employee-count rows re-based. Store (5,800) and DC (600) staffing unchanged; revenue canon unchanged; the store-side density delta vs the actual operator (≈40/store incl. SP labor vs 29/store) is flagged as a labor-model decision, not adopted. Prior v3.0 (2026-09-14) | **Structure promotion — the optimal TO is the actual organization of record.** By executive direction the two-state discipline collapses: the adopted target-state table of organization ([`optimal-table-of-organization.md`](optimal-table-of-organization.md)) is **promoted to the actual structure** — §3.3 HQ Headcount 362 → **511** with all 18 department bullets re-based to the promoted values (Merch 43 · Finance 62 · SC 46 · IT 122 · HR 42 · Marketing 30 · Store Ops 24 · Legal 20 · IA 9 · CS 34 · LP 27 · HSE 13 · Quality 5 · Facilities 12 · ESG 4 · Strategy 4 · Trade 7 + Executive Office 7), §3.3's SC sub-team table re-based to 46 and §13.1's merchandising breakdown to 43 (both instantiating the TO §5.2 register mix), §4 total 6,762 → **6,911** with the revenue-per-employee division re-derived **~PHP 62.3B ÷ 6,911 ≈ PHP 9.01M**, §11.1's per-executive table re-footed (CEO 47 · CFO 71 · COO 155 · CIO 122 · CMO 30 · CHRO 55 · VP Legal 24; **504 + 7 = 511**), and the three remaining live employee-count rows re-based to the same canon (§11.2 Payroll-Parameters Total Employees, §15.2 Master-Data Employees row, §17 user-adoption bullet). The IT department runs the product-centric operating model as its actual structure (17 teams / 122 FTE, OM v3.13). Store (5,800) and DC (600) staffing unchanged; revenue canon unchanged. Prior v2.28 | Date: 2026-09-14 | Two-tier sourcing doctrine trued (sourcing model
+*Document Version: 3.2 | Date: 2026-09-23 | **Production-volume calibration** (by direction: check the operator's production data for realistic transaction volumes and adjust — see `data-volumes-and-integrations.md` §1.1, v4.7): §7.2 Store-Replenishment-Orders ~4,500–5,500/month → **~48,000–52,000/month (~250/store)** on the production STROO run-rate with the delivery-consolidation wording trued (each truck consolidates the ~20–30 transfer orders since the previous drop; the 2–3-deliveries/store/week cadence unchanged), §9 Purchase-Order-Average-Lines ~15 → **~7 lines/PO** (production-measured) and Monthly-PO-Lines ~18,000 → **~12,000**, §3.3 Procurement row's PO-lines/mo trued to ~12,000, §15.1 rows re-based (POs all-types ~1,600–1,900/month, PO Lines ~12,000/~144,000, Replenishment Orders ~50,000/~600,000) with two production-evidenced rows added (AR Credit Memos ~1,200/~14,500; Inventory Adjustment Documents ~900/~11,000). No revenue, headcount, store-count or POS-canon change. Prior v3.1 | Date: 2026-09-18 | **Actual-org gap-fill (+21 HQ).** Benchmarking the TO against the operating company's actual table of organization (CitiHardware TOM workbook) surfaced four store-embedded workload cells the workflow-derived sizing had left to unseated ghost titles or unbased absorption claims — confirmed by the repo's own virtual-gemba/time-and-motion staffing-claim audit (PA-22.2's 10-audits/month cadence ≈ a 20-month network cycle; the unseated 'Store HR Administrator' owner in VS-183; the unseated VS-12 'Services Manager'; ownerless PA-30.3/VS-88 document control). §3.3 HQ 511 → **532** (IA 9 → **14** ops-compliance cell; HR 42 → **55** store HR coordinators; CS 34 → **35** services manager; Strategy 4 → **6** BPM/IMS cell), §4 total 6,911 → **6,932** with the quotient re-derived **~PHP 62.3B ÷ 6,932 ≈ PHP 8.99M**, §11.1 per-executive table re-footed (CEO 49 · CFO 76 · COO 156 · CIO 122 · CMO 30 · CHRO 68 · VP Legal 24; **525 + 7 = 532**), §11.2/§15.2/§17 employee-count rows re-based. Store (5,800) and DC (600) staffing unchanged; revenue canon unchanged; the store-side density delta vs the actual operator (≈40/store incl. SP labor vs 29/store) is flagged as a labor-model decision, not adopted. Prior v3.0 (2026-09-14) | **Structure promotion — the optimal TO is the actual organization of record.** By executive direction the two-state discipline collapses: the adopted target-state table of organization ([`optimal-table-of-organization.md`](optimal-table-of-organization.md)) is **promoted to the actual structure** — §3.3 HQ Headcount 362 → **511** with all 18 department bullets re-based to the promoted values (Merch 43 · Finance 62 · SC 46 · IT 122 · HR 42 · Marketing 30 · Store Ops 24 · Legal 20 · IA 9 · CS 34 · LP 27 · HSE 13 · Quality 5 · Facilities 12 · ESG 4 · Strategy 4 · Trade 7 + Executive Office 7), §3.3's SC sub-team table re-based to 46 and §13.1's merchandising breakdown to 43 (both instantiating the TO §5.2 register mix), §4 total 6,762 → **6,911** with the revenue-per-employee division re-derived **~PHP 62.3B ÷ 6,911 ≈ PHP 9.01M**, §11.1's per-executive table re-footed (CEO 47 · CFO 71 · COO 155 · CIO 122 · CMO 30 · CHRO 55 · VP Legal 24; **504 + 7 = 511**), and the three remaining live employee-count rows re-based to the same canon (§11.2 Payroll-Parameters Total Employees, §15.2 Master-Data Employees row, §17 user-adoption bullet). The IT department runs the product-centric operating model as its actual structure (17 teams / 122 FTE, OM v3.13). Store (5,800) and DC (600) staffing unchanged; revenue canon unchanged. Prior v2.28 | Date: 2026-09-14 | Two-tier sourcing doctrine trued (sourcing model
 v3.0, OM v3.11): §14.1 re-issued under the two-tier doctrine — the TO banner re-pointed; the
 Active-ERP-Landscape table re-issued (Warehouse & Transport rows → in-suite Oracle WMS/MSCA
 + Shipping/OTE; Planning/Trade-Management row → the EBS-family stack; the POS estate,

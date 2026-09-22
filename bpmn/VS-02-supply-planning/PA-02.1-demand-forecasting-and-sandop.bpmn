@@ -593,8 +593,8 @@ Owner: DC Operations Manager</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W596" name="W596. Store-Level Replenishment Exception Management &amp; Auto-Override" isExecutable="false">
       <bpmn:documentation>Trigger: System flags replenishment exceptions in the automated suggested order queue; Supply Planner identifies override need; Store Manager escalates stock-out emergency
-Frequency: Daily exception queue review; ~60–90 exceptions/week across all DCs (250–400/month)
-Volume: ~5,000 replenishment orders/month total (W4); ~5–8% generate exceptions requiring manual intervention = ~250–400 exceptions/month; exception types: new store ramp-up (~10%), promotional spike (~25%), store-specific demand anomaly (~20%), supply shortage allocation override (~30%), system parameter error (~15%)
+Frequency: Daily exception queue review; ~580–920 exceptions/week across all DCs (2,500–4,000/month)
+Volume: ~50,000 replenishment orders/month total (W4; production-calibrated per data-volumes §1.1); ~5–8% generate exceptions requiring manual intervention = ~2,500–4,000 exceptions/month; exception types: new store ramp-up (~10%), promotional spike (~25%), store-specific demand anomaly (~20%), supply shortage allocation override (~30%), system parameter error (~15%)
 Owner: Supply Planner
 Participants: Supply Planner, Supply Planning Manager (A for high-value overrides), Category Manager (A for allocation conflicts), Store Manager (R for stock-out escalation), DC Supervisor (R for expedited picking), Logistics Coordinator (R for expedited transport)
 Source: workflow W596 — Store-Level Replenishment Exception Management &amp; Auto-Override</bpmn:documentation>

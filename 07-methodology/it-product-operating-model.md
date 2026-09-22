@@ -771,6 +771,6 @@ three-tier landscape (unified ERP core, BoB WMS/TMS/WFM/FSM edges, in-house OMO/
 archetypes + Vendor PM + build squads, SIB governance, per-archetype release cadences,
 sizing 80 → 115. Prior v1.1 (2026-09-02, review #68) and v1.0 (2026-09-01): unified-model
 12-team design at 80 FTE. Downstream: `optimal-table-of-organization.md` v2.7 (HQ 532 /
-total 6,932 — the actual structure of record, gap-filled 2026-09-18), `model-company-profile.md` v3.1,
+total 6,932 — the actual structure of record, gap-filled 2026-09-18), `model-company-profile.md` v3.2,
 `technical-guidelines.md` v3.4,
 `capability-sourcing-and-engineering-model.md` v3.6.*

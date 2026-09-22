@@ -10,7 +10,7 @@ Supply planning: demand forecasting & S&OP, import & customs operations, and sup
 
 ## Why it matters
 
-~40% of COGS imported (~400–600 TEUs/month, 45–90-day lead times); demand-forecast accuracy compounds over long lead times and drives the 6–8x inventory-turn target. ~5,000 replenishment orders/month.
+~40% of COGS imported (~400–600 TEUs/month, 45–90-day lead times); demand-forecast accuracy compounds over long lead times and drives the 6–8x inventory-turn target. ~50,000 replenishment orders/month (production-calibrated per data-volumes §1.1 — fine-grained ~3-line transfer orders consolidated into 2–3 physical deliveries per store per week).
 
 ## Owner & participants
 

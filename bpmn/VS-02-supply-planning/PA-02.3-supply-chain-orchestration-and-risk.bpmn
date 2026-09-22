@@ -540,7 +540,7 @@ Owner: VP Supply Chain / Procurement Director</bpmn:text>
     <bpmn:process id="W_W680" name="W680. Supply Chain Cost Analysis &amp; Logistics Optimization Review" isExecutable="false">
       <bpmn:documentation>Trigger: Monthly cost analysis cycle; quarterly optimization review
 Frequency: Monthly cost analysis; quarterly optimization review; annual strategic assessment
-Volume: ~PHP 3-4B annual supply chain cost (inbound freight, DC operations, outbound distribution, 3PL, port/customs); ~60,000 store replenishment orders/year
+Volume: ~PHP 3-4B annual supply chain cost (inbound freight, DC operations, outbound distribution, 3PL, port/customs); ~600,000 store replenishment orders/year (production-calibrated per data-volumes §1.1)
 Owner: VP Supply Chain
 Participants: DC Operations Manager, Logistics Manager, FP&amp;A Analyst, Procurement Manager
 Source: workflow W680 — Supply Chain Cost Analysis &amp; Logistics Optimization Review</bpmn:documentation>
