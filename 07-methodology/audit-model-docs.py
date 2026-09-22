@@ -465,7 +465,7 @@ def live_pin_hits():
     return hits
 
 
-import argparse, glob, os, re, sys
+import argparse, glob, os, re, subprocess, sys
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MC = os.path.join(REPO, "01-model-company")
@@ -2948,6 +2948,55 @@ def ebs_doc_coverage_hits():
             hits.append((rel, body[:mm.start()].count("\n") + 1,
                          f"cites guide `{stem}` -- no such PDF in "
                          f"ebs_docs/current/acrobat/"))
+    # ---- (f) per-row page-count re-derivation — 2026-09-21 sixty-third-wave
+    # review: every basename-cited '/ Np' form must equal the pdfinfo page sum of
+    # the cited guides (the register's convention is combined per-product sums),
+    # and an 'across k files' suffix must equal the cited-guide count. The defect
+    # class: EDC-21's '(3 guides / 474p)' against a library that ships two HRMSi
+    # Strategic Reporting guides (94p + 286p = 380p — 94 + 286 + 94 = 474, the
+    # Deploy guide double-counted). The titleless per-row citations (EDC-15/16/18/
+    # 19/21/22/24's guide names without basenames) stay outside the pdfinfo arm —
+    # re-deriving those needs a page-1 title scan of all 376 PDFs per run — and
+    # are pinned instead where defective (EDC-21, arm (g)).
+    pcache = {}
+
+    def pdf_pages(stem):
+        if stem not in pcache:
+            out = subprocess.run(["pdfinfo", os.path.join(lib, stem + ".pdf")],
+                                 capture_output=True, text=True).stdout
+            mm2 = re.search(r"Pages:\s+(\d+)", out)
+            pcache[stem] = int(mm2.group(1)) if mm2 else None
+        return pcache[stem]
+
+    for mm in re.finditer(r"`(122[a-z0-9]+(?:`, `122[a-z0-9]+)*)` / ([\d,]+)p"
+                          r"(?: across (\d+) files)?", body):
+        gs = re.findall(r"122[a-z0-9]+", mm.group(1))
+        cited = num(mm.group(2))
+        try:
+            actual = sum(pdf_pages(g) for g in gs)
+        except Exception:
+            continue  # a missing PDF is arm (d)'s finding
+        if actual != cited:
+            hits.append((rel, body[:mm.start()].count("\n") + 1,
+                         f"cited {cited}p for {gs} but pdfinfo sums {actual}p "
+                         f"(the register's convention is the combined per-product "
+                         f"sum)"))
+        if mm.group(3) and int(mm.group(3)) != len(gs):
+            hits.append((rel, body[:mm.start()].count("\n") + 1,
+                         f"cited 'across {mm.group(3)} files' for {gs}"))
+    # ---- (g) the EDC-21 HRMSi citation — 2026-09-21 sixty-third-wave review:
+    # the library ships exactly two HRMSi Strategic Reporting guides
+    # (`122hrdsrig` 94p Deploy guide + `122hrdsrug` 286p user guide = 380p);
+    # pin the corrected form and ban the double-counted one.
+    edc21 = next((l for l in body.splitlines() if l.startswith("| **EDC-21** |")), "")
+    if "2 guides / 380p" not in edc21:
+        hits.append((rel, 0,
+                     "EDC-21 must cite the library truth 'HRMSi Strategic Reporting "
+                     "(2 guides / 380p)' (122hrdsrig 94p + 122hrdsrug 286p)"))
+    if "3 guides / 474p" in body:
+        hits.append((rel, body[:body.index("3 guides / 474p")].count("\n") + 1,
+                     "retired EDC-21 citation '3 guides / 474p' (the Deploy guide "
+                     "was double-counted: 94 + 286 + 94 = 474)"))
     # ---- (e) the §3 POS-confirmation row must state the library truthfully --
     # 2026-09-21 sixty-first-wave manuals sweep: the v1.0 confirmation 'No EBS
     # POS product exists in the library' was false as stated (Oracle Channel
