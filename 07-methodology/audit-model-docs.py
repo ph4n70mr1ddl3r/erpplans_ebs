@@ -549,7 +549,14 @@ RETIRED_FIGURES = ["6,757", "6,715", "5,357", "5,362", "5,349", "5,341",
 # merchandise-invoice count (~6,715/month, 3-way match per W7 — profile §10.2/§15.1),
 # not the retired 6,715 HQ headcount total: the one surface where the digits
 # legitimately recur.
-RETIRED_FIGURE_EXEMPT = {"data-volumes-and-integrations.md": {"6,715"}}
+RETIRED_FIGURE_EXEMPT = {"data-volumes-and-integrations.md": {"6,715"},
+                         # 2026-09-22: the BOM's 22%-support derivation states $10,716,715
+                         # (48,712,340 × 0.22 = 10,716,714.8) — the retired 6,715 HQ-headcount
+                         # literal occurs only as an incidental substring of that larger
+                         # figure (the data-volumes precedent, where 6,715 is the canonical
+                         # AP merchandise-invoice count). A standalone 6,715 in the BOM
+                         # remains impossible by construction (all cells are 6-7 figure sums).
+                         "licensing-bom.md": {"6,715"}}
 
 # Consistency review #68 — doc-scoped retired literals (the exact defect forms
 # the review repaired; matches on version-history footer lines are exempt) and
@@ -679,7 +686,7 @@ ANCHORS = {
     ],
     "fit-gap-analysis.md": [
         "of which 4 rows predate",
-        "5 rows are new scope the doctrine creates",
+        "6 rows are new scope the doctrine creates",
     ],
     "module-coverage-map.md": [
         "| **Innovation & Digital Transformation** |",
@@ -1945,18 +1952,31 @@ def ebs_blueprint_hits():
     # Incentive Compensation, Bill Presentment Architecture, E-Business Tax
     # Reporting, Copy Inventory Organization) -- register 97 -> 103 rows,
     # FIT-STD/FIT-CFG 37 -> 40 each, 80 standard = 77.7% of 103.
-    expect = {"FIT-STD": 40, "FIT-CFG": 40, "PER": 2, "EXT": 1, "LOC": 1,
-              "INT": 5, "BUILD": 14, "EDGE": 0, "OPEN": 0}
+    # 2026-09-21 batch-27 re-base: the coverage register's remaining 19 rows
+    # dispositioned (fit-gap §4 resolution 35) -- six native vehicles adopted
+    # (B14 e-Commerce Gateway, D18 Sales Contracts, D19 Knowledge Management,
+    # D20 Customer Data Librarian + Customers Online, F7 Asset Tracking +
+    # iAssets, H18 Report Manager) and six realization trues (A10/B10/C5/C10/
+    # D14/H5) -- register 103 -> 109 rows, FIT-STD 40 -> 44, FIT-CFG 40 -> 42,
+    # 86 standard = 78.9% of 109.
+    # 2026-09-22 Vision-findings re-disposition (fit-gap §4 resolution 36):
+    # VF-2 -- H11 Oracle Internal Controls Manager re-dispositioned FIT-CFG ->
+    # BUILD (AMW registered '(Obsolete)', no installation record on either
+    # installation of record); VF-1 -- A11's vehicle naming trued to
+    # Receivables Revenue Management (in-suite AR). Register stays 109 rows;
+    # FIT-CFG 42 -> 41, BUILD 14 -> 15, 85 standard = 78.0% of 109.
+    expect = {"FIT-STD": 44, "FIT-CFG": 41, "PER": 2, "EXT": 1, "LOC": 1,
+              "INT": 5, "BUILD": 15, "EDGE": 0, "OPEN": 0}
     for cls, want in expect.items():
         got = counts.get(cls, 0)
         if got != want:
             add("fit-gap-analysis.md", 0,
                 f"register re-derives {got} {cls} rows but §3 pins {want} — the "
                 f"class-count table no longer foots against the §2 register")
-    if total != 103:
+    if total != 109:
         add("fit-gap-analysis.md", 0,
             f"register re-derives {total} disposition rows but the pinned register "
-            f"total is 103")
+            f"total is 109")
     # every §3 class-count cell must equal the §2 re-derivation (the rule's first
     # draft pinned only the standard-total and grand-total rows; a corrupted single
     # class cell sailed through — caught by this wave's own teeth suite, T4)
@@ -2267,7 +2287,17 @@ def licensing_bom_hits():
           stating it — must equal canon − the professional tier and state that
           footing in prose (it had survived the 2026-09-18 literal re-base at
           3,311 = 6,911 − 3,600, arithmetically consistent with its own totals
-          and therefore invisible to arms (a)–(c))."""
+          and therefore invisible to arms (a)–(c));
+      (g) 2026-09-22 Component-GPL true-up arm: the in-repo price-list PDF
+          (applications-price-list-070574.pdf, the September 10, 2026 EBS
+          Component Global Price List) resolved every † placeholder on the EBS
+          side — Scenario A must carry no 'TBD †' form (the Fusion † rows in
+          §3.1/§3.2 stay; the Fusion Cloud GPL is not in-repo), the eight
+          GPL-verified part numbers are required on the footer-stripped body,
+          the register clause ('no Component-GPL SKU') is required, and the
+          five no-SKU products (Credit Management, Oracle Quality, Engineering,
+          Project Management, Environmental Accounting & Reporting) must stay
+          recorded in the §2.11 custom-quote register."""
     rel = "licensing-bom.md"
     hits = []
     path = os.path.normpath(os.path.join(MC, "..", "02-oracle-ebs", rel))
@@ -2534,6 +2564,39 @@ def licensing_bom_hits():
             hits.append((rel, body[:fm.start()].count("\n") + 1,
                          f"§3.2 Suite Employee footing clause states {fc:,} − {fp_:,} = "
                          f"{fq:,} — does not foot against the §1 employee canon {canon:,}"))
+
+    # ---- (g) 2026-09-22 Component-GPL true-up arm — the in-repo price list
+    # (applications-price-list-070574.pdf, the September 10, 2026 EBS Component
+    # Global Price List) resolved every † placeholder on the EBS side: §2 must
+    # carry no 'TBD †' form (the Fusion † rows in §3.1/§3.2 stay — the Fusion
+    # Cloud GPL is not in-repo), the eight GPL-verified part numbers are
+    # required on the footer-stripped body, the register clause is required,
+    # and the five no-SKU products must stay recorded in §2.11's custom-quote
+    # register (the retired placeholder lines banned with their section).
+    if sec_a is not None:
+        base_off = text.index(sec_a)
+        for mm in re.finditer(r"TBD †", sec_a):
+            add(rel, text[:base_off + mm.start()].count("\n") + 1,
+                "Scenario A still carries a 'TBD †' placeholder line — the 2026-09-22 "
+                "GPL true-up verified every EBS-side line against the in-repo "
+                "Component GPL (the † rows belong to Fusion §3.1/§3.2 only)")
+        for anc in ("L72200", "A92469", "A81412", "L98184", "L10090",
+                    "A85655", "L42119", "A80531"):
+            if anc not in body:
+                hits.append((rel, 0,
+                             f'missing GPL-verified part-number anchor "{anc}" — the '
+                             f'2026-09-22 true-up pinned every EBS-side part number to '
+                             f'the in-repo Component GPL'))
+        if "no Component-GPL SKU" not in body:
+            hits.append((rel, 0,
+                         'missing the custom-quote register clause ("no Component-GPL '
+                         'SKU") — the no-SKU record is required'))
+        for prod in ("Credit Management", "Oracle Quality", "Engineering",
+                     "Project Management", "Environmental Accounting & Reporting"):
+            if prod not in body:
+                hits.append((rel, 0,
+                             f'"{prod}" vanished from the BOM — the five no-SKU products '
+                             f'must stay recorded in §2.11\'s custom-quote register'))
     return hits
 
 
@@ -2789,12 +2852,12 @@ def gap_fill_straggler_hits():
     if "5,432 workflows invoke without naming" not in fit_b:
         hits.append(("fit-gap-analysis.md", 0,
                      'missing intro census anchor "5,432 workflows invoke without naming"'))
-    if ("The register above now stands at 103 rows / 80 standard = 77.7%"
-            not in fit_b):
+    if ("Executed 2026-09-22 (the re-disposition pass" not in fit_b
+            or "109 rows" not in fit_b):
         hits.append(("fit-gap-analysis.md", 0,
-                     'missing §7 charter-note register-state anchor (the retired '
-                     'form is "stands at the pre-verification canon (97 rows, '
-                     '74 standard = 76.3%)"'))
+                     'missing §7 charter-note execution anchor (the charter note '
+                     'must record the 2026-09-22 execution and the live register '
+                     'state)'))
     if "5,432 workflows" not in bodies["02-oracle-ebs/ebs-documentation-coverage.md"]:
         hits.append(("ebs-documentation-coverage.md", 0,
                      'missing §1 framing census anchor "5,432 workflows"'))

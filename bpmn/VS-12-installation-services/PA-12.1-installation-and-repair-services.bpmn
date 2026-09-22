@@ -666,8 +666,8 @@ Duration: 10 min</bpmn:documentation>
         <bpmn:incoming>W282_Flow14</bpmn:incoming>
         <bpmn:outgoing>W282_Flow15</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:serviceTask id="W282_Task7" name="Oracle Revenue Management and Invoicing subscription billing (fit-gap A11)…">
-        <bpmn:documentation>Step 2: Oracle Revenue Management and Invoicing subscription billing (fit-gap A11) generates a recurring contract and defers revenue.
+      <bpmn:serviceTask id="W282_Task7" name="Receivables Revenue Management subscription revenue schedules (fit-gap A11)…">
+        <bpmn:documentation>Step 2: Receivables Revenue Management subscription revenue schedules (fit-gap A11) generates a recurring contract and defers revenue.
 Responsible (R): System
 Accountable (A): Services Admin
 Duration: Automated</bpmn:documentation>

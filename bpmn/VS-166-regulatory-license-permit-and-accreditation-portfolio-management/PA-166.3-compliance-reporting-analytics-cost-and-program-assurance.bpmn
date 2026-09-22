@@ -559,7 +559,7 @@ Duration: Annual</bpmn:documentation>
         <bpmn:outgoing>W4864_Flow11</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W4864_Task5" name="Optimize the operating model (W4841): central vs distributed balance, staffing…">
-        <bpmn:documentation>Step 2: Optimize the operating model (W4841): central vs distributed balance, staffing, make-vs-buy (providers W4854), automation opportunities (Oracle Internal Controls Manager — the in-suite GRC platform, fit-gap H11, regulator-portal integration, AI-assisted monitoring), and cost/quality trade-offs
+        <bpmn:documentation>Step 2: Optimize the operating model (W4841): central vs distributed balance, staffing, make-vs-buy (providers W4854), automation opportunities (the in-house Audit &amp; GRC platform — BUILD, fit-gap H11, regulator-portal integration, AI-assisted monitoring), and cost/quality trade-offs
 Responsible (R): Compliance Portfolio / Strategy / OpEx
 Accountable (A): VP Legal &amp; Compliance
 Duration: Annual</bpmn:documentation>
