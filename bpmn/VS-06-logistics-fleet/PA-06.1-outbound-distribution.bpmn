@@ -474,7 +474,7 @@ Owner: Receiving Clerk / Stock Associate</bpmn:text>
     <bpmn:process id="W_W1169" name="W1169. Import Container Inbound Logistics, Port Drayage &amp; DC Delivery" isExecutable="false">
       <bpmn:documentation>Trigger: Import container cleared by customs per W464 and released from port/terminal for delivery to DC
 Frequency: ~400–600 TEUs/month; ~20–30 containers per DC per week
-Volume: ~15–25 container drayage moves per DC per week; peak during pre-Ber months (July–August) and pre-summer (February–March) build-ups
+Volume: ~20–30 container drayage round-trip moves per DC per week (one move per container, port ↔ DC with the empty return — per this workflow&#x27;s own ~20–30 containers/DC/week arrival canon); peak during pre-Ber months (July–August) and pre-summer (February–March) build-ups
 Owner: Inbound Logistics Coordinator
 Participants: Inbound Logistics Coordinator, Customs Broker, Drayage Carrier, DC Receiving Supervisor, Import Coordinator, Finance (duty payment)
 Source: workflow W1169 — Import Container Inbound Logistics, Port Drayage &amp; DC Delivery</bpmn:documentation>

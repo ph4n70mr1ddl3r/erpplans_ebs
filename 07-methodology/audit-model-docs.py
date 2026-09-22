@@ -445,6 +445,49 @@ citations 'sourcing model §12.1' and 'architecture §4' are cross-doc).
  the missing-anchor arm at :197; README band re-mint → the retired-form arm at :342 plus
  the missing-anchor arm; README anchor-only strip → the missing-anchor arm), fixtures
  restored sha256-verified byte-identical, clean tree silent at 0 hits.
+
+ 2026-09-23 seventieth-wave consistency review: the receipt/ASN/container sibling
+ family, one derivation step out from the pinned cells — four PA-file clusters plus the
+ rule docstring's own duplicated sixty-eighth-wave paragraph (a paste-family artifact
+ of that wave's commit) removed. (1) W3's Volume (PA-04.1) still read '~15 lines per
+ receipt' — the retired ~15-lines-per-PO basis the sixty-sixth wave retired on the PO
+ surfaces — which × the ~6,000 receipts/month canon implied ~90,000 receipt lines/month
+ against the ~12,000 PO-lines/month all-types canon; trued to ~2 lines per receipt
+ (bulk POs arrive as multiple partial truck receipts). (2) W3C's Volume (same file)
+ read '~20–30 import containers per DC per month' against W1271's own '~100–150
+ containers/DC/month' and W1169's '~20–30 per DC per week', both deriving from the
+ ~400–600 TEUs/month §7.1 import canon at ~1 TEU/container (the receipt-mix cell still
+ foots ~1,410–1,640 vs the ~1,500/DC/month Frequency); trued to ~100–150, file-scoped
+ banned on PA-04.1 (PA-01.1's per-seasonal-event forward-buy cells are a different,
+ legitimate population). (3) W1365's ASN universe (same file) read '~4,800 ASN
+ submissions/month' = 80% × the 6,000-receipt canon — but 1 ASN per PO (W1006's own
+ Volume model) caps the ASN spine at the ~1,200-merchandise-PO universe: W1006's
+ ~700–750/month and PA-03.4's combined ~5,000–10,000 portal-document band (PO acks +
+ ASNs + invoices ≈ 8,700 inside the band; 4,800 ASNs would blow it to ~12,700) both
+ adjudicate the PO-spine reading, and W1365's own 15–20% exceptions of 4,800 = 720–960
+ equaled W1006's ENTIRE ASN universe — nearly every ASN discrepant, against its own
+ <70%-accuracy flagging threshold; trued to ~700–750 ASNs with ~105–150 exceptions, the
+ Time Estimate re-footed (~18–50 h/month chain-wide, ~4–13 h/DC; total ~40–75 h/month)
+ and the Staffing cells re-derived (DC Inbound Supervisor ~4–13 h/DC/month; Buyer
+ ~6–9 h/month total, <1 h/buyer) — both roles still absorbed, no HC change. (4) W1006's
+ Volume (PA-03.2) read 'average 15 lines per ASN' under its own '1 ASN per PO' model —
+ the ASN mirrors its PO; trued to ~7 lines per ASN at the 6.9–7.4 lines/PO canon.
+ (5) W1169's Volume (PA-06.1) read '~15–25 container drayage moves per DC per week',
+ below its own Frequency row's '~20–30 containers per DC per week' arrival canon;
+ trued to ~20–30 round-trip moves (one per container, port ↔ DC with the empty
+ return). Guard: calibrated_volume_hits gains the seventieth-wave arms — the four
+ retired forms banned repo-wide ('~15 lines per receipt', '15 lines per ASN',
+ '4,800 ASN', '~15–25 container drayage moves'), the container form file-scoped banned
+ on PA-04.1, and the corrected anchors required at the six repaired cells (a future
+ calibration moves the canon → these re-fire until consciously re-pointed — the
+ Check-71 CENSUS-pin contract).
+ Teeth: five synthetic injections through the FULL audit, each caught at its exact arm
+ with file and line named (W3 re-mint → banned-form at :30 + missing-anchor; W3C
+ re-mint → file-scoped arm + missing-anchor, with PA-01.1's seasonal form verified
+ exempt; W1365 re-mint → banned-form at :874 + missing-anchor; W1006 re-mint →
+ banned-form at :504 + missing-anchor; W1169 re-mint → banned-form at :257 +
+ missing-anchor), fixtures restored sha256-verified byte-identical, clean tree silent
+ at 0 hits.
 """
 
 def _doc_versions():
@@ -3126,22 +3169,6 @@ def calibrated_volume_hits():
     60–90-line consolidated-drop canon (the form is "5,000 replenishment" narrowed to
     "5,000 replenishment orders" — the loose form fired on the corrected ~5,000
     replenishment pick lines/day anchor).
-    2026-09-23 sixty-eighth-wave extension — the calibration's own written-cell drift and
-    the new canon rows' unread derived cells: W1352's Time Estimate (written by the
-    calibration itself at ~5,300/~1,060/~265 chain-wide pick lines against the file's own
-    ~1,250/DC/day Frequency anchor → ~5,000 chain-wide; hours re-footed ~7–14/~6–8/~13–21),
-    W92's adjustment cells (PA-05.3 — ~1,700–2,600/month at 200×8–12 + 4×30–50 against the
-    calibration's new §1.1 IAD row ~30/day ≈ ~900/month, measured 3,508–11,652/yr; re-based
-    to 200×~3–5 + 4×~20–30 = ~680–1,120/month, ~1–2 h/store/month), W270's RTP cell
-    (PA-04.3 — ~40 receipts/day/DC against PA-04.1's canon-citing ~50 ×4 cells + §1.1's
-    200/day row; ~2.5 hours/day re-footed), W3962's Volume (PA-129.2 — the retired
-    ~1,400–1,600 POs/month band the sixty-sixth wave retired on profile §6.5/TO/W2; trued
-    to ~1,200 merchandise POs/month, all types ~1,600–1,900/month production-calibrated per
-    data-volumes §1.1), PA-28.2's two remaining 1,000 GB cells (W881 risk bullet + W1481
-    backup step) against its own ~1,230 GB anchor and A6.5/§1.2, and W109/W666's
-    20–50-lines-per-delivery cells (PA-07.3) against the 60–90-line consolidated-drop canon
-    (the form is "5,000 replenishment" narrowed to "5,000 replenishment orders" — the loose
-    form fired on the corrected ~5,000 replenishment pick lines/day anchor).
 
     2026-09-23 sixty-ninth-wave extension — the calibration straggler one layer further
     out: the root README's at-a-glance PO row (the one volume-citing surface neither the
@@ -3152,6 +3179,30 @@ def calibrated_volume_hits():
     '~1,400–1,600 total' form banned on the README and the calibrated anchor required (the
     loose '1,400–1,600' numeral pair is NOT banned repo-wide — PA-79.2's separated-employee
     cells legitimately use it).
+
+    2026-09-23 seventieth-wave extension — the receipt/ASN/container sibling family, one
+    derivation step out from the pinned cells: W3's Volume (PA-04.1 — '~15 lines per
+    receipt' still carried the retired ~15-lines-per-PO basis the sixty-sixth wave retired
+    on the PO surfaces; × the ~6,000 receipts/month canon it implied ~90,000 receipt
+    lines/month against the ~12,000 PO-lines/month all-types canon — trued to ~2 lines per
+    receipt, bulk POs arriving as multiple partial truck receipts), W3C's Volume (same
+    file — '~20–30 import containers per DC per month' against W1271's own
+    '~100–150 containers/DC/month' and W1169's '~20–30 per DC per week', both deriving
+    from the ~400–600 TEUs/month §7.1 import canon at ~1 TEU/container; trued to
+    ~100–150, PA-04.1-file-scoped banned — PA-01.1's per-seasonal-event forward-buy cells
+    are a different, legitimate population), W1365's ASN universe (same file —
+    '~4,800 ASN submissions/month' was 80% × the 6,000-receipt canon, but 1 ASN per PO
+    caps the ASN spine at the ~1,200-merchandise-PO universe: W1006's ~700–750/month and
+    PA-03.4's combined ~5,000–10,000 portal-document band (PO acks + ASNs + invoices)
+    both adjudicate the PO-spine reading, and W1365's own 15–20% exceptions of 4,800
+    = 720–960 equaled W1006's ENTIRE ASN universe — nearly every ASN discrepant, against
+    its own <70%-accuracy flagging threshold; trued to ~700–750 ASNs with ~105–150
+    exceptions and the hours/staffing re-footed ~18–50 h/month chain-wide, ~4–13 h/DC),
+    W1006's Volume (PA-03.2 — 'average 15 lines per ASN' under a '1 ASN per PO' model:
+    the ASN mirrors its PO at the 6.9–7.4 lines/PO canon; trued to ~7 lines per ASN), and
+    W1169's Volume (PA-06.1 — '~15–25 container drayage moves per DC per week' below its
+    own Frequency row's ~20–30 containers/DC/week arrival canon; trued to ~20–30
+    round-trip moves, one per container).
     Rule: the retired forms are banned on live
     surfaces (whole PA/README files — they carry no history blocks;
     footer-stripped bodies for the versioned docs; the gap-analysis scenario
@@ -3196,6 +3247,12 @@ def calibrated_volume_hits():
             # loose numeral pair is NOT banned — PA-79.2's separated-employee cells
             # legitimately use it; only the 'total' form is the retired PO band)
             "~1,400\u20131,600 total",
+            # seventieth-wave extension: the receipt/ASN/container sibling family
+            # (the '~20–30 import containers' form is PA-04.1-file-scoped — see the
+            # (g) block: PA-01.1's '~20–30 import containers per seasonal event'
+            # forward-buy cells are a different, legitimate population)
+            "~15 lines per receipt", "15 lines per ASN",
+            "4,800 ASN", "~15\u201325 container drayage moves",
         ]
         for bad in banned:
             if bad in body:
@@ -3382,6 +3439,39 @@ def calibrated_volume_hits():
                      'missing W3962 PO-canon anchor "~1,200 merchandise '
                      'POs/month" (all types ~1,600–1,900/month '
                      'production-calibrated)'))
+
+    # (g) seventieth-wave anchors — the receipt/ASN/container sibling family the
+    # calibration and waves 66–69 left one derivation step out from the pinned
+    # cells (a future calibration moves the canon → these re-fire until
+    # consciously re-pointed — the Check-71 CENSUS-pin contract)
+    pa041 = _pa("VS-04-dc-warehouse", "PA-04.1-dc-inbound-operations.md")
+    for anc in ("~2 lines per receipt on average",
+                "~100\u2013150 import containers",
+                "~700\u2013750 ASN submissions/month",
+                "~105\u2013150 exceptions/month"):
+        if anc not in pa041:
+            hits.append(("PA-04.1-dc-inbound-operations.md", 0,
+                         f'missing calibrated anchor "{anc}"'))
+    if "20\u201330 import containers" in pa041:
+        hits.append(("PA-04.1-dc-inbound-operations.md", 0,
+                     "retired calibration form '20–30 import containers' on a "
+                     "live surface (the container canon is the ~400–600 TEUs/month "
+                     "§7.1 import universe — ~100–150 containers/DC/month at "
+                     "~1 TEU/container, per W1271/W1169; PA-01.1's seasonal-event "
+                     "forward-buy cells are the legitimate '~20–30 per seasonal "
+                     "event' population and stay exempt — the wave-67 "
+                     "file-scoped-ban convention)"))
+    pa032 = _pa("VS-03-vendor-management", "PA-03.2-purchase-order-cycle.md")
+    if "~7 lines per ASN" not in pa032:
+        hits.append(("PA-03.2-purchase-order-cycle.md", 0,
+                     'missing W1006 ASN anchor "~7 lines per ASN" (1 ASN per PO '
+                     'at the production-measured 6.9–7.4 lines/PO canon)'))
+    pa061 = _pa("VS-06-logistics-fleet", "PA-06.1-outbound-distribution.md")
+    if "~20\u201330 container drayage round-trip moves per DC per week" not in pa061:
+        hits.append(("PA-06.1-outbound-distribution.md", 0,
+                     'missing W1169 drayage anchor "~20–30 container drayage '
+                     'round-trip moves per DC per week" (per its own '
+                     '~20–30 containers/DC/week Frequency canon)'))
     return hits
 
 

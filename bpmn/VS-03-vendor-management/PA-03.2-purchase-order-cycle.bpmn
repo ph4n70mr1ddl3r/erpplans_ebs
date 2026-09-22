@@ -1362,7 +1362,7 @@ Owner: Fleet Manager / DC Dispatch Supervisor</bpmn:text>
     <bpmn:process id="W_W1006" name="W1006. Vendor Purchase Order ASN Reconciliation &amp; Discrepancy Resolution" isExecutable="false">
       <bpmn:documentation>Trigger: Vendor transmits Advance Shipping Notice (ASN) for a confirmed Purchase Order
 Frequency: ~700–750 ASN receipts/month (~60% of the ~1,200 merchandise POs have ASN capability)
-Volume: 1 ASN per PO; average 15 lines per ASN
+Volume: 1 ASN per PO; ~7 lines per ASN (the ASN mirrors its PO at the production-measured 6.9–7.4 lines/PO canon, per data-volumes §1.1)
 Owner: Procurement Specialist
 Participants: Vendor, DC Receiving Supervisor, AP Clerk, Buyer
 Source: workflow W1006 — Vendor Purchase Order ASN Reconciliation &amp; Discrepancy Resolution</bpmn:documentation>

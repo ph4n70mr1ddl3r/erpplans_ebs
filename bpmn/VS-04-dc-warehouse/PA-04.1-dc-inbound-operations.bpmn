@@ -3,7 +3,7 @@
     <bpmn:process id="W_W3" name="W3. Warehouse Receiving &amp; Putaway" isExecutable="false">
       <bpmn:documentation>Trigger: Vendor delivery truck arrives at DC (or container from port)
 Frequency: ~6,000 goods receipts/month across all DCs; ~1,500/DC/month; ~50/day per DC
-Volume: ~15 lines per receipt on average
+Volume: ~2 lines per receipt on average (the ~12,000 PO-lines/month all-types canon across the ~6,000 goods-receipts/month canon — bulk POs arrive as multiple partial truck receipts, per data-volumes §1.1/§1.2)
 Owner: DC Receiving Supervisor
 Participants: Receiving Clerk, Quality Checker, Putaway Staff, DC Supervisor, Buyer (if discrepancy)
 Source: workflow W3 — Warehouse Receiving &amp; Putaway</bpmn:documentation>
@@ -303,7 +303,7 @@ Owner: DC Yard Supervisor (DC); Department Supervisor (Store)</bpmn:text>
     <bpmn:process id="W_W3C" name="W3C. DC Inbound Delivery Scheduling" isExecutable="false">
       <bpmn:documentation>Trigger: Purchase order confirmed with vendor or import shipment ETA confirmed
 Frequency: Daily; ~50 receipts/day per DC (~200/day chain-wide per the canon)
-Volume: ~1,200 merchandise receipts/month + ~80–240 blanket releases + ~20–30 import containers + ~30–50 non-merchandise receipts per DC per month
+Volume: ~1,200 merchandise receipts/month + ~80–240 blanket releases + ~100–150 import containers (the ~400–600 TEUs/month §7.1 canon at ~1 TEU/container across 4 DCs, per W1271) + ~30–50 non-merchandise receipts per DC per month
 Owner: DC Receiving Supervisor
 Participants: Buyer, Import Coordinator, DC Receiving Supervisor, DC Dispatch, Vendor/Carrier
 Source: workflow W3C — DC Inbound Delivery Scheduling</bpmn:documentation>
@@ -1958,8 +1958,8 @@ Owner: DC Operations Manager</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W1365" name="W1365. DC Inbound Vendor ASN Pre-Receipt Verification &amp; PO Matching Exception Management" isExecutable="false">
       <bpmn:documentation>Trigger: Vendor submits Advance Shipping Notice (ASN) via vendor portal or EDI for an incoming shipment
-Frequency: ~6,000 DC goods receipts/month across 4 DCs; ~80% of receipt volume comes from portal-enabled vendors submitting ASN before delivery (portal access covers top vendors by volume; ~40% of vendors by count lack access — see pain points)
-Volume: ~4,800 ASN submissions/month; ~15–20% have discrepancies requiring exception handling = ~720–960 exceptions/month
+Frequency: ~6,000 DC goods receipts/month across 4 DCs (the goods-receipt canon); portal-enabled vendors account for ~80% of receipt volume, with ASN pre-notification riding the PO spine — ~700–750 ASNs/month, ~60% of the ~1,200 merchandise POs (per W1006; ~40% of vendors by count lack access — see pain points)
+Volume: ~700–750 ASN submissions/month (1 ASN per PO per W1006 — the ASN spine is the ~1,200-merchandise-PO universe, not the ~6,000-receipt universe; a PO delivered across multiple partial truck receipts carries one ASN); ~15–20% have discrepancies requiring exception handling = ~105–150 exceptions/month
 Owner: DC Inbound Supervisor
 Participants: DC Inbound Supervisor, Receiving Clerk, Buyer, Vendor (via portal), Import Coordinator (for import shipments)
 Source: workflow W1365 — DC Inbound Vendor ASN Pre-Receipt Verification &amp; PO Matching Exception Management</bpmn:documentation>
