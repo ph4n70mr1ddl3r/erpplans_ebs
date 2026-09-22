@@ -69,6 +69,15 @@ chargeback/fee row at the end, a declared register extension beyond the matrix.
 platforms — do not integrate "differently": they are IAP consumers/producers like any
 integrated system; their EBS-facing contracts land in this register like everyone else's.
 
+**Vendor/partner document-exchange channels (B14, batch 27):** three channels divide the B2B
+document flows — the native iSupplier portal for registered suppliers (the PO/ASN/invoice rows
+above), XML Gateway for cXML/XML trading partners (W283 punch-out), and **Oracle e-Commerce
+Gateway** for classic X12/EDIFACT EDI trading partners — trading-partner setup and enablement,
+code conversion, and transaction processing into the EBS open interfaces. ECE carries the
+classic-EDI legs of the 800–1,000-vendor base and the EDI-capable carriers: W3799's
+import-vendor EDI at source, the VS-03.4 collaboration feeds, PA-15.1's carrier freight
+invoices and PA-11.3's wholesale document exchange name it (fit-gap B14).
+
 ---
 
 ## 3. Government & Statutory Interfaces (LOC/INT rows)
@@ -135,4 +144,4 @@ named. An interface without a reconciliation control is not shippable.
 
 ---
 
-*Document Version: 1.1 | Date: 2026-09-14 | Two-tier sourcing doctrine enacted: integrated-systems wording (already-built POS/ecommerce/loyalty platforms; in-suite WMS; in-house builds), payroll posting row added to the pattern register (GL_INTERFACE via IAP, E8), government-channel adapters fed by EBS and the payroll build. Prior v1.0 (2026-09-14): initial issue — EBS-native mechanism set, IAP-first rule, per-flow pattern register mirroring the canonical integration matrix, government-channel adapter rule, master-data flow directions, error taxonomy, new-interface gate. Canon anchors: data-volumes-and-integrations §2–§5; sourcing model §7 rule 3 (contract-first); fit-gap LOC/INT rows.*
+*Document Version: 1.2 | Date: 2026-09-21 | Batch-27 true: the vendor/partner document-exchange channel division named — iSupplier portal (B4) / XML Gateway cXML-XML (W283) / Oracle e-Commerce Gateway classic X12-EDIFACT EDI (fit-gap B14, coverage register EDC-13) — with the owning flows listed; no pattern-register row, SLA or reconciliation change. Prior v1.1 | Date: 2026-09-14 | Two-tier sourcing doctrine enacted: integrated-systems wording (already-built POS/ecommerce/loyalty platforms; in-suite WMS; in-house builds), payroll posting row added to the pattern register (GL_INTERFACE via IAP, E8), government-channel adapters fed by EBS and the payroll build. Prior v1.0 (2026-09-14): initial issue — EBS-native mechanism set, IAP-first rule, per-flow pattern register mirroring the canonical integration matrix, government-channel adapter rule, master-data flow directions, error taxonomy, new-interface gate. Canon anchors: data-volumes-and-integrations §2–§5; sourcing model §7 rule 3 (contract-first); fit-gap LOC/INT rows.*

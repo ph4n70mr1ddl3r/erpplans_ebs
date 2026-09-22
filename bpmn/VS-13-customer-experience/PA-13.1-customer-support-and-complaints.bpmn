@@ -1097,7 +1097,7 @@ Duration: Automated</bpmn:documentation>
         <bpmn:outgoing>W259_Flow20</bpmn:outgoing>
       </bpmn:serviceTask>
       <bpmn:userTask id="W259_Task9" name="Live Interaction">
-        <bpmn:documentation>Step 4: Live Interaction: Agent handles customer inquiry using unified workspace: (a) customer 360 view (W156) with purchase history, loyalty tier, open orders, recent tickets, account alerts; (b) ERP access for real-time inventory check (ECOM-001), order status, delivery tracking; (c) knowledge base for product info, return policies, warranty terms
+        <bpmn:documentation>Step 4: Live Interaction: Agent handles customer inquiry using unified workspace: (a) customer 360 view (W156) with purchase history, loyalty tier, open orders, recent tickets, account alerts; (b) ERP access for real-time inventory check (ECOM-001), order status, delivery tracking; (c) Oracle Knowledge Management solutions for product info, return policies, warranty terms
 Responsible (R): CS Agent
 Accountable (A): CS Supervisor
 Duration: 8–12 min avg</bpmn:documentation>

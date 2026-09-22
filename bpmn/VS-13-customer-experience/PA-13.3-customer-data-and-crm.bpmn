@@ -1162,7 +1162,7 @@ Duration: Automated</bpmn:documentation>
         <bpmn:outgoing>W619_Flow23</bpmn:outgoing>
       </bpmn:serviceTask>
       <bpmn:userTask id="W619_Task11" name="Probable Duplicates">
-        <bpmn:documentation>Step 4: Probable Duplicates: CRM Data Steward reviews each pair on dedup workbench — displays both records side-by-side with highlighted differences; Steward confirms merge, rejects as non-duplicate, or requests more information
+        <bpmn:documentation>Step 4: Probable Duplicates: CRM Data Steward reviews each pair on the dedup workbench — the Oracle Customer Data Librarian steward console (fit-gap D20), displaying both records side-by-side with highlighted differences; Steward confirms merge, rejects as non-duplicate, or requests more information
 Responsible (R): CRM Data Steward
 Accountable (A): —
 Duration: 5 min/pair</bpmn:documentation>

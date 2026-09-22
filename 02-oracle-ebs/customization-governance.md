@@ -81,6 +81,11 @@ One page + appendices, stored with the CEMLI register entry:
 CDRs are approved by the ARB and reported to the SIB quarterly — the same bodies that
 govern sourcing, so "inside-EBS build" never becomes a shadow of the governed build class.
 
+Governed documentation: the suite's own **Order Management Using Oracle Workflow** guide (352p)
+is the reference surface for order-flow workflow customization — any change inside OM's seeded
+order/approval workflows is an EXT-class change admitted only through this gate (W5575); the
+guide is cross-referenced here per coverage register EDC-23.
+
 ---
 
 ## 5. Technical Standards (What Every Extension Must Do)
@@ -168,4 +173,4 @@ signs any change touching Tier-1 workflows (OM §6.3 discipline).
 
 ---
 
-*Document Version: 1.1 | Date: 2026-09-14 | Two-tier sourcing doctrine enacted (in EBS → use it; otherwise → build): fit-gap ladder and CDR alternative set re-worded (EDGE/Buy tier retired), de-customization triggers re-pointed to the doctrine's re-evaluation discipline. Prior v1.0 (2026-09-14): initial issue — CEMLI framework, extension budget, CDR workflow, technical & ADOP standards, CEMLI register, de-customization triggers, KPIs. Canon anchors: fit-gap register (2 EXT / 1 LOC row); sourcing model §3.3 appendices and §12 agentic boundaries; OM §6.3 tier-and-control discipline.*
+*Document Version: 1.2 | Date: 2026-09-21 | Batch-27 true: §4 names Order Management Using Oracle Workflow (352p) as the governed documentation surface for order-flow workflow customization (coverage register EDC-23 — EXT-class changes inside OM's seeded order/approval workflows pass the CDR gate, W5575). Prior v1.1 | Date: 2026-09-14 | Two-tier sourcing doctrine enacted (in EBS → use it; otherwise → build): fit-gap ladder and CDR alternative set re-worded (EDGE/Buy tier retired), de-customization triggers re-pointed to the doctrine's re-evaluation discipline. Prior v1.0 (2026-09-14): initial issue — CEMLI framework, extension budget, CDR workflow, technical & ADOP standards, CEMLI register, de-customization triggers, KPIs. Canon anchors: fit-gap register (2 EXT / 1 LOC row); sourcing model §3.3 appendices and §12 agentic boundaries; OM §6.3 tier-and-control discipline.*

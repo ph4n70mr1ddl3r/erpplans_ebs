@@ -5650,6 +5650,9 @@ def census():
         # 2026-09-16 fortieth-wave review: adopted Oracle product names that end
         # in a role head noun — vehicles, not people (fit-gap H11/F3).
         "Oracle Internal Controls Manager", "Oracle Property Manager",
+        # 2026-09-21 batch-27: same class — the adopted TCA steward console
+        # product (fit-gap D20; W253's dedup-workbench step names it).
+        "Oracle Customer Data Librarian",
     }
 
     def _prose_candidate_resolves(span):
