@@ -1894,7 +1894,11 @@ def ebs_blueprint_hits():
           POS rows (fit-gap D6, coverage-map POS/Retail) carry the checkout
           qualifier ('No EBS POS checkout product') — the library's POS-named
           Channel Rebate & POS guides make the bare absence form false — and
-          the retired bare 'No EBS POS exists' form is banned on both."""
+          the retired bare 'No EBS POS exists' form is banned on both; and,
+          since the 2026-09-22 sixty-fifth-wave review, (j) data-migration's
+          §2 W0 sequence-tree line names the platform of record (the VF-2
+          re-point stranded 'into ICM (24)' one section below its own re-pointed
+          row 24; the retired form banned, the corrected anchor required)."""
     hits = []
 
     def ebs(name):
@@ -2259,6 +2263,22 @@ def ebs_blueprint_hits():
         add("module-coverage-map.md", 0,
             "Services/Rental row must state the manual-documented L&FM mechanics "
             "(rental-period billing — rent streams and evergreen rentals)")
+    # ---- (j) data-migration's §2 W0 sequence-tree line names the load target
+    # of record — 2026-09-22 sixty-fifth-wave review: the VF-2 re-point (v1.7)
+    # trued row 24's load target to the in-house Audit & GRC platform but
+    # stranded the §2 'Sequence & Dependencies' tree one section below
+    # ('the control register into ICM (24)') — the unguarded summary-surface
+    # class the fifty-fifth wave swept.
+    dm = strip_footer(open(ebs("data-migration.md"), encoding="utf-8").read())
+    if "the control register into ICM (24)" in dm:
+        add("data-migration.md", 0,
+            "retired load target 'into ICM (24)' in the §2 sequence tree (row 24's "
+            "target is the in-house Audit & GRC platform control-library load — "
+            "Vision VF-2)")
+    if "the control register into the Audit & GRC platform (24)" not in dm:
+        add("data-migration.md", 0,
+            "missing the corrected W0 sequence-tree anchor 'the control register "
+            "into the Audit & GRC platform (24)'")
     return hits
 
 
@@ -2297,7 +2317,12 @@ def licensing_bom_hits():
           the register clause ('no Component-GPL SKU') is required, and the
           five no-SKU products (Credit Management, Oracle Quality, Engineering,
           Project Management, Environmental Accounting & Reporting) must stay
-          recorded in the §2.11 custom-quote register."""
+          recorded in the §2.11 custom-quote register; and, since the 2026-09-22
+          sixty-fifth-wave review, (h) the Fusion Risk Management parity tags
+          (B1 §3.1, the B2 add-on and the §3 parity note) are anchored on the
+          H11 capability naming, not the retired ICM product name ('ICM
+          parity'/'ICM eq.' banned on the footer-stripped body; the §1/§2.11
+          dated change-record mentions exempt by form)."""
     rel = "licensing-bom.md"
     hits = []
     path = os.path.normpath(os.path.join(MC, "..", "02-oracle-ebs", rel))
@@ -2598,6 +2623,24 @@ def licensing_bom_hits():
                 hits.append((rel, 0,
                              f'"{prod}" vanished from the BOM — the five no-SKU products '
                              f'must stay recorded in §2.11\'s custom-quote register'))
+    # ---- (h) the Fusion parity tags' retired ICM anchor — 2026-09-22
+    # sixty-fifth-wave review: the VF-2 re-disposition retired ICM/AMW as a
+    # vehicle, and the same-day VF-1 pass had already re-worded the sibling
+    # Fusion Revenue Management tag to its surviving vehicle — but the two
+    # Fusion Risk Management line tags (B1 §3.1 and the B2 add-on) and the §3
+    # parity note still anchored on the retired product name. The §1 decision-5
+    # note and the §2.11 delta note keep their own-date ICM mentions as dated
+    # change-records — the banned forms are the parity-anchor idioms only.
+    for bad in ("ICM parity", "ICM eq."):
+        if bad in body:
+            hits.append((rel, body[:body.index(bad)].count("\n") + 1,
+                         f"retired Fusion parity anchor '{bad}' (the H11 vehicle of "
+                         f"record is the in-house Audit & GRC platform per Vision "
+                         f"VF-2 — anchor the tags on the H11 capability)"))
+    for anc in ("the H11 audit/GRC surface's Fusion-side equivalent",
+                "Fusion Risk Management add-on (the H11 audit/GRC eq.)"):
+        if anc not in body:
+            hits.append((rel, 0, f'missing the H11-anchored Fusion tag "{anc}"'))
     return hits
 
 
@@ -2988,6 +3031,7 @@ def ebs_doc_coverage_hits():
     ids = [int(m) for m in re.findall(r"\*\*EDC-(\d+)\*\*", body)]
     if ids != list(range(1, len(ids) + 1)):
         hits.append((rel, 0, f"§4 EDC ids are not contiguous 1..N: {ids}"))
+    adj_notadj_rec_opn = None
     m = re.search(r"\*\*Result: (\d+) of (\d+) products already adjudicated; (\d+) were not\.\*\* "
                   r"Of the \d+, (\d+) are\s+recorded not-needed in §5, and \*\*(\d+) are open gap rows",
                   re.sub(r"\s+", " ", body))
@@ -2995,6 +3039,7 @@ def ebs_doc_coverage_hits():
         hits.append((rel, 0, "§2 outcome sentence not found or not parseable"))
     else:
         adj, prod, notadj, rec, opn = (int(m.group(i)) for i in range(1, 6))
+        adj_notadj_rec_opn = (adj, prod, notadj, rec, opn)
         if adj + notadj != prod:
             hits.append((rel, 0, f"§2 outcome: {adj} adjudicated + {notadj} not "
                                  f"!= {prod} products"))
@@ -3093,6 +3138,31 @@ def ebs_doc_coverage_hits():
                for ln in body.splitlines()):
         hits.append((rel, 0, "§5 lost the Channel Rebate and Point-of-Sale "
                              "Management not-needed record"))
+    # ---- (h) the §6 guard-note's arithmetic quote must track §2 — 2026-09-22
+    # sixty-fifth-wave review: the §6 re-running note quoted the outcome
+    # arithmetic as '(107 adjudicated + 33 recorded + 25 open = 165)' while §2's
+    # own sentence had been restated at batch 27 (90 of 165; 50 recorded; 25
+    # opened rows) — the derived-quote class; the parenthetical is re-derived
+    # from §2's numbers every run so a future §2 re-statement re-fires until
+    # the note is re-pointed.
+    flat = re.sub(r"\s+", " ", body)
+    m6 = re.search(r"\((\d+) adjudicated \+ (\d+) recorded \+ (\d+) opened EDC rows"
+                   r" = ([\d,]+), all \d+ since closed\)", flat)
+    if m6 and adj_notadj_rec_opn:
+        adj, prod, notadj, rec, opn = adj_notadj_rec_opn
+        q_adj, q_rec, q_opn, q_prod = (int(m6.group(i)) for i in range(1, 5))
+        if (q_adj, q_rec, q_opn, q_prod) != (adj, rec, opn, prod):
+            hits.append((rel, 0,
+                         f"§6 guard-note arithmetic ({q_adj} + {q_rec} + {q_opn} = "
+                         f"{q_prod}) disagrees with §2's own sentence ({adj} "
+                         f"adjudicated + {notadj} un-adjudicated of {prod}, of which "
+                         f"{rec} recorded + {opn} opened EDC rows) — re-point the "
+                         f"derived quote"))
+    elif not m6:
+        hits.append((rel, 0,
+                     "missing the §6 outcome-arithmetic anchor '(N adjudicated + "
+                     "M recorded + K opened EDC rows = P, all K since closed)' — "
+                     "the guard-note quote is required to track §2's own sentence"))
     return hits
 
 def oratest_hits():
