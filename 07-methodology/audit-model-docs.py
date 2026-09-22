@@ -2200,6 +2200,45 @@ def ebs_blueprint_hits():
         if "No EBS POS exists" in row:
             add(row_doc, row_i,
                 "retired bare 'No EBS POS exists' form is back on the POS row")
+    # ---- (i) manuals-vocabulary arm — 2026-09-21 sixty-second-wave capability
+    # sweep: two product-mechanics vocabularies the shipped R12.2 manuals do not
+    # document were live on the realization surfaces. L&FM: 122oklug documents lease
+    # contracts with rental periods, rent streams and evergreen rentals — 'rental
+    # contract' as a construct name and 'reservations' appear zero times in it. AP
+    # Bills Payable: 122apug's own phrase for the outstanding-instrument state is
+    # 'issued but not matured' (the Future Dated Payments balance definition and the
+    # Maturity Date Report) — 'issued-but-unreleased' is retired on the blueprint
+    # realization surfaces (the two PA-file instances of the same class ride the
+    # Check 46 workflow-corpus literal probe).
+    vocab_docs = {
+        "module-coverage-map.md": cm,
+        "fit-gap-analysis.md": fg_body,
+        "ebs-platform-architecture.md": strip_footer(open(
+            ebs("ebs-platform-architecture.md"), encoding="utf-8").read()),
+    }
+    for row_doc, txt in vocab_docs.items():
+        # fit-gap §4's resolution-record rows are dated records of what each pass
+        # resolved — their own-date wording stands, the same adjudication as their
+        # own-date counts (waves 31–34 keep '74 = 76.3%')
+        scan_lines = [(i + 1, l) for i, l in enumerate(txt.splitlines(), 1)
+                      if not (row_doc == "fit-gap-analysis.md"
+                              and re.match(r"^\| \d+ \|", l))]
+        for bad in ("rental contracts/reservations", "rental contracts & reservations",
+                    "issued-but-unreleased"):
+            hit_ln = next((ln for ln, l in scan_lines if bad in l), None)
+            if hit_ln:
+                add(row_doc, hit_ln,
+                    f"retired manuals-vocabulary form '{bad}' (122oklug documents "
+                    f"lease contracts with rental-period billing — rent streams and "
+                    f"evergreen rentals; 122apug's phrase is 'issued but not matured')")
+        if "issued-but-unmatured" not in txt:
+            add(row_doc, 0,
+                "missing AP Bills Payable manuals-vocabulary anchor "
+                "'issued-but-unmatured'")
+    if "evergreen rentals" not in cm:
+        add("module-coverage-map.md", 0,
+            "Services/Rental row must state the manual-documented L&FM mechanics "
+            "(rental-period billing — rent streams and evergreen rentals)")
     return hits
 
 
