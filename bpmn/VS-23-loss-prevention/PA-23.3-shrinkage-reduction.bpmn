@@ -498,7 +498,7 @@ Source: workflow W1336 — Return Fraud &amp; Abuse Pattern Detection, Investiga
         <bpmn:outgoing>W1336_Flow15</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:serviceTask id="W1336_Task6" name="Automated return exception monitoring">
-        <bpmn:documentation>Step 1: Automated return exception monitoring: POS system generates daily return exception alerts: (a) high-value returns (&gt; PHP 10,000) without receipt, (b) returns &gt; 3 by same customer within 30 days, (c) returns of items with high shoplifting risk per W1173 (power tools, electrical fittings), (d) returns processed by same cashier &gt; 5 per shift, (e) returns of items with activated serial numbers (power tools — indicates used item return), (f) returns at stores with return rate &gt; 5% of transactions (~2.5x the chain average); alerts routed to LP Analyst dashboard
+        <bpmn:documentation>Step 1: Automated return exception monitoring: POS system generates daily return exception alerts: (a) high-value returns (&gt; PHP 10,000) without receipt, (b) returns &gt; 3 by same customer within 30 days, (c) returns of items with high shoplifting risk per W1173 (power tools, electrical fittings), (d) returns processed by same cashier &gt; 5 per shift, (e) returns of items with activated serial numbers (power tools — indicates used item return), (f) returns at stores with return rates materially above the ~0.04%-of-transactions chain canon (per W1622); alerts routed to LP Analyst dashboard
 Responsible (R): System
 Accountable (A): —
 Duration: Automated</bpmn:documentation>

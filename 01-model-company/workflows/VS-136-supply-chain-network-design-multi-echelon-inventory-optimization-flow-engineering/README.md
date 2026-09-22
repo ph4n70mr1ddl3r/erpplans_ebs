@@ -10,7 +10,7 @@ Supply Chain Network Design, Multi-Echelon Inventory Optimization (MEIO) & Flow 
 workflows for BuildRight Depot Corp. — owning the enterprise **analytical/engineering discipline**
 that determines *where* inventory sits, *how much* to hold at each of 4 DCs and 200 stores, and
 *how* goods flow across an archipelago with ~40% imports (45–90-day lead times), 35,000 active
-SKUs, a 6–8x inventory-turn target, and ~5,000 monthly store-replenishment orders. This is the
+SKUs, a 6–8x inventory-turn target, and ~50,000 monthly store-replenishment orders (production-calibrated, per data-volumes §1.1). This is the
 discipline that decides whether BuildRight hits its inventory-investment, service-level
 (fill-rate, OTIF), and total-landed-cost targets — a 1% inventory reduction releases ~PHP 0.4B of
 working capital, and a 1% fill-rate gain materially lifts comp sales.

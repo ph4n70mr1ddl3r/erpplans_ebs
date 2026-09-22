@@ -528,6 +528,41 @@ citations 'sourcing model §12.1' and 'architecture §4' are cross-doc).
  live body (before its dated footer) swept with the E-09 anchor required.
  Teeth: four synthetic injections through the FULL audit, each caught at its exact
  arm, fixtures restored sha256-verified byte-identical, clean tree silent at 0 hits.
+
+ 2026-09-23 seventy-second-wave consistency review: the dodging-variant stragglers —
+ three families the prior sweeps' banned forms read past at the glyph level: (1) the
+ hyphenated replenishment form '~5,000 store-replenishment orders/month'
+ (PA-136.1's W4126 Volume + the VS-136 README framing sentence — both wave-66 forms
+ '5,000 store replenishment'/'5,000 replenishment orders' are space-form), with
+ W4126 step 2's 'replenishment grouping 2–3 orders/truck' a surviving copy of the
+ retired consolidation mechanic (canon: each store drop consolidates the ~20–30
+ orders since the previous drop, 2–3 drops per truck trip); (2) the returns-canon
+ sibling stragglers INSIDE the files the seventy-first wave repaired — PA-32.3's
+ W1641 ('~56,000 return dispositions/month' Frequency + '~70% of ~56,000 monthly
+ returns' touchpoint + 'mis-routes thousands of returns' pain point, against the
+ same workflow's own wave-71-trued ~1,200/month Time Estimate) and W1640's refurb
+ pool (~500–800 items/month = 42–67% of ALL returns, untenable when only ~180–215
+ returns/month are quality-assessed; re-based to ~180–300 eligible = the
+ damaged-packaging-functional share, ~45–75/DC, hours re-footed ~900–1,500 h/yr)
+ and PA-23.3's W1336 Background ('~56,000 product returns per month per W12/W1627'
+ with 'PHP 60–100M in annual losses' derived from the retired 2,800–4,500/month
+ fraud universe; trued to the ~1,200 canon with ~PHP 3–6M/yr at 720–1,140
+ fraudulent returns × ~PHP 3,500–5,000 avg) and W1336 step 1(f)'s '>5% of
+ transactions (~2.5x the chain average)' — the retired ~2% basis; the chain canon
+ is ~0.04%; (3) the AP business-day family review #60 left behind: #60 trued W7's
+ staffing headline to 395–440 but W7's own Time Estimate still derived from the
+ retired 305–370 band (~25–31 h scanning, '~70 invoices × 25 min' = ~25–30 h
+ exceptions, total ~60–70 h) with its staffing tail still summing to '~53–67 h /
+ ~5–6 hours each', and PA-22.1's copy of the band survived verbatim; all trued
+ (scanning ~33–37 h, exceptions ~33–37 h at 79–88 invoices, total ~68–76 h,
+ 10 clerks ~7 h each). Guard: calibrated_volume_hits gains the seventy-second-wave
+ arms — the hyphenated form, the 56,000-dispositions/monthly-returns/
+ product-returns forms, the consolidation-mechanic form, the refurb-pool and
+ W1336 forms, and the 305–370 band with its derived hour cells banned; the
+ corrected anchors required at the repaired cells. Teeth: four synthetic
+ injections through the FULL audit, each caught at its exact arm with file and
+ line named, fixtures restored sha256-verified byte-identical, clean tree silent
+ at 0 hits.
 """
 
 def _doc_versions():
@@ -3322,6 +3357,23 @@ def calibrated_volume_hits():
             "~1,860 POS returns/day", "~2,000 total returns/day",
             "5,600\u201311,200 returns/month", "~28\u201356 per store per month",
             "6\u201314 Returns Inspectors", "~500\u2013700 B2B returns",
+            # seventy-second-wave extension: the dodging-variant stragglers —
+            # the hyphenated replenishment form (both wave-66 forms are
+            # space-form), the returns-canon sibling stragglers inside the
+            # very files the seventy-first wave repaired (W1641's
+            # dispositions Frequency/touchpoint, W1640's refurb pool,
+            # W1336's Background + loss derivation + step-1(f) rate basis),
+            # and the AP business-day band review #60 left behind in W7's
+            # own Time Estimate and PA-22.1's copy
+            "5,000 store-replenishment",
+            "56,000 return dispositions", "56,000 monthly returns",
+            "56,000 product returns per month", "grouping 2\u20133 orders/truck",
+            "mis-routes thousands of returns",
+            "500\u2013800 items/month eligible for refurbishment",
+            "125\u2013200 per DC/month",
+            "PHP 60\u2013100M in annual losses", "~2.5x the chain average",
+            "305\u2013370 invoices", "~70 invoices \u00d7 25 min",
+            "60\u201370 hours/business-day", "53\u201367 hours/business-day",
         ]
         for bad in banned:
             if bad in body:
@@ -3668,6 +3720,54 @@ def calibrated_volume_hits():
         hits.append(("event-custody-and-precedence-register.md", 0,
                      'missing E-09 returns-canon anchor "≈ 250–350/mo, '
                      '~0.6–0.8% of ~42,900 orders"'))
+
+    # (i) seventy-second-wave anchors — the dodging-variant stragglers'
+    # corrected forms required at their cells (a future calibration moves
+    # the canon → these re-fire until consciously re-pointed — the
+    # Check-71 CENSUS-pin contract)
+    pa1361 = _pa("VS-136-supply-chain-network-design-multi-echelon-inventory-"
+                 "optimization-flow-engineering",
+                 "PA-136.1-supply-chain-network-strategy-modeling-and-design.md")
+    for anc in ("~50,000 store-replenishment orders/month (production-calibrated, "
+                "per data-volumes \u00a71.1)",
+                "each store drop consolidates the ~20\u201330 replenishment orders "
+                "since the previous drop, 2\u20133 drops per truck trip"):
+        if anc not in pa1361:
+            hits.append(("PA-136.1-supply-chain-network-strategy-modeling-and-"
+                         "design.md", 0, f'missing calibrated anchor "{anc}"'))
+    pa136r = _pa("VS-136-supply-chain-network-design-multi-echelon-inventory-"
+                 "optimization-flow-engineering", "README.md")
+    if ("~50,000 monthly store-replenishment orders (production-calibrated, "
+            "per data-volumes \u00a71.1)") not in pa136r:
+        hits.append(("VS-136 README", 0,
+                     'missing calibrated anchor "~50,000 monthly '
+                     'store-replenishment orders (production-calibrated, '
+                     'per data-volumes §1.1)"'))
+    for anc in ("~1,200 return dispositions/month (one per return",
+                "~180\u2013300 items/month eligible for refurbishment",
+                "~45\u201375 per DC/month (180\u2013300 \u00f7 4 DCs)"):
+        if anc not in pa323:
+            hits.append(("PA-32.3-reverse-logistics-disposition.md", 0,
+                         f'missing returns-canon anchor "{anc}"'))
+    for anc in ("~1,200 product returns per month per W12/W1622",
+                "~PHP 3\u20136M in annual losses",
+                "materially above the ~0.04%-of-transactions chain canon"):
+        if anc not in pa233:
+            hits.append(("PA-23.3-shrinkage-reduction.md", 0,
+                         f'missing W1336 returns-canon anchor "{anc}"'))
+    pa221 = _pa("VS-22-compliance-regulatory",
+                "PA-22.1-regulatory-permits-and-licenses.md")
+    for anc in ("~33\u201337 hours/business-day (395\u2013440 invoices \u00d7 5 min)",
+                "~79\u201388 invoices \u00d7 25 min avg",
+                "~68\u201376 hours/business-day"):
+        if anc not in pa151:
+            hits.append(("PA-15.1-invoice-processing-and-matching.md", 0,
+                         f'missing W7 AP-band anchor "{anc}"'))
+    for anc in ("~395\u2013440 invoices/business-day",
+                "requiring 10 clerks at ~7 hrs each/day"):
+        if anc not in pa221:
+            hits.append(("PA-22.1-regulatory-permits-and-licenses.md", 0,
+                         f'missing AP-band anchor "{anc}"'))
     return hits
 
 

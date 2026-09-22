@@ -363,7 +363,7 @@ Owner: Network Strategy Lead / Global Sourcing (VS-122)</bpmn:text>
     <bpmn:process id="W_W4126" name="W4126. Outbound Distribution Flow &amp; Lane / Routing Architecture" isExecutable="false">
       <bpmn:documentation>Trigger: Network change; routing optimization
 Frequency: Per change + continuous optimization
-Volume: ~5,000 store-replenishment orders/month; ~42,900 ecommerce orders/month; 200 stores × 2–3 deliveries/week
+Volume: ~50,000 store-replenishment orders/month (production-calibrated, per data-volumes §1.1); ~42,900 ecommerce orders/month; 200 stores × 2–3 deliveries/week
 Owner: Network Strategy Lead / Logistics (VS-06)
 Participants: Logistics (VS-06), DC Ops (VS-04), Freight (VS-110), last-mile (VS-56)
 Source: workflow W4126 — Outbound Distribution Flow &amp; Lane / Routing Architecture</bpmn:documentation>
@@ -388,7 +388,7 @@ Duration: Per change</bpmn:documentation>
         <bpmn:outgoing>W4126_Flow11</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W4126_Task5" name="Network Strategy/Logistics optimize routes for cost/service (links to VS-06…">
-        <bpmn:documentation>Step 2: Network Strategy/Logistics optimize routes for cost/service (links to VS-06 W786 route optimization, VS-110 freight), and design consolidation (replenishment grouping 2–3 orders/truck)
+        <bpmn:documentation>Step 2: Network Strategy/Logistics optimize routes for cost/service (links to VS-06 W786 route optimization, VS-110 freight), and design consolidation (each store drop consolidates the ~20–30 replenishment orders since the previous drop, 2–3 drops per truck trip, per data-volumes §1.1)
 Responsible (R): Network Strategy Lead / Logistics
 Accountable (A): VP Supply Chain
 Duration: Continuous</bpmn:documentation>

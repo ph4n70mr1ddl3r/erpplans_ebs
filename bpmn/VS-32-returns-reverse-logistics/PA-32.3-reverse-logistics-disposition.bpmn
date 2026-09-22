@@ -194,8 +194,8 @@ Owner: DC Returns Coordinator</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W1640" name="W1640. Refurbishment &amp; Repackaging Operations" isExecutable="false">
       <bpmn:documentation>Trigger: Returned item assessed as &quot;Refurbishable&quot; during quality assessment (W1626 or W1639)
-Frequency: ~500–800 items/month eligible for refurbishment
-Volume: ~125–200 per DC/month
+Frequency: ~180–300 items/month eligible for refurbishment (the damaged-packaging-functional share of the ~1,200/month returns canon, assessed at DC quality check)
+Volume: ~45–75 per DC/month (180–300 ÷ 4 DCs)
 Owner: DC Returns Coordinator
 Participants: DC Returns Coordinator, DC Quality Inspector, Category Manager (pricing)
 Source: workflow W1640 — Refurbishment &amp; Repackaging Operations</bpmn:documentation>
@@ -284,7 +284,7 @@ Owner: DC Returns Coordinator</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W1641" name="W1641. Returns Disposition Decision Engine &amp; Automation" isExecutable="false">
       <bpmn:documentation>Trigger: Return processed through quality assessment (W1626, W1639)
-Frequency: ~56,000 return dispositions/month
+Frequency: ~1,200 return dispositions/month (one per return — the ~40/day AR-credit-memo returns canon, per data-volumes §1.1)
 Volume: Automated disposition for ~70% of returns; manual review for ~30%
 Owner: Quality Manager
 Participants: Quality Manager, DC Returns Coordinator, Category Managers
