@@ -400,6 +400,25 @@ citations 'sourcing model §12.1' and 'architecture §4' are cross-doc).
  lines/DC/day) and are anchor-pinned; the PA-15.1 sum form is file-scoped banned.
  Teeth: three synthetic injections through the FULL audit, each caught at its exact arm,
  fixtures restored byte-identical.
+
+ 2026-09-23 sixty-eighth-wave consistency review: calibrated_volume_hits extended for
+ the calibration's own written-cell drift and the new canon rows' unread derived cells —
+ W1352's Time Estimate (PA-04.2, written by the calibration itself at ~5,300/~1,060/~265
+ chain-wide pick lines against the file's own ~1,250/DC/day Frequency anchor → ~5,000
+ chain-wide; hours re-footed ~7–14/~6–8/~13–21), W92's adjustment cells (PA-05.3 —
+ ~1,700–2,600/month at 200×8–12 + 4×30–50 against the calibration's new §1.1 IAD row
+ ~30/day ≈ ~900/month, measured 3,508–11,652/yr; re-based to 200×~3–5 + 4×~20–30 =
+ ~680–1,120/month, ~1–2 h/store/month), W270's RTP cell (PA-04.3 — ~40 receipts/day/DC
+ against PA-04.1's canon-citing ~50 ×4 cells and §1.1's 200/day row; ~2.5 hours/day),
+ W3962's Volume (PA-129.2 — the retired ~1,400–1,600 POs/month band; trued to ~1,200
+ merchandise POs/month, all types ~1,600–1,900), PA-28.2's two remaining 1,000 GB cells
+ (W881 risk bullet + W1481 backup step) against its own ~1,230 GB anchor and A6.5/§1.2,
+ and W109/W666's 20–50-lines-per-delivery cells (PA-07.3) against the 60–90-line
+ consolidated-drop canon. The wave-66 banned form '5,000 replenishment' narrowed to
+ '5,000 replenishment orders' — the loose form fired on the corrected ~5,000
+ replenishment pick lines/day anchor (the wave-67 withdrawal convention).
+ Teeth: four synthetic injections through the FULL audit, each caught at its exact arm
+ (banned form + missing anchor), fixtures restored sha256-verified byte-identical.
 """
 
 def _doc_versions():
@@ -3024,6 +3043,23 @@ def calibrated_volume_hits():
     drop (2–3 drops/store/week → ~60–80 loads/day chain-wide = ~1,800–2,400/month =
     ~15–20/DC/day; 6–10 truck trips/DC/day at 2–3 drops/trip; W4 at ~1,700 orders/day
     chain-wide, ~3 lines/order → ~1,250 replenishment pick lines/DC/day).
+
+    2026-09-23 sixty-eighth-wave extension — the calibration's own written-cell drift and
+    the new canon rows' unread derived cells: W1352's Time Estimate (written by the
+    calibration itself at ~5,300/~1,060/~265 chain-wide pick lines against the file's own
+    ~1,250/DC/day Frequency anchor → ~5,000 chain-wide; hours re-footed ~7–14/~6–8/~13–21),
+    W92's adjustment cells (PA-05.3 — ~1,700–2,600/month at 200×8–12 + 4×30–50 against the
+    calibration's new §1.1 IAD row ~30/day ≈ ~900/month, measured 3,508–11,652/yr; re-based
+    to 200×~3–5 + 4×~20–30 = ~680–1,120/month, ~1–2 h/store/month), W270's RTP cell
+    (PA-04.3 — ~40 receipts/day/DC against PA-04.1's canon-citing ~50 ×4 cells + §1.1's
+    200/day row; ~2.5 hours/day re-footed), W3962's Volume (PA-129.2 — the retired
+    ~1,400–1,600 POs/month band the sixty-sixth wave retired on profile §6.5/TO/W2; trued
+    to ~1,200 merchandise POs/month, all types ~1,600–1,900), PA-28.2's two remaining
+    1,000 GB cells (W881 risk bullet + W1481 backup step) against its own ~1,230 GB anchor
+    and A6.5/§1.2, and W109/W666's 20–50-lines-per-delivery cells (PA-07.3) against the
+    60–90-line consolidated-drop canon (the form is "5,000 replenishment" narrowed to
+    "5,000 replenishment orders" — the loose form fired on the corrected ~5,000
+    replenishment pick lines/day anchor).
     Rule: the retired forms are banned on live
     surfaces (whole PA/README files — they carry no history blocks;
     footer-stripped bodies for the versioned docs; the gap-analysis scenario
@@ -3036,7 +3072,7 @@ def calibrated_volume_hits():
 
     def _sweep(relp, body, label):
         banned = [
-            "5,000 store replenishment", "5,000 replenishment",
+            "5,000 store replenishment", "5,000 replenishment orders",
             "~33 replenishment orders", "~1,250 replenishment orders",
             "18,000 PO lines", "~15 lines per PO",
             "carries 2\u20133 orders consolidated",
@@ -3057,6 +3093,13 @@ def calibrated_volume_hits():
             "= ~40 loads/day", "~30 outbound loads/day",
             "~900 outbound load slots", "~70 appointment slots",
             "~500\u2013800 SKUs per delivery",
+            # sixty-eighth-wave extension: the calibration's own written-cell drift and
+            # the new canon rows' unread derived cells
+            "~5,300 replenishment pick lines", "~1,060 high-value pick lines",
+            "~265 issues/day", "~40 receipts/day/DC",
+            "~1,400\u20131,600 POs/month",
+            "20\u201350 lines per DC delivery", "~20\u201350 lines/SKUs per delivery",
+            "1,700\u20132,600 adjustments", "1,000 GB",
         ]
         for bad in banned:
             if bad in body:
@@ -3195,6 +3238,45 @@ def calibrated_volume_hits():
         hits.append(("PA-10.2-order-fulfillment-and-delivery.md", 0,
                      'missing staffing anchor "~415–425 orders/day '
                      '≈ ~1,250 pick lines/DC/day"'))
+
+    # (f) sixty-eighth-wave anchors — the calibration's own written-cell drift and
+    # the new canon rows' unread derived cells, corrected
+    if "~5,000 replenishment pick lines/day chain-wide" not in pa042 or \
+            "~1,000 high-value pick lines/day chain-wide" not in pa042 or \
+            "(~250 issues/day chain-wide)" not in pa042:
+        hits.append(("PA-04.2-dc-outbound-operations.md", 0,
+                     'missing W1352 Time-Estimate anchor "~5,000 replenishment '
+                     'pick lines/day chain-wide" / "~1,000 high-value pick lines '
+                     'day chain-wide" / "(~250 issues/day chain-wide)"'))
+    if "~50 receipts/day/DC" not in pa043:
+        hits.append(("PA-04.3-dc-operations-management.md", 0,
+                     'missing W270 RTP anchor "~50 receipts/day/DC" (the '
+                     '~6,000/month DC goods-receipt canon, per PA-04.1/§1.1)'))
+    pa053 = _pa("VS-05-inventory-lifecycle",
+                "PA-05.3-inventory-disposition-and-optimization.md")
+    if "200 stores \u00d7 ~3\u20135 + 4 DCs \u00d7 ~20\u201330" not in pa053 or \
+            "~3\u20135 adjustments per store per month" not in pa053:
+        hits.append(("PA-05.3-inventory-disposition-and-optimization.md", 0,
+                     'missing W92 calibrated anchor "200 stores × ~3–5 + 4 DCs '
+                     '× ~20–30" / "~3–5 adjustments per store per month" (the '
+                     '~30/day §1.1 IAD canon)'))
+    pa073 = _pa("VS-07-store-operations",
+                "PA-07.3-store-receiving-and-replenishment.md")
+    if "60\u201390 order lines per DC delivery" not in pa073 or \
+            "~60\u201390 order lines per delivery" not in pa073:
+        hits.append(("PA-07.3-store-receiving-and-replenishment.md", 0,
+                     'missing consolidated-drop anchor "60–90 order lines per '
+                     'DC delivery" (W109) / "~60–90 order lines per delivery" '
+                     '(W666)'))
+    pa1292 = _pa("VS-129-competition-and-antitrust-compliance",
+                 "PA-129.2-anticompetitive-conduct-prevention-and-compliance-"
+                 "controls.md")
+    if "~1,200 merchandise POs/month" not in pa1292:
+        hits.append(("PA-129.2-anticompetitive-conduct-prevention-and-"
+                     "compliance-controls.md", 0,
+                     'missing W3962 PO-canon anchor "~1,200 merchandise '
+                     'POs/month" (all types ~1,600–1,900/month '
+                     'production-calibrated)'))
     return hits
 
 

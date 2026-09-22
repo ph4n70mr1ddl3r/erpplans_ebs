@@ -751,7 +751,7 @@ Duration: 4 hours/test</bpmn:documentation>
         <bpmn:outgoing>W1481_Flow15</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W1481_Task7" name="Backup validation">
-        <bpmn:documentation>Step 4: Backup validation: (a) monthly: Data Engineer verifies backup integrity: (i) automated backup completion check (all databases backed up per schedule), (ii) random backup restore test (restore one table from backup, verify data matches production), (iii) backup storage capacity check (1,000 GB growing at ~10–15% annually — is storage scaling?), (iv) backup encryption verification (data at rest encrypted per W647 privacy compliance); (b) backup retention validation: (i) 10-year retention for financial data per BIR requirements, (ii) 3-year retention for operational data, (iii) purge expired backups
+        <bpmn:documentation>Step 4: Backup validation: (a) monthly: Data Engineer verifies backup integrity: (i) automated backup completion check (all databases backed up per schedule), (ii) random backup restore test (restore one table from backup, verify data matches production), (iii) backup storage capacity check (~1,230 GB over the 10-year §1.2 canon, growing ~123 GB/year — is storage scaling?), (iv) backup encryption verification (data at rest encrypted per W647 privacy compliance); (b) backup retention validation: (i) 10-year retention for financial data per BIR requirements, (ii) 3-year retention for operational data, (iii) purge expired backups
 Responsible (R): Data Engineer / IT DBA
 Accountable (A): BI Manager
 Duration: 4 hours/month</bpmn:documentation>

@@ -134,8 +134,8 @@ Owner: Store Manager (store-level); DC Supervisor (DC-level)</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W92" name="W92. Inventory Adjustment &amp; Shrinkage Authorization" isExecutable="false">
       <bpmn:documentation>Trigger: Cycle count discrepancy identified (W6); annual physical inventory variance (W42); confirmed theft or loss (W37); damaged goods write-off (W91); RTV write-off (W88); or system correction needed (negative inventory, data entry error)
-Frequency: ~1,700–2,600 adjustments/month (200 stores × 8–12 + 4 DCs × 30–50) across all locations (mostly from cycle counts)
-Volume: ~8–12 adjustments per store per month; ~30–50 per DC per month
+Frequency: ~680–1,120 adjustments/month chain-wide (200 stores × ~3–5 + 4 DCs × ~20–30 — the §1.1 calibrated canon, ~30/day with an 8.0x physical-inventory-month peak; mostly from cycle counts)
+Volume: ~3–5 adjustments per store per month; ~20–30 per DC per month (the ~30/day §1.1 canon)
 Owner: Controller
 Participants: Stock Associate, Store Manager, DC Supervisor, Cost Accountant, Controller, Internal Audit
 Source: workflow W92 — Inventory Adjustment &amp; Shrinkage Authorization</bpmn:documentation>
