@@ -644,6 +644,30 @@ tolerance admitted it as a 'target-state' citation. profile_derived_figure_hits'
 tolerance is now scoped per surface kind — PA/VS-README citations require the
 active canon, companion surfaces may still cite the design quotient where the
 design context is explicit.
+
+2026-09-23 seventy-eighth-wave consistency review: the Online Channel & Capability
+Registry (channel-capability-registry.md — the switchboard the (t)/(u) BOPIS mandate
+and the (x) B2B disablement both govern through) joins the DOCS set, closing the
+licensing_bom/oratest 'shipped with only a partial arm, one wave later' precedent one
+more time — it had carried only domain_companion_hits' (x) trade-estate anchors since
+the disablement. Four defects repaired on the surfaces no arm read: (1) W5580's
+Trigger row-family enumeration stopped at CAP-Cxx/CAP-Fxx/CAP-Txx — the (x) commit
+added the §3.4 CAP-B01–B04 estate and registry rule 7 routes its state changes through
+W5580, so the trigger must enumerate CAP-Bxx; (2) W5580's Volume census cell stayed at
+'9 prepared-disabled' — correct at batch-30 (registry v1.0/v1.1, §3.1–3.3 only) but
+stale once (x) added the four B rows; re-based to 13; (3) W5580 step 8's 'store/DC
+comms and training (W518/W40)' cited the Regular-Price-Change workflow as the
+communications vehicle — the comms canon is W2358 Corporate Announcement Broadcasting
+(VS-63), the fifty-seventh-wave misdirected-citation class; (4) registry rule 7 called
+the VS-11/VS-43/VS-107/VS-68 estate 'process areas' — those are value streams under
+the corpus's own 188-VS/569-PA convention (the registry's own §3.4 Vehicles cells use
+both terms correctly); registry bumped v1.3. Guard: channel_registry_hits — the §3
+tables' state census and CAP-family set re-derived every run, W5580's trigger
+enumeration asserted to cover every derived family and its Volume census asserted
+equal to the derived prepared-disabled count (a future capability flip re-fires the
+arm until the census is re-pointed — the Check-71 CENSUS-pin contract), the repaired
+anchors required and the retired forms banned, and the TO joining the bare-§ union
+for the registry's 'TO §5.2/§5.3' register cites (the rc/it/src/dmm precedent).
 """
 
 def _doc_versions():
@@ -827,7 +851,18 @@ DOCS = ["mobile-app-strategy.md", "data-migration-mapping.md",
         # 2026-09-21: the inward-direction reconciliation of the official R12.2
         # documentation library (ebs_docs/) against this model joins the doc set at
         # issue, not a wave later -- the licensing_bom/oratest precedent.
-        "../02-oracle-ebs/ebs-documentation-coverage.md"]
+        "../02-oracle-ebs/ebs-documentation-coverage.md",
+        # 2026-09-23 seventy-eighth-wave consistency review: the Online Channel &
+        # Capability Registry joins the doc set — it shipped at the (t)/(u)
+        # BOPIS-mandate issue with only the (x) trade-estate anchor arm (part (d)
+        # of domain_companion_hits), the licensing_bom/oratest 'one wave later'
+        # precedent one more time. Generic sweeps verified clean on dry-run (all
+        # W/VS/CTL/PA/requirement tokens resolve; no retired figures); the guard
+        # gains the channel_registry_hits structural rule (the §3 state census and
+        # CAP-family set re-derived every run, W5580's trigger enumeration and
+        # Volume census asserted against them) and the TO joins the bare-§ union
+        # for its 'TO §5.2/§5.3' register cites.
+        "channel-capability-registry.md"]
 RETIRED_FIGURES = ["6,757", "6,715", "5,357", "5,362", "5,349", "5,341",
                    "80,000 SKU", "1,000 POS terminal"]
 
@@ -4265,6 +4300,136 @@ def domain_companion_hits():
     return hits
 
 
+def channel_registry_hits():
+    """2026-09-23 seventy-eighth-wave consistency review — structural guard for
+    the Online Channel & Capability Registry (channel-capability-registry.md;
+    shipped at the 2026-09-23 (t)/(u) mandate with only the (x) trade-estate
+    anchor arm — the licensing_bom/oratest 'joined the doc set one wave later'
+    precedent, now closed) and for the registry↔W5580 census pair the (x) B2B
+    disablement stranded. Re-derives, every run, from the registry's §3 tables:
+    the state census (ENABLED / ENABLED (PHASED) / DISABLED — PREPARED /
+    DISABLED — NOT PREPARED row counts) and the CAP ID-prefix family set, then
+    asserts PA-113.2's W5580 fields agree — the trigger's row-family enumeration
+    covering every family the registry actually contains, and the Volume cell's
+    prepared-disabled census equal to the derived count (the batch-30 cell
+    stayed at 9 after (x) added CAP-B01–B04 — the derived form can never strand
+    again: a future flip re-fires until the census is re-pointed, the Check-71
+    CENSUS-pin contract). Pins the repaired cells: the comms/training citation
+    (W2358 corporate-announcement canon — the retired 'W518/W40' form cited the
+    price-change workflow for store/DC communications, the fifty-seventh-wave
+    misdirected-citation class), the rule-7 value-streams anchor (the retired
+    'process areas' form contradicted the corpus's own 188-VS/569-PA
+    convention), and the registry's BOPIS-mandate header sentence."""
+    rel = "channel-capability-registry.md"
+    hits = []
+    reg_path = os.path.join(REPO, "01-model-company", rel)
+    text = open(reg_path, encoding="utf-8").read()
+    body = text.split("*Document Version:")[0]
+    # ---- derive the §3 state census + ID-prefix families from the registry rows
+    census = {"ENABLED": 0, "ENABLED (PHASED)": 0,
+              "DISABLED — PREPARED": 0, "DISABLED — NOT PREPARED": 0}
+    fams = []
+    for m in re.finditer(r"^\| (CAP-[A-Z]\d+) ", body, re.M):
+        fam = m.group(1)[:5]  # 'CAP-B' from 'CAP-B01'
+        if fam not in fams:
+            fams.append(fam)
+        row = body[m.start():body.find("\n", m.start())]
+        for state in census:
+            if "**" + state + "**" in row:
+                census[state] += 1
+                break
+        else:
+            hits.append((rel, body[:m.start()].count("\n") + 1,
+                         f"registry row {m.group(1)} carries no recognized "
+                         f"state cell (the census arm cannot classify it)"))
+    total_rows = sum(census.values())
+    if total_rows < 16:  # v1.0 shipped 16 rows; the register is add-only
+        hits.append((rel, 0,
+                     f"§3 registry rows re-derived to {total_rows} — below the "
+                     f"16 the v1.0 issuance shipped (add-only register)"))
+    # ---- the header mandate sentence (the registry's own §0 contract)
+    if "**BOPIS (store pickup) is the only enabled online sales capability**" not in body:
+        hits.append((rel, 0,
+                     'missing header mandate anchor "**BOPIS (store pickup) is '
+                     'the only enabled online sales capability**"'))
+    # ---- rule 7's value-streams form (the repaired class)
+    if "the VS-11/VS-43/VS-107/VS-68 value streams, requirements and controls" not in body:
+        hits.append((rel, 0,
+                     'missing rule-7 anchor "the VS-11/VS-43/VS-107/VS-68 '
+                     'value streams, requirements and controls"'))
+    if "VS-11/VS-43/VS-107/VS-68 process areas" in body:
+        line = body[:body.index("VS-11/VS-43/VS-107/VS-68 process areas")].count("\n") + 1
+        hits.append((rel, line,
+                     'retired form "VS-11/VS-43/VS-107/VS-68 process areas" '
+                     '(VS-* are value streams — the corpus\'s own 188-VS/569-PA '
+                     'convention)'))
+    # ---- W5580's fields must agree with the derived census (PA-113.2)
+    pa = os.path.join(REPO, "01-model-company", "workflows",
+                      "VS-113-enterprise-architecture-application-portfolio-"
+                      "and-technology-strategy",
+                      "PA-113.2-application-portfolio-integration-and-solution-"
+                      "architecture.md")
+    pa_body = open(pa, encoding="utf-8").read().split("*Document Version:")[0]
+    w5580 = pa_body.split("## W5580.", 1)[-1].split("\n## ", 1)[0]
+    if not w5580.strip():
+        hits.append(("PA-113.2-application-portfolio-integration-and-solution-architecture.md",
+                     0, "W5580 block not found"))
+        return hits
+    # (a) the trigger's row-family enumeration covers every CAP family present
+    trig_m = re.search(r"\| \*\*Trigger\*\* \|([^|]*)\|", w5580)
+    trig = trig_m.group(1) if trig_m else ""
+    enum_m = re.search(r"\((CAP-[A-Z]xx(?:/CAP-[A-Z]xx)*)", trig)
+    if not enum_m:
+        hits.append(("PA-113.2-application-portfolio-integration-and-solution-architecture.md",
+                     0, "W5580 Trigger carries no CAP-Cxx/CAP-Fxx/… row-family "
+                        "enumeration"))
+    else:
+        enumerated = enum_m.group(1).split("/")
+        expected = [f + "xx" for f in fams]
+        for fam in expected:
+            if fam not in enumerated:
+                hits.append(("PA-113.2-application-portfolio-integration-and-solution-architecture.md",
+                             0, f"W5580 Trigger enumeration omits the registry's "
+                                f"{fam} family (the registry §3 holds {fam} rows; "
+                                f"every family rides this workflow)"))
+        if "/CAP-Bxx" not in enum_m.group(1):
+            hits.append(("PA-113.2-application-portfolio-integration-and-solution-architecture.md",
+                         0, 'retired trigger enumeration (no CAP-Bxx — the (x) '
+                            'B2B estate\'s state changes ride W5580 per registry '
+                            'rule 7)'))
+    # (b) the Volume cell's prepared-disabled census equals the derived count
+    vol_m = re.search(r"\| \*\*Volume\*\* \|([^|]*)\|", w5580)
+    vol = vol_m.group(1) if vol_m else ""
+    census_m = re.search(r"(\d+) prepared-disabled", vol)
+    if not census_m:
+        hits.append(("PA-113.2-application-portfolio-integration-and-solution-architecture.md",
+                     0, "W5580 Volume carries no 'N prepared-disabled' census "
+                        "cell"))
+    else:
+        if int(census_m.group(1)) != census["DISABLED — PREPARED"]:
+            hits.append(("PA-113.2-application-portfolio-integration-and-solution-architecture.md",
+                         0, f"W5580 Volume census says {census_m.group(1)} "
+                            f"prepared-disabled but the registry §3 tables "
+                            f"re-derive {census['DISABLED — PREPARED']} "
+                            f"(a state flip moves the canon — re-point the cell)") )
+    if "; 9 prepared-disabled" in vol:
+        hits.append(("PA-113.2-application-portfolio-integration-and-solution-architecture.md",
+                     0, 'retired batch-30 census form "; 9 prepared-disabled" '
+                        '(the (x) B2B estate added CAP-B01–B04)'))
+    # (c) the step-8 comms/training citation (the misdirected W40 class)
+    if "(W2358 corporate announcement broadcasting / W518 POS training)" not in w5580:
+        hits.append(("PA-113.2-application-portfolio-integration-and-solution-architecture.md",
+                     0, 'missing step-8 comms/training anchor "(W2358 corporate '
+                        'announcement broadcasting / W518 POS training)"'))
+    if "W518/W40" in w5580:
+        line = pa_body[:pa_body.index("W518/W40")].count("\n") + 1
+        hits.append(("PA-113.2-application-portfolio-integration-and-solution-architecture.md",
+                     line, 'retired citation "W518/W40" (W40 is Regular Price '
+                           'Change Execution — the store/DC comms canon is W2358, '
+                           'VS-63)'))
+    return hits
+
+
 def quote_coverage_hits():
     """2026-09-18 fifty-fifth-wave consistency review — structural guard for the
     cross-repo quote-coverage review (02-oracle-ebs/quote-coverage-review.md; it
@@ -4791,6 +4956,10 @@ def main():
                                         "capability-sourcing-and-engineering-model.md"))
     # data-migration.md cites its mapping companion's subsections ('per mapping §2.1')
     dmm_secs = sections_of(os.path.join(MC, "data-migration-mapping.md"))
+    # 2026-09-23 seventy-eighth-wave review: the channel-capability registry cites
+    # the TO's register/sub-team sections ('the TO §5.3 register', 'TO §5.2/§5.3')
+    # — the TO joins the bare-§ fallback union (the rc/it/src/dmm precedent).
+    to_secs = sections_of(os.path.join(MC, "optimal-table-of-organization.md"))
     ebs_secs = set()
     for rel in DOCS:
         if rel.startswith("../02-oracle-ebs/"):
@@ -4837,7 +5006,7 @@ def main():
             if sec not in prof_secs and sec not in own and sec not in dv_secs \
                     and sec not in rc_secs and sec not in it_secs \
                     and sec not in src_secs and sec not in ebs_secs \
-                    and sec not in dmm_secs:
+                    and sec not in dmm_secs and sec not in to_secs:
                 hits.append((doc, body[:m.start()].count("\n") + 1,
                              f"unresolved §{sec}"))
         for lit in RETIRED_LITERALS.get(doc, []):
@@ -4903,6 +5072,9 @@ def main():
     # 2026-09-23 seventy-sixth-wave consistency review addition (batch-30 census
     # stragglers: VS-index banner/footer, canon §1, domain companions)
     hits.extend(domain_companion_hits())
+    # 2026-09-23 seventy-eighth-wave consistency review addition (the channel
+    # registry joins the doc set; its §3 census + W5580's trigger/Volume pair)
+    hits.extend(channel_registry_hits())
     for doc, line, detail in hits:
         print(f"model-doc: {doc}:{line}: {detail}")
     print(f"audit-model-docs: {len(hits)} hit(s) across {len(DOCS)} documents")
