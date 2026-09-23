@@ -810,4 +810,181 @@ Owner: Head of Enterprise Architecture</bpmn:text>
         <bpmndi:BPMNEdge id="W5535_Assoc15_di" bpmnElement="W5535_Assoc15"><di:waypoint x="340" y="800" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
       </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
+    <bpmn:process id="W_W5580" name="W5580. Capability Switchboard Operation &amp; Channel Enablement Impact Governance" isExecutable="false">
+      <bpmn:documentation>Trigger: An executive directive or business case to enable/disable an Online Channel &amp; Capability Registry row (CAP-Cxx/CAP-Fxx/CAP-Txx); an enable-checklist completion; a BCP activation requiring a dormant channel (BCP-008, VS-69); a quarterly registry↔feature-flag drift audit finding; or a new capability admitted DISABLED — PREPARED via W5535/W5515
+Frequency: Episodic (per state-change demand); quarterly registry↔flag drift audit; annual full-registry review
+Volume: ~2–6 capability state changes/year at the current posture (1 enabled fulfillment option; 9 prepared-disabled); each change touches 2–15 vehicle/support workflows, 0–3 integration flow groups, and 0–10 HQ/store/DC roles
+Owner: Head of Enterprise Architecture
+Participants: Head of EA, GM, Digital Commerce Inc. (channel business owner), VP Store Operations, VP Supply Chain, CFO, product/process architects, CHRO (workforce planning; links to VS-102/VS-19), owning team IT PO/PM &amp; BPO (POS estate; links to W1409), Treasury (tender/settlement links to VS-18)
+Source: workflow W5580 — Capability Switchboard Operation &amp; Channel Enablement Impact Governance</bpmn:documentation>
+      <bpmn:laneSet id="W5580_LaneSet9">
+        <bpmn:lane id="W5580_Lane1" name="Head of EA">
+        <bpmn:flowNodeRef>W5580_Task11</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W5580_Task17</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W5580_Task20</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W5580_Start10</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W5580_Lane2" name="Product">
+        <bpmn:flowNodeRef>W5580_Task12</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W5580_Lane3" name="Chief Accountant">
+        <bpmn:flowNodeRef>W5580_Task13</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W5580_Lane4" name="CHRO">
+        <bpmn:flowNodeRef>W5580_Task14</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W5580_Lane5" name="Owning PO &amp; BPO">
+        <bpmn:flowNodeRef>W5580_Task15</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W5580_Lane6" name="Owning team">
+        <bpmn:flowNodeRef>W5580_Task16</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W5580_Lane7" name="Owning team + store">
+        <bpmn:flowNodeRef>W5580_Task18</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W5580_Lane8" name="Head of EA + owning team">
+        <bpmn:flowNodeRef>W5580_Task19</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W5580_End21</bpmn:flowNodeRef>
+        </bpmn:lane>
+      </bpmn:laneSet>
+      <bpmn:startEvent id="W5580_Start10" name="An executive directive or business case to enable/disable an Online Channel &amp; Capability…">
+        <bpmn:outgoing>W5580_Flow24</bpmn:outgoing>
+      </bpmn:startEvent>
+      <bpmn:userTask id="W5580_Task11" name="Classify the state-change demand against the registry: which row, target state…">
+        <bpmn:documentation>Step 1: Classify the state-change demand against the registry: which row, target state (ENABLED ↔ DISABLED — PREPARED), driver (strategy, BCP activation, unit economics), and the enable/disable checklist scope for that row
+Responsible (R): Head of EA
+Accountable (A): CIO
+Duration: 2–4 h/change</bpmn:documentation>
+        <bpmn:incoming>W5580_Flow24</bpmn:incoming>
+        <bpmn:outgoing>W5580_Flow25</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W5580_Task12" name="Cross-workflow impact assessment (the flip set)">
+        <bpmn:documentation>Step 2: Cross-workflow impact assessment (the flip set): enumerate the capability&#x27;s vehicle and support workflows that flip live↔dormant; plan the volume re-basing each way (frozen designed-capacity canon ↔ live load); surface dependencies — enabling home delivery re-opens the COD custody chain (E-10), the W14 delivery IC flows and W592 tracking/POD; disabling BOPIS strands the entire online channel (POS completion is the only revenue vehicle)
+Responsible (R): Product/process architects
+Accountable (A): Head of EA
+Duration: 4–16 h/change</bpmn:documentation>
+        <bpmn:incoming>W5580_Flow25</bpmn:incoming>
+        <bpmn:outgoing>W5580_Flow26</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W5580_Task13" name="Revenue &amp; recording-vehicle impact">
+        <bpmn:documentation>Step 3: Revenue &amp; recording-vehicle impact: every online sale must complete as a regular POS sale at the store (the mandate) — a non-POS-completing capability re-opens the ecommerce revenue/VAT stream (OM/AR recognition, W14 IC remittance, gateway refunds vs POS reversals, BIR 2550M attribution) and the per-order fee models (W1417); Finance quantifies the GMV/revenue-mix shift (profile §8)
+Responsible (R): Chief Accountant
+Accountable (A): CFO
+Duration: 4–8 h/change</bpmn:documentation>
+        <bpmn:incoming>W5580_Flow26</bpmn:incoming>
+        <bpmn:outgoing>W5580_Flow27</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W5580_Task14" name="Headcount &amp; staffing impact assessment">
+        <bpmn:documentation>Step 4: Headcount &amp; staffing impact assessment: for each affected workflow, read its Staffing Implication against the TO §5.3 register and §7 field rosters — (a) ENABLEMENT: incremental hours by estate (store/DC/HQ) sized from the workflows&#x27; own staffing claims (e.g., delivery enablement → DC pick/pack shifts of +3–4 pickers/DC, courier-facing CS hours, 3PL coordination), mapped through the TO §12 HQ scaling rules and the store labor model (FTE vs SP/flex per §13) → hiring requisitions (links VS-19) or redeployment first; (b) DISABLEMENT: workload removal → redeployment-first assessment (absorbed roles with stated basis, SP/flex contract wind-downs — never silent absorption); every HC gain/loss lands as a TO/roster delta through TO change control or an explicit absorbed-with-basis claim — the flip never moves headcount implicitly
+Responsible (R): CHRO
+Accountable (A): CHRO (people) / COO (store &amp; DC estate)
+Duration: 8–24 h/change</bpmn:documentation>
+        <bpmn:incoming>W5580_Flow27</bpmn:incoming>
+        <bpmn:outgoing>W5580_Flow28</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W5580_Task15" name="Systems &amp; config plan: feature-flag flips in the capability-configuration…">
+        <bpmn:documentation>Step 5: Systems &amp; config plan: feature-flag flips in the capability-configuration service; integration flows to activate/deactivate; ATP/allocation rules (W105); fraud-rule tuning (W266); notification templates; POS tender types if tender surfaces change
+Responsible (R): Owning PO &amp; BPO
+Accountable (A): Head of EA
+Duration: 4–8 h/change</bpmn:documentation>
+        <bpmn:incoming>W5580_Flow28</bpmn:incoming>
+        <bpmn:outgoing>W5580_Flow29</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W5580_Task16" name="in the same change">
+        <bpmn:documentation>Step 6: Change-chain execution: JSM change ticket ↔ Jira issue ↔ Bitbucket PR ↔ Pipelines (payment/POS-facing changes → CAB W1409, two-reviewer rule); the registry row updates in the same change — the documentation of record and the flag store may never disagree
+Responsible (R): Owning team
+Accountable (A): Head of EA
+Duration: 2–6 h/change</bpmn:documentation>
+        <bpmn:incoming>W5580_Flow29</bpmn:incoming>
+        <bpmn:outgoing>W5580_Flow30</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W5580_Task17" name="Enablement readiness gate: checklist evidence assembled per registry row…">
+        <bpmn:documentation>Step 7: Enablement readiness gate: checklist evidence assembled per registry row; go/no-go at the SIB/Product Council; BCP-driven activations may fast-track with a post-hoc full checklist (BCP-008/VS-69 precedence noted on the row)
+Responsible (R): Head of EA
+Accountable (A): CIO / SIB
+Duration: At gate</bpmn:documentation>
+        <bpmn:incoming>W5580_Flow30</bpmn:incoming>
+        <bpmn:outgoing>W5580_Flow31</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W5580_Task18" name="Flip + hypercare: config flip, order-intake/routing smoke tests, store/DC comms…">
+        <bpmn:documentation>Step 8: Flip + hypercare: config flip, order-intake/routing smoke tests, store/DC comms and training (W518/W40), volume dashboards watched, 2-week hypercare with config-only rollback
+Responsible (R): Owning team + store/DC ops
+Accountable (A): GM, Digital Commerce Inc. (channel business owner)
+Duration: 1–2 weeks elapsed</bpmn:documentation>
+        <bpmn:incoming>W5580_Flow31</bpmn:incoming>
+        <bpmn:outgoing>W5580_Flow32</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W5580_Task19" name="Canon settlement: every volume/staffing/canon cell the flip moved is re-pointed…">
+        <bpmn:documentation>Step 9: Canon settlement: every volume/staffing/canon cell the flip moved is re-pointed (the frozen designed-capacity ↔ live-load re-basing), document footers bumped, validate-repo.sh green before the change closes
+Responsible (R): Head of EA + owning team
+Accountable (A): Head of EA
+Duration: 4–16 h/change</bpmn:documentation>
+        <bpmn:incoming>W5580_Flow32</bpmn:incoming>
+        <bpmn:outgoing>W5580_Flow33</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W5580_Task20" name="Post-change review at the next QBR: actual vs assessed volumes, staffing and…">
+        <bpmn:documentation>Step 10: Post-change review at the next QBR: actual vs assessed volumes, staffing and revenue; the registry row annotated with outcomes; checklist lessons folded back
+Responsible (R): Head of EA
+Accountable (A): CIO
+Duration: Quarterly</bpmn:documentation>
+        <bpmn:incoming>W5580_Flow33</bpmn:incoming>
+        <bpmn:outgoing>W5580_Flow34</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:endEvent id="W5580_End21" name="Complete">
+        <bpmn:incoming>W5580_Flow34</bpmn:incoming>
+      </bpmn:endEvent>
+      <bpmn:textAnnotation id="W5580_Annotation22">
+        <bpmn:text>Controls: - CTL-569 (ensure controlled execution — Application Portfolio, Integration &amp; Solution Architecture (PA-113.2).) | - operational: no feature-flag flip without the same-change registry-row update (W1409-gated for payment/POS-facing changes) | - operational: no enablement go-live without checklist evidence and a recorded headcount/staffing impact assessment
+Owner: Head of Enterprise Architecture</bpmn:text>
+      </bpmn:textAnnotation>
+      <bpmn:association id="W5580_Assoc23" sourceRef="W5580_Annotation22" targetRef="W5580_Start10" associationDirection="None" />
+      <bpmn:sequenceFlow id="W5580_Flow24" sourceRef="W5580_Start10" targetRef="W5580_Task11" />
+      <bpmn:sequenceFlow id="W5580_Flow25" sourceRef="W5580_Task11" targetRef="W5580_Task12" />
+      <bpmn:sequenceFlow id="W5580_Flow26" sourceRef="W5580_Task12" targetRef="W5580_Task13" />
+      <bpmn:sequenceFlow id="W5580_Flow27" sourceRef="W5580_Task13" targetRef="W5580_Task14" />
+      <bpmn:sequenceFlow id="W5580_Flow28" sourceRef="W5580_Task14" targetRef="W5580_Task15" />
+      <bpmn:sequenceFlow id="W5580_Flow29" sourceRef="W5580_Task15" targetRef="W5580_Task16" />
+      <bpmn:sequenceFlow id="W5580_Flow30" sourceRef="W5580_Task16" targetRef="W5580_Task17" />
+      <bpmn:sequenceFlow id="W5580_Flow31" sourceRef="W5580_Task17" targetRef="W5580_Task18" />
+      <bpmn:sequenceFlow id="W5580_Flow32" sourceRef="W5580_Task18" targetRef="W5580_Task19" />
+      <bpmn:sequenceFlow id="W5580_Flow33" sourceRef="W5580_Task19" targetRef="W5580_Task20" />
+      <bpmn:sequenceFlow id="W5580_Flow34" sourceRef="W5580_Task20" targetRef="W5580_End21" />
+    </bpmn:process>
+    <bpmndi:BPMNDiagram id="W5580_diag">
+      <bpmndi:BPMNPlane id="W5580_plane" bpmnElement="W_W5580">
+        <bpmndi:BPMNShape id="W5580_Lane1_di" bpmnElement="W5580_Lane1" isHorizontal="true"><dc:Bounds x="160" y="80" width="2420" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5580_Lane2_di" bpmnElement="W5580_Lane2" isHorizontal="true"><dc:Bounds x="160" y="250" width="2420" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5580_Lane3_di" bpmnElement="W5580_Lane3" isHorizontal="true"><dc:Bounds x="160" y="420" width="2420" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5580_Lane4_di" bpmnElement="W5580_Lane4" isHorizontal="true"><dc:Bounds x="160" y="590" width="2420" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5580_Lane5_di" bpmnElement="W5580_Lane5" isHorizontal="true"><dc:Bounds x="160" y="760" width="2420" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5580_Lane6_di" bpmnElement="W5580_Lane6" isHorizontal="true"><dc:Bounds x="160" y="930" width="2420" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5580_Lane7_di" bpmnElement="W5580_Lane7" isHorizontal="true"><dc:Bounds x="160" y="1100" width="2420" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5580_Lane8_di" bpmnElement="W5580_Lane8" isHorizontal="true"><dc:Bounds x="160" y="1270" width="2420" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5580_Task11_di" bpmnElement="W5580_Task11"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5580_Task12_di" bpmnElement="W5580_Task12"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5580_Task13_di" bpmnElement="W5580_Task13"><dc:Bounds x="820" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5580_Task14_di" bpmnElement="W5580_Task14"><dc:Bounds x="1030" y="635" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5580_Task15_di" bpmnElement="W5580_Task15"><dc:Bounds x="1240" y="805" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5580_Task16_di" bpmnElement="W5580_Task16"><dc:Bounds x="1450" y="975" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5580_Task17_di" bpmnElement="W5580_Task17"><dc:Bounds x="1660" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5580_Task18_di" bpmnElement="W5580_Task18"><dc:Bounds x="1870" y="1145" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5580_Task19_di" bpmnElement="W5580_Task19"><dc:Bounds x="2080" y="1315" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5580_Task20_di" bpmnElement="W5580_Task20"><dc:Bounds x="2290" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5580_Start10_di" bpmnElement="W5580_Start10"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5580_End21_di" bpmnElement="W5580_End21"><dc:Bounds x="2520" y="1337" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5580_Annotation22_di" bpmnElement="W5580_Annotation22"><dc:Bounds x="160" y="1480" width="360" height="114" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="W5580_Flow24_di" bpmnElement="W5580_Flow24"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5580_Flow25_di" bpmnElement="W5580_Flow25"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5580_Flow26_di" bpmnElement="W5580_Flow26"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5580_Flow27_di" bpmnElement="W5580_Flow27"><di:waypoint x="1000" y="505" /><di:waypoint x="1030" y="675" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5580_Flow28_di" bpmnElement="W5580_Flow28"><di:waypoint x="1210" y="675" /><di:waypoint x="1240" y="845" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5580_Flow29_di" bpmnElement="W5580_Flow29"><di:waypoint x="1420" y="845" /><di:waypoint x="1450" y="1015" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5580_Flow30_di" bpmnElement="W5580_Flow30"><di:waypoint x="1630" y="1015" /><di:waypoint x="1660" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5580_Flow31_di" bpmnElement="W5580_Flow31"><di:waypoint x="1840" y="165" /><di:waypoint x="1870" y="1185" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5580_Flow32_di" bpmnElement="W5580_Flow32"><di:waypoint x="2050" y="1185" /><di:waypoint x="2080" y="1355" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5580_Flow33_di" bpmnElement="W5580_Flow33"><di:waypoint x="2260" y="1355" /><di:waypoint x="2290" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5580_Flow34_di" bpmnElement="W5580_Flow34"><di:waypoint x="2470" y="165" /><di:waypoint x="2520" y="1355" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5580_Assoc23_di" bpmnElement="W5580_Assoc23"><di:waypoint x="340" y="1480" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
+      </bpmndi:BPMNPlane>
+    </bpmndi:BPMNDiagram>
 </bpmn:definitions>

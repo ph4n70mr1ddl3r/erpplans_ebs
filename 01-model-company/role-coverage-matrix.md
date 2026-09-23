@@ -20,8 +20,8 @@
 
 | Measure | Value |
 |---|---|
-| Workflows mapped | 5432 (exactly one Owner each — asserted) |
-| Confirmed Tier register | 5455 rows (Tier 1: 1396 · Tier 2: 3301 · Tier 3: 758) |
+| Workflows mapped | 5433 (exactly one Owner each — asserted) |
+| Confirmed Tier register | 5456 rows (Tier 1: 1396 · Tier 2: 3302 · Tier 3: 758) |
 | Distinct resolved actors | 4200 — §5.3 register roles 153 · IT product-model seats 30 · store field 12 · DC field 18 · department-level actors 2991 · system actors 31 · governance 59 · workforce 105 · external 801 · uncharted 0 |
 
 > Tier mix = confirmed tiers of the workflows a role touches (a workflow
@@ -33,10 +33,10 @@
 
 | Role | Dept / source | HC | Owns | Participant | Step-R | Step-A | Touched | T1 | T2 | T3 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Chief Finance Officer (CFO) | Executive Office | 1 | 63 | 357 | 265 | 1832 | 1210 | 318 | 686 | 206 |
-| Chief Operating Officer (COO) | Executive Office | 1 | 59 | 161 | 129 | 1080 | 680 | 109 | 409 | 162 |
-| Chief Human Resources Officer (CHRO) | Executive Office | 1 | 35 | 87 | 92 | 675 | 368 | 78 | 236 | 54 |
-| Chief Information Officer (CIO) | Executive Office | 1 | 31 | 88 | 75 | 582 | 328 | 71 | 200 | 57 |
+| Chief Finance Officer (CFO) | Executive Office | 1 | 63 | 358 | 265 | 1833 | 1211 | 318 | 687 | 206 |
+| Chief Operating Officer (COO) | Executive Office | 1 | 59 | 161 | 129 | 1081 | 681 | 109 | 410 | 162 |
+| Chief Human Resources Officer (CHRO) | Executive Office | 1 | 35 | 88 | 93 | 676 | 369 | 78 | 237 | 54 |
+| Chief Information Officer (CIO) | Executive Office | 1 | 31 | 88 | 75 | 585 | 329 | 71 | 201 | 57 |
 | Chief Marketing Officer (CMO) | Executive Office | 1 | 26 | 72 | 73 | 361 | 228 | 21 | 135 | 72 |
 | CEO / President | Executive Office | 1 | 10 | 113 | 62 | 651 | 457 | 87 | 265 | 105 |
 | VP Finance & Accounting / Corporate Controller | Finance & Accounting | 1 | 83 | 274 | 318 | 863 | 540 | 226 | 263 | 51 |
@@ -73,7 +73,7 @@
 | Pricing Manager | Merchandising & Buying | 1 | 8 | 6 | 17 | 14 | 16 | 4 | 11 | 1 |
 | Private Brand Product Manager | Merchandising & Buying | 3 | 4 | 13 | 14 | 6 | 15 | 4 | 11 | 0 |
 | Assortment & Space Analyst | Merchandising & Buying | 3 | 4 | 8 | 16 | 0 | 8 | 3 | 5 | 0 |
-| VP Supply Chain & Logistics (dual-hat GM, BuildRight Logistics, Inc.) | Supply Chain & Logistics | 1 | 58 | 127 | 112 | 528 | 337 | 85 | 179 | 73 |
+| VP Supply Chain & Logistics (dual-hat GM, BuildRight Logistics, Inc.) | Supply Chain & Logistics | 1 | 58 | 128 | 112 | 528 | 338 | 85 | 180 | 73 |
 | Fleet Compliance & Safety Specialist | Supply Chain & Logistics | 1 | 49 | 35 | 146 | 20 | 37 | 22 | 13 | 2 |
 | Procurement Manager | Supply Chain & Logistics | 1 | 35 | 55 | 87 | 99 | 97 | 35 | 45 | 17 |
 | Logistics Coordinator | Supply Chain & Logistics | 2 | 28 | 34 | 71 | 24 | 47 | 9 | 37 | 1 |
@@ -126,7 +126,7 @@
 | Promotions & Campaigns Manager | Marketing | 1 | 2 | 0 | 0 | 0 | 2 | 0 | 2 | 0 |
 | Performance-Marketing Specialist | Marketing | 2 | 1 | 4 | 16 | 0 | 4 | 0 | 1 | 3 |
 | Marketing Comms Specialist | Marketing | 1 | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 |
-| VP Store Operations (Director Field Retail Operations) | Store Operations | 1 | 98 | 165 | 212 | 539 | 365 | 66 | 241 | 58 |
+| VP Store Operations (Director Field Retail Operations) | Store Operations | 1 | 98 | 166 | 212 | 539 | 366 | 66 | 242 | 58 |
 | Retail Standards & Store-Opening Manager (Store Support Center lead) | Store Operations | 1 | 31 | 26 | 24 | 37 | 53 | 9 | 42 | 2 |
 | Regional Manager | Store Operations | 6 | 28 | 116 | 140 | 201 | 209 | 62 | 125 | 22 |
 | OpEx / Continuous-Improvement Process Lead | Store Operations | 1 | 27 | 34 | 104 | 26 | 56 | 1 | 28 | 27 |
@@ -192,7 +192,7 @@
 | Role | Dept / source | Owns | Participant | Step-R | Step-A | Touched | T1 | T2 | T3 |
 |---|---|---|---|---|---|---|---|---|---|
 | DP BI Platform | Information Technology (product model) | 98 | 255 | 521 | 67 | 378 | 39 | 154 | 185 |
-| Head of Enterprise Architecture (CIO Office) | Information Technology (product model) | 47 | 79 | 132 | 50 | 87 | 6 | 71 | 10 |
+| Head of Enterprise Architecture (CIO Office) | Information Technology (product model) | 48 | 80 | 136 | 54 | 88 | 6 | 72 | 10 |
 | AAP AI-Governance Liaison | Information Technology (product model) | 28 | 25 | 72 | 56 | 27 | 13 | 10 | 4 |
 | SEC Security Engineer | Information Technology (product model) | 27 | 16 | 83 | 47 | 50 | 13 | 31 | 6 |
 | FS ITAM Administrator | Information Technology (product model) | 25 | 40 | 68 | 66 | 58 | 8 | 44 | 6 |
@@ -226,11 +226,11 @@
 
 | Role | Dept / source | Owns | Participant | Step-R | Step-A | Touched | T1 | T2 | T3 |
 |---|---|---|---|---|---|---|---|---|---|
-| Store Manager | Store (field, per-store roster) | 257 | 677 | 1027 | 1195 | 998 | 354 | 549 | 95 |
+| Store Manager | Store (field, per-store roster) | 257 | 677 | 1027 | 1197 | 998 | 354 | 549 | 95 |
 | Department Supervisor | Store (field, per-store roster) | 120 | 57 | 190 | 316 | 238 | 53 | 167 | 18 |
 | Department Supervisors | Store (field, per-store roster) | 117 | 190 | 275 | 477 | 290 | 83 | 185 | 22 |
 | Sales Associate | Store (field, per-store roster) | 78 | 288 | 799 | 99 | 376 | 85 | 253 | 38 |
-| Customer Service Rep | Store (field, per-store roster) | 60 | 99 | 293 | 36 | 135 | 44 | 81 | 10 |
+| Customer Service Rep | Store (field, per-store roster) | 60 | 99 | 295 | 36 | 136 | 45 | 81 | 10 |
 | Cashiers | Store (field, per-store roster) | 31 | 106 | 273 | 11 | 169 | 69 | 84 | 16 |
 | Cashier | Store (field, per-store roster) | 26 | 26 | 77 | 18 | 45 | 19 | 19 | 7 |
 | Maintenance | Store (field, per-store roster) | 24 | 87 | 164 | 18 | 109 | 34 | 62 | 13 |
@@ -321,7 +321,7 @@
 | Unit Leadership | Executive Office | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 0 |
 | Vendor Executives | Executive Office | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Finance | Finance & Accounting | 144 | 1044 | 1130 | 54 | 1223 | 253 | 753 | 217 |
-| Treasury | Finance & Accounting | 50 | 255 | 258 | 4 | 296 | 89 | 179 | 28 |
+| Treasury | Finance & Accounting | 50 | 256 | 258 | 4 | 297 | 89 | 180 | 28 |
 | Finance Analyst | Finance & Accounting | 30 | 60 | 158 | 5 | 116 | 29 | 62 | 25 |
 | Fraud Management | Finance & Accounting | 24 | 22 | 69 | 0 | 25 | 17 | 8 | 0 |
 | Cost Accounting Manager | Finance & Accounting | 24 | 0 | 2 | 0 | 24 | 4 | 19 | 1 |
@@ -341,8 +341,8 @@
 | Lease Operations Manager | Finance & Accounting | 6 | 0 | 0 | 13 | 8 | 2 | 6 | 0 |
 | Lease Origination Manager | Finance & Accounting | 6 | 0 | 0 | 5 | 6 | 0 | 6 | 0 |
 | Cost Accountant | Finance & Accounting | 5 | 21 | 51 | 12 | 32 | 18 | 13 | 1 |
+| Chief Accountant | Finance & Accounting | 5 | 20 | 47 | 14 | 25 | 17 | 8 | 0 |
 | Fraud | Finance & Accounting | 5 | 21 | 20 | 0 | 25 | 3 | 20 | 2 |
-| Chief Accountant | Finance & Accounting | 5 | 20 | 46 | 14 | 24 | 17 | 7 | 0 |
 | O2C | Finance & Accounting | 5 | 9 | 21 | 0 | 15 | 3 | 11 | 1 |
 | Ar Analyst | Finance & Accounting | 5 | 6 | 26 | 6 | 9 | 3 | 6 | 0 |
 | Ar | Finance & Accounting | 4 | 60 | 42 | 2 | 64 | 30 | 31 | 3 |
@@ -707,7 +707,7 @@
 | Fleet Supervisor | Supply Chain & Logistics | 8 | 3 | 16 | 8 | 11 | 1 | 9 | 1 |
 | Vendor Mgmt | Supply Chain & Logistics | 7 | 63 | 75 | 0 | 77 | 25 | 46 | 6 |
 | Vendor Management | Supply Chain & Logistics | 7 | 5 | 0 | 0 | 11 | 4 | 7 | 0 |
-| Dc Ops | Supply Chain & Logistics | 6 | 101 | 58 | 0 | 113 | 19 | 82 | 12 |
+| Dc Ops | Supply Chain & Logistics | 6 | 101 | 59 | 0 | 114 | 19 | 83 | 12 |
 | Dc Operations | Supply Chain & Logistics | 6 | 45 | 13 | 3 | 49 | 19 | 28 | 2 |
 | Supply | Supply Chain & Logistics | 5 | 23 | 24 | 0 | 34 | 7 | 22 | 5 |
 | Import | Supply Chain & Logistics | 5 | 30 | 16 | 0 | 31 | 16 | 13 | 2 |
@@ -1127,6 +1127,8 @@
 | Hr Analytics | Information Technology | 0 | 4 | 2 | 0 | 5 | 0 | 1 | 4 |
 | It Data Engineer | Information Technology | 0 | 3 | 3 | 0 | 5 | 2 | 2 | 1 |
 | It Integration | Information Technology | 0 | 5 | 1 | 0 | 5 | 1 | 4 | 0 |
+| Owning Po & Bpo | Information Technology | 0 | 2 | 8 | 0 | 5 | 0 | 5 | 0 |
+| Owning Team It Po | Information Technology | 0 | 3 | 2 | 5 | 5 | 0 | 5 | 0 |
 | Ai Ethics Review Board | Information Technology | 0 | 4 | 1 | 0 | 4 | 0 | 3 | 1 |
 | Cloud Arch | Information Technology | 0 | 0 | 4 | 3 | 4 | 0 | 3 | 1 |
 | Cloud Architect | Information Technology | 0 | 3 | 4 | 0 | 4 | 2 | 2 | 0 |
@@ -1135,8 +1137,6 @@
 | It Database Administrator | Information Technology | 0 | 4 | 1 | 0 | 4 | 2 | 1 | 1 |
 | It Integration Specialist | Information Technology | 0 | 4 | 1 | 0 | 4 | 4 | 0 | 0 |
 | It Leads | Information Technology | 0 | 3 | 5 | 1 | 4 | 0 | 4 | 0 |
-| Owning Po & Bpo | Information Technology | 0 | 2 | 7 | 0 | 4 | 0 | 4 | 0 |
-| Owning Team It Po | Information Technology | 0 | 2 | 2 | 5 | 4 | 0 | 4 | 0 |
 | Portal System | Information Technology | 0 | 0 | 5 | 0 | 4 | 2 | 2 | 0 |
 | Service Desk | Information Technology | 0 | 3 | 4 | 0 | 4 | 1 | 3 | 0 |
 | Ux Designer | Information Technology | 0 | 4 | 4 | 0 | 4 | 0 | 1 | 3 |
@@ -1771,7 +1771,7 @@
 | Uniform & Workwear Program Manager | Store Operations | 8 | 0 | 0 | 0 | 8 | 0 | 8 | 0 |
 | Store Operations | Store Operations | 3 | 41 | 17 | 2 | 51 | 10 | 34 | 7 |
 | Director Storage | Store Operations | 3 | 1 | 16 | 30 | 11 | 2 | 6 | 3 |
-| Store | Store Operations | 2 | 69 | 32 | 33 | 84 | 26 | 47 | 11 |
+| Store | Store Operations | 2 | 69 | 33 | 33 | 85 | 26 | 48 | 11 |
 | Locker Program | Store Operations | 1 | 0 | 22 | 0 | 13 | 2 | 10 | 1 |
 | Store Operations Coordinator | Store Operations | 1 | 6 | 5 | 1 | 6 | 2 | 4 | 0 |
 | Self-Haul Rental | Store Operations | 1 | 2 | 2 | 0 | 2 | 0 | 2 | 0 |
@@ -2843,8 +2843,8 @@
 | Respective Department Heads | Generic / cross-department | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 |
 | User Department Head | Generic / cross-department | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Director | Generic / cross-department | 0 | 26 | 43 | 130 | 62 | 10 | 42 | 10 |
-| Digital Commerce Inc | Digital Commerce (IT-built platforms) | 0 | 8 | 7 | 73 | 53 | 8 | 33 | 12 |
-| Gm | Generic / cross-department | 0 | 6 | 7 | 73 | 51 | 7 | 32 | 12 |
+| Digital Commerce Inc | Digital Commerce (IT-built platforms) | 0 | 9 | 7 | 74 | 54 | 8 | 34 | 12 |
+| Gm | Generic / cross-department | 0 | 7 | 7 | 74 | 52 | 7 | 33 | 12 |
 | Vp Merch | VP for Merchandising | 0 | 10 | 3 | 48 | 41 | 2 | 27 | 12 |
 | Business Owners | Generic / cross-department | 0 | 21 | 12 | 0 | 28 | 5 | 18 | 5 |
 | Process Owners | OpEx / Continuous-Improvement Process Lead | 0 | 18 | 13 | 4 | 26 | 4 | 14 | 8 |
@@ -2912,9 +2912,11 @@
 | Gift Card | Digital Commerce (IT-built platforms) | 0 | 3 | 1 | 0 | 3 | 2 | 1 | 0 |
 | Ot Soc Analyst | Generic / cross-department | 0 | 0 | 6 | 0 | 3 | 0 | 3 | 0 |
 | Owner | Generic / cross-department | 0 | 2 | 1 | 0 | 3 | 0 | 3 | 0 |
+| Owning Team | Generic / cross-department | 0 | 0 | 6 | 0 | 3 | 0 | 3 | 0 |
 | Per Tier Above | Generic / cross-department | 0 | 0 | 3 | 1 | 3 | 2 | 1 | 0 |
 | Pim Team | Generic / cross-department | 0 | 3 | 2 | 0 | 3 | 0 | 3 | 0 |
 | Pos Team | Generic / cross-department | 0 | 2 | 2 | 0 | 3 | 2 | 0 | 1 |
+| Product | Generic / cross-department | 0 | 3 | 1 | 0 | 3 | 0 | 3 | 0 |
 | Project Design Manager | Strategy / Corporate Planning (PMO) | 0 | 0 | 0 | 3 | 3 | 1 | 2 | 0 |
 | Sales Team | Generic / cross-department | 0 | 3 | 2 | 0 | 3 | 0 | 3 | 0 |
 | Seller Ops | Digital Commerce (IT-built platforms) | 0 | 0 | 3 | 0 | 3 | 0 | 3 | 0 |
@@ -2967,10 +2969,10 @@
 | Ops | Generic / cross-department | 0 | 1 | 1 | 0 | 2 | 0 | 2 | 0 |
 | Ot Ir Analyst | Generic / cross-department | 0 | 0 | 2 | 0 | 2 | 2 | 0 | 0 |
 | Owners | Generic / cross-department | 0 | 0 | 2 | 0 | 2 | 0 | 1 | 1 |
-| Owning Team | Generic / cross-department | 0 | 0 | 3 | 0 | 2 | 0 | 2 | 0 |
 | Owning Team Business Process Owner | Generic / cross-department | 0 | 2 | 0 | 0 | 2 | 0 | 2 | 0 |
 | Permit Portfolio | Strategy / Corporate Planning (PMO) | 0 | 2 | 0 | 0 | 2 | 2 | 0 | 0 |
-| Product | Generic / cross-department | 0 | 2 | 0 | 0 | 2 | 0 | 2 | 0 |
+| Pm & Bpo | Generic / cross-department | 0 | 2 | 0 | 0 | 2 | 0 | 2 | 0 |
+| Process Architects | Generic / cross-department | 0 | 2 | 1 | 0 | 2 | 0 | 2 | 0 |
 | Project Consultants | Strategy / Corporate Planning (PMO) | 0 | 2 | 0 | 0 | 2 | 0 | 0 | 2 |
 | Project Lead | Strategy / Corporate Planning (PMO) | 0 | 0 | 2 | 0 | 2 | 0 | 2 | 0 |
 | Qa Team | Generic / cross-department | 0 | 1 | 2 | 0 | 2 | 2 | 0 | 0 |
@@ -3150,7 +3152,6 @@
 | Planning And Implementation At The Central Office | Generic / cross-department | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
 | Platform Owners | Generic / cross-department | 0 | 1 | 2 | 0 | 1 | 0 | 1 | 0 |
 | Platform Teams | Generic / cross-department | 0 | 0 | 1 | 0 | 1 | 1 | 0 | 0 |
-| Pm & Bpo | Generic / cross-department | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Pmo Lead | Strategy / Corporate Planning (PMO) | 0 | 0 | 2 | 1 | 1 | 0 | 0 | 1 |
 | Pnp & Pnp-Women And Children Protection Desk | Generic / cross-department | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
 | Pnp Scene Of The Crime Operations Team | Generic / cross-department | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
@@ -3158,7 +3159,6 @@
 | Portfolio | Strategy / Corporate Planning (PMO) | 0 | 0 | 1 | 0 | 1 | 0 | 1 | 0 |
 | Pos Admin | Generic / cross-department | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
 | Presenter | Generic / cross-department | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 1 |
-| Process Architects | Generic / cross-department | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Procurement Team | Generic / cross-department | 0 | 1 | 1 | 1 | 1 | 1 | 0 | 0 |
 | Program Managers | Strategy / Corporate Planning (PMO) | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Program Sponsor | Strategy / Corporate Planning (PMO) | 0 | 0 | 0 | 1 | 1 | 0 | 1 | 0 |
@@ -3262,7 +3262,7 @@
 
 | Role | Dept / source | Owns | Participant | Step-R | Step-A | Touched | T1 | T2 | T3 |
 |---|---|---|---|---|---|---|---|---|---|
-| System | System & automated actors | 8 | 29 | 2479 | 5 | 1192 | 394 | 626 | 172 |
+| System | System & automated actors | 8 | 29 | 2481 | 5 | 1192 | 394 | 626 | 172 |
 | Order Management System | System & automated actors | 6 | 0 | 0 | 0 | 6 | 0 | 6 | 0 |
 | Pos | System & automated actors | 4 | 37 | 9 | 0 | 42 | 27 | 11 | 4 |
 | Ecommerce System | System & automated actors | 4 | 0 | 5 | 0 | 5 | 0 | 5 | 0 |
@@ -3312,9 +3312,9 @@
 | Executive Team | Governance bodies | 0 | 10 | 6 | 0 | 10 | 2 | 1 | 7 |
 | Exco | Governance bodies | 0 | 9 | 0 | 0 | 9 | 0 | 2 | 7 |
 | Executives | Governance bodies | 0 | 6 | 5 | 0 | 8 | 1 | 6 | 1 |
+| SIB | Governance bodies | 0 | 6 | 4 | 1 | 7 | 0 | 7 | 0 |
 | Board Risk Committee | Governance bodies | 0 | 3 | 0 | 4 | 6 | 0 | 5 | 1 |
 | Shareholders | Governance bodies | 0 | 5 | 1 | 1 | 6 | 0 | 6 | 0 |
-| SIB | Governance bodies | 0 | 6 | 4 | 0 | 6 | 0 | 6 | 0 |
 | Board Audit & Risk Committee | Governance bodies | 0 | 2 | 0 | 3 | 5 | 1 | 2 | 2 |
 | Change Advisory Board | Governance bodies | 0 | 4 | 0 | 2 | 5 | 1 | 4 | 0 |
 | Credit Committee | Governance bodies | 0 | 2 | 3 | 1 | 4 | 1 | 3 | 0 |

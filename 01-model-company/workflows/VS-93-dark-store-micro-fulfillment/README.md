@@ -4,6 +4,8 @@
 
 ---
 
+> **Capability disabled — prepared (CAP-F08, [Online Channel & Capability Registry](../../channel-capability-registry.md)):** dark-store quick-commerce is **disabled** — no dark store or MFC is commissioned while the capability is disabled. The estate below, including the ~3%→~7% scaling canon, the ~42,900→~100,000 orders/month trajectory and the same-day/next-day/quick-commerce promises, is the **prepared design held at designed capacity**: activation runs only through the registry's enable checklist (site network, sub-2-hour pick staffing, dense-demand order density), never a rebuild.
+
 ## Overview
 
 Dark Store & Micro-Fulfillment Operations workflows for BuildRight Depot Corp. — governing the

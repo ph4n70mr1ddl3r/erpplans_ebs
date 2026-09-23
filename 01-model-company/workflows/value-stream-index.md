@@ -219,7 +219,7 @@ Per-pass history: [workflow-gap-analysis.md](workflow-gap-analysis.md) §4.
 |  | [VS-29](VS-29-master-data/README.md) | Master Data Management | Core | 3 | 43 |
 |  | [VS-30](VS-30-innovation-digital/README.md) | Innovation & Digital Transformation | Core | 3 | 29 |
 |  | [VS-99](VS-99-it-asset-technology-lifecycle-management/README.md) | IT Asset & Technology Lifecycle Management | Gap analysis | 3 | 24 |
-|  | [VS-113](VS-113-enterprise-architecture-application-portfolio-and-technology-strategy/README.md) | Enterprise Architecture, Application Portfolio & Technology Strategy | Gap analysis | 3 | 31 |
+|  | [VS-113](VS-113-enterprise-architecture-application-portfolio-and-technology-strategy/README.md) | Enterprise Architecture, Application Portfolio & Technology Strategy | Gap analysis | 3 | 32 |
 |  | [VS-115](VS-115-calibration-metrology-and-measurement-traceability-management/README.md) | Calibration, Metrology & Measurement Traceability Management | Gap analysis | 3 | 24 |
 |  | [VS-126](VS-126-customer-data-platform-single-customer-view-identity-resolution/README.md) | Customer Data Platform, Single Customer View & Identity Resolution | Gap analysis | 3 | 24 |
 |  | [VS-128](VS-128-ai-ml-governance-responsible-ai/README.md) | AI/ML Governance & Responsible AI | Gap analysis | 3 | 27 |
@@ -227,8 +227,8 @@ Per-pass history: [workflow-gap-analysis.md](workflow-gap-analysis.md) §4.
 |  | [VS-137](VS-137-product-information-management-and-digital-asset-management/README.md) | Product Information Management (PIM) & Digital Asset Management (DAM) | Gap analysis | 3 | 24 |
 |  | [VS-151](VS-151-auto-id-barcode-rfid-labeling-and-eas-operations/README.md) | Auto-ID, Barcode, RFID, Price-Tag Labeling & EAS Operations | Gap analysis | 3 | 24 |
 |  | [VS-190](VS-190-operational-technology-ot-ics-cybersecurity-and-retail-technology-asset-protection/README.md) | Operational Technology (OT) / ICS Cybersecurity & Retail Technology Asset Protection | Gap analysis | 3 | 24 |
-| | | | **Subtotal** | **39** | **393** |
-| | | | **Grand Total** | **569** | **5,432** |
+| | | | **Subtotal** | **39** | **394** |
+| | | | **Grand Total** | **569** | **5,433** |
 
 ---
 
@@ -1339,10 +1339,10 @@ Per-pass history: [workflow-gap-analysis.md](workflow-gap-analysis.md) §4.
 - **PA-99.2** [Software Asset Management & License Compliance](./VS-99-it-asset-technology-lifecycle-management/PA-99.2-software-asset-management-license-compliance.md) — 8 workflows
 - **PA-99.3** [Technology Asset Security, Cost & Governance Analytics](./VS-99-it-asset-technology-lifecycle-management/PA-99.3-technology-asset-security-cost-governance-analytics.md) — 8 workflows
 
-**[VS-113: Enterprise Architecture, Application Portfolio & Technology Strategy](./VS-113-enterprise-architecture-application-portfolio-and-technology-strategy/README.md)** (31 workflows)
+**[VS-113: Enterprise Architecture, Application Portfolio & Technology Strategy](./VS-113-enterprise-architecture-application-portfolio-and-technology-strategy/README.md)** (32 workflows)
 
 - **PA-113.1** [Enterprise Architecture Framework, Standards & Governance](./VS-113-enterprise-architecture-application-portfolio-and-technology-strategy/PA-113.1-enterprise-architecture-framework-standards-and-governance.md) — 12 workflows
-- **PA-113.2** [Application Portfolio, Integration & Solution Architecture](./VS-113-enterprise-architecture-application-portfolio-and-technology-strategy/PA-113.2-application-portfolio-integration-and-solution-architecture.md) — 10 workflows
+- **PA-113.2** [Application Portfolio, Integration & Solution Architecture](./VS-113-enterprise-architecture-application-portfolio-and-technology-strategy/PA-113.2-application-portfolio-integration-and-solution-architecture.md) — 11 workflows
 - **PA-113.3** [Technology Strategy, Innovation Governance & Architecture Analytics](./VS-113-enterprise-architecture-application-portfolio-and-technology-strategy/PA-113.3-technology-strategy-innovation-governance-and-architecture-analytics.md) — 9 workflows
 
 **[VS-115: Calibration, Metrology & Measurement Traceability Management](./VS-115-calibration-metrology-and-measurement-traceability-management/README.md)** (24 workflows)

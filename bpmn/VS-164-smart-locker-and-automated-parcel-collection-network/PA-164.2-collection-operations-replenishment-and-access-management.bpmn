@@ -3,7 +3,7 @@
     <bpmn:process id="W_W4801" name="W4801. BOPIS-to-Locker Staging, Compartment Assignment &amp; Replenishment" isExecutable="false">
       <bpmn:documentation>Trigger: BOPIS order ready (VS-10); locker compartment available
 Frequency: Per order (continuous)
-Volume: ~BOPIS-to-locker orders scaling with adoption (subset of ~25,700 BOPIS orders/month profile §8.2)
+Volume: ~BOPIS-to-locker orders scaling with adoption (subset of ~42,900 BOPIS orders/month per profile §8.5)
 Owner: Locker Program Manager / Store Ops (VS-07)
 Participants: Ecommerce/OMS (VS-10), Stock Associate (VS-07), Store Ops (VS-07)
 Source: workflow W4801 — BOPIS-to-Locker Staging, Compartment Assignment &amp; Replenishment</bpmn:documentation>

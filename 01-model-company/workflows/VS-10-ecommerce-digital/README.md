@@ -6,11 +6,11 @@
 
 ## Overview
 
-Ecommerce & digital channels: platform operations, order fulfillment & delivery, and marketplace & social commerce.
+Ecommerce & digital channels: platform operations, order fulfillment (pickup-only BOPIS), and marketplace & social commerce.
 
 ## Why it matters
 
-~42,900 ecommerce orders/month (~515K/yr) and growing; BOPIS, home delivery, ship-from-store, and marketplace integration (Lazada/Shopee) drive omnichannel revenue and customer acquisition.
+~42,900 ecommerce orders/month (~515K/yr), 100% BOPIS under the pickup-only mandate (2026-09-23 (d)) — every ecommerce sale completes as a **regular POS sale at the customer-chosen store** (order recall, Online-Prepaid tender + balance, BIR receipt; revenue/VAT via the POS chain per W11), and marketplace integration (Lazada/Shopee) drives omnichannel revenue and customer acquisition. The home-delivery estate is dormant (BCP-reactivatable, per PA-10.2's mandate banner).
 
 ## Owner & participants
 
@@ -27,7 +27,7 @@ Ecommerce & digital channels: platform operations, order fulfillment & delivery,
 
 ## Key dependencies
 
-VS-60 (order routing), VS-04 (DC/dark store), VS-65 (marketplace), VS-126 (CDP), VS-13 (CX)
+VS-60 (order routing — consumes the registry: only ENABLED capabilities are routable), VS-08 (POS completion — every ecommerce sale closes as a regular POS sale), VS-04 (DC/dark store — disabled delivery estate), VS-65 (marketplace — disabled-prepared), VS-126 (CDP), VS-13 (CX), [channel-capability-registry](../../channel-capability-registry.md) (capability state governs what is checkoutable/routable)
 
 ## Key controls
 

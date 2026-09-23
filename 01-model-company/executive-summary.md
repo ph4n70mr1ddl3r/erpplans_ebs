@@ -88,6 +88,8 @@ erpplans/
 
 ---
 
+*Date: 2026-09-23 (capability-switchboard admission, batch 30: W5580 Capability Switchboard Operation & Channel Enablement Impact Governance added in PA-113.2 (VS-113) — the owning workflow for the channel-capability registry's enable/disable state changes; corpus 728 requirements, 5,433 workflows, 188 value streams, 6,932 employees — HQ 532 — unchanged otherwise; see CHANGELOG 2026-09-23 (v)).*
+
 *Date: 2026-09-14 (structure promotion — the adopted optimal table of organization is promoted to the actual structure of record (TO v2.3; profile v3.0): HQ 511 / total 6,911, IT = 122 as the 17-team product-centric department (OM v3.13); the Employees row above re-based 6,762 → 6,911 — 728 requirements, 5,432 workflows, 188 value streams unchanged).*
 
 *Date: 2026-09-14 (twentieth-wave consistency review — IT-landscape section trued to the two-tier sourcing doctrine enacted the same day (sourcing model v3.0): the banner, the Company overview and the landscape section no longer describe the retired hybrid posture ('unified cloud ERP core provided by a theoretical software vendor, surrounded by best-of-breed edge products'); the ERP core of record is Oracle E-Business Suite 12.2 (realization blueprint `02-oracle-ebs/`), warehouse/transport execution runs in-suite (Oracle WMS/MSCA, Shipping/Transportation Execution), and the landscape table now lists the in-suite core, the in-suite execution tier, the built differentiators, the already-built POS/ecommerce/loyalty platforms, the Payroll PH/workforce/dispatch builds and the AAP; no figures move — 728 requirements, 5,427 workflows, 188 value streams, 6,762 employees unchanged).*

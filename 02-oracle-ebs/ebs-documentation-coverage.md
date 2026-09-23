@@ -1,7 +1,7 @@
 # EBS Documentation Coverage Register — the Suite's Own Library vs This Model
 
 > **The inward direction.** The [fit-gap register](fit-gap-analysis.md) was built *outward*:
-> it starts from the model company's 5,432 workflows and asks, per capability, "does EBS have
+> it starts from the model company's 5,433 workflows and asks, per capability, "does EBS have
 > this?" That direction can only find what the workflows already thought to ask for. This
 > register runs the **opposite** direction — it starts from Oracle's own R12.2 documentation
 > library and asks, per documented product, "**does the model company need this, and if so,

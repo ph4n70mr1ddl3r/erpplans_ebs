@@ -899,13 +899,13 @@ ANCHORS = {
         # 2026-09-21 batch-25 re-pin: W5575-W5577 (PA-113.1, VS-113 -> CIO Office)
         # true CIO 81 -> 84, so the subtotals re-foot to 4,935 + 495 and the total
         # to 5,430.
-        "**4,937 + 495 = 5,432**",
+        "**4,937 + 496 = 5,433**",
         # §3.2 portfolio-table subtotal/total rows (structurally re-derived from the
         # §4 mapping + disk by om_reconciliation_hits — these pin the corrected forms'
         # presence)
         "**171** | **4,937**",
-        "**17** | **495**",
-        "**188** | **5,432**",
+        "**17** | **496**",
+        "**188** | **5,433**",
         # v2.0 hybrid sizing anchor (66 domain + platform/CIO = 115 FTE); v2.1 agentic
         # re-bases it to 122 (66 + 56, AAP +7)
         "**66 + 56 = 122**",
@@ -3178,60 +3178,60 @@ def gap_fill_straggler_hits():
             if bad in body:
                 hits.append((os.path.basename(relp), body[:body.index(bad)].count("\n") + 1,
                              f"retired workflow-census form '{bad}' on a live line (the "
-                             f"canon is 5,432 workflows since batch 26; the version "
+                             f"canon is 5,433 workflows since batch 30; the version "
                              f"footers are the frozen-history surfaces)"))
     fit_b = bodies["02-oracle-ebs/fit-gap-analysis.md"]
-    if "5,432 workflows demand" not in fit_b:
+    if "5,433 workflows demand" not in fit_b:
         hits.append(("fit-gap-analysis.md", 0,
-                     'missing intro census anchor "5,432 workflows demand"'))
-    if "5,432 workflows invoke without naming" not in fit_b:
+                     'missing intro census anchor "5,433 workflows demand"'))
+    if "5,433 workflows invoke without naming" not in fit_b:
         hits.append(("fit-gap-analysis.md", 0,
-                     'missing intro census anchor "5,432 workflows invoke without naming"'))
+                     'missing intro census anchor "5,433 workflows invoke without naming"'))
     if ("Executed 2026-09-22 (the re-disposition pass" not in fit_b
             or "109 rows" not in fit_b):
         hits.append(("fit-gap-analysis.md", 0,
                      'missing §7 charter-note execution anchor (the charter note '
                      'must record the 2026-09-22 execution and the live register '
                      'state)'))
-    if "5,432 workflows" not in bodies["02-oracle-ebs/ebs-documentation-coverage.md"]:
+    if "5,433 workflows" not in bodies["02-oracle-ebs/ebs-documentation-coverage.md"]:
         hits.append(("ebs-documentation-coverage.md", 0,
-                     'missing §1 framing census anchor "5,432 workflows"'))
+                     'missing §1 framing census anchor "5,433 workflows"'))
     br_b = bodies["02-oracle-ebs/README.md"]
-    for anchor in ("188 value streams · 5,432 workflows · 808 controls",
-                   "workflows (5,432)"):
+    for anchor in ("188 value streams · 5,433 workflows · 808 controls",
+                   "workflows (5,433)"):
         if anchor not in br_b:
             hits.append(("README.md (02-oracle-ebs)", 0,
                          f'missing live corpus cell anchor "{anchor}"'))
     guide_b = bodies["07-methodology/ai-first-operating-guide.md"]
-    for anchor in ("on all 5,432 workflows", "100% of 5,432 workflows"):
+    for anchor in ("on all 5,433 workflows", "100% of 5,433 workflows"):
         if anchor not in guide_b:
             hits.append(("ai-first-operating-guide.md", 0,
                          f'missing guide census anchor "{anchor}"'))
-    if "5,432-WF catalog" not in bodies["07-methodology/it-product-operating-model.md"]:
+    if "5,433-WF catalog" not in bodies["07-methodology/it-product-operating-model.md"]:
         hits.append(("it-product-operating-model.md", 0,
-                     'missing §11 companion-artifacts census anchor "5,432-WF catalog"'))
+                     'missing §11 companion-artifacts census anchor "5,433-WF catalog"'))
     idx_b = bodies["07-methodology/README.md"]
-    for anchor in ("5,432-workflow corpus", "Population-pinned (5,432 workflows"):
+    for anchor in ("5,433-workflow corpus", "Population-pinned (5,433 workflows"):
         if anchor not in idx_b:
             hits.append(("README.md (07-methodology)", 0,
                          f'missing tool-row census anchor "{anchor}"'))
     to_joined = " ".join(re.sub(r"(?m)^>\s?", "", bodies[
         "01-model-company/optimal-table-of-organization.md"]).split())
-    if "5,432 of 5,432 owner cells resolved" not in to_joined:
+    if "5,433 of 5,433 owner cells resolved" not in to_joined:
         hits.append(("optimal-table-of-organization.md", 0,
-                     '§5.3 census parenthetical must read "5,432 of 5,432 owner cells '
+                     '§5.3 census parenthetical must read "5,433 of 5,433 owner cells '
                      'resolved" across its wrapped lines (the retired form is '
                      '"5,427 of 5,427")'))
     vg = open(os.path.join(REPO, "07-methodology", "virtual-gemba-walk.py"),
               encoding="utf-8").read()
-    if "CANON_WORKFLOWS = 5432" not in vg:
+    if "CANON_WORKFLOWS = 5433" not in vg:
         hits.append(("virtual-gemba-walk.py", 0,
-                     'population pin must read CANON_WORKFLOWS = 5432 (the tool '
+                     'population pin must read CANON_WORKFLOWS = 5433 (the tool '
                      'exits 1 on every run while it disagrees with the corpus)'))
-    if "CANON_WORKFLOWS = 5430" in vg:
+    if "CANON_WORKFLOWS = 5432" in vg:
         hits.append(("virtual-gemba-walk.py", 0,
-                     "retired population pin CANON_WORKFLOWS = 5430"))
-    if "5,432 workflows" not in vg:
+                     "retired population pin CANON_WORKFLOWS = 5432"))
+    if "5,433 workflows" not in vg:
         hits.append(("virtual-gemba-walk.py", 0,
                      'docstring population line must state "5,432 workflows"'))
     # (e) 2026-09-23 directed cadence-ladder fix — the virtual-gemba frequency

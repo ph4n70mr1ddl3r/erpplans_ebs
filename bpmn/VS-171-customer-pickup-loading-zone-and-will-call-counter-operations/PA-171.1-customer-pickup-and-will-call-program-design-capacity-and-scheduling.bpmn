@@ -444,7 +444,7 @@ Owner: Will-Call/Loading-Zone Supervisor / CX (VS-13)</bpmn:text>
     <bpmn:process id="W_W4967" name="W4967. BOPIS / Ecommerce / Special-Order Pickup Integration at the Will-Call Counter" isExecutable="false">
       <bpmn:documentation>Trigger: BOPIS/ecommerce/special-order placed (VS-10/VS-09/VS-11)
 Frequency: Continuous
-Volume: ~BOPIS 25,700 + special-order pickups/month (national) + bulky share
+Volume: ~BOPIS 42,900 + special-order pickups/month (national) + bulky share
 Owner: Will-Call Counter Supervisor / Ecommerce Ops (VS-10) / Store Ops
 Participants: Ecommerce (VS-10), Store Ops (VS-07), B2B/Trade (VS-11), Special Orders (VS-09), CX (VS-13)
 Source: workflow W4967 — BOPIS / Ecommerce / Special-Order Pickup Integration at the Will-Call Counter</bpmn:documentation>

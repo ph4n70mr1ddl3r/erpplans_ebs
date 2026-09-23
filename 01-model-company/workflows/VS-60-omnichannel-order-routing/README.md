@@ -6,6 +6,8 @@
 
 Manages intelligent routing and orchestration of customer orders across multiple fulfillment sources: stores, DCs, vendor drop-ship, and dark stores. Covers order source selection, split-order management, fulfillment tracking, and optimization. Critical for mixed-basket orders containing items from multiple origins.
 
+> **Routing consumes the capability registry (CAP-F01 enabled):** the routing engine offers only registry-ENABLED fulfillment targets — today that is **store pickup (BOPIS) alone**; disabled capabilities are not routable and their intake endpoints reject. The multi-source orchestration below (DC, vendor drop-ship, dark stores, split orders) is the prepared design for the DISABLED—PREPARED fulfillment options and activates with them per the [Online Channel & Capability Registry](../../channel-capability-registry.md).
+
 ## Process Areas
 
 | PA | Name | Workflows |

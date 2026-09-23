@@ -498,7 +498,7 @@ Owner: LP Officer (Store-Level) / Store Manager</bpmn:text>
     <bpmn:process id="W_W1248" name="W1248. BOPIS Staging Area Security &amp; Omnichannel Fulfillment Fraud Prevention" isExecutable="false">
       <bpmn:documentation>Trigger: Scheduled — daily BOPIS staging area audit; ad-hoc triggered by customer complaint of order tampering, inventory variance at staging, or LP exception alert
 Frequency: Daily monitoring at all 200 stores; investigation as needed
-Volume: ~25,700 BOPIS orders/month; estimated 50–80 staging-related incidents/month chain-wide
+Volume: ~42,900 BOPIS orders/month; estimated 80–140 staging-related incidents/month chain-wide
 Owner: Customer Service Rep / LP Analyst
 Participants: Store Manager, Stock Associate, LP Analyst, Ecommerce Operations Manager
 Source: workflow W1248 — BOPIS Staging Area Security &amp; Omnichannel Fulfillment Fraud Prevention</bpmn:documentation>

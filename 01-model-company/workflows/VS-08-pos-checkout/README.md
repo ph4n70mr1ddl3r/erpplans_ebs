@@ -10,6 +10,8 @@ POS & checkout: transaction processing, payment & cash management, and POS compl
 
 **Returns routing:** in-store return *decisions* (eligibility, approval tiers, disposition) live in VS-32 (W1622–W1630); this value stream executes the POS refund mechanics (W1538) and fraud screening (W605) — see the [Event Custody & Precedence Register](../event-custody-and-precedence-register.md) (E-09).
 
+**BOPIS completion routing:** ecommerce (BOPIS) orders complete at the pickup store as **regular POS sales** through PA-08.1's standard chain (order recall, Online-Prepaid tender + balance tender, BIR receipt; CTL-47 gateway reconciliation) — the POS tender confirmation closes the online order per W11 (pickup-only mandate, 2026-09-23 (d)).
+
 ## Why it matters
 
 2.8M monthly POS transactions / ~PHP 60.5B in-store revenue (of ~PHP 62.3B total company revenue) flow through 600 terminals; pricing/promo/loyalty/discount execution, payment integrity, and BIR e-invoicing originate here.

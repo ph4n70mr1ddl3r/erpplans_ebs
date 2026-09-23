@@ -27,7 +27,7 @@
 |---|---|---|---|
 | **Product browsing & search** | Must Have | ECOM-009 (catalog sync), MDM-002 (attributes) | Full 35K SKU catalog with category navigation, keyword search, filters |
 | **Real-time inventory check** | Must Have | ECOM-001 (inventory sync) | Per-store availability; "Select your store" selector |
-| **BOPIS ordering** | Must Have | ECOM-003 (BOPIS flow) | Select store → add to cart → pay online → receive pickup notification |
+| **BOPIS ordering** | Must Have | ECOM-003 (BOPIS flow) | Select store → add to cart → pay online (or choose pay-at-pickup) → receive pickup notification → POS receipt at handoff |
 | **Home delivery ordering** | Must Have | ECOM-004 (delivery flow) | Enter address → select items → choose delivery slot → pay online |
 | **Order tracking** | Must Have | ECOM-005 (order status) | Real-time tracking for home delivery; pickup status for BOPIS |
 | **Loyalty account management** | Must Have | CRM-001, CRM-005 | Points balance, tier status, transaction history, digital loyalty card |

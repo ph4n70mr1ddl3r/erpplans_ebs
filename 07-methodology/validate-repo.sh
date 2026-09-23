@@ -229,7 +229,7 @@ echo "--- Check 10: Boilerplate analysis fields ---"
 #       retired verbatim: any re-mint fires even at a single instance;
 #   (b) the verbatim-sharing arm — NO Pain bullet text may appear in more than one workflow
 #       corpus-wide (the format guide's workflow-specific bar, enforced at the paste class);
-#   (c) population assertions — the parse must see all 5,432 Pain-bearing workflows, so a
+#   (c) population assertions — the parse must see all 5,433 Pain-bearing workflows, so a
 #       future format drift cannot silently void the arms (the wave-27 probe lesson).
 BP_MARKER='Operational variability mitigated by standard procedures and system controls'
 BP_FILES=$(grep -rlF "$BP_MARKER" "$REPO_ROOT"/01-model-company/workflows/VS-*/PA-*.md 2>/dev/null || true)
@@ -294,15 +294,15 @@ for t, ks in sorted(shared.items(), key=lambda x: -len(x[1])):
     bad += 1
     where = ", ".join(f"{r}:{i} ({w})" for r, i, w in ks[:4])
     print(f"BAD|verbatim-shared Pain bullet across {len({w for _, _, w in ks})} workflows: '{t[:80]}' at {where}")
-if len(pain_wfs) != 5432:
+if len(pain_wfs) != 5433:
     bad += 1
-    print(f"BAD|Pain-section parse population {len(pain_wfs)} != 5432 workflows \u2014 parser or corpus drift, arms void")
+    print(f"BAD|Pain-section parse population {len(pain_wfs)} != 5433 workflows \u2014 parser or corpus drift, arms void")
 print(f"TOTALS bad={bad} workflows={len(pain_wfs)} shared={len(shared)}")
 PY
 )
 C10_BAD=$(echo "$BP10" | sed -n 's/^TOTALS bad=\([0-9]*\).*/\1/p')
 if [ "$BP_INSTANCES" -eq 0 ] && [ "${C10_BAD:-1}" -eq 0 ]; then
-    ok "No boilerplate analysis fields detected (fiftieth-wave extension, 2026-09-17: the 2026-06-20 Expansion rework's own replacement paste is retired — its 2-bullet template Pain sections ran to 152 verbatim copies of the Data-quality bullet alone across the seven Python-assisted value streams (VS-65/66/68/74/75/77/78), invisible to this check's single literal and to Check 21's Automation/Controls scope; 194 workflows across 42 PA files re-authored workflow-specific, and the class is now guarded by the 27-literal retired probe, the corpus-wide verbatim-sharing arm (no Pain bullet text in more than one workflow) and the 5,432-workflow parse-population assertion)"
+    ok "No boilerplate analysis fields detected (fiftieth-wave extension, 2026-09-17: the 2026-06-20 Expansion rework's own replacement paste is retired — its 2-bullet template Pain sections ran to 152 verbatim copies of the Data-quality bullet alone across the seven Python-assisted value streams (VS-65/66/68/74/75/77/78), invisible to this check's single literal and to Check 21's Automation/Controls scope; 194 workflows across 42 PA files re-authored workflow-specific, and the class is now guarded by the 27-literal retired probe, the corpus-wide verbatim-sharing arm (no Pain bullet text in more than one workflow) and the 5,433-workflow parse-population assertion)"
 else
     if [ "$BP_INSTANCES" -gt 0 ]; then
         BP_FILE_COUNT=$(echo -n "$BP_FILES" | grep -cP 'PA-' || true)
@@ -702,7 +702,7 @@ PY
 )
 PROSE_DRIFT_COUNT=$(echo -n "$PROSE_DRIFT" | grep -cP '.' || true)
 if [ "$PROSE_DRIFT_COUNT" -eq 0 ]; then
-    ok "Criticality-classification prose counts (tier bodies + intro arithmetic) match headings/Summary, all six canonical figure surfaces (intro headline, Coverage row, Grand Total, Domain prose, sub-workflow note, Confirmed Total) match the PA corpus re-derivation (5,432 unique / 5,455 rows; canon-pin extension added by the 2026-09-10 seventeenth-wave review after the batch-24 pass stranded four live spots at the retired totals while every one stayed self-consistent), and all 5,455 register W-title cells equal the PA ##/### W-header canon exactly except the two v7.31-adjudicated W423/W425 treasury-companion annotated forms (title mirror added by the 2026-09-15 thirtieth-wave review after 49 stranded register titles — incl. the NCSD/I-SEAL/PAS 39/Intercharge token errors the semantic batches repaired in the PA files but never re-pointed into the register — were found on the surface no rule read)"
+    ok "Criticality-classification prose counts (tier bodies + intro arithmetic) match headings/Summary, all six canonical figure surfaces (intro headline, Coverage row, Grand Total, Domain prose, sub-workflow note, Confirmed Total) match the PA corpus re-derivation (5,433 unique / 5,456 rows; canon-pin extension added by the 2026-09-10 seventeenth-wave review after the batch-24 pass stranded four live spots at the retired totals while every one stayed self-consistent), and all 5,456 register W-title cells equal the PA ##/### W-header canon exactly except the two v7.31-adjudicated W423/W425 treasury-companion annotated forms (title mirror added by the 2026-09-15 thirtieth-wave review after 49 stranded register titles — incl. the NCSD/I-SEAL/PAS 39/Intercharge token errors the semantic batches repaired in the PA files but never re-pointed into the register — were found on the surface no rule read)"
 else
     error "$PROSE_DRIFT_COUNT criticality-classification prose count(s) disagree with their heading or the Summary table:"
     echo "$PROSE_DRIFT" | sed 's/^/    /'
@@ -1051,7 +1051,7 @@ echo "--- Check 23: Intra-file TOC anchor resolution ---"
 # broken navigational link), consistent with the file-resolution checks 19/20. Repaired
 # by `07-methodology/fix-toc-anchors.py`; this check guards against regression.
 # Fifty-first-wave extension (2026-09-17): the guard now reads EVERY tracked .md — the
-# PA files' 5,432 intra-file anchors were the only ones any rule scanned, while the 27
+# PA files' 5,433 intra-file anchors were the only ones any rule scanned, while the 27
 # intra-file anchor links in the non-PA docs (workflows/ nav docs, 01-model-company
 # docs, 02-oracle-ebs/, 07-methodology/, root README, bpmn/dmn READMEs) were
 # enumerable by nothing: Check 39(d) resolves only cross-file '.md#anchor' links and
@@ -1102,7 +1102,7 @@ BAD_ANCHOR_FILES=$(echo "$ANCHORS" | head -1 | cut -d'|' -f1)
 BAD_ANCHOR_TOTAL=$(echo "$ANCHORS" | head -1 | cut -d'|' -f2)
 BAD_ANCHOR_SAMPLES=$(echo "$ANCHORS" | tail -n +2)
 if [ "$BAD_ANCHOR_TOTAL" -eq 0 ]; then
-    ok "All intra-file TOC anchors resolve to a heading — in the PA files (5,432 anchors, the original arm) and across every non-PA .md too (the 27 intra-file anchor links in the nav/doctrine/methodology docs were enumerable by no check: Check 39(d) resolves only cross-file '.md#' anchors and Check 66 drops fragments; fifty-first-wave extension, 2026-09-17 — the sweep found the class clean, the sole unresolved intra-file anchor repo-wide being the CHANGELOG's own literal '[W…](#…)' prose example, exempt per Check 66's convention)"
+    ok "All intra-file TOC anchors resolve to a heading — in the PA files (5,433 anchors, the original arm) and across every non-PA .md too (the 27 intra-file anchor links in the nav/doctrine/methodology docs were enumerable by no check: Check 39(d) resolves only cross-file '.md#' anchors and Check 66 drops fragments; fifty-first-wave extension, 2026-09-17 — the sweep found the class clean, the sole unresolved intra-file anchor repo-wide being the CHANGELOG's own literal '[W…](#…)' prose example, exempt per Check 66's convention)"
 else
     error "$BAD_ANCHOR_TOTAL intra-file TOC anchor(s) across $BAD_ANCHOR_FILES file(s) do not resolve to any heading (run 07-methodology/fix-toc-anchors.py to repair):"
     echo "$BAD_ANCHOR_SAMPLES" | sed 's/^/    /' | head -20
@@ -1179,7 +1179,7 @@ for dirpath, _d, files in os.walk(ROOT):
 
 # ---- Part C: workflows/README.md Quick-Stats table + family-subtotal reconciliation line
 # vs the canonical registers. Added by the 2026-09-14 twenty-sixth-wave consistency review:
-# the Quick-Stats table (188 / 569 / 5,432 / 1,396 / 3,301 / 758 / the 'Classified total'
+# the Quick-Stats table (188 / 569 / 5,433 / 1,396 / 3,302 / 758 / the 'Classified total'
 # row-prefix triple) and the closing 'Family subtotal reconciliation: … = N' sentence were
 # read by no check — Part A reconciles the family sections only, and Checks 70/74 pin other
 # surfaces — so a batch that re-pointed every guarded surface could still strand the README's
@@ -1728,7 +1728,7 @@ C26_MAXVS=$(echo "$CHECK26" | sed -n 's/^MAX_VS=//p')
 C26_VS=$(echo "$CHECK26" | sed -n 's/^BLOCK_VS=//p')
 C26_WF=$(echo "$CHECK26" | sed -n 's/^BLOCK_WF=//p')
 if [ "$C26_ERRS" -eq 0 ]; then
-    ok "Dependency-map §8 block reconciliation: heading/§8.4 end at VS-$C26_MAXVS, intro block size ($C26_VS value streams / $C26_WF workflows) matches disk, the §8.1 anchor table equals the live top-10 (freshly recomputed from PA+README reference mining), the intro coverage figures (5,432 unique / 5,455 rows / 23 sub-workflows) match the PA corpus re-derivation, and the §8.1/§8.2/§8.3 VS-name cells (10 + 39, populations asserted) equal the canonical value-stream-index summary-row names while all §1–§7 'Wnnn (Label)' tree labels token-overlap the PA W-header canon or sit on the adjudicated 13-entry compressed-form allowlist (intro pins added by the 2026-09-10 seventeenth-wave review; name + W-label arms added by the 2026-09-15 thirty-third-wave review after §2.9's tax chain was found carrying 'W140 (Corporate Income Tax)' — the wrong W-id, stranded since the initial commit — and 32 compressed §8 name forms were found stranded beside 17 byte-exact siblings)"
+    ok "Dependency-map §8 block reconciliation: heading/§8.4 end at VS-$C26_MAXVS, intro block size ($C26_VS value streams / $C26_WF workflows) matches disk, the §8.1 anchor table equals the live top-10 (freshly recomputed from PA+README reference mining), the intro coverage figures (5,433 unique / 5,456 rows / 23 sub-workflows) match the PA corpus re-derivation, and the §8.1/§8.2/§8.3 VS-name cells (10 + 39, populations asserted) equal the canonical value-stream-index summary-row names while all §1–§7 'Wnnn (Label)' tree labels token-overlap the PA W-header canon or sit on the adjudicated 13-entry compressed-form allowlist (intro pins added by the 2026-09-10 seventeenth-wave review; name + W-label arms added by the 2026-09-15 thirty-third-wave review after §2.9's tax chain was found carrying 'W140 (Corporate Income Tax)' — the wrong W-id, stranded since the initial commit — and 32 compressed §8 name forms were found stranded beside 17 byte-exact siblings)"
 else
     error "Dependency-map §8 self-declared coverage does not reconcile ($C26_ERRS mismatch(es)) — the block tables must be re-mined/recomputed:"
     echo "$CHECK26" | grep '^A_ERR|' | sed 's/^A_ERR|/    /'
@@ -1777,7 +1777,7 @@ DEP = os.path.join(ROOT, '01-model-company', 'workflows', 'workflow-dependency-m
 dep = open(DEP, encoding='utf-8', errors='replace').read()
 for i, ln in enumerate(dep.split('\n'), 1):
     if 'remains unclassified' in ln or 'pending criticality review' in ln:
-        errs.append(f"workflow-dependency-map.md:{i} asserts an unclassified/pending state, but all 5,432 workflows have been classified (2026-06-28 Full-Coverage Confirmation Pass; 2026-09-02 post-catalog confirmation of W5497–W5510; 2026-09-03 W5511; 2026-09-03 W5512–W5514; 2026-09-03 W5515–W5517; 2026-09-10 W5574; 2026-09-21 W5575–W5577; 2026-09-21 W5578–W5579)")
+        errs.append(f"workflow-dependency-map.md:{i} asserts an unclassified/pending state, but all 5,433 workflows have been classified (2026-06-28 Full-Coverage Confirmation Pass; 2026-09-02 post-catalog confirmation of W5497–W5510; 2026-09-03 W5511; 2026-09-03 W5512–W5514; 2026-09-03 W5515–W5517; 2026-09-10 W5574; 2026-09-21 W5575–W5577; 2026-09-21 W5578–W5579; 2026-09-23 W5580)")
 # ---- Part C: PA-corpus live-total guard (2026-09-09 fourteenth-wave review) ----
 # The gap-fill batches re-pointed every navigation surface each time the unique total
 # moved, but one surface family no check read was the PA files' own field rows: at ship
@@ -1831,7 +1831,7 @@ else
     echo "$CHECK27" | grep '^A_STALE|' | sed 's/^A_STALE|/    /'
 fi
 if [ "$C27_ERRS" -eq 0 ]; then
-    ok "No unclassified-workflow claims in workflow-dependency-map.md and no retired corpus-total literal (any workflow-adjacent integer in the self-re-arming [5,320, canon) band) in any PA file's live prose (canon: 5,432 unique; Part C added by the 2026-09-09 fourteenth-wave review after PA-128.3's W5512 Volume row shipped '5,370-workflow inventory' through batches 15–23 on a surface no check read; band made corpus-derived by the 2026-09-10 seventeenth-wave review after the same row stranded at the then-canonical 5,426 with the static band blind to it)"
+    ok "No unclassified-workflow claims in workflow-dependency-map.md and no retired corpus-total literal (any workflow-adjacent integer in the self-re-arming [5,320, canon) band) in any PA file's live prose (canon: 5,433 unique; Part C added by the 2026-09-09 fourteenth-wave review after PA-128.3's W5512 Volume row shipped '5,370-workflow inventory' through batches 15–23 on a surface no check read; band made corpus-derived by the 2026-09-10 seventeenth-wave review after the same row stranded at the then-canonical 5,426 with the static band blind to it)"
 else
     error "Stale unclassified-workflow claims / retired corpus-total literals in live prose ($C27_ERRS):"
     echo "$CHECK27" | grep '^B_ERR|' | sed 's/^B_ERR|/    /'
@@ -5034,7 +5034,7 @@ C71_RC_OUT=$(python3 "$REPO_ROOT/07-methodology/generate-role-coverage.py" --che
 C71_CENSUS_OUT=$(python3 "$REPO_ROOT/07-methodology/generate-role-coverage.py" --census 2>&1) && C71_CENSUS_RC=0 || C71_CENSUS_RC=$?
 C71_CENSUS_OK=0
 case "$C71_CENSUS_OUT" in
-  *"CENSUS workflows=5432 owner_resolved=5432 owner_uncharted=0 owner_uncharted_forms=0 uncharted_forms=0 ctl_owner_cells=808 ctl_owner_resolved=808 ctl_owner_uncharted=0 ctl_owner_uncharted_forms=0 prose_role_uncharted=0 prose_role_forms=0"*) C71_CENSUS_OK=1;;
+  *"CENSUS workflows=5433 owner_resolved=5433 owner_uncharted=0 owner_uncharted_forms=0 uncharted_forms=0 ctl_owner_cells=808 ctl_owner_resolved=808 ctl_owner_uncharted=0 ctl_owner_uncharted_forms=0 prose_role_uncharted=0 prose_role_forms=0"*) C71_CENSUS_OK=1;;
 esac
 # Part E/F (2026-09-16 forty-seventh-wave consistency review): the shipped
 # generated trees' byte-currency. generate-role-coverage.py --check (Part C)

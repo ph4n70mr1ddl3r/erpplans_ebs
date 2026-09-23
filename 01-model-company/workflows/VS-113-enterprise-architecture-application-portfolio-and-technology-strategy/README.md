@@ -66,9 +66,9 @@ investment and business capability — risks that no existing value stream owns.
 | PA | Name | Workflows |
 |---|---|---|
 | [PA-113.1](PA-113.1-enterprise-architecture-framework-standards-and-governance.md) | Enterprise Architecture Framework, Standards & Governance | 12 |
-| [PA-113.2](PA-113.2-application-portfolio-integration-and-solution-architecture.md) | Application Portfolio, Integration & Solution Architecture | 10 |
+| [PA-113.2](PA-113.2-application-portfolio-integration-and-solution-architecture.md) | Application Portfolio, Integration & Solution Architecture | 11 |
 | [PA-113.3](PA-113.3-technology-strategy-innovation-governance-and-architecture-analytics.md) | Technology Strategy, Innovation Governance & Architecture Analytics | 9 |
-| | **Total** | **31** |
+| | **Total** | **32** |
 
 ---
 

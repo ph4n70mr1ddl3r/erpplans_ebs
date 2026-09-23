@@ -211,9 +211,13 @@ The company operates through **5 legal entities** organized as follows:
 - **Corporate / Charge Account** (~5%)
 - **Returns/Exchanges** (~0.04% return rate — ~40 AR credit memos/day, per data-volumes §1.1)
 
-> Note: BOPIS orders are placed and paid online; the in-store pickup is a fulfillment
-> confirmation rather than a POS tender transaction. BOPIS volume is tracked under
-> ecommerce (see Section 8).
+> Note: every ecommerce (BOPIS) order completes at the pickup store as a **regular POS tender
+> transaction** — cashier order recall, Online-Prepaid tender for any prepaid amount plus
+> balance tender, BIR receipt printed by POS (profile §8). BOPIS adds ~42,900 POS
+> transactions/month (~1,430/day, ~1.5% on top of walk-in volume — within the
+> 3-terminals-per-store design headroom); the ~2,800,000 monthly-transaction canon above
+> remains the walk-in baseline, and BOPIS revenue is reported inside store POS sales as
+> well as the ecommerce channel view (Section 8).
 
 ### POS Functional Requirements
 - Offline capability (must continue selling during network outage)
@@ -348,15 +352,16 @@ The company operates through **5 legal entities** organized as follows:
 | **Product Content** | Photos, specifications, dimensions, how-to guides |
 | **Search & Navigation** | Category browse, keyword search, filter by specs |
 | **Customer Accounts** | Optional registration; guest checkout available |
-| **Payment Methods** | CC, GCash, Maya, bank transfer, COD |
-| **Fulfillment Options** | BOPIS (store pickup), Home Delivery (from DC or store), Ship-from-Store, Drop-Ship Vendor, Mixed-Basket (multi-origin per order) |
+| **Payment Methods** | CC, GCash, Maya, bank transfer (prepaid at checkout) or pay-at-pickup (any POS tender); COD disabled (delivery-tied) per the channel-capability registry |
+| **Fulfillment Options** | BOPIS only — customer selects the pickup store; the sale completes as a regular POS sale at that store (pickup-only mandate, 2026-09-23 (d)). All other online capabilities are **disabled (prepared)** and governed by the canonical [channel-capability-registry.md](channel-capability-registry.md) — enablement = checklist + config flip, never a rebuild |
 
 ### 8.2 BOPIS (Buy Online, Pick Up In Store)
 
 | Parameter | Value |
 |---|---|
 | **Availability** | All 200 stores |
-| **Process** | Customer places order online → store receives pick list → staff picks & stages → customer arrives with ID → release at customer service counter |
+| **Process** | Customer places order online (selects pickup store; prepaid or pay-at-pickup) → store receives pick list → staff picks & stages → customer arrives with ID → **POS tender at handoff** (order recall, Online-Prepaid + balance tender, BIR receipt from POS) → order completes |
+| **Payment** | Prepaid at checkout (CC/GCash/Maya/bank transfer) or full tender at POS on pickup; the POS sale is the single revenue-recording vehicle (12% VAT via POS; BIR 2550M) |
 | **Pick SLA** | Ready within 4 hours of order placement |
 | **Hold Period** | 5 days; auto-cancel and refund after |
 | **% of Total Sales** | ~1.9% within Year 1 |
@@ -365,6 +370,7 @@ The company operates through **5 legal entities** organized as follows:
 
 | Parameter | Value |
 |---|---|
+| **Status** | **Dormant** under the pickup-only mandate (2026-09-23 (d)) — retained as documented capability for BCP reactivation (BCP-008 pandemic mode, VS-69 typhoon recovery) |
 | **Fulfillment** | Shipped from nearest DC or store |
 | **Coverage** | Metro areas initially; nationwide within 2 years |
 | **Delivery Fee** | Based on weight/distance; free above PHP 5,000 |
@@ -374,8 +380,9 @@ The company operates through **5 legal entities** organized as follows:
 ### 8.4 Ecommerce Integration Requirements
 - Real-time inventory availability per store (aggregated)
 - Real-time price sync (including ongoing promotions)
-- Order push to store (BOPIS) or DC (delivery) for fulfillment
-- Fulfillment status push back to ecommerce (tracking)
+- Order push to the selected store (BOPIS) for fulfillment; POS-tender completion feed closes the order
+- POS completion integration (order recall payload to store terminal, Online-Prepaid tender, completion confirmation back to platform)
+- Fulfillment status push back to ecommerce (pickup readiness, completion)
 - Customer data sync to loyalty/CRM
 - Returns initiated online; processed in-store
 - Payment gateway integration (PayMongo, Dragonpay)
@@ -384,8 +391,8 @@ The company operates through **5 legal entities** organized as follows:
 
 | Parameter | Monthly Estimate |
 |---|---|
-| Orders (BOPIS) | ~25,700 |
-| Orders (Delivery) | ~17,200 |
+| Orders (BOPIS) | ~42,900 |
+| Orders (Delivery) | 0 (dormant) |
 | Total Ecommerce Orders | ~42,900 |
 | Average Order Value | PHP 3,500 |
 | Ecommerce GMV | ~PHP 150M/month |
@@ -398,10 +405,7 @@ The company operates through **5 legal entities** organized as follows:
 | Year 2 | ~5% | ~PHP 250M |
 | Year 3 | ~7% | ~PHP 350M |
 
-> **Note**: The volume table above is calibrated to ~PHP 150M/month (42,900 orders × PHP 3,500
-> AOV), which represents ~2.9% of total monthly revenue (~PHP 5.19B), consistent with the Year 1 target of ~3%.
-> Order counts are split 60/40 between BOPIS and delivery based on typical Philippine omnichannel
-> retail patterns.
+> **Note**: The volume table reflects the pickup-only mandate (2026-09-23 (d)): 100% of the ~42,900 monthly orders are BOPIS, calibrated to ~PHP 150M/month GMV (42,900 × PHP 3,500 AOV), which represents ~2.9% of total monthly revenue (~PHP 5.19B), consistent with the Year 1 target of ~3%. The prior 60/40 BOPIS-to-delivery split is retired — the delivery estate is dormant, and every sale is completed (tendered, receipted, VAT-recognized) as a regular POS sale at the chosen store.
 
 ---
 
@@ -716,7 +720,7 @@ BuildRight Holdings, Inc.
 | Integrated Workflow Approvals | Tiered approval workflows for POs, Capex, and inventory adjustments | Live — In-Suite (EBS) |
 | Core HR | Org/position/employee master of record, absence, EITs (Oracle HRMS PER — the payroll build draws its people data from here) | Live — In-Suite (EBS) |
 | POS estate (already built) | In-store sales, cashiering, offline cache management (≥ 8h + event replay) | Live — Built In-House (existing; integrates) |
-| E-commerce platform (already built) | Web/Mobile catalog, BOPIS & home delivery fulfillment | Live — Built In-House (existing; integrates) |
+| E-commerce platform (already built) | Web/Mobile catalog, BOPIS pickup-only fulfillment (POS-completed) | Live — Built In-House (existing; integrates) |
 | Gift-card/loyalty stack (already built) | Stored-value ledger, points engine, redemption | Live — Built In-House (existing; integrates) |
 | Payroll PH (build) | PH statutory gross-to-net (SSS, PhilHealth, Pag-IBIG, PD 851, BIR withholding), statutory outputs & agency files; posts period costing journals to EBS | Live — Built In-House |
 | Store workforce platform (build) | Store shift scheduling/optimization (the genuinely-absent layer — Oracle Time & Labor covers timecards, not retail planning); validated feeds into payroll and EBS | Live — Built In-House |
@@ -734,7 +738,7 @@ BuildRight Holdings, Inc.
 | **Procurement** | Automated PO generation, 3-way match, vendor portal |
 | **Warehouse Management** | RF-directed putaway/pick, cycle count, lot/serial tracking |
 | **POS / Retail** | 600 terminals, offline capable (≥ 8 hours), near-real-time event-driven architecture, multi-tender, multi-origin fulfillment, loyalty integration |
-| **Ecommerce** | BOPIS + delivery, real-time inventory & price sync |
+| **Ecommerce** | BOPIS pickup-only, POS-completed, real-time inventory & price sync |
 | **Supply Chain Planning** | Demand forecasting, ROP/EOQ, replenishment planning |
 | **HR & Payroll** | Philippine statutory compliance (SSS, PhilHealth, Pag-IBIG, BIR) |
 | **CRM / Loyalty** | Customer management, points engine, trade accounts |
@@ -849,7 +853,7 @@ The following external systems are actively integrated with the core ERP system.
 2. **Philippine localization**: BIR, SSS, PhilHealth, Pag-IBIG compliance
 3. **High-volume POS**: 2.8M transactions/month across 600 terminals
 4. **Real-time inventory visibility** across 200 stores + 4 DCs
-5. **Ecommerce integration**: Seamless BOPIS + delivery fulfillment
+5. **Ecommerce integration**: Seamless BOPIS pickup-only fulfillment completed at store POS (every ecommerce sale is a regular POS sale)
 6. **Scalability**: From 200 to potentially 300+ stores
 7. **Offline POS resilience**: Stores must sell during outages
 8. **Intercompany automation**: 5-entity consolidation
@@ -898,7 +902,7 @@ The following external systems are actively integrated with the core ERP system.
 
 ---
 
-*Document Version: 3.4 | Date: 2026-09-23 | **Seventy-first-wave consistency review — the §5 POS transaction-mix returns rate.** The 2026-09-23 production-volume calibration (v3.2) grounded the returns canon at ~40 AR credit memos/day (~1,200/month; measured 14,744/13,584 credit memos/year at ~1.05 lines/doc — §15.1's AR-Credit-Memos row and data-volumes §1.1) but left this section's 'Returns/Exchanges' bullet at the retired ~2% return rate — the 56,000/month figure the pre-calibration returns workflows had assumed (2% × 2.8M transactions), 47x the measured canon; trued to ~0.04% with the canon cite. No revenue, headcount, store-count or §15.1 change. Prior v3.3 | Date: 2026-09-23 | **Sixty-sixth-wave consistency review — the §6.5 PO-band true-up.** The production-volume calibration (v3.2) re-based §15.1's Purchase-Orders-(all-types) row to ~1,600–1,900/month (~19,000–23,000/year) but left §6.5's Monthly/Annual-Trade-Purchase-Orders rows at the retired ~1,400–1,600/~17,000–19,000 band — one document asserting two PO canons; both cells trued to the §15.1 canon (merchandise ~1,200/month unchanged, matching §15.1's retained merchandise row). No revenue, headcount, store-count or §15.1 change. Prior v3.2 | Date: 2026-09-23 | **Production-volume calibration** (by direction: check the operator's production data for realistic transaction volumes and adjust — see `data-volumes-and-integrations.md` §1.1, v4.7): §7.2 Store-Replenishment-Orders ~4,500–5,500/month → **~48,000–52,000/month (~250/store)** on the production STROO run-rate with the delivery-consolidation wording trued (each truck consolidates the ~20–30 transfer orders since the previous drop; the 2–3-deliveries/store/week cadence unchanged), §9 Purchase-Order-Average-Lines ~15 → **~7 lines/PO** (production-measured) and Monthly-PO-Lines ~18,000 → **~12,000**, §3.3 Procurement row's PO-lines/mo trued to ~12,000, §15.1 rows re-based (POs all-types ~1,600–1,900/month, PO Lines ~12,000/~144,000, Replenishment Orders ~50,000/~600,000) with two production-evidenced rows added (AR Credit Memos ~1,200/~14,500; Inventory Adjustment Documents ~900/~11,000). No revenue, headcount, store-count or POS-canon change. Prior v3.1 | Date: 2026-09-18 | **Actual-org gap-fill (+21 HQ).** Benchmarking the TO against the operating company's actual table of organization (CitiHardware TOM workbook) surfaced four store-embedded workload cells the workflow-derived sizing had left to unseated ghost titles or unbased absorption claims — confirmed by the repo's own virtual-gemba/time-and-motion staffing-claim audit (PA-22.2's 10-audits/month cadence ≈ a 20-month network cycle; the unseated 'Store HR Administrator' owner in VS-183; the unseated VS-12 'Services Manager'; ownerless PA-30.3/VS-88 document control). §3.3 HQ 511 → **532** (IA 9 → **14** ops-compliance cell; HR 42 → **55** store HR coordinators; CS 34 → **35** services manager; Strategy 4 → **6** BPM/IMS cell), §4 total 6,911 → **6,932** with the quotient re-derived **~PHP 62.3B ÷ 6,932 ≈ PHP 8.99M**, §11.1 per-executive table re-footed (CEO 49 · CFO 76 · COO 156 · CIO 122 · CMO 30 · CHRO 68 · VP Legal 24; **525 + 7 = 532**), §11.2/§15.2/§17 employee-count rows re-based. Store (5,800) and DC (600) staffing unchanged; revenue canon unchanged; the store-side density delta vs the actual operator (≈40/store incl. SP labor vs 29/store) is flagged as a labor-model decision, not adopted. Prior v3.0 (2026-09-14) | **Structure promotion — the optimal TO is the actual organization of record.** By executive direction the two-state discipline collapses: the adopted target-state table of organization ([`optimal-table-of-organization.md`](optimal-table-of-organization.md)) is **promoted to the actual structure** — §3.3 HQ Headcount 362 → **511** with all 18 department bullets re-based to the promoted values (Merch 43 · Finance 62 · SC 46 · IT 122 · HR 42 · Marketing 30 · Store Ops 24 · Legal 20 · IA 9 · CS 34 · LP 27 · HSE 13 · Quality 5 · Facilities 12 · ESG 4 · Strategy 4 · Trade 7 + Executive Office 7), §3.3's SC sub-team table re-based to 46 and §13.1's merchandising breakdown to 43 (both instantiating the TO §5.2 register mix), §4 total 6,762 → **6,911** with the revenue-per-employee division re-derived **~PHP 62.3B ÷ 6,911 ≈ PHP 9.01M**, §11.1's per-executive table re-footed (CEO 47 · CFO 71 · COO 155 · CIO 122 · CMO 30 · CHRO 55 · VP Legal 24; **504 + 7 = 511**), and the three remaining live employee-count rows re-based to the same canon (§11.2 Payroll-Parameters Total Employees, §15.2 Master-Data Employees row, §17 user-adoption bullet). The IT department runs the product-centric operating model as its actual structure (17 teams / 122 FTE, OM v3.13). Store (5,800) and DC (600) staffing unchanged; revenue canon unchanged. Prior v2.28 | Date: 2026-09-14 | Two-tier sourcing doctrine trued (sourcing model
+*Document Version: 3.6 | Date: 2026-09-23 | **Capability-registry pointer — §8.1.** The new canonical **Online Channel & Capability Registry** ([`channel-capability-registry.md`](channel-capability-registry.md) v1.0 — 16 rows: ENABLED web/app/BOPIS/prepaid/pay-at-pickup; ENABLED-PHASED lockers; DISABLED—PREPARED ×9; DISABLED—NOT PREPARED curbside, BCP-008 dependency) becomes the single source of truth for online capability state, and §8.1's fulfillment/payment rows now defer to it (disabled-prepared replaces the ad-hoc 'dormant/BCP-reactivatable' wording; COD re-worded delivery-tied-disabled). No revenue, volume, headcount or canon change beyond the pointer. Prior v3.5 | Date: 2026-09-23 | **Pickup-only BOPIS mandate — every ecommerce sale completes as a regular POS sale.** By executive direction every ecommerce sale is a BOPIS order picked up at the customer-chosen store and completes as a **regular POS sale** at that store: checkout offers pickup only (prepaid at checkout or pay-at-pickup), the CSR recalls the order on a POS terminal, the prepaid amount applies as an Online-Prepaid tender plus any balance tender, the POS BIR receipt prints, and revenue/12% VAT/inventory deduction ride the standard POS chain (§2 note replaced — the old 'fulfillment confirmation rather than a POS tender transaction' note is retired; §8.1–8.5 re-written). Ecommerce volume re-based to ~42,900 orders/month 100% BOPIS (~PHP 150M GMV, ~2.9% of revenue — Year 1 target unchanged); the delivery estate is marked dormant/BCP-reactivatable; COD retires with it. Companions: PA-10.1/PA-10.2 (W11/W247/W591/W592/W1429/W1442 re-based + mandate banners), VS-10/VS-08 READMEs, PA-08.1 banner, assumptions v6 decision row, ECOM-003, CTL-47 scope line, mobile-app flow, classification-register W11 cell, VS-164/VS-171/PA-07.3/PA-23.2 BOPIS volume cites. No revenue, headcount, store-count, POS-walk-in-canon or canonical-register change (totals unchanged 188 VS / 569 PA / 5,432 WF / 5,455 register rows / 808 CTL / 728 Req / 6,932 HC — HQ 532). Prior v3.4 | Date: 2026-09-23 | **Seventy-first-wave consistency review — the §5 POS transaction-mix returns rate.** The 2026-09-23 production-volume calibration (v3.2) grounded the returns canon at ~40 AR credit memos/day (~1,200/month; measured 14,744/13,584 credit memos/year at ~1.05 lines/doc — §15.1's AR-Credit-Memos row and data-volumes §1.1) but left this section's 'Returns/Exchanges' bullet at the retired ~2% return rate — the 56,000/month figure the pre-calibration returns workflows had assumed (2% × 2.8M transactions), 47x the measured canon; trued to ~0.04% with the canon cite. No revenue, headcount, store-count or §15.1 change. Prior v3.3 | Date: 2026-09-23 | **Sixty-sixth-wave consistency review — the §6.5 PO-band true-up.** The production-volume calibration (v3.2) re-based §15.1's Purchase-Orders-(all-types) row to ~1,600–1,900/month (~19,000–23,000/year) but left §6.5's Monthly/Annual-Trade-Purchase-Orders rows at the retired ~1,400–1,600/~17,000–19,000 band — one document asserting two PO canons; both cells trued to the §15.1 canon (merchandise ~1,200/month unchanged, matching §15.1's retained merchandise row). No revenue, headcount, store-count or §15.1 change. Prior v3.2 | Date: 2026-09-23 | **Production-volume calibration** (by direction: check the operator's production data for realistic transaction volumes and adjust — see `data-volumes-and-integrations.md` §1.1, v4.7): §7.2 Store-Replenishment-Orders ~4,500–5,500/month → **~48,000–52,000/month (~250/store)** on the production STROO run-rate with the delivery-consolidation wording trued (each truck consolidates the ~20–30 transfer orders since the previous drop; the 2–3-deliveries/store/week cadence unchanged), §9 Purchase-Order-Average-Lines ~15 → **~7 lines/PO** (production-measured) and Monthly-PO-Lines ~18,000 → **~12,000**, §3.3 Procurement row's PO-lines/mo trued to ~12,000, §15.1 rows re-based (POs all-types ~1,600–1,900/month, PO Lines ~12,000/~144,000, Replenishment Orders ~50,000/~600,000) with two production-evidenced rows added (AR Credit Memos ~1,200/~14,500; Inventory Adjustment Documents ~900/~11,000). No revenue, headcount, store-count or POS-canon change. Prior v3.1 | Date: 2026-09-18 | **Actual-org gap-fill (+21 HQ).** Benchmarking the TO against the operating company's actual table of organization (CitiHardware TOM workbook) surfaced four store-embedded workload cells the workflow-derived sizing had left to unseated ghost titles or unbased absorption claims — confirmed by the repo's own virtual-gemba/time-and-motion staffing-claim audit (PA-22.2's 10-audits/month cadence ≈ a 20-month network cycle; the unseated 'Store HR Administrator' owner in VS-183; the unseated VS-12 'Services Manager'; ownerless PA-30.3/VS-88 document control). §3.3 HQ 511 → **532** (IA 9 → **14** ops-compliance cell; HR 42 → **55** store HR coordinators; CS 34 → **35** services manager; Strategy 4 → **6** BPM/IMS cell), §4 total 6,911 → **6,932** with the quotient re-derived **~PHP 62.3B ÷ 6,932 ≈ PHP 8.99M**, §11.1 per-executive table re-footed (CEO 49 · CFO 76 · COO 156 · CIO 122 · CMO 30 · CHRO 68 · VP Legal 24; **525 + 7 = 532**), §11.2/§15.2/§17 employee-count rows re-based. Store (5,800) and DC (600) staffing unchanged; revenue canon unchanged; the store-side density delta vs the actual operator (≈40/store incl. SP labor vs 29/store) is flagged as a labor-model decision, not adopted. Prior v3.0 (2026-09-14) | **Structure promotion — the optimal TO is the actual organization of record.** By executive direction the two-state discipline collapses: the adopted target-state table of organization ([`optimal-table-of-organization.md`](optimal-table-of-organization.md)) is **promoted to the actual structure** — §3.3 HQ Headcount 362 → **511** with all 18 department bullets re-based to the promoted values (Merch 43 · Finance 62 · SC 46 · IT 122 · HR 42 · Marketing 30 · Store Ops 24 · Legal 20 · IA 9 · CS 34 · LP 27 · HSE 13 · Quality 5 · Facilities 12 · ESG 4 · Strategy 4 · Trade 7 + Executive Office 7), §3.3's SC sub-team table re-based to 46 and §13.1's merchandising breakdown to 43 (both instantiating the TO §5.2 register mix), §4 total 6,762 → **6,911** with the revenue-per-employee division re-derived **~PHP 62.3B ÷ 6,911 ≈ PHP 9.01M**, §11.1's per-executive table re-footed (CEO 47 · CFO 71 · COO 155 · CIO 122 · CMO 30 · CHRO 55 · VP Legal 24; **504 + 7 = 511**), and the three remaining live employee-count rows re-based to the same canon (§11.2 Payroll-Parameters Total Employees, §15.2 Master-Data Employees row, §17 user-adoption bullet). The IT department runs the product-centric operating model as its actual structure (17 teams / 122 FTE, OM v3.13). Store (5,800) and DC (600) staffing unchanged; revenue canon unchanged. Prior v2.28 | Date: 2026-09-14 | Two-tier sourcing doctrine trued (sourcing model
 v3.0, OM v3.11): §14.1 re-issued under the two-tier doctrine — the TO banner re-pointed; the
 Active-ERP-Landscape table re-issued (Warehouse & Transport rows → in-suite Oracle WMS/MSCA
 + Shipping/OTE; Planning/Trade-Management row → the EBS-family stack; the POS estate,

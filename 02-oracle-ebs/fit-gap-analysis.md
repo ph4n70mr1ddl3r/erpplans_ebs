@@ -1,7 +1,7 @@
 # Fit-Gap Analysis — Oracle EBS vs. the Model Company
 
 > The governing document of the doctrine. Per the 2026-09-14 **two-tier sourcing decision**: *if it's in Oracle EBS we use it; otherwise we build.* Every capability domain the
-> 5,432 workflows demand is dispositioned against standard Oracle EBS 12.2 in one of the fit
+> 5,433 workflows demand is dispositioned against standard Oracle EBS 12.2 in one of the fit
 > classes below. In the **109-row register**: **85 rows (78.0%) run on standard or configured
 > EBS**; 2 are personalizations; **1 is a true extension** (the PFRS 16 ROU schedule — its
 > PFRS 15 sibling was retired when the 2026-09-16 second-pass exhaustion audit found the
@@ -23,7 +23,7 @@
 > 'Not in EBS' and 'no native vehicle' claim against the suite's full 12.2 catalog; and the
 > 2026-09-16 **third-pass exhaustion audit** swept the workflows' still-generic vehicle names
 > against the suite's receivables-instrument, service-chain and people modules, adopting six
-> more native vehicles the 5,432 workflows invoke without naming — AR Lockbox + Balance
+> more native vehicles the 5,433 workflows invoke without naming — AR Lockbox + Balance
 > Forward Billing + iReceivables for the trade collections/statement spine (A14), Purchasing
 > Contingent Labor for the outsourced-workforce spend (B13), Engineering ECO/ECN for kit/BOM
 > revision governance (C17), Install Base + Service Contracts for the warranty/extended-

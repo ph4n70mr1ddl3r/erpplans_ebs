@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_PA-10.2-order-fulfillment-and-delivery" targetNamespace="https://erpplans.local/bpmn" exporter="erpplans generate-bpmn.py" exporterVersion="1.0">
     <bpmn:process id="W_W11" name="W11. Ecommerce — BOPIS Order Fulfillment" isExecutable="false">
-      <bpmn:documentation>Trigger: Customer places BOPIS order on website/app
-Frequency: ~25,700 BOPIS orders/month; ~857/day
+      <bpmn:documentation>Trigger: Customer places BOPIS order on website/app (the only ecommerce checkout path)
+Frequency: ~42,900 BOPIS orders/month; ~1,430/day (100% of ecommerce orders under the pickup-only mandate)
 Volume: Avg 3–4 items per order
 Owner: Customer Service Rep (in-store)
 Participants: System (order routing), Stock Associate (picker), Customer Service Rep (handoff), Customer
@@ -18,8 +18,8 @@ Source: workflow W11 — Ecommerce — BOPIS Order Fulfillment</bpmn:documentati
         <bpmn:flowNodeRef>W11_Task9</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W11_Task11</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W11_Task13</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W11_Task16</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W11_Task17</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W11_Task18</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W11_Lane3" name="Stock Associate">
         <bpmn:flowNodeRef>W11_Task10</bpmn:flowNodeRef>
@@ -27,127 +27,137 @@ Source: workflow W11 — Ecommerce — BOPIS Order Fulfillment</bpmn:documentati
         </bpmn:lane>
         <bpmn:lane id="W11_Lane4" name="CSR">
         <bpmn:flowNodeRef>W11_Task15</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W11_End18</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W11_Task16</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W11_End19</bpmn:flowNodeRef>
         </bpmn:lane>
       </bpmn:laneSet>
-      <bpmn:startEvent id="W11_Start6" name="Customer places BOPIS order on website/app">
-        <bpmn:outgoing>W11_Flow21</bpmn:outgoing>
+      <bpmn:startEvent id="W11_Start6" name="Customer places BOPIS order on website/app (the only ecommerce checkout path)">
+        <bpmn:outgoing>W11_Flow22</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:userTask id="W11_Task7" name="Customer places order on website/app; selects pickup store; pays online">
-        <bpmn:documentation>Step 1: Customer places order on website/app; selects pickup store; pays online
+      <bpmn:userTask id="W11_Task7" name="Customer places order on website/app; selects pickup store (store-level ATP…">
+        <bpmn:documentation>Step 1: Customer places order on website/app; selects pickup store (store-level ATP displayed); pays online (prepaid: CC/GCash/Maya/bank transfer via gateway) or chooses pay-at-pickup (reservation-only)
 Responsible (R): Customer
 Accountable (A): —
 Duration: —</bpmn:documentation>
-        <bpmn:incoming>W11_Flow21</bpmn:incoming>
-        <bpmn:outgoing>W11_Flow22</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:serviceTask id="W11_Task8" name="System routes order to selected store; creates store pick list">
-        <bpmn:documentation>Step 2: System routes order to selected store; creates store pick list
-Responsible (R): System
-Accountable (A): —
-Duration: Automated</bpmn:documentation>
         <bpmn:incoming>W11_Flow22</bpmn:incoming>
         <bpmn:outgoing>W11_Flow23</bpmn:outgoing>
-      </bpmn:serviceTask>
-      <bpmn:serviceTask id="W11_Task9" name="Store receives notification (tablet/terminal alert + printed pick list)">
-        <bpmn:documentation>Step 3: Store receives notification (tablet/terminal alert + printed pick list)
+      </bpmn:userTask>
+      <bpmn:serviceTask id="W11_Task8" name="System routes order to selected store; creates store pick list; locks the order…">
+        <bpmn:documentation>Step 2: System routes order to selected store; creates store pick list; locks the order price; pushes the order record (POS recall payload) to the store
 Responsible (R): System
 Accountable (A): —
 Duration: Automated</bpmn:documentation>
         <bpmn:incoming>W11_Flow23</bpmn:incoming>
         <bpmn:outgoing>W11_Flow24</bpmn:outgoing>
       </bpmn:serviceTask>
+      <bpmn:serviceTask id="W11_Task9" name="Store receives notification (tablet/terminal alert + printed pick list)">
+        <bpmn:documentation>Step 3: Store receives notification (tablet/terminal alert + printed pick list)
+Responsible (R): System
+Accountable (A): —
+Duration: Automated</bpmn:documentation>
+        <bpmn:incoming>W11_Flow24</bpmn:incoming>
+        <bpmn:outgoing>W11_Flow25</bpmn:outgoing>
+      </bpmn:serviceTask>
       <bpmn:userTask id="W11_Task10" name="Stock Associate picks items from sales floor or backroom; scans each item to…">
         <bpmn:documentation>Step 4: Stock Associate picks items from sales floor or backroom; scans each item to confirm
 Responsible (R): Stock Associate
 Accountable (A): Dept. Supervisor
 Duration: 5–15 min/order</bpmn:documentation>
-        <bpmn:incoming>W11_Flow24</bpmn:incoming>
-        <bpmn:outgoing>W11_Flow25</bpmn:outgoing>
+        <bpmn:incoming>W11_Flow25</bpmn:incoming>
+        <bpmn:outgoing>W11_Flow26</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:serviceTask id="W11_Task11" name="If item not in stock at store: system offers substitution or cancels line…">
         <bpmn:documentation>Step 5: If item not in stock at store: system offers substitution or cancels line; notifies customer
 Responsible (R): System / CSR
 Accountable (A): Store Manager
 Duration: 3 min</bpmn:documentation>
-        <bpmn:incoming>W11_Flow25</bpmn:incoming>
-        <bpmn:outgoing>W11_Flow26</bpmn:outgoing>
+        <bpmn:incoming>W11_Flow26</bpmn:incoming>
+        <bpmn:outgoing>W11_Flow27</bpmn:outgoing>
       </bpmn:serviceTask>
-      <bpmn:userTask id="W11_Task12" name="Stock Associate stages picked items at Customer Service counter">
-        <bpmn:documentation>Step 6: Stock Associate stages picked items at Customer Service counter
+      <bpmn:userTask id="W11_Task12" name="Stock Associate stages picked items at Customer Service counter or smart locker…">
+        <bpmn:documentation>Step 6: Stock Associate stages picked items at Customer Service counter or smart locker (W247)
 Responsible (R): Stock Associate
 Accountable (A): CSR
 Duration: 2 min</bpmn:documentation>
-        <bpmn:incoming>W11_Flow26</bpmn:incoming>
-        <bpmn:outgoing>W11_Flow27</bpmn:outgoing>
+        <bpmn:incoming>W11_Flow27</bpmn:incoming>
+        <bpmn:outgoing>W11_Flow28</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:serviceTask id="W11_Task13" name="System marks order as &quot;Ready for Pickup&quot;; sends SMS/email to customer">
         <bpmn:documentation>Step 7: System marks order as &quot;Ready for Pickup&quot;; sends SMS/email to customer
 Responsible (R): System
 Accountable (A): —
 Duration: Automated</bpmn:documentation>
-        <bpmn:incoming>W11_Flow27</bpmn:incoming>
-        <bpmn:outgoing>W11_Flow28</bpmn:outgoing>
+        <bpmn:incoming>W11_Flow28</bpmn:incoming>
+        <bpmn:outgoing>W11_Flow29</bpmn:outgoing>
       </bpmn:serviceTask>
       <bpmn:userTask id="W11_Task14" name="Customer arrives at Customer Service counter; presents ID and order number">
         <bpmn:documentation>Step 8: Customer arrives at Customer Service counter; presents ID and order number
 Responsible (R): Customer
 Accountable (A): —
 Duration: —</bpmn:documentation>
-        <bpmn:incoming>W11_Flow28</bpmn:incoming>
-        <bpmn:outgoing>W11_Flow29</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:userTask id="W11_Task15" name="Customer Service Rep verifies ID; scans order; releases items">
-        <bpmn:documentation>Step 9: Customer Service Rep verifies ID; scans order; releases items
-Responsible (R): CSR
-Accountable (A): Store Manager
-Duration: 3 min</bpmn:documentation>
         <bpmn:incoming>W11_Flow29</bpmn:incoming>
         <bpmn:outgoing>W11_Flow30</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:serviceTask id="W11_Task16" name="System marks order as &quot;Completed&quot;; inventory deducted">
-        <bpmn:documentation>Step 10: System marks order as &quot;Completed&quot;; inventory deducted
-Responsible (R): System
-Accountable (A): —
-Duration: Automated</bpmn:documentation>
+      <bpmn:userTask id="W11_Task15" name="CSR verifies ID; recalls the order on a POS terminal (order number/QR scan) —…">
+        <bpmn:documentation>Step 9: CSR verifies ID; recalls the order on a POS terminal (order number/QR scan) — POS rings all lines at the order-locked price like any walk-in basket
+Responsible (R): CSR
+Accountable (A): Store Manager
+Duration: 2–3 min</bpmn:documentation>
         <bpmn:incoming>W11_Flow30</bpmn:incoming>
         <bpmn:outgoing>W11_Flow31</bpmn:outgoing>
-      </bpmn:serviceTask>
-      <bpmn:serviceTask id="W11_Task17" name="If not picked up within 5 days: auto-cancel; refund initiated; items returned…">
-        <bpmn:documentation>Step 11: If not picked up within 5 days: auto-cancel; refund initiated; items returned to shelf
-Responsible (R): System
-Accountable (A): CSR
-Duration: Automated (return: 5 min)</bpmn:documentation>
+      </bpmn:userTask>
+      <bpmn:serviceTask id="W11_Task16" name="POS tender completes the sale">
+        <bpmn:documentation>Step 10: POS tender completes the sale: prepaid amount auto-applies as the Online-Prepaid tender type (systemic tender via order recall); any balance tendered normally (cash/card/e-wallet); POS prints the BIR receipt; the sale posts through the standard POS chain (W525 streaming → W522 review → W537/541 settlement); inventory deducts via the POS sale
+Responsible (R): CSR / System
+Accountable (A): Store Manager
+Duration: 2–3 min</bpmn:documentation>
         <bpmn:incoming>W11_Flow31</bpmn:incoming>
         <bpmn:outgoing>W11_Flow32</bpmn:outgoing>
       </bpmn:serviceTask>
-      <bpmn:endEvent id="W11_End18" name="Complete">
+      <bpmn:serviceTask id="W11_Task17" name="POS tender confirmation closes the ecommerce order (&quot;Completed&quot;); fulfillment…">
+        <bpmn:documentation>Step 11: POS tender confirmation closes the ecommerce order (&quot;Completed&quot;); fulfillment status pushed back to the platform; loyalty/returns ride the POS receipt like any store sale
+Responsible (R): System
+Accountable (A): —
+Duration: Automated</bpmn:documentation>
         <bpmn:incoming>W11_Flow32</bpmn:incoming>
+        <bpmn:outgoing>W11_Flow33</bpmn:outgoing>
+      </bpmn:serviceTask>
+      <bpmn:serviceTask id="W11_Task18" name="If not picked up within 5 days: auto-cancel; prepaid orders refunded to…">
+        <bpmn:documentation>Step 12: If not picked up within 5 days: auto-cancel; prepaid orders refunded to original payment method per W101/W1442; reservation-only orders simply release the reservation; items returned to shelf
+Responsible (R): System
+Accountable (A): CSR
+Duration: Automated (return: 5 min)</bpmn:documentation>
+        <bpmn:incoming>W11_Flow33</bpmn:incoming>
+        <bpmn:outgoing>W11_Flow34</bpmn:outgoing>
+      </bpmn:serviceTask>
+      <bpmn:endEvent id="W11_End19" name="Complete">
+        <bpmn:incoming>W11_Flow34</bpmn:incoming>
       </bpmn:endEvent>
-      <bpmn:textAnnotation id="W11_Annotation19">
+      <bpmn:textAnnotation id="W11_Annotation20">
         <bpmn:text>Controls: - CTL-270 (ensure controlled execution — Order Fulfillment &amp; Delivery (PA-10.2).) | - operational: standard operating procedures; system-enforced validation rules
 Owner: Customer Service Rep (in-store)</bpmn:text>
       </bpmn:textAnnotation>
-      <bpmn:association id="W11_Assoc20" sourceRef="W11_Annotation19" targetRef="W11_Start6" associationDirection="None" />
-      <bpmn:sequenceFlow id="W11_Flow21" sourceRef="W11_Start6" targetRef="W11_Task7" />
-      <bpmn:sequenceFlow id="W11_Flow22" sourceRef="W11_Task7" targetRef="W11_Task8" />
-      <bpmn:sequenceFlow id="W11_Flow23" sourceRef="W11_Task8" targetRef="W11_Task9" />
-      <bpmn:sequenceFlow id="W11_Flow24" sourceRef="W11_Task9" targetRef="W11_Task10" />
-      <bpmn:sequenceFlow id="W11_Flow25" sourceRef="W11_Task10" targetRef="W11_Task11" />
-      <bpmn:sequenceFlow id="W11_Flow26" sourceRef="W11_Task11" targetRef="W11_Task12" />
-      <bpmn:sequenceFlow id="W11_Flow27" sourceRef="W11_Task12" targetRef="W11_Task13" />
-      <bpmn:sequenceFlow id="W11_Flow28" sourceRef="W11_Task13" targetRef="W11_Task14" />
-      <bpmn:sequenceFlow id="W11_Flow29" sourceRef="W11_Task14" targetRef="W11_Task15" />
-      <bpmn:sequenceFlow id="W11_Flow30" sourceRef="W11_Task15" targetRef="W11_Task16" />
-      <bpmn:sequenceFlow id="W11_Flow31" sourceRef="W11_Task16" targetRef="W11_Task17" />
-      <bpmn:sequenceFlow id="W11_Flow32" sourceRef="W11_Task17" targetRef="W11_End18" />
+      <bpmn:association id="W11_Assoc21" sourceRef="W11_Annotation20" targetRef="W11_Start6" associationDirection="None" />
+      <bpmn:sequenceFlow id="W11_Flow22" sourceRef="W11_Start6" targetRef="W11_Task7" />
+      <bpmn:sequenceFlow id="W11_Flow23" sourceRef="W11_Task7" targetRef="W11_Task8" />
+      <bpmn:sequenceFlow id="W11_Flow24" sourceRef="W11_Task8" targetRef="W11_Task9" />
+      <bpmn:sequenceFlow id="W11_Flow25" sourceRef="W11_Task9" targetRef="W11_Task10" />
+      <bpmn:sequenceFlow id="W11_Flow26" sourceRef="W11_Task10" targetRef="W11_Task11" />
+      <bpmn:sequenceFlow id="W11_Flow27" sourceRef="W11_Task11" targetRef="W11_Task12" />
+      <bpmn:sequenceFlow id="W11_Flow28" sourceRef="W11_Task12" targetRef="W11_Task13" />
+      <bpmn:sequenceFlow id="W11_Flow29" sourceRef="W11_Task13" targetRef="W11_Task14" />
+      <bpmn:sequenceFlow id="W11_Flow30" sourceRef="W11_Task14" targetRef="W11_Task15" />
+      <bpmn:sequenceFlow id="W11_Flow31" sourceRef="W11_Task15" targetRef="W11_Task16" />
+      <bpmn:sequenceFlow id="W11_Flow32" sourceRef="W11_Task16" targetRef="W11_Task17" />
+      <bpmn:sequenceFlow id="W11_Flow33" sourceRef="W11_Task17" targetRef="W11_Task18" />
+      <bpmn:sequenceFlow id="W11_Flow34" sourceRef="W11_Task18" targetRef="W11_End19" />
     </bpmn:process>
     <bpmndi:BPMNDiagram id="W11_diag">
       <bpmndi:BPMNPlane id="W11_plane" bpmnElement="W_W11">
-        <bpmndi:BPMNShape id="W11_Lane1_di" bpmnElement="W11_Lane1" isHorizontal="true"><dc:Bounds x="160" y="80" width="2630" height="170" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W11_Lane2_di" bpmnElement="W11_Lane2" isHorizontal="true"><dc:Bounds x="160" y="250" width="2630" height="170" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W11_Lane3_di" bpmnElement="W11_Lane3" isHorizontal="true"><dc:Bounds x="160" y="420" width="2630" height="170" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W11_Lane4_di" bpmnElement="W11_Lane4" isHorizontal="true"><dc:Bounds x="160" y="590" width="2630" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W11_Lane1_di" bpmnElement="W11_Lane1" isHorizontal="true"><dc:Bounds x="160" y="80" width="2840" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W11_Lane2_di" bpmnElement="W11_Lane2" isHorizontal="true"><dc:Bounds x="160" y="250" width="2840" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W11_Lane3_di" bpmnElement="W11_Lane3" isHorizontal="true"><dc:Bounds x="160" y="420" width="2840" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W11_Lane4_di" bpmnElement="W11_Lane4" isHorizontal="true"><dc:Bounds x="160" y="590" width="2840" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W11_Task7_di" bpmnElement="W11_Task7"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W11_Task8_di" bpmnElement="W11_Task8"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W11_Task9_di" bpmnElement="W11_Task9"><dc:Bounds x="820" y="295" width="180" height="80" /></bpmndi:BPMNShape>
@@ -157,24 +167,26 @@ Owner: Customer Service Rep (in-store)</bpmn:text>
         <bpmndi:BPMNShape id="W11_Task13_di" bpmnElement="W11_Task13"><dc:Bounds x="1660" y="295" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W11_Task14_di" bpmnElement="W11_Task14"><dc:Bounds x="1870" y="125" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W11_Task15_di" bpmnElement="W11_Task15"><dc:Bounds x="2080" y="635" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W11_Task16_di" bpmnElement="W11_Task16"><dc:Bounds x="2290" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W11_Task16_di" bpmnElement="W11_Task16"><dc:Bounds x="2290" y="635" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W11_Task17_di" bpmnElement="W11_Task17"><dc:Bounds x="2500" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W11_Task18_di" bpmnElement="W11_Task18"><dc:Bounds x="2710" y="295" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W11_Start6_di" bpmnElement="W11_Start6"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W11_End18_di" bpmnElement="W11_End18"><dc:Bounds x="2730" y="657" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W11_Annotation19_di" bpmnElement="W11_Annotation19"><dc:Bounds x="160" y="800" width="360" height="60" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNEdge id="W11_Flow21_di" bpmnElement="W11_Flow21"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W11_Flow22_di" bpmnElement="W11_Flow22"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W11_Flow23_di" bpmnElement="W11_Flow23"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W11_Flow24_di" bpmnElement="W11_Flow24"><di:waypoint x="1000" y="335" /><di:waypoint x="1030" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W11_Flow25_di" bpmnElement="W11_Flow25"><di:waypoint x="1210" y="505" /><di:waypoint x="1240" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W11_Flow26_di" bpmnElement="W11_Flow26"><di:waypoint x="1420" y="335" /><di:waypoint x="1450" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W11_Flow27_di" bpmnElement="W11_Flow27"><di:waypoint x="1630" y="505" /><di:waypoint x="1660" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W11_Flow28_di" bpmnElement="W11_Flow28"><di:waypoint x="1840" y="335" /><di:waypoint x="1870" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W11_Flow29_di" bpmnElement="W11_Flow29"><di:waypoint x="2050" y="165" /><di:waypoint x="2080" y="675" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W11_Flow30_di" bpmnElement="W11_Flow30"><di:waypoint x="2260" y="675" /><di:waypoint x="2290" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W11_Flow31_di" bpmnElement="W11_Flow31"><di:waypoint x="2470" y="335" /><di:waypoint x="2500" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W11_Flow32_di" bpmnElement="W11_Flow32"><di:waypoint x="2680" y="335" /><di:waypoint x="2730" y="675" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W11_Assoc20_di" bpmnElement="W11_Assoc20"><di:waypoint x="340" y="800" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNShape id="W11_End19_di" bpmnElement="W11_End19"><dc:Bounds x="2940" y="657" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W11_Annotation20_di" bpmnElement="W11_Annotation20"><dc:Bounds x="160" y="800" width="360" height="60" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="W11_Flow22_di" bpmnElement="W11_Flow22"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W11_Flow23_di" bpmnElement="W11_Flow23"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W11_Flow24_di" bpmnElement="W11_Flow24"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W11_Flow25_di" bpmnElement="W11_Flow25"><di:waypoint x="1000" y="335" /><di:waypoint x="1030" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W11_Flow26_di" bpmnElement="W11_Flow26"><di:waypoint x="1210" y="505" /><di:waypoint x="1240" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W11_Flow27_di" bpmnElement="W11_Flow27"><di:waypoint x="1420" y="335" /><di:waypoint x="1450" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W11_Flow28_di" bpmnElement="W11_Flow28"><di:waypoint x="1630" y="505" /><di:waypoint x="1660" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W11_Flow29_di" bpmnElement="W11_Flow29"><di:waypoint x="1840" y="335" /><di:waypoint x="1870" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W11_Flow30_di" bpmnElement="W11_Flow30"><di:waypoint x="2050" y="165" /><di:waypoint x="2080" y="675" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W11_Flow31_di" bpmnElement="W11_Flow31"><di:waypoint x="2260" y="675" /><di:waypoint x="2290" y="675" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W11_Flow32_di" bpmnElement="W11_Flow32"><di:waypoint x="2470" y="675" /><di:waypoint x="2500" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W11_Flow33_di" bpmnElement="W11_Flow33"><di:waypoint x="2680" y="335" /><di:waypoint x="2710" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W11_Flow34_di" bpmnElement="W11_Flow34"><di:waypoint x="2890" y="335" /><di:waypoint x="2940" y="675" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W11_Assoc21_di" bpmnElement="W11_Assoc21"><di:waypoint x="340" y="800" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
       </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W19" name="W19. Ecommerce — Home Delivery Fulfillment" isExecutable="false">
@@ -924,7 +936,7 @@ Owner: Ecommerce Fulfillment Manager</bpmn:text>
     <bpmn:process id="W_W247" name="W247. BOPIS Smart Locker &amp; Queue Management" isExecutable="false">
       <bpmn:documentation>Trigger: Ecommerce BOPIS order picked and staged (W11)
 Frequency: Ongoing (daily)
-Volume: ~4–5 BOPIS pickups per store/day (~25,700 BOPIS orders/month per profile §8.5)
+Volume: ~7 BOPIS pickups per store/day (~42,900 BOPIS orders/month per profile §8.5)
 Owner: Store Customer Experience Supervisor
 Participants: Store Picker, Customer, Pro Desk Associate
 Source: workflow W247 — BOPIS Smart Locker &amp; Queue Management</bpmn:documentation>
@@ -973,16 +985,16 @@ Duration: Automated</bpmn:documentation>
         <bpmn:incoming>W247_Flow18</bpmn:incoming>
         <bpmn:outgoing>W247_Flow19</bpmn:outgoing>
       </bpmn:serviceTask>
-      <bpmn:userTask id="W247_Task10" name="Customer Arrival">
-        <bpmn:documentation>Step 4: Customer Arrival: Customer arrives at the store. (a) For Smart Locker: Scans the QR/enters the PIN at the locker screen; the locker door pops open. (b) For Pickup Counter: Customer checks in on a tablet queueing screen; Pro Desk is alerted.
-Responsible (R): Customer
-Accountable (A): —
-Duration: 2 min</bpmn:documentation>
+      <bpmn:serviceTask id="W247_Task10" name="Customer Arrival">
+        <bpmn:documentation>Step 4: Customer Arrival: Customer arrives at the store. (a) For Smart Locker: Scans the QR/enters the PIN at the locker screen; the locker door pops open; the locker release event auto-tenders the sale as an Online-Prepaid POS transaction on the store&#x27;s designated BOPIS terminal (BIR-accredited kiosk/counter printer issues the receipt for collection). (b) For Pickup Counter: Customer checks in on a tablet queueing screen; Pro Desk is alerted; the CSR executes W11 steps 9–10 (ID verification + POS tender).
+Responsible (R): Customer / System / CSR
+Accountable (A): Store Mgr
+Duration: 2 min (locker) / 4–6 min (counter)</bpmn:documentation>
         <bpmn:incoming>W247_Flow19</bpmn:incoming>
         <bpmn:outgoing>W247_Flow20</bpmn:outgoing>
-      </bpmn:userTask>
+      </bpmn:serviceTask>
       <bpmn:serviceTask id="W247_Task11" name="Reconciliation">
-        <bpmn:documentation>Step 5: Reconciliation: The locker door closing or the associate hand-off scan triggers a real-time order completion status in the ERP (W11 step 8).
+        <bpmn:documentation>Step 5: Reconciliation: The POS tender confirmation (counter handoff per W11 step 11, or the locker auto-tender) triggers the real-time order completion status in the ERP.
 Responsible (R): System / Associate
 Accountable (A): Store Mgr
 Duration: Automated</bpmn:documentation>
@@ -1041,7 +1053,7 @@ Owner: Store Customer Experience Supervisor</bpmn:text>
     <bpmn:process id="W_W591" name="W591. E-Commerce Fulfillment SLA Monitoring &amp; Exception Escalation" isExecutable="false">
       <bpmn:documentation>Trigger: Daily SLA monitoring cycle (automated overnight calculation, reviewed by 8:00 AM)
 Frequency: Daily monitoring; weekly trend review; monthly executive SLA report
-Volume: ~42,900 ecommerce orders/month (~1,430/day); mix of BOPIS (~25,700/month), home delivery from DC (~12,900/month), ship-from-store (~2,800/month, per W19B/W1196 reconciled), and drop-ship vendor (~200–400/month, per W246); SLA metrics tracked per order per fulfillment origin
+Volume: ~42,900 ecommerce orders/month (~1,430/day), 100% BOPIS under the pickup-only mandate (the dormant delivery origins — home delivery, ship-from-store, DSV — contribute zero live volume; their SLA definitions are retained as designed capacity for BCP reactivation); SLA metrics tracked per order per fulfillment origin
 Owner: E-Commerce Operations Supervisor
 Participants: E-Commerce Operations Supervisor, Fulfillment Analyst, DC Dispatch Supervisor (C for DC-origin orders), Store Operations (C for BOPIS/SFS orders), Drop-Ship Vendor Coordinator (C for DSV orders), Last-Mile Supervisor (C for carrier performance), E-Commerce Manager (A for major/critical escalations), Customer Service Representative (I for customer-impacting breaches)
 Source: workflow W591 — E-Commerce Fulfillment SLA Monitoring &amp; Exception Escalation</bpmn:documentation>
@@ -1178,7 +1190,7 @@ Owner: E-Commerce Operations Supervisor</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W592" name="W592. E-Commerce Customer Delivery Tracking &amp; Proof of Delivery Management" isExecutable="false">
       <bpmn:documentation>Trigger: Order dispatched from DC, store (SFS), or drop-ship vendor for customer delivery
-Frequency: Ongoing per delivery transaction; ~42,900 orders/month of which ~17,200 are home delivery orders requiring tracking and POD (~573/day); BOPIS orders (~25,700/month) tracked to pickup readiness but POD is pickup confirmation per W11
+Frequency: Dormant under the pickup-only mandate (2026-09-23 (d)): the live order book is 100% BOPIS (~42,900 orders/month tracked to pickup readiness per W11 — no carrier tracking/POD); the tracking and POD mechanics below are retained as documented capability for BCP reactivation of the delivery estate (the W19 canon — ~17,200 home delivery orders/month — is the dormant design basis)
 Volume: ~17,200 home delivery orders/month requiring end-to-end tracking and POD capture; mix of carriers: Lalamove (~40% of home delivery volume), Transportify (~30%), own fleet for BOPIS delivery-to-vehicle (~15%), DSV-direct carrier (~15%); delivery coverage across Luzon (~65% of volume), Visayas (~20%), Mindanao (~15%)
 Owner: Last-Mile Operations Supervisor
 Participants: Last-Mile Operations Supervisor, Dispatch Coordinator, 3PL Driver (R for Lalamove/Transportify), Own-Fleet Driver, Customer Service Representative (R for exception handling), Fulfillment Analyst (R for POD reconciliation), Customer (I for notifications and delivery confirmation), Drop-Ship Vendor Coordinator (C for DSV deliveries)
@@ -2285,8 +2297,8 @@ Owner: Customer Service Rep</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W1429" name="W1429. E-Commerce BOPIS Same-Day Pick SLA Monitoring, Exception Escalation &amp; Customer Notification" isExecutable="false">
       <bpmn:documentation>Trigger: BOPIS order placed on ecommerce platform; or SLA breach event (order not ready within 4-hour SLA per model company profile)
-Frequency: ~25,700 BOPIS orders/month (~860/day across 200 stores); SLA monitoring continuous; exception escalation as needed
-Volume: ~860 BOPIS orders/day; SLA target: 95%+ picked within 4 hours; expected SLA breach rate: 5–8% (~43–69 orders/day needing exception handling)
+Frequency: ~42,900 BOPIS orders/month (~1,430/day across 200 stores); SLA monitoring continuous; exception escalation as needed
+Volume: ~1,430 BOPIS orders/day; SLA target: 95%+ picked within 4 hours; expected SLA breach rate: 5–8% (~72–114 orders/day needing exception handling)
 Owner: E-Commerce Operations Manager
 Participants: E-Commerce Operations Manager, Store Stock Associate (picker), Customer Service Rep (store), Store Manager, Customer
 Source: workflow W1429 — E-Commerce BOPIS Same-Day Pick SLA Monitoring, Exception Escalation &amp; Customer Notification</bpmn:documentation>
@@ -2483,8 +2495,8 @@ Owner: E-Commerce Content Manager</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W1442" name="W1442. BOPIS Customer No-Show Rate Monitoring, Auto-Cancel Processing &amp; Restocking Workflow" isExecutable="false">
       <bpmn:documentation>Trigger: BOPIS order hold period expires (5 days) without customer pickup; or daily no-show rate monitoring dashboard alert
-Frequency: ~8–12% no-show rate = ~2,000–3,100 orders/month across all 200 stores; daily auto-cancel processing; weekly no-show rate review
-Volume: ~25,700 BOPIS orders/month; ~2,000–3,100 no-shows/month; each no-show triggers auto-cancel, refund, and restock
+Frequency: ~8–12% no-show rate = ~3,400–5,100 orders/month across all 200 stores; daily auto-cancel processing; weekly no-show rate review
+Volume: ~42,900 BOPIS orders/month; ~3,400–5,100 no-shows/month; each no-show triggers auto-cancel, refund (prepaid orders), and restock
 Owner: E-Commerce Operations Manager
 Participants: E-Commerce Ops Manager, Store Customer Service Rep, Finance/AP (refund processing), Stock Associate (restocking)
 Source: workflow W1442 — BOPIS Customer No-Show Rate Monitoring, Auto-Cancel Processing &amp; Restocking Workflow</bpmn:documentation>
@@ -2517,7 +2529,7 @@ Duration: Automated</bpmn:documentation>
         <bpmn:outgoing>W1442_Flow16</bpmn:outgoing>
       </bpmn:serviceTask>
       <bpmn:serviceTask id="W1442_Task8" name="Daily auto-cancel processing">
-        <bpmn:documentation>Step 2: Daily auto-cancel processing: At end of Day 5 (hold period expiry): (a) system auto-cancels all unpicked BOPIS orders, (b) system initiates refund to original payment method (credit card, e-wallet, GCash), (c) system generates daily auto-cancel report: order number, SKU, store, value, cancel reason (&quot;hold period expired&quot;), (d) system releases inventory reservation — items become available for walk-in sale
+        <bpmn:documentation>Step 2: Daily auto-cancel processing: At end of Day 5 (hold period expiry): (a) system auto-cancels all unpicked BOPIS orders, (b) system initiates refund to original payment method for prepaid orders (credit card, e-wallet, GCash; reservation-only pay-at-pickup orders release the reservation with no payment movement — the POS tender that would have completed the sale never occurred), (c) system generates daily auto-cancel report: order number, SKU, store, value, cancel reason (&quot;hold period expired&quot;), (d) system releases inventory reservation — items become available for walk-in sale
 Responsible (R): System (automated)
 Accountable (A): E-Commerce Ops Manager
 Duration: Automated (30 min/day exception review)</bpmn:documentation>
