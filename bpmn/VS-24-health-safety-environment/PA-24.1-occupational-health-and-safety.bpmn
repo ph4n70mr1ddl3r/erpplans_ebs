@@ -528,7 +528,7 @@ Owner: Safety Officer</bpmn:text>
     <bpmn:process id="W_W655" name="W655. Safety Training &amp; Certification Tracking" isExecutable="false">
       <bpmn:documentation>Trigger: New hire onboarding (W15); annual recertification cycle; triggered by regulatory change or incident
 Frequency: Continuous enrollment; monthly tracking; annual compliance audit
-Volume: 6,932 employees requiring various safety certifications across 200 stores, 4 DCs, and HQ
+Volume: 6,925 employees requiring various safety certifications across 200 stores, 4 DCs, and HQ
 Owner: Safety Training Coordinator
 Participants: Department Supervisors, DC Safety Officer, External Training Provider, DOLE-Accredited Safety Practitioner
 Source: workflow W655 — Safety Training &amp; Certification Tracking</bpmn:documentation>
@@ -657,7 +657,7 @@ Owner: Safety Training Coordinator</bpmn:text>
     <bpmn:process id="W_W697" name="W697. Workplace Ergonomics Assessment &amp; Musculoskeletal Injury Prevention" isExecutable="false">
       <bpmn:documentation>Trigger: Employee reports musculoskeletal discomfort; quarterly assessment cycle; new workstation or work process introduction; post-injury return-to-work
 Frequency: Quarterly workstation assessments; continuous for reported discomfort; annual program review
-Volume: ~6,932 employees across 200 stores, 4 DCs, and HQ; high-risk roles: cashiers (prolonged standing, repetitive scanning), DC pickers (lifting, bending), lumber yard staff (heavy lifting), paint mixing staff (repetitive arm motion)
+Volume: ~6,925 employees across 200 stores, 4 DCs, and HQ; high-risk roles: cashiers (prolonged standing, repetitive scanning), DC pickers (lifting, bending), lumber yard staff (heavy lifting), paint mixing staff (repetitive arm motion)
 Owner: Safety Officer
 Participants: HR (employee health records), Department Supervisors, External Ergonomics Consultant, Occupational Health Provider, Store/DC Managers
 Source: workflow W697 — Workplace Ergonomics Assessment &amp; Musculoskeletal Injury Prevention</bpmn:documentation>
@@ -936,7 +936,7 @@ Owner: Maintenance Associate</bpmn:text>
     <bpmn:process id="W_W804" name="W804. Occupational Health Surveillance, Employee Medical Monitoring &amp; Record Management" isExecutable="false">
       <bpmn:documentation>Trigger: New employee hire (pre-employment medical); annual medical examination cycle; incident-specific medical evaluation per W140; DOLE periodic health assessment requirements
 Frequency: Pre-employment: per hire (~1,200–1,600/year); Annual: per employee at DC and high-exposure roles; Incident: per W140
-Volume: ~6,932 employees; ~1,500–2,000 annual medical examinations for DC staff, drivers, paint/chemical handlers, and noise-exposed roles
+Volume: ~6,925 employees; ~1,500–2,000 annual medical examinations for DC staff, drivers, paint/chemical handlers, and noise-exposed roles
 Owner: HR Manager (Health &amp; Benefits)
 Participants: Employee, Occupational Health Physician, HR, Department Heads, HMO Provider, DOLE
 Source: workflow W804 — Occupational Health Surveillance, Employee Medical Monitoring &amp; Record Management</bpmn:documentation>

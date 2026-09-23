@@ -90,7 +90,7 @@
 | YTD Earnings & Deductions | Payroll system | Load into the in-house Payroll PH build — not EBS (EBS receives postings, not balances); retained for BIR annual reconciliation (1702/1604) | Sum validates to payroll register |
 | Leave Balances | Payroll system | Migrate VL/SL balances as of go-live | Non-negative |
 
-**Target record count**: 6,932 employees
+**Target record count**: 6,925 employees (active; Trade / Account Management's 7 disabled — prepared, 2026-09-23 (x))
 
 ### 2.5 Financial Balances (from legacy accounting)
 

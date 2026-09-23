@@ -230,7 +230,7 @@ erpplans/
 │   ├── executive-summary.md            1-page C-suite overview
 │   ├── assumptions-and-design-decisions.md  Consolidated assumptions & rationale
 │   ├── headcount-reality-check.md     HQ headcount vs. workflow-coverage gap analysis
-│   ├── optimal-table-of-organization.md  OFFICIAL table of organization of record — THE ACTUAL STRUCTURE (promoted 2026-09-14; gap-filled 2026-09-18): HQ 532 / total 6,932, every HQ role defined in §5.3 (pre-optimization 362 / 6,762 retained as the §5.1 reference column; official elevation 2026-09-09; two-tier IT sourcing + agentic-AI model)
+│   ├── optimal-table-of-organization.md  OFFICIAL table of organization of record — THE ACTUAL STRUCTURE (promoted 2026-09-14; gap-filled 2026-09-18; Trade dept disabled—prepared 2026-09-23 (x) — active HQ 525 / total 6,925): design HQ 532 / total 6,932, every HQ role defined in §5.3 (pre-optimization 362 / 6,762 retained as the §5.1 reference column; official elevation 2026-09-09; two-tier IT sourcing + agentic-AI model)
 │   ├── requirement-workflow-matrix.md  Cross-reference: requirements ↔ workflows
 │   ├── channel-capability-registry.md  Online Channel & Capability Registry — the switchboard: per-capability ENABLED / ENABLED-PHASED / DISABLED—PREPARED / DISABLED—NOT-PREPARED states with enable checklists (BOPIS store pickup is the only enabled online sales capability; runtime twin = feature flags in the in-house platform; state changes ride the built-product change chain)
 │   ├── internal-controls-matrix.md     808 internal controls by objective
@@ -343,7 +343,7 @@ erpplans/
 | Active SKUs | 35,000 |
 | Monthly Trade Purchase Orders | ~1,200 merchandise; ~1,600–1,900 total (production-calibrated) |
 | Legal Entities | 5 |
-| Total Headcount | 6,932 (200 stores × 29 + 600 DC + 532 HQ) |
+| Total Headcount | 6,925 active (200 stores × 29 + 600 DC + 525 HQ; the TO's 6,932 design retains the disabled—prepared Trade department) |
 | Ecommerce | Yes (with BOPIS) |
 | Country | Philippines |
 

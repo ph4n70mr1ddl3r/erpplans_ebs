@@ -147,7 +147,7 @@ Owner: Ethics &amp; Compliance Officer / Risk</bpmn:text>
     <bpmn:process id="W_W3731" name="W3731. Culture, Engagement &amp; Trust Measurement" isExecutable="false">
       <bpmn:documentation>Trigger: Annual survey cycle; pulse survey
 Frequency: Annual + pulse
-Volume: ~6,932 employees across 200 stores/4 DCs/5 entities
+Volume: ~6,925 employees across 200 stores/4 DCs/5 entities
 Owner: Ethics &amp; Compliance Officer / HR-EX
 Participants: Ethics &amp; Compliance Officer, HR/EX (links to VS-103.2/VS-103.3), Communications (links to VS-14.3), BI (links to VS-28.1), Store Ops (links to VS-07), Ethics Committee (links to W3719)
 Source: workflow W3731 — Culture, Engagement &amp; Trust Measurement</bpmn:documentation>

@@ -54,6 +54,10 @@ PROFILE = os.path.join(REPO, "01-model-company", "model-company-profile.md")
 # canonical §3.3 HQ department totals (spot anchors used by prose claims)
 # Re-based 2026-09-14 to the PROMOTED structure of record (TO v2.3 / profile
 # v3.1 §3.3: HQ 532 (2026-09-18 actual-org gap-fill; the 2026-09-14 promotion figure was 511); IT 122 per the 17-team product model, OM v3.13).
+RETIRED_HC_CANON = "6,932"   # retired 2026-09-23 (x): Trade / Account Management disabled —
+# prepared (registry CAP-B01); the ACTIVE employee canon is 6,925 (HQ 525 active of the
+# 532-role design). Version footers and dated history lines are exempt.
+
 DEPT_TOTALS = {
     "executive office": 7, "merchandising": 43, "finance & accounting": 62,
     "finance and accounting": 62, "finance": 62, "supply chain & logistics": 46,
@@ -274,6 +278,27 @@ def main():
             for m in re.finditer(re.escape(lit), text, re.I):
                 line = text[:m.start()].count("\n") + 1
                 hits.append(("retired-literal", rel, line, lit))
+    # 2026-09-23 (x) trade-desk disablement: the retired 6,932 active-headcount
+    # canon is banned on live PA lines (version-footed PA files are none, so the
+    # whole file is live); the Sweep protocol restored it in 252 cells across 98
+    # PA/README files — a future headcount move re-fires this arm until
+    # consciously re-pointed (the Check-71 CENSUS-pin contract).
+    for f in files:
+        text = open(f, encoding="utf-8").read()
+        rel = os.path.relpath(f, REPO)
+        for m in re.finditer(RETIRED_HC_CANON, text):
+            line = text[:m.start()].count("\n") + 1
+            hits.append(("retired-headcount", rel, line,
+                         "6,932 (retired active canon — 6,925 since the "
+                         "trade-desk disablement, 2026-09-23 (x))"))
+    for f in readme_files:
+        text = open(f, encoding="utf-8").read()
+        rel = os.path.relpath(f, REPO)
+        for m in re.finditer(RETIRED_HC_CANON, text):
+            line = text[:m.start()].count("\n") + 1
+            hits.append(("retired-headcount", rel, line,
+                         "6,932 (retired active canon — 6,925 since the "
+                         "trade-desk disablement, 2026-09-23 (x))"))
     # 2026-09-09 sixteenth-wave addition: the DC-catchment class (profile + PAs)
     hits.extend(dc_catchment_hits())
     for kind, rel, line, detail in hits:

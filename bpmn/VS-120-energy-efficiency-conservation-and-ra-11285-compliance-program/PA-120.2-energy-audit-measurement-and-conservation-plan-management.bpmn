@@ -435,7 +435,7 @@ Owner: EEO / Facilities</bpmn:text>
     <bpmn:process id="W_W3751" name="W3751. Behavioral, Organizational &amp; Store-Level Energy Management" isExecutable="false">
       <bpmn:documentation>Trigger: Program rollout; performance gap; awareness cycle
 Frequency: Continuous + periodic
-Volume: ~6,932 employees; ~205 sites
+Volume: ~6,925 employees; ~205 sites
 Owner: EEO / Store Ops / HR
 Participants: EEO, Store Ops (links to VS-07), HR/L&amp;D (links to VS-19.4/VS-103.2), DC Ops (links to VS-04), Sustainability (links to VS-25), Communications (links to VS-14.3/VS-103.2)
 Source: workflow W3751 — Behavioral, Organizational &amp; Store-Level Energy Management</bpmn:documentation>

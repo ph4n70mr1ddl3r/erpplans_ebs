@@ -30,9 +30,9 @@
 
 | Driver | Value | Source |
 |---|---|---|
-| Total employees | **6,932** (5,800 store + 600 DC + 532 HQ) | profile §4 |
-| ERP authorized (named) users | **3,532** → licensed **3,600** | build-up below |
-| — HQ staff | 532 (all 18 departments touch the ERP; 2026-09-18 actual-org gap-fill) | profile §3.3 |
+| Total employees | **6,925** (5,800 store + 600 DC + 525 HQ) | profile §4 (Trade / Account Management disabled — prepared 2026-09-23 (x); the 7-role design is retained, TO §5.3) |
+| ERP authorized (named) users | **3,525** → licensed **3,600** | build-up below |
+| — HQ staff | 525 active of the 532-role design (all 18 departments touch the ERP; Trade / Account Management's 7 disabled — prepared 2026-09-23 (x)) | profile §3.3 |
 | — Store ERP users | 2,400 = 12/store × 200 (SM, ASM, 4 dept supervisors, 2 receiving clerks, 4 stock associates) | profile §12.1 |
 | — DC staff (WMS/RF users) | 600 = 150/DC × 4 | profile §3.2 |
 | Peak *concurrent* users | ~1,000–1,500 — **not the license basis**; Oracle "Application User" / "Hosted Named User" are *named*-user metrics | profile §15.3 |
@@ -44,7 +44,7 @@
 
 > **Metric rule that dominates the HRMS lines:** the "Employee" / "Hosted Employee" metric counts
 > **all** employees (plus any tracked contractors) — *not* actual users. Every Employee-metric
-> product therefore licenses 6,932, even if only managers use it.
+> product therefore licenses 6,925, even if only managers use it.
 
 ### Design decisions embedded in this BOM
 
@@ -62,7 +62,7 @@
    Supply Planning, S&OP Cloud). Note EBS OM's *embedded* multi-org ATP covers W56 back-order
    promising without standalone GOP.
 4. Employee-metric counts assume **no tracked contractors**; every contractor/agent tracked by
-   HR programs adds to the 6,932.
+   HR programs adds to the 6,925.
 5. **Full-implementation edition:** the BOM now licenses **every product the fit-gap register
    adopts** — the v1.0 footprint plus Lease & Finance Management (A13), Internet Expenses
    (B11), BOM/WIP (C9), Oracle Quality (C12), In-Memory Cost Management (C15), Engineering
@@ -246,23 +246,23 @@ RFQ to confirm whether it rides the Project Costing/Foundation entitlement. Its 
 corporate PMO (VS-112) + construction/capex project controllers (VS-20/40/109) — hold no
 separate line pending the quote.*
 
-### 2.8 HRMS — all Employee-metric @ 6,932
+### 2.8 HRMS — all Employee-metric @ 6,925
 
 | Product | Part # | List $/emp | License $ |
 |---|---|---:|---:|
-| Human Resources (PER) | L31953 | 185 | 1,282,420 |
-| Self-Service Human Resources | L31958 | 40 | 277,280 |
-| Advanced Benefits (OAB) | A92408 | 85 | 589,220 |
-| Compensation Workbench | L46808 | 70 | 485,240 |
-| iRecruitment | L31969 | 75 | 519,900 |
-| Performance Management | L46799 | 105 | 727,860 |
-| Time and Labor | A92407 | 110 | 762,520 |
-| Succession Planning | L74875 | 70 | 485,240 |
-| Learning Management (OLA) | L44374 | 105 | 727,860 |
+| Human Resources (PER) | L31953 | 185 | 1,281,125 |
+| Self-Service Human Resources | L31958 | 40 | 277,000 |
+| Advanced Benefits (OAB) | A92408 | 85 | 588,625 |
+| Compensation Workbench | L46808 | 70 | 484,750 |
+| iRecruitment | L31969 | 75 | 519,375 |
+| Performance Management | L46799 | 105 | 727,125 |
+| Time and Labor | A92407 | 110 | 761,750 |
+| Succession Planning | L74875 | 70 | 484,750 |
+| Learning Management (OLA) | L44374 | 105 | 727,125 |
 | ~~Payroll~~ — **not licensed** (in-house Payroll PH) | A74656 | (225) | 0 |
 
 *Metrics per the Component GPL: every row is Employee-metric except Learning Management,
-whose GPL metric is the Trainee (any person recorded by the program) — the 6,932 basis
+whose GPL metric is the Trainee (any person recorded by the program) — the 6,925 basis
 assumes the whole population is recorded in OLA; re-scope at RFQ if only a subset is.
 Payroll's $225/employee is shown for the decision-2 record only.*
 
@@ -313,10 +313,10 @@ register.*
 
 | | USD list |
 |---|---:|
-| **Perpetual license total** | **$50,228,665** |
-| Annual SUL&S (22%) | $11,050,306/yr |
-| 3-yr TCO (license + 3× support) | $83,379,583 |
-| 5-yr TCO (license + 5× support) | **$105,480,195** |
+| **Perpetual license total** | **$50,222,750** |
+| Annual SUL&S (22%) | $11,049,005/yr |
+| 3-yr TCO (license + 3× support) | $83,369,765 |
+| 5-yr TCO (license + 5× support) | **$105,467,775** |
 
 *Full-implementation delta vs v1.0: **+$708,130** of perpetual license (+$155,789/yr support)
 across the ten newly licensed products — ~1.5% of the license base; the 2026-09-18 actual-org
@@ -348,7 +348,7 @@ products with **no Component-GPL SKU** to the same register — Credit Managemen
 Quality (C12), Engineering (C17), Project Management and Environmental Accounting & Reporting
 (H13): each prices only by custom quote or rides an unverified base entitlement (confirm at
 RFQ; planning placeholder ~$0.3–0.6M perpetual combined). Payroll A74656 remains unadopted — reversing decision 2
-would add $225/emp × 6,932 = **$1,559,700** (+$343,134/yr support).*
+would add $225/emp × 6,925 = **$1,558,125** (+$342,788/yr support).*
 
 *2026-09-23 GPL sellable-SKU sweep (coverage register §7): every distinct priced part number
 on the in-repo Component GPL now carries a recorded disposition — licensed, recorded at a
@@ -401,20 +401,20 @@ but quantity depends entirely on the DB server sizing (architecture §4).*
 | Fusion Enterprise Contracts | B86732 | Hosted Named User | 150 | 30 | 4,500 |
 | Fusion Supply Chain Collaboration (iSupplier eq.) | B87862 | Hosted Named User | 625 | 20 | 12,500 |
 | Fusion CPQ (Configurator eq., in-store quotes) | B111751 | Hosted Named User | 240 | 200 | 48,000 |
-| Fusion HCM Base (Global HR/absence/benefits) | B85800 | Hosted Employee | 15 | 6,932 | 103,980 |
+| Fusion HCM Base (Global HR/absence/benefits) | B85800 | Hosted Employee | 15 | 6,925 | 103,875 |
 | Fusion Time and Labor | B75365 | Hosted Named User | 3 | 3,000 | 9,000 |
-| Fusion Workforce Compensation (CWB eq.) | B109620 | Hosted Comp. Individual | 4 | 6,932 | 27,728 |
-| Fusion Learning (OLA eq.) | B85242 | Hosted Named User | 5 | 6,932 | 34,660 |
-| Fusion Recruiting (iRecruitment eq.) | B87675 | Hosted Employee | 8 | 6,932 | 55,456 |
-| Fusion Talent Management (perf + succession) | B94925 | Hosted Named User | 7 | 6,932 | 48,524 |
+| Fusion Workforce Compensation (CWB eq.) | B109620 | Hosted Comp. Individual | 4 | 6,925 | 27,700 |
+| Fusion Learning (OLA eq.) | B85242 | Hosted Named User | 5 | 6,925 | 34,625 |
+| Fusion Recruiting (iRecruitment eq.) | B87675 | Hosted Employee | 8 | 6,925 | 55,400 |
+| Fusion Talent Management (perf + succession) | B94925 | Hosted Named User | 7 | 6,925 | 48,475 |
 | Field Service Cloud (dispatch core, D13) | B110413 | Pooled Named User | 225 | 360 ⚠ | 81,000 |
 | Fusion Revenue Management (Receivables-Revenue-Management eq., PFRS 15 — A11) | TBD † | Hosted Named User | 150 | 6 | 900 |
 | Fusion Quality Management (Oracle Quality eq. — C12) | TBD † | Hosted Named User | 200 | 40 | 8,000 |
 | Fusion Global Order Promising (GOP eq. — D15) | TBD † | Hosted Named User | 425 | 10 | 4,250 |
 | Fusion Transportation Management (OTE eq., freight audit — C14) | TBD † | Hosted Named User | 650 | 25 | 16,250 |
-| **Total** | | | | | **$2,417,548/mo** |
+| **Total** | | | | | **$2,417,275/mo** |
 
-**B1 totals: $29,010,576/yr · $87,031,728 (3-yr) · $145,052,880 (5-yr)**
+**B1 totals: $29,007,300/yr · $87,021,900 (3-yr) · $145,036,500 (5-yr)**
 
 *⚠ Field Service Cloud minimum-bound at 360 pooled users (~100 techs assumed).
 Full-implementation parity: Risk Management 20 → 60 (audit + process/control owners hosting
@@ -432,15 +432,15 @@ Service are *not* in the bundle and price as add-ons:
 | Service | Part # | Metric | List $/mo | Qty | $/month |
 |---|---|---|---:|---:|---:|
 | Fusion Suite Professional (ERP+SCM+HCM bases) | B108674 | Hosted Named User | 330 | 3,600 | 1,188,000 |
-| Fusion Suite Employee (self-service tier) | B108675 | Hosted Employee | 5 | 3,332 | 16,660 |
+| Fusion Suite Employee (self-service tier) | B108675 | Hosted Employee | 5 | 3,325 | 16,625 |
 | Fusion Demand Management | B91060 | Hosted Named User | 1,250 | 10 | 12,500 |
 | Fusion Supply Planning | B91059 | Hosted Named User | 1,250 | 10 | 12,500 |
 | Fusion S&OP Cloud | B91061 | Hosted Named User | 625 | 15 | 9,375 |
 | Fusion Time and Labor | B75365 | Hosted Named User | 3 | 3,000 | 9,000 |
-| Fusion Learning | B85242 | Hosted Named User | 5 | 6,932 | 34,660 |
-| Fusion Recruiting | B87675 | Hosted Employee | 8 | 6,932 | 55,456 |
-| Fusion Talent Management | B94925 | Hosted Named User | 7 | 6,932 | 48,524 |
-| Fusion Workforce Compensation | B109620 | Hosted Comp. Individual | 4 | 6,932 | 27,728 |
+| Fusion Learning | B85242 | Hosted Named User | 5 | 6,925 | 34,625 |
+| Fusion Recruiting | B87675 | Hosted Employee | 8 | 6,925 | 55,400 |
+| Fusion Talent Management | B94925 | Hosted Named User | 7 | 6,925 | 48,475 |
+| Fusion Workforce Compensation | B109620 | Hosted Comp. Individual | 4 | 6,925 | 27,700 |
 | WMS Enterprise add-on | B90536 | Hosted Named User | 550 | 620 | 341,000 |
 | Fusion CPQ add-on | B111751 | Hosted Named User | 240 | 200 | 48,000 |
 | Field Service Cloud add-on | B110413 | Pooled Named User | 225 | 360 | 81,000 |
@@ -449,12 +449,12 @@ Service are *not* in the bundle and price as add-ons:
 | Fusion Quality Management add-on (C12) | TBD † | Hosted Named User | 200 | 40 | 8,000 |
 | Fusion Global Order Promising add-on (D15) | TBD † | Hosted Named User | 425 | 10 | 4,250 |
 | Fusion Transportation Management add-on (C14) | TBD † | Hosted Named User | 650 | 25 | 16,250 |
-| **Total** | | | | | **$1,924,603/mo** |
+| **Total** | | | | | **$1,924,400/mo** |
 
-**B2 totals: $23,095,236/yr · $69,285,708 (3-yr) · $115,476,180 (5-yr)**
+**B2 totals: $23,092,800/yr · $69,278,400 (3-yr) · $115,464,000 (5-yr)**
 
-*Suite Employee tier = the employee population outside the professional tier: 6,932 − 3,600 =
-3,332 (§1 drivers; the §1 Employee-metric rule governs the HRMS product lines, not this bundle
+*Suite Employee tier = the employee population outside the professional tier: 6,925 − 3,600 =
+3,325 (§1 drivers; the §1 Employee-metric rule governs the HRMS product lines, not this bundle
 tier, which is a complement by construction). The bundle's ERP+SCM+HCM bases already cover
 Expenses, Credit, costing and PLM change orders; Risk, Revenue, Quality, GOP and Transportation
 Management sit outside the bundle and price à-la-carte as add-ons.*
@@ -486,11 +486,11 @@ Management sit outside the bundle and price à-la-carte as add-ons.*
 
 | Scenario | Up-front | Annual | 3-yr list TCO | 5-yr list TCO |
 |---|---:|---:|---:|---:|
-| **A — EBS 12.2 perpetual + 22% SUL&S** | $50.23M | $11.05M (support) | $83.4M | $105.5M |
-| **B1 — Fusion Cloud à-la-carte** | — | $29.01M | $87.0M | $145.1M |
-| **B2 — Fusion Suite bundle (36-mo)** | — | $23.10M | $69.3M | $115.5M |
+| **A — EBS 12.2 perpetual + 22% SUL&S** | $50.22M | $11.05M (support) | $83.4M | $105.5M |
+| **B1 — Fusion Cloud à-la-carte** | — | $29.01M | $87.0M | $145.0M |
+| **B2 — Fusion Suite bundle (36-mo)** | — | $23.09M | $69.3M | $115.5M |
 
-1. **At list price, EBS is cheapest over 5 years** (~$105.5M vs $115.5M Suite / $145.1M
+1. **At list price, EBS is cheapest over 5 years** (~$105.5M vs $115.5M Suite / $145.0M
    à-la-carte) and becomes more so after year 5 (support-only vs perpetual subscription).
    The EBS cash profile is also front-loaded — relevant at ~PHP 62B revenue. The
    full-implementation delta (v1.0 → v2.0: +$708K EBS license; +$0.44–0.48M/yr Fusion) does
@@ -505,7 +505,7 @@ Management sit outside the bundle and price à-la-carte as add-ons.*
    typically 20–50% off list with support capped; the Employee-metric HRMS block (~$5.8M
    license + $1.3M/yr support) is the natural discount anchor; Performance/Succession/Learning
    (≈$1.9M license) could be deferred or replaced by the in-house builds if adoption is thin.
-5. All quantities include a ~3% growth buffer but assume 200 stores / 6,932 employees —
+5. All quantities include a ~3% growth buffer but assume 200 stores / 6,925 employees —
    growing to 300 stores adds ~1,200 store users (+INV/MSCA/iProc/iExpenses-class licenses)
    and is **metric-true-up free on EBS perpetual** but re-priced every renewal on Fusion.
 

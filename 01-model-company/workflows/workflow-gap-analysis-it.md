@@ -15,7 +15,7 @@
 ## 1. Scope
 
 All workflows governing the **information-technology function** of the model company (200 stores,
-4 DCs, HQ; ~6,932 employees; ~1,500 ERP users; ~2,500+ endpoints; 600 POS terminals; the in-suite
+4 DCs, HQ; ~6,925 employees (active; the TO's 532-design retains the disabled—prepared Trade department); ~1,500 ERP users; ~2,500+ endpoints; 600 POS terminals; the in-suite
 ERP core of record — Oracle E-Business Suite 12.2 under the two-tier doctrine — plus in-house
 built and already-built platforms per the Capability Sourcing Register), across:
 
@@ -76,7 +76,7 @@ built and already-built platforms per the Capability Sourcing Register), across:
 
 ### G1 — Collaboration & productivity estate (M365/email/collaboration/intranet/store telephony) — **HIGH**
 
-The single largest end-user technology estate — **~6,932 M365/email users** (cited as a volume
+The single largest end-user technology estate — **~6,925 M365/email users** (cited as a volume
 figure in W370/W152/W1408) plus HQ/store telephony and the employee intranet — has **no owning
 workflow anywhere in the inventory**.
 

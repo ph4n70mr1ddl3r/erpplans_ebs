@@ -7,7 +7,7 @@
 ## Overview
 
 Compensation, Benefits & Total Rewards Strategy workflows for BuildRight Depot Corp. — governing
-the **strategic pay and rewards discipline** for 6,932 employees across 5 legal entities and 205
+the **strategic pay and rewards discipline** for 6,925 employees across 5 legal entities and 205
 locations: job architecture (job analysis, job evaluation/grading, career framework), salary
 structure design and range administration, market compensation benchmarking and pay positioning,
 pay-equity and equal-pay analysis (gender/wage-gap), statutory pay compliance (regional
@@ -26,7 +26,7 @@ plans) that payroll then executes. It is also distinct from **VS-19.1 (Recruitme
 which sets hiring ranges, from **VS-19.5 (Separation & Benefits)** which administers final
 benefits, from **VS-83 (Occupational Health & Wellness)** which delivers wellness programs, and
 from **VS-19.3 (Workforce Management)** which schedules labor. Pay equity, market competitiveness,
-benefits cost (~PHP-scale medical/retirement for 6,932 employees), and incentive-effectiveness are
+benefits cost (~PHP-scale medical/retirement for 6,925 employees), and incentive-effectiveness are
 direct drivers of BuildRight's ability to attract and retain talent against 15–20% annual turnover
 (per profile §11.4) and DOLE/BIR/Labor-Code compliance.
 

@@ -61,7 +61,7 @@ coverage failures.
 **Aligned and sound (no action):** the Financials spine and AR instruments via base entitlements
 (Bills Receivable/Lockbox/Balance Forward Billing ride Financials — R6); the procurement family;
 INV/WMS/LCM with the conservative stacking and LMS credit-back questions (Q1/Q2); the full HR
-blocks both platforms (Employee-metric 7,247 ≥ the 6,932 canon); payroll excluded on both
+blocks both platforms (Employee-metric 7,247 ≥ the 6,925 canon); payroll excluded on both
 platforms (decision 2 / E5); floors register (Q5); part-# verification (Q6); payroll GL
 integration (Q7); Site Hub vs TCA (Q8); bundle rejection rationale (Q9); Fusion additions this
 repo lacked (GTM for VS-87 customs, Risk 188, FRC, OIC, Analytics, EPM, test env, storage); the
@@ -88,7 +88,7 @@ Oracle LMS to validate it:
 | Driver | RFQ go-live (Jan 2028) | RFQ 2030 rider | Repo canon (200-store steady state) | Lines affected |
 |---|--:|--:|--:|---|
 | Stores | 155 | 200 | 200 | all AU-metric lines |
-| Total employees (Employee metric) | 7,247 | 9,271 | 6,932 | HR/HCM blocks (RFQ ≥ canon — conservative ✓) |
+| Total employees (Employee metric) | 7,247 | 9,271 | 6,925 | HR/HCM blocks (RFQ ≥ canon — conservative ✓) |
 | DC execution workforce | 289 | ~373 | 600 (4 DC × 150) | WMS/WWM/AIM/INV/MSCA stacking |
 | Store ERP users | backroom-only, inside INV 844/1,133 | grows with stores | 2,400 (12/store) + 2,000 store RF | INV, MSCA, iProcurement, Purchasing, iExpenses |
 | SKU master (Product Hub records) | 30,000 ⚠min 20,000 | grows | 55,000 records / 35,000 active | line 24 |

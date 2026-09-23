@@ -610,7 +610,7 @@ Duration: Per project</bpmn:documentation>
         <bpmn:outgoing>W1826_Flow13</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W1826_Task6" name="Allocation methodology: (a) headcount-based: total headcount per entity (Depot…">
-        <bpmn:documentation>Step 2: Allocation methodology: (a) headcount-based: total headcount per entity (Depot: 5,800 store staff + 600 DC staff; Digital Commerce: ~30; Property: ~15; Holdings/HQ: ~532 per profile §3.3 (promoted 2026-09-14; gap-filled 2026-09-18) — total ~6,932), (b) revenue-based: revenue per entity, (c) usage-based: transaction volume per entity, (d) methodology documented and approved by CFO; consistently applied
+        <bpmn:documentation>Step 2: Allocation methodology: (a) headcount-based: total headcount per entity (Depot: 5,800 store staff + 600 DC staff; Digital Commerce: ~30; Property: ~15; Holdings/HQ: ~532 per profile §3.3 (promoted 2026-09-14; gap-filled 2026-09-18) — total ~6,925), (b) revenue-based: revenue per entity, (c) usage-based: transaction volume per entity, (d) methodology documented and approved by CFO; consistently applied
 Responsible (R): FP&amp;A
 Accountable (A): CFO
 Duration: 1 day</bpmn:documentation>

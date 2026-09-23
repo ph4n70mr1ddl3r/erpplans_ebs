@@ -7,19 +7,19 @@
 ## Overview
 
 Employee uniform, workwear & PPE-issuance program workflows for BuildRight Depot Corp. — owning
-the **enterprise-wide branded-apparel and personal-protective-equipment program** across ~6,932
+the **enterprise-wide branded-apparel and personal-protective-equipment program** across ~6,925
 employees (~5,800 store + ~600 DC + ~532 HQ) plus ~10–20% contingent/outsourced labor (security,
 janitorial, promodizers, agency per VS-98) and vendor/3PL site-access personnel: role-based
 uniform/workwear standards, branded-apparel design & procurement, the PPE issuance & fit-testing
 program, industrial laundering, sizing/fit, damage/loss/replacement, role-change & separation
 return, multi-entity consistency, and the cost/compliance/sustainability analytics.
 
-This matters at BuildRight's scale and risk profile. The group outfits ~6,932 employees plus
+This matters at BuildRight's scale and risk profile. The group outfits ~6,925 employees plus
 contingent labor in branded uniform/workwear and issues role-specific PPE to a large
 safety-sensitive population (lumber-yard and forklift/reach operators, paint/chemical handlers,
 DC manual handlers, cutting-station staff, delivery drivers) inside a customer-facing environment
 where appearance is a CX/brand lever and PPE is a DOLE-OSH legal obligation. The uniform/PPE
-program is a material opex line (~6,932 employees × ~PHP 3,000–8,000/employee/year in
+program is a material opex line (~6,925 employees × ~PHP 3,000–8,000/employee/year in
 allowance + laundering + PPE ≈ PHP 20–55M/yr), a proven CX/brand-consistency lever across 200
 stores, and a DOLE compliance and employee-experience/retention driver — worn/damaged/non-branded
 uniforms harm the brand and CX, while missing/worn PPE creates OSH liability and injury exposure.

@@ -363,7 +363,7 @@ Owner: Sustainability/ESG Manager / VP Legal &amp; Compliance</bpmn:text>
     <bpmn:process id="W_W4022" name="W4022. Own-Operations Human Rights, DEI &amp; Worker-Voice Integration" isExecutable="false">
       <bpmn:documentation>Trigger: Program operation; saliency (own-operations); DEI/worker-voice need
 Frequency: Maintained + periodic
-Volume: ~6,932 employees + contingent (links to VS-98)
+Volume: ~6,925 employees + contingent (links to VS-98)
 Owner: CHRO / Sustainability/ESG Manager
 Participants: HR (links to VS-19/VS-103/VS-102), Labor Relations (links to VS-84), Sustainability, Compliance (links to VS-119), Operations, contingent-workforce mgmt (links to VS-98)
 Source: workflow W4022 — Own-Operations Human Rights, DEI &amp; Worker-Voice Integration</bpmn:documentation>

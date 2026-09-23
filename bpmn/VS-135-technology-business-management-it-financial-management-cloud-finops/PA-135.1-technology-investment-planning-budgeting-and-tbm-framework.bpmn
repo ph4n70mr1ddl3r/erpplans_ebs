@@ -507,7 +507,7 @@ Owner: FinOps Lead / Enterprise Architect (VS-113)</bpmn:text>
     <bpmn:process id="W_W4104" name="W4104. Software License &amp; Subscription Entitlement Planning" isExecutable="false">
       <bpmn:documentation>Trigger: Renewal cycle; new project; usage review
 Frequency: Continuous + renewal-driven
-Volume: Enterprise software/SaaS estate (~6,932 potential users + devices)
+Volume: Enterprise software/SaaS estate (~6,925 potential users + devices)
 Owner: FinOps Lead / ITAM (VS-99)
 Participants: ITAM (VS-99), IT (VS-27), Procurement (VS-34), business owners
 Source: workflow W4104 — Software License &amp; Subscription Entitlement Planning</bpmn:documentation>

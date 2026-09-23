@@ -921,7 +921,7 @@ Owner: Head of Internal Audit</bpmn:text>
     <bpmn:process id="W_W337" name="W337. Payroll &amp; Statutory Compliance Audit" isExecutable="false">
       <bpmn:documentation>Trigger: Annual audit plan or high turnover/grievance alerts
 Frequency: Annual
-Volume: Samples from 5 entities, covering ~6,932 employees
+Volume: Samples from 5 entities, covering ~6,925 employees
 Owner: Internal Audit
 Participants: Payroll Manager, HR Manager, Finance, external tax advisor
 Source: workflow W337 — Payroll &amp; Statutory Compliance Audit</bpmn:documentation>

@@ -366,7 +366,7 @@ Owner: Foundation ED / BCP (VS-26) / Programs</bpmn:text>
     <bpmn:process id="W_W4518" name="W4518. Employee Volunteerism, Payroll-Giving &amp; Donation Drives" isExecutable="false">
       <bpmn:documentation>Trigger: Program (W4514–W4517); disaster; campaign cycle
 Frequency: Continuous + campaign cycles
-Volume: Volunteerism across 6,932 employees + payroll-giving + donation drives
+Volume: Volunteerism across 6,925 employees + payroll-giving + donation drives
 Owner: Foundation ED / HR (VS-103) / Programs
 Participants: HR (VS-103), Payroll (VS-19.2), EX (VS-103.2), Stores (VS-07)
 Source: workflow W4518 — Employee Volunteerism, Payroll-Giving &amp; Donation Drives</bpmn:documentation>

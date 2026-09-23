@@ -15,7 +15,7 @@
 ## 1. Scope
 
 All workflows governing the **people/organization function** of the model company (200 stores,
-4 DCs, HQ; ~6,932 employees; ~1,200–1,600 new hires/year; ~230 succession-critical roles), across:
+4 DCs, HQ; ~6,925 employees (active); ~1,200–1,600 new hires/year; ~230 succession-critical roles), across:
 
 - The **People family** — 16 dedicated value streams, **445 workflows**:
   VS-19 Hire-to-Retire (81), VS-83 occupational health (25), VS-84 labor relations (25),

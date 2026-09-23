@@ -891,7 +891,7 @@ Owner: LP Operations Center Manager</bpmn:text>
     <bpmn:process id="W_W1477" name="W1477. Key &amp; Access Credential Management, Master Key System &amp; Store Lock Rotation" isExecutable="false">
       <bpmn:documentation>Trigger: New store opening; employee role change requiring access modification; key/credential loss; employee termination; or periodic security review
 Frequency: Per access change request (~50–100/month chain-wide); semi-annual key audit; lock rotation per schedule
-Volume: 200 stores × ~15–20 keys/access points per store = ~3,000–4,000 managed keys; ~6,932 employee access credentials
+Volume: 200 stores × ~15–20 keys/access points per store = ~3,000–4,000 managed keys; ~6,925 employee access credentials
 Owner: LP Operations Manager
 Participants: Store Manager, Facilities Coordinator, IT Security, HR (employee status changes), Locksmith Vendor
 Source: workflow W1477 — Key &amp; Access Credential Management, Master Key System &amp; Store Lock Rotation</bpmn:documentation>

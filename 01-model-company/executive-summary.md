@@ -16,7 +16,7 @@
 | HQ | Davao City, Philippines |
 | Legal Entities | 5 (Holdings, Depot, Logistics, Digital Commerce, Property Mgmt) |
 | Annual Revenue | ~PHP 62.3 Billion |
-| Employees | 6,932 |
+| Employees | 6,925 active (Trade / Account Management disabled — prepared; the TO design holds 532 HQ) |
 | Active SKUs | 35,000 |
 | POS Terminals | 600 (3 per store) |
 | Monthly Transactions | 2.8 million |
@@ -87,6 +87,8 @@ erpplans/
 4. Periodically audit active workflows against standard operating procedures.
 
 ---
+
+*Date: 2026-09-23 (trade-desk disablement, 2026-09-23 (x): the Trade / Account Management department (7 HQ roles) is DISABLED — PREPARED — not staffed, design retained (TO §5.3; registry CAP-B01–B04); B2B customers are retail POS customers at any store — every sale still completes as a regular POS sale; active headcount re-based 6,932 → 6,925 (HQ 525), revenue/employee ~PHP 9.00M — 728 requirements, 5,433 workflows, 188 value streams, 6,925 employees — HQ 525 — see CHANGELOG 2026-09-23 (x)).*
 
 *Date: 2026-09-23 (capability-switchboard admission, batch 30: W5580 Capability Switchboard Operation & Channel Enablement Impact Governance added in PA-113.2 (VS-113) — the owning workflow for the channel-capability registry's enable/disable state changes; corpus 728 requirements, 5,433 workflows, 188 value streams, 6,932 employees — HQ 532 — unchanged otherwise; see CHANGELOG 2026-09-23 (v)).*
 

@@ -413,7 +413,7 @@ Duration: Annual</bpmn:documentation>
         <bpmn:outgoing>W4510_Flow13</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W4510_Task7" name="HR/Foundation ED staff the team (recruit VS-121, compensate VS-102, develop…">
-        <bpmn:documentation>Step 2: HR/Foundation ED staff the team (recruit VS-121, compensate VS-102, develop VS-19.4), and define the volunteer/secondment model from the 6,932-employee base
+        <bpmn:documentation>Step 2: HR/Foundation ED staff the team (recruit VS-121, compensate VS-102, develop VS-19.4), and define the volunteer/secondment model from the 6,925-employee base
 Responsible (R): HR / Foundation ED
 Accountable (A): CHRO
 Duration: Continuous</bpmn:documentation>

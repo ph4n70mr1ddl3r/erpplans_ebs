@@ -540,7 +540,7 @@ Owner: Treasury Analyst</bpmn:text>
     <bpmn:process id="W_W2509" name="W2509. Staff Safety Notification &amp; Deployment Readiness" isExecutable="false">
       <bpmn:documentation>Trigger: PAGASA Signal No. 1 in store/DC region or management decision
 Frequency: 8–15 activations per year
-Volume: 6,932 employees across 200 stores, 4 DCs, HQ
+Volume: 6,925 employees across 200 stores, 4 DCs, HQ
 Owner: HR Operations Manager
 Participants: HR Ops Mgr, Store Managers, DC Ops Managers, Safety Officer
 Source: workflow W2509 — Staff Safety Notification &amp; Deployment Readiness</bpmn:documentation>

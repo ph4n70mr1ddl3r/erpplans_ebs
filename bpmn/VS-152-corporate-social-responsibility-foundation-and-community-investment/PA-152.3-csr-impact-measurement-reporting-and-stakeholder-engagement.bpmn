@@ -375,7 +375,7 @@ Owner: Foundation ED / Programs / Store Ops (VS-07)</bpmn:text>
     <bpmn:process id="W_W4526" name="W4526. Customer &amp; Employee CSR Communication &amp; Engagement" isExecutable="false">
       <bpmn:documentation>Trigger: Reporting (W4523); campaign; customer/employee signal
 Frequency: Campaign cycles + continuous
-Volume: CSR comms to ~600K loyalty members, 6,932 employees, public
+Volume: CSR comms to ~600K loyalty members, 6,925 employees, public
 Owner: Marketing (VS-14.3) / Foundation ED / EX (VS-103.2)
 Participants: Brand/PR (VS-14.3), CRM/Loyalty (VS-13), EX (VS-103.2), Digital (VS-14.2)
 Source: workflow W4526 — Customer &amp; Employee CSR Communication &amp; Engagement</bpmn:documentation>

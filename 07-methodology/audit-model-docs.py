@@ -926,7 +926,7 @@ ANCHORS = {
         "Outbound (50)",
         "**532** | **6,932**",
         "**Total HQ** | **362** | **~440–515** | **532**",
-        "**525 + 7 = 532**",
+        "**518 + 7 = 525**",
         "× 4 DCs = **600**",
     ],
     # 2026-09-07 eighth-wave review — the corrected forms the data-volumes doc's own
@@ -2667,9 +2667,9 @@ def licensing_bom_hits():
             if name.startswith("~~") or "Total" in name:
                 continue
             price, lic = num(m.group(3)), num(m.group(4))
-            if abs(price * 6932 - lic) > 0.5:
+            if abs(price * 6925 - lic) > 0.5:
                 add(rel, text[:m.start()].count("\n") + 1,
-                    f"Employee-metric HRMS row '{name}': {price} × 6,932 != {lic}")
+                    f"Employee-metric HRMS row '{name}': {price} × 6,925 != {lic}")
             total += lic
         stated = re.search(r"\*\*Perpetual license total\*\* \| \*\*\$([\d,]+)\*\*", sec_a)
         if not stated:
@@ -3111,9 +3111,9 @@ def gap_fill_straggler_hits():
             hits.append(("workflow-criticality-classification.md", i + 1,
                          'retired 6,911 employee total on a live line (the dated '
                          'batch-note blockquotes are the frozen-history surfaces)'))
-    if not any("6,932 employees" in l for l in lines[:fi]):
+    if not any("6,925 employees" in l for l in lines[:fi]):
         hits.append(("workflow-criticality-classification.md", 0,
-                     'missing live "6,932 employees" W10 significance cell'))
+                     'missing live "6,925 employees" W10 significance cell'))
     # (b) TO §1 design stance — footer-stripped body
     tpath = os.path.join(REPO, "01-model-company", "optimal-table-of-organization.md")
     tbody = open(tpath, encoding="utf-8").read().split("*Document Version:")[0]
@@ -3148,10 +3148,10 @@ def gap_fill_straggler_hits():
         if row is None:
             hits.append(("erp-requirements.md", 0,
                          f"employee-count requirement row {rid} not found"))
-        elif "6,932" not in row[1]:
+        elif "6,925" not in row[1]:
             hits.append(("erp-requirements.md", row[0],
                          f"requirement row {rid} is in the v24.2-declared "
-                         f"employee/user-count family but does not carry the 6,932 canon"))
+                         f"employee/user-count family but does not carry the 6,925 canon"))
     # (d) 2026-09-21 sixty-second-wave arm — the live workflow-census canon. Batch 26
     # moved the corpus 5,430 → 5,432 and its cascade trued each document's headline
     # figures, but the present-tense count cells no rule read at that grain kept the
@@ -4078,7 +4078,7 @@ def domain_companion_hits():
             if bad in body:
                 hits.append((name, body[:body.index(bad)].count("\n") + 1,
                              f"retired canon figure '{bad}' on a live line of "
-                             f"a domain companion (the canon is 6,932 "
+                             f"a domain companion (the active canon is 6,925 "
                              f"employees / 5,433 workflows; these surfaces "
                              f"carry no version footer, so the whole file is "
                              f"live)"))
@@ -4091,23 +4091,62 @@ def domain_companion_hits():
                          f"workflows and the Technology & Data family is 394 "
                          f"since batch 30)"))
     for anc in ("**394 workflows**", "VS-113 (32)",
-                "~6,932 M365/email users"):
+                "~6,925 M365/email users"):
         if anc not in it:
             hits.append(("workflow-gap-analysis-it.md", 0,
                          f'missing corrected roster anchor "{anc}"'))
     _t, ops = _plain(
         "01-model-company/workflows/workflow-gap-analysis-operations.md")
-    for anc in ("payroll of 6,932 employees",
-                "furnishing campaign to ~6,932 employees"):
+    for anc in ("payroll of 6,925 employees",
+                "furnishing campaign to ~6,925 employees"):
         if anc not in ops:
             hits.append(("workflow-gap-analysis-operations.md", 0,
                          f'missing corrected headcount anchor "{anc}"'))
     _t, people = _plain(
         "01-model-company/workflows/workflow-gap-analysis-people.md")
-    if "~6,932 employees; ~1,200–1,600 new hires/year" not in people:
+    if "~6,925 employees (active); ~1,200–1,600 new hires/year" not in people:
         hits.append(("workflow-gap-analysis-people.md", 0,
-                     'missing §1 scope anchor "~6,932 employees; '
+                     'missing §1 scope anchor "~6,925 employees (active); '
                      '~1,200–1,600 new hires/year"'))
+
+    # ---- (d) the 2026-09-23 (x) trade-desk disablement estate — the CAP-B01–B04
+    # canon's completeness: the registry §3.4 rows, the assumptions Design-Decision
+    # row, the TO's disabled annotations and the profile §3.3 bullet. A future
+    # re-enablement moves the canon → these re-fire until consciously re-pointed.
+    reg = open(os.path.join(REPO, "01-model-company",
+                            "channel-capability-registry.md"),
+               encoding="utf-8").read()
+    for anc in ("| CAP-B01 | **Trade & Account Management department**",
+                "**DISABLED — PREPARED** (2026-09-23 (x)) | TO §5.2/§5.3",
+                "| CAP-B02 | Trade credit accounts (B2B AR)",
+                "| CAP-B03 | Trade volume rebates",
+                "| CAP-B04 | Trade Professional membership program",
+                "Trade customers without the trade desk"):
+        if anc not in reg:
+            hits.append(("channel-capability-registry.md", 0,
+                         f'missing §3.4 trade-estate anchor "{anc[:56]}..."'))
+    assum = open(os.path.join(REPO, "01-model-company",
+                              "assumptions-and-design-decisions.md"),
+                 encoding="utf-8").read()
+    if "| Trade & Account Management capability | **DISABLED — PREPARED (2026-09-23 (x))" not in assum:
+        hits.append(("assumptions-and-design-decisions.md", 0,
+                     "missing the trade-desk Design-Decision row"))
+    to_t = open(os.path.join(REPO, "01-model-company",
+                             "optimal-table-of-organization.md"),
+                encoding="utf-8").read()
+    for anc in ("**DISABLED — PREPARED (2026-09-23 (x))** — not staffed; design retained. 5,200 trade accounts",
+                "active HQ **525** (Trade's 7 disabled — prepared)",
+                "Design total; active **6,925**",
+                "#### Trade / Account Management (7 — DISABLED — PREPARED 2026-09-23 per registry CAP-B01"):
+        if anc not in to_t:
+            hits.append(("optimal-table-of-organization.md", 0,
+                         f'missing trade-desk annotation anchor "{anc[:56]}..."'))
+    prof_raw = open(os.path.join(REPO, "01-model-company",
+                                 "model-company-profile.md"),
+                    encoding="utf-8").read()
+    if "**DISABLED — PREPARED (2026-09-23 (x))** — not staffed; the 7-role design" not in prof_raw:
+        hits.append(("model-company-profile.md", 0,
+                     "missing §3.3 Trade disabled—prepared bullet"))
     return hits
 
 
@@ -4134,7 +4173,7 @@ def quote_coverage_hits():
     for anc in ("Post-review RFQ movement (recorded 2026-09-18",
                 "**$20,273,515**",
                 "coverage dispositions stand unchanged",
-                "7,247 | 9,271 | 6,932"):
+                "7,247 | 9,271 | 6,925"):
         if anc not in body:
             hits.append((rel, 0, f'missing required anchor "{anc}"'))
     return hits

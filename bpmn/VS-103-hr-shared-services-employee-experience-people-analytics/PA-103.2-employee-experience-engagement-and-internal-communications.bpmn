@@ -78,7 +78,7 @@ Owner: Employee Experience Manager</bpmn:text>
     <bpmn:process id="W_W3338" name="W3338. Employee Engagement Pulse, Survey Operations &amp; Action Planning" isExecutable="false">
       <bpmn:documentation>Trigger: Annual/pulse cycle; complements VS-84.3 engagement
 Frequency: Annual + quarterly pulse
-Volume: 6,932 employees
+Volume: 6,925 employees
 Owner: Employee Experience Manager
 Participants: EX Manager, People Analytics (links to VS-103.3), Managers, Comms (links to VS-103.2), CHRO
 Source: workflow W3338 — Employee Engagement Pulse, Survey Operations &amp; Action Planning</bpmn:documentation>
