@@ -101,8 +101,8 @@ Duration: 30 min/run</bpmn:documentation>
         <bpmn:incoming>W10_Flow31</bpmn:incoming>
         <bpmn:outgoing>W10_Flow32</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:serviceTask id="W10_Task16" name="System posts payroll journal entries to GL (salary expense, payable, deductions)">
-        <bpmn:documentation>Step 9: System posts payroll journal entries to GL (salary expense, payable, deductions)
+      <bpmn:serviceTask id="W10_Task16" name="System posts payroll journal entries to GL through the GL journal-import chain…">
+        <bpmn:documentation>Step 9: System posts payroll journal entries to GL through the GL journal-import chain: the Payroll PH costing engine writes each run&#x27;s journals to the GL interface and imports them as unposted batches under the Payroll PH source (salary expense, statutory-liability, deduction and net-pay accounts); GL validates and posts them inside the W9A close discipline — payroll never posts directly to the ledger
 Responsible (R): System
 Accountable (A): —
 Duration: Automated</bpmn:documentation>
@@ -314,7 +314,7 @@ Owner: Payroll Manager</bpmn:text>
 Frequency: ~75–100 off-cycle payments/month
 Volume: ~15–20 per entity per month
 Owner: Payroll Manager
-Participants: HR Business Partner (requester), Finance Manager (approver), Payroll Specialist (processor), Employee (payee)
+Participants: HR Business Partner (requester), Finance Manager (approver), Payroll Specialist (processor), Treasury (bank-file transmission per W10 step 8), Employee (payee)
 Source: workflow W641 — Off-Cycle &amp; Ad-Hoc Payment Processing</bpmn:documentation>
       <bpmn:laneSet id="W641_LaneSet6">
         <bpmn:lane id="W641_Lane1" name="HR Business Partner">
@@ -382,7 +382,7 @@ Duration: Automated</bpmn:documentation>
         <bpmn:outgoing>W641_Flow24</bpmn:outgoing>
       </bpmn:serviceTask>
       <bpmn:userTask id="W641_Task13" name="Payroll Specialist generates bank file for off-cycle crediting or manual check…">
-        <bpmn:documentation>Step 6: Payroll Specialist generates bank file for off-cycle crediting or manual check preparation; routes for bank file approval
+        <bpmn:documentation>Step 6: Payroll Specialist generates bank file for off-cycle crediting or manual check preparation; routes for bank file approval; Treasury transmits the approved file per the W10 step-8 payroll bank-file chain — the payroll chain never transmits its own payment files (CTL-13)
 Responsible (R): Payroll Specialist
 Accountable (A): Payroll Manager
 Duration: 15 min/batch</bpmn:documentation>
@@ -458,7 +458,7 @@ Owner: Payroll Manager</bpmn:text>
 Frequency: ~100–130 separations/month (~15–20% annual turnover rate)
 Volume: ~5–7 per business day across all entities
 Owner: Payroll Specialist
-Participants: HR Business Partner, Department Head (clearance sign-off), Finance Analyst, Employee
+Participants: HR Business Partner, Department Head (clearance sign-off), Finance Analyst, Treasury (bank-file transmission per W10 step 8), Employee
 Source: workflow W643 — Final Pay Computation &amp; Separation Settlement</bpmn:documentation>
       <bpmn:laneSet id="W643_LaneSet6">
         <bpmn:lane id="W643_Lane1" name="HR Business Partner">
@@ -527,7 +527,7 @@ Duration: 10 min</bpmn:documentation>
         <bpmn:outgoing>W643_Flow25</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W643_Task13" name="Finance Analyst processes payment: generates bank transfer file for direct…">
-        <bpmn:documentation>Step 6: Finance Analyst processes payment: generates bank transfer file for direct deposit; for employees without bank accounts, prepares manual check
+        <bpmn:documentation>Step 6: Finance Analyst processes payment: generates bank transfer file for direct deposit; for employees without bank accounts, prepares manual check; Treasury transmits the approved final-pay file per the W10 step-8 payroll bank-file chain (CTL-13)
 Responsible (R): Finance Analyst
 Accountable (A): Finance Manager
 Duration: 15 min</bpmn:documentation>
@@ -614,114 +614,115 @@ Owner: Payroll Specialist</bpmn:text>
 Frequency: Monthly accrual booking; November review and reconciliation; December payment
 Volume: 6,932 employees across 5 entities
 Owner: Payroll Specialist
-Participants: Payroll Manager, Finance Analyst, HR Business Partner
+Participants: Payroll Manager, Finance Analyst, HR Business Partner, Treasury (bank-file transmission per W10 step 8)
 Source: workflow W644 — 13th Month Pay Reconciliation &amp; Compliance</bpmn:documentation>
-      <bpmn:laneSet id="W644_LaneSet5">
+      <bpmn:laneSet id="W644_LaneSet6">
         <bpmn:lane id="W644_Lane1" name="System">
-        <bpmn:flowNodeRef>W644_Task7</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W644_Start6</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W644_Task8</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W644_Start7</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W644_Lane2" name="Payroll Specialist">
-        <bpmn:flowNodeRef>W644_Task8</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W644_Task10</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W644_Task9</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W644_Task11</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W644_Task12</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W644_Task13</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W644_Lane3" name="Finance Analyst">
-        <bpmn:flowNodeRef>W644_Task9</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W644_Task14</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W644_Task15</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W644_Task10</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W644_Task16</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W644_Lane4" name="Payroll Manager">
-        <bpmn:flowNodeRef>W644_Task13</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W644_End16</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W644_Task14</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W644_Lane5" name="Treasury">
+        <bpmn:flowNodeRef>W644_Task15</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W644_End17</bpmn:flowNodeRef>
         </bpmn:lane>
       </bpmn:laneSet>
-      <bpmn:startEvent id="W644_Start6" name="Monthly accrual cycle; December payment preparation">
-        <bpmn:outgoing>W644_Flow19</bpmn:outgoing>
+      <bpmn:startEvent id="W644_Start7" name="Monthly accrual cycle; December payment preparation">
+        <bpmn:outgoing>W644_Flow20</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:serviceTask id="W644_Task7" name="Monthly: System auto-accrues 13th month pay per employee based on basic salary…">
+      <bpmn:serviceTask id="W644_Task8" name="Monthly: System auto-accrues 13th month pay per employee based on basic salary…">
         <bpmn:documentation>Step 1: Monthly: System auto-accrues 13th month pay per employee based on basic salary earned during the month (1/12 of total basic salary earned from January 1); excludes allowances, overtime pay, night differential, and non-taxable benefits per PD 851 and DOLE guidelines
 Responsible (R): System
 Accountable (A): Payroll Specialist
 Duration: Automated</bpmn:documentation>
-        <bpmn:incoming>W644_Flow19</bpmn:incoming>
-        <bpmn:outgoing>W644_Flow20</bpmn:outgoing>
+        <bpmn:incoming>W644_Flow20</bpmn:incoming>
+        <bpmn:outgoing>W644_Flow21</bpmn:outgoing>
       </bpmn:serviceTask>
-      <bpmn:userTask id="W644_Task8" name="Monthly: Payroll Specialist reviews accrual computation: validates base salary…">
+      <bpmn:userTask id="W644_Task9" name="Monthly: Payroll Specialist reviews accrual computation: validates base salary…">
         <bpmn:documentation>Step 2: Monthly: Payroll Specialist reviews accrual computation: validates base salary definition (basic salary only — excludes COLA, hazard pay, overtime, commissions unless mandated by CBA per W493); flags employees with mid-year salary changes for correct pro-ration
 Responsible (R): Payroll Specialist
 Accountable (A): Payroll Manager
 Duration: 2 hours/month</bpmn:documentation>
-        <bpmn:incoming>W644_Flow20</bpmn:incoming>
-        <bpmn:outgoing>W644_Flow21</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:userTask id="W644_Task9" name="Monthly: Finance Analyst posts accrual journal entry (DR 13th Month Pay Expense…">
-        <bpmn:documentation>Step 3: Monthly: Finance Analyst posts accrual journal entry (DR 13th Month Pay Expense / CR 13th Month Pay Accrued Liability) per entity; verifies total accrual against payroll register
-Responsible (R): Finance Analyst
-Accountable (A): Finance Manager
-Duration: 1 hour/month</bpmn:documentation>
         <bpmn:incoming>W644_Flow21</bpmn:incoming>
         <bpmn:outgoing>W644_Flow22</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W644_Task10" name="November: Payroll Specialist performs comprehensive reconciliation: total…">
+      <bpmn:userTask id="W644_Task10" name="Monthly: Finance Analyst verifies the W1416 step-1 accrual journals imported…">
+        <bpmn:documentation>Step 3: Monthly: Finance Analyst verifies the W1416 step-1 accrual journals imported and posted per entity (DR 13th Month Pay Expense / CR 13th Month Pay Accrued Liability) and reconciles the total accrual against the payroll register; any correction journals ride the W638 journal-entry review matrix (preparer ≠ approver) — no parallel manual accrual posting
+Responsible (R): Finance Analyst
+Accountable (A): Finance Manager
+Duration: 1 hour/month</bpmn:documentation>
+        <bpmn:incoming>W644_Flow22</bpmn:incoming>
+        <bpmn:outgoing>W644_Flow23</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W644_Task11" name="November: Payroll Specialist performs comprehensive reconciliation: total…">
         <bpmn:documentation>Step 4: November: Payroll Specialist performs comprehensive reconciliation: total accrued 13th month per employee vs. YTD basic salary ÷ 12; identifies discrepancies from mid-year salary changes, leaves without pay, absences, and split-entity employment
 Responsible (R): Payroll Specialist
 Accountable (A): Payroll Manager
 Duration: 1 day</bpmn:documentation>
-        <bpmn:incoming>W644_Flow22</bpmn:incoming>
-        <bpmn:outgoing>W644_Flow23</bpmn:outgoing>
+        <bpmn:incoming>W644_Flow23</bpmn:incoming>
+        <bpmn:outgoing>W644_Flow24</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W644_Task11" name="November: Payroll Specialist adjusts accruals for: (a) separating employees who…">
+      <bpmn:userTask id="W644_Task12" name="November: Payroll Specialist adjusts accruals for: (a) separating employees who…">
         <bpmn:documentation>Step 5: November: Payroll Specialist adjusts accruals for: (a) separating employees who already received proportionate 13th month in final pay (W643), (b) employees who received employer&#x27;s elected half payment in May (if BuildRight practices May + December split), (c) employees with salary adjustments requiring retroactive accrual correction
 Responsible (R): Payroll Specialist
 Accountable (A): Payroll Manager
 Duration: 0.5 day</bpmn:documentation>
-        <bpmn:incoming>W644_Flow23</bpmn:incoming>
-        <bpmn:outgoing>W644_Flow24</bpmn:outgoing>
+        <bpmn:incoming>W644_Flow24</bpmn:incoming>
+        <bpmn:outgoing>W644_Flow25</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W644_Task12" name="November: Payroll Specialist computes tax impact: 13th month pay is tax-exempt…">
+      <bpmn:userTask id="W644_Task13" name="November: Payroll Specialist computes tax impact: 13th month pay is tax-exempt…">
         <bpmn:documentation>Step 6: November: Payroll Specialist computes tax impact: 13th month pay is tax-exempt up to PHP 90,000 threshold per TRAIN law Section 32(B)(6)(e); excess amount subject to graduated withholding tax; generates report of employees exceeding threshold for Finance Manager review
 Responsible (R): Payroll Specialist
 Accountable (A): Finance Manager
 Duration: 0.5 day</bpmn:documentation>
-        <bpmn:incoming>W644_Flow24</bpmn:incoming>
-        <bpmn:outgoing>W644_Flow25</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:userTask id="W644_Task13" name="December 1–15: Payroll Manager prepares 13th month payment batch: confirms…">
-        <bpmn:documentation>Step 7: December 1–15: Payroll Manager prepares 13th month payment batch: confirms final amounts per employee, validates bank account details, generates bank file, routes for approval
-Responsible (R): Payroll Manager
-Accountable (A): Finance Manager
-Duration: 1 day</bpmn:documentation>
         <bpmn:incoming>W644_Flow25</bpmn:incoming>
         <bpmn:outgoing>W644_Flow26</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W644_Task14" name="December 15–24: Finance Analyst executes payment via bank transfer; ensures all…">
-        <bpmn:documentation>Step 8: December 15–24: Finance Analyst executes payment via bank transfer; ensures all 6,932 employees receive payment by December 24 deadline per PD 851
-Responsible (R): Finance Analyst
+      <bpmn:userTask id="W644_Task14" name="December 1–15: Payroll Manager prepares 13th month payment batch: confirms…">
+        <bpmn:documentation>Step 7: December 1–15: Payroll Manager prepares 13th month payment batch: confirms final amounts per employee, validates bank account details, generates bank file, routes for approval
+Responsible (R): Payroll Manager
 Accountable (A): Finance Manager
 Duration: 1 day</bpmn:documentation>
         <bpmn:incoming>W644_Flow26</bpmn:incoming>
         <bpmn:outgoing>W644_Flow27</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W644_Task15" name="December 31: System reverses remaining accrual balance to actual payment…">
-        <bpmn:documentation>Step 9: December 31: System reverses remaining accrual balance to actual payment; Finance Analyst reconciles GL accrual account to zero
-Responsible (R): Finance Analyst
+      <bpmn:userTask id="W644_Task15" name="December 15–24: Treasury transmits the approved 13th month payment file per the…">
+        <bpmn:documentation>Step 8: December 15–24: Treasury transmits the approved 13th month payment file per the W10 step-8 payroll bank-file chain (the December 15/30 payroll runs per W1416 step 5); Payroll Manager monitors completion — all 6,932 employees receive payment by December 24 deadline per PD 851
+Responsible (R): Treasury / Payroll Manager
 Accountable (A): Finance Manager
-Duration: 0.5 day</bpmn:documentation>
+Duration: 1 day</bpmn:documentation>
         <bpmn:incoming>W644_Flow27</bpmn:incoming>
         <bpmn:outgoing>W644_Flow28</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:endEvent id="W644_End16" name="Complete">
+      <bpmn:userTask id="W644_Task16" name="December 31: Finance Analyst verifies the GL accrual account nets to zero after…">
+        <bpmn:documentation>Step 9: December 31: Finance Analyst verifies the GL accrual account nets to zero after the W1416 step-5(c) payment postings and the step-5(d) remaining-balance closure — the payment liquidates the accrual, no separate reversal entry
+Responsible (R): Finance Analyst
+Accountable (A): Finance Manager
+Duration: 0.5 day</bpmn:documentation>
         <bpmn:incoming>W644_Flow28</bpmn:incoming>
+        <bpmn:outgoing>W644_Flow29</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:endEvent id="W644_End17" name="Complete">
+        <bpmn:incoming>W644_Flow29</bpmn:incoming>
       </bpmn:endEvent>
-      <bpmn:textAnnotation id="W644_Annotation17">
+      <bpmn:textAnnotation id="W644_Annotation18">
         <bpmn:text>Controls: - CTL-297 (ensure controlled execution — Payroll &amp; Compensation (PA-19.2).) | - operational: Payroll Manager monthly accrual review; Finance Manager GL reconciliation; DOLE December 24 payment-deadline compliance tracking; PHP 90,000 tax-exemption threshold monitoring | ---
 Owner: Payroll Specialist</bpmn:text>
       </bpmn:textAnnotation>
-      <bpmn:association id="W644_Assoc18" sourceRef="W644_Annotation17" targetRef="W644_Start6" associationDirection="None" />
-      <bpmn:sequenceFlow id="W644_Flow19" sourceRef="W644_Start6" targetRef="W644_Task7" />
-      <bpmn:sequenceFlow id="W644_Flow20" sourceRef="W644_Task7" targetRef="W644_Task8" />
+      <bpmn:association id="W644_Assoc19" sourceRef="W644_Annotation18" targetRef="W644_Start7" associationDirection="None" />
+      <bpmn:sequenceFlow id="W644_Flow20" sourceRef="W644_Start7" targetRef="W644_Task8" />
       <bpmn:sequenceFlow id="W644_Flow21" sourceRef="W644_Task8" targetRef="W644_Task9" />
       <bpmn:sequenceFlow id="W644_Flow22" sourceRef="W644_Task9" targetRef="W644_Task10" />
       <bpmn:sequenceFlow id="W644_Flow23" sourceRef="W644_Task10" targetRef="W644_Task11" />
@@ -729,7 +730,8 @@ Owner: Payroll Specialist</bpmn:text>
       <bpmn:sequenceFlow id="W644_Flow25" sourceRef="W644_Task12" targetRef="W644_Task13" />
       <bpmn:sequenceFlow id="W644_Flow26" sourceRef="W644_Task13" targetRef="W644_Task14" />
       <bpmn:sequenceFlow id="W644_Flow27" sourceRef="W644_Task14" targetRef="W644_Task15" />
-      <bpmn:sequenceFlow id="W644_Flow28" sourceRef="W644_Task15" targetRef="W644_End16" />
+      <bpmn:sequenceFlow id="W644_Flow28" sourceRef="W644_Task15" targetRef="W644_Task16" />
+      <bpmn:sequenceFlow id="W644_Flow29" sourceRef="W644_Task16" targetRef="W644_End17" />
     </bpmn:process>
     <bpmndi:BPMNDiagram id="W644_diag">
       <bpmndi:BPMNPlane id="W644_plane" bpmnElement="W_W644">
@@ -737,29 +739,30 @@ Owner: Payroll Specialist</bpmn:text>
         <bpmndi:BPMNShape id="W644_Lane2_di" bpmnElement="W644_Lane2" isHorizontal="true"><dc:Bounds x="160" y="250" width="2210" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W644_Lane3_di" bpmnElement="W644_Lane3" isHorizontal="true"><dc:Bounds x="160" y="420" width="2210" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W644_Lane4_di" bpmnElement="W644_Lane4" isHorizontal="true"><dc:Bounds x="160" y="590" width="2210" height="170" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W644_Task7_di" bpmnElement="W644_Task7"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W644_Task8_di" bpmnElement="W644_Task8"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W644_Task9_di" bpmnElement="W644_Task9"><dc:Bounds x="820" y="465" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W644_Task10_di" bpmnElement="W644_Task10"><dc:Bounds x="1030" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W644_Task11_di" bpmnElement="W644_Task11"><dc:Bounds x="1240" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W644_Task12_di" bpmnElement="W644_Task12"><dc:Bounds x="1450" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W644_Task13_di" bpmnElement="W644_Task13"><dc:Bounds x="1660" y="635" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W644_Task14_di" bpmnElement="W644_Task14"><dc:Bounds x="1870" y="465" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W644_Task15_di" bpmnElement="W644_Task15"><dc:Bounds x="2080" y="465" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W644_Start6_di" bpmnElement="W644_Start6"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W644_End16_di" bpmnElement="W644_End16"><dc:Bounds x="2310" y="657" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W644_Annotation17_di" bpmnElement="W644_Annotation17"><dc:Bounds x="160" y="800" width="360" height="86" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNEdge id="W644_Flow19_di" bpmnElement="W644_Flow19"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W644_Flow20_di" bpmnElement="W644_Flow20"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W644_Flow21_di" bpmnElement="W644_Flow21"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W644_Flow22_di" bpmnElement="W644_Flow22"><di:waypoint x="1000" y="505" /><di:waypoint x="1030" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W644_Flow23_di" bpmnElement="W644_Flow23"><di:waypoint x="1210" y="335" /><di:waypoint x="1240" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W644_Flow24_di" bpmnElement="W644_Flow24"><di:waypoint x="1420" y="335" /><di:waypoint x="1450" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W644_Flow25_di" bpmnElement="W644_Flow25"><di:waypoint x="1630" y="335" /><di:waypoint x="1660" y="675" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W644_Flow26_di" bpmnElement="W644_Flow26"><di:waypoint x="1840" y="675" /><di:waypoint x="1870" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W644_Flow27_di" bpmnElement="W644_Flow27"><di:waypoint x="2050" y="505" /><di:waypoint x="2080" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W644_Flow28_di" bpmnElement="W644_Flow28"><di:waypoint x="2260" y="505" /><di:waypoint x="2310" y="675" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W644_Assoc18_di" bpmnElement="W644_Assoc18"><di:waypoint x="340" y="800" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNShape id="W644_Lane5_di" bpmnElement="W644_Lane5" isHorizontal="true"><dc:Bounds x="160" y="760" width="2210" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W644_Task8_di" bpmnElement="W644_Task8"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W644_Task9_di" bpmnElement="W644_Task9"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W644_Task10_di" bpmnElement="W644_Task10"><dc:Bounds x="820" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W644_Task11_di" bpmnElement="W644_Task11"><dc:Bounds x="1030" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W644_Task12_di" bpmnElement="W644_Task12"><dc:Bounds x="1240" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W644_Task13_di" bpmnElement="W644_Task13"><dc:Bounds x="1450" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W644_Task14_di" bpmnElement="W644_Task14"><dc:Bounds x="1660" y="635" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W644_Task15_di" bpmnElement="W644_Task15"><dc:Bounds x="1870" y="805" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W644_Task16_di" bpmnElement="W644_Task16"><dc:Bounds x="2080" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W644_Start7_di" bpmnElement="W644_Start7"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W644_End17_di" bpmnElement="W644_End17"><dc:Bounds x="2310" y="827" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W644_Annotation18_di" bpmnElement="W644_Annotation18"><dc:Bounds x="160" y="970" width="360" height="86" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="W644_Flow20_di" bpmnElement="W644_Flow20"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W644_Flow21_di" bpmnElement="W644_Flow21"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W644_Flow22_di" bpmnElement="W644_Flow22"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W644_Flow23_di" bpmnElement="W644_Flow23"><di:waypoint x="1000" y="505" /><di:waypoint x="1030" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W644_Flow24_di" bpmnElement="W644_Flow24"><di:waypoint x="1210" y="335" /><di:waypoint x="1240" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W644_Flow25_di" bpmnElement="W644_Flow25"><di:waypoint x="1420" y="335" /><di:waypoint x="1450" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W644_Flow26_di" bpmnElement="W644_Flow26"><di:waypoint x="1630" y="335" /><di:waypoint x="1660" y="675" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W644_Flow27_di" bpmnElement="W644_Flow27"><di:waypoint x="1840" y="675" /><di:waypoint x="1870" y="845" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W644_Flow28_di" bpmnElement="W644_Flow28"><di:waypoint x="2050" y="845" /><di:waypoint x="2080" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W644_Flow29_di" bpmnElement="W644_Flow29"><di:waypoint x="2260" y="505" /><di:waypoint x="2310" y="845" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W644_Assoc19_di" bpmnElement="W644_Assoc19"><di:waypoint x="340" y="970" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
       </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W779" name="W779. Store-Level Employee Injury Incident Reporting &amp; Workers&#x27; Compensation Claim Processing" isExecutable="false">
@@ -1074,7 +1077,7 @@ Owner: Payroll Manager</bpmn:text>
     <bpmn:process id="W_W1306" name="W1306. Multi-Entity Statutory Benefits Consolidation, Remittance Reconciliation &amp; Government Portal Compliance" isExecutable="false">
       <bpmn:documentation>Trigger: Monthly statutory benefits remittance deadline (SSS: last day of month; PhilHealth: every 10th; Pag-IBIG: every 10th of following month); or quarterly reconciliation cycle
 Frequency: Monthly remittance across 5 entities (15 separate filings/month: 5 entities × 3 agencies); quarterly reconciliation
-Volume: 6,932 employees across 5 entities; ~PHP 100–120M/month in total statutory contributions (employee + employer share)
+Volume: 6,932 employees across 5 entities; ~PHP 25–30M/month in total statutory contributions (employee + employer share, per W1527)
 Owner: Payroll Manager
 Participants: Payroll Manager, Payroll Analyst, HR Data Specialist, Finance Controller, SSS/PhilHealth/Pag-IBIG branch representatives
 Source: workflow W1306 — Multi-Entity Statutory Benefits Consolidation, Remittance Reconciliation &amp; Government Portal Compliance</bpmn:documentation>
@@ -1178,7 +1181,7 @@ Owner: Payroll Manager</bpmn:text>
 Frequency: Monthly accrual; annual computation and payment (paid by December 24 per Presidential Decree No. 851)
 Volume: 6,932 employees across 5 legal entities; ~1,200–1,600 separations/year requiring pro-rated computation
 Owner: Payroll Manager
-Participants: Payroll Manager, HR Specialist, Controller, FP&amp;A Analyst, DOLE Compliance Officer
+Participants: Payroll Manager, HR Specialist, Controller, FP&amp;A Analyst, DOLE Compliance Officer, Treasury (bank-file transmission per W10 step 8)
 Source: workflow W1416 — Philippine 13th Month Pay Computation, Monthly Accrual Booking &amp; Year-End Compliance Processing</bpmn:documentation>
       <bpmn:laneSet id="W1416_LaneSet4">
         <bpmn:lane id="W1416_Lane1" name="System">
@@ -1200,7 +1203,7 @@ Source: workflow W1416 — Philippine 13th Month Pay Computation, Monthly Accrua
         <bpmn:outgoing>W1416_Flow15</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:serviceTask id="W1416_Task6" name="Monthly accrual booking">
-        <bpmn:documentation>Step 1: Monthly accrual booking: Each payroll run (semi-monthly), Payroll Manager books 13th month accrual: (a) accrual = total basic salary for the pay period ÷ 12, (b) journal entry: Dr. 13th Month Pay Expense / Cr. 13th Month Pay Accrued Liability, (c) accrual posted per entity (5 entities × 2 payroll runs/month = 10 journal entries/month), (d) FP&amp;A Analyst reviews monthly accrual vs. budget
+        <bpmn:documentation>Step 1: Monthly accrual booking: Each payroll run (semi-monthly), Payroll Manager books 13th month accrual: (a) accrual = total basic salary for the pay period ÷ 12, (b) journal entry: Dr. 13th Month Pay Expense / Cr. 13th Month Pay Accrued Liability — imported to GL through the W10.9 journal-import chain (unposted batch under the Payroll PH source, validated and posted by GL), (c) accrual posted per entity (5 entities × 2 payroll runs/month = 10 journal entries/month), (d) FP&amp;A Analyst reviews monthly accrual vs. budget
 Responsible (R): System / Payroll Manager
 Accountable (A): Controller
 Duration: Automated per payroll run</bpmn:documentation>
@@ -1208,7 +1211,7 @@ Duration: Automated per payroll run</bpmn:documentation>
         <bpmn:outgoing>W1416_Flow16</bpmn:outgoing>
       </bpmn:serviceTask>
       <bpmn:userTask id="W1416_Task7" name="Quarterly accrual reconciliation">
-        <bpmn:documentation>Step 2: Quarterly accrual reconciliation: Quarterly, Payroll Manager reconciles: (a) accumulated 13th month accrual balance per GL vs. sum of individual employee accruals from payroll system, (b) identify discrepancies: employees transferred between entities (accrual must transfer), employees on leave without pay (accrual should reduce), new hires (accrual should start from hire date), separated employees (accrual should have been paid with final pay), (c) post adjustments as needed
+        <bpmn:documentation>Step 2: Quarterly accrual reconciliation: Quarterly, Payroll Manager reconciles: (a) accumulated 13th month accrual balance per GL vs. sum of individual employee accruals from payroll system, (b) identify discrepancies: employees transferred between entities (accrual must transfer), employees on leave without pay (accrual should reduce), new hires (accrual should start from hire date), separated employees (accrual should have been paid with final pay), (c) post adjustments as needed through the W638 journal-entry review matrix (preparer ≠ approver)
 Responsible (R): Payroll Manager
 Accountable (A): Controller
 Duration: 2–4 hours/quarter</bpmn:documentation>
@@ -1232,7 +1235,7 @@ Duration: 1–2 days</bpmn:documentation>
         <bpmn:outgoing>W1416_Flow19</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W1416_Task10" name="Payment processing">
-        <bpmn:documentation>Step 5: Payment processing (by December 24): (a) Payroll Manager submits 13th month payment batch to bank: typically paid with the December 15 or December 30 payroll run, (b) for each entity: generate payment file, Controller approves, Treasury releases payment per W34, (c) system posts: Dr. 13th Month Pay Accrued Liability / Cr. Cash (Bank), (d) any remaining accrual balance closed to expense (for employees who separated during the year but accrual was retained)
+        <bpmn:documentation>Step 5: Payment processing (by December 24): (a) Payroll Manager submits 13th month payment batch to bank: typically paid with the December 15 or December 30 payroll run, (b) for each entity: generate payment file, Controller approves, Treasury transmits per the W10 step-8 payroll bank-file chain (CTL-13), (c) system posts: Dr. 13th Month Pay Accrued Liability / Cr. Cash (Bank), (d) any remaining accrual balance closed to expense (for employees who separated during the year but accrual was retained)
 Responsible (R): Payroll Manager / Treasury
 Accountable (A): CFO
 Duration: 4–6 hours</bpmn:documentation>

@@ -880,7 +880,7 @@ Duration: 10 min/employee</bpmn:documentation>
         <bpmn:outgoing>W1383_Flow26</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W1383_Task14" name="Payroll processes final pay: (a) if clearance complete and no pending items —…">
-        <bpmn:documentation>Step 7: Payroll processes final pay: (a) if clearance complete and no pending items — release final pay via bank transfer on next payroll run or within 30 days of last day (per DOLE Advisory); (b) if clearance incomplete — final pay is held until all clearance items resolved; (c) system posts final pay: Dr. Salary Expense / Cr. Cash; Dr. Final Pay Liability / Cr. Cash
+        <bpmn:documentation>Step 7: Payroll processes final pay: (a) if clearance complete and no pending items — release final pay via bank transfer on next payroll run or within 30 days of last day (per DOLE Advisory); (b) if clearance incomplete — final pay is held until all clearance items resolved; (c) system posts final pay through the W10.9 costing chain: Dr. Salary Expense / Cr. Cash; Dr. Final Pay Liability / Cr. Cash
 Responsible (R): Payroll
 Accountable (A): Finance Manager
 Duration: 5 min/employee</bpmn:documentation>
@@ -1015,8 +1015,8 @@ Duration: Part of payroll run</bpmn:documentation>
         <bpmn:incoming>W1384_Flow20</bpmn:incoming>
         <bpmn:outgoing>W1384_Flow21</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:serviceTask id="W1384_Task11" name="System posts 13th month pay: Dr. 13th Month Pay Expense (or Accrued 13th Month…">
-        <bpmn:documentation>Step 5: System posts 13th month pay: Dr. 13th Month Pay Expense (or Accrued 13th Month Pay if previously accrued) / Cr. Cash; tax withholding: Dr. 13th Month Pay Expense / Cr. Withholding Tax Payable
+      <bpmn:serviceTask id="W1384_Task11" name="System posts 13th month pay through the W10.9 journal-import chain (unposted…">
+        <bpmn:documentation>Step 5: System posts 13th month pay through the W10.9 journal-import chain (unposted batch under the Payroll PH source, validated and posted by GL): Dr. 13th Month Pay Expense (or Accrued 13th Month Pay if previously accrued) / Cr. Cash; tax withholding: Dr. 13th Month Pay Expense / Cr. Withholding Tax Payable
 Responsible (R): System
 Accountable (A): —
 Duration: Automated</bpmn:documentation>

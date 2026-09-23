@@ -98,7 +98,7 @@
 | Labor Relations Director | Human Resources | 1 | 19 | 21 | 40 | 4 | 26 | 12 | 12 | 2 |
 | Learning & Development Manager | Human Resources | 1 | 15 | 12 | 43 | 18 | 21 | 5 | 15 | 1 |
 | People Analytics Analyst | Human Resources | 1 | 13 | 21 | 40 | 0 | 26 | 0 | 9 | 17 |
-| Payroll Manager | Human Resources | 1 | 11 | 15 | 30 | 51 | 30 | 19 | 10 | 1 |
+| Payroll Manager | Human Resources | 1 | 11 | 15 | 31 | 51 | 30 | 19 | 10 | 1 |
 | HR Business Partner (one per region) | Human Resources | 6 | 10 | 47 | 84 | 17 | 55 | 22 | 28 | 5 |
 | Labor Relations Specialist | Human Resources | 2 | 6 | 26 | 20 | 0 | 28 | 4 | 24 | 0 |
 | Benefits Specialist | Human Resources | 2 | 5 | 1 | 10 | 2 | 6 | 5 | 1 | 0 |
@@ -321,8 +321,8 @@
 | Unit Leadership | Executive Office | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 0 |
 | Vendor Executives | Executive Office | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Finance | Finance & Accounting | 144 | 1044 | 1130 | 54 | 1223 | 253 | 753 | 217 |
-| Treasury | Finance & Accounting | 50 | 251 | 257 | 4 | 293 | 87 | 178 | 28 |
-| Finance Analyst | Finance & Accounting | 30 | 60 | 159 | 5 | 116 | 29 | 62 | 25 |
+| Treasury | Finance & Accounting | 50 | 255 | 258 | 4 | 296 | 89 | 179 | 28 |
+| Finance Analyst | Finance & Accounting | 30 | 60 | 158 | 5 | 116 | 29 | 62 | 25 |
 | Fraud Management | Finance & Accounting | 24 | 22 | 69 | 0 | 25 | 17 | 8 | 0 |
 | Cost Accounting Manager | Finance & Accounting | 24 | 0 | 2 | 0 | 24 | 4 | 19 | 1 |
 | Vp Investor Relations | Finance & Accounting | 24 | 0 | 0 | 0 | 24 | 3 | 18 | 3 |

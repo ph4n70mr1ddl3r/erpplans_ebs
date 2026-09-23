@@ -32,6 +32,19 @@ and quarterly balance reconciliation; the W4201/W4207 booth estate through the
 custody canon (Mass Additions, custodian of record, release-and-accept moves);
 W288/W1545 cost-center governance trued to accounting-flexfield objects.
 
+Extended 2026-09-23 with the fifth pass (canon §10 — payroll and people costing):
+five findings repaired across PA-19.2/PA-19.5 — W10 step 9's payroll costing
+journals routed through the GL journal-import chain (GL interface → unposted
+batch under the Payroll PH source → GL validates and posts inside the W9A close;
+OC-26, the ledger-of-record mass-additions analog, also pinned on W1416 step 1,
+W1384 step 5 and the PA-19.5 resignation final-pay posting); the W644/W1416
+13th-month double-posting ambiguity resolved with W638-routed corrections and
+W644 re-scoped to verification (OC-27); the off-cycle/final-pay/13th-month
+payment rails re-seated to Treasury transmission per CTL-13 with the W34
+misdirected citation repaired (OC-28); and W1306's ~4×-overclaimed
+statutory-contribution volume trued to the W1527 canon. New rules OC-26–OC-28
+in family I; a payroll payment-file transmission census scan added.
+
 Three rule families:
 
   * anchor rules   — the conformance clauses the review wrote into the repaired
@@ -71,6 +84,8 @@ P143 = os.path.join(WF, "VS-14-marketing", "PA-14.3-brand-pr-and-corporate-commu
 P1392 = os.path.join(WF, "VS-139-trade-show-exhibition-and-field-event-marketing", "PA-139.2-exhibition-and-trade-show-operations.md")
 P392 = os.path.join(WF, "VS-39-vendor-rebate-incentive", "PA-39.2-coop-marketing-promotional-funds.md")
 P292 = os.path.join(WF, "VS-29-master-data", "PA-29.2-financial-and-operational-masters.md")
+P192 = os.path.join(WF, "VS-19-hire-to-retire", "PA-19.2-payroll-and-compensation.md")
+P195 = os.path.join(WF, "VS-19-hire-to-retire", "PA-19.5-separation-and-benefits.md")
 COVMAP = os.path.join(REPO, "02-oracle-ebs", "module-coverage-map.md")
 ICTL = os.path.join(REPO, "01-model-company", "internal-controls-matrix.md")
 
@@ -117,7 +132,7 @@ ANCHORS = [
     # canon document itself
     (CANON, "Every asset carries a **custodian of record**", "OC-05",
      "canon OC-05 custody-of-record rule"),
-    (CANON, "*Document Version: 1.3 | Date: 2026-09-23", "DOC",
+    (CANON, "*Document Version: 1.4 | Date: 2026-09-23", "DOC",
      "canon version footer"),
     # §7 second pass — W1695 eAM vehicle naming (canon-tracked triage closed)
     (P351, "eAM auto-generates the preventive maintenance schedule", "OC-EAM",
@@ -207,6 +222,44 @@ ANCHORS = [
      "W288 step 4 must create cost centers as accounting-flexfield segment values under roll-up groups"),
     (P292, "creates the value in the accounting flexfield — cost-center segment under the department roll-up group for HQ cost centers, the store hierarchy's profit-center segment for stores", "OC-KFF",
      "W1545 step 2 must name the flexfield segments for cost/profit-center creation"),
+    # §10 fifth pass — OC-26 the payroll journal-import chain (the engine never posts directly)
+    (P192, "imports them as unposted batches under the Payroll PH source", "OC-26",
+     "W10 step 9 must import payroll costing journals as named-source unposted batches — the engine never posts directly to the ledger"),
+    (P192, "GL posting from payroll: costing journals import to GL through the GL journal-import chain", "OC-26",
+     "W10 touchpoints must name the GL journal-import chain"),
+    (P192, "imported to GL through the W10.9 journal-import chain", "OC-26",
+     "W1416 step 1 must import the per-run accrual journals through the W10.9 chain"),
+    (P195, "System posts 13th month pay through the W10.9 journal-import chain", "OC-26",
+     "W1384 step 5 must post through the W10.9 journal-import chain"),
+    (P195, "system posts final pay through the W10.9 costing chain", "OC-26",
+     "the PA-19.5 resignation final-pay posting must ride the W10.9 costing chain"),
+    (COVMAP, "posts costing journals into GL via the GL journal-import chain", "OC-26",
+     "the coverage-map HR & Payroll row must name the GL journal-import chain"),
+    (CANON, "The payroll engine never posts directly to the ledger", "OC-26",
+     "canon OC-26 payroll journal-import rule"),
+    # §10 fifth pass — OC-27 manual payroll journals ride W638; no parallel accrual posting
+    (P192, "no parallel manual accrual posting", "OC-27",
+     "W644 step 3 must verify the W1416-imported accrual, not post a parallel manual JE"),
+    (P192, "correction journals ride the W638 journal-entry review matrix", "OC-27",
+     "W644 step 3 corrections must ride the W638 journal-entry review matrix"),
+    (P192, "post adjustments as needed through the W638 journal-entry review matrix (preparer ≠ approver)", "OC-27",
+     "W1416 step 2(c) must route accrual adjustments through the W638 matrix"),
+    (CANON, "ride the journal-entry review workflow with tiered approval and preparer ≠ approver", "OC-27",
+     "canon OC-27 payroll-journal review rule"),
+    # §10 fifth pass — OC-28 Treasury transmits every payroll payment file
+    (P192, "Treasury transmits the approved file per the W10 step-8 payroll bank-file chain — the payroll chain never transmits its own payment files", "OC-28",
+     "W641 step 6 must seat bank-file transmission with Treasury"),
+    (P192, "Treasury transmits the approved final-pay file per the W10 step-8 payroll bank-file chain", "OC-28",
+     "W643 step 6 must seat final-pay transmission with Treasury"),
+    (P192, "Treasury transmits the approved 13th month payment file per the W10 step-8 payroll bank-file chain", "OC-28",
+     "W644 step 8 must seat 13th-month payment transmission with Treasury"),
+    (P192, "Treasury transmits per the W10 step-8 payroll bank-file chain", "OC-28",
+     "W1416 step 5(b) must seat the payment release on the W10 step-8 chain"),
+    (CANON, "Payroll payment files are transmitted by the Treasury payment-execution seat", "OC-28",
+     "canon OC-28 payroll-transmission rule"),
+    # §10 fifth pass — W1306 volume canon
+    (P192, "~PHP 25–30M/month in total statutory contributions (employee + employer share, per W1527)", "VOL",
+     "W1306 Volume must carry the W1527 statutory-contribution canon"),
 ]
 
 # --- retired forms: (file, banned substring, description) ---------------------------
@@ -223,6 +276,25 @@ RETIRED = [
      "retired W9A step 9 form — the close reconciliation names the independent preparer (OC-24)"),
     (ICTL, "| Treasury Analyst / Controller | W30.2, W30.9, W89 |",
      "retired CTL-19 owner form — the control seats the entity GL Accountant (OC-24)"),
+    # §10 fifth pass — the retired payroll posting/transmission/volume forms
+    (P192, "System posts payroll journal entries to GL (salary expense, payable, deductions)",
+     "retired W10 step 9 — the unnamed direct-posting form replaced by the GL journal-import chain (OC-26)"),
+    (P192, "Treasury releases payment per W34",
+     "retired W1416 step 5(b) — the misdirected shift-scheduling citation replaced by the W10 step-8 chain (OC-28)"),
+    (P192, "~PHP 100–120M/month",
+     "retired W1306 volume — the ~4×-overclaimed statutory-contribution band replaced by the W1527 canon"),
+    (P192, "Finance Analyst posts accrual journal entry (DR 13th Month Pay Expense",
+     "retired W644 step 3 — the parallel manual accrual posting replaced by verification of the imported accrual (OC-27)"),
+    (P192, "Finance Analyst executes payment via bank transfer",
+     "retired W644 step 8 — payment execution re-seated to Treasury transmission (OC-28)"),
+    (P192, "System reverses remaining accrual balance to actual payment",
+     "retired W644 step 9 — the parallel reversal form replaced by zero-balance verification of the W1416 step-5 postings"),
+    (P192, "routes for bank file approval |",
+     "retired W641 step 6 — the unseated-transmission form (approval with no named transmitter) (OC-28)"),
+    (P192, "prepares manual check |",
+     "retired W643 step 6 — the unseated-transmission form (file prepared with no named transmitter) (OC-28)"),
+    (P195, "system posts final pay: Dr. Salary Expense",
+     "retired PA-19.5 step 7(c) — the unnamed final-pay posting form replaced by the W10.9 chain pin (OC-26)"),
 ]
 
 # --- corpus scans (informational; per-workflow triage census) -----------------------
@@ -304,6 +376,30 @@ def corpus_scans():
                     continue
                 findings.append(("scan-sod-bank-recon", os.path.relpath(f, REPO),
                                  f"line {line_no}: Treasury Analyst (payment-execution seat) is Responsible on a bank-reconciliation step"))
+    # scan 6 (canon §10 fifth pass): payroll payment-file transmission census —
+    # a payroll/HR-responsible step that transmits, releases or sends a payroll
+    # payment bank file reports for triage: the transmission seat is Treasury's
+    # (CTL-13, canon OC-28); the payroll chain that computes and approves the run
+    # never moves the money. File generation and approval routing by payroll
+    # seats are the preparation side and are exempt.
+    for f in sorted(glob.glob(os.path.join(WF, "VS-*", "PA-*.md"))):
+        for line_no, line in enumerate(open(f, encoding="utf-8"), 1):
+            if not line.startswith("|"):
+                continue
+            cells = [c.strip() for c in line.split("|")]
+            if len(cells) <= 4 or not re.match(r"^\d+", cells[1] or ""):
+                continue
+            role = cells[3]
+            act = cells[2].lower() if len(cells) > 2 else ""
+            if not (role.startswith("Payroll") or role.startswith("HR")):
+                continue
+            if "bank file" not in act and "bank transfer file" not in act:
+                continue
+            if "treasury" in act:
+                continue
+            if re.search(r"\b(transmit|transmission|releas|send|sends|sent)\w*\b", act):
+                findings.append(("scan-payroll-transmission", os.path.relpath(f, REPO),
+                                 f"line {line_no}: payroll/HR seat transmits or releases a payment bank file (Treasury is the transmission seat, OC-28)"))
     return findings
 
 
