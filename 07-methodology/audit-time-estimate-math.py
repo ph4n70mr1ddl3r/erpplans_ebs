@@ -29,7 +29,26 @@ into the hits list is genuinely suspect. Conversions modeled:
 It also flags reversed numeric ranges ("90–50 min") inside those sections
 (workflow IDs like "W518 — 1-hour" are excluded).
 
-The tool only reports candidates; adjudication and repair are manual.
+The 2026-09-23 seventy-third-wave review triaged the default-mode adjudication
+queue end-to-end (183 candidates at the wave baseline): the residue adjudicates
+into the accepted classes above (unit-shape tails such as hours/vendor/year,
+midpoint or padded ranges, elapsed-window weeks/days reported not summed, hidden
+context factors, ambiguous-period readings the claimed total legitimately
+reaches), and twelve claimed totals that contradict their OWN stated factors
+were repaired across nine PA files. Each repaired cell is pinned by the
+FOOTING_ANCHORS scan below: the corrected claim is REQUIRED inside its own
+workflow block and the retired form is BANNED from it, in both default and
+--guard modes — a future re-timing re-fires the arm until consciously
+re-pointed (the Check-71 CENSUS-pin contract). One finding is OPEN and tracked
+for per-workflow triage, deliberately not repaired here: W251's (PA-19.1)
+"Total HR Benefits effort ~60–80 hours/month" against its own steps-table
+derivation (verification 30 min + certification 20 min + reimbursement 15 min
+× 410–590 claims/month ≈ 380–550 h/month) — the honest re-footing implies >2 FTE
+against the TO/profile's 2-specialist HR canon, an HC cascade beyond a
+consistency wave's mandate.
+
+The tool reports footing violations explicitly; everything else is
+candidates; adjudication and repair are manual.
 
 Usage:
     python3 audit-time-estimate-math.py [--tolerance 0.15] [--all]
@@ -43,6 +62,58 @@ WORKFLOWS = os.path.join(REPO, "01-model-company", "workflows")
 
 BLOCK_SPLIT = re.compile(r"(?=^## W\d+[A-Z]?\. )", re.MULTILINE)
 SECTION_RE = re.compile(r"^### (Time Estimate|Staffing Implication)\s*$", re.MULTILINE)
+
+# --- footing-anchor scan (2026-09-23 seventy-third-wave review) ----------------
+# (PA file name, workflow id, required corrected anchor, retired banned form).
+# Block-scoped to the named workflow so sibling claims in the same file (e.g.
+# PA-15.2's W633 Treasury-Analyst ~25 hours/month) never trip the arms.
+FOOTING_ANCHORS = [
+    ("PA-11.3-wholesale-operations.md", "W599",
+     r"~90–155 person-hours/month", r"~50–75 person-hours/month"),
+    ("PA-15.2-vendor-payment-and-reconciliation.md", "W634",
+     r"~70–90 hours/month", r"1 day/month = ~25 hours/month"),
+    ("PA-18.3-fx-and-investments.md", "W1474",
+     r"~85–90 hours/year", r"= ~60 hours/year"),
+    ("PA-41.1-private-label-product-development.md", "W1833",
+     r"~50–55 hours/year", r"= ~25–40 hours/year"),
+    ("PA-41.3-private-label-brand-marketing.md", "W1852",
+     r"~180–220 hours/year", r"= ~80–120 hours/year"),
+    ("PA-55.1-planogram-design-space-allocation.md", "W2169",
+     r"~7\.5 hours/month ≈ ~90 hours/year", r"~90 hours/month"),
+    ("PA-55.1-planogram-design-space-allocation.md", "W2171",
+     r"≈ 4\.5–6 hours active", r"~4 days/optimization × ~30 optimizations/year"),
+    ("PA-55.1-planogram-design-space-allocation.md", "W2172",
+     r"~80 hours/year", r"~120–160 hours/year"),
+    ("PA-55.2-planogram-compliance-audit.md", "W2179",
+     r"~500 hours/quarter", r"~600–800 hours/quarter"),
+    ("PA-76.1-multi-lgu-business-permit-license-management.md", "W2670",
+     r"~460–660 hours/year", r"~600–700 hours/year"),
+    ("PA-76.1-multi-lgu-business-permit-license-management.md", "W2673",
+     r"~25–50 hours/location-year", r"~50–100 hours/location-year"),
+    ("PA-76.1-multi-lgu-business-permit-license-management.md", "W2674",
+     r"~160–360 hours/year", r"~250–400 hours/year"),
+]
+
+
+def footing_check(path, wid, block, hits, guard=None):
+    base = os.path.basename(path)
+    for fname, fwid, required, banned in FOOTING_ANCHORS:
+        if fname != base or fwid != wid:
+            continue
+        if not re.search(required, block):
+            detail = f"required footing anchor missing: /{required}/"
+            hits.append((path, wid, "Footing", detail, None, detail,
+                         ["footing"], False))
+            if guard is not None:
+                guard.append((path, wid, "Footing", detail,
+                              f"missing footing anchor /{required}/"))
+        if re.search(banned, block):
+            detail = f"retired footing form present: /{banned}/"
+            hits.append((path, wid, "Footing", detail, None, detail,
+                         ["footing"], False))
+            if guard is not None:
+                guard.append((path, wid, "Footing", detail,
+                              f"retired footing form /{banned}/ re-minted"))
 
 # --- number / token grammar ---------------------------------------------------
 NUM = r"~?\d[\d,]*(?:\.\d+)?"
@@ -513,6 +584,7 @@ def audit_file(path, tolerance, show_all, hits, guard=None):
         if not m:
             continue
         wid = m.group(1)
+        footing_check(path, wid, block, hits, guard)
         for sm in SECTION_RE.finditer(block):
             rest = block[sm.end():]
             stop = re.search(r"^### ", rest, re.MULTILINE)
@@ -572,6 +644,8 @@ def main():
             print(f"    derived {adj[0]:,.0f}–{adj[1]:,.0f}  vs claimed "
                   f"{claimed[0]:,.0f}–{claimed[1]:,.0f}"
                   + (f"  (no consistent unit convention)" if scales == [] else ""))
+        elif scales == ["footing"]:
+            print(f"    {claimed}")
         else:
             print(f"    reversed range {claimed[0]:,.0f}–{claimed[1]:,.0f}")
 

@@ -3748,7 +3748,7 @@ echo "--- Check 50: Time-Estimate & Staffing inline arithmetic ---"
 C50_OUT=$(python3 "$REPO_ROOT/07-methodology/audit-time-estimate-math.py" --guard 2>&1) && C50_RC=0 || C50_RC=$?
 echo "$C50_OUT" | grep -E "^Guard:" | sed 's/^/    /'
 if [ $C50_RC -eq 0 ]; then
-    ok "No inline-arithmetic guard violations in Time Estimate / Staffing Implication sections (guard mode of audit-time-estimate-math.py; 25 defective chains repaired 2026-08-29)"
+    ok "No inline-arithmetic guard violations in Time Estimate / Staffing Implication sections (guard mode of audit-time-estimate-math.py; 25 defective chains repaired 2026-08-29; and the 2026-09-23 seventy-third-wave review triaged the default-mode adjudication queue end-to-end — 183 candidates adjudicated into the accepted classes (unit-shape tails, midpoint/padded ranges, elapsed windows reported not summed, hidden context factors, ambiguous-period readings) with twelve claimed-total footing defects repaired across nine PA files and pinned by the tool's new footing-anchor scan (required corrected claims, retired forms banned workflow-scoped, both modes), W251's benefits-staffing total opened as a tracked HC-cascade triage item)"
 else
     C50_N=$(echo "$C50_OUT" | grep -c "^GUARD VIOLATION" || true)
     error "$C50_N inline-arithmetic guard violation(s) in Time Estimate / Staffing Implication sections (run 07-methodology/audit-time-estimate-math.py for the full audit trail):"
