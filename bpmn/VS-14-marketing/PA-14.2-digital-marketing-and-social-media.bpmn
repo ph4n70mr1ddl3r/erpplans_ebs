@@ -592,7 +592,7 @@ Source: workflow W677 — Marketing Budget Management &amp; Spend Analytics</bpm
         <bpmn:outgoing>W677_Flow18</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:userTask id="W677_Task7" name="Finance Analyst allocates annual marketing budget per W26 into monthly and…">
-        <bpmn:documentation>Step 1: Finance Analyst allocates annual marketing budget per W26 into monthly and campaign-level envelopes: media spend, creative production, agency fees, events, sponsorships, loyalty program costs, research
+        <bpmn:documentation>Step 1: Finance Analyst allocates annual marketing budget per W26 into monthly and campaign-level envelopes: media spend, creative production, agency fees, events, sponsorships, loyalty program costs, research — the approved budget loaded into the GL budget organization by marketing cost center × GL account × month with GL budgetary control enabled, so spend can be funds-checked at commitment time
 Responsible (R): Finance Analyst
 Accountable (A): Marketing Manager
 Duration: 2 days</bpmn:documentation>
@@ -600,15 +600,15 @@ Duration: 2 days</bpmn:documentation>
         <bpmn:outgoing>W677_Flow19</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W677_Task8" name="Marketing Manager distributes budget to campaign owners per approved annual…">
-        <bpmn:documentation>Step 2: Marketing Manager distributes budget to campaign owners per approved annual plan; sets spend thresholds requiring VP Marketing approval (agency POs &gt; PHP 500K, media buys &gt; PHP 1M)
+        <bpmn:documentation>Step 2: Marketing Manager distributes budget to campaign owners per approved annual plan; sets spend thresholds routed by position hierarchy and AME rules, never an ad-hoc name chain — agency POs &gt; PHP 500K and media buys &gt; PHP 1M escalate to VP Marketing
 Responsible (R): Marketing Manager
 Accountable (A): VP Marketing
 Duration: 1 day</bpmn:documentation>
         <bpmn:incoming>W677_Flow19</bpmn:incoming>
         <bpmn:outgoing>W677_Flow20</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:serviceTask id="W677_Task9" name="System tracks actual spend against budget in real-time: media platform…">
-        <bpmn:documentation>Step 3: System tracks actual spend against budget in real-time: media platform invoices, agency fees, production costs, event expenses, sponsorship payments; auto-flags line items exceeding 80% of monthly allocation
+      <bpmn:serviceTask id="W677_Task9" name="System tracks actual spend against budget in real-time: recurring agency…">
+        <bpmn:documentation>Step 3: System tracks actual spend against budget in real-time: recurring agency retainers and media buys release against blanket POs so the GL budgetary-control funds check fires at requisition and PO approval — commitment accounting, before the invoice lands; media platform invoices, production costs, event expenses, sponsorship payments post against the same envelope; auto-flags line items exceeding 80% of monthly allocation
 Responsible (R): System (automated)
 Accountable (A): Marketing Manager
 Duration: Ongoing</bpmn:documentation>

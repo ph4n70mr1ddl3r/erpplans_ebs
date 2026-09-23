@@ -19,6 +19,18 @@ seats never reconcile the accounts they pay from; W9A step 9 re-pointed, CTL-19
 owner trued) and the GL close sequence codified on W9A step 17 (sub-ledgers
 closed and reconciled before GL locks, GL last; new period opens sub-ledgers
 first). New rules OC-24/OC-25.
+Extended 2026-09-23 with the fourth pass (canon §9 — marketing & trade spend):
+seven findings repaired across VS-14/VS-139/PA-39.2/W286 — W677 GL-budget-
+organization commitment accounting (budgetary control + blanket PO releases)
+and AME-routed spend thresholds; W83 AME budget gates and funds-checked
+campaign requisitions (destination type Expense, campaign cost center); W833
+ERES compliance sign-off with submitter/approver separation; W286 RMN billing
+trued to OM/AR AutoInvoice on the TCA account + AR Revenue Management (A11);
+the PA-39.2 co-op chain trued to Oracle Trade Management (B10) — fund setup
+with purchase-based accrual, POP evidence on the claim record, claim settlement
+and quarterly balance reconciliation; the W4201/W4207 booth estate through the
+custody canon (Mass Additions, custodian of record, release-and-accept moves);
+W288/W1545 cost-center governance trued to accounting-flexfield objects.
 
 Three rule families:
 
@@ -53,6 +65,12 @@ P991 = os.path.join(WF, "VS-99-it-asset-technology-lifecycle-management", "PA-99
 P174 = os.path.join(WF, "VS-17-record-to-report", "PA-17.4-fpanda-and-reporting.md")
 P082 = os.path.join(WF, "VS-08-pos-checkout", "PA-08.2-payment-and-cash-management.md")
 P163 = os.path.join(WF, "VS-16-order-to-cash", "PA-16.3-customer-payment-and-settlement.md")
+P142 = os.path.join(WF, "VS-14-marketing", "PA-14.2-digital-marketing-and-social-media.md")
+P141 = os.path.join(WF, "VS-14-marketing", "PA-14.1-campaign-planning-and-execution.md")
+P143 = os.path.join(WF, "VS-14-marketing", "PA-14.3-brand-pr-and-corporate-communications.md")
+P1392 = os.path.join(WF, "VS-139-trade-show-exhibition-and-field-event-marketing", "PA-139.2-exhibition-and-trade-show-operations.md")
+P392 = os.path.join(WF, "VS-39-vendor-rebate-incentive", "PA-39.2-coop-marketing-promotional-funds.md")
+P292 = os.path.join(WF, "VS-29-master-data", "PA-29.2-financial-and-operational-masters.md")
 COVMAP = os.path.join(REPO, "02-oracle-ebs", "module-coverage-map.md")
 ICTL = os.path.join(REPO, "01-model-company", "internal-controls-matrix.md")
 
@@ -99,7 +117,7 @@ ANCHORS = [
     # canon document itself
     (CANON, "Every asset carries a **custodian of record**", "OC-05",
      "canon OC-05 custody-of-record rule"),
-    (CANON, "*Document Version: 1.2 | Date: 2026-09-23", "DOC",
+    (CANON, "*Document Version: 1.3 | Date: 2026-09-23", "DOC",
      "canon version footer"),
     # §7 second pass — W1695 eAM vehicle naming (canon-tracked triage closed)
     (P351, "eAM auto-generates the preventive maintenance schedule", "OC-EAM",
@@ -150,12 +168,54 @@ ANCHORS = [
      "W1382 step 7 must seat the monthly statement-to-GL reconciliation with the GL Accountant"),
     (P163, "PDC clearance matching (feeds W89)", "OC-24",
      "W1380 step 7 must carry the PDC-clearance-matching sense, not the reconciliation-vehicle name"),
+    # §9 fourth pass — W677 commitment accounting + AME routing
+    (P142, "GL budget organization by marketing cost center × GL account × month with GL budgetary control enabled", "OC-13C",
+     "W677 step 1 must load the approved budget into the GL budget organization with budgetary control enabled"),
+    (P142, "routed by position hierarchy and AME rules, never an ad-hoc name chain", "OC-17",
+     "W677 step 2 must route spend thresholds by position hierarchy and AME rules"),
+    (P142, "release against blanket POs so the GL budgetary-control funds check fires at requisition and PO approval", "OC-13C",
+     "W677 step 3 must commit agency/media spend through blanket PO releases funds-checked at commitment"),
+    # §9 fourth pass — W83 budget gates + funds-checked requisitions
+    (P141, "routed by position hierarchy and AME rules (CFO gate above PHP 1M, CEO gate above PHP 5M), never an ad-hoc name chain", "OC-17",
+     "W83 step 4 must route campaign budget gates by position hierarchy and AME rules"),
+    (P141, "destination type Expense charged to the campaign cost center and funds-check against the campaign envelope in GL budgetary control before approval", "OC-01",
+     "W83 step 25 must carry destination-type-Expense campaign requisitions with a pre-approval funds check"),
+    # §9 fourth pass — W833 ERES sign-off + submitter/approver separation
+    (P143, "captured as ERES evidence on the compliance record and routed by position hierarchy", "OC-16",
+     "W833 step 6 must capture the compliance sign-off as ERES evidence with submitter/approver separation"),
+    # §9 fourth pass — W286 RMN billing on the AR spine
+    (P143, "OM/AR AutoInvoice on the vendor's TCA account", "OC-AR",
+     "W286 step 3 must generate RMN invoices via OM/AR AutoInvoice on the TCA account"),
+    (P143, "AR Revenue Management — PFRS 15 revenue schedules for multi-element media contracts (the A11 vehicle)", "OC-AR",
+     "W286 touchpoints must name AR Revenue Management for PFRS 15 schedules"),
+    # §9 fourth pass — PA-39.2 co-op chain on Oracle Trade Management (B10)
+    (P392, "System setup in Oracle Trade Management (fit-gap B10, the same agreements master the rebate estate rides per W27/PA-39.1)", "OC-OTM",
+     "W1795 step 2 must set the co-op fund up in Oracle Trade Management with purchase-based accrual"),
+    (P392, "attached to the vendor's Oracle Trade Management claim record (fit-gap B10)", "OC-OTM",
+     "W1798 step 3 must attach POP evidence to the OTM claim record"),
+    (P392, "against the Oracle Trade Management claim (fit-gap B10)", "OC-OTM",
+     "W1799 step 2 must settle the reimbursement against the OTM claim"),
+    (P392, "against the Oracle Trade Management fund balances (fit-gap B10)", "OC-OTM",
+     "W1799 step 4 must reconcile quarterly fund balances to OTM"),
+    # §9 fourth pass — booth estate custody chain
+    (P1392, "flow PO → invoice → Mass Additions queue into Oracle Assets at first build, registered with the Event Marketing Manager as custodian of record in Assigned-To", "OC-04/OC-05",
+     "W4201 step 2 must route capitalizable booth structures through Mass Additions with a custodian of record"),
+    (P1392, "as a release-and-accept custody event — the storage custodian of record accepts", "OC-07",
+     "W4207 step 2 must recover booth assets as a release-and-accept custody event moving Assigned-To"),
+    # §9 fourth pass — cost-center governance on the accounting flexfield
+    (P292, "accounting-flexfield cost-center segment value in the CoA, assigns it to its parent roll-up group", "OC-KFF",
+     "W288 step 4 must create cost centers as accounting-flexfield segment values under roll-up groups"),
+    (P292, "creates the value in the accounting flexfield — cost-center segment under the department roll-up group for HQ cost centers, the store hierarchy's profit-center segment for stores", "OC-KFF",
+     "W1545 step 2 must name the flexfield segments for cost/profit-center creation"),
 ]
 
 # --- retired forms: (file, banned substring, description) ---------------------------
 RETIRED = [
     (P351, "(a) PO with asset category flag triggers asset creation workflow",
      "retired W1690 step 1(a) — capitalization now names the mass additions queue"),
+    # §9 fourth pass — the retired generic RMN vehicle form
+    (P143, "- Marketing Module (RMN) for impression aggregation, yield calculation, and vendor contract terms",
+     "retired W286 touchpoint — generic 'Marketing Module' vehicle replaced by the in-house RMN platform feeding OM/AR AutoInvoice"),
     # §8 third pass — the retired bank-reconciliation preparer forms
     (P174, "spread across 2 Treasury Analysts",
      "retired W89 staffing attribution — reconciliation moved to the entity GL Accountants (OC-24)"),

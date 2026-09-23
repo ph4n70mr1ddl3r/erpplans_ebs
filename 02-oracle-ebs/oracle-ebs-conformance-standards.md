@@ -213,4 +213,33 @@ bank-reconciliation step naming a payment-execution seat reports for triage.
 
 ---
 
-*Document Version: 1.2 | Date: 2026-09-23 | **Close-and-cash conformance review.** §8 third pass — the bank-reconciliation preparer seated independent of payment execution (OC-24: W89 re-owned to the entity GL Accountant, W9A step 9 re-pointed, CTL-19 trued) and the GL close sequence codified (OC-25: W9A step 17 sub-ledgers-before-GL); new rules OC-24/OC-25 in families D2/H; two findings, all repaired same-pass. Prior v1.1 | Date: 2026-09-23 | **Corpus-wide conformance review.** §7 second pass — all 569 process areas swept across the canon's judgment classes; four findings (eAM vehicle naming on W1695 closing the tracked triage item; custody-of-record chain on W3234/W3235/W3238), all repaired same-pass; corpus-wide SoD census added to the companion tool. Prior v1.0 (2026-09-23): initial canon — OC-01–OC-23 in seven families; §4 custody-of-record operating model; §5 enforcement contract; §6 initial conformance review — eleven findings, all repaired same-pass.*
+## 9. Corpus-wide conformance review — 2026-09-23 (fourth pass: marketing & trade spend)
+
+The fourth pass scoped the review to the marketing estate the first three passes had not
+examined: VS-14 (campaign, digital, brand/PR), VS-139 (trade-show & event marketing),
+PA-39.2 (co-op marketing funds) and the RMN billing chain. The strategic posture is unchanged
+(marketing execution stays in-house per the coverage map's non-adoption boundary) — the pass
+trues the EBS-facing mechanics: spend commitment, approval routing, trade-spend vehicles,
+billing, and the booth custody chain. Seven findings — all repaired in the same pass:
+
+| # | Finding | Rule | Disposition |
+|---|---|---|---|
+| 1 | W677 tracked marketing budget after the fact — media spend is committed on platform dashboards outside EBS and arrived as mostly non-PO invoices, with no funds check at commitment time | OC-13 companion — commitment accounting | Fixed — step 1 loads the approved budget into the GL budget organization (marketing cost center × GL account × month) with budgetary control enabled; step 3 releases agency retainers and media buys against blanket POs so the funds check fires at requisition/PO approval |
+| 2 | W677's spend thresholds (agency POs > PHP 500K, media buys > PHP 1M) named approvers but no routing mechanism — approval could ride an ad-hoc name chain | OC-17 | Fixed — step 2 routes the thresholds by position hierarchy and AME rules |
+| 3 | W83's campaign budget gates (CFO > PHP 1M, CEO > PHP 5M) named approvers but no routing mechanism; W83 step 25 requisitions tagged the campaign cost center but funds-checked nothing before approval | OC-17, OC-01 | Fixed — step 4 routes the gates by position hierarchy + AME; step 25 requisition lines carry destination type Expense charged to the campaign cost center with a GL budgetary-control funds check before approval |
+| 4 | W833's compliance sign-off recorded a digital approval with no evidence class and no submitter/approver separation | OC-16 companion; ERES | Fixed — step 6 captures the sign-off as ERES evidence on the compliance record, routed by position hierarchy so the submitting Marketing Manager can never approve their own submission |
+| 5 | W286's RMN billing named a generic 'Marketing Module (RMN)' vehicle and invoiced without a revenue-schedule treatment | Vehicle true; A11 | Fixed — step 3 and the touchpoints name OM/AR AutoInvoice on the vendor TCA account (AP debit-memo offset where the vendor is also a supplier) and AR Revenue Management (the A11 vehicle) for multi-element media contracts |
+| 6 | PA-39.2's co-op chain (W1795 fund agreement, W1798 proof-of-performance, W1799 claim & settlement) ran a manual negotiate→execute→proof→reimburse cycle while the coverage map and the sibling rebate flows resolve vendor-funded trade spend in Oracle Trade Management (B10) — the co-op funds lived on a manual side-register | Vehicle true — OTM (B10) | Fixed — W1795 step 2 sets the fund up in OTM with purchase-based accrual; W1798 step 3 attaches the POP evidence to the OTM claim record; W1799 steps 2 and 4 settle claims and reconcile quarterly balances against the OTM fund |
+| 7 | W4201/W4207 tracked the modular-booth estate as generic 'asset tracking' — no mass-additions gate at first build, no custodian of record, and show-to-show moves with no custody event (the W3235/W3238 drift class) | OC-04, OC-05, OC-07 | Fixed — W4201 step 2 routes capitalizable booth structures PO → invoice → Mass Additions queue into Oracle Assets with the Event Marketing Manager as custodian of record in Assigned-To; W4207 steps 1–2 record the show release and the storage release-and-accept with the Assigned-To move |
+
+Recorded conformant at pass level: marketing execution, loyalty/CRM, CDP and campaign
+attribution remaining on the in-house stack (the documented non-adoption boundary — no Oracle
+Marketing/iStore adoption implied); W677's GL reconciliation and 80% threshold alerting; the
+W4207 sample/return reconciliation to inventory (VS-05). The pass also trues the W288/W1545
+cost-center governance language to the accounting-flexfield objects the hierarchy actually
+manages (cost-center segment values, roll-up groups, cross-validation rules) — PA-29.2 steps
+edited in the same pass.
+
+---
+
+*Document Version: 1.3 | Date: 2026-09-23 | **Marketing & trade-spend conformance review.** §9 fourth pass — seven findings across VS-14/VS-139/PA-39.2/W286, all repaired same-pass: W677 GL-budget-organization commitment accounting + AME routing, W83 AME budget gates + funds-checked requisitions, W833 ERES sign-off with submitter/approver separation, W286 OM/AR AutoInvoice + AR Revenue Management (A11) billing, PA-39.2 co-op chain trued to Oracle Trade Management (B10), W4201/W4207 booth estate through the custody canon (Mass Additions, custodian of record, release-and-accept), W288/W1545 cost-center governance trued to accounting-flexfield objects. Prior v1.2 | Date: 2026-09-23 | **Close-and-cash conformance review.** §8 third pass — the bank-reconciliation preparer seated independent of payment execution (OC-24: W89 re-owned to the entity GL Accountant, W9A step 9 re-pointed, CTL-19 trued) and the GL close sequence codified (OC-25: W9A step 17 sub-ledgers-before-GL); new rules OC-24/OC-25 in families D2/H; two findings, all repaired same-pass. Prior v1.1 | Date: 2026-09-23 | **Corpus-wide conformance review.** §7 second pass — all 569 process areas swept across the canon's judgment classes; four findings (eAM vehicle naming on W1695 closing the tracked triage item; custody-of-record chain on W3234/W3235/W3238), all repaired same-pass; corpus-wide SoD census added to the companion tool. Prior v1.0 (2026-09-23): initial canon — OC-01–OC-23 in seven families; §4 custody-of-record operating model; §5 enforcement contract; §6 initial conformance review — eleven findings, all repaired same-pass.*

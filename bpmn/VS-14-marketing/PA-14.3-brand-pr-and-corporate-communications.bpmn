@@ -707,8 +707,8 @@ Duration: 1 hour</bpmn:documentation>
         <bpmn:incoming>W286_Flow15</bpmn:incoming>
         <bpmn:outgoing>W286_Flow16</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W286_Task8" name="ERP auto-generates a sales invoice (or debit memo offsetting AP) to the vendor…">
-        <bpmn:documentation>Step 3: ERP auto-generates a sales invoice (or debit memo offsetting AP) to the vendor for the advertising services rendered; Sales Ops reviews invoice details and routes to AR for processing.
+      <bpmn:userTask id="W286_Task8" name="ERP auto-generates a sales invoice to the vendor for the advertising services…">
+        <bpmn:documentation>Step 3: ERP auto-generates a sales invoice to the vendor for the advertising services rendered — OM/AR AutoInvoice on the vendor&#x27;s TCA account (or an AP debit memo offsetting the supplier balance where the vendor is also a supplier); Sales Ops reviews invoice details and routes to AR for processing; PFRS 15 revenue schedules ride AR Revenue Management where the media contract bundles placements over the contract term.
 Responsible (R): Sales Ops
 Accountable (A): Marketing Finance
 Duration: 2 hours</bpmn:documentation>
@@ -838,7 +838,7 @@ Duration: 1-2 hours</bpmn:documentation>
         <bpmn:outgoing>W833_Flow23</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W833_Task11" name="Legal Counsel and Compliance Officer approve">
-        <bpmn:documentation>Step 6: Legal Counsel and Compliance Officer approve via digital sign-off per W686 document approval routing
+        <bpmn:documentation>Step 6: Legal Counsel and Compliance Officer approve via digital sign-off per W686 document approval routing — the sign-off captured as ERES evidence on the compliance record and routed by position hierarchy (the reviewing Legal Counsel and Compliance Officer approve; the submitting Marketing Manager can never approve their own submission)
 Responsible (R): Legal Counsel / Compliance Officer
 Accountable (A): —
 Duration: 10 min</bpmn:documentation>

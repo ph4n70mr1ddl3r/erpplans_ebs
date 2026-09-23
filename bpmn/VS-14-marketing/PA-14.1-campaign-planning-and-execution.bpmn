@@ -78,7 +78,7 @@ Duration: 4–8 hours/campaign</bpmn:documentation>
         <bpmn:outgoing>W83_Flow42</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W83_Task12" name="CMO reviews and approves campaign brief; VP Merchandising confirms SKU list and…">
-        <bpmn:documentation>Step 4: CMO reviews and approves campaign brief; VP Merchandising confirms SKU list and pricing strategy; CFO approves budget for campaigns exceeding PHP 1M
+        <bpmn:documentation>Step 4: CMO reviews and approves campaign brief; VP Merchandising confirms SKU list and pricing strategy; CFO approves budget for campaigns exceeding PHP 1M — the budget approval routed by position hierarchy and AME rules (CFO gate above PHP 1M, CEO gate above PHP 5M), never an ad-hoc name chain
 Responsible (R): CMO / VP Merchandising / CFO
 Accountable (A): CEO (if budget &gt; PHP 5M)
 Duration: 1 hour/campaign</bpmn:documentation>
@@ -246,7 +246,7 @@ Duration: 4 hours/year</bpmn:documentation>
         <bpmn:outgoing>W83_Flow63</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W83_Task33" name="At campaign brief approval (step 4), Campaign Manager creates campaign purchase…">
-        <bpmn:documentation>Step 25: At campaign brief approval (step 4), Campaign Manager creates campaign purchase requisitions for external costs: (a) creative agency fees per W62 contract, (b) media placement costs, (c) printing and production costs, (d) distribution / logistics costs; all costs tagged to campaign cost center
+        <bpmn:documentation>Step 25: At campaign brief approval (step 4), Campaign Manager creates campaign purchase requisitions for external costs: (a) creative agency fees per W62 contract, (b) media placement costs, (c) printing and production costs, (d) distribution / logistics costs; requisition lines carry destination type Expense charged to the campaign cost center and funds-check against the campaign envelope in GL budgetary control before approval
 Responsible (R): Campaign Manager
 Accountable (A): CMO
 Duration: 1 hour/campaign</bpmn:documentation>

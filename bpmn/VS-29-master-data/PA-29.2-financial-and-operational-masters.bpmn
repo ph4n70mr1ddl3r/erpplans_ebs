@@ -54,7 +54,7 @@ Duration: 10 min</bpmn:documentation>
         <bpmn:outgoing>W288_Flow19</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W288_Task11" name="System Setup &amp; Mapping">
-        <bpmn:documentation>Step 4: System Setup &amp; Mapping: IT ERP Administrator configures the new GL/Cost Center in the ERP, sets up the required dimensions, maps it to the relevant financial statement roll-ups, and assigns security/access controls.
+        <bpmn:documentation>Step 4: System Setup &amp; Mapping: IT ERP Administrator configures the new cost center as an accounting-flexfield cost-center segment value in the CoA, assigns it to its parent roll-up group for financial-statement reporting, sets cross-validation and security rules, and maps it to the relevant financial statement roll-ups.
 Responsible (R): IT ERP Administrator
 Accountable (A): Corporate Controller
 Duration: 30 min</bpmn:documentation>
@@ -1372,7 +1372,7 @@ Duration: 16 hours/year</bpmn:documentation>
         <bpmn:outgoing>W1545_Flow14</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W1545_Task5" name="New cost/profit center creation">
-        <bpmn:documentation>Step 2: New cost/profit center creation: For new stores (W16), new departments, or organizational changes — FP&amp;A Manager submits creation request to IT Finance Lead: center code, description, parent hierarchy, entity assignment, responsible manager, valid-from date; IT Finance Lead configures in ERP; Finance Controller approves; system propagates to all downstream reporting modules
+        <bpmn:documentation>Step 2: New cost/profit center creation: For new stores (W16), new departments, or organizational changes — FP&amp;A Manager submits creation request to IT Finance Lead: center code, description, parent hierarchy, entity assignment, responsible manager, valid-from date; IT Finance Lead creates the value in the accounting flexfield — cost-center segment under the department roll-up group for HQ cost centers, the store hierarchy&#x27;s profit-center segment for stores — validating the company × cost-center cross-validation rule per entity; Finance Controller approves; system propagates to all downstream reporting modules
 Responsible (R): FP&amp;A Manager / IT Finance Lead
 Accountable (A): Finance Controller
 Duration: 30 min/center</bpmn:documentation>

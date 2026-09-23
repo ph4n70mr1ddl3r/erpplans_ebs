@@ -29,8 +29,8 @@ Duration: Per agreement</bpmn:documentation>
         <bpmn:incoming>W1795_Flow11</bpmn:incoming>
         <bpmn:outgoing>W1795_Flow12</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:serviceTask id="W1795_Task6" name="System setup: co-op marketing fund per vendor: (a) annual budget/fund amount…">
-        <bpmn:documentation>Step 2: System setup: co-op marketing fund per vendor: (a) annual budget/fund amount, (b) approved activity types, (c) pre-approval requirement flag, (d) reimbursement rate (% of cost covered, typically 50–100%), (e) documentation requirements
+      <bpmn:serviceTask id="W1795_Task6" name="System setup in Oracle Trade Management (fit-gap B10, the same agreements…">
+        <bpmn:documentation>Step 2: System setup in Oracle Trade Management (fit-gap B10, the same agreements master the rebate estate rides per W27/PA-39.1): co-op marketing fund per vendor as a trade-spend fund with purchase-based accrual — (a) annual budget/fund amount accrued as qualifying purchases accumulate (the % of purchases basis), (b) approved activity types, (c) pre-approval requirement flag, (d) reimbursement rate (% of cost covered, typically 50–100%), (e) documentation requirements
 Responsible (R): Marketing / System
 Accountable (A): CMO
 Duration: 30 min/agreement</bpmn:documentation>
@@ -260,7 +260,7 @@ Duration: 1 day</bpmn:documentation>
         <bpmn:outgoing>W1798_Flow13</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W1798_Task7" name="POP package submitted to vendor: (a) via vendor portal (preferred), (b) via…">
-        <bpmn:documentation>Step 3: POP package submitted to vendor: (a) via vendor portal (preferred), (b) via email to vendor marketing contact, (c) retained in system for audit trail
+        <bpmn:documentation>Step 3: POP package submitted to vendor: (a) via vendor portal (preferred), (b) via email to vendor marketing contact, (c) the package and its evidence attached to the vendor&#x27;s Oracle Trade Management claim record (fit-gap B10) so the claim, its proof and its settlement ride one auditable trail
 Responsible (R): Marketing Team / AP Manager
 Accountable (A): —
 Duration: 1 day</bpmn:documentation>
@@ -327,8 +327,8 @@ Duration: 30–60 days</bpmn:documentation>
         <bpmn:incoming>W1799_Flow12</bpmn:incoming>
         <bpmn:outgoing>W1799_Flow13</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W1799_Task6" name="AP Manager processes approved reimbursement: (a) credit note: applied to vendor…">
-        <bpmn:documentation>Step 2: AP Manager processes approved reimbursement: (a) credit note: applied to vendor AP balance (reduces next payment to vendor), (b) cash payment: received in bank account; Treasury confirms and applies, (c) system records co-op fund income: debit cash/AP, credit co-op marketing income (contra-marketing expense)
+      <bpmn:userTask id="W1799_Task6" name="AP Manager processes approved reimbursement against the Oracle Trade Management…">
+        <bpmn:documentation>Step 2: AP Manager processes approved reimbursement against the Oracle Trade Management claim (fit-gap B10): (a) credit note: applied to vendor AP balance (reduces next payment to vendor), (b) cash payment: received in bank account; Treasury confirms and applies, (c) system records co-op fund income: debit cash/AP, credit co-op marketing income (contra-marketing expense) — the claim settles in OTM, releasing the accrued fund so claimed/approved/paid states reconcile without a manual side-register
 Responsible (R): AP Manager
 Accountable (A): Accounting Manager
 Duration: Per settlement</bpmn:documentation>
@@ -343,8 +343,8 @@ Duration: As needed</bpmn:documentation>
         <bpmn:incoming>W1799_Flow14</bpmn:incoming>
         <bpmn:outgoing>W1799_Flow15</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W1799_Task8" name="Quarterly: AP Manager reconciles co-op fund activity per vendor: (a) annual…">
-        <bpmn:documentation>Step 4: Quarterly: AP Manager reconciles co-op fund activity per vendor: (a) annual budget, (b) claimed amount, (c) approved and received, (d) pending, (e) denied, (f) remaining fund balance available
+      <bpmn:userTask id="W1799_Task8" name="Quarterly: AP Manager reconciles co-op fund activity per vendor against the…">
+        <bpmn:documentation>Step 4: Quarterly: AP Manager reconciles co-op fund activity per vendor against the Oracle Trade Management fund balances (fit-gap B10): (a) annual budget/accrued, (b) claimed amount, (c) approved and received, (d) pending, (e) denied, (f) remaining fund balance available
 Responsible (R): AP Manager
 Accountable (A): CFO
 Duration: 1 day/quarter</bpmn:documentation>
