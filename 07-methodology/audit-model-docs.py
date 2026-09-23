@@ -608,6 +608,18 @@ doc, and the incorporation pass's retired hedges ('Jira/ServiceNow', 'TestRail',
 trees (the methodology-index row exempt where it quotes the literals in its own guard
 description — the Check-46/wave-9 convention). The rule's first live run caught the
 methodology-index OM row still at v3.18 pre-ship.
+
+2026-09-23 seventy-sixth-wave consistency review: domain_companion_hits joins the
+guard — the batch-30 (W5580, 5,432 → 5,433) census stragglers on the surfaces no
+arm read: the value-stream-index H1 banner and closing Total footer (both
+maintained live at batch 26, both stranded at 5,432), the conformance canon's own
+§1 framing sentence (canon bumped v1.5, guard DOC anchor re-pointed), the IT
+domain companion's Technology-&-Data roster (393 → 394 / VS-113 (31) → (32) —
+Check 76's own class one derivation step outside its four quoted cells), and the
+retired 6,762 employee canon on the IT/operations/people companions' §1 scope
+lines and evidence cells (the twenty-ninth-wave headcount sweep never opened
+these four navigation surfaces). Retired forms banned doc-scoped, the corrected
+anchors required at the repaired cells — the Check-71 CENSUS-pin contract.
 """
 
 def _doc_versions():
@@ -3996,6 +4008,109 @@ def atlassian_suite_hits():
     return hits
 
 
+def domain_companion_hits():
+    """2026-09-23 seventy-sixth-wave consistency review — the batch-30 census
+    stragglers on the surfaces no arm read. The (v) capability-switchboard pass
+    (W5580, corpus 5,432 → 5,433) re-pointed every guarded census surface but
+    stranded six unguarded classes: the value-stream-index H1 banner and its
+    closing Total footer (both maintained live at batch 26 — the batch-30
+    cascade moved the Grand Total cell between them and missed both), the
+    conformance canon's own §1 framing sentence, the IT domain companion's
+    Technology-&-Data roster (393 → 394 / VS-113 (31) → (32) — the exact class
+    Check 76 guards, one derivation step outside its four quoted cells), and
+    the retired **6,762** employee canon still sitting on the §1 scope lines
+    and evidence cells of the IT/operations/people domain companions (the
+    twenty-ninth-wave headcount sweep covered the PA files and VS READMEs but
+    never opened these four navigation surfaces, which the fifteenth wave had
+    established as live by re-pointing their family rosters to canon). This
+    rule pins all six: retired forms banned doc-scoped on the live bodies, the
+    corrected anchors required at the repaired cells — a future census move
+    re-fires these until consciously re-pointed (the Check-71 CENSUS-pin
+    contract)."""
+    hits = []
+
+    def _plain(relp):
+        text = open(os.path.join(REPO, relp), encoding="utf-8").read()
+        return text, text.split("*Document Version:")[0]
+
+    # ---- (a) value-stream-index: banner + Total footer are maintained live
+    # (batch 26 updated both; the footer is NOT a frozen-history surface)
+    vsi_text, vsi = _plain("01-model-company/workflows/value-stream-index.md")
+    for bad in ("5,432 Workflows", "5,432 workflows across 188 value streams"):
+        if bad in vsi:
+            hits.append(("value-stream-index.md",
+                         vsi[:vsi.index(bad)].count("\n") + 1,
+                         f"retired census form '{bad}' on a live line (the "
+                         f"banner and Total footer are maintained live — the "
+                         f"canon is 5,433 workflows since batch 30)"))
+    for anc in ("569 Process Areas · 5,433 Workflows",
+                "Total: 5,433 workflows across 188 value streams"):
+        if anc not in vsi:
+            hits.append(("value-stream-index.md", 0,
+                         f'missing live census anchor "{anc}"'))
+
+    # ---- (b) the conformance canon's own §1 framing sentence
+    canon_text, canon = _plain(
+        "02-oracle-ebs/oracle-ebs-conformance-standards.md")
+    if "5,432 workflows across 569 process areas" in canon:
+        hits.append(("oracle-ebs-conformance-standards.md",
+                     canon[:canon.index("5,432 workflows across 569 process")
+                           ].count("\n") + 1,
+                     "retired §1 census form '5,432 workflows across 569 "
+                     "process areas' (the canon is 5,433 since batch 30)"))
+    if "(5,433 workflows across 569 process areas)" not in canon:
+        hits.append(("oracle-ebs-conformance-standards.md", 0,
+                     'missing §1 census anchor "(5,433 workflows across 569 '
+                     'process areas)"'))
+
+    # ---- (c) the four domain gap-analysis companions (live navigation
+    # surfaces per Check 76's own preamble): retired census + headcount forms
+    companions = {
+        "01-model-company/workflows/workflow-gap-analysis-finance.md",
+        "01-model-company/workflows/workflow-gap-analysis-it.md",
+        "01-model-company/workflows/workflow-gap-analysis-operations.md",
+        "01-model-company/workflows/workflow-gap-analysis-people.md",
+    }
+    for relp in sorted(companions):
+        _t, body = _plain(relp)
+        name = os.path.basename(relp)
+        for bad in ("6,762", "6,911", "5,426", "5,427", "5,430"):
+            if bad in body:
+                hits.append((name, body[:body.index(bad)].count("\n") + 1,
+                             f"retired canon figure '{bad}' on a live line of "
+                             f"a domain companion (the canon is 6,932 "
+                             f"employees / 5,433 workflows; these surfaces "
+                             f"carry no version footer, so the whole file is "
+                             f"live)"))
+    _t, it = _plain("01-model-company/workflows/workflow-gap-analysis-it.md")
+    for bad in ("393 workflows", "VS-113 (31)"):
+        if bad in it:
+            hits.append(("workflow-gap-analysis-it.md",
+                         it[:it.index(bad)].count("\n") + 1,
+                         f"retired family-roster form '{bad}' (VS-113 is 32 "
+                         f"workflows and the Technology & Data family is 394 "
+                         f"since batch 30)"))
+    for anc in ("**394 workflows**", "VS-113 (32)",
+                "~6,932 M365/email users"):
+        if anc not in it:
+            hits.append(("workflow-gap-analysis-it.md", 0,
+                         f'missing corrected roster anchor "{anc}"'))
+    _t, ops = _plain(
+        "01-model-company/workflows/workflow-gap-analysis-operations.md")
+    for anc in ("payroll of 6,932 employees",
+                "furnishing campaign to ~6,932 employees"):
+        if anc not in ops:
+            hits.append(("workflow-gap-analysis-operations.md", 0,
+                         f'missing corrected headcount anchor "{anc}"'))
+    _t, people = _plain(
+        "01-model-company/workflows/workflow-gap-analysis-people.md")
+    if "~6,932 employees; ~1,200–1,600 new hires/year" not in people:
+        hits.append(("workflow-gap-analysis-people.md", 0,
+                     'missing §1 scope anchor "~6,932 employees; '
+                     '~1,200–1,600 new hires/year"'))
+    return hits
+
+
 def quote_coverage_hits():
     """2026-09-18 fifty-fifth-wave consistency review — structural guard for the
     cross-repo quote-coverage review (02-oracle-ebs/quote-coverage-review.md; it
@@ -4631,6 +4746,9 @@ def main():
     hits.extend(calibrated_volume_hits())
     # 2026-09-23 seventy-fifth-wave consistency review addition (the A6.6 Atlassian canon)
     hits.extend(atlassian_suite_hits())
+    # 2026-09-23 seventy-sixth-wave consistency review addition (batch-30 census
+    # stragglers: VS-index banner/footer, canon §1, domain companions)
+    hits.extend(domain_companion_hits())
     for doc, line, detail in hits:
         print(f"model-doc: {doc}:{line}: {detail}")
     print(f"audit-model-docs: {len(hits)} hit(s) across {len(DOCS)} documents")

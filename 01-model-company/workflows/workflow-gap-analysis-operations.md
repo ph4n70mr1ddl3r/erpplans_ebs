@@ -93,7 +93,7 @@ new-store readiness requires "biometric system installed" — but the **platform
   the HRIS *core-HR*; W561/W594 own exception *processing*) but no one operates the ~420–450-device
   estate, its punch-data payroll interfaces, its offline-outage fallback, or its provisioning on the
   site/employee lifecycle.
-- **Why it matters:** ~3.2–3.6M punch events/year feed the W10/W816 payroll of 6,762 employees —
+- **Why it matters:** ~3.2–3.6M punch events/year feed the W10/W816 payroll of 6,932 employees —
   silent interface failure at a cut-off stalls pay for the whole company; devices fail unseen in hot,
   humid, dust-exposed back-rooms; typhoon/power outages break capture exactly when emergency staffing
   matters; and biometric templates are RA 10173-sensitive data whose separation deletion is currently
@@ -114,7 +114,7 @@ them without ever owning the campaign.
   step budgeted at ~2 hours/month, W1384.7 notes 13th-month inclusion, W43 references tax
   documents "per W643" at separation, and the ESS portal lists "view and download BIR Form 2316
   annually" as a portal capability (W3330-class). W2764 owns the monthly 1601C remittances and
-  W2765 the annual 1604E/1604C + alphalist — but the furnishing campaign to ~6,762 employees, its
+  W2765 the annual 1604E/1604C + alphalist — but the furnishing campaign to ~6,932 employees, its
   acknowledgment evidence, and its reconciliation to those filings are unowned.
 - **Why it matters:** statutory furnishing dependency (the W5508 precedent — statutory-execution
   class → Tier 1); a 2316 file that doesn't tie to the 1604C/alphalist is the standard first BIR

@@ -72,7 +72,7 @@ erpplans/
 ├── 01-model-company/       ← Company profile, requirements, and workflows (LIVE)
 ├── 02-oracle-ebs/          ← Oracle EBS 12.2 platform blueprint (the ERP core of record)
 ├── ebs_docs/               ← Oracle EBS R12.2 official documentation library (376 guides / 133,782 pages; reconciled against this model by 02-oracle-ebs/ebs-documentation-coverage.md)
-├── bpmn/                   ← Generated BPMN 2.0 process models (5,455 processes; regenerates via 07-methodology/generate-bpmn.py)
+├── bpmn/                   ← Generated BPMN 2.0 process models (5,456 processes; regenerates via 07-methodology/generate-bpmn.py)
 ├── dmn/                    ← Generated DMN 1.3 decision models (80 decisions; regenerates via 07-methodology/generate-dmn.py)
 └── 07-methodology/         ← Technical guidelines & reference specs (see 07-methodology/README.md; platform selection recorded in 02-oracle-ebs/)
 ```

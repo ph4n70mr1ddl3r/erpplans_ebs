@@ -132,7 +132,7 @@ ANCHORS = [
     # canon document itself
     (CANON, "Every asset carries a **custodian of record**", "OC-05",
      "canon OC-05 custody-of-record rule"),
-    (CANON, "*Document Version: 1.4 | Date: 2026-09-23", "DOC",
+    (CANON, "*Document Version: 1.5 | Date: 2026-09-23", "DOC",
      "canon version footer"),
     # §7 second pass — W1695 eAM vehicle naming (canon-tracked triage closed)
     (P351, "eAM auto-generates the preventive maintenance schedule", "OC-EAM",
