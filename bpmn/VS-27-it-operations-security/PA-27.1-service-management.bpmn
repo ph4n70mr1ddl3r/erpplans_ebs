@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_PA-27.1-service-management" targetNamespace="https://erpplans.local/bpmn" exporter="erpplans generate-bpmn.py" exporterVersion="1.0">
     <bpmn:process id="W_W48" name="W48. IT Operations &amp; Helpdesk Support" isExecutable="false">
-      <bpmn:documentation>Trigger: User reports issue (phone, email, self-service portal); system generates automated alert; scheduled change window
+      <bpmn:documentation>Trigger: User reports issue (phone, email, or the JSM self-service portal); system generates automated alert; scheduled change window
 Frequency: Continuous; ~800–1,200 support tickets/month across all locations
 Volume: ~6,932 users; 600 POS terminals; 4 WMS Systems; ~500 RF devices; 200+ network locations
 Owner: IT Helpdesk Lead
@@ -45,7 +45,7 @@ Source: workflow W48 — IT Operations &amp; Helpdesk Support</bpmn:documentatio
         <bpmn:flowNodeRef>W48_End28</bpmn:flowNodeRef>
         </bpmn:lane>
       </bpmn:laneSet>
-      <bpmn:startEvent id="W48_Start11" name="User reports issue (phone, email, self-service portal); system generates automated alert…">
+      <bpmn:startEvent id="W48_Start11" name="User reports issue (phone, email, or the JSM self-service portal); system generates…">
         <bpmn:outgoing>W48_Flow31</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:userTask id="W48_Task12" name="User contacts IT Helpdesk via phone, email, or self-service portal; describes…">
@@ -2541,7 +2541,7 @@ Source: workflow W434 — NPC Annual DPO &amp; System Registration</bpmn:documen
         <bpmn:outgoing>W434_Flow15</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:userTask id="W434_Task6" name="System Audit">
-        <bpmn:documentation>Step 1: System Audit: Review the current list of systems processing personal data (Loyalty, ERP, HR, CRM); identify any new systems added since last registration
+        <bpmn:documentation>Step 1: System Audit: Review the current list of systems processing personal data (Loyalty, ERP, HR, CRM, and the Atlassian Cloud suite — JSM/Confluence hold employee requester and profile data, per A6.6); identify any new systems added since last registration
 Responsible (R): IT Manager
 Accountable (A): CIO
 Duration: 2 days</bpmn:documentation>
