@@ -31,6 +31,14 @@ Measurement assumptions (printed with every run):
     Annual' mapped to 365 store-days (store-executed steps), 250 workdays
     (HQ/DC) × the unit's store/DC multiplier (200 / 4 / 1); unparseable
     frequencies are excluded from annualized figures and reported as coverage.
+  * compound Frequencies of the calibration-era shape 'chain-wide N–M per
+    period (n–m per store per period)' parse at the per-store parenthetical:
+    the ladder's phrase bridges never cross parentheses ('[^.;()]*?'), so a
+    chain-wide count is never multiplied by the store/DC scale (2026-09-23
+    paren-blocking fix — W2201's '~1,800–2,400 drops/month (2–3 per store
+    per week)' bridged across the parenthesis and read ~840x high, which is
+    what showed receiving clerks at ~1,300% demand in the post-calibration
+    time-and-motion re-run).
   * capacity: 1,800 net productive hours/FTE/year (HQ knowledge work) and
     1,900 (field shift roles) after PH holidays/leave — tool assumptions for
     decision support, not payroll actuals.
@@ -185,10 +193,16 @@ def events_per_year(freq, field_exec):
         hi = float(hi_s.replace(",", "")) if hi_s else lo
         return (lo + hi) / 2
 
-    # 1. 'N-M ... per store per period' / 'per dc per period'
-    m = re.search(r"(\d[\d,]*)\s*[–-]\s*(\d[\d,]*)\s*[^.;]*?per\s+(store|dc|stores|dcs)\s+per\s+" + period_re, low)
+    # 1. 'N-M ... per store per period' / 'per dc per period'. The bridges are
+    #    paren-blocked ('[^.;()]*?'): in a compound Frequency of the
+    #    calibration-era shape 'chain-wide N–M per period (n–m per store per
+    #    period)' the chain-wide count must never bridge across '(' into the
+    #    per-store tail (the 2026-09-23 fix — that bridge read W2201 ~840x
+    #    high: 1,800–2,400 drops/month x 52 weeks x 200 stores instead of the
+    #    parenthetical 2–3 per store per week the two clauses agree on).
+    m = re.search(r"(\d[\d,]*)\s*[–-]\s*(\d[\d,]*)\s*[^.;()]*?per\s+(store|dc|stores|dcs)\s+per\s+" + period_re, low)
     if not m:
-        m = re.search(r"(\d[\d,]*)\s*[^.;]*?per\s+(store|dc|stores|dcs)\s+per\s+" + period_re, low)
+        m = re.search(r"(\d[\d,]*)\s*[^.;()]*?per\s+(store|dc|stores|dcs)\s+per\s+" + period_re, low)
         if m:
             g = m.groups()
             m = (g[0], None, g[1], g[2]) and m
@@ -199,9 +213,10 @@ def events_per_year(freq, field_exec):
         scale = STORES if scope.startswith("store") else DCS
         return per * PERIOD_MULT[period] * scale, f"explicit-per-{scope}-{period}"
 
-    # 2. 'N-M ... per period' (chain scope as stated)
-    m = re.search(r"(\d[\d,]*)\s*[–-]\s*(\d[\d,]*)\s*[^.;]*?per\s+" + period_re, low) or \
-        re.search(r"(\d[\d,]*)\s*[^.;]*?per\s+" + period_re, low)
+    # 2. 'N-M ... per period' (chain scope as stated) — paren-blocked bridges
+    #    for the same reason as rule 1 (a '(...)' tail must not be crossed).
+    m = re.search(r"(\d[\d,]*)\s*[–-]\s*(\d[\d,]*)\s*[^.;()]*?per\s+" + period_re, low) or \
+        re.search(r"(\d[\d,]*)\s*[^.;()]*?per\s+" + period_re, low)
     if m:
         g = m.groups()
         per = midpoint(g[0], g[1] if len(g) > 2 else None)

@@ -563,6 +563,24 @@ citations 'sourcing model §12.1' and 'architecture §4' are cross-doc).
  injections through the FULL audit, each caught at its exact arm with file and
  line named, fixtures restored sha256-verified byte-identical, clean tree silent
  at 0 hits.
+
+2026-09-23 directed cadence-ladder fix (virtual-gemba-walk.py, by direction:
+implement the recommended permanent fix from the post-calibration gemba/time-
+and-motion re-run): the production-volume calibration minted compound
+Frequency forms of the shape 'chain-wide N–M per period (n–m per store per
+period)' (6 cells corpus-wide, e.g. PA-56.2's W2201), and the time-and-motion
+tool's rule-1/rule-2 phrase bridges crossed the parenthesis, multiplying the
+chain-wide count by the store scale — W2201 read 21.84M events/yr (840x its
+true ~26,000; the two clauses agree arithmetically, the parser did not), and
+the re-run's receiving-clerk ×12.9 / store-manager ×2 demand jumps were this
+artifact, not workload (corrected: receiving clerk 101% → 102%, hot/cold
+membership unchanged pre/post calibration — the calibration itself
+demand-neutral). Guard: gap_fill_straggler_hits gains the cadence-ladder arm
+— the paren-crossing bridge class banned in the tool source, the
+paren-blocked class required exactly 4× (ladder rules 1–2), and the docstring
+measurement-assumption bullet pinned. Teeth: synthetic injection re-minting
+the retired bridge caught at the arm, fixture restored sha256-verified
+byte-identical, clean audit silent at 0 hits.
 """
 
 def _doc_versions():
@@ -3189,6 +3207,38 @@ def gap_fill_straggler_hits():
     if "5,432 workflows" not in vg:
         hits.append(("virtual-gemba-walk.py", 0,
                      'docstring population line must state "5,432 workflows"'))
+    # (e) 2026-09-23 directed cadence-ladder fix — the virtual-gemba frequency
+    # bridges. The production-volume calibration minted compound Frequency
+    # forms of the shape 'chain-wide N–M per period (n–m per store per
+    # period)' (6 cells corpus-wide, e.g. PA-56.2's W2201), and the
+    # time-and-motion tool's rule-1/rule-2 phrase bridges crossed the
+    # parenthesis, multiplying the chain-wide count by the store scale —
+    # W2201 read 21.84M events/yr (840x its true ~26,000; the two clauses
+    # agree arithmetically, the parser did not), and the post-calibration
+    # gemba/time-and-motion re-run's receiving-clerk x12.9 / store-manager x2
+    # demand jumps were this artifact, not workload (corrected: receiving
+    # clerk 101% -> 102%, hot/cold membership unchanged pre/post calibration).
+    # Rule: the paren-crossing bridge class is banned in the tool source, the
+    # paren-blocked class must appear exactly 4 times (ladder rules 1–2, the
+    # dash-form and single-number alternatives), and the docstring
+    # measurement-assumption bullet documenting the rule must stay.
+    if "[^.;]*?per" in vg:
+        hits.append(("virtual-gemba-walk.py", 0,
+                     "retired paren-crossing frequency bridge class "
+                     "'[^.;]*?per' (compound 'chain-wide (per-store)' "
+                     "Frequencies parse 840x high across it — the bridge "
+                     "must be paren-blocked)"))
+    _nb = vg.count("[^.;()]*?per")
+    if _nb != 4:
+        hits.append(("virtual-gemba-walk.py", 0,
+                     f"paren-blocked frequency bridge class '[^.;()]*?per' must "
+                     f"appear exactly 4 times (found {_nb}) — ladder rules 1–2, "
+                     f"dash-form + single-number alternatives"))
+    if "bridges never cross parentheses" not in vg:
+        hits.append(("virtual-gemba-walk.py", 0,
+                     'missing docstring measurement-assumption anchor "bridges '
+                     'never cross parentheses" (the paren-blocking rule must '
+                     'stay documented where the cadence ladder is described)'))
     return hits
 
 
