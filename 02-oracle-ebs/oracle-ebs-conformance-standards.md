@@ -140,8 +140,33 @@ across VS-35, VS-34, VS-40 and VS-15. Eleven findings; all repaired in the same 
 | 11 | W1708 retirement approvals, W1706 audit independence, PA-15.1 three-way match, W1711 gain/loss — verified conformant | OC-09, OC-10, OC-19 | None — recorded conformant |
 
 Tracked for per-workflow triage via the tool's corpus scans: the corpus-wide segregation-of-duties
-role-pair sweep, and the W1695 maintenance-history vehicle naming against the adopted eAM row.
+role-pair sweep, and the W1695 maintenance-history vehicle naming against the adopted eAM row —
+both closed by the corpus-wide review in §7.
 
 ---
 
-*Document Version: 1.0 | Date: 2026-09-23 | **Initial canon.** OC-01–OC-23 issued in seven families; §4 custody-of-record operating model; §5 enforcement contract; §6 initial conformance review — eleven findings, all repaired same-pass.*
+## 7. Corpus-wide conformance review — 2026-09-23 (second pass)
+
+The second pass extended the review from the four custody-chain process areas to the whole corpus
+(all 569 process areas), sweeping the canon's judgment classes mechanically: ad-hoc name-chain
+approvals, self-approval rows, register-owner-as-receiver and register-owner-as-counter role
+pairs, tax-book independence, mass-additions bypasses, two-way matching on capital, unattested
+counts and requester-chosen accounting treatment. The routing, book-derivation, matching and
+treatment classes came back clean corpus-wide. Four findings — all repaired in the same pass:
+
+| # | Finding | Rule | Disposition |
+|---|---|---|---|
+| 1 | W1695's PM-schedule, maintenance-recording and history rows rode generic 'system' naming — the adopted eAM row (module-coverage-map Facility Maintenance) carried every estate except the fixed-asset PM estate the workflow itself describes | OC-08 companion — vehicle true | Fixed — steps 1, 2, 5 name eAM PM scheduling, work-order costing and the eAM work-order history; the eAM coverage-map row now carries the VS-35 estate (W1695 PM work orders, history feeding the W1706 condition assessment) |
+| 2 | W3234 registered and tagged IT hardware without the mass-additions gate and without a custodian of record — IT equipment is the canon's named-individual custody class, and the register entry could not say who held the device | OC-04, OC-05, OC-06 | Fixed — step 3 routes capitalizable lines through the mass additions queue, assigns the named-individual custodian into Assigned-To, and makes the tag-scan confirmation the custody acceptance |
+| 3 | W3235 deployed devices to sites with a CMDB confirmation only — custody moved with no release-and-accept event, leaving Assigned-To stale at the staging custodian | OC-07 | Fixed — steps 2–3 record the staging release and site acceptance, update Assigned-To at deployment, and name the acceptance scan as the custody acceptance on the register |
+| 4 | W3238 refresh waves recovered devices into the spare pool with no custody event — pool inventory drifted unowned between waves | OC-07 | Fixed — step 2 names the release-and-accept into the IT Asset Manager's spare-pool custody on the Assigned-To field |
+
+Recorded conformant at corpus level: position-hierarchy approval routing with tiered value gates
+(the R==A rows in steps tables are escalation phrasing — preparer and approver are different
+roles), the OT asset register as a security view reconciled to the financial register (VS-190),
+calibration devices as eAM maintainable assets under role-of-record custody (VS-115), and the
+IT/OT retirement chains gating derecognition through the VS-35.3 approval workflows (OC-09).
+
+---
+
+*Document Version: 1.1 | Date: 2026-09-23 | **Corpus-wide conformance review.** §7 second pass — all 569 process areas swept across the canon's judgment classes; four findings (eAM vehicle naming on W1695 closing the tracked triage item; custody-of-record chain on W3234/W3235/W3238), all repaired same-pass; corpus-wide SoD census added to the companion tool. Prior v1.0 (2026-09-23): initial canon — OC-01–OC-23 in seven families; §4 custody-of-record operating model; §5 enforcement contract; §6 initial conformance review — eleven findings, all repaired same-pass.*

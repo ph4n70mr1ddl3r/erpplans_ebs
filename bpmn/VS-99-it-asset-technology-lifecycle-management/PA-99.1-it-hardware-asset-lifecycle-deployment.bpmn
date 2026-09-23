@@ -109,8 +109,8 @@ Duration: Per cycle</bpmn:documentation>
         <bpmn:incoming>W3234_Flow12</bpmn:incoming>
         <bpmn:outgoing>W3234_Flow13</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W3234_Task7" name="Receive, asset-tag, and register: assign unique asset tag/serial, record in…">
-        <bpmn:documentation>Step 3: Receive, asset-tag, and register: assign unique asset tag/serial, record in CMDB (W3233) and fixed-asset master (links to VS-35), capture warranty and PO reference; stage for provisioning (W3235)
+      <bpmn:userTask id="W3234_Task7" name="Receive, asset-tag, and register: receive per the PO (three-way match for…">
+        <bpmn:documentation>Step 3: Receive, asset-tag, and register: receive per the PO (three-way match for capitalizable lines); capitalizable purchases flow through the mass additions queue for Fixed Asset review before posting to the register (links to VS-35 W1690); assign unique asset tag/serial, record in CMDB (W3233) and fixed-asset master (links to VS-35), capture warranty and PO reference; assign the custodian of record into the Assigned-To field — a named individual for IT equipment per VS-35 custody policy; the tag-scan confirmation doubles as that custodian&#x27;s custody acceptance, so no device goes productive untagged or unowned; stage for provisioning (W3235)
 Responsible (R): IT Asset Mgr / Receiving
 Accountable (A): IT Asset Manager
 Duration: Per delivery</bpmn:documentation>
@@ -177,7 +177,7 @@ Duration: Per device</bpmn:documentation>
         <bpmn:outgoing>W3235_Flow12</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W3235_Task6" name="Deploy to site: ship to store/DC, Field IT or store staff install and connect…">
-        <bpmn:documentation>Step 2: Deploy to site: ship to store/DC, Field IT or store staff install and connect (POS, scanner, printer, network), verify connectivity to ERP (links to VS-27.2), test offline POS capability (per POS-013 ≥8 hours offline); capture deployment confirmation in CMDB
+        <bpmn:documentation>Step 2: Deploy to site: ship to store/DC, Field IT or store staff install and connect (POS, scanner, printer, network), verify connectivity to ERP (links to VS-27.2), test offline POS capability (per POS-013 ≥8 hours offline); custody transfers as a release-and-accept event — the staging custodian releases the device and the site custodian of record accepts, and the deployment confirmation updates the asset register&#x27;s Assigned-To field so custody is never blank in transit; capture deployment confirmation in CMDB
 Responsible (R): Field IT / Store Ops
 Accountable (A): IT Ops Manager
 Duration: Per site</bpmn:documentation>
@@ -185,7 +185,7 @@ Duration: Per site</bpmn:documentation>
         <bpmn:outgoing>W3235_Flow13</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W3235_Task7" name="Onboard to support: register in monitoring/MDM, assign support owner, document…">
-        <bpmn:documentation>Step 3: Onboard to support: register in monitoring/MDM, assign support owner, document site configuration; for new stores, integrate with VS-37 store-opening commissioning (W227 handover); confirm user acceptance
+        <bpmn:documentation>Step 3: Onboard to support: register in monitoring/MDM, assign support owner, document site configuration; for new stores, integrate with VS-37 store-opening commissioning (W227 handover); confirm user acceptance — the site custodian of record&#x27;s acceptance scan is the custody acceptance on the register (links to VS-35 W1692)
 Responsible (R): IT Ops / Store Ops
 Accountable (A): IT Ops Manager
 Duration: Per deployment</bpmn:documentation>
@@ -399,7 +399,7 @@ Duration: Annual</bpmn:documentation>
         <bpmn:outgoing>W3238_Flow12</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W3238_Task6" name="Execute refresh wave: procure (W3234), provision/deploy (W3235) with minimal…">
-        <bpmn:documentation>Step 2: Execute refresh wave: procure (W3234), provision/deploy (W3235) with minimal operational disruption (after-hours, phased by region), recover and retire old devices (W3239), update CMDB and fixed assets (links to VS-35); manage trade-in/resale value
+        <bpmn:documentation>Step 2: Execute refresh wave: procure (W3234), provision/deploy (W3235) with minimal operational disruption (after-hours, phased by region), recover and retire old devices (W3239) — recovered devices re-custody to the IT Asset Manager&#x27;s spare pool as a release-and-accept event on the asset register&#x27;s Assigned-To field (links to VS-35 W1693), update CMDB and fixed assets (links to VS-35); manage trade-in/resale value
 Responsible (R): IT Ops / Field IT / Procurement
 Accountable (A): IT Ops Manager
 Duration: Per wave</bpmn:documentation>

@@ -532,16 +532,16 @@ Source: workflow W1695 — Asset Maintenance Schedule &amp; History Tracking</bp
       <bpmn:startEvent id="W1695_Start5" name="Asset registration (W1690), manufacturer warranty requirement, or regulatory mandate…">
         <bpmn:outgoing>W1695_Flow14</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:serviceTask id="W1695_Task6" name="System auto-generates preventive maintenance schedule based on asset category…">
-        <bpmn:documentation>Step 1: System auto-generates preventive maintenance schedule based on asset category rules: (a) forklifts: monthly inspection, annual comprehensive service, (b) HVAC: quarterly filter change, annual full service, (c) POS terminals: quarterly cleaning and calibration, (d) delivery vehicles: every 5,000 km oil change, annual registration renewal, (e) generators: monthly test run, quarterly full load test, (f) fire suppression systems: annual certification
-Responsible (R): System
+      <bpmn:serviceTask id="W1695_Task6" name="eAM auto-generates the preventive maintenance schedule as PM work orders based…">
+        <bpmn:documentation>Step 1: eAM auto-generates the preventive maintenance schedule as PM work orders based on asset category rules on the FA-linked eAM asset register: (a) forklifts: monthly inspection, annual comprehensive service, (b) HVAC: quarterly filter change, annual full service, (c) POS terminals: quarterly cleaning and calibration, (d) delivery vehicles: every 5,000 km oil change, annual registration renewal, (e) generators: monthly test run, quarterly full load test, (f) fire suppression systems: annual certification
+Responsible (R): System (eAM PM scheduling)
 Accountable (A): Maintenance Supervisor
 Duration: Automated</bpmn:documentation>
         <bpmn:incoming>W1695_Flow14</bpmn:incoming>
         <bpmn:outgoing>W1695_Flow15</bpmn:outgoing>
       </bpmn:serviceTask>
-      <bpmn:userTask id="W1695_Task7" name="Maintenance team performs scheduled maintenance; records in system: (a) date…">
-        <bpmn:documentation>Step 2: Maintenance team performs scheduled maintenance; records in system: (a) date, technician, work performed, parts used (linked to spare parts inventory), (b) cost (labor hours + parts) — categorized as maintenance expense (not capitalized), (c) next service due date updated automatically
+      <bpmn:userTask id="W1695_Task7" name="Maintenance team executes the eAM work orders; records in the work order: (a)…">
+        <bpmn:documentation>Step 2: Maintenance team executes the eAM work orders; records in the work order: (a) date, technician, work performed, parts used (linked to spare parts inventory via work-order parts issue), (b) cost (labor hours + parts) — work-order costing rolls to GL/AP and is categorized as maintenance expense (not capitalized), (c) next service due date updated automatically
 Responsible (R): Maintenance Technician
 Accountable (A): Maintenance Supervisor
 Duration: 30 min–4 hours/event</bpmn:documentation>
@@ -564,9 +564,9 @@ Duration: 2 hours/month</bpmn:documentation>
         <bpmn:incoming>W1695_Flow17</bpmn:incoming>
         <bpmn:outgoing>W1695_Flow18</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:serviceTask id="W1695_Task10" name="Asset maintenance history available for: (a) physical verification condition…">
-        <bpmn:documentation>Step 5: Asset maintenance history available for: (a) physical verification condition assessment per W1706, (b) vendor warranty claims, (c) replacement decision support (frequency and cost of repairs vs. replacement)
-Responsible (R): System
+      <bpmn:serviceTask id="W1695_Task10" name="Asset maintenance history available from the eAM work-order history on the…">
+        <bpmn:documentation>Step 5: Asset maintenance history available from the eAM work-order history on the FA-linked asset register for: (a) physical verification condition assessment per W1706, (b) vendor warranty claims, (c) replacement decision support (frequency and cost of repairs vs. replacement)
+Responsible (R): System (eAM history)
 Accountable (A): —
 Duration: On-demand</bpmn:documentation>
         <bpmn:incoming>W1695_Flow18</bpmn:incoming>

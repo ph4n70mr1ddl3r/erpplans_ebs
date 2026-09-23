@@ -6,6 +6,12 @@ Companion to 02-oracle-ebs/oracle-ebs-conformance-standards.md (the canon, OC-01
 Issued 2026-09-23 with the initial conformance review of the custody and treatment
 chain (VS-35 fixed assets, VS-34 non-merchandise supplies, VS-40 capex turnover,
 VS-15 invoice matching): eleven findings, all repaired in the same pass.
+Extended 2026-09-23 with the corpus-wide second pass (canon §7 — all 569 process
+areas swept across the canon's judgment classes): four findings repaired — the
+W1695 eAM vehicle naming (closing the tracked triage item, the coverage-map eAM
+row now carrying the VS-35 estate) and the W3234/W3235/W3238 IT-asset custody
+chain (mass additions, custodian of record, tag-scan acceptance, release-and-
+accept deployment and spare-pool re-custody).
 
 Three rule families:
 
@@ -36,6 +42,8 @@ P352 = os.path.join(WF, "VS-35-fixed-asset-management", "PA-35.2-depreciation-fi
 P353 = os.path.join(WF, "VS-35-fixed-asset-management", "PA-35.3-physical-verification-disposal.md")
 P341 = os.path.join(WF, "VS-34-expense-procurement", "PA-34.1-non-merchandise-procurement.md")
 P403 = os.path.join(WF, "VS-40-capex-project-accounting", "PA-40.3-cip-asset-turnover.md")
+P991 = os.path.join(WF, "VS-99-it-asset-technology-lifecycle-management", "PA-99.1-it-hardware-asset-lifecycle-deployment.md")
+COVMAP = os.path.join(REPO, "02-oracle-ebs", "module-coverage-map.md")
 
 ANCHORS = [
     # OC-05 custody of record — W1690 step 2(h) + touchpoint
@@ -80,8 +88,32 @@ ANCHORS = [
     # canon document itself
     (CANON, "Every asset carries a **custodian of record**", "OC-05",
      "canon OC-05 custody-of-record rule"),
-    (CANON, "*Document Version: 1.0 | Date: 2026-09-23", "DOC",
+    (CANON, "*Document Version: 1.1 | Date: 2026-09-23", "DOC",
      "canon version footer"),
+    # §7 second pass — W1695 eAM vehicle naming (canon-tracked triage closed)
+    (P351, "eAM auto-generates the preventive maintenance schedule", "OC-EAM",
+     "W1695 step 1 must name eAM PM scheduling as the vehicle"),
+    (P351, "eAM work orders; records in the work order", "OC-EAM",
+     "W1695 step 2 must record maintenance in the eAM work order"),
+    (P351, "maintenance history available from the eAM work-order history", "OC-EAM",
+     "W1695 step 5 must read history from the eAM work-order history"),
+    (COVMAP, "W1695 category-rule PM work orders", "OC-EAM",
+     "the adopted eAM coverage-map row must carry the VS-35 fixed-asset PM estate"),
+    # §7 second pass — W3234 IT-asset registration custody chain
+    (P991, "mass additions queue for Fixed Asset review", "OC-04",
+     "W3234 step 3 must route capitalizable IT purchases through the mass additions queue"),
+    (P991, "custodian of record into the Assigned-To field", "OC-05",
+     "W3234 step 3 must assign the IT custodian of record into Assigned-To"),
+    (P991, "tag-scan confirmation doubles as that custodian's custody acceptance", "OC-06",
+     "W3234 step 3 must make the tag scan the custody acceptance"),
+    # §7 second pass — W3235 deployment release-and-accept
+    (P991, "custody transfers as a release-and-accept event", "OC-07",
+     "W3235 step 2 must record deployment as a release-and-accept custody event"),
+    (P991, "updates the asset register's Assigned-To field", "OC-07",
+     "W3235 step 2 must update Assigned-To at deployment"),
+    # §7 second pass — W3238 spare-pool re-custody
+    (P991, "spare pool as a release-and-accept event", "OC-07",
+     "W3238 step 2 must re-custody recovered devices into the spare pool by release-and-accept"),
 ]
 
 # --- retired forms: (file, banned substring, description) ---------------------------
@@ -118,6 +150,28 @@ def corpus_scans():
     if "signs the count certification" not in p353_text:
         findings.append(("scan-unattested-count", os.path.relpath(P353, REPO),
                          "physical-verification count carries no custodian attestation"))
+    # scan 4 (canon §7 second pass): corpus-wide segregation-of-duties census —
+    # the register owner (Fixed Asset Accountant) as the Responsible role on a
+    # receiving or count-execution step in ANY process area (register-side joint
+    # roles and review/reconcile/attest cells are exempt per the PA-35.1 rule;
+    # the financial senses 'receivable', 'cash received' and the intercompany
+    # 'receiving entity' are not goods receipt and are exempt)
+    for f in sorted(glob.glob(os.path.join(WF, "VS-*", "PA-*.md"))):
+        for line_no, line in enumerate(open(f, encoding="utf-8"), 1):
+            if not line.startswith("|"):
+                continue
+            cells = [c.strip() for c in line.split("|")]
+            if len(cells) <= 4 or not re.match(r"^\d+", cells[1] or ""):
+                continue
+            role = cells[3]
+            act = cells[2].lower() if len(cells) > 2 else ""
+            if not role.startswith("Fixed Asset Accountant") or "Receiving Clerk" in role:
+                continue
+            if re.search(r"receivable|cash received|receiving entity", act):
+                continue
+            if re.search(r"\breceiv(e|es|ed|ing)\b", act) or re.search(r"\b(perform|execut|conduct)[a-z]*\s+(the\s+)?(physical\s+)?count\b", act):
+                findings.append(("scan-sod-register-owner", os.path.relpath(f, REPO),
+                                 f"line {line_no}: Fixed Asset Accountant is Responsible on a receiving/count step"))
     return findings
 
 
