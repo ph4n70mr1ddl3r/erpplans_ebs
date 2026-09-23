@@ -1,0 +1,70 @@
+# Online Channel & Capability Registry
+
+> **The switchboard for every online sales capability.** One canonical register that records, per capability, whether it is **enabled** live or **disabled** — and for disabled ones, whether the capability is already **prepared** (workflows, integrations and requirements fully documented; enablement is a configuration flip plus a checklist) or **not prepared** (concept only; must be designed before it can be enabled). The operating mandate this registry implements: **BOPIS (store pickup) is the only enabled online sales capability** — customer selects the pickup store at checkout, and every online sale completes as a regular POS sale at that store (W11).
+
+---
+
+## 1. Governing rules
+
+1. **The registry is the single source of truth for capability state.** Checkout, routing, store apps and notification services render/consume only the ENABLED set. A disabled capability is *hidden, not grayed out*: its checkout path is not rendered, its order-intake endpoints reject with a typed "capability disabled" response, and its routing targets are excluded.
+2. **Disabled ≠ deleted.** Every disabled capability keeps its full prepared design — workflows (W-numbers and their custody), integration flows, requirements, controls. Nothing is retired from the corpus when a capability is disabled; the registry row is what changes. Dormant workflows keep their volume documentation as designed capacity (the PA-10.2 pickup-only mandate banner convention, 2026-09-23).
+3. **Runtime configuration vehicle.** The in-house ecommerce platform (already-built, per A6.3) operates a **capability-configuration service** (feature-flag store) that is the runtime twin of this registry: one flag per registry row, read at checkout render, order intake, routing (VS-60), and fulfillment-status fan-out. Flags are configuration data, not code — flipping a flag is an operations act, not a release.
+4. **Change governance.** Any state change is executed through **W5580 Capability Switchboard Operation & Channel Enablement Impact Governance** (PA-113.2, VS-113) — the owning workflow for this registry's state changes: flip-set cross-workflow assessment, volume re-basing, revenue/recording-vehicle impact, headcount & staffing impact assessment (the no-silent-absorption rule), and the change-chain execution (JSM change ticket ↔ Jira issue ↔ Bitbucket branch/PR ↔ Pipelines deploy — A6.6 guardrails 2/4; CAB W1409 for payment/POS-facing changes, two-reviewer rule enforced), with the **registry row updated in the same change** — the registry and the runtime flags must never disagree (drift between them is a Check-class defect: the registry is the documentation of record, the flag store is the execution of record).
+5. **Prepared-not-enabled is the default posture for new capabilities.** New online capabilities are designed and admitted into the corpus in the DISABLED — PREPARED state (workflows land via the gap-analysis admission convention; integrations land in the canonical flow register; requirements land in `erp-requirements.md`), then enabled by checklist when the business needs them. Building ahead costs only documentation; enabling ahead costs operations.
+6. **Enable checklist.** Each row names its minimum enable prerequisites. Enabling = (a) prerequisites met and evidenced, (b) flag flipped through the change chain, (c) registry row state updated in the same change, (d) the dependent canon re-pointed where the capability's workflows assume live volume (staffing/volume cells re-based at enablement, not before).
+
+## 2. Capability states
+
+| State | Meaning |
+|---|---|
+| **ENABLED** | Live. Checkout offers it; order intake accepts it; operations staffed for it. |
+| **ENABLED (PHASED)** | Live where deployed; rollout scope is an explicit open item on the row. |
+| **DISABLED — PREPARED** | Not live. Full prepared design exists (workflows, integrations, requirements); enablement = checklist + config flip. Volume documentation frozen as designed capacity. |
+| **DISABLED — NOT PREPARED** | Not live and not designed. Must pass through PREPARED before it can ever be enabled (prepare-before-need). |
+
+---
+
+## 3. Registry
+
+### 3.1 Storefront channels
+
+| ID | Capability | Definition / scope | State | Vehicles | Enable prerequisites |
+|---|---|---|---|---|---|
+| CAP-C01 | Web storefront (responsive) | buildright.com.ph catalog + checkout; the BOPIS ordering path (ECOM-003) | **ENABLED** | VS-10 PA-10.1; in-house platform (A6.3) | — (live) |
+| CAP-C02 | Mobile app storefront | Branded native app (iOS/Android) — BOPIS ordering, notifications, loyalty (VS-75) | **ENABLED** | VS-75; mobile-app-strategy.md | — (live) |
+| CAP-C03 | Third-party marketplaces (Lazada, Shopee, TikTok Shop, Zalora) | Seller-center operations, catalog/order/inventory sync, marketplace settlement | **DISABLED — PREPARED** | VS-65 (W180 et al.); PA-10.3 | Seller-center staffing model, marketplace fee/P&L model approved, sync flows verified in staging, fulfillment option on the marketplace pinned (BOPIS-first when enabled); enablement re-points VS-65's ~5%-of-ecommerce-revenue canon |
+| CAP-C04 | Social-commerce checkout | Checkout via social platforms (PA-10.3 social half) | **DISABLED — PREPARED** | PA-10.3 | Platform storefront agreements, moderation/CS model, fulfillment option pinned |
+
+### 3.2 Checkout fulfillment options
+
+| ID | Capability | Definition / scope | State | Vehicles | Enable prerequisites |
+|---|---|---|---|---|---|
+| CAP-F01 | **BOPIS — store pickup** (the enabled fulfillment option) | Customer orders online, selects the pickup store, collects there; sale completes as a regular POS sale at that store (Online-Prepaid tender + balance, BIR receipt from POS) | **ENABLED** | W11, W247, VS-171, VS-164; ECOM-003; POS-095 | — (live; the mandate) |
+| CAP-F02 | Smart-locker pickup (BOPIS mode) | Unattended locker handoff with auto-tendered Online-Prepaid completion and BIR-accredited kiosk receipt | **ENABLED (PHASED)** | W247, VS-164 | Phased by locker deployment — store coverage/capex is an explicit open decision; no flag change needed per store deployment |
+| CAP-F03 | Curbside pickup | Kerbside handoff (mPOS tender at the vehicle) | **DISABLED — NOT PREPARED** | — (no workflow yet) | Prepare-before-need: design the handoff/tender mechanics (W206 mPOS at curb), BIR receipt handling, and staging protocol; note the BCP-008 pandemic-mode dependency |
+| CAP-F04 | Home delivery from DC | Parcels shipped from the nearest DC via 3PL | **DISABLED — PREPARED** | W19 (support: W592, W829, W1013); ECOM-023, ECOM-024 | 3PL contracts re-executed, delivery-fee policy re-approved, COD tender decision (CAP-T03), tracking/POD stack re-verified, the frozen 17,200/month design canon re-based at enablement |
+| CAP-F05 | Ship-from-store | Store-fulfilled parcels when DC is out of stock | **DISABLED — PREPARED** | W19B, W1196; ECOM-014 | Store pack stations, carrier handoff windows, W1196 reservation rules re-tuned |
+| CAP-F06 | Same-day / next-day express | Time-definite urban delivery | **DISABLED — PREPARED** | W1155, W1234; ECOM-023 | Express courier SLAs, order-cutoff operations, dense-demand economics validated |
+| CAP-F07 | Drop-ship vendor direct (DSV) | Vendor ships direct to customer | **DISABLED — PREPARED** | W246 | DSV vendor agreements, vendor item-level ATP feeds; on enable, prefer the ship-to-store-for-pickup variant (rides CAP-F01's POS completion) |
+| CAP-F08 | Dark-store quick-commerce | Dedicated urban ecommerce-fulfillment facilities; <2hr promises | **DISABLED — PREPARED** | VS-93, W210 | Site network, sub-2-hour pick model staffed, dense-demand order density (the VS-93 scaling canon is the prepared design, contingent on enablement) |
+| CAP-F09 | Multi-origin split shipment | One order split across fulfillment origins (multi-tracking, per-leg notifications) | **DISABLED — PREPARED** | W1195, W829 | Enable only with two or more fulfillment capabilities live (single-origin is the enabled posture today) |
+
+### 3.3 Tender options (online checkout)
+
+| ID | Capability | Definition / scope | State | Vehicles | Enable prerequisites |
+|---|---|---|---|---|---|
+| CAP-T01 | Prepaid online tender | CC / GCash / Maya / bank transfer via gateway; applied at POS handoff as the **Online-Prepaid** tender | **ENABLED** | W266 (fraud), W267 (recon), CTL-47 | — (live) |
+| CAP-T02 | Pay-at-pickup (reservation-only) | No online capture; full tender at the POS sale on collection | **ENABLED** | W11 steps 1, 9–10 | — (live) |
+| CAP-T03 | Cash on delivery (COD) | Cash collected by the delivering driver | **DISABLED — PREPARED** | E-10 custody chain (VS-142/VS-56) | Delivery capability enabled first (COD is delivery-tied); driver remittance/recon staffing |
+
+---
+
+## 4. Scope boundary
+
+- **In-store POS capabilities are not registry rows** — mixed-basket multi-origin at POS (POS-044), special orders/deposits (W545), endless aisle (W273), layaway (W75) remain live store capabilities regardless of online state; the registry governs the *online* checkout surface only.
+- **Prepared-support workflows** of disabled capabilities (exception handling W98's delivery-failure branches, SLA monitors W591, returns logistics W12B) stay documented as designed capacity; their delivery-origin branches execute only if the capability is enabled.
+- **Integration flows** for disabled capabilities (marketplace sync, 3PL carrier APIs) remain in the canonical integration register (`data-volumes-and-integrations.md` §3) as prepared interfaces — flows are designed, state governs activation.
+
+---
+
+*Document Version: 1.1 | Date: 2026-09-23 | W5580 wired as the registry's owning workflow (rule 4) — the state-change governance prose is now an admitted, tiered workflow (PA-113.2, VS-113; Tier 2) rather than prose-only; corpus 5,432 → 5,433 workflows per batch 30. Prior v1.0 | Date: 2026-09-23 | Initial issuance under the pickup-only BOPIS mandate (2026-09-23 (t)/(u)): 16 capability rows across storefronts, checkout fulfillment options and online tenders — ENABLED: CAP-C01 web, CAP-C02 mobile app, CAP-F01 BOPIS store pickup (the mandate), CAP-T01 prepaid online, CAP-T02 pay-at-pickup; ENABLED (PHASED): CAP-F02 smart-locker pickup (store coverage/capex open); DISABLED — PREPARED (9): home delivery, ship-from-store, express, DSV, dark-store quick-commerce, multi-origin split, marketplaces, social commerce, COD — each with its enable checklist; DISABLED — NOT PREPARED (1): curbside (BCP-008 dependency, prepare-before-need). Runtime twin: capability-configuration service (feature flags) in the already-built platform; state changes ride the built-product change chain with same-change registry-row updates. Companions: profile §8 (v3.6), assumptions v7 (design-decision row), PA-10.1/PA-10.2/PA-10.3 banners, VS-10/VS-60/VS-65/VS-93 README banners, BCP-008 (ECOM wording). No workflow, role, CTL, requirement-count, volume or headcount change — disabled capabilities keep their full prepared corpus (the two-tier doctrine's prepared-not-enabled posture, extended from sourcing to channel capabilities).*
