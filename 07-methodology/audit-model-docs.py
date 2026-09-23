@@ -581,6 +581,33 @@ paren-blocked class required exactly 4× (ladder rules 1–2), and the docstring
 measurement-assumption bullet pinned. Teeth: synthetic injection re-minting
 the retired bridge caught at the arm, fixture restored sha256-verified
 byte-identical, clean audit silent at 0 hits.
+
+2026-09-23 seventy-fifth-wave consistency review: the A6.6 Atlassian incorporation's
+own completeness (the incorporation pass, assumptions v4, had named the four suite
+products but stopped there). (1) Atlassian Guard — the suite's centralized identity
+plane (SAML SSO, enforced MFA, SCIM provisioning, organization audit logs) that
+guardrails 5 and 7 already assumed — was never named; added to the A6.6 row, the
+Design-Decisions row and guardrails 5/7 (assumptions bumped v5). (2) Guardrails 2/4
+phrased 'every production change'/'only path to production' universally over an estate
+(EBS) whose path to production is ADOP online patching (customization-governance §6,
+the W495 monthly train), not Bitbucket Pipelines; scoped to the built-product estate
+with the EBS chain named, and Bitbucket branch permissions (no direct pushes; the
+reviewer rule as a merge check) pinned. (3) The two EBS-adjacent flows the workflows
+assert joined the canonical integration matrix (data-volumes §3 v4.8: rows 21–22 — the
+W616.1 → Jira Software enhancement-request sync and the Atlassian Guard → SIEM audit-
+log stream) with the EBS pattern register mirroring one-for-one (02-oracle-ebs
+integrations.md v1.3; integration_mirror_hits checks endpoint order, this rule pins
+row content). (4) The sourcing model's §8 vendor-commodity estate named the suite
+(v3.9) with §12.2's 'sole vendor product line' parenthetical trued to 'in capability
+sourcing' (OM companion v3.19; headcount banner pin re-pointed). (5) The A6.6 Source
+cell completed to all 16 PA-27.1 workflows (W495/W5521 joined). Guard:
+atlassian_suite_hits joins the guard — anchors required at every repaired surface,
+the retired universal-chain/Guard-less-SIEM forms banned doc-scoped on the assumptions
+doc, and the incorporation pass's retired hedges ('Jira/ServiceNow', 'TestRail',
+'(Confluence, SharePoint, or ITSM built-in KB)') banned repo-wide across the authored
+trees (the methodology-index row exempt where it quotes the literals in its own guard
+description — the Check-46/wave-9 convention). The rule's first live run caught the
+methodology-index OM row still at v3.18 pre-ship.
 """
 
 def _doc_versions():
@@ -3821,6 +3848,154 @@ def calibrated_volume_hits():
     return hits
 
 
+def atlassian_suite_hits():
+    """2026-09-23 seventy-fifth-wave consistency review — the A6.6 Atlassian
+    canon's own completeness guard. The 2026-09-23 incorporation pass
+    (assumptions v4) put the IT toolchain on the Atlassian Cloud suite but (a)
+    never named **Atlassian Guard** — the suite's centralized identity plane
+    (SAML SSO, enforced MFA, SCIM provisioning, organization audit logs) that
+    guardrails 5 and 7 already assumed — (b) left the two EBS-adjacent flows the
+    workflows assert out of the canonical integration matrix (data-volumes §3:
+    the W616.1 self-service portal → Jira Software enhancement-request sync and
+    the Guard organization audit-log stream into the SIEM), (c) left the sourcing
+    model's §8 vendor-commodity estate un-named while §12.2's 'sole vendor
+    product line' parenthetical could be misread against A6.6, and (d) phrased
+    guardrails 2/4 universally over an estate (EBS) whose path to production is
+    ADOP online patching, not Bitbucket Pipelines. This pass trued all four; the
+    rule re-derives the repaired surfaces every run.
+
+    Anchors required (a future Atlassian re-architecture moves the canon → these
+    re-fire until consciously re-pointed — the Check-71 CENSUS-pin contract):
+    the Guard forms at the A6.6 row, the Design-Decisions row, guardrail 5 and
+    guardrail 7; the completed A6.6 Source cell (all 16 PA-27.1 workflows); the
+    built-product scoping + EBS ADOP boundary in guardrails 2/4; the Bitbucket
+    branch-permission form; the two canonical matrix rows and their pattern-
+    register mirrors (02-oracle-ebs integrations §2 — endpoint order is checked
+    by integration_mirror_hits, content pinned here); the W152
+    Guard-provisioning and W132 branch-permission touchpoints (PA-27.1); the
+    W367 Guard audit-log touchpoint (PA-27.3); the sourcing model's §8 Atlassian
+    line and §12.2 'in capability sourcing' true-up.
+
+    Retired forms banned (footer-stripped, doc-scoped unless noted): the
+    universal 'every production change carries the chain' form (the built-product
+    scoping is the canon), the unqualified 'cloud audit logs streamed to the
+    SIEM' form (Guard is the vehicle), the 'IT-staff seats provisioned via
+    directory groups with SSO/MFA' Guard-less form, and — repo-wide across the
+    authored trees — the incorporation pass's retired hedges 'Jira/ServiceNow',
+    'TestRail' and '(Confluence, SharePoint, or ITSM built-in KB)' (the
+    assumptions doc's Design-Decisions alternative legitimately names ServiceNow
+    without the slash form — the slash hedge is the banned signature)."""
+    hits = []
+
+    def _body(relp):
+        return re.split(r"(?m)^\*Date: |^\*Document Version:", open(
+            os.path.join(REPO, relp), encoding="utf-8").read())[0]
+
+    # ---- (a) the assumptions doc: Guard anchors + completed Source cell +
+    # the guardrail 2/4 estate scoping
+    asm = _body("01-model-company/assumptions-and-design-decisions.md")
+    for anc in (
+            "administered under Atlassian Guard (centralized identity: SAML SSO, "
+            "enforced MFA, SCIM provisioning, organization audit logs)",
+            "W152/W615/W372/W495/W5521",
+            "administered under Atlassian Guard (SAML SSO, enforced MFA, SCIM "
+            "provisioning, organization audit logs)",
+            "**End-to-end traceability (built-product estate)**",
+            "JSM change ticket \u2194 Confluence runbook \u2194 ADOP online-patching "
+            "execution",
+            "**Bitbucket is the only path to production for the built-product "
+            "estate**",
+            "branch permissions on the production branches (no direct pushes \u2014 "
+            "merges only through PR with the reviewer rule enforced as a merge "
+            "check",
+            "SSO with MFA enforced through Atlassian Guard",
+            "Atlassian Guard organization audit logs streamed to the SIEM"):
+        if anc not in asm:
+            hits.append(("assumptions-and-design-decisions.md", 0,
+                         f'missing A6.6 anchor "{anc[:72]}..."'))
+    for lit in ("every production change carries the chain",
+                "cloud audit logs streamed to the SIEM"):
+        if lit in asm:
+            hits.append(("assumptions-and-design-decisions.md", 0,
+                         f'retired A6.6 form "{lit}" on a live surface'))
+
+    # ---- (b) the canonical matrix rows + their EBS pattern-register mirrors
+    dv = _body("01-model-company/data-volumes-and-integrations.md")
+    for anc in ("| ERP | Jira Software | Approved ERP enhancement requests "
+                "(the W616.1 self-service portal) synced to the delivery backlog "
+                "| ERP \u2192 Jira | Near real-time (on approval) |",
+                "| Atlassian Cloud | SIEM | Organization audit logs (JSM, Jira, "
+                "Confluence, Bitbucket \u2014 via Atlassian Guard) | Atlassian \u2192 "
+                "SIEM | Continuous (streaming) |"):
+        if anc not in dv:
+            hits.append(("data-volumes-and-integrations.md", 0,
+                         f'missing \u00a73 canonical matrix row "{anc[:60]}..." '
+                         f'(the A6.6 flow canon; the EBS pattern register mirrors '
+                         f'it one-for-one)'))
+    reg = _body("02-oracle-ebs/integrations.md")
+    for anc in ("| ERP \u2192 Jira Software: enhancement-request sync |",
+                "| Atlassian Cloud \u2192 SIEM: organization audit-log stream |"):
+        if anc not in reg:
+            hits.append(("integrations.md (02-oracle-ebs)", 0,
+                         f'missing pattern-register row "{anc[:60]}..." (must '
+                         f'quote the canonical \u00a73 matrix row verbatim)'))
+
+    # ---- (c) the sourcing model's vendor-commodity estate + the \u00a712.2 true-up
+    src = _body("07-methodology/capability-sourcing-and-engineering-model.md")
+    for anc in ("the Atlassian Cloud IT-tooling suite \u2014 JSM/Jira/Confluence/"
+                "Bitbucket under Atlassian Guard, per A6.6",
+                "the doctrine's sole vendor product line in capability sourcing"):
+        if anc not in src:
+            hits.append(("capability-sourcing-and-engineering-model.md", 0,
+                         f'missing sourcing-model anchor "{anc[:64]}..."'))
+
+    # ---- (d) the workflow touchpoints (W152/W132 in PA-27.1; W367 in PA-27.3)
+    pa271 = _body("01-model-company/workflows/VS-27-it-operations-security/"
+                  "PA-27.1-service-management.md")
+    for anc in ("provisioned via Atlassian Guard (SCIM provisioning from the "
+                "corporate directory groups, enforced SSO/MFA policies)",
+                "branch permissions on the production branches (no direct pushes "
+                "\u2014 merges only through PR with the two-reviewer rule enforced "
+                "as a merge check)"):
+        if anc not in pa271:
+            hits.append(("PA-27.1-service-management.md", 0,
+                         f'missing A6.6 touchpoint anchor "{anc[:64]}..."'))
+    pa273 = _body("01-model-company/workflows/VS-27-it-operations-security/"
+                  "PA-27.3-cybersecurity-and-privacy.md")
+    if "the Atlassian Guard organization audit-log stream into the SIEM" not in pa273:
+        hits.append(("PA-27.3-cybersecurity-and-privacy.md", 0,
+                     'missing W367 anchor "the Atlassian Guard organization '
+                     'audit-log stream into the SIEM"'))
+
+    # ---- (e) the retired hedge forms, banned repo-wide across the authored
+    # trees (01-model-company, 02-oracle-ebs, 07-methodology; CHANGELOG exempt
+    # as frozen history; the generated bpmn/dmn trees re-derive from the corpus).
+    # 07-methodology/README.md is exempt: its audit-model-docs Contents row
+    # quotes the retired literals in its own guard description (the Check-46
+    # doctrine-scope adjudication — the arm caught its own author there
+    # pre-ship, the wave-9 precedent; same exemption Check 78 records).
+    hedges = ("Jira/ServiceNow", "TestRail",
+              "(Confluence, SharePoint, or ITSM built-in KB)")
+    for root in ("01-model-company", "02-oracle-ebs", "07-methodology"):
+        for dirpath, _, files in os.walk(os.path.join(REPO, root)):
+            if "__pycache__" in dirpath:
+                continue
+            for fn in files:
+                if not fn.endswith(".md") or fn == "CHANGELOG.md":
+                    continue
+                if os.path.join(dirpath, fn) == os.path.join(
+                        REPO, "07-methodology", "README.md"):
+                    continue
+                relp = os.path.relpath(os.path.join(dirpath, fn), REPO)
+                txt = open(os.path.join(dirpath, fn), encoding="utf-8").read()
+                for h in hedges:
+                    for m in re.finditer(re.escape(h), txt):
+                        hits.append((fn, txt[:m.start()].count("\n") + 1,
+                                     f'retired A6.6 hedge "{h}" on a live '
+                                     f'surface ({relp})'))
+    return hits
+
+
 def quote_coverage_hits():
     """2026-09-18 fifty-fifth-wave consistency review — structural guard for the
     cross-repo quote-coverage review (02-oracle-ebs/quote-coverage-review.md; it
@@ -4454,6 +4629,8 @@ def main():
     hits.extend(gpl_sku_sweep_hits())
     # 2026-09-23 sixty-sixth-wave consistency review addition (calibration volumes)
     hits.extend(calibrated_volume_hits())
+    # 2026-09-23 seventy-fifth-wave consistency review addition (the A6.6 Atlassian canon)
+    hits.extend(atlassian_suite_hits())
     for doc, line, detail in hits:
         print(f"model-doc: {doc}:{line}: {detail}")
     print(f"audit-model-docs: {len(hits)} hit(s) across {len(DOCS)} documents")
