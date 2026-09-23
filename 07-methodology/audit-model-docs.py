@@ -690,6 +690,28 @@ the retired 532/480 forms banned on the footer-stripped body. Teeth: four
 synthetic injections through the full audits, each caught at its exact arm with
 file and line named, fixtures restored via /tmp copies sha256-verified
 byte-identical.
+
+2026-09-23 eightieth-wave consistency review: the (x) B2B disablement's own
+navigation-surface residue — the four value-stream READMEs registry governing
+rule 7 names as the disabled estate (VS-11/VS-43/VS-107/VS-68) carried
+live-present-tense revenue/account claims ('~40% of revenue concentrated in
+~5,400 B2B accounts' and kin) with NO state annotation, while every other
+disabled capability's surfaces carry the registry banner — the PA-10.2
+pickup-only mandate banner convention rule 2 itself names, VS-93's CAP-F08
+banner and VS-65's CAP-C03 banner; the (x) commit bannered the corporate layer
+(TO/profile/assumptions/exec-summary/root-README) but never opened the estate's
+own READMEs, and waves 77–79 swept population cells, quotient cells and the
+registry's own residue — no arm read these four files at state grain. The four
+banners added (the VS-93 template: CAP row, registry link, prepared-design-
+held-at-designed-capacity declaration, W5580 re-enablement, the retail-POS-
+customer fallback where customers are addressed) and the new b2b_estate_hits
+rule derives the README set from rule 7's own enumeration every run — requiring
+the banner class, the registry link, the designed-capacity anchor, W5580 and
+the per-VS CAP pin from the §3.4 vehicles cells (CAP-B01, the owning-department
+row, where no row names the VS) — so a future estate change re-fires the arm
+until consciously re-pointed (the Check-71 CENSUS-pin contract). Teeth: two
+synthetic injections through the full audit, each caught at its exact arm with
+file named, fixtures restored via /tmp copies sha256-verified byte-identical.
 """
 
 def _doc_versions():
@@ -4543,6 +4565,87 @@ def channel_registry_hits():
     return hits
 
 
+def b2b_estate_hits():
+    """2026-09-23 eightieth-wave consistency review — the (x) B2B disablement's
+    navigation-surface residue: the four value-stream READMEs registry governing
+    rule 7 names as the disabled estate (VS-11/VS-43/VS-107/VS-68) carried
+    live-present-tense revenue/account claims ('~40% of revenue concentrated in
+    ~5,400 B2B accounts' and kin) with NO state annotation, while every other
+    disabled capability's surfaces carry the registry banner — the PA-10.2
+    pickup-only mandate banner convention rule 2 itself names, VS-93's CAP-F08
+    banner and VS-65's CAP-C03 banner. The (x) commit bannered the corporate
+    layer (TO/profile/assumptions/exec-summary/root-README) but never opened
+    the estate's own READMEs; waves 77–79 swept population cells, quotient
+    cells and the registry's own residue — no arm read these four files at
+    state grain. Banners added (the VS-93 template). This rule derives the
+    README set from rule 7's own enumeration every run and requires each
+    README to carry the state banner: the class form ('Capability disabled —
+    prepared (CAP-B'), the registry relative link, the designed-capacity
+    anchor, W5580, and its CAP-row pin (the §3.4 vehicles cells naming the
+    VS; CAP-B01 — the estate's owning department row — where no row names
+    it, as for rule-7's own VS-11). A future estate change re-fires the arm
+    until consciously re-pointed (the Check-71 CENSUS-pin contract)."""
+    hits = []
+    reg = open(os.path.join(REPO, "01-model-company",
+                             "channel-capability-registry.md"),
+               encoding="utf-8").read()
+    reg_body = reg.split("*Document Version:")[0]
+    m7 = re.search(r"^\d+\. \*\*The same state discipline governs the B2B "
+                   r"capability estate.*$", reg_body, re.M)
+    if not m7:
+        hits.append(("channel-capability-registry.md", 0,
+                     "governing rule 7 (the B2B capability-estate rule) not "
+                     "found — the estate README arm cannot derive its set"))
+        return hits
+    rule7 = m7.group(0)
+    vs_ids = []
+    for m in re.finditer(r"VS-\d+", rule7):
+        if m.group(0) not in vs_ids:
+            vs_ids.append(m.group(0))
+    # the §3.4 CAP-B rows naming each VS (the per-README CAP pin source)
+    cap_rows = []
+    for m in re.finditer(r"^\| (CAP-B\d+) \|.*$", reg_body, re.M):
+        cap_rows.append((m.group(1), m.group(0)))
+    for vsid in vs_ids:
+        wf_dir = os.path.join(REPO, "01-model-company", "workflows")
+        entry = None
+        for e in sorted(os.listdir(wf_dir)):
+            if re.match(re.escape(vsid) + r"-", e):
+                entry = e
+                break
+        if entry is None:
+            hits.append(("channel-capability-registry.md", 0,
+                         f"rule 7 names {vsid} but no workflows/VS-* directory "
+                         f"matches"))
+            continue
+        rel = f"workflows/{entry}/README.md"
+        text = open(os.path.join(wf_dir, entry, "README.md"),
+                    encoding="utf-8").read()
+        for anchor, why in (
+                ("Capability disabled — prepared (CAP-B",
+                 "the registry state-banner class (the rule-2 PA-10.2 "
+                 "convention; the VS-93 CAP-F08 / VS-65 CAP-C03 precedents)"),
+                ("channel-capability-registry.md",
+                 "the registry link"),
+                ("prepared design held at designed capacity",
+                 "the designed-capacity declaration"),
+                ("W5580",
+                 "the estate's state-change workflow")):
+            if anchor not in text:
+                hits.append((rel, 0,
+                             f"estate README missing required banner anchor "
+                             f'"{anchor}" ({why})'))
+        naming = [cid for cid, row in cap_rows if vsid in row]
+        pins = naming or ["CAP-B01"]
+        if not any(p in text for p in pins):
+            hits.append((rel, 0,
+                         f"estate README carries none of its CAP-row pins "
+                         f"({' / '.join(pins)} — the §3.4 vehicles cells "
+                         f"naming {vsid}" + (", else the owning-department "
+                         "row)" if not naming else ")")))
+    return hits
+
+
 def quote_coverage_hits():
     """2026-09-18 fifty-fifth-wave consistency review — structural guard for the
     cross-repo quote-coverage review (02-oracle-ebs/quote-coverage-review.md; it
@@ -5191,6 +5294,9 @@ def main():
     # 2026-09-23 seventy-eighth-wave consistency review addition (the channel
     # registry joins the doc set; its §3 census + W5580's trigger/Volume pair)
     hits.extend(channel_registry_hits())
+    # 2026-09-23 eightieth-wave consistency review addition (the (x) B2B
+    # estate's own navigation surfaces — the rule-7 README set bannered)
+    hits.extend(b2b_estate_hits())
     for doc, line, detail in hits:
         print(f"model-doc: {doc}:{line}: {detail}")
     print(f"audit-model-docs: {len(hits)} hit(s) across {len(DOCS)} documents")

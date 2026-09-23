@@ -4,6 +4,8 @@
 
 ---
 
+> **Capability disabled — prepared (CAP-B01–B04, [Online Channel & Capability Registry](../../channel-capability-registry.md)):** the Trade / Account Management department — the 7-role B2B selling desk this VS executes (TO §5.3) — is **disabled — not staffed** (2026-09-23 (x)); B2B customers are served as **retail POS customers** at any store, every sale completing as a regular POS sale (W13/W525). The estate below — trade account management, project/B2B sales, wholesale operations — is the **prepared design held at designed capacity**: the ~40%-of-revenue share, the ~5,400-account universe and every volume cell are designed capacity; re-enablement runs through the registry's CAP-B01–B04 enable checklists via W5580 — never a rebuild.
+
 ## Overview
 
 Trade, project & wholesale: trade account management, project sales & B2B, and wholesale operations (~40% of revenue).

@@ -4,6 +4,8 @@
 
 ---
 
+> **Capability disabled — prepared (CAP-B01, [Online Channel & Capability Registry](../../channel-capability-registry.md)):** strategic key-account & enterprise customer management is governed by the disabled Trade / Account Management department (TO §5.3, not staffed — 2026-09-23 (x)); the corporate and strategic trade accounts below are served as **retail POS customers** at any store while the desk is down. The estate below is the **prepared design held at designed capacity**: the ~200-account / top-~500 tier universe and the 10%-of-revenue framing are designed capacity; re-enablement is the registry's CAP-B01 checklist (re-staff the 7 roles) through W5580 — never a rebuild.
+
 ## Overview
 
 Strategic Key Account & Enterprise Customer Management (KAM) workflows for BuildRight Depot Corp. —
