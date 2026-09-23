@@ -785,8 +785,8 @@ Duration: 5 min/batch</bpmn:documentation>
         <bpmn:incoming>W1380_Flow25</bpmn:incoming>
         <bpmn:outgoing>W1380_Flow26</bpmn:outgoing>
       </bpmn:serviceTask>
-      <bpmn:userTask id="W1380_Task13" name="Bank reconciliation (W89): Treasury Analyst matches bank clearance of deposited…">
-        <bpmn:documentation>Step 7: Bank reconciliation (W89): Treasury Analyst matches bank clearance of deposited PDCs; if check clears — status updated to &quot;Cleared&quot;; if check bounces (DAIF/DAUD) — route to W1381
+      <bpmn:userTask id="W1380_Task13" name="PDC clearance matching (feeds W89): Treasury Analyst matches bank clearance of…">
+        <bpmn:documentation>Step 7: PDC clearance matching (feeds W89): Treasury Analyst matches bank clearance of deposited PDCs against the GL Accountant&#x27;s W89 statement lines; if check clears — status updated to &quot;Cleared&quot;; if check bounces (DAIF/DAUD) — route to W1381
 Responsible (R): Treasury Analyst
 Accountable (A): —
 Duration: Part of W89</bpmn:documentation>
@@ -1047,7 +1047,7 @@ Source: workflow W1382 — Customer Electronic Payment (PESONet/InstaPay) Reconc
         <bpmn:lane id="W1382_Lane3" name="AR Supervisor">
         <bpmn:flowNodeRef>W1382_Task12</bpmn:flowNodeRef>
         </bpmn:lane>
-        <bpmn:lane id="W1382_Lane4" name="Treasury Analyst">
+        <bpmn:lane id="W1382_Lane4" name="GL Accountant">
         <bpmn:flowNodeRef>W1382_Task13</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W1382_End14</bpmn:flowNodeRef>
         </bpmn:lane>
@@ -1103,9 +1103,9 @@ Duration: 30 min/week</bpmn:documentation>
         <bpmn:incoming>W1382_Flow22</bpmn:incoming>
         <bpmn:outgoing>W1382_Flow23</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W1382_Task13" name="Monthly: Treasury Analyst reconciles electronic payment bank statements to GL…">
-        <bpmn:documentation>Step 7: Monthly: Treasury Analyst reconciles electronic payment bank statements to GL cash postings; identifies and resolves discrepancies
-Responsible (R): Treasury Analyst
+      <bpmn:userTask id="W1382_Task13" name="Monthly: GL Accountant reconciles electronic payment bank statements to GL cash…">
+        <bpmn:documentation>Step 7: Monthly: GL Accountant reconciles electronic payment bank statements to GL cash postings per W89, independent of payment execution; identifies and resolves discrepancies
+Responsible (R): GL Accountant
 Accountable (A): Controller
 Duration: Part of W89</bpmn:documentation>
         <bpmn:incoming>W1382_Flow23</bpmn:incoming>

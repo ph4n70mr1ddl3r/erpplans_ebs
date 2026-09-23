@@ -1162,90 +1162,92 @@ Volume: ~200 store bank accounts + 4 DC accounts + 5 entity main accounts = ~209
 Owner: Treasury Manager
 Participants: Treasury Analyst, Controller, Bank Relationship Manager, IT (system integration), Entity Finance Leads
 Source: workflow W1468 — Multi-Entity Cash Concentration, Zero-Balance Sweeping &amp; Intercompany Settlement Automation</bpmn:documentation>
-      <bpmn:laneSet id="W1468_LaneSet5">
+      <bpmn:laneSet id="W1468_LaneSet6">
         <bpmn:lane id="W1468_Lane1" name="Treasury Analyst">
-        <bpmn:flowNodeRef>W1468_Task7</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W1468_Task11</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W1468_Start6</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W1468_Task8</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W1468_Start7</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W1468_Lane2" name="System">
-        <bpmn:flowNodeRef>W1468_Task8</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W1468_Task9</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W1468_Lane3" name="Treasury Manager">
-        <bpmn:flowNodeRef>W1468_Task9</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W1468_Task12</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W1468_Task10</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W1468_Task13</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W1468_Lane4" name="Controller">
-        <bpmn:flowNodeRef>W1468_Task10</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W1468_End13</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W1468_Task11</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W1468_Lane5" name="GL Accountant">
+        <bpmn:flowNodeRef>W1468_Task12</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W1468_End14</bpmn:flowNodeRef>
         </bpmn:lane>
       </bpmn:laneSet>
-      <bpmn:startEvent id="W1468_Start6" name="Daily — end-of-business cash positioning; or triggered by zero-balance sweep schedule; or…">
-        <bpmn:outgoing>W1468_Flow16</bpmn:outgoing>
+      <bpmn:startEvent id="W1468_Start7" name="Daily — end-of-business cash positioning; or triggered by zero-balance sweep schedule; or…">
+        <bpmn:outgoing>W1468_Flow17</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:userTask id="W1468_Task7" name="Daily cash position consolidation">
+      <bpmn:userTask id="W1468_Task8" name="Daily cash position consolidation">
         <bpmn:documentation>Step 1: Daily cash position consolidation (morning): Treasury Analyst retrieves previous day&#x27;s bank balances across all ~209 accounts via bank API/EBBS integration: (a) store deposit accounts — cash receipts from W1354 deposits; (b) DC operating accounts; (c) entity main accounts; (d) USD accounts for import payments; (e) investment accounts per W318; Treasury Analyst produces consolidated cash position report by entity and by bank
 Responsible (R): Treasury Analyst
 Accountable (A): Treasury Manager
 Duration: 45 min</bpmn:documentation>
-        <bpmn:incoming>W1468_Flow16</bpmn:incoming>
-        <bpmn:outgoing>W1468_Flow17</bpmn:outgoing>
+        <bpmn:incoming>W1468_Flow17</bpmn:incoming>
+        <bpmn:outgoing>W1468_Flow18</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:serviceTask id="W1468_Task8" name="Zero-balance sweep execution">
+      <bpmn:serviceTask id="W1468_Task9" name="Zero-balance sweep execution">
         <bpmn:documentation>Step 2: Zero-balance sweep execution: For each operating account (stores, DCs), system executes automated end-of-day sweep: (a) accounts with balance &gt; target operating balance: excess swept to entity concentration account at same bank; (b) accounts with balance &lt; target: funded from entity concentration account to maintain minimum operating balance; (c) sweep parameters: store accounts maintain PHP 50,000 minimum; DC accounts maintain PHP 200,000 minimum; entity concentration accounts maintain PHP 5M minimum; (d) Treasury Analyst reviews sweep results next morning and investigates any exceptions (failed sweeps, insufficient concentration balance)
 Responsible (R): System / Treasury Analyst
 Accountable (A): Treasury Manager
 Duration: Automated + 15 min review</bpmn:documentation>
-        <bpmn:incoming>W1468_Flow17</bpmn:incoming>
-        <bpmn:outgoing>W1468_Flow18</bpmn:outgoing>
+        <bpmn:incoming>W1468_Flow18</bpmn:incoming>
+        <bpmn:outgoing>W1468_Flow19</bpmn:outgoing>
       </bpmn:serviceTask>
-      <bpmn:userTask id="W1468_Task9" name="Entity-level cash concentration">
+      <bpmn:userTask id="W1468_Task10" name="Entity-level cash concentration">
         <bpmn:documentation>Step 3: Entity-level cash concentration: (a) Treasury Manager reviews entity-level cash positions weekly: which entities have surplus cash, which have deficits; (b) surplus entities lend to deficit entities via intercompany current accounts per W87 transfer pricing; (c) system records intercompany loan: principal, interest rate (arm&#x27;s-length per BSP guidelines), term, and settlement date; (d) monthly: intercompany interest calculated and recorded per W87 consolidation
 Responsible (R): Treasury Manager
 Accountable (A): CFO
 Duration: 2 hours/week</bpmn:documentation>
-        <bpmn:incoming>W1468_Flow18</bpmn:incoming>
-        <bpmn:outgoing>W1468_Flow19</bpmn:outgoing>
+        <bpmn:incoming>W1468_Flow19</bpmn:incoming>
+        <bpmn:outgoing>W1468_Flow20</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W1468_Task10" name="Monthly intercompany netting &amp; settlement">
+      <bpmn:userTask id="W1468_Task11" name="Monthly intercompany netting &amp; settlement">
         <bpmn:documentation>Step 4: Monthly intercompany netting &amp; settlement: (a) Controller compiles monthly intercompany balances: (i) Depot Inc. → Logistics Inc. (warehousing fees), (ii) Depot Inc. → Digital Commerce Inc. (ecommerce fulfillment fees), (iii) Depot Inc. → Property Management Inc. (lease payments), (iv) Holdings Inc. → all entities (management fees); (b) Treasury Manager runs multi-lateral netting: offset payables and receivables between entities to minimize actual cash movements; (c) net settlements executed via bank transfer between entity accounts; (d) system posts intercompany settlement entries with supporting documentation per W87
 Responsible (R): Controller / Treasury Manager
 Accountable (A): CFO
 Duration: 1 day/month</bpmn:documentation>
-        <bpmn:incoming>W1468_Flow19</bpmn:incoming>
-        <bpmn:outgoing>W1468_Flow20</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:userTask id="W1468_Task11" name="Bank account reconciliation">
-        <bpmn:documentation>Step 5: Bank account reconciliation: (a) Treasury Analyst reconciles all bank statements against ERP cash ledger weekly: (i) deposits per W1354 matched to bank credits, (ii) sweeps matched to bank debit/credit entries, (iii) intercompany settlements matched to bank transfers, (iv) bank fees and charges identified and recorded; (b) unreconciled items investigated and resolved within 5 business days
-Responsible (R): Treasury Analyst
-Accountable (A): Controller
-Duration: 4 hours/week</bpmn:documentation>
         <bpmn:incoming>W1468_Flow20</bpmn:incoming>
         <bpmn:outgoing>W1468_Flow21</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W1468_Task12" name="Quarterly bank relationship review">
+      <bpmn:userTask id="W1468_Task12" name="Bank account reconciliation">
+        <bpmn:documentation>Step 5: Bank account reconciliation: (a) GL Accountant reconciles all bank statements against ERP cash ledger weekly per W89, independent of payment execution (the Treasury Analyst who executes the sweeps and IC settlements of steps 1–4 never reconciles the accounts those steps move): (i) deposits per W1354 matched to bank credits, (ii) sweeps matched to bank debit/credit entries, (iii) intercompany settlements matched to bank transfers, (iv) bank fees and charges identified and recorded; (b) unreconciled items investigated and resolved within 5 business days
+Responsible (R): GL Accountant
+Accountable (A): Controller
+Duration: 4 hours/week</bpmn:documentation>
+        <bpmn:incoming>W1468_Flow21</bpmn:incoming>
+        <bpmn:outgoing>W1468_Flow22</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W1468_Task13" name="Quarterly bank relationship review">
         <bpmn:documentation>Step 6: Quarterly bank relationship review: Treasury Manager meets with each banking partner quarterly: (a) review account structures, sweep arrangements, and service fees; (b) negotiate improved sweep terms, higher deposit rates for concentration accounts; (c) evaluate banking technology (API reliability, EBBS features); (d) assess credit facilities per W319
 Responsible (R): Treasury Manager
 Accountable (A): CFO
 Duration: 2 hours/bank/quarter</bpmn:documentation>
-        <bpmn:incoming>W1468_Flow21</bpmn:incoming>
-        <bpmn:outgoing>W1468_Flow22</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:endEvent id="W1468_End13" name="Complete">
         <bpmn:incoming>W1468_Flow22</bpmn:incoming>
+        <bpmn:outgoing>W1468_Flow23</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:endEvent id="W1468_End14" name="Complete">
+        <bpmn:incoming>W1468_Flow23</bpmn:incoming>
       </bpmn:endEvent>
-      <bpmn:textAnnotation id="W1468_Annotation14">
+      <bpmn:textAnnotation id="W1468_Annotation15">
         <bpmn:text>Controls: - CTL-264 (ensure controlled execution — Payment &amp; Cash Management (PA-08.2).) | - operational: Treasury Manager review and approval gate; operational: periodic reconciliation against source documents
 Owner: Treasury Manager</bpmn:text>
       </bpmn:textAnnotation>
-      <bpmn:association id="W1468_Assoc15" sourceRef="W1468_Annotation14" targetRef="W1468_Start6" associationDirection="None" />
-      <bpmn:sequenceFlow id="W1468_Flow16" sourceRef="W1468_Start6" targetRef="W1468_Task7" />
-      <bpmn:sequenceFlow id="W1468_Flow17" sourceRef="W1468_Task7" targetRef="W1468_Task8" />
+      <bpmn:association id="W1468_Assoc16" sourceRef="W1468_Annotation15" targetRef="W1468_Start7" associationDirection="None" />
+      <bpmn:sequenceFlow id="W1468_Flow17" sourceRef="W1468_Start7" targetRef="W1468_Task8" />
       <bpmn:sequenceFlow id="W1468_Flow18" sourceRef="W1468_Task8" targetRef="W1468_Task9" />
       <bpmn:sequenceFlow id="W1468_Flow19" sourceRef="W1468_Task9" targetRef="W1468_Task10" />
       <bpmn:sequenceFlow id="W1468_Flow20" sourceRef="W1468_Task10" targetRef="W1468_Task11" />
       <bpmn:sequenceFlow id="W1468_Flow21" sourceRef="W1468_Task11" targetRef="W1468_Task12" />
-      <bpmn:sequenceFlow id="W1468_Flow22" sourceRef="W1468_Task12" targetRef="W1468_End13" />
+      <bpmn:sequenceFlow id="W1468_Flow22" sourceRef="W1468_Task12" targetRef="W1468_Task13" />
+      <bpmn:sequenceFlow id="W1468_Flow23" sourceRef="W1468_Task13" targetRef="W1468_End14" />
     </bpmn:process>
     <bpmndi:BPMNDiagram id="W1468_diag">
       <bpmndi:BPMNPlane id="W1468_plane" bpmnElement="W_W1468">
@@ -1253,23 +1255,24 @@ Owner: Treasury Manager</bpmn:text>
         <bpmndi:BPMNShape id="W1468_Lane2_di" bpmnElement="W1468_Lane2" isHorizontal="true"><dc:Bounds x="160" y="250" width="1580" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1468_Lane3_di" bpmnElement="W1468_Lane3" isHorizontal="true"><dc:Bounds x="160" y="420" width="1580" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1468_Lane4_di" bpmnElement="W1468_Lane4" isHorizontal="true"><dc:Bounds x="160" y="590" width="1580" height="170" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1468_Task7_di" bpmnElement="W1468_Task7"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1468_Task8_di" bpmnElement="W1468_Task8"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1468_Task9_di" bpmnElement="W1468_Task9"><dc:Bounds x="820" y="465" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1468_Task10_di" bpmnElement="W1468_Task10"><dc:Bounds x="1030" y="635" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1468_Task11_di" bpmnElement="W1468_Task11"><dc:Bounds x="1240" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1468_Task12_di" bpmnElement="W1468_Task12"><dc:Bounds x="1450" y="465" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1468_Start6_di" bpmnElement="W1468_Start6"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1468_End13_di" bpmnElement="W1468_End13"><dc:Bounds x="1680" y="657" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1468_Annotation14_di" bpmnElement="W1468_Annotation14"><dc:Bounds x="160" y="800" width="360" height="72" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNEdge id="W1468_Flow16_di" bpmnElement="W1468_Flow16"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W1468_Flow17_di" bpmnElement="W1468_Flow17"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W1468_Flow18_di" bpmnElement="W1468_Flow18"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W1468_Flow19_di" bpmnElement="W1468_Flow19"><di:waypoint x="1000" y="505" /><di:waypoint x="1030" y="675" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W1468_Flow20_di" bpmnElement="W1468_Flow20"><di:waypoint x="1210" y="675" /><di:waypoint x="1240" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W1468_Flow21_di" bpmnElement="W1468_Flow21"><di:waypoint x="1420" y="165" /><di:waypoint x="1450" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W1468_Flow22_di" bpmnElement="W1468_Flow22"><di:waypoint x="1630" y="505" /><di:waypoint x="1680" y="675" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W1468_Assoc15_di" bpmnElement="W1468_Assoc15"><di:waypoint x="340" y="800" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNShape id="W1468_Lane5_di" bpmnElement="W1468_Lane5" isHorizontal="true"><dc:Bounds x="160" y="760" width="1580" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1468_Task8_di" bpmnElement="W1468_Task8"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1468_Task9_di" bpmnElement="W1468_Task9"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1468_Task10_di" bpmnElement="W1468_Task10"><dc:Bounds x="820" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1468_Task11_di" bpmnElement="W1468_Task11"><dc:Bounds x="1030" y="635" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1468_Task12_di" bpmnElement="W1468_Task12"><dc:Bounds x="1240" y="805" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1468_Task13_di" bpmnElement="W1468_Task13"><dc:Bounds x="1450" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1468_Start7_di" bpmnElement="W1468_Start7"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1468_End14_di" bpmnElement="W1468_End14"><dc:Bounds x="1680" y="827" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1468_Annotation15_di" bpmnElement="W1468_Annotation15"><dc:Bounds x="160" y="970" width="360" height="72" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="W1468_Flow17_di" bpmnElement="W1468_Flow17"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W1468_Flow18_di" bpmnElement="W1468_Flow18"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W1468_Flow19_di" bpmnElement="W1468_Flow19"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W1468_Flow20_di" bpmnElement="W1468_Flow20"><di:waypoint x="1000" y="505" /><di:waypoint x="1030" y="675" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W1468_Flow21_di" bpmnElement="W1468_Flow21"><di:waypoint x="1210" y="675" /><di:waypoint x="1240" y="845" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W1468_Flow22_di" bpmnElement="W1468_Flow22"><di:waypoint x="1420" y="845" /><di:waypoint x="1450" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W1468_Flow23_di" bpmnElement="W1468_Flow23"><di:waypoint x="1630" y="505" /><di:waypoint x="1680" y="845" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W1468_Assoc16_di" bpmnElement="W1468_Assoc16"><di:waypoint x="340" y="970" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
       </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W5566" name="W5566. Payment-Terminal Tampering &amp; Card-Skimmer Response (PIN-Pad Compromise Event)" isExecutable="false">

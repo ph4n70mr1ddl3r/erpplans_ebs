@@ -68,6 +68,12 @@ cannot be misrouted by judgment at the point of entry. This is the core Oracle d
 | OC-17 | Approvals ride position hierarchies and AME rules above value thresholds — not ad-hoc name chains | Position hierarchy; AME | PA-15, PA-40.1 |
 | OC-18 | High-value capitalization and retirement carry a second gate: capitalization approval for assets at or above the executive threshold, and CFO-visible disposal review with gain/loss reporting | AME rules; FA approval workflows | W1690 step 4; W1708 |
 
+### D2. Cash and banking
+
+| ID | Standard | Oracle EBS mechanism | Model-company surface |
+|---|---|---|---|
+| OC-24 | The bank-statement reconciliation is prepared by a role independent of payment execution: the people who initiate, approve or release payment files never reconcile the accounts they pay from — Treasury owns daily cash visibility (the operational auto-match), the entity GL Accountant owns the monthly statement reconciliation and its sign-off | EBS responsibility design; Cash Management (CE) reconciliation responsibility held apart from the Payables/Treasury payment seats | W89 steps 1–6; W9A step 9; CTL-19 |
+
 ### E. Receiving and matching
 
 | ID | Standard | Oracle EBS mechanism | Model-company surface |
@@ -87,6 +93,12 @@ cannot be misrouted by judgment at the point of entry. This is the core Oracle d
 |---|---|---|---|
 | OC-22 | The sub-ledger reconciles to the GL every period — gross, accumulated depreciation and net book value, per entity, before close | FA-to-GL reconciliation report | W1705 reconciliation |
 | OC-23 | Counting is a program, not an event: the annual wall-to-wall count for fixed assets, cycle counts for controlled-issue supplies, and the tractable pool inside the annual count | Physical inventory and cycle count; the W1706 program | W1706, W1707; OC-14 |
+
+### H. Period close
+
+| ID | Standard | Oracle EBS mechanism | Model-company surface |
+|---|---|---|---|
+| OC-25 | The close runs in the suite's sequence: sub-ledger periods (Inventory, PO, AP, AR, CE) are closed and fully transferred and reconciled to GL before the GL period locks — GL closes last; the new period opens its sub-ledgers first (Inventory → PO → AP → AR) and GL last, so no transaction posts to a closed period | Accounting periods (sub-ledger and GL close/open order); the close calendar | W9A step 17 |
 
 ## 4. Custody of record — the operating model
 
@@ -169,4 +181,36 @@ IT/OT retirement chains gating derecognition through the VS-35.3 approval workfl
 
 ---
 
-*Document Version: 1.1 | Date: 2026-09-23 | **Corpus-wide conformance review.** §7 second pass — all 569 process areas swept across the canon's judgment classes; four findings (eAM vehicle naming on W1695 closing the tracked triage item; custody-of-record chain on W3234/W3235/W3238), all repaired same-pass; corpus-wide SoD census added to the companion tool. Prior v1.0 (2026-09-23): initial canon — OC-01–OC-23 in seven families; §4 custody-of-record operating model; §5 enforcement contract; §6 initial conformance review — eleven findings, all repaired same-pass.*
+## 8. Corpus-wide conformance review — 2026-09-23 (third pass: close and cash)
+
+The third pass extended the review to the close-and-cash classes the first two passes did not
+sweep: the bank-reconciliation preparer's independence from payment execution, the GL close
+sequence, the receipt-application/credit-memo pair, the count-executor/adjustment-approver pair,
+and credit checking before order release. Two findings — both repaired in the same pass:
+
+| # | Finding | Rule | Disposition |
+|---|---|---|---|
+| 1 | W89's reconciliation preparer and sign-off was the Treasury Analyst — the same role that initiates and releases payment files (the W320.1 maker seat, W1362 steps 3–6) — so the payment maker reconciled the very accounts they paid from; the classic disbursement-fraud window the maker-checker design of W320 never closed on the accounting-control side | OC-24 | Fixed — W89 steps 1–6 and the aging follow-up re-seated to the entity GL Accountant (register mandate 'Entity books: GL, reconciliations, accruals', no payment-execution seat); the Background and touchpoints name the independence principle; W9A step 9 re-pointed to the same convention; CTL-19's owner and activity cells trued (v14) |
+| 2 | W9A step 17 locked the period with no close-order discipline — the corpus never stated which periods close first, and the new period's open order was undefined, so a sub-ledger could stay open while GL locked (or a transaction post to a closed period at month-open) | OC-25 | Fixed — step 17 now verifies the suite's sequence: sub-ledgers (Inventory, PO, AP, AR, CE) closed and fully transferred and reconciled to GL before GL locks (bank per W89, fixed assets per W1705, payroll per W10); GL closes last; the new period opens Inventory → PO → AP → AR before GL |
+
+Recorded conformant at corpus level: W1362 step 8's next-day bank debit-confirmation against the
+payment batch (a payment-completeness check by the executor — distinct from the accounting
+reconciliation, which is W89's and now independent); the daily W30 treasury auto-match
+(operational cash visibility, not the monthly control); the W1468 weekly sweep/deposit
+statement matching and the W1382 monthly electronic-payment statement reconciliation (both
+re-seated to the GL Accountant as finding-class repairs above); the W1380 PDC-clearance
+matching step (a Treasury operations status feed into W89, relabeled to its true sense); the
+PA-15.2 monthly payment-channel reconciliation (processor totals vs settlement — a channel
+operations control, not the statement-to-GL reconciliation) and the PA-18.2 bank-fee
+monitoring (a bank-relationship duty) — both adjudicated exempt from OC-24; AR receipt
+application beside approver-gated credit memos (W8.9/W8.11 — the §7 adjudication stands); the
+DC cycle-count chain (blind recount by the Inventory Control Clerk, adjustment approval by the
+DC Operations Manager — count executor never approves their own count, W1413.3/W1413.8);
+credit checking before order release (the W164.3 validation engine and the W229
+exception-and-escalation workflow). The third pass also adds the bank-reconciliation census
+scan to the companion tool: PA-18.1's daily-visibility steps exempt, every other
+bank-reconciliation step naming a payment-execution seat reports for triage.
+
+---
+
+*Document Version: 1.2 | Date: 2026-09-23 | **Close-and-cash conformance review.** §8 third pass — the bank-reconciliation preparer seated independent of payment execution (OC-24: W89 re-owned to the entity GL Accountant, W9A step 9 re-pointed, CTL-19 trued) and the GL close sequence codified (OC-25: W9A step 17 sub-ledgers-before-GL); new rules OC-24/OC-25 in families D2/H; two findings, all repaired same-pass. Prior v1.1 | Date: 2026-09-23 | **Corpus-wide conformance review.** §7 second pass — all 569 process areas swept across the canon's judgment classes; four findings (eAM vehicle naming on W1695 closing the tracked triage item; custody-of-record chain on W3234/W3235/W3238), all repaired same-pass; corpus-wide SoD census added to the companion tool. Prior v1.0 (2026-09-23): initial canon — OC-01–OC-23 in seven families; §4 custody-of-record operating model; §5 enforcement contract; §6 initial conformance review — eleven findings, all repaired same-pass.*

@@ -47,7 +47,7 @@ Duration: —</bpmn:documentation>
 Frequency: Monthly
 Volume: 5 entities × 12 months = 60 entity-month closes/year
 Owner: Chief Accountant / Controller
-Participants: Chief Accountant, AP Supervisor, AR Supervisor, Treasury Analyst, Tax Accountant, Cost Accountant, CFO
+Participants: Chief Accountant, AP Supervisor, AR Supervisor, Treasury Analyst, Tax Accountant, Cost Accountant, GL Accountant, CFO
 Source: workflow W9A — Month-End Close</bpmn:documentation>
       <bpmn:laneSet id="W9A_LaneSet10">
         <bpmn:lane id="W9A_Lane1" name="Chief Accountant">
@@ -70,7 +70,7 @@ Source: workflow W9A — Month-End Close</bpmn:documentation>
         <bpmn:flowNodeRef>W9A_Task17</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W9A_Task18</bpmn:flowNodeRef>
         </bpmn:lane>
-        <bpmn:lane id="W9A_Lane5" name="Treasury Analyst">
+        <bpmn:lane id="W9A_Lane5" name="GL Accountant">
         <bpmn:flowNodeRef>W9A_Task20</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W9A_Lane6" name="System">
@@ -156,8 +156,8 @@ Duration: 30 min</bpmn:documentation>
         <bpmn:outgoing>W9A_Flow40</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W9A_Task20" name="Bank reconciliation: Match bank statements to GL cash accounts (all bank…">
-        <bpmn:documentation>Step 9: Bank reconciliation: Match bank statements to GL cash accounts (all bank accounts, all entities)
-Responsible (R): Treasury Analyst
+        <bpmn:documentation>Step 9: Bank reconciliation: Match bank statements to GL cash accounts (all bank accounts, all entities) — executed by the entity GL Accountant independent of payment execution per W89 (the roles that initiate, approve or release payment files never reconcile the accounts they pay from); Treasury retains the daily operational auto-match in W30
+Responsible (R): GL Accountant
 Accountable (A): Controller
 Duration: 3 hours</bpmn:documentation>
         <bpmn:incoming>W9A_Flow40</bpmn:incoming>
@@ -219,8 +219,8 @@ Duration: 3 hours</bpmn:documentation>
         <bpmn:incoming>W9A_Flow47</bpmn:incoming>
         <bpmn:outgoing>W9A_Flow48</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W9A_Task28" name="Final close: lock period in system">
-        <bpmn:documentation>Step 17: Final close: lock period in system
+      <bpmn:userTask id="W9A_Task28" name="Final close: verify the close ran in the suite&#x27;s sequence — sub-ledger periods…">
+        <bpmn:documentation>Step 17: Final close: verify the close ran in the suite&#x27;s sequence — sub-ledger periods (Inventory, PO, AP, AR and Cash Management) are closed and fully transferred and reconciled to GL (bank per W89, fixed assets per W1705, payroll bank file per W10) BEFORE the GL period locks, GL closes last; then lock the GL period; at month-open the new period&#x27;s sub-ledgers open first (Inventory → PO → AP → AR) and GL last, so no transaction posts to a closed period
 Responsible (R): Controller
 Accountable (A): CFO
 Duration: 15 min</bpmn:documentation>
@@ -1471,11 +1471,11 @@ Owner: Cost Accountant</bpmn:text>
       <bpmn:documentation>Trigger: Bank statements received (monthly paper/electronic from BDO, BPI, Metrobank, Chinabank across 5 entities)
 Frequency: Monthly per bank account per entity; ~210 bank accounts (5 entity main operating accounts, 5 USD import accounts, ~200 store deposit accounts for daily cash collection per W30/W1202, plus DC and payroll accounts)
 Volume: ~3,000–4,000 bank statement lines/month across all accounts
-Owner: Treasury Analyst
-Participants: Treasury Analyst, Controller, AP Clerk, AR Clerk
+Owner: GL Accountant
+Participants: GL Accountant, Treasury Analyst, Controller
 Source: workflow W89 — Bank Reconciliation</bpmn:documentation>
       <bpmn:laneSet id="W89_LaneSet4">
-        <bpmn:lane id="W89_Lane1" name="Treasury Analyst">
+        <bpmn:lane id="W89_Lane1" name="GL Accountant">
         <bpmn:flowNodeRef>W89_Task6</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W89_Task8</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W89_Task9</bpmn:flowNodeRef>
@@ -1497,8 +1497,8 @@ Source: workflow W89 — Bank Reconciliation</bpmn:documentation>
         <bpmn:outgoing>W89_Flow18</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:userTask id="W89_Task6" name="Statement import">
-        <bpmn:documentation>Step 1: Statement import: Treasury Analyst imports electronic bank statements (BDO, BPI, Metrobank, Chinabank formats) into Cash Management (CE, fit-gap A4); for accounts receiving paper statements only, AP Clerk scans and enters key transactions manually
-Responsible (R): Treasury Analyst / AP Clerk
+        <bpmn:documentation>Step 1: Statement import: GL Accountant imports electronic bank statements (BDO, BPI, Metrobank, Chinabank formats) into Cash Management (CE, fit-gap A4); for accounts receiving paper statements only, the GL Accountant scans and enters key transactions manually — the statement load sits with the reconciler so no payment-execution role touches reconciliation data
+Responsible (R): GL Accountant
 Accountable (A): Controller
 Duration: 30 min/account</bpmn:documentation>
         <bpmn:incoming>W89_Flow18</bpmn:incoming>
@@ -1513,16 +1513,16 @@ Duration: Automated</bpmn:documentation>
         <bpmn:outgoing>W89_Flow20</bpmn:outgoing>
       </bpmn:serviceTask>
       <bpmn:userTask id="W89_Task8" name="Review auto-matched items">
-        <bpmn:documentation>Step 3: Review auto-matched items: Treasury Analyst reviews auto-matched items for accuracy; system displays match confidence score (high: exact reference + amount match; medium: amount match only; low: fuzzy match); high-confidence matches auto-accepted; medium and low reviewed manually
-Responsible (R): Treasury Analyst
+        <bpmn:documentation>Step 3: Review auto-matched items: GL Accountant reviews auto-matched items for accuracy; system displays match confidence score (high: exact reference + amount match; medium: amount match only; low: fuzzy match); high-confidence matches auto-accepted; medium and low reviewed manually
+Responsible (R): GL Accountant
 Accountable (A): Controller
 Duration: 15 min/account</bpmn:documentation>
         <bpmn:incoming>W89_Flow20</bpmn:incoming>
         <bpmn:outgoing>W89_Flow21</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W89_Task9" name="Manual matching — unmatched items">
-        <bpmn:documentation>Step 4: Manual matching — unmatched items: Treasury Analyst investigates unmatched bank statement lines: (a) bank charges and fees (not in GL — post as bank charges expense), (b) deposit discrepancies (store cash deposit variance per W5F), (c) timing differences (checks issued but not yet cleared), (d) unknown items requiring investigation, (e) payment gateway settlement deposits (cross-reference W99), (f) interest income/expense (post as incurred)
-Responsible (R): Treasury Analyst
+        <bpmn:documentation>Step 4: Manual matching — unmatched items: GL Accountant investigates unmatched bank statement lines: (a) bank charges and fees (not in GL — post as bank charges expense), (b) deposit discrepancies (store cash deposit variance per W5F), (c) timing differences (checks issued but not yet cleared), (d) unknown items requiring investigation, (e) payment gateway settlement deposits (cross-reference W99), (f) interest income/expense (post as incurred)
+Responsible (R): GL Accountant
 Accountable (A): Controller
 Duration: 30 min/account</bpmn:documentation>
         <bpmn:incoming>W89_Flow21</bpmn:incoming>
@@ -1530,15 +1530,15 @@ Duration: 30 min/account</bpmn:documentation>
       </bpmn:userTask>
       <bpmn:userTask id="W89_Task10" name="Outstanding items review">
         <bpmn:documentation>Step 5: Outstanding items review: (a) Outstanding checks &gt; 90 days: investigate with AP — stale check per Philippine law (6 months); if stale, AP re-issues or reverses; (b) Outstanding deposits &gt; 7 days: investigate with store operations — missing deposit; (c) Unrecorded bank fees: post to bank charges expense; (d) FX gains/losses on USD accounts: post FX revaluation per W9A.5a
-Responsible (R): Treasury Analyst
+Responsible (R): GL Accountant
 Accountable (A): Controller
 Duration: 15 min/account</bpmn:documentation>
         <bpmn:incoming>W89_Flow22</bpmn:incoming>
         <bpmn:outgoing>W89_Flow23</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W89_Task11" name="Reconciliation sign-off">
-        <bpmn:documentation>Step 6: Reconciliation sign-off: Treasury Analyst completes bank reconciliation per account; system generates reconciliation report showing: opening GL balance, plus/minus reconciling items, ending GL balance, ending bank balance, unreconciled difference (must be zero); Treasury Analyst signs off electronically
-Responsible (R): Treasury Analyst
+        <bpmn:documentation>Step 6: Reconciliation sign-off: GL Accountant completes the bank reconciliation per account independent of payment execution (the Treasury Analyst and AP Clerk roles that initiate, approve or release payment files — W320.1, W1362 — never reconcile the accounts they pay from; the entity GL Accountant&#x27;s register mandate is &#x27;Entity books: GL, reconciliations, accruals&#x27; and holds no payment-execution seat); system generates reconciliation report showing: opening GL balance, plus/minus reconciling items, ending GL balance, ending bank balance, unreconciled difference (must be zero); GL Accountant signs off electronically
+Responsible (R): GL Accountant
 Accountable (A): Controller
 Duration: 5 min/account</bpmn:documentation>
         <bpmn:incoming>W89_Flow23</bpmn:incoming>
@@ -1561,7 +1561,7 @@ Duration: Automated</bpmn:documentation>
         <bpmn:outgoing>W89_Flow26</bpmn:outgoing>
       </bpmn:serviceTask>
       <bpmn:serviceTask id="W89_Task14" name="Aging of reconciling items">
-        <bpmn:documentation>Step 9: Aging of reconciling items: System tracks aging of all unreconciled items: items &gt; 30 days flagged for Treasury Analyst follow-up; items &gt; 60 days escalated to Controller; items &gt; 90 days require write-off or resolution per Controller
+        <bpmn:documentation>Step 9: Aging of reconciling items: System tracks aging of all unreconciled items: items &gt; 30 days flagged for GL Accountant follow-up; items &gt; 60 days escalated to Controller; items &gt; 90 days require write-off or resolution per Controller
 Responsible (R): System
 Accountable (A): Controller
 Duration: Automated</bpmn:documentation>
@@ -1573,7 +1573,7 @@ Duration: Automated</bpmn:documentation>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W89_Annotation16">
         <bpmn:text>Controls: - CTL-19 (ensure bank reconciliation completeness.); CTL-47 (ensure ecommerce payment reconciliation accuracy.) | - operational: Treasury Analyst review and approval gate; operational: periodic reconciliation against source documents
-Owner: Treasury Analyst</bpmn:text>
+Owner: GL Accountant</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W89_Assoc17" sourceRef="W89_Annotation16" targetRef="W89_Start5" associationDirection="None" />
       <bpmn:sequenceFlow id="W89_Flow18" sourceRef="W89_Start5" targetRef="W89_Task6" />

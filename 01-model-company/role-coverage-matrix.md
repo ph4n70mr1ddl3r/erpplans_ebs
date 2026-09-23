@@ -50,18 +50,18 @@
 | FP&A Manager | Finance & Accounting | 1 | 26 | 13 | 51 | 9 | 34 | 6 | 23 | 5 |
 | Senior Revenue Accountant | Finance & Accounting | 1 | 26 | 6 | 74 | 0 | 30 | 9 | 20 | 1 |
 | Leases Accountant | Finance & Accounting | 1 | 25 | 5 | 60 | 0 | 25 | 6 | 17 | 2 |
-| Treasury Analyst | Finance & Accounting | 3 | 24 | 64 | 217 | 28 | 88 | 56 | 26 | 6 |
-| AR Clerk | Finance & Accounting | 2 | 17 | 50 | 132 | 20 | 67 | 41 | 22 | 4 |
+| Treasury Analyst | Finance & Accounting | 3 | 23 | 64 | 209 | 28 | 88 | 56 | 26 | 6 |
+| AR Clerk | Finance & Accounting | 2 | 17 | 49 | 132 | 20 | 66 | 40 | 22 | 4 |
 | AP Manager | Finance & Accounting | 1 | 17 | 33 | 65 | 30 | 41 | 18 | 20 | 3 |
 | Logistics & Cost Finance Analyst | Finance & Accounting | 3 | 15 | 4 | 26 | 14 | 16 | 5 | 7 | 4 |
 | FP&A Analyst | Finance & Accounting | 3 | 12 | 20 | 34 | 2 | 27 | 8 | 8 | 11 |
 | AP Supervisor | Finance & Accounting | 2 | 11 | 26 | 52 | 70 | 51 | 28 | 22 | 1 |
 | Consolidation & Intercompany Accountant | Finance & Accounting | 1 | 7 | 16 | 22 | 1 | 19 | 15 | 4 | 0 |
-| AP Clerk | Finance & Accounting | 13 | 6 | 69 | 119 | 8 | 93 | 44 | 42 | 7 |
+| AP Clerk | Finance & Accounting | 13 | 6 | 68 | 118 | 8 | 92 | 43 | 42 | 7 |
 | Collections Specialist | Finance & Accounting | 2 | 4 | 13 | 16 | 1 | 15 | 7 | 8 | 0 |
 | Revenue Assurance Analyst | Finance & Accounting | 1 | 3 | 0 | 6 | 2 | 4 | 1 | 3 | 0 |
 | S&OP Finance Partner | Finance & Accounting | 1 | 2 | 8 | 10 | 0 | 8 | 0 | 3 | 5 |
-| GL Accountant (one per entity) | Finance & Accounting | 5 | 0 | 3 | 2 | 0 | 4 | 2 | 2 | 0 |
+| GL Accountant (one per entity) | Finance & Accounting | 5 | 1 | 5 | 10 | 0 | 8 | 6 | 2 | 0 |
 | Category Manager | Merchandising & Buying | 5 | 127 | 616 | 656 | 560 | 733 | 119 | 482 | 132 |
 | VP for Merchandising | Merchandising & Buying | 1 | 59 | 182 | 123 | 919 | 542 | 87 | 353 | 102 |
 | Merchandise Planner / Allocator | Merchandising & Buying | 6 | 51 | 105 | 171 | 23 | 122 | 12 | 91 | 19 |
