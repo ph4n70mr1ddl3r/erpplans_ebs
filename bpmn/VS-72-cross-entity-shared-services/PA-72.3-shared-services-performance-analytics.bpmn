@@ -228,7 +228,7 @@ Owner: Consolidation Accountant</bpmn:text>
     <bpmn:process id="W_W2593" name="W2593. Shared Services Staff Productivity &amp; Capacity Planning" isExecutable="false">
       <bpmn:documentation>Trigger: Quarterly planning cycle
 Frequency: Quarterly
-Volume: ~532 HQ staff across shared services (profile §3.3, promoted 2026-09-14; gap-filled 2026-09-18)
+Volume: ~525 active HQ staff across shared services (profile §3.3, promoted 2026-09-14; gap-filled 2026-09-18; HQ 525 active of the TO&#x27;s 532-role design — Trade / Account Management disabled — prepared 2026-09-23, registry CAP-B01)
 Owner: HR Business Partner
 Participants: HR BP, Finance Controller, COO
 Source: workflow W2593 — Shared Services Staff Productivity &amp; Capacity Planning</bpmn:documentation>

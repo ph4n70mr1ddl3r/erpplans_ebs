@@ -8,7 +8,8 @@
 
 Employee uniform, workwear & PPE-issuance program workflows for BuildRight Depot Corp. — owning
 the **enterprise-wide branded-apparel and personal-protective-equipment program** across ~6,925
-employees (~5,800 store + ~600 DC + ~532 HQ) plus ~10–20% contingent/outsourced labor (security,
+employees (~5,800 store + ~600 DC + ~525 HQ active — the TO's 532-role design retains the
+disabled—prepared Trade department) plus ~10–20% contingent/outsourced labor (security,
 janitorial, promodizers, agency per VS-98) and vendor/3PL site-access personnel: role-based
 uniform/workwear standards, branded-apparel design & procurement, the PPE issuance & fit-testing
 program, industrial laundering, sizing/fit, damage/loss/replacement, role-change & separation

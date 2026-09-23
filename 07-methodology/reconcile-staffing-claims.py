@@ -58,6 +58,51 @@ RETIRED_HC_CANON = "6,932"   # retired 2026-09-23 (x): Trade / Account Managemen
 # prepared (registry CAP-B01); the ACTIVE employee canon is 6,925 (HQ 525 active of the
 # 532-role design). Version footers and dated history lines are exempt.
 
+# 2026-09-23 seventy-ninth-wave review: the (x) sweep's own residue — live
+# population cells still sizing off the RETIRED HQ-ACTIVE canon (532) after the
+# same sweep had re-based their neighbors' 6,932 totals (the half-repaired-cell
+# class, the seventy-seventh-wave precedent): PA-19.3's W5498 eligible-population
+# cell, PA-40.2's allocation-methodology HQ component, PA-138.2's W4182 canteen
+# Volume, PA-72.3's W2593 shared-services Volume, PA-34.1's laptop-refresh
+# step/touchpoint pair, PA-22.1's functions-table preamble + reconciliation
+# recital, PA-13.1's trade-desk staffing bullet and VS-169's README population
+# decomposition. The banned joined forms name the retired active sense; the
+# required anchors pin the repaired cells so a future census move re-fires the
+# arm until consciously re-pointed (the Check-71 CENSUS-pin contract). The TO's
+# design-register citations ('the 532/6,932 design', '532-role design') are the
+# settlement's own vocabulary and do not match the joined forms.
+RETIRED_HQ_ACTIVE_FORMS = [
+    "~532 staff",
+    "532 HQ staff",
+    "532 HQ +",
+    "+ ~532 HQ",
+    "total HQ = 532",
+    "532 HQ total",
+    "532 HQ headcount",
+]
+REQ_HQ_ACTIVE_ANCHORS = [
+    ("PA-19.3-workforce-management.md",
+     "HQ corporate functions (~525 active staff, profile §3.3/§11.1"),
+    ("PA-40.2-project-cost-tracking.md",
+     "Holdings/HQ: ~525 active per profile §3.3/§11.1"),
+    ("PA-138.2-hard-and-soft-fm-service-operations.md",
+     "HQ (~525 active staff, profile §3.3"),
+    ("PA-72.3-shared-services-performance-analytics.md",
+     "~525 active HQ staff across shared services"),
+    ("PA-34.1-non-merchandise-procurement.md",
+     "525 active HQ + DC office staff"),
+    ("PA-22.1-regulatory-permits-and-licenses.md",
+     "the active org is **HQ 525**"),
+    ("PA-22.1-regulatory-permits-and-licenses.md",
+     "active HQ 525, the design register's 532 retained"),
+    ("PA-13.1-customer-support-and-complaints.md",
+     "525 active of the 532-role design"),
+]
+REQ_HQ_ACTIVE_README_ANCHORS = [
+    ("VS-169-employee-uniform-workwear-and-ppe-issuance-program/README.md",
+     "~525 HQ active"),
+]
+
 DEPT_TOTALS = {
     "executive office": 7, "merchandising": 43, "finance & accounting": 62,
     "finance and accounting": 62, "finance": 62, "supply chain & logistics": 46,
@@ -299,6 +344,44 @@ def main():
             hits.append(("retired-headcount", rel, line,
                          "6,932 (retired active canon — 6,925 since the "
                          "trade-desk disablement, 2026-09-23 (x))"))
+    # 2026-09-23 seventy-ninth wave: the retired HQ-ACTIVE forms (532) banned on
+    # live PA/README lines, and the repaired cells' two-canon anchors required —
+    # the (x) sweep's own residue (see the module-head notes).
+    for f in files + readme_files:
+        text = open(f, encoding="utf-8").read()
+        rel = os.path.relpath(f, REPO)
+        for lit in RETIRED_HQ_ACTIVE_FORMS:
+            for m in re.finditer(re.escape(lit), text, re.I):
+                line = text[:m.start()].count("\n") + 1
+                hits.append(("retired-hq-active", rel, line,
+                             f"{lit} (retired HQ-active canon — HQ 525 active of the "
+                             "532-role design since the trade-desk disablement, "
+                             "2026-09-23 (x))"))
+    text_by_base = {os.path.basename(f): open(f, encoding="utf-8").read()
+                    for f in files}
+    for base, anchor in REQ_HQ_ACTIVE_ANCHORS:
+        text = text_by_base.get(base)
+        if text is None:
+            hits.append(("missing-hq-active-anchor", base, 0,
+                         f"anchor file not found: {base}"))
+        elif anchor not in text:
+            hits.append(("missing-hq-active-anchor", base, 0,
+                         f'required two-canon anchor missing: "{anchor}"'))
+        elif base == "PA-34.1-non-merchandise-procurement.md" and \
+                text.count(anchor) < 2:
+            hits.append(("missing-hq-active-anchor", base, 0,
+                         "the laptop-refresh pair (step 1 + touchpoint) must both "
+                         f"carry the anchor: \"{anchor}\" (found "
+                         f"{text.count(anchor)} of 2)"))
+    for relpath, anchor in REQ_HQ_ACTIVE_README_ANCHORS:
+        f = os.path.join(WORKFLOWS, relpath)
+        text = open(f, encoding="utf-8").read() if os.path.exists(f) else None
+        if text is None:
+            hits.append(("missing-hq-active-anchor", relpath, 0,
+                         f"anchor file not found: {relpath}"))
+        elif anchor not in text:
+            hits.append(("missing-hq-active-anchor", relpath, 0,
+                         f'required two-canon anchor missing: "{anchor}"'))
     # 2026-09-09 sixteenth-wave addition: the DC-catchment class (profile + PAs)
     hits.extend(dc_catchment_hits())
     for kind, rel, line, detail in hits:

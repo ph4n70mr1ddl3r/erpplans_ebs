@@ -668,6 +668,28 @@ equal to the derived prepared-disabled count (a future capability flip re-fires 
 arm until the census is re-pointed — the Check-71 CENSUS-pin contract), the repaired
 anchors required and the retired forms banned, and the TO joining the bare-§ union
 for the registry's 'TO §5.2/§5.3' register cites (the rc/it/src/dmm precedent).
+
+2026-09-23 seventy-ninth-wave review: the (x) active-canon sweep's own HQ-level
+residue — live population cells still sizing off the retired HQ-active 532 beside
+neighbors the same sweep had re-based to 6,925 (the half-repaired-cell class, the
+seventy-seventh-wave precedent): the profile §4 table's Corporate-HQ-Personnel row
+left at the bare design 532 beside its re-based 6,925 total (the table's rows did
+not foot), the licensing BOM §2.4 iExpenses filer footnote at the retired
+657-filer population, technical-guidelines §2.2's HQ WAN-sizing row at the
+retired '~532 HQ staff (≈480 concurrent users)' (whose own v3.4/v2.5 precedent
+derives the concurrent estimate at the ~90% ratio on each headcount move), and the
+PA/README cells the reconcile-staffing-claims retired-hq-active arm now pins
+(PA-19.3/PA-40.2/PA-138.2/PA-72.3/PA-34.1/PA-22.1/PA-13.1 + VS-169's README).
+Guard: profile_derived_figure_hits gains arm (2c) — the §4 HQ-row two-canon form
+required ('525 active (the promoted 532-role structure of record …)'), the retired
+bare-532 form banned, and the §4 table's HQ+stores+DC footing re-derived every
+run; licensing_bom_hits gains arm (i) — the 650-filer two-canon footnote required,
+'657-filer'/'7,884' banned on the footer-stripped body; the new
+tg_hq_bandwidth_hits rule — the §2.2 ~525-active/≈473-concurrent anchor required,
+the retired 532/480 forms banned on the footer-stripped body. Teeth: four
+synthetic injections through the full audits, each caught at its exact arm with
+file and line named, fixtures restored via /tmp copies sha256-verified
+byte-identical.
 """
 
 def _doc_versions():
@@ -2029,6 +2051,39 @@ def companion_pin_hits():
     return hits
 
 
+def tg_hq_bandwidth_hits():
+    """2026-09-23 seventy-ninth-wave consistency review — the technical-guidelines
+    §2.2 HQ WAN-sizing row rides the ACTIVE headcount canon: the cell's own
+    v3.4/v2.5 re-base precedent derives the concurrent-user estimate at the
+    ~90% ratio on each headcount move, and the (x) trade-desk disablement
+    re-based §3's employee-population row but left §2.2 at the retired
+    '~532 HQ staff (≈480 concurrent users)'. Required: the ~525-active /
+    ≈473-concurrent anchor (the active canon — the TO's 532-role design
+    retains the disabled—prepared Trade department); banned on the
+    footer-stripped body: the retired 532/480 forms (the new footer segment
+    quotes them — the strip is what scopes the ban to live prose, the
+    wave-77 footer-hygiene convention). A future census move re-fires the
+    arm until consciously re-pointed (the Check-71 CENSUS-pin contract)."""
+    rel = "technical-guidelines.md"
+    hits = []
+    raw = open(os.path.join(REPO, "07-methodology", rel), encoding="utf-8").read()
+    body = strip_footer(raw)
+    req = "~525 active HQ staff (≈473 concurrent users"
+    if req not in body:
+        hits.append((rel, 0, f'required §2.2 HQ sizing anchor missing: "{req} …" '
+                             '(the active canon at the ~90% concurrency ratio — the '
+                             'TO’s 532-role design retains the disabled—prepared '
+                             'Trade department)'))
+    for bad, why in (("~532 HQ staff", "the retired HQ-active sizing base"),
+                     ("≈480 concurrent users",
+                      "the retired concurrency estimate (≈473 at 525 × ~90%)")):
+        pos = body.find(bad)
+        if pos >= 0:
+            hits.append((rel, body[:pos].count("\n") + 1,
+                         f"retired form '{bad}' ({why})"))
+    return hits
+
+
 def reality_check_hits():
     """2026-09-07 eighth-wave consistency review — in-place arithmetic repair guard
     for the headcount reality-check §3.1 AP workload bullet: it carried '(~450/day)'
@@ -2149,6 +2204,39 @@ def profile_derived_figure_hits():
         elif int(m.group(1).replace(",", "")) != hc:
             hits.append((rel, 0, f"{label} reads {m.group(1)} but the \u00a74 canon "
                                  f"is {hc:,}"))
+
+    # (2c) 2026-09-23 seventy-ninth-wave review — the §4 Corporate-HQ-Personnel
+    # row must carry the two-canon active form and the §4 table must foot:
+    # the (x) disablement re-based the Total row to 6,925 (5,800 + 600 + 525)
+    # but left the HQ row at the bare design 532, so the table's own rows did
+    # not foot (the half-repaired-table class). A future census move re-fires
+    # the arm until consciously re-pointed (the Check-71 CENSUS-pin contract).
+    m_hq = re.search(r"\|\s*Corporate HQ Personnel\s*\|\s*([\d,]+)\s*active\s*"
+                     r"\(the promoted 532-role structure of record", prof)
+    if not m_hq:
+        hits.append((rel, 0, "\u00a74 Corporate-HQ-Personnel row not in the two-canon "
+                             "active form ('525 active (the promoted 532-role structure "
+                             "of record … retains the disabled—prepared Trade / Account "
+                             "Management department)')"))
+        hq_active = None
+    else:
+        hq_active = int(m_hq.group(1).replace(",", ""))
+        if hq_active != 525:
+            hits.append((rel, 0, f"\u00a74 Corporate-HQ-Personnel row reads {hq_active} "
+                                 "active but the (x) active canon is 525"))
+    if re.search(r"Corporate HQ Personnel\s*\|\s*\*{0,2}532\s*\(", prof):
+        hits.append((rel, 0, 'retired \u00a74 HQ-row form "Corporate HQ Personnel | 532 (" '
+                             '(the bare design 532 presented as the row\u2019s census — the '
+                             '(x) settlement\u2019s half-repaired table)'))
+    m_store = re.search(r"\|\s*Store Personnel\s*\|\s*([\d,]+)", prof)
+    m_dc = re.search(r"\|\s*Distribution Center Personnel\s*\|\s*([\d,]+)", prof)
+    if None not in (hq_active, m_store, m_dc):
+        footing = (hq_active + int(m_store.group(1).replace(",", ""))
+                   + int(m_dc.group(1).replace(",", "")))
+        if footing != hc:
+            hits.append((rel, 0, f"\u00a74 table does not foot: HQ {hq_active} + stores "
+                                 f"{m_store.group(1)} + DCs {m_dc.group(1)} = {footing:,} "
+                                 f"but the Total row reads {hc:,}"))
 
     # (3) live-corpus citation sweep
     paths = sorted(glob.glob(os.path.join(MC, "workflows", "VS-*", "PA-*.md")))
@@ -3094,6 +3182,31 @@ def licensing_bom_hits():
                 "Fusion Risk Management add-on (the H11 audit/GRC eq.)"):
         if anc not in body:
             hits.append((rel, 0, f'missing the H11-anchored Fusion tag "{anc}"'))
+    # ---- (i) the §2.4 iExpenses filer footnote rides the ACTIVE headcount
+    # canon — 2026-09-23 seventy-ninth-wave review: the (x) disablement
+    # re-based §1's drivers and §2.8's HRMS line to 6,925 active but left the
+    # footnote's filer population at the retired HQ-active canon ('the
+    # 657-filer population (all HQ 532 + …) files ~12 reports/yr ≈ 7,884').
+    # Required: the 650-filer two-canon form (HQ 525 active of the 532-role
+    # design; 650 × ~12 ≈ 7,800, inside the unchanged 8,000-report GPL band);
+    # banned on the footer-stripped body: the retired 657-filer / 7,884 forms
+    # (the Prior segments' dated recitals exempt by the strip). A future
+    # headcount move re-fires the arm until consciously re-pointed (the
+    # Check-71 CENSUS-pin contract).
+    req_filer = ("the 650-filer population (all HQ 525 active of the 532-role design "
+                 "+ DC office staff ~100 + district/region field ~25) files "
+                 "~12 reports/yr ≈ 7,800")
+    if " ".join(body.split()).find(req_filer) < 0:
+        hits.append((rel, 0, 'missing the §2.4 iExpenses two-canon filer anchor '
+                             '("the 650-filer population (all HQ 525 active of the '
+                             '532-role design + …) files ~12 reports/yr ≈ 7,800")'))
+    for bad, why in (("657-filer", "the retired HQ-active filer population (650 filers "
+                                  "at HQ 525 active of the 532-role design)"),
+                     ("7,884", "the retired reports/yr derivation (650 filers × ~12 ≈ 7,800)")):
+        pos = body.find(bad)
+        if pos >= 0:
+            hits.append((rel, body[:pos].count("\n") + 1,
+                         f"retired form '{bad}' ({why})"))
     return hits
 
 
@@ -5042,6 +5155,9 @@ def main():
     hits.extend(dv_volume_hits())
     hits.extend(exec_tree_hits())
     hits.extend(reality_check_hits())
+    # 2026-09-23 seventy-ninth-wave consistency review addition — the
+    # technical-guidelines §2.2 HQ bandwidth-sizing row's active-canon guard
+    hits.extend(tg_hq_bandwidth_hits())
     # 2026-09-07 ninth-wave consistency review addition
     hits.extend(companion_pin_hits())
     # 2026-09-09 sixteenth-wave consistency review addition
