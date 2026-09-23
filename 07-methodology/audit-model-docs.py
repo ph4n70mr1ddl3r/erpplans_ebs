@@ -620,6 +620,30 @@ retired 6,762 employee canon on the IT/operations/people companions' §1 scope
 lines and evidence cells (the twenty-ninth-wave headcount sweep never opened
 these four navigation surfaces). Retired forms banned doc-scoped, the corrected
 anchors required at the repaired cells — the Check-71 CENSUS-pin contract.
+
+2026-09-23 seventy-seventh-wave consistency review: the (x) trade-desk
+disablement's own residue — three population-cells the 252-cell sweep's surfaces
+did not reach, plus the quotient arm's own newly-legitimate false-pass. (1) the
+blueprint README's §4 W4 People row still read '6,932 employees' — the file sits
+outside reconcile-staffing-claims' PA/VS-README sweep and no ebs_blueprint_hits
+arm read the wave-plan population cell (the same employee-derived sizing cell the
+fifty-fifth wave found on the BOM §1 driver row; this README's own v1.2 footer
+re-based it at the promotion) — ebs_blueprint_hits arm (l): the retired form
+banned on the footer-stripped body, the active anchor required at the W4 row. (2)
+the AI-first guide's §1.4 reference-parameters cell still read 'HQ 532 … 6,932
+employees' with the 09-18 edit's mangled fragment ('— was 2026-09-14') —
+guide_figure_hits arm (f): the retired form and the fragment banned on the
+footer-stripped body, the 'HQ 525 active' / '6,925 employees (TO design 6,932)'
+anchors required (§6.6's dated promotion arrows exempt as frozen history). (3)
+PA-133.3's W4067 Volume row read '~6,925 employees … revenue/employee target
+~PHP 8.99M' — the quotient half of the cell left at the retired 6,932-based
+division beside its own re-based headcount — and every run PASSED the quotient
+arm, because the (x) settlement made the TO two-state row's design column (6,932)
+compute to the same 8.99 the retired active canon produced: the two-base
+tolerance admitted it as a 'target-state' citation. profile_derived_figure_hits'
+tolerance is now scoped per surface kind — PA/VS-README citations require the
+active canon, companion surfaces may still cite the design quotient where the
+design context is explicit.
 """
 
 def _doc_versions():
@@ -1497,6 +1521,36 @@ def guide_figure_hits():
             hits.append((rel, line_of(mm.start()),
                          f"canon-table requirement claim {got} != register canon "
                          f"({n_req}, {n_cats})"))
+    # (f) 2026-09-23 seventy-seventh-wave review — the §1.4 reference-parameters
+    # cell carries the ACTIVE census. The 2026-09-23 (x) trade-desk disablement
+    # re-based every active population canon to 6,925 / HQ 525 but skipped this
+    # guide (its cascade touched the OM, sourcing and technical-guidelines
+    # companions), stranding §1.4 at 'HQ 532 … 6,932 employees' — with a mangled
+    # parenthetical fragment ('— was 2026-09-14') the 09-18 gap-fill edit left
+    # behind. The retired census form and the fragment are banned on the
+    # footer-stripped body and the active anchors required (a future census move
+    # re-fires until consciously re-pointed — the Check-71 CENSUS-pin contract;
+    # §6.6's dated promotion arrows are frozen history).
+    m6932 = re.search(r"6,932\s+employees", body)
+    if m6932:
+        hits.append((rel, line_of(m6932.start()),
+                     "retired census form '6,932 employees' on the §1.4 "
+                     "reference-parameters cell (active canon: 6,925 employees "
+                     "— TO design 6,932; joined-text probe — the pre-repair "
+                     "cell wrapped the figure across lines)"))
+    if "on 2026-09-18 \u2014 was" in body:
+        hits.append((rel, line_of(body.find("on 2026-09-18 \u2014 was")),
+                     "mangled parenthetical fragment 'on 2026-09-18 — was' on the "
+                     "§1.4 reference-parameters cell (the 09-18 gap-fill edit's "
+                     "residue)")
+                     )
+    if "HQ 525 active" not in body:
+        hits.append((rel, 0, "required active-census anchor 'HQ 525 active' missing "
+                             "from the §1.4 reference-parameters cell"))
+    if "6,925 employees (TO design 6,932)" not in body:
+        hits.append((rel, 0, "required active-census anchor '6,925 employees (TO "
+                             "design 6,932)' missing from the §1.4 "
+                             "reference-parameters cell"))
     return hits
 
 
@@ -1975,6 +2029,15 @@ def profile_derived_figure_hits():
         cross-foot to them and the §15.2 Master-Data rows must equal them (found
         live: §15.2 trade stranded at the retired 5,000), and the retired
         '5,000-account' trade scheme must not reappear in live prose.
+    2026-09-23 seventy-seventh-wave review — the quotient sweep's two-base
+      tolerance scoped per surface kind: the (x) trade-desk disablement turned
+      the TO two-state row's second column from a target denominator into the
+      DESIGN total (6,932, quotient ~8.99M), so a PA/VS-README citation at the
+      retired active quotient passed the arm as 'target-state' (PA-133.3's
+      'revenue/employee target ~PHP 8.99M' against its own re-based 6,925
+      headcount — the half-repaired-cell class). PA/VS-README citations now
+      require the active canon; companion surfaces may still cite the design
+      quotient where the design context is explicit.
     Sweep scope: PA files, the workflows support docs, the root/methodology docs.
     Exempt: CHANGELOG, the generated trees, version-history footers (strip_footer),
     and the gap-analysis scenario table's authoring-time rows ('| N |' rows — the
@@ -2062,9 +2125,16 @@ def profile_derived_figure_hits():
     rev_re = re.compile(r"[Rr]evenue[\s/\-]*(?:per[\s/\-]*)?"
                         r"employee[^\n]{0,120}?"
                         r"([\u2265>]?\s*)PHP\s*~?(\d+(?:\.\d+)?)\s*M")
-    # the TO's §5.1 two-state total row carries the target denominator (6,911);
-    # its 'Revenue/employee ≈ PHP 9.01M' note and the sizing row's '≥ PHP 9M
-    # preserved' are target-state claims, both derived from rev ÷ target-HC
+    # the TO's §5.1 two-state total row: since the 2026-09-23 (x) trade-desk
+    # disablement its second column is the DESIGN total (6,932 — the TO stays
+    # the design of record with the Trade department disabled — prepared), not
+    # a target-state denominator. Its quotient (~PHP 8.99M) is a legitimate
+    # citation base only on companion/design surfaces; on PA/VS-README
+    # surfaces a design-base match is the RETIRED ACTIVE quotient — exactly
+    # the seventy-seventh-wave blind spot: the (x) settlement made the
+    # two-state row compute to the same 8.99 the retired 6,932 active canon
+    # produced, so PA-133.3's 'target ~PHP 8.99M' passed the arm below as
+    # target-state until the exemption was scoped per surface kind.
     to_raw = open(os.path.join(MC, "optimal-table-of-organization.md"),
                   encoding="utf-8").read()
     m = re.search(r"\*\*Total company\*\*\s*\|\s*\*\*~?([\d,]+)\*\*\s*\|\s*\|?\s*\*\*~?([\d,]+)\*\*", to_raw)
@@ -2088,6 +2158,12 @@ def profile_derived_figure_hits():
         for m in rev_re.finditer(body):
             cited = float(m.group(2))
             threshold = bool(m.group(1).strip())
+            # the (x) disablement's design/active two-canon settlement: PA
+            # files and VS READMEs assert the ACTIVE population, so only the
+            # active quotient is canonical there — the design quotient stays a
+            # legitimate base for companion/design surfaces (the TO itself,
+            # its companion pins) where the design context is explicit
+            is_pa = "/VS-" in prel
             if threshold:
                 # '≥ PHP 9M' — a floor claim: it must be satisfiable at the
                 # target denominator (9.0117… ≥ 9 ✓); an unsatisfiable floor
@@ -2104,12 +2180,22 @@ def profile_derived_figure_hits():
                                  f"{target_quot}M)"))
             elif abs(cited - quot) <= 0.005:
                 pass  # current-state citation — canonical
-            elif target_quot is not None and abs(cited - target_quot) <= 0.005:
-                pass  # target-state citation (~9.01M at 6,911) — canonical
+            elif (target_quot is not None and abs(cited - target_quot) <= 0.005
+                  and not is_pa):
+                pass  # design-state citation on a companion surface — canonical
             else:
                 bases = f"~PHP {quot_s}M (PHP {rev_b:g}B \u00f7 {hc:,})"
                 if target_quot is not None:
-                    bases += f" or ~PHP {target_quot}M at target (\u00f7 {target_hc:,})"
+                    if is_pa:
+                        bases += (f"; the TO design quotient ~PHP {target_quot}M "
+                                  f"(\u00f7 {target_hc:,}) is design-of-record only — "
+                                  f"PA/VS-README surfaces cite the active canon "
+                                  f"(the 2026-09-23 (x) settlement made the two-state "
+                                  f"row's design column compute to the retired active "
+                                  f"quotient — the seventy-seventh-wave blind spot)")
+                    else:
+                        bases += (f" or ~PHP {target_quot}M at design "
+                                  f"(\u00f7 {target_hc:,})")
                 hits.append((prel, body[:m.start()].count("\n") + 1,
                              f"revenue-per-employee citation ~PHP {m.group(2)}M matches "
                              f"neither derived canon: {bases}"))
@@ -2582,6 +2668,35 @@ def ebs_blueprint_hits():
                 "('entitlement flag (2026-09-23, coverage register §7)' + L11496 "
                 "— the §4-resolution-37 record declares the flags carried on the "
                 "F7/B10 note cells)")
+
+    # ---- (l) 2026-09-23 seventy-seventh-wave review — the §4 wave-plan W4
+    # population cell carries the ACTIVE employee canon. The 2026-09-23 (x)
+    # trade-desk disablement re-based every active population canon to 6,925
+    # (252 cells across 98 PA/README files) but skipped this README — it sits
+    # outside reconcile-staffing-claims' PA/VS-README sweep — stranding the W4
+    # People row at the retired '6,932 employees': the same employee-derived
+    # sizing cell the fifty-fifth wave found on the licensing BOM's §1 driver
+    # row and this folder's own v1.2 footer re-based at the promotion. The
+    # retired form is banned on the footer-stripped body and the corrected
+    # anchor required at the W4 row (located by its live marker) — a future
+    # census move re-fires until consciously re-pointed (the Check-71
+    # CENSUS-pin contract).
+    m6932 = re.search(r"6,932\s+employees", rd)
+    if m6932:
+        add("README.md (02-oracle-ebs)", rd[:m6932.start()].count("\n") + 1,
+            "retired census form '6,932 employees' on the §4 wave-plan body "
+            "(active canon: 6,925 employees — TO design 6,932; joined-text "
+            "probe)")
+    w4_row = next((l for l in rd.splitlines() if l.startswith("| **W4 — People** |")), None)
+    if w4_row is None:
+        add("README.md (02-oracle-ebs)", 0,
+            "§4 wave-plan W4 People row not found (expected the live "
+            "'| **W4 — People** |' marker — re-point the arm)")
+    elif "6,925 employees" not in w4_row:
+        add("README.md (02-oracle-ebs)", 0,
+            "W4 People row does not carry the active-employee anchor "
+            "'6,925 employees (active; the TO's 6,932 design retains the "
+            "disabled—prepared Trade department)'")
     return hits
 
 
