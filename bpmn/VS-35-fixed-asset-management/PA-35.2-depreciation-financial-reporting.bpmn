@@ -34,7 +34,7 @@ Duration: 2 hours/month</bpmn:documentation>
         <bpmn:outgoing>W1698_Flow15</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:serviceTask id="W1698_Task7" name="System executes depreciation calculation for all active assets: (a)…">
-        <bpmn:documentation>Step 2: System executes depreciation calculation for all active assets: (a) straight-line depreciation for most categories: monthly expense = (cost − residual value) ÷ useful life in months, (b) declining balance for vehicles: monthly expense = net book value × (rate ÷ 12), (c) depreciation starts from ready-for-use date — partial month calculated pro-rata, (d) fully depreciated assets (net book value = residual value or zero) are skipped, (e) assets on hold or pending disposal continue depreciating until formal disposal date
+        <bpmn:documentation>Step 2: System executes depreciation calculation for all active assets: (a) straight-line depreciation for most categories: monthly expense = (cost − residual value) ÷ useful life in months, (b) declining balance for vehicles: monthly expense = net book value × (rate ÷ 12), (c) depreciation starts from ready-for-use date — partial month calculated pro-rata, (d) fully depreciated assets (net book value = residual value or zero) are skipped, (e) assets on hold or pending disposal continue depreciating until formal disposal date, (f) depreciation calculates in each entity&#x27;s corporate book — the book of record for the register — and the tax (BIR) book derives from the corporate book per W1704; tax schedules are never maintained independently of the corporate register
 Responsible (R): System
 Accountable (A): —
 Duration: ~5 min computation</bpmn:documentation>

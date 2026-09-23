@@ -39,7 +39,7 @@ Duration: 1 week prep</bpmn:documentation>
         <bpmn:outgoing>W1706_Flow18</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W1706_Task9" name="Location teams execute physical count: (a) scan each asset tag with mobile…">
-        <bpmn:documentation>Step 2: Location teams execute physical count: (a) scan each asset tag with mobile device — system confirms match to register, (b) visually inspect condition: Good (functioning, no damage), Fair (operational but needs maintenance), Poor (needs replacement), Missing (not found), (c) for assets without readable tags: record description and location for reconciliation, (d) for assets found but not in register: record as &quot;unregistered asset found&quot;
+        <bpmn:documentation>Step 2: Location teams execute physical count: (a) scan each asset tag with mobile device — system confirms match to register, (b) visually inspect condition: Good (functioning, no damage), Fair (operational but needs maintenance), Poor (needs replacement), Missing (not found), (c) for assets without readable tags: record description and location for reconciliation, (d) for assets found but not in register: record as &quot;unregistered asset found&quot;, (e) the location&#x27;s custodian of record signs the count certification; Finance and Internal Audit recount a risk-based sample rather than the full estate
 Responsible (R): Store Manager / DC Supervisor / Department Head
 Accountable (A): Internal Audit
 Duration: 1–2 days/location (stores); 3–5 days/DC</bpmn:documentation>

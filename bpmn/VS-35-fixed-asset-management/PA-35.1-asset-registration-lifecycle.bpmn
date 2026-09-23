@@ -29,7 +29,7 @@ Source: workflow W1690 — New Fixed Asset Registration &amp; Capitalization</bp
         <bpmn:outgoing>W1690_Flow16</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:serviceTask id="W1690_Task7" name="System auto-generates asset registration candidate from approved PO or capex…">
-        <bpmn:documentation>Step 1: System auto-generates asset registration candidate from approved PO or capex project closure: (a) PO with asset category flag triggers asset creation workflow, (b) capex project completion triggers CIP-to-asset conversion per W40.3, (c) manual creation for donated, leased, or transferred assets
+        <bpmn:documentation>Step 1: System auto-generates asset registration candidate from approved PO or capex project closure: (a) PO with asset category flag flows the asset candidate into the mass additions queue for Fixed Asset review, (b) capex project completion triggers CIP-to-asset conversion per W40.3, (c) manual creation for donated, leased, or transferred assets
 Responsible (R): System
 Accountable (A): Fixed Asset Accountant
 Duration: Automated</bpmn:documentation>
@@ -37,7 +37,7 @@ Duration: Automated</bpmn:documentation>
         <bpmn:outgoing>W1690_Flow17</bpmn:outgoing>
       </bpmn:serviceTask>
       <bpmn:userTask id="W1690_Task8" name="Fixed Asset Accountant reviews and enriches asset record: (a) assigns unique…">
-        <bpmn:documentation>Step 2: Fixed Asset Accountant reviews and enriches asset record: (a) assigns unique asset number (format: BRD-XX-YYYY-NNNNN where XX = entity code, YYYY = year, NNNNN = sequential), (b) enters asset description, category, sub-category (POS terminal, forklift, fixture, vehicle, IT equipment, office furniture), (c) links to cost center, location (store/DC/HQ code), and responsible department, (d) records acquisition cost including non-recoverable VAT, delivery, installation, and testing costs per PFRS, (e) assigns useful life per category schedule (POS terminals: 5 years; forklifts: 7 years; store fixtures: 10 years; vehicles: 5 years; IT servers: 4 years; office furniture: 8 years), (f) assigns depreciation method (straight-line for all; declining balance for vehicles), (g) records vendor, PO reference, GR reference, and warranty expiry
+        <bpmn:documentation>Step 2: Fixed Asset Accountant reviews and enriches asset record: (a) assigns unique asset number (format: BRD-XX-YYYY-NNNNN where XX = entity code, YYYY = year, NNNNN = sequential), (b) enters asset description, category, sub-category (POS terminal, forklift, fixture, vehicle, IT equipment, office furniture), (c) links to cost center, location (store/DC/HQ code), and responsible department, (d) records acquisition cost including non-recoverable VAT, delivery, installation, and testing costs per PFRS, (e) assigns useful life per category schedule (POS terminals: 5 years; forklifts: 7 years; store fixtures: 10 years; vehicles: 5 years; IT servers: 4 years; office furniture: 8 years), (f) assigns depreciation method (straight-line for all; declining balance for vehicles), (g) records vendor, PO reference, GR reference, and warranty expiry, (h) assigns the asset custodian of record into the Assigned-To field — the location manager, DC supervisor or department head of record for the space the asset occupies; named individual for IT equipment, tools and vehicles, role-of-record for fixtures — so custody is never blank and moves only via the W1693 release-and-accept chain
 Responsible (R): Fixed Asset Accountant
 Accountable (A): Accounting Manager
 Duration: 15 min/asset</bpmn:documentation>
@@ -45,7 +45,7 @@ Duration: 15 min/asset</bpmn:documentation>
         <bpmn:outgoing>W1690_Flow18</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:serviceTask id="W1690_Task9" name="System validates capitalization threshold: assets ≥ PHP 20,000 capitalized…">
-        <bpmn:documentation>Step 3: System validates capitalization threshold: assets ≥ PHP 20,000 capitalized; assets &lt; PHP 20,000 charged to expense (policy threshold reviewed annually). Threshold excludes low-value items like individual hand tools, cables, or accessories
+        <bpmn:documentation>Step 3: System validates capitalization threshold: assets ≥ PHP 20,000 capitalized; assets &lt; PHP 20,000 charged to expense (policy threshold reviewed annually). Threshold excludes low-value items like individual hand tools, cables, or accessories; items below the threshold but accountable by nature — power tools, measuring instruments, cameras — are flagged as tractable items, expensed yet carried on the countable minor-asset register so the W1706 count covers them
 Responsible (R): System
 Accountable (A): Fixed Asset Accountant
 Duration: Automated</bpmn:documentation>
@@ -259,7 +259,7 @@ Duration: 2 min/tag</bpmn:documentation>
         <bpmn:outgoing>W1692_Flow18</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W1692_Task10" name="Store Manager / DC Supervisor confirms tag application via mobile app scan…">
-        <bpmn:documentation>Step 4: Store Manager / DC Supervisor confirms tag application via mobile app scan; system updates asset record with &quot;Tag Applied&quot; status and date
+        <bpmn:documentation>Step 4: Store Manager / DC Supervisor confirms tag application via mobile app scan; system updates asset record with &quot;Tag Applied&quot; status and date — the scan doubles as the custody-acceptance signature: the location&#x27;s custodian of record accepts accountability for the tagged asset at that scan
 Responsible (R): Store Manager / DC Supervisor
 Accountable (A): —
 Duration: 1 min/scan</bpmn:documentation>
@@ -342,7 +342,7 @@ Source: workflow W1693 — Asset Transfer Between Locations</bpmn:documentation>
         <bpmn:outgoing>W1693_Flow16</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:userTask id="W1693_Task8" name="Sending location initiates asset transfer request in system: (a) selects…">
-        <bpmn:documentation>Step 1: Sending location initiates asset transfer request in system: (a) selects asset(s) to transfer, (b) specifies destination location and reason, (c) for inter-entity transfers (e.g., Depot Inc. → Logistics Inc.): triggers intercompany transfer pricing review
+        <bpmn:documentation>Step 1: Sending location initiates asset transfer request in system: (a) selects asset(s) to transfer, (b) specifies destination location and reason, (c) for inter-entity transfers (e.g., Depot Inc. → Logistics Inc.): triggers intercompany transfer pricing review, (d) the sending location&#x27;s custodian of record releases the asset from custody in the same action — custody is in transit, never unassigned, until the receiving scan
 Responsible (R): Sending Location Manager
 Accountable (A): Fixed Asset Accountant
 Duration: 10 min/request</bpmn:documentation>
@@ -366,7 +366,7 @@ Duration: Variable</bpmn:documentation>
         <bpmn:outgoing>W1693_Flow19</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W1693_Task11" name="Receiving location scans asset tag upon arrival; confirms asset identity and…">
-        <bpmn:documentation>Step 4: Receiving location scans asset tag upon arrival; confirms asset identity and condition; system updates: (a) asset location code changed to receiving location, (b) cost center reassigned, (c) physical inventory record updated, (d) depreciation continues without interruption (same useful life and method)
+        <bpmn:documentation>Step 4: Receiving location scans asset tag upon arrival; confirms asset identity and condition — the scan is the receiving custodian&#x27;s custody acceptance, completing the release-to-accept chain opened in step 1; system updates: (a) asset location code changed to receiving location, (b) cost center reassigned, (c) physical inventory record updated, (d) depreciation continues without interruption (same useful life and method)
 Responsible (R): Receiving Location Manager
 Accountable (A): Fixed Asset Accountant
 Duration: 5 min/asset</bpmn:documentation>

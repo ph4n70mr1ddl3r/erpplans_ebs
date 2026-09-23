@@ -226,7 +226,7 @@ Duration: 2 days/quarter</bpmn:documentation>
         <bpmn:outgoing>W1670_Flow16</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W1670_Task9" name="Store Manager distributes uniforms to new hires during onboarding (W292); PPE…">
-        <bpmn:documentation>Step 4: Store Manager distributes uniforms to new hires during onboarding (W292); PPE issued per role and tracked per employee in system (W1670.4 of HR-017)
+        <bpmn:documentation>Step 4: Store Manager distributes uniforms to new hires during onboarding (W292); PPE issued per role and tracked per employee in system (W1670.4 of HR-017); issues draw from an expense subinventory per requisition — never capitalized — under the store&#x27;s named storeroom custodian, with balances counted quarterly against issues and returns, and separated employees&#x27; uniforms and PPE recovered or written off per policy
 Responsible (R): Store Manager
 Accountable (A): HR Operations
 Duration: 15 min/new hire</bpmn:documentation>
@@ -482,7 +482,7 @@ Duration: 2 hours/month</bpmn:documentation>
         <bpmn:outgoing>W1673_Flow13</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W1673_Task7" name="Vendor delivers to HQ; Admin Manager distributes to departments; tracks usage…">
-        <bpmn:documentation>Step 3: Vendor delivers to HQ; Admin Manager distributes to departments; tracks usage against budget
+        <bpmn:documentation>Step 3: Vendor delivers to HQ; Admin Manager distributes to departments; tracks usage against budget; controlled items — toner, projector bulbs, company-grade equipment below the capitalization threshold — are issued per requisition from the supplies storeroom custodian and counted quarterly: expensed in the books, accountable in custody
 Responsible (R): Admin Manager
 Accountable (A): —
 Duration: 1 hour/month</bpmn:documentation>

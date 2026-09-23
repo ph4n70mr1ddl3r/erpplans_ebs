@@ -120,7 +120,7 @@ Duration: 1 day</bpmn:documentation>
         <bpmn:outgoing>W1828_Flow12</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W1828_Task6" name="Completion certificate prepared and signed: (a) Project Manager certifies…">
-        <bpmn:documentation>Step 2: Completion certificate prepared and signed: (a) Project Manager certifies completion, (b) COO or CIO accepts, (c) Store Manager (for new stores) confirms operational readiness, (d) punch list items documented with agreed resolution timeline
+        <bpmn:documentation>Step 2: Completion certificate prepared and signed: (a) Project Manager certifies completion, (b) COO or CIO accepts, (c) Store Manager (for new stores) confirms operational readiness, (d) punch list items documented with agreed resolution timeline, (e) custody handover: the completed assets pass to the operating custodian of record — Store Manager for new stores, the owning department head otherwise — and registration assigns the custodian per W1690 so no asset turns over unowned
 Responsible (R): Project Manager / COO
 Accountable (A): COO
 Duration: 1 day</bpmn:documentation>

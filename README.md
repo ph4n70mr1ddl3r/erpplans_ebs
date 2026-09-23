@@ -287,6 +287,7 @@ erpplans/
     ├── audit-exec-ctl.py             Exec-summary anchors & CTL citation-scope guard (Check 60)
     ├── audit-matrix-refs.py          Matrix ghost-row & summary-doc anchor guard (Check 61)
     ├── audit-semantic-anchors.py    Semantic-sample anchor guard (Check 62)
+    ├── audit-oracle-conformance.py  Oracle EBS best-practice conformance guard (the oracle-ebs-conformance-standards.md canon, 02-oracle-ebs/)
     ├── audit-misdirected-ctl.py     Misdirected-CTL-citation family measurer (the batch-26/27 paste-family audits)
     ├── classify-isolated-ctl.py     Isolated colon-form CTL-citation classifier (gloss-vs-control overlap scoring, batch-27)
     ├── final-semantic-coverage.py    Final full-coverage semantic pass (review #71 — detector suite over the 3,122 unaudited workflows; closed the sampling loop to 5,363/5,363; the 2026-09-03 W5511 transition re-run extends the registry to 5,364/5,364; the agentic gap-fill transition extends it to 5,367/5,367; the sourcing-model gap-fill transition extends it to 5,370/5,370 — the current audited set; the 18 post-closure gap-fill workflows W5518–W5535 (the IT/people/finance/operations gap-fill passes, batches 8–11, plus the demand-intake gap fill, batch 15), are registry-pending, not audited)
