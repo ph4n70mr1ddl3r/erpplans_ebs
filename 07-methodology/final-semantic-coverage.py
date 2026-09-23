@@ -38,10 +38,15 @@ Usage:
     python3 07-methodology/final-semantic-coverage.py --all      # regression net: D1/D3/D4 over ALL workflows
     python3 07-methodology/final-semantic-coverage.py --quiet    # exit code only
 
-Post-closure note: the registry is complete (5,363/5,363 since review #71; W5511 — the
- one workflow that shipped after the closure, 2026-09-03 — was admitted the same day via
- this exact transition path: full read + D1–D4 over its block, 0 flags, then registered,
- bringing the registry to 5,364/5,364), so the
+Post-closure note: the registry is complete (5,432/5,432 since the 2026-09-23
+ seventy-fourth-wave admission; the 62 workflows W5518–W5579 that shipped after the
+ closure were admitted in one pass via this exact transition path — full read of
+ every block + D1–D4 over the unaudited set (0 flags beyond D2) + the five D2
+ citation hits adjudicated legitimate in context and added to KNOWN_GOOD
+ (RA 10175/RA 7279/RA 10821), with four in-read defects repaired the same pass
+ (W5529's W336 misdirected citation, W5578's W327 misdirected citation, the
+ '~99,000 customers' population mislabel against the W330 people canon on three
+ surfaces, W5522's doubled fit-gap clause), bringing the registry to 5,432/5,432), so the
  default run is vacuous (no unaudited blocks) — it exists for re-running the
  transition if workflows ever ship outside the registry again. The --all mode is
  the standing regression net (D2 is skipped there: with no unaudited set there is
@@ -75,6 +80,12 @@ ALLOWLIST = {
     ("D3", "W7"): "'AP Clerks … ~90–160 hours/month averaged across the team' vs the per-clerk ~1–2.5 h/week — different bases (team-month vs clerk-week), coherent at 8–10 clerks",
     ("D3", "W70"): "'~5–6 hours/week + ~1.5 hours/month cyclical' — explicit component sum",
     ("D3", "W614"): "'~60 min/day on monitoring + ~1 hour/week … + ~2 hours/month on reports' — explicit component sum",
+    # seventy-fourth-wave addition: the seventy-third wave's W634 footing repair
+    # ('~2–3 hours/day + 4 hours/week + 1 day/month = ~70–90 hours/month') is a
+    # same-line component list — the written arithmetic foots (≈ 55–75 + 17 + 8–12);
+    # the detector's implied-weekly reading of the 4 h/week component is the documented
+    # component-sum false-positive class (W107/W70/W614 precedents). Adjudicated accepted.
+    ("D3", "W634"): "'~2–3 hours/day + 4 hours/week + 1 day/month = ~70–90 hours/month' — explicit component sum summing TO the claimed monthly total (the seventy-third wave's footing repair); the 4 h/week component is one input, not the same activity in a second cadence",
     # full-corpus (--all) mode additions (spots inside the previously-audited set):
     ("D1", "W22"): "'~50–80 store-to-store transfers/month … = ~17–27 hours/month across 200 stores (~5–8 min per store per month)' — derives exactly; the per-store figure is MINUTES (time-denominated class)",
     ("D1", "W1202"): "'~PHP 2.1B cash collected/month across all stores; ~PHP 10.6M/store/month' — 2.1B/200 = 10.5M ✓ coherent; the detector grabbed currency magnitudes as event counts",
@@ -106,6 +117,11 @@ KNOWN_GOOD = {
     "RR 1-2023", "RR 8-2022", "RR 9-2022", "RR 3-98", "RR 5-2018",
     "RA 8792", "RA 9710", "RA 6727", "RA 10951", "RA 10623", "RA 9006",
     "PNS 63", "PNS 67", "PNS 35", "PNS 90", "DAO 29",
+    # added by the 2026-09-23 seventy-fourth-wave admission (the 62 post-closure
+    # workflows W5518–W5579; each verified in context before registering):
+    "RA 10175",  # Cybercrime Prevention Act 2012 — PNP Anti-Cybercrime Group is its referral authority (W5558 ransomware step 3; W5559 BEC step 4)
+    "RA 7279",   # Urban Development and Housing Act — professional-squatter syndicates / the UDHA relocation track (W5560 background + step 2)
+    "RA 10821",  # Children's Emergency Relief and Protection — the duty-of-care framing beside RA 7610 (W5536 background)
 }
 
 CITE_RE = re.compile(

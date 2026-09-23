@@ -5820,7 +5820,7 @@ Owner: Regional Operations Manager; Store Manager (execution)</bpmn:text>
     <bpmn:process id="W_W5536" name="W5536. Missing-Child / Code Adam In-Store Response Protocol" isExecutable="false">
       <bpmn:documentation>Trigger: A parent, guardian, or companion reports a child (under 12) missing inside the store premises; or an unaccompanied, distressed, or apparently lost child is found by staff; or a suspected attempted-abduction is observed
 Frequency: Rare; ~5–15 separations resolved at the service desk weekly chain-wide (minutes, self-resolved); ~2–6 formal Code-Adam activations per year chain-wide
-Volume: 1 store × full team (29 staff/store) × the ~99,000 customers on premises chain-wide per operating day (W330 population canon) — family shoppers with children are a core BuildRight demographic
+Volume: 1 store × full team (29 staff/store) × the ~99,000 people on premises chain-wide per operating day — ~467 customers + 29 staff per store (the W330 population canon) — family shoppers with children are a core BuildRight demographic
 Owner: Store Manager
 Participants: Store Manager, all floor staff (zone search), Front-End/Service Desk (guardian liaison), Security Guard (door control, CCTV), LP Officer, Regional Manager (escalation), PNP (911) &amp; PNP-Women and Children Protection Desk, barangay, VP Legal (evidence/liability), HR (staff trauma support per W717 debrief practice)
 Source: workflow W5536 — Missing-Child / Code Adam In-Store Response Protocol</bpmn:documentation>

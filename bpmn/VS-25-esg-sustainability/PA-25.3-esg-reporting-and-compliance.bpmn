@@ -1034,7 +1034,7 @@ Duration: 6–10 hours/month</bpmn:documentation>
         <bpmn:outgoing>W5578_Flow19</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W5578_Task10" name="Sustainability Lead close the month: reconcile captured quantities to the…">
-        <bpmn:documentation>Step 5: Sustainability Lead close the month: reconcile captured quantities to the source subledgers and to the utility and fleet records the reporting workflows also read (W111, W692, W327), investigate sites whose consumption moves more than the variance threshold, and release the period so the emissions figures behind W1334, W3466, W5481 and W1396 are drawn from one closed ledger rather than five parallel extracts
+        <bpmn:documentation>Step 5: Sustainability Lead close the month: reconcile captured quantities to the source subledgers and to the utility and fleet records the reporting workflows also read (W111, W692, W198), investigate sites whose consumption moves more than the variance threshold, and release the period so the emissions figures behind W1334, W3466, W5481 and W1396 are drawn from one closed ledger rather than five parallel extracts
 Responsible (R): Sustainability Lead
 Accountable (A): Finance Controller
 Duration: 8–12 hours/month</bpmn:documentation>

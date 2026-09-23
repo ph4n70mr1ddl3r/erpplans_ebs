@@ -1398,7 +1398,7 @@ The operations-workflow gap fill added one workflow confirmed directly **Tier 1*
 
 #### Emergency & Continuity Workflow Gap-Fill Pass (2026-09-05)
 
-The emergency & continuity workflow gap fill added three workflows confirmed directly **Tier 1** — the life-safety in-store emergency class of their W330/W501/W576 siblings (W5536 missing-child/Code Adam, W5537 fire event response, W5538 bomb threat): each executes a life-safety duty of care to the ~99,000 customers on premises chain-wide per day with statutory anchors (RA 7610 child protection, RA 9514 Fire Code re-occupancy clearance, PNP-EOD coordination) and gates reopening/reunification on verified external clearance:
+The emergency & continuity workflow gap fill added three workflows confirmed directly **Tier 1** — the life-safety in-store emergency class of their W330/W501/W576 siblings (W5536 missing-child/Code Adam, W5537 fire event response, W5538 bomb threat): each executes a life-safety duty of care to the ~99,000 people on premises chain-wide per day (customers + staff, the W330 canon) with statutory anchors (RA 7610 child protection, RA 9514 Fire Code re-occupancy clearance, PNP-EOD coordination) and gates reopening/reunification on verified external clearance:
 
 | ID | Workflow | Value Stream |
 |---|---|---|

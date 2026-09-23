@@ -7,7 +7,8 @@
 # (final-semantic-coverage.py: detector suite over the remaining workflows + targeted
 # reads of every flagged spot; three citation defects repaired, 11 false-positive
 # constructions allowlisted in-script).
-# Total: 5,370 distinct workflows of 5,370 (100%) — LOOP CLOSED 2026-09-02 by the
+# Total: 5,432 distinct workflows of 5,432 (100%) as of the 2026-09-23 seventy-fourth-wave
+# admission (the post-closure block at the foot of this file); LOOP CLOSED 2026-09-02 by the
 # final-coverage pass at 5,363/5,363; W5511 (VS-54.3 gift-card dormancy monitoring,
 # escheat evaluation & expired-liability derecognition) shipped after the closure on
 # 2026-09-03 and was admitted the same day via the documented transition path: a full
@@ -5395,13 +5396,13 @@ W5515
 W5516
 W5517
 
-# Post-closure additions (transition-path pending): W5518–W5524 (IT operating-model gap fill,
+# Post-closure additions (ADMITTED 2026-09-23, seventy-fourth wave — this former pending note is retired; see the admission block at the foot): W5518–W5524 (IT operating-model gap fill,
 # VS-27, 2026-09-03 — workflow-gap-analysis-it.md / workflow-gap-analysis.md batch 8) shipped
 # after the loop closed at 5,370/5,370. They are NOT yet in the audited registry; admission
 # follows the documented W5511 transition path (full read + D1–D4 detector sweep). The
 # "5,370 of 5,370 (100%)" total above is the closed-loop historical record at closure time.
 
-# Post-closure additions (transition-path pending): W5525–W5534 (people-capability &
+# Post-closure additions (ADMITTED 2026-09-23, seventy-fourth wave — this former pending note is retired; see the admission block at the foot): W5525–W5534 (people-capability &
 # reporting-policy gap fill, VS-19.4 ×3 + VS-17.4 ×1, 2026-09-03 — workflow-gap-analysis-people.md /
 # workflow-gap-analysis.md batch 9; finance-workflow gap fill, VS-42.3 ×1 + VS-17.3 ×1 + VS-17.4 ×1,
 # 2026-09-03 — workflow-gap-analysis-finance.md / workflow-gap-analysis.md batch 10; operations-
@@ -5411,27 +5412,27 @@ W5517
 # documented W5511 transition path (full read + D1–D4 detector sweep). The "5,370 of 5,370 (100%)"
 # total above is the closed-loop historical record at closure time.
 
-# Post-closure additions (transition-path pending): W5535–W5535 (capability demand-intake &
+# Post-closure additions (ADMITTED 2026-09-23, seventy-fourth wave — this former pending note is retired; see the admission block at the foot): W5535–W5535 (capability demand-intake &
 # backlog-triage gap fill, VS-113 PA-113.2, 2026-09-04 — workflow-gap-analysis.md batch 15) shipped
 # after the loop closed at 5,370/5,370. It is NOT yet in the audited registry; admission follows
 # the documented W5511 transition path (full read + D1–D4 detector sweep). The "5,370 of 5,370
 # (100%)" total above is the closed-loop historical record at closure time.
 
-# Post-closure additions (transition-path pending): W5536–W5543 (emergency & continuity
+# Post-closure additions (ADMITTED 2026-09-23, seventy-fourth wave — this former pending note is retired; see the admission block at the foot): W5536–W5543 (emergency & continuity
 # workflow gap fill, VS-07.2 ×2 + VS-24.2 ×2 + VS-19.2 ×1 + VS-18.3 ×1 + VS-105.3 ×1 +
 # VS-118.2 ×1, 2026-09-05 — workflow-gap-analysis.md batch 16) shipped after the loop
 # closed at 5,370/5,370. They are NOT yet in the audited registry; admission follows the
 # documented W5511 transition path (full read + D1–D4 detector sweep). The "5,370 of 5,370
 # (100%)" total above is the closed-loop historical record at closure time.
 
-# Post-closure additions (transition-path pending): W5544–W5549 (regulatory-shock,
+# Post-closure additions (ADMITTED 2026-09-23, seventy-fourth wave — this former pending note is retired; see the admission block at the foot): W5544–W5549 (regulatory-shock,
 # platform-outage & governance-continuity gap fill, VS-36.1 ×1 + VS-79.3 ×2 + VS-08.1 ×1 +
 # VS-54.2 ×1 + VS-24.1 ×1, 2026-09-05 — workflow-gap-analysis.md batch 17) shipped after
 # the loop closed at 5,370/5,370. They are NOT yet in the audited registry; admission
 # follows the documented W5511 transition path (full read + D1–D4 detector sweep). The
 # "5,370 of 5,370 (100%)" total above is the closed-loop historical record at closure time.
 
-# Post-closure additions (transition-path pending): W5550–W5553 (channel-enforcement,
+# Post-closure additions (ADMITTED 2026-09-23, seventy-fourth wave — this former pending note is retired; see the admission block at the foot): W5550–W5553 (channel-enforcement,
 # employee-legal-status, OSH-enforcement & app-store-removal gap fill, VS-10.3 ×1 +
 # VS-19.1 ×1 + VS-24.1 ×1 + VS-75.1 ×1, 2026-09-05 — workflow-gap-analysis.md batch 18)
 # shipped after the loop closed at 5,370/5,370. They are NOT yet in the audited registry;
@@ -5439,7 +5440,7 @@ W5517
 # sweep). The "5,370 of 5,370 (100%)" total above is the closed-loop historical record at
 # closure time.
 
-# Post-closure additions (transition-path pending): W5566–W5569 (terminal-tampering,
+# Post-closure additions (ADMITTED 2026-09-23, seventy-fourth wave — this former pending note is retired; see the admission block at the foot): W5566–W5569 (terminal-tampering,
 # procurement-impersonation, account-takeover & commute-disruption gap fill, VS-08.2 ×1 +
 # VS-03.2 ×1 + VS-14.2 ×1 + VS-141.2 ×1, 2026-09-05 — workflow-gap-analysis.md batch 22)
 # shipped after the loop closed at 5,370/5,370. They are NOT yet in the audited registry;
@@ -5447,7 +5448,7 @@ W5517
 # sweep). The "5,370 of 5,370 (100%)" total above is the closed-loop historical record at
 # closure time.
 
-# Post-closure additions (transition-path pending): W5562–W5565 (storefront-crash,
+# Post-closure additions (ADMITTED 2026-09-23, seventy-fourth wave — this former pending note is retired; see the admission block at the foot): W5562–W5565 (storefront-crash,
 # brand-impersonation-scam, wallet-outage & adjacent-works gap fill, VS-147.2 ×1 +
 # VS-100.2 ×1 + VS-08.1 ×1 + VS-20.3 ×1, 2026-09-05 — workflow-gap-analysis.md batch 21)
 # shipped after the loop closed at 5,370/5,370. They are NOT yet in the audited registry;
@@ -5455,7 +5456,7 @@ W5517
 # sweep). The "5,370 of 5,370 (100%)" total above is the closed-loop historical record at
 # closure time.
 
-# Post-closure additions (transition-path pending): W5558–W5561 (cyber-extortion,
+# Post-closure additions (ADMITTED 2026-09-23, seventy-fourth wave — this former pending note is retired; see the admission block at the foot): W5558–W5561 (cyber-extortion,
 # payment-diversion, land-occupation & water-continuity gap fill, VS-27.3 ×1 +
 # VS-18.2 ×1 + VS-178.1 ×1 + VS-07.2 ×1, 2026-09-05 — workflow-gap-analysis.md batch 20)
 # shipped after the loop closed at 5,370/5,370. They are NOT yet in the audited registry;
@@ -5463,7 +5464,7 @@ W5517
 # sweep). The "5,370 of 5,370 (100%)" total above is the closed-loop historical record at
 # closure time.
 
-# Post-closure additions (transition-path pending): W5554–W5557 (in-transit-security,
+# Post-closure additions (ADMITTED 2026-09-23, seventy-fourth wave — this former pending note is retired; see the admission block at the foot): W5554–W5557 (in-transit-security,
 # fatality-scene, tampering-extortion & recruitment-fraud gap fill, VS-06.2 ×1 +
 # VS-89.1 ×1 + VS-121.1 ×1 + VS-147.3 ×1, 2026-09-05 — workflow-gap-analysis.md batch 19)
 # shipped after the loop closed at 5,370/5,370. They are NOT yet in the audited registry;
@@ -5471,7 +5472,7 @@ W5517
 # sweep). The "5,370 of 5,370 (100%)" total above is the closed-loop historical record at
 # closure time.
 
-# Post-closure additions (transition-path pending): W5570–W5573 (gas-leak,
+# Post-closure additions (ADMITTED 2026-09-23, seventy-fourth wave — this former pending note is retired; see the admission block at the foot): W5570–W5573 (gas-leak,
 # tsunami/storm-surge, media-exposé & server-room-environmental gap fill, VS-24.2 ×1 +
 # VS-26.1 ×1 + VS-14.3 ×1 + VS-27.2 ×1, 2026-09-05 — workflow-gap-analysis.md batch 23)
 # shipped after the loop closed at 5,370/5,370. They are NOT yet in the audited registry;
@@ -5479,14 +5480,14 @@ W5517
 # sweep). The "5,370 of 5,370 (100%)" total above is the closed-loop historical record at
 # closure time.
 
-# Post-closure additions (transition-path pending): W5574–W5574 (concessionaire
+# Post-closure additions (ADMITTED 2026-09-23, seventy-fourth wave — this former pending note is retired; see the admission block at the foot): W5574–W5574 (concessionaire
 # connectivity request, approval & independent-circuit governance gap fill, VS-07.1 ×1,
 # 2026-09-10 — workflow-gap-analysis.md batch 24) shipped after the loop closed at
 # 5,370/5,370. It is NOT yet in the audited registry; admission follows the documented
 # W5511 transition path (full read + D1–D4 detector sweep). The "5,370 of 5,370 (100%)"
 # total above is the closed-loop historical record at closure time.
 
-# Post-closure additions (transition-path pending): W5575–W5577 (ERP
+# Post-closure additions (ADMITTED 2026-09-23, seventy-fourth wave — this former pending note is retired; see the admission block at the foot): W5575–W5577 (ERP
 # customization-governance gap fill — CDR intake & admissibility gate, CEMLI register
 # quarterly object-inventory audit, extension de-customization & retirement, VS-113.1 ×3,
 # 2026-09-21 — workflow-gap-analysis.md batch 25) shipped after the loop closed at
@@ -5494,10 +5495,107 @@ W5517
 # W5511 transition path (full read + D1–D4 detector sweep). The "5,370 of 5,370 (100%)"
 # total above is the closed-loop historical record at closure time.
 
-# Post-closure additions (transition-path pending): W5578–W5579 (EBS
+# Post-closure additions (ADMITTED 2026-09-23, seventy-fourth wave — this former pending note is retired; see the admission block at the foot): W5578–W5579 (EBS
 # documentation-coverage gap fill — environmental data capture & emission-factor
 # governance (VS-25.3 ×1), customer bill presentment governance (VS-16.2 ×1),
 # 2026-09-21 — workflow-gap-analysis.md batch 26) shipped after the loop closed at
 # 5,370/5,370. They are NOT yet in the audited registry; admission follows the
 # documented W5511 transition path (full read + D1–D4 detector sweep). The
 # "5,370 of 5,370 (100%)" total above is the closed-loop historical record.
+
+# Seventy-fourth-wave admission (2026-09-23): the 62 post-closure workflows
+# W5518–W5579 (the gap-fill batches' exception/continuity/governance surfaces —
+# IT platform & security estate, ISMS/pentest/DLP, LMS platform & content,
+# technical-accounting & PFRS 8 governance, MCIT & 2316 tax surfaces, gate-pass,
+# Code Adam / fire / bomb-threat / gas-leak / entrapment / water-interruption /
+# tsunami life-safety family, payroll-failure & bank-failure & BEC & liquidity
+# contingencies, price-file & payment-network & wallet & stored-value outages,
+# DOLE stop-work & Oplan Kandado & eFPS-outage statutory responses, arrest /
+# death-on-premises / hijack / tampering / recruitment-fraud / impersonation /
+# account-takeover / crash / construction-damage / strike event canons, the
+# concessionaire-connectivity gate, the CDR/CEMLI/de-customization governance
+# trio, EAR environmental capture and BPA bill-presentment governance) were
+# admitted in one pass via the documented transition path: full read of every
+# block (fields, steps, touchpoints, pains, automation, controls, TE arithmetic,
+# cross-references) by the seventy-fourth-wave review, the D1–D4 detector suite
+# over the unaudited set (0 D1/D3/D4 flags), and the five D2 citation hits
+# adjudicated legitimate in context — RA 10175 (Cybercrime Prevention Act 2012;
+# PNP Anti-Cybercrime Group is its referral authority: W5558 ransomware step 3,
+# W5559 BEC step 4), RA 7279 (Urban Development and Housing Act; professional-
+# squatter syndicates and the UDHA relocation track: W5560 background + step 2),
+# RA 10821 (Children's Emergency Relief and Protection; the duty-of-care framing
+# beside RA 7610: W5536 background) — all three added to final-semantic-coverage
+# .py's KNOWN_GOOD canon list. In-read repairs shipped with the admission (the
+# seventy-fourth wave): W5529's touchpoint cited 'W336 balance-sheet
+# reconciliation workspace' (W336 is Internal Audit QAIP; the balance-sheet
+# reconciliation workflow is W636), W5578 step 5 cited '(W111, W692, W327)' for
+# the utility-and-fleet records (W327 is dividend declaration; the fleet fuel
+# record surface is W198), W5536/W5555/the classification register's W5536-class
+# row carried '~99,000 customers on premises' against the W330 canon's
+# '~99,000+ PEOPLE on premises (~467 customers + 29 staff per store)', and
+# W5522's touchpoint carried a doubled 'fit-gap H11' clause. The per-batch
+# per-batch pending notes above are superseded by this admission: every
+# workflow they name is registered below.
+# ADMITTED 2026-09-23 (seventy-fourth wave): 5,432 of 5,432 (100%).
+W5518
+W5519
+W5520
+W5521
+W5522
+W5523
+W5524
+W5525
+W5526
+W5527
+W5528
+W5529
+W5530
+W5531
+W5532
+W5533
+W5534
+W5535
+W5536
+W5537
+W5538
+W5539
+W5540
+W5541
+W5542
+W5543
+W5544
+W5545
+W5546
+W5547
+W5548
+W5549
+W5550
+W5551
+W5552
+W5553
+W5554
+W5555
+W5556
+W5557
+W5558
+W5559
+W5560
+W5561
+W5562
+W5563
+W5564
+W5565
+W5566
+W5567
+W5568
+W5569
+W5570
+W5571
+W5572
+W5573
+W5574
+W5575
+W5576
+W5577
+W5578
+W5579
