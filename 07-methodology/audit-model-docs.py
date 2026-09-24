@@ -722,7 +722,18 @@ bans, tg ≈466-concurrent anchor + retired-form bans, BOM 643-filer anchor + 65
 requirement-family rows, domain-companion anchors incl. the people SS1 line's extended
 design clause, the TO's two active-annotation anchors, quote-coverage's 7,247 | 9,271 |
 6,918 row); the two-canon settlement stands (the TO's 532/6,932 design of record is
-unchanged; 6,925 joined 6,932 on the retired-active ban lists)."""
+unchanged; 6,925 joined 6,932 on the retired-active ban lists).
+
+2026-09-23 eighty-third wave: the (ad)-cascade's own residue — five half-repaired cells
+on live, unguarded surfaces, each beside a cell a prior cascade had touched or
+re-pointed: the OM §9.2 Industry-benchmark band (100–168 — a 6,715-era derivation
+carried through three headcount regimes while its parenthetical was re-pointed twice —
+→ ~104–173; new om_benchmark_hits derives the band from the canon constant), the
+assumptions A6.6 seat-avoidance note (~6,925 → ~6,918-seat; atlassian_suite_hits arm),
+the registry rule-7 headcount parenthetical + CAP-B01 checklist endpoints (the
+two-event lineage + the 518 → 525 / 525 → 532 split; channel_registry_hits arms), and
+the sourcing §13 OM row's 're-based 6,925' clause (companion_pin_hits arm). Version
+cascade: OM v3.26, assumptions v10, registry v1.4, sourcing v3.16."""
 
 def _doc_versions():
     """Current '*Document Version:' footer of each versioned doc (basename -> 'N.M')."""
@@ -2056,6 +2067,29 @@ def companion_pin_hits():
                      f"newest footer OM-pin clause says v{m.group(1)} but the OM "
                      f"footer says v{om_v} (the companion-pin chain is broken — "
                      f"bump this model with a clause re-pointing it)"))
+    # (c2) the §13 OM row's active-headcount clause rides the active canon
+    # (the eighty-third-wave arm: the row's descriptive clause kept 're-based
+    # 6,925' after the (ad) deferral re-based the canon to 6,918 — on the very
+    # row the (ad) pass version-re-pointed; a future census move re-fires
+    # until consciously re-pointed, the Check-71 CENSUS-pin contract)
+    src_body = strip_footer(src)
+    row_m = re.search(r"\| \[`it-product-operating-model\.md`\]\(it-product-"
+                      r"operating-model\.md\) \| ([^|]*)\|", src_body)
+    if not row_m:
+        hits.append(("capability-sourcing-and-engineering-model.md", 0,
+                     "§13 OM row not found for the headcount-clause arm"))
+    else:
+        row = " ".join(row_m.group(1).split())
+        if f"active headcount re-based 6,918" not in row:
+            hits.append(("capability-sourcing-and-engineering-model.md",
+                         src_body[:row_m.start()].count("\n") + 1,
+                         'missing §13 OM-row headcount anchor "active headcount '
+                         're-based 6,918" (the active canon)'))
+        if "re-based 6,925" in row:
+            hits.append(("capability-sourcing-and-engineering-model.md",
+                         src_body[:row_m.start()].count("\n") + 1,
+                         'retired §13 OM-row clause "re-based 6,925" (the '
+                         '(ad) deferral re-based the active canon to 6,918)'))
     # (d) OM §13 doc-map self-pin 'this vN.M model'
     for ln, l in enumerate(om.splitlines(), 1):
         if "capability-sourcing-and-engineering-model.md" in l and "this v" in l \
@@ -2125,6 +2159,52 @@ def tg_hq_bandwidth_hits():
         if pos >= 0:
             hits.append((rel, body[:pos].count("\n") + 1,
                          f"retired form '{bad}' ({why})"))
+    return hits
+
+
+def om_benchmark_hits():
+    """2026-09-23 eighty-third-wave consistency review — the IT operating model
+    §9.2 Industry-benchmark row rides the ACTIVE headcount canon: the row's own
+    parenthetical claims the band is 1.5–2.5% of the headcount, but the band
+    figures read 100–168 — derived at the 6,715-total authoring-time headcount
+    (1.5% ≈ 100.7, 2.5% ≈ 167.9) and carried verbatim through three headcount
+    regimes while the parenthetical itself was re-pointed twice (6,932 → 6,925
+    at (x), → 6,918 at (ad)) — the derived-figure half-repair class, invisible
+    to every arm because no rule read §9.2's benchmark row. Required: the
+    ~104–173 band at the 6,918 active canon (joined-text probe — the wave-72
+    line-wrap lesson); banned on the footer-stripped body: the retired 100–168
+    band and the two retired headcount parentheticals (the new footer segment
+    quotes the retired band — the strip scopes the ban to live prose, the
+    wave-77 footer-hygiene convention). The guard derives the expected band
+    from the canon constant rather than trusting the row's own figures, so a
+    future census move re-fires the arm until consciously re-pointed (the
+    Check-71 CENSUS-pin contract)."""
+    rel = "it-product-operating-model.md"
+    hits = []
+    raw = open(os.path.join(REPO, "07-methodology", rel), encoding="utf-8").read()
+    body = strip_footer(raw)
+    joined = " ".join(body.split())
+    canon_hc = 6918
+    exp_lo, exp_hi = round(canon_hc * 0.015), round(canon_hc * 0.025)
+    anchor = f"~{exp_lo}–{exp_hi} (1.5–2.5% of the {canon_hc:,} active headcount)"
+    if anchor not in joined:
+        hits.append((rel, 0, f'required §9.2 benchmark anchor missing: "{anchor}" '
+                             '(the 1.5–2.5% band re-derived at the active canon — '
+                             'the row claims the derivation, the figures must '
+                             're-derive)'))
+    for bad, why in (("100–168", "the retired 6,715-era benchmark band"),
+                     ("of the 6,925 active headcount",
+                      "the retired (x)-canon headcount parenthetical"),
+                     ("of 6,932 headcount",
+                      "the retired pre-(x) headcount parenthetical")):
+        pos = body.find(bad)
+        if pos >= 0:
+            hits.append((rel, body[:pos].count("\n") + 1,
+                         f"retired form '{bad}' ({why})"))
+        elif bad in joined:
+            hits.append((rel, 0,
+                         f"retired form '{bad}' ({why}; caught on the "
+                         "joined-text probe — line-wrapped)"))
     return hits
 
 
@@ -4239,6 +4319,23 @@ def atlassian_suite_hits():
         if lit in asm:
             hits.append(("assumptions-and-design-decisions.md", 0,
                          f'retired A6.6 form "{lit}" on a live surface'))
+    # ---- (a2) the A6.6 seat-avoidance note rides the active headcount canon
+    # (the eighty-third-wave arm: the cell kept the (x)-disablement ~6,925-seat
+    # figure after the (ad) TPS-squad deferral re-based the active population
+    # to 6,918 — the half-repaired-cell class, the (x) pass having itself
+    # re-based this very cell 6,932 → 6,925; a future census move re-fires
+    # until consciously re-pointed, the Check-71 CENSUS-pin contract)
+    if "avoids ~6,918-seat cost" not in asm:
+        hits.append(("assumptions-and-design-decisions.md", 0,
+                     'missing A6.6 seat-avoidance anchor "avoids ~6,918-seat '
+                     'cost" (the active canon since the (ad) deferral)'))
+    for bad in ("~6,925-seat cost", "~6,932-seat cost"):
+        pos = asm.find(bad)
+        if pos >= 0:
+            hits.append(("assumptions-and-design-decisions.md",
+                         asm[:pos].count("\n") + 1,
+                         f'retired A6.6 seat form "{bad}" (the active-canon '
+                         'seat-avoidance figure moved)'))
 
     # ---- (b) the canonical matrix rows + their EBS pattern-register mirrors
     dv = _body("01-model-company/data-volumes-and-integrations.md")
@@ -4586,6 +4683,33 @@ def channel_registry_hits():
                      line, 'retired citation "W518/W40" (W40 is Regular Price '
                            'Change Execution — the store/DC comms canon is W2358, '
                            'VS-63)'))
+    # ---- rule 7's headcount lineage + the CAP-B01 checklist's re-base
+    # endpoints (the eighty-third-wave arms: both cells kept teaching the
+    # (x)-disablement canon after the (ad) TPS-squad deferral re-based the
+    # active population a second time — a future re-base re-fires until
+    # consciously re-pointed, the Check-71 CENSUS-pin contract)
+    for anc in ("re-based again to **HQ 518 / total 6,918 active** by the TPS "
+                "build squad's deferral ((ad), sourcing register §4) — the "
+                "532/6,932 design of record retained throughout",
+                "re-base the headcount canon (HQ 518 → 525 active; the TPS "
+                "build squad's 525 → 532 hop rides the sourcing register's "
+                "CAP-B01 re-enablement trigger, (ad))"):
+        if anc not in body:
+            hits.append((rel, 0, f'missing headcount-lineage anchor "{anc[:64]}…" '
+                                 '(rule 7 / CAP-B01 checklist — the active-canon '
+                                 'lineage since the (ad) deferral)'))
+    for bad, why in (("the disablement re-bases the active headcount canon "
+                      "(HQ 532 → 525 active; total 6,932 → 6,925) with the "
+                      "design retained",
+                      "the retired bare-(x) lineage (the canon moved again at "
+                      "(ad))"),
+                     ("re-base the headcount canon (HQ 525 → 532)",
+                      "the retired (x)-era checklist endpoints (re-enabling "
+                      "CAP-B01 now moves HQ 518 → 525)")):
+        pos = body.find(bad)
+        if pos >= 0:
+            hits.append((rel, body[:pos].count("\n") + 1,
+                         f"retired form '{bad[:56]}…' ({why})"))
     return hits
 
 
@@ -5285,6 +5409,9 @@ def main():
     # 2026-09-23 seventy-ninth-wave consistency review addition — the
     # technical-guidelines §2.2 HQ bandwidth-sizing row's active-canon guard
     hits.extend(tg_hq_bandwidth_hits())
+    # 2026-09-23 eighty-third-wave consistency review addition — the IT
+    # operating model §9.2 Industry-benchmark row's active-canon guard
+    hits.extend(om_benchmark_hits())
     # 2026-09-07 ninth-wave consistency review addition
     hits.extend(companion_pin_hits())
     # 2026-09-09 sixteenth-wave consistency review addition
