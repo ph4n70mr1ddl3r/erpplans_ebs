@@ -50,9 +50,9 @@
 | Chartered roles (register 192 + IT seats 32 + store 8 + DC 27) | 259 |
 | With ≥1 explicit RACI anchor | 259 (100%) |
 | ZERO-anchor — the anchoring worklist | 0 (hq 0 · it 0 · store 0 · dc 0) |
-| Weakly anchored (1–2 workflows) — demand-verification watchlist | 58 |
+| Weakly anchored (1–2 workflows) — demand-verification watchlist | 57 |
 
-### Weak-anchor watchlist — 58 chartered roles anchored in only 1–2 workflows
+### Weak-anchor watchlist — 57 chartered roles anchored in only 1–2 workflows
 
 | Role | Charter source | HC | Workflows touched |
 |---|---|---|---|
@@ -106,7 +106,6 @@
 | Retail Media Operations Specialist | §5.3 register — Marketing | 1 | 2 |
 | Senior FP&A Analyst | §5.3 register — Finance & Accounting | 2 | 2 |
 | Strategy Analyst | §5.3 register — Strategy / Corporate Planning | 1 | 2 |
-| Timekeeping & Attendance Analyst | §5.3 register — Human Resources | 1 | 2 |
 | Vendor Portal & Collaboration Specialist | §5.3 register — Supply Chain & Logistics | 2 | 2 |
 | AAP Agent Engineer | IT product-model seats — Information Technology (product model) | — | 2 |
 | IAP Integration Support Engineer | IT product-model seats — Information Technology (product model) | — | 2 |
@@ -211,8 +210,8 @@
 | Talent Acquisition Specialist | Human Resources | 5 | 3 | 2 | 9 | 8 | 5 | 1 | 2 | 2 |
 | HR Services Specialist | Human Resources | 4 | 2 | 1 | 8 | 8 | 3 | 2 | 1 | 0 |
 | Compensation Analyst | Human Resources | 1 | 0 | 2 | 1 | 0 | 3 | 0 | 2 | 1 |
+| Timekeeping & Attendance Analyst | Human Resources | 1 | 0 | 2 | 1 | 0 | 3 | 2 | 1 | 0 |
 | Payroll Supervisor | Human Resources | 1 | 0 | 2 | 1 | 0 | 2 | 1 | 1 | 0 |
-| Timekeeping & Attendance Analyst | Human Resources | 1 | 0 | 2 | 1 | 0 | 2 | 2 | 0 | 0 |
 | Payroll & Statutory Remittance Officer | Human Resources | 1 | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 0 |
 | Sourcing & Screening Coordinator | Human Resources | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | TA Coordinator | Human Resources | 1 | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 |

@@ -22,7 +22,7 @@
 | Class C — healthy (≥1 chartered owner) | 4042 |
 | Class B — owner-grain gap (chartered roles touched, owner not chartered) | 1271 |
 | Class A — role-less (no chartered role in any RACI cell) | 120 |
-| Anchoring census (role → workflow arm, pinned by Check 71) | 259 chartered / 259 anchored / 0 zero-anchor / 58 weak |
+| Anchoring census (role → workflow arm, pinned by Check 71) | 259 chartered / 259 anchored / 0 zero-anchor / 57 weak |
 
 > **Adjudication policy.** Department-grain ownership ('Finance', 'Legal',
 > 'HR' as performer) is acceptable only where the work is genuinely
@@ -2329,12 +2329,12 @@ candidate for the same governance path.
 | Retail Media Operations Specialist | Marketing | 2 | 0 |
 | Senior FP&A Analyst | Finance & Accounting | 2 | 0 |
 | Strategy Analyst | Strategy / Corporate Planning | 2 | 0 |
-| Timekeeping & Attendance Analyst | Human Resources | 2 | 0 |
 | Compensation Analyst | Human Resources | 3 | 0 |
 | Document Control Coordinator | Strategy / Corporate Planning | 3 | 0 |
 | Field Compliance Auditor | Internal Audit & Risk | 3 | 0 |
 | Senior Demand Planner | Supply Chain & Logistics | 3 | 0 |
 | Tax Compliance & eFPS Specialist | Finance & Accounting | 3 | 0 |
+| Timekeeping & Attendance Analyst | Human Resources | 3 | 0 |
 | Payroll Accounting Liaison | Finance & Accounting | 4 | 0 |
 | Putaway Staff | DC (field, per-DC roster) | 4 | 0 |
 | Packers / Load Builders | DC (field, per-DC roster) | 8 | 0 |

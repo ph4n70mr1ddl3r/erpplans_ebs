@@ -1,14 +1,14 @@
-# Weak-Anchor Demand Verification (generated — batch 41, 2026-09-23)
+# Weak-Anchor Demand Verification (generated — batch 42, 2026-09-23)
 
 > **Verification record** for the Role-Anchoring Contract's weak-anchor watchlist — the
-> 58 chartered roles anchored in only 1–2 workflows. Per the contract, no headcount
+> 57 chartered roles anchored in only 1–2 workflows. Per the contract, no headcount
 > or structure decision may touch a weak-anchor role until its per-role annual demand is
 > verified against chartered capacity. Instrument: `virtual-gemba-walk.py motion --full`
 > (per-role annual demand hours from the corpus's own step durations × event cadence vs
 > chartered TO capacity; 1,800/1,900 net productive hours; ~53% frequency-parse coverage).
-> Batch 40 upgraded the gemba's role-cell splitting to the generator's paren-aware comma
-> semantics; batches 39/41 elevated nineteen roles into Role (R) cells (waves 1–2); generated
-> — do not hand-edit; regenerate alongside the gap analysis.
+> Batches 39–41 elevated nineteen roles into Role (R) cells; batch 42 re-anchored the T&A
+> Analyst off a store-scaled step onto its true HQ platform step (fixing a bogus OVERLOAD
+> artifact). Generated — do not hand-edit; regenerate alongside the gap analysis.
 
 ## Verdict legend
 
@@ -79,7 +79,6 @@
 | Retail Media Operations Specialist | §5.3 register — Marketing | 2 | — | 1 | — | NO PARSED CADENCE |
 | Senior FP&A Analyst | §5.3 register — Finance & Accounting | 2 | — | 2 | — | NO PARSED CADENCE |
 | Strategy Analyst | §5.3 register — Strategy / Corporate Planning | 2 | — | 1 | — | NO PARSED CADENCE |
-| Timekeeping & Attendance Analyst | §5.3 register — Human Resources | 2 | 182,500 | 1 | 10139% | OVERLOAD |
 | Vendor Portal & Collaboration Specialist | §5.3 register — Supply Chain & Logistics | 2 | 667 | 2 | 19% | UNDER-UTILIZED |
 
 ## Tally
@@ -87,11 +86,12 @@
 | Verdict | Roles |
 |---|---|
 | CONFIRMED | 1 |
-| OVERLOAD | 1 |
+| OVERLOAD | 0 |
 | UNDER-UTILIZED | 3 |
 | NO PARSED CADENCE | 53 |
 
 > OVERLOAD rows are the headcount-real candidates this doctrine exists to find. UNDER-UTILIZED
 > rows are merge/resize candidates. NO PARSED CADENCE rows are the step-level anchoring backlog:
 > elevate the role into Role (R)/(A) cells with durations (the batch-39/41 pattern), or measure
-> by gemba. Interpretation guardrails as printed by the tool.
+> by gemba. Interpretation guardrails as printed by the tool. Elevation lessons applied: anchor
+> HQ seats on HQ-scale steps — a store-scaled cadence multiplies by the network.
