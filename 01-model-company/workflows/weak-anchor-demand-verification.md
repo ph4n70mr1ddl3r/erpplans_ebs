@@ -1,4 +1,4 @@
-# Weak-Anchor Demand Verification (generated — batch 42, 2026-09-23)
+# Weak-Anchor Demand Verification (generated — batch 43, 2026-09-23)
 
 > **Verification record** for the Role-Anchoring Contract's weak-anchor watchlist — the
 > 57 chartered roles anchored in only 1–2 workflows. Per the contract, no headcount
@@ -7,8 +7,10 @@
 > (per-role annual demand hours from the corpus's own step durations × event cadence vs
 > chartered TO capacity; 1,800/1,900 net productive hours; ~53% frequency-parse coverage).
 > Batches 39–41 elevated nineteen roles into Role (R) cells; batch 42 re-anchored the T&A
-> Analyst off a store-scaled step onto its true HQ platform step (fixing a bogus OVERLOAD
-> artifact). Generated — do not hand-edit; regenerate alongside the gap analysis.
+> Analyst off a store-scaled step onto its true HQ platform step; batch 43 classifies the
+> residual — ZERO-DURATION rows are days-based/multi-day work the hour model cannot
+> measure (verify by cycle audit), distinct from NO PARSED CADENCE (elevate into Role
+> cells with durations, or measure by gemba). Generated — do not hand-edit.
 
 ## Verdict legend
 
@@ -17,7 +19,8 @@
 | CONFIRMED | parsed demand 50–150% of chartered capacity | role stays as chartered |
 | OVERLOAD | parsed demand > 150% of capacity | capacity decision — the demand is real |
 | UNDER-UTILIZED | parsed demand < 50% | merge/defer/resize candidate |
-| NO PARSED CADENCE | anchored work is Participant-level or the cadence is unparseable | step-level anchoring or gemba measurement; stays on the watchlist |
+| ZERO-DURATION | anchored steps are days-based/multi-day work | verify by cycle audit, not hours |
+| NO PARSED CADENCE | Participant-level anchor or unparseable cadence | step-level anchoring or gemba measurement |
 
 ## Verification table
 
@@ -91,7 +94,6 @@
 | NO PARSED CADENCE | 53 |
 
 > OVERLOAD rows are the headcount-real candidates this doctrine exists to find. UNDER-UTILIZED
-> rows are merge/resize candidates. NO PARSED CADENCE rows are the step-level anchoring backlog:
-> elevate the role into Role (R)/(A) cells with durations (the batch-39/41 pattern), or measure
-> by gemba. Interpretation guardrails as printed by the tool. Elevation lessons applied: anchor
-> HQ seats on HQ-scale steps — a store-scaled cadence multiplies by the network.
+> rows are merge/resize candidates. ZERO-DURATION rows carry days-based work — audit the cycle,
+> not the hours. NO PARSED CADENCE rows need step-level anchoring or gemba measurement.
+> Interpretation guardrails as printed by the tool.
