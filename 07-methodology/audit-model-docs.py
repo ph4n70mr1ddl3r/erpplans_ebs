@@ -757,7 +757,30 @@ assumptions A6.6 seat-avoidance note (~6,925 → ~6,918-seat; atlassian_suite_hi
 the registry rule-7 headcount parenthetical + CAP-B01 checklist endpoints (the
 two-event lineage + the 518 → 525 / 525 → 532 split; channel_registry_hits arms), and
 the sourcing §13 OM row's 're-based 6,925' clause (companion_pin_hits arm). Version
-cascade: OM v3.26, assumptions v10, registry v1.4, sourcing v3.16."""
+cascade: OM v3.26, assumptions v10, registry v1.4, sourcing v3.16.
+
+2026-09-23 eighty-fifth wave: three (ad)/(x)-era residues — (1) the licensing BOM
+v2.12 change-record's own chain recital: a +$5 slip at the §2.8 license line (the nine
+Employee-metric rows sum to $5,845,710 = $845/employee × 6,918) compounded through the
+four totals it quoted, so the change-record disagreed with the body it documents; the
+five figures corrected in place (BOM v2.13) and licensing_bom_hits gains arm (j) — any
+7+-digit dollar figure in the NEWEST footer segment within $100 of a re-derived chain
+value (the §2.8 HRMS line-sum, perpetual, 22% support, 3-yr/5-yr TCO) without equaling
+it is a near-miss recital (was-values exempt — ≥ $100 away at any real re-base);
+(2) the TPS project-estate's own navigation surfaces (the wave-80 class one
+record-of-record over): the sourcing register §4 row holds VS-74/VS-77's project-side
+workload dormant under CAP-B01 with VS-143 exempt per the (ad) seam ruling, but the two
+READMEs carried zero state annotation — banners added per the VS-93 template and the new
+tps_project_estate_hits rule derives the VS set from the register row every run,
+requiring the banner class / sourcing-register link / registry link /
+designed-capacity anchor / W5580 on each project-side README and protecting the seam VS
+from banner classes; (3) seven single-deferral design annotations (each explained 7 of
+the 14 gap: 6,932 − 6,918 = the Trade department's 7 + the TPS build squad's 7) completed
+to the canonical two-deferral form — PA-138.2/PA-34.1/PA-40.2/PA-72.3/PA-19.3/PA-13.1
+cells (reconcile-staffing-claims anchors + retired-single-deferral bans) and the
+blueprint README W4 row (ebs_blueprint_hits arm (l2), README v3.10). Teeth: four
+synthetic injections through the full audits, each caught at its exact arm with file and
+line named, fixtures restored via /tmp copies sha256-verified byte-identical."""
 
 def _doc_versions():
     """Current '*Document Version:' footer of each versioned doc (basename -> 'N.M')."""
@@ -3085,6 +3108,26 @@ def ebs_blueprint_hits():
             "W4 People row does not carry the active-employee anchor "
             "'6,918 employees (active; the TO's 6,932 design retains the "
             "disabled—prepared Trade department)'")
+    # ---- (l2) 2026-09-23 eighty-fifth-wave review — the W4 row's design
+    # annotation must be the TWO-DEFERRAL form. The (ad) re-base moved the
+    # row's figure to 6,918 but left the (x)-era single-deferral annotation
+    # ('retains the disabled—prepared Trade department') — a pair that
+    # explains 7 of the 14 gap (6,932 − 6,918 = 7 trade + 7 TPS build squad);
+    # the two-deferral form is required at the row and the retired
+    # single-deferral form banned on the footer-stripped body.
+    if w4_row is not None and \
+            "the disabled—prepared Trade department and the deferred—prepared TPS build squad" not in w4_row:
+        add("README.md (02-oracle-ebs)", 0,
+            "W4 People row's design annotation is not the two-deferral form "
+            "('retains the disabled—prepared Trade department and the "
+            "deferred—prepared TPS build squad' — the 6,932 − 6,918 gap is "
+            "7 trade + 7 TPS)")
+    m_sdf = re.search(r"retains the disabled—prepared Trade department\)", rd)
+    if m_sdf:
+        add("README.md (02-oracle-ebs)", rd[:m_sdf.start()].count("\n") + 1,
+            "retired single-deferral annotation form on the footer-stripped "
+            "body (the (ad) deferral's 7 belong in the design-retention "
+            "clause)")
     return hits
 
 
@@ -3474,6 +3517,45 @@ def licensing_bom_hits():
         if pos >= 0:
             hits.append((rel, body[:pos].count("\n") + 1,
                          f"retired form '{bad}' ({why})"))
+    # ---- (j) 2026-09-23 eighty-fifth-wave review — the NEWEST footer segment is
+    # the version's change-record and must not mis-recite the Scenario-A chain.
+    # The (ad) bump's v2.12 segment recited the §2.8 license line at $5,845,715
+    # (true sum $5,845,710 = $845/employee × 6,918) and the slip compounded
+    # through its four totals ($50,216,840 / $11,047,705 / $83,359,955 /
+    # $105,455,365) beside a body carrying ...710/...835/...704/...947/...355 —
+    # the change-record disagreeing with the very document it documents,
+    # invisible to arms (a)–(i) because every footer strip removes the segment.
+    # Contract: any 7+-digit dollar figure in the newest segment that sits
+    # within $100 of a re-derived chain value (the §2.8 HRMS line-sum, the
+    # perpetual total, the 22% support, the 3-yr/5-yr TCO) without being exactly
+    # equal is a near-miss recital. Legitimate recitals pass: exact matches (a
+    # true-up segment quoting the body's chain) and was-values (the prior
+    # chain, ≥ $100 away from the new chain at any real re-base).
+    seg_m = re.search(r"^\*Document Version:.*?(?= Prior |\n|$)", text, re.S | re.M)
+    if seg_m and stated and livetot:
+        hrms_sum = 0.0
+        for m in re.finditer(
+                r"\| ([^|]+) \| ([A-Z][A-Z0-9]+) \| ([\d,]+) \| ([\d,]+) \|", sec_a or ""):
+            name = m.group(1).strip()
+            if name.startswith("~~") or "Total" in name:
+                continue
+            hrms_sum += num(m.group(3)) * 6918
+        chain_vals = [v for v in (livetot, sup_v if sup else None,
+                                  livetot + 3 * num(sup.group(1)) if sup else None,
+                                  livetot + 5 * num(sup.group(1)) if sup else None,
+                                  hrms_sum) if v]
+        segment = seg_m.group(0)
+        for fig_m in re.finditer(r"\$([\d,]{7,})", segment):
+            fig = num(fig_m.group(1))
+            for val in chain_vals:
+                if fig != val and abs(fig - val) <= 100:
+                    hits.append((rel, text[:seg_m.start()].count("\n") + 1,
+                                 f"newest-footer-segment recital ${fig:,.0f} is a "
+                                 f"near-miss of the re-derived chain value "
+                                 f"${val:,.0f} — the change-record must agree "
+                                 "with the body it documents (the v2.12 +$5 "
+                                 "slip class)"))
+                    break
     return hits
 
 
@@ -4854,6 +4936,94 @@ def channel_registry_hits():
     return hits
 
 
+def tps_project_estate_hits():
+    """2026-09-23 eighty-fifth-wave consistency review — the (ad) TPS
+    build-squad deferral's own navigation-surface residue (the wave-80 class
+    one record-of-record over): the sourcing register §4 Trade & project
+    services coordination row (VS-74/VS-77/VS-143) holds the project-side
+    workload DORMANT with the trade desk disabled ('Build — squad deferred —
+    prepared … the project-side workload is dormant with the trade desk
+    disabled (registry CAP-B01) … re-evaluation/stand-up trigger = CAP-B01
+    re-enablement'), but the two project-side value-stream READMEs carried
+    zero state annotation — while every other disabled/dormant capability's
+    navigation surface carries the registry banner (the rule-2 PA-10.2
+    convention; VS-93/VS-65 and the wave-80 estate four). Banners added (the
+    VS-93 template, CAP-B01-pinned). This rule derives the VS set from the
+    sourcing register's own row every run and requires each project-side
+    README to carry: the banner class ('Workload dormant — prepared
+    (CAP-B01'), the sourcing-register link (the dormancy record of record),
+    the registry link, the designed-capacity anchor and W5580; the (ad) SEAM
+    VS (VS-143 — consumer bulky install/haul-away, live per the row's own
+    consumer clause) must NOT carry a dormant/disabled banner class. A future
+    register change re-fires the arm until consciously re-pointed (the
+    Check-71 CENSUS-pin contract)."""
+    hits = []
+    src = open(os.path.join(REPO, "07-methodology",
+                            "capability-sourcing-and-engineering-model.md"),
+               encoding="utf-8").read()
+    src_body = src.split("*Document Version:")[0]
+    row = next((l for l in src_body.splitlines()
+                if l.startswith("| Trade & project services coordination")), None)
+    if row is None:
+        hits.append(("capability-sourcing-and-engineering-model.md", 0,
+                     "the §4 Trade & project services coordination row not "
+                     "found — the TPS project-estate arm cannot derive its set"))
+        return hits
+    if "CAP-B01 re-enablement" not in row:
+        hits.append(("capability-sourcing-and-engineering-model.md", 0,
+                     "the sourcing register's TPS row no longer carries the "
+                     "CAP-B01 re-enablement trigger — re-point the arm"))
+    vs_ids = []
+    for m in re.finditer(r"VS-(\d+)", row):
+        vsid = f"VS-{m.group(1)}"
+        if vsid not in vs_ids:
+            vs_ids.append(vsid)
+    # the (ad) seam ruling: the row's consumer clause keeps VS-143 live —
+    # the project-side VSs are the rest of the row's set
+    seam = {"VS-143"}
+    wf_dir = os.path.join(REPO, "01-model-company", "workflows")
+    for vsid in vs_ids:
+        entry = None
+        for e in sorted(os.listdir(wf_dir)):
+            if re.match(re.escape(vsid) + r"-", e):
+                entry = e
+                break
+        if entry is None:
+            hits.append(("capability-sourcing-and-engineering-model.md", 0,
+                         f"the §4 TPS row names {vsid} but no workflows/VS-* "
+                         f"directory matches"))
+            continue
+        rel = f"workflows/{entry}/README.md"
+        text = open(os.path.join(wf_dir, entry, "README.md"),
+                    encoding="utf-8").read()
+        if vsid in seam:
+            if ("Workload dormant — prepared" in text
+                    or "Capability disabled — prepared" in text):
+                hits.append((rel, 0,
+                             f"the seam value stream ({vsid}, live per the (ad) "
+                             "ruling — consumer bulky install/haul-away covered "
+                             "by the in-suite Field Service dispatch core) "
+                             "carries a dormant/disabled banner class — re-point "
+                             "the seam set if the estate changed"))
+            continue
+        for anchor, why in (
+                ("Workload dormant — prepared (CAP-B01",
+                 "the TPS project-estate banner class (the rule-2 PA-10.2 "
+                 "convention; the VS-93/VS-65 and wave-80 estate precedents)"),
+                ("capability-sourcing-and-engineering-model.md",
+                 "the sourcing register §4 link (the dormancy record of record)"),
+                ("channel-capability-registry.md",
+                 "the registry link (CAP-B01 owns the disablement)"),
+                ("prepared design held at designed capacity",
+                 "the designed-capacity declaration"),
+                ("W5580",
+                 "the estate's state-change workflow")):
+            if anchor not in text:
+                hits.append((rel, 0,
+                             f"TPS project-estate README missing required banner "
+                             f'anchor "{anchor}" ({why})'))
+    return hits
+
 def b2b_estate_hits():
     """2026-09-23 eightieth-wave consistency review — the (x) B2B disablement's
     navigation-surface residue: the four value-stream READMEs registry governing
@@ -5592,6 +5762,7 @@ def main():
     # 2026-09-23 eightieth-wave consistency review addition (the (x) B2B
     # estate's own navigation surfaces — the rule-7 README set bannered)
     hits.extend(b2b_estate_hits())
+    hits.extend(tps_project_estate_hits())
     for doc, line, detail in hits:
         print(f"model-doc: {doc}:{line}: {detail}")
     print(f"audit-model-docs: {len(hits)} hit(s) across {len(DOCS)} documents")

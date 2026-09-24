@@ -85,20 +85,54 @@ RETIRED_HQ_ACTIVE_FORMS = [
 REQ_HQ_ACTIVE_ANCHORS = [
     ("PA-19.3-workforce-management.md",
      "HQ corporate functions (~518 active staff, profile §3.3/§11.1"),
+    ("PA-19.3-workforce-management.md",
+     "Trade / Account Management disabled — prepared 2026-09-23 (x) and the "
+     "TPS build squad deferred — prepared (ad), sourcing register §4, "
+     "registry CAP-B01"),
     ("PA-40.2-project-cost-tracking.md",
      "Holdings/HQ: ~518 active per profile §3.3/§11.1"),
+    ("PA-40.2-project-cost-tracking.md",
+     "the TO's 532-role design retains the disabled—prepared Trade "
+     "department — 2026-09-23 (x) — and the deferred—prepared TPS build "
+     "squad — 2026-09-23 (ad)"),
     ("PA-138.2-hard-and-soft-fm-service-operations.md",
      "HQ (~518 active staff, profile §3.3"),
+    ("PA-138.2-hard-and-soft-fm-service-operations.md",
+     "the TO's 532-role design retains the disabled—prepared Trade "
+     "department and the deferred—prepared TPS build squad"),
     ("PA-72.3-shared-services-performance-analytics.md",
      "~518 active HQ staff across shared services"),
+    ("PA-72.3-shared-services-performance-analytics.md",
+     "Trade / Account Management disabled — prepared 2026-09-23 (x) and the "
+     "TPS build squad deferred — prepared (ad), sourcing register §4, "
+     "registry CAP-B01"),
     ("PA-34.1-non-merchandise-procurement.md",
      "518 active HQ + DC office staff"),
+    ("PA-34.1-non-merchandise-procurement.md",
+     "the TO's 532-role design retains the disabled—prepared Trade "
+     "department and the deferred—prepared TPS build squad"),
     ("PA-22.1-regulatory-permits-and-licenses.md",
      "the active org is **HQ 518**"),
     ("PA-22.1-regulatory-permits-and-licenses.md",
      "active HQ 518, the design register's 532 retained"),
     ("PA-13.1-customer-support-and-complaints.md",
      "518 active of the 532-role design"),
+    ("PA-13.1-customer-support-and-complaints.md",
+     "the disabled—prepared Trade department's 7 and the deferred—prepared "
+     "TPS build squad's 7 both retained in the design"),
+]
+# 2026-09-23 eighty-fifth-wave review: the (ad) sweep's own annotation residue —
+# seven live cells pair the 518/6,918 active canon with a design annotation
+# naming ONLY the Trade department, explaining 7 of the 14 gap (6,932 − 6,918 =
+# 7 trade + 7 TPS) — the (ad) pass extended PA-22.1's preamble but missed these
+# (the half-repaired-cell class one clause deeper). The repaired cells' anchors
+# above require the two-deferral form; the retired single-deferral suffixes are
+# banned on live PA/README lines (line-scoped probes — the two-canon clauses the
+# TO/registry/VS-169 settlement surfaces carry do not match).
+RETIRED_SINGLE_DEFERRAL_FORMS = [
+    "retains the disabled—prepared Trade department)",
+    "Trade department — 2026-09-23 (x); promoted",
+    "disabled — prepared 2026-09-23, registry CAP-B01",
 ]
 REQ_HQ_ACTIVE_README_ANCHORS = [
     ("VS-169-employee-uniform-workwear-and-ppe-issuance-program/README.md",
@@ -361,6 +395,21 @@ def main():
                              "and the TPS-squad deferral (ad))"))
     text_by_base = {os.path.basename(f): open(f, encoding="utf-8").read()
                     for f in files}
+    # 2026-09-23 eighty-fifth wave: the (ad) sweep's annotation residue — the
+    # retired single-deferral design annotations banned on live PA/README lines
+    # (each explained 7 of the 14 gap; the repaired cells carry the two-deferral
+    # form the anchors above require).
+    for f in files + readme_files:
+        text = open(f, encoding="utf-8").read()
+        rel = os.path.relpath(f, REPO)
+        for lit in RETIRED_SINGLE_DEFERRAL_FORMS:
+            for m in re.finditer(re.escape(lit), text):
+                line = text[:m.start()].count("\n") + 1
+                hits.append(("retired-single-deferral", rel, line,
+                             f"{lit} (retired (x)-era annotation — the active "
+                             "canon is 6,918/HQ 518 since the TPS build squad's "
+                             "deferral (ad); the two-deferral design annotation "
+                             "is required)"))
     for base, anchor in REQ_HQ_ACTIVE_ANCHORS:
         text = text_by_base.get(base)
         if text is None:
@@ -370,6 +419,7 @@ def main():
             hits.append(("missing-hq-active-anchor", base, 0,
                          f'required two-canon anchor missing: "{anchor}"'))
         elif base == "PA-34.1-non-merchandise-procurement.md" and \
+                anchor == "518 active HQ + DC office staff" and \
                 text.count(anchor) < 2:
             hits.append(("missing-hq-active-anchor", base, 0,
                          "the laptop-refresh pair (step 1 + touchpoint) must both "
