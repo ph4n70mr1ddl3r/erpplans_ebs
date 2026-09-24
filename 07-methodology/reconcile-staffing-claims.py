@@ -44,6 +44,20 @@ annotations are stripped before factor extraction (the PA-28.3 row's 200 × 13 =
 2,600 had been read as × 40 = 104,000).
 
 Usage:  python3 reconcile-staffing-claims.py [--guard]     (exit 1 on any hit)
+
+2026-09-23 eighty-sixth-wave review: the (ah) cascade's own switchboard/PA
+residue — (a) the guard's own hit-messages still taught the retired (ad)-era
+canon as current (the retired-HQ-active and retired-single-deferral messages
+said 6,918/HQ 518 and 'two-deferral required'; re-pointed to 6,911/HQ 511 and
+the three-deferral form); (b) PA-22.1's functions-table reconciliation recital
+labeled the (x)-disablement endpoint 'active HQ 518' where the (x) canon is
+525 (518 is the (ad) value; 'active HQ 518' joins the retired-HQ-active bans
+and the corrected '— active HQ 525' anchor is required); (c) PA-30.3's bold
+Annual-estimate summary line kept the retired ~13,836 beside its own re-based
+~13,822 derivation — hours, not headcount, invisible to the headcount arms —
+so the retired derived-figure arm bans '~13,836' on live PA/README lines and
+requires the '~13,822 hours (annual reassessment)' anchor (the Check-71
+CENSUS-pin contract).
 """
 import argparse, glob, os, re, sys
 
@@ -89,6 +103,11 @@ RETIRED_HQ_ACTIVE_FORMS = [
     "total HQ = 518",
     "518 HQ total",
     "518 HQ headcount",
+    # 2026-09-23 eighty-sixth wave: the reversed-order form — PA-22.1's
+    # functions-table reconciliation recital labeled the (x)-disablement
+    # endpoint 'active HQ 518' where the (x) canon is 525 (518 is the (ad)
+    # endpoint; the recital's own final clause correctly ends at 511).
+    "active HQ 518",
 ]
 REQ_HQ_ACTIVE_ANCHORS = [
     ("PA-19.3-workforce-management.md",
@@ -126,6 +145,11 @@ REQ_HQ_ACTIVE_ANCHORS = [
     ("PA-22.1-regulatory-permits-and-licenses.md",
      "the 2026-09-23 (ah) direction deferred the OMO build squad (7) — "
      "prepared with every sale completing as a regular POS sale"),
+    # 2026-09-23 eighty-sixth wave: the functions-table reconciliation recital
+    # pinned at the corrected (x)-endpoint value (the mislabeled 518 was the
+    # (ad) canon — the CENSUS-pin contract, a future census move re-fires).
+    ("PA-22.1-regulatory-permits-and-licenses.md",
+     "re-cut to the 2026-09-23 (x) disablement — active HQ 525"),
     ("PA-13.1-customer-support-and-complaints.md",
      "511 active of the 532-role design"),
     ("PA-13.1-customer-support-and-complaints.md",
@@ -153,6 +177,20 @@ REQ_HQ_ACTIVE_README_ANCHORS = [
      "~511 HQ active"),
     ("VS-169-employee-uniform-workwear-and-ppe-issuance-program/README.md",
      "the deferred—prepared TPS and OMO build squads (ad)/(ah)"),
+]
+
+# 2026-09-23 eighty-sixth wave: the retired DERIVED-hour figures — the (ah)
+# sweep re-based PA-30.3's reassessment derivation line (×6,911 = ~13,822)
+# but left the bold Annual-estimate summary line one line below at the
+# retired ~13,836 (the literal half-repaired-cell class; the figure is
+# hours, not headcount, so the retired-headcount arms cannot see it). The
+# corrected anchor is required at the summary cell — a future census move
+# re-fires the arm until consciously re-pointed (the Check-71 CENSUS-pin
+# contract).
+RETIRED_DERIVED_TE_FIGURES = ["~13,836"]
+REQ_DERIVED_TE_ANCHORS = [
+    ("PA-30.3-document-and-knowledge-management.md",
+     "~13,822 hours (annual reassessment)"),
 ]
 
 DEPT_TOTALS = {
@@ -406,9 +444,9 @@ def main():
             for m in re.finditer(re.escape(lit), text, re.I):
                 line = text[:m.start()].count("\n") + 1
                 hits.append(("retired-hq-active", rel, line,
-                             f"{lit} (retired HQ-active canon — HQ 518 active of the "
-                             "532-role design since the trade-desk disablement (x) "
-                             "and the TPS-squad deferral (ad))"))
+                             f"{lit} (retired HQ-active canon — HQ 511 active of the "
+                             "532-role design since the OMO-squad deferral (ah); "
+                             "518 retired at (ad), 532 at (x))"))
     text_by_base = {os.path.basename(f): open(f, encoding="utf-8").read()
                     for f in files}
     # 2026-09-23 eighty-fifth wave: the (ad) sweep's annotation residue — the
@@ -423,8 +461,8 @@ def main():
                 line = text[:m.start()].count("\n") + 1
                 hits.append(("retired-single-deferral", rel, line,
                              f"{lit} (retired (x)-era annotation — the active "
-                             "canon is 6,918/HQ 518 since the TPS build squad's "
-                             "deferral (ad); the two-deferral design annotation "
+                             "canon is 6,911/HQ 511 since the OMO build squad's "
+                             "deferral (ah); the three-deferral design annotation "
                              "is required)"))
     for base, anchor in REQ_HQ_ACTIVE_ANCHORS:
         text = text_by_base.get(base)
@@ -450,6 +488,27 @@ def main():
         elif anchor not in text:
             hits.append(("missing-hq-active-anchor", relpath, 0,
                          f'required two-canon anchor missing: "{anchor}"'))
+    # 2026-09-23 eighty-sixth wave: the retired derived-hour figures banned on
+    # live PA/README lines, the corrected summary anchors required (the arm's
+    # module-head note has the class).
+    for f in files + readme_files:
+        text = open(f, encoding="utf-8").read()
+        rel = os.path.relpath(f, REPO)
+        for lit in RETIRED_DERIVED_TE_FIGURES:
+            for m in re.finditer(re.escape(lit), text):
+                line = text[:m.start()].count("\n") + 1
+                hits.append(("retired-derived-figure", rel, line,
+                             f"{lit} (retired derived reassessment-hours figure "
+                             "— ~13,822 at the 6,911 active canon, retired "
+                             "2026-09-23 (ah))"))
+    for base, anchor in REQ_DERIVED_TE_ANCHORS:
+        text = text_by_base.get(base)
+        if text is None:
+            hits.append(("missing-derived-anchor", base, 0,
+                         f"anchor file not found: {base}"))
+        elif anchor not in text:
+            hits.append(("missing-derived-anchor", base, 0,
+                         f'required derived-figure anchor missing: "{anchor}"'))
     # 2026-09-09 sixteenth-wave addition: the DC-catchment class (profile + PAs)
     hits.extend(dc_catchment_hits())
     for kind, rel, line, detail in hits:

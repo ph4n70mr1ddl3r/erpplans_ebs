@@ -804,7 +804,27 @@ no seam VS: the deterministic-BOPIS live posture is inside the banner); the esta
 state intro anchors gain the OMO deferral (root README + exec-summary intros, guide
 §13 row to the three-state form 15 teams / 108 FTE active); PA-22.1's IT row and
 PA-113.1's W5517 Volume/Participants cells re-based (deferred-squad seats marked as
-design seats; live paved-road scope re-pointed to the doctrine's remaining builds)."""
+design seats; live paved-road scope re-pointed to the doctrine's remaining builds).
+
+2026-09-23 eighty-sixth-wave review: the (ah) cascade's own residue, three cells
+plus the guard's own stale self-descriptions — (1) the registry §3.4 CAP-B01
+enable-checklist's headcount cell still taught the (ad)-era endpoints ('HQ 518 →
+525 active; the TPS build squad's 525 → 532 hop … (ad)') — the very cell the
+eighty-third wave had repaired, skipped by the (ah) bump that re-pointed rule 7's
+own lineage (the recurring half-repaired-cell class on the switchboard); recut to
+the three-hop walk at the current HQ-active 511 (511 → 518 on CAP-B01 re-enablement;
+TPS 518 → 525 and OMO 525 → 532 each riding their sourcing-register stand-up
+triggers), registry bumped v1.5 → v1.6, and the channel_registry_hits checklist arm
+re-pointed with the retired (ad)-era form joining the bans; (2) the guard's own
+hit-messages teaching the retired canon as current — this module's guide-arm
+'active canon: 6,918 employees' message and the channel_registry ban-why 're-enabling
+CAP-B01 now moves HQ 518 → 525' (the wave-77 stale-comment class one level deeper:
+the messages the arms print on fire) — re-pointed to the post-(ah) canon; (3) the
+reconcile-staffing-claims sibling repairs (PA-22.1's recital (x)-endpoint 518 → 525,
+PA-30.3's half-repaired annual-estimate summary ~13,836 → ~13,822, and that guard's
+stale messages) live in that module's own eighty-sixth-wave clause. Teeth: three
+synthetic injections through the FULL audits, each caught at its exact arm with file
+and line named, fixtures restored via /tmp copies sha256-verified byte-identical."""
 
 def _doc_versions():
     """Current '*Document Version:' footer of each versioned doc (basename -> 'N.M')."""
@@ -1706,7 +1726,7 @@ def guide_figure_hits():
     if m6932:
         hits.append((rel, line_of(m6932.start()),
                      "retired census form '6,932 employees' on the §1.4 "
-                     "reference-parameters cell (active canon: 6,918 employees "
+                     "reference-parameters cell (active canon: 6,911 employees "
                      "— TO design 6,932; joined-text probe — the pre-repair "
                      "cell wrapped the figure across lines)"))
     if "on 2026-09-18 \u2014 was" in body:
@@ -4971,7 +4991,10 @@ def channel_registry_hits():
     # endpoints (the eighty-third-wave arms: both cells kept teaching the
     # (x)-disablement canon after the (ad) TPS-squad deferral re-based the
     # active population a second time — a future re-base re-fires until
-    # consciously re-pointed, the Check-71 CENSUS-pin contract)
+    # consciously re-pointed, the Check-71 CENSUS-pin contract. The
+    # eighty-sixth wave re-pointed the checklist arm to the (ah) three-hop
+    # walk (the (ah) bump had re-pointed rule 7's lineage but skipped this
+    # cell — the retired (ad)-era endpoint form joins the bans).
     for anc in ("re-based again to HQ 518 / total 6,918 by the TPS "
                 "build squad's deferral ((ad), sourcing register §4), and again "
                 "to **HQ 511 / total 6,911 active** by the OMO build squad's "
@@ -4979,13 +5002,15 @@ def channel_registry_hits():
                 "deterministic BOPIS with every sale completing as a regular "
                 "POS sale) — the "
                 "532/6,932 design of record retained throughout",
-                "re-base the headcount canon (HQ 518 → 525 active; the TPS "
-                "build squad's 525 → 532 hop rides the sourcing register's "
-                "CAP-B01 re-enablement trigger, (ad))"):
+                "re-base the headcount canon (HQ 511 → 518 active; the TPS "
+                "build squad's 518 → 525 hop rides the sourcing register's "
+                "CAP-B01 re-enablement trigger, (ad), and the OMO build "
+                "squad's 525 → 532 hop rides its own sourcing-register "
+                "stand-up trigger, (ah))"):
         if anc not in body:
             hits.append((rel, 0, f'missing headcount-lineage anchor "{anc[:64]}…" '
                                  '(rule 7 / CAP-B01 checklist — the active-canon '
-                                 'lineage since the (ad) deferral)'))
+                                 'lineage since the (ad)/(ah) deferrals)'))
     for bad, why in (("the disablement re-bases the active headcount canon "
                       "(HQ 532 → 525 active; total 6,932 → 6,925) with the "
                       "design retained",
@@ -4993,7 +5018,14 @@ def channel_registry_hits():
                       "(ad))"),
                      ("re-base the headcount canon (HQ 525 → 532)",
                       "the retired (x)-era checklist endpoints (re-enabling "
-                      "CAP-B01 now moves HQ 518 → 525)")):
+                      "CAP-B01 now moves HQ 511 → 518 since the (ah) "
+                      "OMO-squad deferral)"),
+                     ("re-base the headcount canon (HQ 518 → 525 active; the TPS "
+                      "build squad's 525 → 532 hop rides the sourcing register's "
+                      "CAP-B01 re-enablement trigger, (ad))",
+                      "the retired (ad)-era checklist endpoints (re-enabling "
+                      "CAP-B01 now moves HQ 511 → 518; the OMO hop 525 → 532 "
+                      "rides its own trigger, (ah))")):
         pos = body.find(bad)
         if pos >= 0:
             hits.append((rel, body[:pos].count("\n") + 1,
