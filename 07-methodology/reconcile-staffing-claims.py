@@ -58,6 +58,16 @@ Annual-estimate summary line kept the retired ~13,836 beside its own re-based
 so the retired derived-figure arm bans '~13,836' on live PA/README lines and
 requires the '~13,822 hours (annual reassessment)' anchor (the Check-71
 CENSUS-pin contract).
+
+2026-09-23 eighty-seventh-wave review: the guard's own dead pair-check — the
+PA-34.1 laptop-refresh special case compared its anchor against the retired
+'518 active HQ + DC office staff' form while the (ah) re-point had moved the
+REQ_HQ_ACTIVE_ANCHORS entry itself to the 511 form, so the count-both-cells
+arm (the step-1 + touchpoint pair the eighty-fifth wave added) could never
+fire — proven by injection (stripping the touchpoint anchor left the guard
+silent at 0 hits). The comparison re-pointed to the live '511 active HQ + DC
+office staff' form; the same injection now fires 'found 1 of 2' at the exact
+arm and the clean tree is silent.
 """
 import argparse, glob, os, re, sys
 
@@ -473,7 +483,7 @@ def main():
             hits.append(("missing-hq-active-anchor", base, 0,
                          f'required two-canon anchor missing: "{anchor}"'))
         elif base == "PA-34.1-non-merchandise-procurement.md" and \
-                anchor == "518 active HQ + DC office staff" and \
+                anchor == "511 active HQ + DC office staff" and \
                 text.count(anchor) < 2:
             hits.append(("missing-hq-active-anchor", base, 0,
                          "the laptop-refresh pair (step 1 + touchpoint) must both "
