@@ -6,7 +6,7 @@
 
 ## The Company
 
-**BuildRight Depot Corp.** is a model big-box hardware/home improvement retail chain in the Philippines, operating with all its capabilities and systems fully enabled on a modern hybrid IT landscape: the ERP core of record — **Oracle E-Business Suite 12.2**, realized in `02-oracle-ebs/` under the two-tier sourcing doctrine (*if it's in EBS we use it; otherwise we build*) — plus **in-house built** and **already-built** differentiating platforms (sourcing governed by `07-methodology/capability-sourcing-and-engineering-model.md`).
+**BuildRight Depot Corp.** is a model big-box hardware/home improvement retail chain in the Philippines, operating a modern hybrid IT landscape with its capability estate documented at full designed scope — live capability states of record in the [Online Channel & Capability Registry](channel-capability-registry.md) (the B2B trade desk **disabled — prepared** (x); the TPS build squad **deferred — prepared** (ad); dormant capabilities keep their prepared designs at designed capacity): the ERP core of record — **Oracle E-Business Suite 12.2**, realized in `02-oracle-ebs/` under the two-tier sourcing doctrine (*if it's in EBS we use it; otherwise we build*) — plus **in-house built** and **already-built** differentiating platforms (sourcing governed by `07-methodology/capability-sourcing-and-engineering-model.md`).
 
 | Parameter | Value |
 |---|---|

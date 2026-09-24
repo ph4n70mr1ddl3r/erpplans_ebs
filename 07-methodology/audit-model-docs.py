@@ -713,6 +713,30 @@ until consciously re-pointed (the Check-71 CENSUS-pin contract). Teeth: two
 synthetic injections through the full audit, each caught at its exact arm with
 file named, fixtures restored via /tmp copies sha256-verified byte-identical.
 
+    2026-09-23 eighty-fourth-wave review — the (x)/(ad) estate's own
+chain-level navigation residue, the wave-80 class one level up: the root-README
+and executive-summary intros still claimed the company 'operat[ed] with all its
+capabilities and systems fully enabled' — a live state claim the same
+documents' own rows contradict (the Employees/Headcount rows, the exec-
+summary's own 'Deferred — prepared' TPS row) — both intros annotated per the
+registry's state discipline (registry link, the (x) trade desk, the (ad) TPS
+squad, the designed-capacity clause); the profile §14.1 Trade & Project
+Services Platform row still carried the Status cell 'Live — Built In-House
+(TPS)' — the executive-summary's identical row the (ad) pass itself re-cut —
+re-cut with the Field-Service-dispatch seam clause and the CAP-B01
+re-enablement trigger (profile v3.10); and the AI-first guide §13 OM navigation
+row still described the model as the bare '(17 teams, 122 FTE)' design form
+whose sibling instance (the sourcing model's §13 OM row) carries the two-state
+form — recut to 16 teams / 115 FTE active of the 122-design (guide v1.18).
+The new estate_state_intro_hits rule pins all four surfaces — the retired
+forms banned, the state-annotated anchors required — so a future
+capability-state change re-fires the arms until consciously re-pointed (the
+Check-71 CENSUS-pin contract); §11.3's tailoring-knob rows exempt (the
+reference-value frame; the §6.6 frozen-history arrow form). Teeth: four
+synthetic injections through the full audit, each caught at its exact arm with
+file and line named, fixtures restored via /tmp copies sha256-verified
+byte-identical.
+
 
 2026-09-23 eighty-second wave (directed: the TPS build squad deferred — prepared —
 IT 122 → 115 active): the headcount-canon re-point — every active-population literal
@@ -2003,6 +2027,123 @@ def exec_tree_hits():
         hits.append((rel, text[:m.start()].count("\n") + 1,
                      f"Repository Structure tree lists {sorted(listed)} but the repo "
                      f"top level holds {sorted(on_disk)}"))
+    return hits
+
+
+def estate_state_intro_hits():
+    """2026-09-23 eighty-fourth-wave consistency review — the (x)/(ad) estate's
+    own chain-level navigation residue, the wave-80 class one level up. The
+    registry's state discipline (rules 1/7) makes capability state a first-class
+    annotation; the (x)/(ad) cascades bannered the estate surfaces and re-cut
+    the data rows but three live navigation sentences kept the retired forms:
+      * the root README intro and the executive-summary intro still claimed the
+        company 'operat[ed] with all its capabilities and systems fully
+        enabled' — a live state claim the same documents' own rows contradict
+        (the Employees/Headcount rows, the exec-summary's own 'Deferred —
+        prepared' TPS row); the retired bare claim banned on both live bodies,
+        the state-annotated form required (registry link + the (x) trade desk
+        + the (ad) TPS squad + the designed-capacity clause);
+      * the profile §14.1 Trade & Project Services Platform row still carried
+        the Status cell 'Live — Built In-House (TPS)' — the executive-summary's
+        identical row the (ad) pass itself re-cut; the deferred-prepared anchor
+        required at the row (located by its live cell marker), the retired
+        form banned on the footer-stripped body (the Prior footers' recitals
+        exempt by the strip);
+      * the AI-first guide §13 OM navigation row still described the model as
+        '(17 teams, 122 FTE)' — the bare design form whose sibling instance
+        (the sourcing model's §13 OM row) carries the two-state form; the
+        two-state anchor required at the row (located by its 'behind §9–§10'
+        tail), the retired bare form banned on the footer-stripped body.
+    A future capability-state change re-fires the arms until consciously
+    re-pointed (the Check-71 CENSUS-pin contract). §11.3's tailoring-knob rows
+    are exempt — the reference-value frame; the arrow form the §6.6
+    frozen-history adjudication covers."""
+    hits = []
+    # (a) root README intro
+    rel = "README.md (root)"
+    text = open(os.path.join(REPO, "README.md"), encoding="utf-8").read()
+    root_anchors = (
+        "live capability states of record in the [Online Channel & Capability "
+        "Registry](01-model-company/channel-capability-registry.md)",
+        "the B2B trade desk **disabled — prepared** (x)",
+        "the TPS build squad **deferred — prepared** (ad)",
+        "dormant capabilities keep their prepared designs at designed capacity",
+    )
+    for anchor in root_anchors:
+        if anchor not in text:
+            hits.append((rel, 0, f'required state-annotation anchor missing: '
+                                 f'"{anchor[:64]}…"'))
+    bad = "all its capabilities and systems fully enabled"
+    pos = text.find(bad)
+    if pos >= 0:
+        hits.append((rel, text[:pos].count("\n") + 1,
+                     f"retired estate-state claim '{bad}' (capability state is the "
+                     "registry's to state; the (x)/(ad) deferrals stand)"))
+    # (b) executive-summary intro
+    rel = "executive-summary.md"
+    ex = open(os.path.join(MC, rel), encoding="utf-8").read()
+    for anchor in ("live capability states of record in the [Online Channel & "
+                   "Capability Registry](channel-capability-registry.md)",) + root_anchors[1:]:
+        if anchor not in ex:
+            hits.append((rel, 0, f'required state-annotation anchor missing: '
+                                 f'"{anchor[:64]}…"'))
+    pos = ex.find(bad)
+    if pos >= 0:
+        hits.append((rel, ex[:pos].count("\n") + 1,
+                     f"retired estate-state claim '{bad}' (capability state is the "
+                     "registry's to state; the (x)/(ad) deferrals stand)"))
+    # (c) profile §14.1 TPS landscape row (footer-stripped)
+    rel = "model-company-profile.md"
+    prof = open(os.path.join(MC, rel), encoding="utf-8").read()
+    body = strip_footer(prof)
+    marker = "| Trade & Project Services Platform (in-house) |"
+    pos = body.find(marker)
+    if pos < 0:
+        hits.append((rel, 0, "§14.1 TPS landscape row not found at its live marker"))
+    else:
+        line_end = body.find("\n", pos)
+        row = body[pos:line_end if line_end >= 0 else len(body)]
+        ln = body[:pos].count("\n") + 1
+        for anchor in ("**Deferred — prepared** (TPS) — 2026-09-23 (ad)",
+                       "capability-sourcing register §4",
+                       "Field Service dispatch core",
+                       "CAP-B01 re-enablement"):
+            if anchor not in row:
+                hits.append((rel, ln,
+                             f'required §14.1 TPS-row anchor missing: "{anchor}"'))
+    bad = "Live — Built In-House (TPS)"
+    pos = body.find(bad)
+    if pos >= 0:
+        hits.append((rel, body[:pos].count("\n") + 1,
+                     f"retired §14.1 TPS Status cell '{bad}' (the squad is "
+                     "deferred — prepared (ad); the exec-summary sibling row is "
+                     "the form)"))
+    # (d) AI-first guide §13 OM navigation row (footer-stripped)
+    rel = "ai-first-operating-guide.md"
+    guide = open(os.path.join(REPO, "07-methodology", rel), encoding="utf-8").read()
+    body = strip_footer(guide)
+    marker = "behind §9–§10"
+    pos = body.find(marker)
+    if pos < 0:
+        hits.append((rel, 0, "§13 OM navigation row not found at its "
+                             "'behind §9–§10' tail"))
+    else:
+        row_start = body.rfind("\n", 0, pos) + 1
+        row = body[row_start:pos + len(marker)]
+        ln = body[:row_start].count("\n") + 1
+        for anchor in ("17 teams of record / 122 FTE design",
+                       "16 teams / 115 FTE active",
+                       "the TPS build squad deferred — prepared, 2026-09-23 (ad)"):
+            if anchor not in row:
+                hits.append((rel, ln,
+                             f'required §13 OM-row two-state anchor missing: '
+                             f'"{anchor}"'))
+    bad = "(17 teams, 122 FTE)"
+    pos = body.find(bad)
+    if pos >= 0:
+        hits.append((rel, body[:pos].count("\n") + 1,
+                     f"retired bare §13 OM-row form '{bad}' (the two-state form "
+                     "is the annotation)"))
     return hits
 
 
@@ -5412,6 +5553,9 @@ def main():
     # 2026-09-23 eighty-third-wave consistency review addition — the IT
     # operating model §9.2 Industry-benchmark row's active-canon guard
     hits.extend(om_benchmark_hits())
+    # 2026-09-23 eighty-fourth-wave consistency review addition — the (x)/(ad)
+    # estate's chain-level navigation-state guard
+    hits.extend(estate_state_intro_hits())
     # 2026-09-07 ninth-wave consistency review addition
     hits.extend(companion_pin_hits())
     # 2026-09-09 sixteenth-wave consistency review addition
