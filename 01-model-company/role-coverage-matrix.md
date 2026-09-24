@@ -22,7 +22,7 @@
 |---|---|
 | Workflows mapped | 5433 (exactly one Owner each — asserted) |
 | Confirmed Tier register | 5456 rows (Tier 1: 1396 · Tier 2: 3302 · Tier 3: 758) |
-| Distinct resolved actors | 4212 — §5.3 register roles 195 · IT product-model seats 32 · store field 12 · DC field 27 · department-level actors 2954 · system actors 31 · governance 59 · workforce 101 · external 801 · uncharted 0 |
+| Distinct resolved actors | 4211 — §5.3 register roles 194 · IT product-model seats 32 · store field 12 · DC field 27 · department-level actors 2954 · system actors 31 · governance 59 · workforce 101 · external 801 · uncharted 0 |
 
 > Tier mix = confirmed tiers of the workflows a role touches (a workflow
 > counts once per role regardless of how many steps mention it). HC is
@@ -129,7 +129,7 @@
 | VP Finance & Accounting / Corporate Controller | Finance & Accounting | 1 | 83 | 274 | 318 | 863 | 540 | 226 | 263 | 51 |
 | Treasury Manager | Finance & Accounting | 1 | 66 | 57 | 205 | 205 | 133 | 38 | 79 | 16 |
 | FP&A Manager | Finance & Accounting | 1 | 64 | 168 | 253 | 23 | 216 | 19 | 135 | 62 |
-| Tax Manager | Finance & Accounting | 1 | 46 | 59 | 143 | 132 | 96 | 73 | 21 | 2 |
+| Tax Manager | Finance & Accounting | 1 | 46 | 60 | 144 | 132 | 97 | 73 | 22 | 2 |
 | Tax Accountant | Finance & Accounting | 4 | 44 | 62 | 216 | 33 | 87 | 69 | 16 | 2 |
 | Revenue Assurance Lead | Finance & Accounting | 1 | 40 | 47 | 106 | 119 | 69 | 26 | 33 | 10 |
 | AR & Credit Manager | Finance & Accounting | 1 | 38 | 50 | 107 | 243 | 104 | 36 | 60 | 8 |
@@ -314,7 +314,6 @@
 | Trade Professional Program Coordinator | Trade / Account Management | 1 | 3 | 2 | 7 | 5 | 4 | 0 | 3 | 1 |
 | Shift Supervisor (DC roster) | Information Technology (product model) | — | 11 | 32 | 57 | 129 | 81 | 39 | 41 | 1 |
 | Board of Directors | Information Technology (product model) | — | 1 | 20 | 6 | 37 | 31 | 5 | 18 | 8 |
-| Tax Compliance Manager | Information Technology (product model) | — | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 |
 
 ## Information Technology product-model seats (§5.3 by reference)
 

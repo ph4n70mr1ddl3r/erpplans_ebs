@@ -2276,7 +2276,7 @@ At least one chartered role owns the workflow. No action.
 | Tax Manager | hq | 46 |
 | Chief Operating Officer (COO) | hq | 45 |
 
-## Participate-only chartered roles (57)
+## Participate-only chartered roles (56)
 
 Chartered roles anchored in the catalog (the role-anchoring contract is
 satisfied) that own no workflow — their accountability may be understated;
@@ -2306,7 +2306,6 @@ candidate for the same governance path.
 | Sourcing & Screening Coordinator | Human Resources | 1 | 0 |
 | Special Handling Lead | DC (field, per-DC roster) | 1 | 0 |
 | TA Coordinator | Human Resources | 1 | 0 |
-| Tax Compliance Manager | Information Technology (product model) | 1 | 0 |
 | Technical Accounting Manager | Finance & Accounting | 1 | 0 |
 | Tile & Heavy/Breakbulk Crew | DC (field, per-DC roster) | 1 | 0 |
 | Audit Manager | Internal Audit & Risk | 2 | 0 |

@@ -4097,7 +4097,7 @@ ROLE_ALIASES_W39 = {
     "customer experience lead": "Customer Experience Manager",
     "it store ops manager": "IT Store Ops Mgr",
     "it service desk lead": "Service Desk Lead",
-    "tax compliance officer": "Tax Compliance Manager",
+    "tax compliance officer": "Tax Manager",
     "trade compliance officer": "Trade Compliance Manager",
     "dg compliance officer": "DG/Hazmat Compliance Officer",
     "hq manager": "HQ Function Mgr",

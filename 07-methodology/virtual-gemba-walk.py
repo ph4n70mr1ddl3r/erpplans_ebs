@@ -82,13 +82,18 @@ FIELD_NET_HOURS = 1900         # field shift roles (assumption)
 STORES, DCS = 200, 4
 
 
+GRC_SPLIT_RE = None
+
+
 def load_grc():
     """Import generate-role-coverage.py for its TO parse + role resolver."""
+    global GRC_SPLIT_RE
     spec = importlib.util.spec_from_file_location(
         "grc", os.path.join(TOOL_DIR, "generate-role-coverage.py"))
     grc = importlib.util.module_from_spec(spec)
     sys.argv = ["generate-role-coverage.py"]
     spec.loader.exec_module(grc)
+    GRC_SPLIT_RE = grc.SPLIT_RE
     return grc
 
 
@@ -364,9 +369,16 @@ def role_parts(cell, res):
 
 
 def grc_split(raw):
+    """Split a role cell into parts: commas (paren-aware, the generator's own
+    SPLIT_RE so 'Manager, GL & Consolidation (Assistant Controller)' survives),
+    then ';' and '/' within each comma-part. Batch 40: comma-splitting added —
+    co-performer elevations (anchor-step-level-wave1.py) use comma-joined R
+    cells, which previously stayed one unattributed key."""
     raw = re.sub(r"\([^)]*\)", "", raw)
-    parts = [p.strip() for p in re.split(r"\s*[;/]\s*", raw) if p.strip()]
-    return parts
+    parts = []
+    for chunk in GRC_SPLIT_RE.split(raw):
+        parts.extend(p.strip() for p in re.split(r"\s*[;/]\s*", chunk) if p.strip())
+    return [p for p in parts if p]
 
 
 def mode_walk(grc, res, wfs):
