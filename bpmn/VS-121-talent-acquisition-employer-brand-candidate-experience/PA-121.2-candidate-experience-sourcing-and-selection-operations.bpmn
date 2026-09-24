@@ -255,7 +255,7 @@ Duration: Per candidate</bpmn:documentation>
       </bpmn:userTask>
       <bpmn:userTask id="W3772_Task7" name="Recruiting/Compliance run compliant pre-hire checks where role-appropriate and…">
         <bpmn:documentation>Step 3: Recruiting/Compliance run compliant pre-hire checks where role-appropriate and consented (background/reference checks per policy, links to VS-22/VS-91), ensure lawful data handling, and advance selected candidates to offer (links to W3773)
-Responsible (R): Recruiting / Compliance, TA Coordinator
+Responsible (R): Recruiting / Compliance, TA Coordinator, Sourcing &amp; Screening Coordinator
 Accountable (A): TA Lead
 Duration: Per candidate</bpmn:documentation>
         <bpmn:incoming>W3772_Flow13</bpmn:incoming>

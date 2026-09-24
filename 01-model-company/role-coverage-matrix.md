@@ -50,9 +50,9 @@
 | Chartered roles (register 192 + IT seats 32 + store 8 + DC 27) | 259 |
 | With ≥1 explicit RACI anchor | 259 (100%) |
 | ZERO-anchor — the anchoring worklist | 0 (hq 0 · it 0 · store 0 · dc 0) |
-| Weakly anchored (1–2 workflows) — demand-verification watchlist | 54 |
+| Weakly anchored (1–2 workflows) — demand-verification watchlist | 53 |
 
-### Weak-anchor watchlist — 54 chartered roles anchored in only 1–2 workflows
+### Weak-anchor watchlist — 53 chartered roles anchored in only 1–2 workflows
 
 | Role | Charter source | HC | Workflows touched |
 |---|---|---|---|
@@ -60,9 +60,7 @@
 | Contracts & Commercial Manager (Senior Counsel) | §5.3 register — Legal & Compliance | 1 | 1 |
 | Ecommerce Marketing Specialist | §5.3 register — Marketing | 2 | 1 |
 | Field Communications Manager | §5.3 register — Store Operations | 1 | 1 |
-| Legal Counsel — Contracts | §5.3 register — Legal & Compliance | 2 | 1 |
 | Payroll & Statutory Remittance Officer | §5.3 register — Human Resources | 1 | 1 |
-| Privacy Officer | §5.3 register — Legal & Compliance | 1 | 1 |
 | Promotions & Vendor-Funding Coordinator | §5.3 register — Merchandising & Buying | 3 | 1 |
 | Promotions Specialist | §5.3 register — Marketing | 2 | 1 |
 | Quality & Workforce Analyst | §5.3 register — Customer Service | 2 | 1 |
@@ -91,15 +89,16 @@
 | Facilities Coordination Specialist | §5.3 register — Store Operations | 1 | 2 |
 | Forensic / Fraud Investigator | §5.3 register — Internal Audit & Risk | 1 | 2 |
 | Import Documentation Specialist | §5.3 register — Supply Chain & Logistics | 1 | 2 |
+| Legal Counsel — Contracts | §5.3 register — Legal & Compliance | 2 | 2 |
 | Maintenance & Projects Coordinator | §5.3 register — Facilities & Real Estate | 2 | 2 |
 | Marketing Comms Specialist | §5.3 register — Marketing | 1 | 2 |
 | Operations Compliance Lead | §5.3 register — Internal Audit & Risk | 1 | 2 |
 | Paralegal / Contracts Specialist | §5.3 register — Legal & Compliance | 2 | 2 |
 | Payroll Supervisor | §5.3 register — Human Resources | 1 | 2 |
+| Privacy Officer | §5.3 register — Legal & Compliance | 1 | 2 |
 | Purchasing / PO Specialist | §5.3 register — Supply Chain & Logistics | 6 | 2 |
 | Replenishment & Allocation Analyst | §5.3 register — Supply Chain & Logistics | 2 | 2 |
 | Retail Media Operations Specialist | §5.3 register — Marketing | 1 | 2 |
-| Senior FP&A Analyst | §5.3 register — Finance & Accounting | 2 | 2 |
 | Sourcing & Screening Coordinator | §5.3 register — Human Resources | 1 | 2 |
 | Strategy Analyst | §5.3 register — Strategy / Corporate Planning | 1 | 2 |
 | Vendor Portal & Collaboration Specialist | §5.3 register — Supply Chain & Logistics | 2 | 2 |
@@ -146,10 +145,10 @@
 | Revenue Assurance Analyst | Finance & Accounting | 1 | 3 | 0 | 6 | 2 | 4 | 1 | 3 | 0 |
 | S&OP Finance Partner | Finance & Accounting | 1 | 2 | 8 | 10 | 0 | 8 | 0 | 3 | 5 |
 | Payroll Accounting Liaison | Finance & Accounting | 1 | 0 | 3 | 3 | 2 | 4 | 3 | 0 | 1 |
+| Senior FP&A Analyst | Finance & Accounting | 2 | 0 | 2 | 1 | 0 | 3 | 2 | 0 | 1 |
 | Tax Compliance & eFPS Specialist | Finance & Accounting | 1 | 0 | 2 | 1 | 0 | 3 | 3 | 0 | 0 |
 | Banking & Cash-Management Specialist | Finance & Accounting | 2 | 0 | 2 | 1 | 0 | 2 | 1 | 1 | 0 |
 | DC Cost-to-Serve Analyst | Finance & Accounting | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 1 | 1 |
-| Senior FP&A Analyst | Finance & Accounting | 2 | 0 | 2 | 0 | 0 | 2 | 1 | 0 | 1 |
 | Accounting Policy Analyst | Finance & Accounting | 1 | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 |
 | Technical Accounting Manager | Finance & Accounting | 1 | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 |
 | Category Manager | Merchandising & Buying | 5 | 127 | 616 | 656 | 560 | 733 | 119 | 482 | 132 |
@@ -163,7 +162,7 @@
 | Pricing Manager | Merchandising & Buying | 1 | 8 | 6 | 17 | 14 | 16 | 4 | 11 | 1 |
 | Private Brand Product Manager | Merchandising & Buying | 3 | 4 | 13 | 14 | 6 | 15 | 4 | 11 | 0 |
 | Assortment & Space Analyst | Merchandising & Buying | 3 | 4 | 8 | 16 | 0 | 8 | 3 | 5 | 0 |
-| Promotions & Vendor-Funding Coordinator | Merchandising & Buying | 3 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
+| Promotions & Vendor-Funding Coordinator | Merchandising & Buying | 3 | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 |
 | VP Supply Chain & Logistics (dual-hat GM, BuildRight Logistics, Inc.) | Supply Chain & Logistics | 1 | 58 | 128 | 112 | 528 | 338 | 85 | 180 | 73 |
 | Fleet Compliance & Safety Specialist | Supply Chain & Logistics | 1 | 49 | 35 | 146 | 20 | 37 | 22 | 13 | 2 |
 | Fleet & Logistics Manager | Supply Chain & Logistics | 1 | 45 | 57 | 148 | 200 | 145 | 27 | 93 | 25 |
@@ -209,7 +208,7 @@
 | Compensation Analyst | Human Resources | 1 | 0 | 2 | 1 | 0 | 3 | 0 | 2 | 1 |
 | Timekeeping & Attendance Analyst | Human Resources | 1 | 0 | 2 | 1 | 0 | 3 | 2 | 1 | 0 |
 | Payroll Supervisor | Human Resources | 1 | 0 | 2 | 1 | 0 | 2 | 1 | 1 | 0 |
-| Sourcing & Screening Coordinator | Human Resources | 1 | 0 | 1 | 1 | 0 | 2 | 0 | 2 | 0 |
+| Sourcing & Screening Coordinator | Human Resources | 1 | 0 | 1 | 2 | 0 | 2 | 0 | 2 | 0 |
 | Payroll & Statutory Remittance Officer | Human Resources | 1 | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 0 |
 | TA Coordinator | Human Resources | 1 | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 |
 | Marketplace Manager | Marketing | 2 | 34 | 66 | 59 | 92 | 79 | 10 | 53 | 16 |
@@ -231,7 +230,7 @@
 | Marketing Comms Specialist | Marketing | 1 | 1 | 0 | 2 | 0 | 2 | 0 | 1 | 1 |
 | Retail Media Operations Specialist | Marketing | 1 | 0 | 2 | 1 | 0 | 2 | 0 | 1 | 1 |
 | Ecommerce Marketing Specialist | Marketing | 2 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 1 |
-| Promotions Specialist | Marketing | 2 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
+| Promotions Specialist | Marketing | 2 | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 |
 | VP Store Operations (Director Field Retail Operations) | Store Operations | 1 | 98 | 166 | 212 | 539 | 366 | 66 | 242 | 58 |
 | Retail Standards & Store-Opening Manager (Store Support Center lead) | Store Operations | 1 | 31 | 26 | 24 | 37 | 53 | 9 | 42 | 2 |
 | Regional Manager | Store Operations | 6 | 28 | 116 | 140 | 201 | 209 | 62 | 125 | 22 |
@@ -250,8 +249,8 @@
 | Compliance Analyst | Legal & Compliance | 1 | 12 | 0 | 12 | 3 | 12 | 7 | 5 | 0 |
 | AML / ABC Officer | Legal & Compliance | 1 | 7 | 42 | 26 | 4 | 45 | 19 | 23 | 3 |
 | Paralegal / Contracts Specialist | Legal & Compliance | 2 | 2 | 0 | 2 | 4 | 2 | 0 | 2 | 0 |
-| Legal Counsel — Contracts | Legal & Compliance | 2 | 1 | 0 | 0 | 4 | 1 | 0 | 1 | 0 |
-| Privacy Officer | Legal & Compliance | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 |
+| Legal Counsel — Contracts | Legal & Compliance | 2 | 1 | 0 | 1 | 4 | 2 | 0 | 1 | 1 |
+| Privacy Officer | Legal & Compliance | 1 | 1 | 0 | 1 | 0 | 2 | 1 | 1 | 0 |
 | Corporate Secretary Analyst | Legal & Compliance | 1 | 0 | 2 | 1 | 0 | 2 | 1 | 1 | 0 |
 | Contracts & Commercial Manager (Senior Counsel) | Legal & Compliance | 1 | 0 | 1 | 1 | 0 | 1 | 0 | 0 | 1 |
 | ERM & TPRM Analyst | Internal Audit & Risk | 1 | 29 | 28 | 106 | 60 | 59 | 11 | 44 | 4 |
@@ -269,7 +268,7 @@
 | Services Manager | Customer Service | 1 | 5 | 10 | 15 | 45 | 24 | 9 | 10 | 5 |
 | Ecommerce Support Specialist | Customer Service | 3 | 2 | 2 | 1 | 0 | 2 | 2 | 0 | 0 |
 | B2B Support Representative | Customer Service | 4 | 0 | 2 | 1 | 0 | 3 | 0 | 2 | 1 |
-| Quality & Workforce Analyst | Customer Service | 2 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
+| Quality & Workforce Analyst | Customer Service | 2 | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 |
 | Director, Regional Loss Prevention | Regional Loss Prevention | 1 | 54 | 28 | 101 | 169 | 103 | 24 | 70 | 9 |
 | LP Analytics Analyst | Regional Loss Prevention | 2 | 20 | 30 | 95 | 9 | 50 | 20 | 23 | 7 |
 | Regional LP Officer | Regional Loss Prevention | 20 | 12 | 47 | 77 | 26 | 59 | 29 | 29 | 1 |

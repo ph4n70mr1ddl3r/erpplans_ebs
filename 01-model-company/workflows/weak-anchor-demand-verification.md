@@ -1,7 +1,7 @@
 # Weak-Anchor Demand Verification (generated — batch 43, 2026-09-23)
 
 > **Verification record** for the Role-Anchoring Contract's weak-anchor watchlist — the
-> 54 chartered roles anchored in only 1–2 workflows. Per the contract, no headcount
+> 53 chartered roles anchored in only 1–2 workflows. Per the contract, no headcount
 > or structure decision may touch a weak-anchor role until its per-role annual demand is
 > verified against chartered capacity. Instrument: `virtual-gemba-walk.py motion --full`
 > (per-role annual demand hours from the corpus's own step durations × event cadence vs
@@ -38,12 +38,10 @@
 | Facilities/Utility | §7.3 DC roster — DC (field, per-DC roster) | 1 | — | — | — | NO PARSED CADENCE |
 | Field Communications Manager | §5.3 register — Store Operations | 1 | — | 1 | — | NO PARSED CADENCE |
 | IAP Integration Engineer | IT seat — Information Technology (product model) | 1 | — | — | — | NO PARSED CADENCE |
-| Legal Counsel — Contracts | §5.3 register — Legal & Compliance | 1 | — | 2 | — | NO PARSED CADENCE |
 | Payroll & Statutory Remittance Officer | §5.3 register — Human Resources | 1 | — | 1 | — | NO PARSED CADENCE |
-| Privacy Officer | §5.3 register — Legal & Compliance | 1 | — | 1 | — | NO PARSED CADENCE |
 | Promotions & Vendor-Funding Coordinator | §5.3 register — Merchandising & Buying | 1 | — | 3 | — | NO PARSED CADENCE |
 | Promotions Specialist | §5.3 register — Marketing | 1 | — | 2 | — | NO PARSED CADENCE |
-| Quality & Workforce Analyst | §5.3 register — Customer Service | 1 | — | 2 | — | NO PARSED CADENCE |
+| Quality & Workforce Analyst | §5.3 register — Customer Service | 1 | 7,500 | 2 | 208% | OVERLOAD |
 | Senior LP Analytics Analyst | §5.3 register — Regional Loss Prevention | 1 | 18,250 | 1 | 1014% | OVERLOAD |
 | Special Handling Lead | §7.3 DC roster — DC (field, per-DC roster) | 1 | — | — | — | NO PARSED CADENCE |
 | TA Coordinator | §5.3 register — Human Resources | 1 | — | 1 | — | NO PARSED CADENCE |
@@ -66,16 +64,17 @@
 | IAP Integration Support Engineer | IT seat — Information Technology (product model) | 2 | — | — | — | NO PARSED CADENCE |
 | Import Documentation Specialist | §5.3 register — Supply Chain & Logistics | 2 | — | 1 | — | NO PARSED CADENCE |
 | INFRA Site Reliability Engineer | IT seat — Information Technology (product model) | 2 | — | — | — | NO PARSED CADENCE |
+| Legal Counsel — Contracts | §5.3 register — Legal & Compliance | 2 | — | 2 | — | NO PARSED CADENCE |
 | Lumber / Long-Length Crew | §7.3 DC roster — DC (field, per-DC roster) | 2 | 30,417 | 32 | 50% | CONFIRMED |
 | Maintenance & Projects Coordinator | §5.3 register — Facilities & Real Estate | 2 | — | 2 | — | NO PARSED CADENCE |
 | Marketing Comms Specialist | §5.3 register — Marketing | 2 | — | 1 | — | NO PARSED CADENCE |
 | Operations Compliance Lead | §5.3 register — Internal Audit & Risk | 2 | — | 1 | — | NO PARSED CADENCE |
 | Paralegal / Contracts Specialist | §5.3 register — Legal & Compliance | 2 | 195 | 2 | 5% | UNDER-UTILIZED |
 | Payroll Supervisor | §5.3 register — Human Resources | 2 | — | 1 | — | NO PARSED CADENCE |
+| Privacy Officer | §5.3 register — Legal & Compliance | 2 | — | 1 | — | NO PARSED CADENCE |
 | Purchasing / PO Specialist | §5.3 register — Supply Chain & Logistics | 2 | — | 6 | — | NO PARSED CADENCE |
 | Replenishment & Allocation Analyst | §5.3 register — Supply Chain & Logistics | 2 | 3,042 | 2 | 84% | CONFIRMED |
 | Retail Media Operations Specialist | §5.3 register — Marketing | 2 | — | 1 | — | NO PARSED CADENCE |
-| Senior FP&A Analyst | §5.3 register — Finance & Accounting | 2 | — | 2 | — | NO PARSED CADENCE |
 | Sourcing & Screening Coordinator | §5.3 register — Human Resources | 2 | — | 1 | — | NO PARSED CADENCE |
 | Strategy Analyst | §5.3 register — Strategy / Corporate Planning | 2 | — | 1 | — | NO PARSED CADENCE |
 | Vendor Portal & Collaboration Specialist | §5.3 register — Supply Chain & Logistics | 2 | 667 | 2 | 19% | UNDER-UTILIZED |
@@ -86,9 +85,9 @@
 | Verdict | Roles |
 |---|---|
 | CONFIRMED | 2 |
-| OVERLOAD | 1 |
+| OVERLOAD | 2 |
 | UNDER-UTILIZED | 3 |
-| NO PARSED CADENCE | 48 |
+| NO PARSED CADENCE | 46 |
 
 > OVERLOAD rows are the headcount-real candidates this doctrine exists to find. UNDER-UTILIZED
 > rows are merge/resize candidates. ZERO-DURATION rows carry days-based work — audit the cycle,

@@ -1488,7 +1488,7 @@ Source: workflow W230 — Legal Contract Review &amp; Approval</bpmn:documentati
         <bpmn:flowNodeRef>W230_Task7</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W230_Start6</bpmn:flowNodeRef>
         </bpmn:lane>
-        <bpmn:lane id="W230_Lane2" name="Legal Counsel, Contracts &amp; Commercial Manager">
+        <bpmn:lane id="W230_Lane2" name="Legal Counsel, Contracts &amp; Commercial Manager…">
         <bpmn:flowNodeRef>W230_Task8</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W230_Lane3" name="Legal Counsel">
@@ -1513,7 +1513,7 @@ Duration: 15 min</bpmn:documentation>
       </bpmn:userTask>
       <bpmn:userTask id="W230_Task8" name="Review">
         <bpmn:documentation>Step 2: Review: Legal reviews for risks, compliance, and alignment with company standards
-Responsible (R): Legal Counsel, Contracts &amp; Commercial Manager (Senior Counsel)
+Responsible (R): Legal Counsel, Contracts &amp; Commercial Manager (Senior Counsel), Legal Counsel — Contracts
 Accountable (A): VP Legal
 Duration: 3–5 days</bpmn:documentation>
         <bpmn:incoming>W230_Flow16</bpmn:incoming>

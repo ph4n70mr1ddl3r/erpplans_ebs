@@ -22,7 +22,7 @@ Source: workflow W2390 — Sell-Through Based Markdown Trigger</bpmn:documentati
       </bpmn:startEvent>
       <bpmn:serviceTask id="W2390_Task5" name="System monitors sell-through vs. plan; auto-flags SKUs below threshold: &lt;40%…">
         <bpmn:documentation>Step 1: System monitors sell-through vs. plan; auto-flags SKUs below threshold: &lt;40% sold at mid-season, &lt;70% at 75% of season; Pricing Analyst recommends markdown level based on residual inventory and weeks remaining
-Responsible (R): System / Pricing Analyst
+Responsible (R): System / Pricing Analyst, Promotions Specialist
 Accountable (A): Category Manager
 Duration: Automated + 30 min/decision</bpmn:documentation>
         <bpmn:incoming>W2390_Flow10</bpmn:incoming>
@@ -30,7 +30,7 @@ Duration: Automated + 30 min/decision</bpmn:documentation>
       </bpmn:serviceTask>
       <bpmn:userTask id="W2390_Task6" name="Category Manager approves markdown; system updates price; POS reflects new…">
         <bpmn:documentation>Step 2: Category Manager approves markdown; system updates price; POS reflects new price; shelf labels updated; customer communication if significant price reduction
-Responsible (R): Category Manager / IT
+Responsible (R): Category Manager / IT, Promotions &amp; Vendor-Funding Coordinator
 Accountable (A): VP Merchandising
 Duration: 1–2 hours</bpmn:documentation>
         <bpmn:incoming>W2390_Flow11</bpmn:incoming>

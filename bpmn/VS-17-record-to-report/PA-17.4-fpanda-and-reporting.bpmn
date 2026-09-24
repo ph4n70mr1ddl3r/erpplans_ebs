@@ -427,118 +427,119 @@ Volume: Peaks during new store openings (W16) and annual budget cycle
 Owner: Requesting Department Head
 Participants: Requestor, Department Head, Finance (Capex Analyst), CFO, CEO/Board
 Source: workflow W21 — Capital Expenditure (Capex) Request &amp; Approval</bpmn:documentation>
-      <bpmn:laneSet id="W21_LaneSet8">
+      <bpmn:laneSet id="W21_LaneSet9">
         <bpmn:lane id="W21_Lane1" name="Requestor">
-        <bpmn:flowNodeRef>W21_Task10</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W21_Start9</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W21_Task11</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W21_Start10</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W21_Lane2" name="Dept. Head">
-        <bpmn:flowNodeRef>W21_Task11</bpmn:flowNodeRef>
-        </bpmn:lane>
-        <bpmn:lane id="W21_Lane3" name="Capex Analyst">
         <bpmn:flowNodeRef>W21_Task12</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W21_Task18</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W21_Lane3" name="Capex Analyst, Senior FP&amp;A Analyst">
+        <bpmn:flowNodeRef>W21_Task13</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W21_Lane4" name="System">
-        <bpmn:flowNodeRef>W21_Task13</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W21_Task17</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W21_Task14</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W21_Task18</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W21_Lane5" name="Buyer">
-        <bpmn:flowNodeRef>W21_Task14</bpmn:flowNodeRef>
-        </bpmn:lane>
-        <bpmn:lane id="W21_Lane6" name="Receiving Clerk">
         <bpmn:flowNodeRef>W21_Task15</bpmn:flowNodeRef>
         </bpmn:lane>
-        <bpmn:lane id="W21_Lane7" name="Cost Accountant">
+        <bpmn:lane id="W21_Lane6" name="Receiving Clerk">
         <bpmn:flowNodeRef>W21_Task16</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W21_End19</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W21_Lane7" name="Cost Accountant">
+        <bpmn:flowNodeRef>W21_Task17</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W21_Lane8" name="Capex Analyst">
+        <bpmn:flowNodeRef>W21_Task19</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W21_End20</bpmn:flowNodeRef>
         </bpmn:lane>
       </bpmn:laneSet>
-      <bpmn:startEvent id="W21_Start9" name="Need identified for asset acquisition (equipment, vehicles, fixtures, IT hardware, store…">
-        <bpmn:outgoing>W21_Flow22</bpmn:outgoing>
+      <bpmn:startEvent id="W21_Start10" name="Need identified for asset acquisition (equipment, vehicles, fixtures, IT hardware, store…">
+        <bpmn:outgoing>W21_Flow23</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:userTask id="W21_Task10" name="Requestor submits capex request: item description, justification, quotations…">
+      <bpmn:userTask id="W21_Task11" name="Requestor submits capex request: item description, justification, quotations…">
         <bpmn:documentation>Step 1: Requestor submits capex request: item description, justification, quotations (min. 3), expected useful life, budget code
 Responsible (R): Requestor
 Accountable (A): Dept. Head
 Duration: 30 min</bpmn:documentation>
-        <bpmn:incoming>W21_Flow22</bpmn:incoming>
-        <bpmn:outgoing>W21_Flow23</bpmn:outgoing>
+        <bpmn:incoming>W21_Flow23</bpmn:incoming>
+        <bpmn:outgoing>W21_Flow24</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W21_Task11" name="Department Head reviews and approves or returns for revision">
+      <bpmn:userTask id="W21_Task12" name="Department Head reviews and approves or returns for revision">
         <bpmn:documentation>Step 2: Department Head reviews and approves or returns for revision
 Responsible (R): Dept. Head
 Accountable (A): Dept. Head
 Duration: 15 min</bpmn:documentation>
-        <bpmn:incoming>W21_Flow23</bpmn:incoming>
-        <bpmn:outgoing>W21_Flow24</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:userTask id="W21_Task12" name="Finance (Capex Analyst) validates against approved annual budget; checks ROI…">
-        <bpmn:documentation>Step 3: Finance (Capex Analyst) validates against approved annual budget; checks ROI calculation
-Responsible (R): Capex Analyst
-Accountable (A): CFO
-Duration: 30 min</bpmn:documentation>
         <bpmn:incoming>W21_Flow24</bpmn:incoming>
         <bpmn:outgoing>W21_Flow25</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:serviceTask id="W21_Task13" name="Route for approval per tiered matrix (see below)">
+      <bpmn:userTask id="W21_Task13" name="Finance (Capex Analyst) validates against approved annual budget; checks ROI…">
+        <bpmn:documentation>Step 3: Finance (Capex Analyst) validates against approved annual budget; checks ROI calculation
+Responsible (R): Capex Analyst, Senior FP&amp;A Analyst
+Accountable (A): CFO
+Duration: 30 min</bpmn:documentation>
+        <bpmn:incoming>W21_Flow25</bpmn:incoming>
+        <bpmn:outgoing>W21_Flow26</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:serviceTask id="W21_Task14" name="Route for approval per tiered matrix (see below)">
         <bpmn:documentation>Step 4: Route for approval per tiered matrix (see below)
 Responsible (R): System
 Accountable (A): As per tier
 Duration: 15–30 min</bpmn:documentation>
-        <bpmn:incoming>W21_Flow25</bpmn:incoming>
-        <bpmn:outgoing>W21_Flow26</bpmn:outgoing>
+        <bpmn:incoming>W21_Flow26</bpmn:incoming>
+        <bpmn:outgoing>W21_Flow27</bpmn:outgoing>
       </bpmn:serviceTask>
-      <bpmn:userTask id="W21_Task14" name="Approved capex → Purchase Order created (standard PO workflow W2) or direct…">
+      <bpmn:userTask id="W21_Task15" name="Approved capex → Purchase Order created (standard PO workflow W2) or direct…">
         <bpmn:documentation>Step 5: Approved capex → Purchase Order created (standard PO workflow W2) or direct purchase
 Responsible (R): Buyer / Requestor
 Accountable (A): Dept. Head
 Duration: Per W2</bpmn:documentation>
-        <bpmn:incoming>W21_Flow26</bpmn:incoming>
-        <bpmn:outgoing>W21_Flow27</bpmn:outgoing>
+        <bpmn:incoming>W21_Flow27</bpmn:incoming>
+        <bpmn:outgoing>W21_Flow28</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W21_Task15" name="Goods/asset received; Goods Receipt posted">
+      <bpmn:userTask id="W21_Task16" name="Goods/asset received; Goods Receipt posted">
         <bpmn:documentation>Step 6: Goods/asset received; Goods Receipt posted
 Responsible (R): Receiving Clerk / IT
 Accountable (A): Dept. Head
 Duration: Per W3</bpmn:documentation>
-        <bpmn:incoming>W21_Flow27</bpmn:incoming>
-        <bpmn:outgoing>W21_Flow28</bpmn:outgoing>
+        <bpmn:incoming>W21_Flow28</bpmn:incoming>
+        <bpmn:outgoing>W21_Flow29</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W21_Task16" name="Finance capitalizes asset in Fixed Asset module: asset tag, location…">
+      <bpmn:userTask id="W21_Task17" name="Finance capitalizes asset in Fixed Asset module: asset tag, location…">
         <bpmn:documentation>Step 7: Finance capitalizes asset in Fixed Asset module: asset tag, location, depreciation schedule, useful life
 Responsible (R): Cost Accountant
 Accountable (A): Controller
 Duration: 15 min/asset</bpmn:documentation>
-        <bpmn:incoming>W21_Flow28</bpmn:incoming>
-        <bpmn:outgoing>W21_Flow29</bpmn:outgoing>
+        <bpmn:incoming>W21_Flow29</bpmn:incoming>
+        <bpmn:outgoing>W21_Flow30</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:serviceTask id="W21_Task17" name="System begins monthly depreciation per schedule">
+      <bpmn:serviceTask id="W21_Task18" name="System begins monthly depreciation per schedule">
         <bpmn:documentation>Step 8: System begins monthly depreciation per schedule
 Responsible (R): System
 Accountable (A): —
 Duration: Automated</bpmn:documentation>
-        <bpmn:incoming>W21_Flow29</bpmn:incoming>
-        <bpmn:outgoing>W21_Flow30</bpmn:outgoing>
+        <bpmn:incoming>W21_Flow30</bpmn:incoming>
+        <bpmn:outgoing>W21_Flow31</bpmn:outgoing>
       </bpmn:serviceTask>
-      <bpmn:userTask id="W21_Task18" name="Post-implementation review: actual vs. budgeted cost; in-service date">
+      <bpmn:userTask id="W21_Task19" name="Post-implementation review: actual vs. budgeted cost; in-service date">
         <bpmn:documentation>Step 9: Post-implementation review: actual vs. budgeted cost; in-service date
 Responsible (R): Capex Analyst
 Accountable (A): CFO
 Duration: Quarterly</bpmn:documentation>
-        <bpmn:incoming>W21_Flow30</bpmn:incoming>
-        <bpmn:outgoing>W21_Flow31</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:endEvent id="W21_End19" name="Complete">
         <bpmn:incoming>W21_Flow31</bpmn:incoming>
+        <bpmn:outgoing>W21_Flow32</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:endEvent id="W21_End20" name="Complete">
+        <bpmn:incoming>W21_Flow32</bpmn:incoming>
       </bpmn:endEvent>
-      <bpmn:textAnnotation id="W21_Annotation20">
+      <bpmn:textAnnotation id="W21_Annotation21">
         <bpmn:text>Controls: - CTL-02 (prevent unauthorized capital expenditure.) | - operational: Requesting Department Head review and approval gate
 Owner: Requesting Department Head</bpmn:text>
       </bpmn:textAnnotation>
-      <bpmn:association id="W21_Assoc21" sourceRef="W21_Annotation20" targetRef="W21_Start9" associationDirection="None" />
-      <bpmn:sequenceFlow id="W21_Flow22" sourceRef="W21_Start9" targetRef="W21_Task10" />
-      <bpmn:sequenceFlow id="W21_Flow23" sourceRef="W21_Task10" targetRef="W21_Task11" />
+      <bpmn:association id="W21_Assoc22" sourceRef="W21_Annotation21" targetRef="W21_Start10" associationDirection="None" />
+      <bpmn:sequenceFlow id="W21_Flow23" sourceRef="W21_Start10" targetRef="W21_Task11" />
       <bpmn:sequenceFlow id="W21_Flow24" sourceRef="W21_Task11" targetRef="W21_Task12" />
       <bpmn:sequenceFlow id="W21_Flow25" sourceRef="W21_Task12" targetRef="W21_Task13" />
       <bpmn:sequenceFlow id="W21_Flow26" sourceRef="W21_Task13" targetRef="W21_Task14" />
@@ -546,7 +547,8 @@ Owner: Requesting Department Head</bpmn:text>
       <bpmn:sequenceFlow id="W21_Flow28" sourceRef="W21_Task15" targetRef="W21_Task16" />
       <bpmn:sequenceFlow id="W21_Flow29" sourceRef="W21_Task16" targetRef="W21_Task17" />
       <bpmn:sequenceFlow id="W21_Flow30" sourceRef="W21_Task17" targetRef="W21_Task18" />
-      <bpmn:sequenceFlow id="W21_Flow31" sourceRef="W21_Task18" targetRef="W21_End19" />
+      <bpmn:sequenceFlow id="W21_Flow31" sourceRef="W21_Task18" targetRef="W21_Task19" />
+      <bpmn:sequenceFlow id="W21_Flow32" sourceRef="W21_Task19" targetRef="W21_End20" />
     </bpmn:process>
     <bpmndi:BPMNDiagram id="W21_diag">
       <bpmndi:BPMNPlane id="W21_plane" bpmnElement="W_W21">
@@ -557,29 +559,30 @@ Owner: Requesting Department Head</bpmn:text>
         <bpmndi:BPMNShape id="W21_Lane5_di" bpmnElement="W21_Lane5" isHorizontal="true"><dc:Bounds x="160" y="760" width="2210" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W21_Lane6_di" bpmnElement="W21_Lane6" isHorizontal="true"><dc:Bounds x="160" y="930" width="2210" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W21_Lane7_di" bpmnElement="W21_Lane7" isHorizontal="true"><dc:Bounds x="160" y="1100" width="2210" height="170" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W21_Task10_di" bpmnElement="W21_Task10"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W21_Task11_di" bpmnElement="W21_Task11"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W21_Task12_di" bpmnElement="W21_Task12"><dc:Bounds x="820" y="465" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W21_Task13_di" bpmnElement="W21_Task13"><dc:Bounds x="1030" y="635" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W21_Task14_di" bpmnElement="W21_Task14"><dc:Bounds x="1240" y="805" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W21_Task15_di" bpmnElement="W21_Task15"><dc:Bounds x="1450" y="975" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W21_Task16_di" bpmnElement="W21_Task16"><dc:Bounds x="1660" y="1145" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W21_Task17_di" bpmnElement="W21_Task17"><dc:Bounds x="1870" y="635" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W21_Task18_di" bpmnElement="W21_Task18"><dc:Bounds x="2080" y="465" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W21_Start9_di" bpmnElement="W21_Start9"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W21_End19_di" bpmnElement="W21_End19"><dc:Bounds x="2310" y="1167" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W21_Annotation20_di" bpmnElement="W21_Annotation20"><dc:Bounds x="160" y="1310" width="360" height="60" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNEdge id="W21_Flow22_di" bpmnElement="W21_Flow22"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W21_Flow23_di" bpmnElement="W21_Flow23"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W21_Flow24_di" bpmnElement="W21_Flow24"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W21_Flow25_di" bpmnElement="W21_Flow25"><di:waypoint x="1000" y="505" /><di:waypoint x="1030" y="675" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W21_Flow26_di" bpmnElement="W21_Flow26"><di:waypoint x="1210" y="675" /><di:waypoint x="1240" y="845" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W21_Flow27_di" bpmnElement="W21_Flow27"><di:waypoint x="1420" y="845" /><di:waypoint x="1450" y="1015" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W21_Flow28_di" bpmnElement="W21_Flow28"><di:waypoint x="1630" y="1015" /><di:waypoint x="1660" y="1185" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W21_Flow29_di" bpmnElement="W21_Flow29"><di:waypoint x="1840" y="1185" /><di:waypoint x="1870" y="675" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W21_Flow30_di" bpmnElement="W21_Flow30"><di:waypoint x="2050" y="675" /><di:waypoint x="2080" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W21_Flow31_di" bpmnElement="W21_Flow31"><di:waypoint x="2260" y="505" /><di:waypoint x="2310" y="1185" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W21_Assoc21_di" bpmnElement="W21_Assoc21"><di:waypoint x="340" y="1310" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNShape id="W21_Lane8_di" bpmnElement="W21_Lane8" isHorizontal="true"><dc:Bounds x="160" y="1270" width="2210" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W21_Task11_di" bpmnElement="W21_Task11"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W21_Task12_di" bpmnElement="W21_Task12"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W21_Task13_di" bpmnElement="W21_Task13"><dc:Bounds x="820" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W21_Task14_di" bpmnElement="W21_Task14"><dc:Bounds x="1030" y="635" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W21_Task15_di" bpmnElement="W21_Task15"><dc:Bounds x="1240" y="805" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W21_Task16_di" bpmnElement="W21_Task16"><dc:Bounds x="1450" y="975" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W21_Task17_di" bpmnElement="W21_Task17"><dc:Bounds x="1660" y="1145" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W21_Task18_di" bpmnElement="W21_Task18"><dc:Bounds x="1870" y="635" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W21_Task19_di" bpmnElement="W21_Task19"><dc:Bounds x="2080" y="1315" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W21_Start10_di" bpmnElement="W21_Start10"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W21_End20_di" bpmnElement="W21_End20"><dc:Bounds x="2310" y="1337" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W21_Annotation21_di" bpmnElement="W21_Annotation21"><dc:Bounds x="160" y="1480" width="360" height="60" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="W21_Flow23_di" bpmnElement="W21_Flow23"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W21_Flow24_di" bpmnElement="W21_Flow24"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W21_Flow25_di" bpmnElement="W21_Flow25"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W21_Flow26_di" bpmnElement="W21_Flow26"><di:waypoint x="1000" y="505" /><di:waypoint x="1030" y="675" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W21_Flow27_di" bpmnElement="W21_Flow27"><di:waypoint x="1210" y="675" /><di:waypoint x="1240" y="845" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W21_Flow28_di" bpmnElement="W21_Flow28"><di:waypoint x="1420" y="845" /><di:waypoint x="1450" y="1015" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W21_Flow29_di" bpmnElement="W21_Flow29"><di:waypoint x="1630" y="1015" /><di:waypoint x="1660" y="1185" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W21_Flow30_di" bpmnElement="W21_Flow30"><di:waypoint x="1840" y="1185" /><di:waypoint x="1870" y="675" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W21_Flow31_di" bpmnElement="W21_Flow31"><di:waypoint x="2050" y="675" /><di:waypoint x="2080" y="1355" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W21_Flow32_di" bpmnElement="W21_Flow32"><di:waypoint x="2260" y="1355" /><di:waypoint x="2310" y="1355" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W21_Assoc22_di" bpmnElement="W21_Assoc22"><di:waypoint x="340" y="1480" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
       </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W26" name="W26. Annual Budget Preparation &amp; Monthly Variance Review" isExecutable="false">

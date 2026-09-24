@@ -175,7 +175,7 @@ Source: workflow W3043 — Consent Capture, Preference Management &amp; Lawful B
       </bpmn:startEvent>
       <bpmn:userTask id="W3043_Task6" name="Marketing Tech/Loyalty capture consent at enrollment/checkout with granular…">
         <bpmn:documentation>Step 1: Marketing Tech/Loyalty capture consent at enrollment/checkout with granular purpose flags (marketing, profiling, third-party share, location); record timestamp and version
-Responsible (R): Marketing Tech / Loyalty
+Responsible (R): Marketing Tech / Loyalty, Privacy Officer
 Accountable (A): Marketing Technology Manager
 Duration: Per signup</bpmn:documentation>
         <bpmn:incoming>W3043_Flow12</bpmn:incoming>

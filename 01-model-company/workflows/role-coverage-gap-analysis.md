@@ -22,7 +22,7 @@
 | Class C — healthy (≥1 chartered owner) | 4042 |
 | Class B — owner-grain gap (chartered roles touched, owner not chartered) | 1271 |
 | Class A — role-less (no chartered role in any RACI cell) | 120 |
-| Anchoring census (role → workflow arm, pinned by Check 71) | 259 chartered / 259 anchored / 0 zero-anchor / 54 weak |
+| Anchoring census (role → workflow arm, pinned by Check 71) | 259 chartered / 259 anchored / 0 zero-anchor / 53 weak |
 
 > **Adjudication policy.** Department-grain ownership ('Finance', 'Legal',
 > 'HR' as performer) is acceptable only where the work is genuinely
@@ -2324,7 +2324,6 @@ candidate for the same governance path.
 | Purchasing / PO Specialist | Supply Chain & Logistics | 2 | 0 |
 | Replenishment & Allocation Analyst | Supply Chain & Logistics | 2 | 0 |
 | Retail Media Operations Specialist | Marketing | 2 | 0 |
-| Senior FP&A Analyst | Finance & Accounting | 2 | 0 |
 | Sourcing & Screening Coordinator | Human Resources | 2 | 0 |
 | Strategy Analyst | Strategy / Corporate Planning | 2 | 0 |
 | B2B Support Representative | Customer Service | 3 | 0 |
@@ -2333,6 +2332,7 @@ candidate for the same governance path.
 | Field Compliance Auditor | Internal Audit & Risk | 3 | 0 |
 | Real-Estate & Site-Selection Analyst | Facilities & Real Estate | 3 | 0 |
 | Senior Demand Planner | Supply Chain & Logistics | 3 | 0 |
+| Senior FP&A Analyst | Finance & Accounting | 3 | 0 |
 | Tax Compliance & eFPS Specialist | Finance & Accounting | 3 | 0 |
 | Timekeeping & Attendance Analyst | Human Resources | 3 | 0 |
 | Payroll Accounting Liaison | Finance & Accounting | 4 | 0 |
