@@ -1,0 +1,81 @@
+{
+ "extracted_at": "2026-09-24 23:48 UTC",
+ "metrics": {
+  "ap_invoices_12m": {
+   "status": "ok",
+   "value": 188566
+  },
+  "ar_cm_12m": {
+   "status": "ok",
+   "value": 14801
+  },
+  "categories_top": {
+   "status": "ok",
+   "value": []
+  },
+  "gl_je_12m": {
+   "status": "ok",
+   "value": 291374
+  },
+  "inv_orgs": {
+   "status": "ok",
+   "value": 291
+  },
+  "items_defined": {
+   "status": "ok",
+   "value": 113950
+  },
+  "items_onhand": {
+   "status": "ok",
+   "value": 31475
+  },
+  "legal_entities": {
+   "status": "ok",
+   "value": 15
+  },
+  "om_lines_12m": {
+   "status": "ok",
+   "value": 1596418
+  },
+  "po_docs_12m": {
+   "status": "ok",
+   "value": 22175
+  },
+  "po_lines_12m": {
+   "status": "ok",
+   "value": 141839
+  },
+  "pos_stores_12m": {
+   "status": "ok",
+   "value": 132
+  },
+  "pos_trx_12m": {
+   "status": "ok",
+   "value": 13305968
+  },
+  "rcv_lines_12m": {
+   "status": "ok",
+   "value": 3144047
+  },
+  "sto_docs_12m": {
+   "status": "ok",
+   "value": 532542
+  },
+  "suppliers_active": {
+   "status": "ok",
+   "value": 6950
+  },
+  "suppliers_total": {
+   "status": "ok",
+   "value": 8237
+  },
+  "users_30d": {
+   "status": "ok",
+   "value": 468
+  },
+  "users_active": {
+   "status": "ok",
+   "value": 514
+  }
+ }
+}

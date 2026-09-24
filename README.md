@@ -237,6 +237,7 @@ erpplans/
 │   ├── role-coverage-matrix.md         GENERATED role ↔ workflow coverage matrix (per-role owned/participated/step/tier-mix + the Role-Anchoring Contract: zero-anchor worklist & weak-anchor watchlist — every chartered role must be explicitly in a workflow to be measurable; regenerate via 07-methodology/generate-role-coverage.py — do not hand-edit)
 │   ├── role-coverage-gap-analysis.md   GENERATED workflow→role coverage gap analysis (batch 32; Class A role-less / Class B owner-grain / Class C healthy + duty-role adjudication policy; regenerate via 07-methodology/role-coverage-gap-analysis.py — do not hand-edit)
 │   ├── weak-anchor-demand-verification.md  GENERATED weak-anchor watchlist demand verification (batch 38; the 1–2-workflow roles measured against virtual-gemba per-role annual demand — CONFIRMED / OVERLOAD / UNDER-UTILIZED / NO PARSED CADENCE verdicts; regenerate after any anchoring change)
+│   ├── production-volume-of-record.md  GENERATED production volume-of-record — the actual operator's PROD (CitiHardware EBS) measured live: trailing-12-month POS/PO/STROO-transfer/AP/AR/receipt/GL volumes, structure & estate, masterfiles, and the canon-vs-actual calibration surface with its decision register (regenerate via 07-methodology/production-volume-of-record.py --refresh; byte-pinned by validator Check 81 — do not hand-edit)
 │   ├── mobile-app-strategy.md          Customer & employee mobile app strategy
 │   └── data-migration-mapping.md       Data migration field mapping templates
 ├── 02-oracle-ebs/               ← Oracle E-Business Suite 12.2 platform blueprint (the ERP core of record)
@@ -261,11 +262,13 @@ erpplans/
     ├── technical-guidelines.md       POS hardware, infrastructure, integration, security, two-tier sourcing architecture
     ├── capability-sourcing-and-engineering-model.md  Two-tier sourcing decision gate (in EBS → use it; otherwise build), sourcing register, build squads, SEP
     ├── it-product-operating-model.md IT product teams (two-tier: in-suite EBS core + in-house built & already-built platforms + AI agent platform), roles, RACI, governance, sizing (50 → 122 FTE)
-    ├── ai-first-operating-guide.md   The AI-first operating guide — ERP-agnostic doctrine (ten laws, six layers, capability contracts), sourcing neutrality, autonomy ladder, agent factory, the EKB as persistent memory + consistency engine, the no-confusion decision system, and the seven-phase adoption path (v1.21)
-    ├── validate-repo.sh              Cross-reference validation (80 checks)
+    ├── ai-first-operating-guide.md   The AI-first operating guide — ERP-agnostic doctrine (ten laws, six layers, capability contracts), sourcing neutrality, autonomy ladder, agent factory, the EKB as persistent memory + consistency engine, the no-confusion decision system, and the seven-phase adoption path (v1.22)
+    ├── validate-repo.sh              Cross-reference validation (81 checks)
     ├── generate-bpmn.py             BPMN 2.0 generator — converts every workflow block in 01-model-company/workflows into validated .bpmn files under bpmn/ (5,456 processes, lanes, DI)
     ├── generate-dmn.py             DMN 1.3 generator — extracts rule tables and tiered PHP authorization rules from workflow markdown into validated .dmn files under dmn/ (80 decisions, decision tables, DMNDI)
     ├── generate-role-coverage.py   Role–workflow coverage generator — parses PA RACI fields + tier register + the official TO into 01-model-company/role-coverage-matrix.md (per-role owned/participated/step/tier-mix, --check byte-verify)
+    ├── production-volume-of-record.py  Production volume-of-record instrument — queries the actual operator's PROD read-only (the ~/access_ebs route; credentials never committed) into 01-model-company/production-volume-of-record.md (12-month operating volumes + canon-vs-actual calibration surface; --refresh live, --check byte-verify = Check 81)
+    ├── production-volume-of-record-cache.json  Extraction-of-record cache for production-volume-of-record.py (the register re-renders byte-identically from it; refreshed monthly or before any calibration decision)
     ├── classify-workflows.py         Keyword-driven criticality classifier
     ├── confirm-all-workflows.py      One-time full-coverage confirmation pass (2,596 → 0 unclassified)
     ├── confirm-postcatalog-14.py     One-time post-catalog confirmation pass (W5497–W5510: 14 → 0 unclassified, 2026-09-02)
