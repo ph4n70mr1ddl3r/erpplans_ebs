@@ -22,7 +22,7 @@
 |---|---|
 | Workflows mapped | 5433 (exactly one Owner each — asserted) |
 | Confirmed Tier register | 5456 rows (Tier 1: 1396 · Tier 2: 3302 · Tier 3: 758) |
-| Distinct resolved actors | 4222 — §5.3 register roles 195 · IT product-model seats 32 · store field 12 · DC field 27 · department-level actors 2964 · system actors 31 · governance 59 · workforce 101 · external 801 · uncharted 0 |
+| Distinct resolved actors | 4212 — §5.3 register roles 195 · IT product-model seats 32 · store field 12 · DC field 27 · department-level actors 2954 · system actors 31 · governance 59 · workforce 101 · external 801 · uncharted 0 |
 
 > Tier mix = confirmed tiers of the workflows a role touches (a workflow
 > counts once per role regardless of how many steps mention it). HC is
@@ -50,9 +50,9 @@
 | Chartered roles (register 192 + IT seats 32 + store 8 + DC 27) | 259 |
 | With ≥1 explicit RACI anchor | 259 (100%) |
 | ZERO-anchor — the anchoring worklist | 0 (hq 0 · it 0 · store 0 · dc 0) |
-| Weakly anchored (1–2 workflows) — demand-verification watchlist | 62 |
+| Weakly anchored (1–2 workflows) — demand-verification watchlist | 61 |
 
-### Weak-anchor watchlist — 62 chartered roles anchored in only 1–2 workflows
+### Weak-anchor watchlist — 61 chartered roles anchored in only 1–2 workflows
 
 | Role | Charter source | HC | Workflows touched |
 |---|---|---|---|
@@ -97,7 +97,6 @@
 | Ecommerce Support Specialist | §5.3 register — Customer Service | 3 | 2 |
 | Facilities Coordination Specialist | §5.3 register — Store Operations | 1 | 2 |
 | Forensic / Fraud Investigator | §5.3 register — Internal Audit & Risk | 1 | 2 |
-| Head of Strategy & Corporate Planning | §5.3 register — Strategy / Corporate Planning | 1 | 2 |
 | Import Documentation Specialist | §5.3 register — Supply Chain & Logistics | 1 | 2 |
 | Maintenance & Projects Coordinator | §5.3 register — Facilities & Real Estate | 2 | 2 |
 | Operations Compliance Lead | §5.3 register — Internal Audit & Risk | 1 | 2 |
@@ -174,7 +173,7 @@
 | Promotions & Vendor-Funding Coordinator | Merchandising & Buying | 3 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | VP Supply Chain & Logistics (dual-hat GM, BuildRight Logistics, Inc.) | Supply Chain & Logistics | 1 | 58 | 128 | 112 | 528 | 338 | 85 | 180 | 73 |
 | Fleet Compliance & Safety Specialist | Supply Chain & Logistics | 1 | 49 | 35 | 146 | 20 | 37 | 22 | 13 | 2 |
-| Fleet & Logistics Manager | Supply Chain & Logistics | 1 | 40 | 53 | 129 | 191 | 145 | 27 | 93 | 25 |
+| Fleet & Logistics Manager | Supply Chain & Logistics | 1 | 45 | 57 | 148 | 200 | 145 | 27 | 93 | 25 |
 | DC Operations Manager | Supply Chain & Logistics | 1 | 38 | 33 | 67 | 110 | 84 | 29 | 48 | 7 |
 | Procurement Manager | Supply Chain & Logistics | 1 | 35 | 55 | 87 | 99 | 97 | 35 | 45 | 17 |
 | Logistics Coordinator | Supply Chain & Logistics | 2 | 28 | 34 | 71 | 24 | 47 | 9 | 37 | 1 |
@@ -272,9 +271,9 @@
 | Forensic / Fraud Investigator | Internal Audit & Risk | 1 | 0 | 2 | 0 | 0 | 2 | 2 | 0 | 0 |
 | Operations Compliance Lead | Internal Audit & Risk | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 2 | 0 |
 | Customer Service Representative | Customer Service | 22 | 24 | 44 | 54 | 3 | 64 | 9 | 48 | 7 |
+| Head of Customer Service | Customer Service | 1 | 21 | 18 | 18 | 68 | 53 | 10 | 38 | 5 |
 | Contact Center Supervisor | Customer Service | 2 | 8 | 17 | 14 | 25 | 24 | 8 | 12 | 4 |
 | Services Manager | Customer Service | 1 | 5 | 10 | 15 | 45 | 24 | 9 | 10 | 5 |
-| Head of Customer Service | Customer Service | 1 | 5 | 1 | 6 | 30 | 17 | 0 | 15 | 2 |
 | Ecommerce Support Specialist | Customer Service | 3 | 2 | 2 | 0 | 0 | 2 | 2 | 0 | 0 |
 | B2B Support Representative | Customer Service | 4 | 0 | 2 | 0 | 0 | 2 | 0 | 2 | 0 |
 | Quality & Workforce Analyst | Customer Service | 2 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
@@ -304,8 +303,8 @@
 | Environmental Compliance Specialist | Sustainability / ESG | 1 | 25 | 13 | 84 | 59 | 37 | 15 | 19 | 3 |
 | Sustainability Coordinator | Sustainability / ESG | 1 | 20 | 40 | 77 | 3 | 49 | 2 | 33 | 14 |
 | ESG Reporting & Data Analyst | Sustainability / ESG | 1 | 1 | 0 | 5 | 0 | 1 | 1 | 0 | 0 |
+| Head of Strategy & Corporate Planning | Strategy / Corporate Planning | 1 | 32 | 78 | 109 | 31 | 95 | 3 | 79 | 13 |
 | Competitive Intelligence Manager | Strategy / Corporate Planning | 1 | 2 | 4 | 0 | 1 | 5 | 0 | 3 | 2 |
-| Head of Strategy & Corporate Planning | Strategy / Corporate Planning | 1 | 1 | 1 | 0 | 1 | 2 | 0 | 2 | 0 |
 | Document Control Coordinator | Strategy / Corporate Planning | 1 | 0 | 3 | 0 | 0 | 3 | 0 | 3 | 0 |
 | Business Process & IMS Lead | Strategy / Corporate Planning | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 2 | 0 |
 | CPM (Corporate Performance Management) Analyst | Strategy / Corporate Planning | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 1 | 1 |
@@ -324,7 +323,9 @@
 | Role | Dept / source | Owns | Participant | Step-R | Step-A | Touched | T1 | T2 | T3 |
 |---|---|---|---|---|---|---|---|---|---|
 | DP BI Platform | Information Technology (product model) | 98 | 255 | 521 | 67 | 378 | 39 | 154 | 185 |
+| IT Product Manager (build squad) | Information Technology (product model) | 54 | 32 | 88 | 95 | 88 | 19 | 52 | 17 |
 | Head of Enterprise Architecture (CIO Office) | Information Technology (product model) | 48 | 80 | 136 | 54 | 88 | 6 | 72 | 10 |
+| SEC (Cybersecurity, Privacy & OT Security) | Information Technology (product model) | 35 | 201 | 233 | 2 | 224 | 74 | 141 | 9 |
 | IT Operations (FS/INFRA) | Information Technology (product model) | 29 | 48 | 57 | 42 | 81 | 22 | 48 | 11 |
 | AAP AI-Governance Liaison | Information Technology (product model) | 28 | 25 | 72 | 56 | 27 | 13 | 10 | 4 |
 | SEC Security Engineer | Information Technology (product model) | 27 | 16 | 83 | 47 | 50 | 13 | 31 | 6 |
@@ -333,7 +334,6 @@
 | DP MDM Steward | Information Technology (product model) | 22 | 28 | 72 | 30 | 43 | 14 | 24 | 5 |
 | Build-Squad Software Engineer | Information Technology (product model) | 21 | 27 | 49 | 6 | 34 | 11 | 18 | 5 |
 | SEC OT Security Lead | Information Technology (product model) | 13 | 0 | 30 | 76 | 24 | 4 | 17 | 3 |
-| SEC (Cybersecurity, Privacy & OT Security) | Information Technology (product model) | 11 | 179 | 164 | 2 | 206 | 62 | 135 | 9 |
 | DP Data Scientist / ML | Information Technology (product model) | 11 | 18 | 50 | 7 | 23 | 5 | 5 | 13 |
 | IT Helpdesk Agent (FS) | Information Technology (product model) | 9 | 34 | 69 | 17 | 47 | 19 | 25 | 3 |
 | DP / Data & Analytics (VS-28) | Information Technology (product model) | 8 | 28 | 22 | 0 | 38 | 6 | 20 | 12 |
@@ -346,7 +346,6 @@
 | DP Data Engineer | Information Technology (product model) | 3 | 6 | 24 | 2 | 9 | 3 | 2 | 4 |
 | ERP Functional Analyst | Information Technology (product model) | 3 | 3 | 10 | 0 | 7 | 2 | 1 | 4 |
 | Strategy / Corporate Planning (PMO) | Information Technology (product model) | 3 | 4 | 15 | 12 | 7 | 1 | 6 | 0 |
-| IT Product Manager (build squad) | Information Technology (product model) | 2 | 1 | 6 | 6 | 3 | 0 | 2 | 1 |
 | INFRA Network Engineer | Information Technology (product model) | 1 | 14 | 73 | 33 | 37 | 7 | 25 | 5 |
 | Build-Squad QA Automation Engineer | Information Technology (product model) | 1 | 3 | 12 | 5 | 5 | 0 | 4 | 1 |
 | AAP Agent Engineer | Information Technology (product model) | 1 | 2 | 4 | 5 | 2 | 0 | 2 | 0 |
@@ -466,7 +465,6 @@
 | Finance | Finance & Accounting | 144 | 1044 | 1130 | 54 | 1223 | 253 | 753 | 217 |
 | Treasury | Finance & Accounting | 50 | 256 | 258 | 4 | 297 | 89 | 180 | 28 |
 | Finance Analyst | Finance & Accounting | 30 | 60 | 158 | 5 | 116 | 29 | 62 | 25 |
-| Fraud Management | Finance & Accounting | 24 | 22 | 69 | 0 | 25 | 17 | 8 | 0 |
 | Vp Investor Relations | Finance & Accounting | 24 | 0 | 0 | 0 | 24 | 3 | 18 | 3 |
 | Abl & Collateral Operations Manager | Finance & Accounting | 23 | 0 | 0 | 0 | 23 | 10 | 11 | 2 |
 | Finance Manager | Finance & Accounting | 22 | 78 | 80 | 283 | 197 | 81 | 98 | 18 |
@@ -853,7 +851,6 @@
 | Supply Chain Planning Manager | Supply Chain & Logistics | 5 | 0 | 0 | 10 | 8 | 1 | 6 | 1 |
 | Bulky-Delivery Operations | Supply Chain & Logistics | 5 | 0 | 0 | 0 | 5 | 2 | 1 | 2 |
 | Bulky-Delivery Service Ops | Supply Chain & Logistics | 5 | 0 | 0 | 0 | 5 | 1 | 4 | 0 |
-| Fleet Maintenance Supervisor | Supply Chain & Logistics | 5 | 4 | 19 | 9 | 5 | 2 | 3 | 0 |
 | Last-Mile | Supply Chain & Logistics | 4 | 11 | 10 | 0 | 14 | 4 | 8 | 2 |
 | Logistics Analyst | Supply Chain & Logistics | 4 | 4 | 10 | 0 | 6 | 0 | 2 | 4 |
 | Packaging Engineer | Supply Chain & Logistics | 4 | 0 | 0 | 0 | 4 | 0 | 4 | 0 |
@@ -2322,7 +2319,6 @@
 | Risk Specialist | Internal Audit & Risk | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 |
 | Third-Party Audit Firm | Internal Audit & Risk | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
 | Cx | Customer Service | 25 | 96 | 100 | 2 | 104 | 14 | 70 | 20 |
-| Customer Service Manager | Customer Service | 16 | 17 | 12 | 38 | 39 | 10 | 26 | 3 |
 | Customer Service | Customer Service | 10 | 81 | 63 | 1 | 91 | 35 | 49 | 7 |
 | Customer Experience Manager | Customer Service | 8 | 3 | 8 | 6 | 10 | 0 | 7 | 3 |
 | Customer Experience | Customer Service | 4 | 2 | 1 | 0 | 6 | 0 | 4 | 2 |
@@ -2753,7 +2749,6 @@
 | Indigenous Cultural Community Tribal Council | Sustainability / ESG | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
 | Local Community | Sustainability / ESG | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Vp Esg | Sustainability / ESG | 0 | 1 | 0 | 3 | 1 | 0 | 0 | 1 |
-| Pmo | Strategy / Corporate Planning | 28 | 75 | 106 | 2 | 92 | 3 | 77 | 12 |
 | Strategy | Strategy / Corporate Planning | 26 | 128 | 138 | 0 | 148 | 8 | 89 | 51 |
 | Head Of Corporate Development | Strategy / Corporate Planning | 17 | 0 | 0 | 0 | 17 | 0 | 16 | 1 |
 | Programs | Strategy / Corporate Planning | 7 | 5 | 24 | 0 | 13 | 1 | 11 | 1 |
@@ -2872,12 +2867,9 @@
 | Vmi Vendor Account Manager | Trade / Account Management | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Vp Commercial | Trade / Account Management | 0 | 0 | 0 | 1 | 1 | 0 | 1 | 0 |
 | Wholesale Manager | Trade / Account Management | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
-| Ecommerce Operations Manager | Digital Commerce (IT-built platforms) | 26 | 4 | 4 | 41 | 34 | 13 | 19 | 2 |
 | Global Sourcing | Merchandising & Buying (Direct Sourcing) | 25 | 35 | 73 | 0 | 36 | 5 | 27 | 4 |
 | Project Manager | Strategy / Corporate Planning (PMO) | 18 | 36 | 73 | 15 | 47 | 2 | 37 | 8 |
 | Ecommerce | Digital Commerce (IT-built platforms) | 15 | 116 | 60 | 0 | 128 | 31 | 81 | 16 |
-| Digital Product Manager | Digital Commerce (IT-built platforms) | 13 | 11 | 43 | 5 | 24 | 3 | 14 | 7 |
-| Ecommerce Manager | Digital Commerce (IT-built platforms) | 12 | 15 | 35 | 37 | 28 | 4 | 17 | 7 |
 | Regulatory Officer | Regulatory Affairs Specialist | 10 | 24 | 78 | 11 | 35 | 20 | 14 | 1 |
 | Tax | Finance & Accounting (Tax) | 9 | 84 | 76 | 0 | 96 | 33 | 60 | 3 |
 | Master Data | Merchandising & Buying (Master Data) | 9 | 40 | 36 | 0 | 49 | 16 | 32 | 1 |
@@ -2895,7 +2887,6 @@
 | Ecommerce Merchandiser | Digital Commerce (IT-built platforms) | 3 | 3 | 6 | 4 | 3 | 0 | 0 | 3 |
 | Ecommerce Product Manager | Digital Commerce (IT-built platforms) | 3 | 2 | 4 | 1 | 3 | 0 | 2 | 1 |
 | Program Manager | Strategy / Corporate Planning (PMO) | 2 | 2 | 61 | 40 | 33 | 2 | 28 | 3 |
-| Pmo Director | Strategy / Corporate Planning (PMO) | 2 | 2 | 3 | 28 | 17 | 0 | 15 | 2 |
 | App | Digital Commerce (IT-built platforms) | 2 | 10 | 6 | 1 | 11 | 1 | 10 | 0 |
 | Cross-Entity Shared Services | Generic / cross-department | 2 | 8 | 1 | 0 | 8 | 4 | 4 | 0 |
 | Pim | Merchandising & Buying (Master Data) | 2 | 5 | 3 | 0 | 6 | 0 | 6 | 0 |
@@ -2943,7 +2934,6 @@
 | Ecommerce Logistics Manager | Digital Commerce (IT-built platforms) | 1 | 0 | 4 | 1 | 1 | 1 | 0 | 0 |
 | Ecommerce Marketplace | Digital Commerce (IT-built platforms) | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Ecommerce Operations Specialist | Digital Commerce (IT-built platforms) | 1 | 0 | 0 | 0 | 1 | 1 | 0 | 0 |
-| Ecommerce Platform Manager | Digital Commerce (IT-built platforms) | 1 | 1 | 0 | 6 | 1 | 0 | 1 | 0 |
 | Ecommerce Quality Coordinator | Digital Commerce (IT-built platforms) | 1 | 0 | 0 | 0 | 1 | 1 | 0 | 0 |
 | Engaging Department Head | Generic / cross-department | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Head Of Digital Commerce | Digital Commerce (IT-built platforms) | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 |
@@ -2955,7 +2945,6 @@
 | Order Mgmt | Digital Commerce (IT-built platforms) | 1 | 0 | 2 | 0 | 1 | 0 | 1 | 0 |
 | Program Operations Lead | Strategy / Corporate Planning (PMO) | 1 | 0 | 3 | 4 | 1 | 0 | 1 | 0 |
 | Project Document Controller | Strategy / Corporate Planning (PMO) | 1 | 0 | 0 | 0 | 1 | 0 | 0 | 1 |
-| Project Management Office Lead | Strategy / Corporate Planning (PMO) | 1 | 0 | 0 | 0 | 1 | 0 | 0 | 1 |
 | Respective Department Heads | Generic / cross-department | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 |
 | User Department Head | Generic / cross-department | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Director | Generic / cross-department | 0 | 26 | 43 | 130 | 62 | 10 | 42 | 10 |

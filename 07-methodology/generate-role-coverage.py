@@ -208,6 +208,24 @@ ROLE_ALIASES = {
     "logistics manager": "Fleet & Logistics Manager",
     "cost accounting manager": "Manager, GL & Consolidation (Assistant Controller)",
     "data protection officer": "Data Privacy Officer (DPO)",
+    # --- Owner-grain promotion sweep IV (batch 37, 2026-09-23): the final
+    # curated promotions — the two named sizing-decision candidates resolve
+    # HC-neutrally to the CCP build-squad Product Manager per the two-tier
+    # doctrine (digital commerce lines are products of the build squad; the
+    # accountable seat is its Product Manager), the corporate PMO to the
+    # Head of Strategy & Corporate Planning, cross-channel payment fraud to
+    # the SEC seat (the fraud-prevention platform owner), and the CS/fleet
+    # supervisor forms to their chartered seats.
+    "ecommerce operations manager": "IT Product Manager (build squad)",
+    "digital product manager": "IT Product Manager (build squad)",
+    "ecommerce manager": "IT Product Manager (build squad)",
+    "ecommerce platform manager": "IT Product Manager (build squad)",
+    "customer service manager": "Head of Customer Service",
+    "fraud management": "SEC (Cybersecurity, Privacy & OT Security)",
+    "pmo": "Head of Strategy & Corporate Planning",
+    "pmo director": "Head of Strategy & Corporate Planning",
+    "project management office lead": "Head of Strategy & Corporate Planning",
+    "fleet maintenance supervisor": "Fleet & Logistics Manager",
     # --- Owner-grain promotion sweep III (batch 36, 2026-09-23): four
     # further recurring Owner forms the gap analysis caught at department
     # grain promoted to the chartered titles they denote (see
@@ -923,9 +941,9 @@ DEPT_ACTORS = {
     "human resources": "Human Resources", "hr": "Human Resources",
     "hr manager": "Human Resources", "l&d": "Human Resources",
     "it": "Information Technology", "ecommerce": "Digital Commerce (IT-built platforms)",
-    "ecommerce manager": "Digital Commerce (IT-built platforms)",
+   
     "digital commerce inc": "Digital Commerce (IT-built platforms)",
-    "digital product manager": "Digital Commerce (IT-built platforms)",
+   
     "marketing": "Marketing",
     "insights": "Marketing", "insights analyst": "Marketing",
     "event marketing mgr": "Marketing",
@@ -945,11 +963,11 @@ DEPT_ACTORS = {
     "internal audit": "Internal Audit & Risk", "audit": "Internal Audit & Risk",
     "auditor": "Internal Audit & Risk", "risk": "Internal Audit & Risk",
     "customer service": "Customer Service", "cx": "Customer Service",
-    "customer service manager": "Customer Service", "cs manager": "Customer Service",
+    "cs manager": "Customer Service",
     "quality": "Quality Management",
     "facilities": "Facilities & Real Estate", "real estate": "Facilities & Real Estate",
     "facilities & real estate": "Facilities & Real Estate",
-    "strategy": "Strategy / Corporate Planning", "pmo": "Strategy / Corporate Planning",
+    "strategy": "Strategy / Corporate Planning",
     "sponsor": "Strategy / Corporate Planning",
     "sustainability": "Sustainability / ESG",
     "hse": "Health, Safety & Environment",
@@ -972,7 +990,7 @@ DEPT_ACTORS = {
     "logistics planner": "Supply Chain & Logistics", "logistics analyst": "Supply Chain & Logistics",
     "transportation": "Supply Chain & Logistics", "transport lead": "Supply Chain & Logistics",
     "last-mile operations supervisor": "Supply Chain & Logistics", "scm": "Supply Chain & Logistics",
-    "fleet supervisor": "Supply Chain & Logistics", "fleet maintenance supervisor": "Supply Chain & Logistics",
+    "fleet supervisor": "Supply Chain & Logistics",
     "fleet maintenance manager": "Supply Chain & Logistics", "ev program manager": "Supply Chain & Logistics",
     "packaging engineering": "Supply Chain & Logistics",
     "msme sales manager": "Trade / Account Management", "b2b sourcing manager": "Trade / Account Management",
@@ -1063,7 +1081,7 @@ DEPT_ACTORS = {
     "leasing product manager": "Finance & Accounting", "property development manager": "Facilities & Real Estate",
     "chargeback analyst": "Finance & Accounting", "it finance analyst": "Finance & Accounting",
     "supply chain planning manager": "Supply Chain & Logistics", "supply planning analyst": "Supply Chain & Logistics",
-    "fraud management": "Finance & Accounting", "admin manager": "Human Resources",
+    "admin manager": "Human Resources",
     "application manager": "Information Technology", "b2b portal administrator": "Information Technology",
     "it change manager": "Information Technology", "it integration manager": "Information Technology",
     "it system admin": "Information Technology", "it application manager": "Information Technology",
@@ -1072,7 +1090,7 @@ DEPT_ACTORS = {
     "vp trade sales": "Trade / Account Management",
     "cross-entity": "Generic / cross-department",
     "cross-entity shared services": "Generic / cross-department",
-    "pmo director": "Strategy / Corporate Planning (PMO)",
+   
     "program manager": "Strategy / Corporate Planning (PMO)",
     "last-mile ops": "Supply Chain & Logistics",
     "store design": "Merchandising & Buying",
@@ -1146,7 +1164,7 @@ DEPT_ACTORS = {
     "global sourcing": "Merchandising & Buying (Direct Sourcing)",
     "category": "Merchandising & Buying", "planogram": "Merchandising & Buying",
     "data science": "DP Data Scientist / ML",
-    "ecommerce operations manager": "Digital Commerce (IT-built platforms)",
+   
     "ifm": "Facilities & Real Estate", "maintenance": "Facilities & Real Estate",
     "engineering": "Facilities & Real Estate",
     "sales enablement": "Marketing", "crm": "Marketing", "retail media": "Marketing",
@@ -1387,7 +1405,7 @@ DEPT_ACTORS = {
     "ecommerce fulfillment manager": "Digital Commerce (IT-built platforms)",
     "ecommerce logistics coordinator": "Digital Commerce (IT-built platforms)",
     "ecommerce logistics manager": "Digital Commerce (IT-built platforms)",
-    "ecommerce platform manager": "Digital Commerce (IT-built platforms)",
+   
     "ecommerce quality coordinator": "Digital Commerce (IT-built platforms)",
     "engaging department head": "Generic / cross-department",
     "engineering & director, facilities & real estate": "Facilities & Real Estate",
@@ -1540,7 +1558,7 @@ DEPT_ACTORS = {
     "lease administration manager": "Finance & Accounting",
     "program operations lead": "Strategy / Corporate Planning (PMO)",
     "project document controller": "Strategy / Corporate Planning (PMO)",
-    "project management office lead": "Strategy / Corporate Planning (PMO)",
+   
     "property ar manager": "Finance & Accounting",
     "property compliance manager": "Facilities & Real Estate",
     "property controller": "Finance & Accounting",

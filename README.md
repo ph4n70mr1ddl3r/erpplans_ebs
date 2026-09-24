@@ -235,6 +235,8 @@ erpplans/
 │   ├── channel-capability-registry.md  Online Channel & Capability Registry — the switchboard: per-capability ENABLED / ENABLED-PHASED / DISABLED—PREPARED / DISABLED—NOT-PREPARED states with enable checklists (BOPIS store pickup is the only enabled online sales capability; runtime twin = feature flags in the in-house platform; state changes ride the built-product change chain)
 │   ├── internal-controls-matrix.md     808 internal controls by objective
 │   ├── role-coverage-matrix.md         GENERATED role ↔ workflow coverage matrix (per-role owned/participated/step/tier-mix + the Role-Anchoring Contract: zero-anchor worklist & weak-anchor watchlist — every chartered role must be explicitly in a workflow to be measurable; regenerate via 07-methodology/generate-role-coverage.py — do not hand-edit)
+│   ├── role-coverage-gap-analysis.md   GENERATED workflow→role coverage gap analysis (batch 32; Class A role-less / Class B owner-grain / Class C healthy + duty-role adjudication policy; regenerate via 07-methodology/role-coverage-gap-analysis.py — do not hand-edit)
+│   ├── weak-anchor-demand-verification.md  GENERATED weak-anchor watchlist demand verification (batch 38; the 1–2-workflow roles measured against virtual-gemba per-role annual demand — CONFIRMED / OVERLOAD / UNDER-UTILIZED / NO PARSED CADENCE verdicts; regenerate after any anchoring change)
 │   ├── mobile-app-strategy.md          Customer & employee mobile app strategy
 │   └── data-migration-mapping.md       Data migration field mapping templates
 ├── 02-oracle-ebs/               ← Oracle E-Business Suite 12.2 platform blueprint (the ERP core of record)

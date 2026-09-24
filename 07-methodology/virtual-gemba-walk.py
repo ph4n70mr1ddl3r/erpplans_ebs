@@ -519,6 +519,10 @@ def mode_motion(grc, res, wfs):
     print(f"{'role':<44} {'h/yr':>10} {'HC':>5} {'util%':>6}")
     for k, mins, c, util in sorted(mapped, key=lambda r: -r[1])[:25]:
         print(f"{k:<44} {mins/60:>10,.0f} {c:>5} {util:>5.0f}%")
+    if MOTION_FULL:
+        print(f"\nAll mapped roles by annual demand hours (--full; alphabetical):")
+        for k, mins, c, util in sorted(mapped, key=lambda r: r[0]):
+            print(f"{k:<44} {mins/60:>10,.0f} {c:>5} {util:>5.0f}%")
     hot = sorted((r for r in mapped if r[3] and r[3] > 85), key=lambda r: -r[3])
     cold = sorted((r for r in mapped if r[3] is not None and r[3] < 15 and r[1] > 0), key=lambda r: r[3])
     print(f"\nHot roles (>85% utilization): {len(hot)}")
@@ -538,8 +542,13 @@ def mode_motion(grc, res, wfs):
     return 0
 
 
+MOTION_FULL = False
+
+
 def main():
     mode_arg = sys.argv[1] if len(sys.argv) > 1 else "walk"
+    global MOTION_FULL
+    MOTION_FULL = "--full" in sys.argv
     grc = load_grc()  # NOTE: rebinds sys.argv; mode captured above
     hq, dc, store, dept_order = grc.parse_toc()
     res = grc.Resolver(hq, dc, store, dept_order)
