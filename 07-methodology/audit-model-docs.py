@@ -18,6 +18,19 @@ registers and internal cross-reference integrity. Findings: fully clean —
     guidelines.md, and bare §N.N inside data-migration-mapping.md to its own
     section headers; no retired stale totals (6,757/6,715/5,3xx) appear.
 
+2026-09-23 guard-extension pass (eighty-second-wave consistency review): live
+companion-version receipts inside PA workflow files join the guard via
+pa_version_receipt_hits — PA files carry no version footers, so every
+'OM vX.Y'-class token in one is live prose, and the PA-22.1 IT-sizing cell's
+'(…; OM v3.28)' receipt had ridden two OM generations stale (v3.29–v3.31) while
+every bump re-pointed its pinned surfaces. The arm re-derives each cited doc's
+live footer per run, so any future companion bump re-fires until the receipt
+moves with it (the live_pin_hits surface-(d) contract, extended to the PA
+corpus). The same wave wired the two generated-analysis artifacts into the
+validator as Check 80 (role-coverage-gap-analysis.py --check existed unwired;
+verify-weak-anchor-demand.py had no --check mode at all — every wave verified
+its shipped report by a manual no-op regeneration + diff).
+
 Guard mode (--guard, validator Check 59) re-runs the whole audit on every
 invocation: token resolution against the live registers, doc-scoped §-ref
 resolution, and the retired-figure literal list. Any hit exits 1.
@@ -976,6 +989,66 @@ def live_pin_hits():
                          f"guide tree row version pin '(v{tok.group(1)})' != live footer "
                          f"v{gm.group(1)} (re-point the root-README row on every guide "
                          f"version bump; retired '(v1.12)' form)"))
+    return hits
+
+
+# Companion-doc receipts: short prose alias -> the versioned document whose
+# '*Document Version:' footer is the receipt's authority. Used by
+# pa_version_receipt_hits (below) and safe to extend as new receipt forms appear.
+RECEIPT_DOCS = {
+    "OM": "../07-methodology/it-product-operating-model.md",
+    "TO": "optimal-table-of-organization.md",
+    "profile": "model-company-profile.md",
+    "sourcing": "../07-methodology/capability-sourcing-and-engineering-model.md",
+    "guide": "../07-methodology/ai-first-operating-guide.md",
+    "tg": "../07-methodology/technical-guidelines.md",
+    "technical-guidelines": "../07-methodology/technical-guidelines.md",
+    "registry": "channel-capability-registry.md",
+    "licensing-bom": "../02-oracle-ebs/licensing-bom.md",
+    "BOM": "../02-oracle-ebs/licensing-bom.md",
+    "data-volumes": "data-volumes-and-integrations.md",
+}
+
+
+def pa_version_receipt_hits():
+    """2026-09-23 eighty-second-wave consistency review — live companion-version
+    receipts inside PA workflow files must equal the cited document's own live
+    footer version. PA files carry no version footers, so every 'name vX.Y' token
+    in one is live prose by construction — yet no rule read them: the PA-22.1
+    IT-sizing cell shipped '(…; OM v3.28)' and the (al)/(ao) OM bumps (v3.29–v3.31)
+    moved every pinned surface EXCEPT this receipt (found by the wave's repo-wide
+    receipt sweep, which adjudicated every other version token a dated recital —
+    footer segments, batch blocks, lineage tables — none of which live in PA
+    files). The arm re-derives each cited doc's live footer on every run, so any
+    future bump of a cited companion re-fires the pin until the receipt moves
+    with it (the live_pin_hits surface-(d) contract, extended to the PA corpus)."""
+    hits = []
+    versions = {}
+    for alias, rel in RECEIPT_DOCS.items():
+        path = os.path.join(MC, rel)
+        if rel not in versions:
+            m = re.search(r"^\*Document Version: (\d+\.\d+)",
+                          open(path, encoding="utf-8").read(), re.M)
+            versions[rel] = m.group(1) if m else None
+        want = versions[rel]
+        if want is None:
+            hits.append((rel, 0,
+                         f"{alias}: no parseable '*Document Version:' footer"))
+    pat = re.compile(
+        r"\b(" + "|".join(sorted(RECEIPT_DOCS, key=len, reverse=True)) + r") v(\d+\.\d+)\b")
+    wf_dir = os.path.join(MC, "workflows")
+    for pa in sorted(glob.glob(os.path.join(wf_dir, "VS-*", "PA-*.md"))):
+        body = open(pa, encoding="utf-8").read()
+        for m in pat.finditer(body):
+            alias, ver = m.group(1), m.group(2)
+            want = versions[RECEIPT_DOCS[alias]]
+            if want is None:
+                continue
+            if ver != want:
+                line = body[:m.start()].count("\n") + 1
+                hits.append((os.path.relpath(pa, MC), line,
+                             f"stale receipt '{alias} v{ver}' != live footer v{want} "
+                             f"(re-point the receipt on every {alias} version bump)"))
     return hits
 
 
@@ -5981,6 +6054,7 @@ def main():
     hits.extend(b2b_estate_hits())
     hits.extend(tps_project_estate_hits())
     hits.extend(omo_routing_estate_hits())
+    hits.extend(pa_version_receipt_hits())
     for doc, line, detail in hits:
         print(f"model-doc: {doc}:{line}: {detail}")
     print(f"audit-model-docs: {len(hits)} hit(s) across {len(DOCS)} documents")

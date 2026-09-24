@@ -15,6 +15,11 @@ virtual-gemba-walk motion engine's own measurements (motion --full). Verdicts:
 
 Writes 01-model-company/workflows/weak-anchor-demand-verification.md.
 Deterministic; read-only over the corpus and the motion engine.
+`--check` re-derives the report in memory and byte-compares it against the
+shipped file (no write; exit 1 on drift) — wired into validate-repo.sh
+Check 80 by the 2026-09-23 eighty-second-wave consistency review, which added
+the mode: until then the shipped report had no self-verification harness and
+every wave verified it by a manual no-op regeneration + diff.
 """
 import importlib.util
 import os
@@ -26,6 +31,11 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
 OUT = os.path.join(REPO, "01-model-company", "workflows",
                    "weak-anchor-demand-verification.md")
+
+# Capture BEFORE the imports: vgw.load_grc() rebinds sys.argv (the same
+# lesson virtual-gemba-walk.py's MOTION_FULL flag records) — a flag read
+# inside main() would always see the rebound argv and never fire.
+CHECK = "--check" in sys.argv
 
 spec = importlib.util.spec_from_file_location(
     "grc", os.path.join(HERE, "generate-role-coverage.py"))
@@ -58,6 +68,7 @@ def parse_full_dump(text):
 
 
 def main():
+    check = CHECK
     wfs, tier, rows, dept_order, anchor = grc.build()
     weak = sorted((r for r in rows if r["bucket"] in ("hq", "it", "store", "dc")
                    and 0 < r["touched"] <= 2),
@@ -131,7 +142,31 @@ def main():
     A("> rows are merge/resize candidates. ZERO-DURATION rows carry days-based work — audit the cycle,")
     A("> not the hours. NO PARSED CADENCE rows need step-level anchoring or gemba measurement.")
     A("> Interpretation guardrails as printed by the tool.")
-    open(OUT, "w").write("\n".join(L) + "\n")
+    out = "\n".join(L) + "\n"
+    summary = (f"{len(weak)} roles — CONFIRMED {conf}, OVERLOAD {over}, "
+               f"UNDER {under}, NO PARSED {noparse}")
+    if check:
+        # Eighty-second-wave consistency review (2026-09-23): the shipped report
+        # had no self-verification harness — every consistency wave verified it by
+        # a manual no-op regeneration + diff (the CHANGELOG battery lines). --check
+        # re-derives the report in memory and byte-compares it, the
+        # role-coverage-gap-analysis.py --check pattern, so validate-repo.sh
+        # Check 80 can gate the shipped artifact without writing.
+        if not os.path.exists(OUT):
+            print("report missing — run without --check to generate")
+            return 1
+        shipped = open(OUT, encoding="utf-8").read()
+        if shipped == out:
+            print(f"weak-anchor verification: byte-identical, OK — {summary}")
+            return 0
+        import difflib
+        diff = list(difflib.unified_diff(shipped.splitlines(), out.splitlines(),
+                                         "shipped", "re-derived", lineterm=""))
+        print(f"weak-anchor verification DRIFT ({len(diff)} diff lines) — regenerate")
+        for d in diff[:20]:
+            print(d)
+        return 1
+    open(OUT, "w").write(out)
     print(f"weak-anchor verification written: {len(weak)} roles — "
           f"CONFIRMED {conf}, OVERLOAD {over}, UNDER {under}, NO PARSED {noparse}")
     return 0
