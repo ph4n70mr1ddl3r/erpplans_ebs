@@ -22,7 +22,7 @@
 |---|---|
 | Workflows mapped | 5433 (exactly one Owner each — asserted) |
 | Confirmed Tier register | 5456 rows (Tier 1: 1396 · Tier 2: 3302 · Tier 3: 758) |
-| Distinct resolved actors | 4234 — §5.3 register roles 195 · IT product-model seats 32 · store field 12 · DC field 27 · department-level actors 2976 · system actors 31 · governance 59 · workforce 101 · external 801 · uncharted 0 |
+| Distinct resolved actors | 4231 — §5.3 register roles 195 · IT product-model seats 32 · store field 12 · DC field 27 · department-level actors 2973 · system actors 31 · governance 59 · workforce 101 · external 801 · uncharted 0 |
 
 > Tier mix = confirmed tiers of the workflows a role touches (a workflow
 > counts once per role regardless of how many steps mention it). HC is
@@ -133,6 +133,7 @@
 | CEO / President | Executive Office | 1 | 10 | 113 | 62 | 651 | 457 | 87 | 265 | 105 |
 | VP Finance & Accounting / Corporate Controller | Finance & Accounting | 1 | 83 | 274 | 318 | 863 | 540 | 226 | 263 | 51 |
 | Treasury Manager | Finance & Accounting | 1 | 66 | 57 | 205 | 205 | 133 | 38 | 79 | 16 |
+| FP&A Manager | Finance & Accounting | 1 | 64 | 168 | 253 | 23 | 216 | 19 | 135 | 62 |
 | Tax Manager | Finance & Accounting | 1 | 46 | 59 | 143 | 132 | 96 | 73 | 21 | 2 |
 | Tax Accountant | Finance & Accounting | 4 | 44 | 62 | 216 | 33 | 87 | 69 | 16 | 2 |
 | Revenue Assurance Lead | Finance & Accounting | 1 | 40 | 47 | 106 | 119 | 69 | 26 | 33 | 10 |
@@ -140,7 +141,6 @@
 | AR Supervisor | Finance & Accounting | 1 | 30 | 34 | 103 | 97 | 57 | 39 | 18 | 0 |
 | Credit Analyst | Finance & Accounting | 2 | 27 | 62 | 149 | 21 | 85 | 28 | 50 | 7 |
 | GL Accountant (one per entity) | Finance & Accounting | 5 | 27 | 55 | 123 | 30 | 71 | 30 | 39 | 2 |
-| FP&A Manager | Finance & Accounting | 1 | 26 | 13 | 51 | 9 | 34 | 6 | 23 | 5 |
 | Senior Revenue Accountant | Finance & Accounting | 1 | 26 | 6 | 74 | 0 | 30 | 9 | 20 | 1 |
 | Leases Accountant | Finance & Accounting | 1 | 25 | 5 | 60 | 0 | 25 | 6 | 17 | 2 |
 | Manager, GL & Consolidation (Assistant Controller) | Finance & Accounting | 1 | 24 | 1 | 2 | 0 | 25 | 5 | 19 | 1 |
@@ -229,6 +229,7 @@
 | Brand & Communications Manager | Marketing | 1 | 19 | 67 | 75 | 4 | 86 | 21 | 57 | 8 |
 | Digital Marketing Manager | Marketing | 3 | 19 | 23 | 57 | 10 | 28 | 1 | 13 | 14 |
 | Content & Creative Specialist | Marketing | 2 | 17 | 19 | 71 | 36 | 28 | 3 | 15 | 10 |
+| Insights Analyst | Marketing | 2 | 16 | 26 | 46 | 4 | 26 | 1 | 13 | 12 |
 | VP Marketing | Marketing | 1 | 10 | 45 | 20 | 174 | 110 | 9 | 69 | 32 |
 | Brand Manager | Marketing | 1 | 8 | 17 | 25 | 1 | 26 | 0 | 22 | 4 |
 | Marketing Operations Manager | Marketing | 1 | 6 | 3 | 3 | 5 | 6 | 2 | 4 | 0 |
@@ -238,7 +239,6 @@
 | Promotions & Campaigns Manager | Marketing | 1 | 2 | 0 | 0 | 0 | 2 | 0 | 2 | 0 |
 | Performance-Marketing Specialist | Marketing | 2 | 1 | 4 | 16 | 0 | 4 | 0 | 1 | 3 |
 | Marketing Comms Specialist | Marketing | 1 | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 |
-| Insights Analyst | Marketing | 2 | 0 | 3 | 3 | 0 | 3 | 0 | 1 | 2 |
 | Retail Media Operations Specialist | Marketing | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 1 | 1 |
 | Ecommerce Marketing Specialist | Marketing | 2 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 1 |
 | Promotions Specialist | Marketing | 2 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
@@ -250,11 +250,11 @@
 | Facilities Coordination Specialist | Store Operations | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 2 | 0 |
 | Field Communications Manager | Store Operations | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | VP Legal & Compliance | Legal & Compliance | 1 | 109 | 131 | 184 | 1114 | 636 | 200 | 388 | 48 |
+| Compliance Manager / MLRO | Legal & Compliance | 1 | 60 | 31 | 104 | 167 | 125 | 45 | 67 | 13 |
 | Government Affairs Manager | Legal & Compliance | 1 | 43 | 41 | 95 | 25 | 59 | 5 | 51 | 3 |
 | Data Privacy Officer (DPO) | Legal & Compliance | 1 | 38 | 103 | 159 | 127 | 136 | 52 | 74 | 10 |
 | Corporate Secretary | Legal & Compliance | 1 | 38 | 41 | 123 | 19 | 61 | 21 | 35 | 5 |
 | Regulatory Affairs Specialist | Legal & Compliance | 3 | 29 | 5 | 74 | 58 | 38 | 20 | 17 | 1 |
-| Compliance Manager / MLRO | Legal & Compliance | 1 | 27 | 4 | 22 | 63 | 40 | 6 | 29 | 5 |
 | Litigation & IP Counsel | Legal & Compliance | 2 | 20 | 30 | 73 | 21 | 43 | 17 | 25 | 1 |
 | Customs & Trade Compliance Specialist | Legal & Compliance | 1 | 13 | 25 | 48 | 10 | 27 | 16 | 11 | 0 |
 | Compliance Analyst | Legal & Compliance | 1 | 12 | 0 | 12 | 3 | 12 | 7 | 5 | 0 |
@@ -1734,7 +1734,6 @@
 | Event Marketing Manager | Marketing | 20 | 0 | 0 | 0 | 20 | 1 | 18 | 1 |
 | Marketing Manager | Marketing | 19 | 27 | 49 | 51 | 50 | 5 | 27 | 18 |
 | Marketing | Marketing | 16 | 248 | 189 | 3 | 284 | 21 | 205 | 58 |
-| Market Research Analyst | Marketing | 16 | 23 | 43 | 4 | 23 | 1 | 12 | 10 |
 | Insights | Marketing | 10 | 67 | 68 | 0 | 76 | 8 | 47 | 21 |
 | Crm | Marketing | 6 | 29 | 13 | 1 | 35 | 4 | 24 | 7 |
 | Marketing Analyst | Marketing | 5 | 2 | 5 | 0 | 6 | 0 | 2 | 4 |
@@ -2171,7 +2170,6 @@
 | Workshop Supervisor | Store Operations | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
 | Legal | Legal & Compliance | 90 | 824 | 1010 | 50 | 950 | 276 | 620 | 54 |
 | Compliance | Legal & Compliance | 71 | 332 | 386 | 13 | 378 | 114 | 239 | 25 |
-| Compliance Officer | Legal & Compliance | 33 | 27 | 82 | 104 | 89 | 42 | 39 | 8 |
 | Pcab Compliance Lead | Legal & Compliance | 24 | 0 | 70 | 0 | 24 | 6 | 16 | 2 |
 | Ethics & Compliance Officer | Legal & Compliance | 23 | 24 | 66 | 58 | 24 | 7 | 13 | 4 |
 | Legal Counsel | Legal & Compliance | 16 | 97 | 110 | 49 | 144 | 60 | 71 | 13 |
@@ -2882,7 +2880,6 @@
 | Vmi Vendor Account Manager | Trade / Account Management | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Vp Commercial | Trade / Account Management | 0 | 0 | 0 | 1 | 1 | 0 | 1 | 0 |
 | Wholesale Manager | Trade / Account Management | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
-| Fp&A | Finance & Accounting (FP&A) | 38 | 155 | 202 | 14 | 183 | 13 | 113 | 57 |
 | Ecommerce Operations Manager | Digital Commerce (IT-built platforms) | 26 | 4 | 4 | 41 | 34 | 13 | 19 | 2 |
 | Global Sourcing | Merchandising & Buying (Direct Sourcing) | 25 | 35 | 73 | 0 | 36 | 5 | 27 | 4 |
 | Project Manager | Strategy / Corporate Planning (PMO) | 18 | 36 | 73 | 15 | 47 | 2 | 37 | 8 |

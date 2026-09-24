@@ -208,6 +208,11 @@ ROLE_ALIASES = {
     "logistics manager": "Fleet & Logistics Manager",
     "cost accounting manager": "Manager, GL & Consolidation (Assistant Controller)",
     "data protection officer": "Data Privacy Officer (DPO)",
+    # promoted to the chartered titles they denote (see
+    # fix-owner-grain-promotions-2.py and the workflow→role gap analysis).
+    "fp&a": "FP&A Manager",
+    "compliance officer": "Compliance Manager / MLRO",
+    "market research analyst": "Insights Analyst",
     "receiving clerk": "DC:Receiving Clerk",
     # --- Role-anchoring worklist remediation (batch 31, 2026-09-23): corpus
     # forms promoted to the chartered titles they denote (zero-anchor worklist
@@ -890,7 +895,7 @@ DEPT_ACTORS = {
     "treasury": "Finance & Accounting", "insurance": "Finance & Accounting",
     "fraud management lead": "Finance & Accounting",
     "legal": "Legal & Compliance", "compliance": "Legal & Compliance",
-    "compliance officer": "Legal & Compliance", "compliance specialist": "Legal & Compliance",
+    "compliance specialist": "Legal & Compliance",
     "legal counsel": "Legal & Compliance", "privacy": "Legal & Compliance",
     "records": "Legal & Compliance", "trade compliance manager": "Legal & Compliance",
     "ethics & compliance officer": "Legal & Compliance",
@@ -902,7 +907,7 @@ DEPT_ACTORS = {
     "digital product manager": "Digital Commerce (IT-built platforms)",
     "marketing": "Marketing", "marketing manager": "Marketing",
     "insights": "Marketing", "insights analyst": "Marketing",
-    "market research analyst": "Marketing", "event marketing mgr": "Marketing",
+    "event marketing mgr": "Marketing",
     "sales enablement lead": "Marketing",
     "merchandising": "Merchandising & Buying",
     "pricing": "Merchandising & Buying",
@@ -1112,7 +1117,7 @@ DEPT_ACTORS = {
     "vp finance": "VP Finance & Accounting / Corporate Controller",
     "regulatory officer": "Regulatory Affairs Specialist",
     "govt affairs": "Government Affairs Manager",
-    "fp&a": "Finance & Accounting (FP&A)",
+   
     "product compliance manager": "Quality Management",
     "esg": "Sustainability / ESG", "occupational health": "Health, Safety & Environment",
     "safety": "Health, Safety & Environment",
