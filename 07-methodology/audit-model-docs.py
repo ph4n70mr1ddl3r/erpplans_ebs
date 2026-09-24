@@ -824,7 +824,21 @@ reconcile-staffing-claims sibling repairs (PA-22.1's recital (x)-endpoint 518 �
 PA-30.3's half-repaired annual-estimate summary ~13,836 → ~13,822, and that guard's
 stale messages) live in that module's own eighty-sixth-wave clause. Teeth: three
 synthetic injections through the FULL audits, each caught at its exact arm with file
-and line named, fixtures restored via /tmp copies sha256-verified byte-identical."""
+and line named, fixtures restored via /tmp copies sha256-verified byte-identical.
+
+2026-09-23 eighty-first-wave consistency review (by direction: review everything;
+implement recommendations; commit and push): live_pin_hits gains surface (d) — the
+root README's 07-methodology tree row for the AI-first operating guide must carry
+the guide's own live footer version token, a bare unversioned mention itself a
+defect; the row had drifted three guide-versions behind the live footer (the retired
+v1.12 token against the live v1.19) — the mirror-image of the methodology-index pins
+the wave-3 rule already enforces, on a navigation surface no rule read. Same wave
+wired the sibling audit-oracle-conformance.py --guard into validate-repo.sh as
+Check 79 (it had been run manually beside the validator by every wave since issue)
+and extended Check 40's quoted-count forms with the guide's two narrative phrasings.
+Teeth: two synthetic injections through the FULL audit (retired token re-minted;
+token stripped to a bare mention), each caught at the exact arm with line named,
+fixtures restored sha256-verified byte-identical, clean audit silent at 0 hits."""
 
 def _doc_versions():
     """Current '*Document Version:' footer of each versioned doc (basename -> 'N.M')."""
@@ -929,6 +943,39 @@ def live_pin_hits():
             hits.append(("executive-summary.md", ex_line,
                          f"top footer does not carry the canonical '{nreq} requirements' "
                          f"(requirement register row count)"))
+    # (d) 2026-09-23 eighty-first-wave consistency review — the root README's
+    # 07-methodology tree row for the AI-first operating guide carries the doc's
+    # live '(vN.M)' version token (found drifted to '(v1.12)' against the live
+    # v1.19 footer — a live navigation surface no rule read; the mirror-image of
+    # the methodology-index pins the wave-3 rule enforces, extended here to the
+    # root tree). A bare unversioned mention is itself a defect.
+    guide_path = os.path.join(MC, "..", "07-methodology", "ai-first-operating-guide.md")
+    gm = re.search(r"^\*Document Version: (\d+\.\d+)",
+                   open(guide_path, encoding="utf-8").read(), re.M)
+    root_readme = open(os.path.join(REPO, "README.md"), encoding="utf-8").read()
+    # The tree row is the guide's LAST mention in the file (the Purpose-paragraph
+    # link precedes it and carries no token — the _pin_hits last-occurrence rule).
+    row_m = None
+    for m in re.finditer(r"^.*ai-first-operating-guide\.md.*$", root_readme, re.M):
+        row_m = m
+    row_line = root_readme[:row_m.start()].count("\n") + 1 if row_m else 0
+    if not gm:
+        hits.append(("README.md", 0,
+                     "ai-first-operating-guide.md has no parseable '*Document Version:' footer"))
+    elif not row_m:
+        hits.append(("README.md", 0,
+                     "root-README tree row for ai-first-operating-guide.md not found"))
+    else:
+        tok = re.search(r"\(v(\d+\.\d+)\)", row_m.group(0))
+        if not tok:
+            hits.append(("README.md", row_line,
+                         "guide tree row carries no '(vN.M)' version pin "
+                         "(bare mention — the live-pin rule requires the token)"))
+        elif tok.group(1) != gm.group(1):
+            hits.append(("README.md", row_line,
+                         f"guide tree row version pin '(v{tok.group(1)})' != live footer "
+                         f"v{gm.group(1)} (re-point the root-README row on every guide "
+                         f"version bump; retired '(v1.12)' form)"))
     return hits
 
 

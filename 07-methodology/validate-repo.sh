@@ -2705,6 +2705,23 @@ for f in glob.glob(ROOT + "/**/*.md", recursive=True):
             for m in pat.finditer(line):
                 if int(m.group(1)) != IMPL:
                     bad.append(f"{rel}:{i}: '{m.group(0)}' != {IMPL} implemented checks")
+# The eighty-first-wave review (2026-09-23) found the guide's two narrative
+# check-count mentions ('validator — 78 checks, run in CI…', 'grew it to 78
+# checks…') outside the three forms above — the same half-repaired-cell class
+# the paren/covering/across forms close elsewhere. Both narrow forms are
+# anchored to their current phrasings (zero false-positive surface); the focused
+# re-scan below re-walks the guide because the forms list must be complete
+# before the builder-attribution arm reads it.
+forms += [re.compile(r"validator \u2014 (\d+) checks, run in CI"),
+          re.compile(r"grew it to (\d+) checks")]
+for f in glob.glob(ROOT + "/07-methodology/ai-first-operating-guide.md"):
+    for i, line in enumerate(open(f, encoding="utf-8"), 1):
+        if line.lstrip().startswith("*Date:") or "Prior v" in line:
+            continue
+        for pat in forms:
+            for m in pat.finditer(line):
+                if int(m.group(1)) != IMPL:
+                    bad.append(f"{os.path.relpath(f, ROOT)}:{i}: '{m.group(0)}' != {IMPL} implemented checks")
 # builder-attribution arm (fifty-eighth wave, 2026-09-21): the Check-78 block's
 # own builder attribution is pinned at the reconciled numbering — see comment above.
 vsh = open(os.path.join(ROOT, "07-methodology", "validate-repo.sh"), encoding="utf-8").read().splitlines()
@@ -6240,6 +6257,32 @@ if [ "${C78_BAD:-1}" -eq 0 ]; then
 else
     error "Unresolvable step-level W-references ($C78_BAD) — each cited step must exist as a row (or letter sub-item) of the parent workflow:"
     echo "$CHECK78" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
+fi
+
+# --- Check 79: Oracle EBS behavioral-canon conformance guard ---
+echo "--- Check 79: Oracle EBS conformance canon ---"
+# audit-oracle-conformance.py (2026-09-23, issued with the custody-and-treatment
+# review; corpus-wide second pass same day, canon §7) enforces the
+# oracle-ebs-conformance-standards.md behavioral canon over the workflow corpus:
+# the repaired-cell anchors (custody-of-record/Assigned-To, the mass-additions
+# gate, release-and-accept transfers, books/derived-tax-books, controlled-issue
+# supplies, bank-reconciliation independence, commitment accounting/AME/ERES,
+# the payroll journal-import chain) plus retired-form bans and the informational
+# corpus scans. It was the one sibling --guard audit the standard validation
+# entry point never invoked — every consistency wave ran it manually beside the
+# validator (the CHANGELOG battery lines) — until the eighty-first-wave review
+# (2026-09-23, by direction: review everything; implement recommendations)
+# wired it in as Check 79 so a canon violation fails the same gate as every
+# other guard.
+C79_OUT=$(python3 "$REPO_ROOT/07-methodology/audit-oracle-conformance.py" --guard 2>&1) && C79_RC=0 || C79_RC=$?
+C79_N=$(echo -n "$C79_OUT" | tail -1)
+echo "    $C79_N"
+if [ $C79_RC -eq 0 ]; then
+    ok "Oracle EBS behavioral-canon conformance clean: all repaired-cell anchors hold (custody-of-record/Assigned-To, mass-additions gate, custody-acceptance scan, release-and-accept transfers, corporate/derived-tax books, controlled-issue supplies, bank-reconciliation independence + close sequence, commitment accounting/AME routing/ERES, the payroll journal-import chain and Treasury transmission seats), no retired-form literals, and the corpus scans (SoD census, unattested counts, register-owner-on-receiving-step) report no triage findings (guard wired into the validator by the 2026-09-23 eighty-first-wave consistency review — issued with the custody-and-treatment review, run manually beside the validator by every wave until then)"
+else
+    C79_HITS=$(echo "$C79_OUT" | grep -cE '^(conformance|retired-form|corpus-scan)' || true)
+    error "$C79_HITS Oracle-conformance canon violation(s) (run 07-methodology/audit-oracle-conformance.py --guard for detail):"
+    echo "$C79_OUT" | grep -E '^(conformance|retired-form|corpus-scan)' | sed 's/^/    /' | head -30
 fi
 
 echo ""

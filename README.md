@@ -261,8 +261,8 @@ erpplans/
     ├── technical-guidelines.md       POS hardware, infrastructure, integration, security, two-tier sourcing architecture
     ├── capability-sourcing-and-engineering-model.md  Two-tier sourcing decision gate (in EBS → use it; otherwise build), sourcing register, build squads, SEP
     ├── it-product-operating-model.md IT product teams (two-tier: in-suite EBS core + in-house built & already-built platforms + AI agent platform), roles, RACI, governance, sizing (50 → 122 FTE)
-    ├── ai-first-operating-guide.md   The AI-first operating guide — ERP-agnostic doctrine (ten laws, six layers, capability contracts), sourcing neutrality, autonomy ladder, agent factory, the EKB as persistent memory + consistency engine, the no-confusion decision system, and the seven-phase adoption path (v1.12)
-    ├── validate-repo.sh              Cross-reference validation (78 checks)
+    ├── ai-first-operating-guide.md   The AI-first operating guide — ERP-agnostic doctrine (ten laws, six layers, capability contracts), sourcing neutrality, autonomy ladder, agent factory, the EKB as persistent memory + consistency engine, the no-confusion decision system, and the seven-phase adoption path (v1.20)
+    ├── validate-repo.sh              Cross-reference validation (79 checks)
     ├── generate-bpmn.py             BPMN 2.0 generator — converts every workflow block in 01-model-company/workflows into validated .bpmn files under bpmn/ (5,456 processes, lanes, DI)
     ├── generate-dmn.py             DMN 1.3 generator — extracts rule tables and tiered PHP authorization rules from workflow markdown into validated .dmn files under dmn/ (80 decisions, decision tables, DMNDI)
     ├── generate-role-coverage.py   Role–workflow coverage generator — parses PA RACI fields + tier register + the official TO into 01-model-company/role-coverage-matrix.md (per-role owned/participated/step/tier-mix, --check byte-verify)
