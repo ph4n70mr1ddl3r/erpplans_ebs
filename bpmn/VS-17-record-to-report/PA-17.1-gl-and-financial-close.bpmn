@@ -1483,99 +1483,102 @@ Volume: Lease agreements, vendor master contracts, service agreements
 Owner: Legal Counsel
 Participants: Requesting Dept, Legal, External Party, Contracts &amp; Commercial Manager (Senior Counsel)
 Source: workflow W230 — Legal Contract Review &amp; Approval</bpmn:documentation>
-      <bpmn:laneSet id="W230_LaneSet4">
+      <bpmn:laneSet id="W230_LaneSet5">
         <bpmn:lane id="W230_Lane1" name="Dept Manager">
-        <bpmn:flowNodeRef>W230_Task6</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W230_Start5</bpmn:flowNodeRef>
-        </bpmn:lane>
-        <bpmn:lane id="W230_Lane2" name="Legal Counsel">
         <bpmn:flowNodeRef>W230_Task7</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W230_Task8</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W230_Task9</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W230_Start6</bpmn:flowNodeRef>
         </bpmn:lane>
-        <bpmn:lane id="W230_Lane3" name="Legal Assistant">
+        <bpmn:lane id="W230_Lane2" name="Legal Counsel, Contracts &amp; Commercial Manager">
+        <bpmn:flowNodeRef>W230_Task8</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W230_Lane3" name="Legal Counsel">
+        <bpmn:flowNodeRef>W230_Task9</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W230_Task10</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W230_End11</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W230_Lane4" name="Legal Assistant">
+        <bpmn:flowNodeRef>W230_Task11</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W230_End12</bpmn:flowNodeRef>
         </bpmn:lane>
       </bpmn:laneSet>
-      <bpmn:startEvent id="W230_Start5" name="Request for contract review from any department (Procurement, Property, Marketing)">
-        <bpmn:outgoing>W230_Flow14</bpmn:outgoing>
+      <bpmn:startEvent id="W230_Start6" name="Request for contract review from any department (Procurement, Property, Marketing)">
+        <bpmn:outgoing>W230_Flow15</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:userTask id="W230_Task6" name="Submission">
+      <bpmn:userTask id="W230_Task7" name="Submission">
         <bpmn:documentation>Step 1: Submission: Dept submits draft contract or request via Legal Portal with business terms
 Responsible (R): Dept Manager
 Accountable (A): —
 Duration: 15 min</bpmn:documentation>
-        <bpmn:incoming>W230_Flow14</bpmn:incoming>
-        <bpmn:outgoing>W230_Flow15</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:userTask id="W230_Task7" name="Review">
-        <bpmn:documentation>Step 2: Review: Legal reviews for risks, compliance, and alignment with company standards
-Responsible (R): Legal Counsel
-Accountable (A): VP Legal
-Duration: 3–5 days</bpmn:documentation>
         <bpmn:incoming>W230_Flow15</bpmn:incoming>
         <bpmn:outgoing>W230_Flow16</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W230_Task8" name="Negotiation">
+      <bpmn:userTask id="W230_Task8" name="Review">
+        <bpmn:documentation>Step 2: Review: Legal reviews for risks, compliance, and alignment with company standards
+Responsible (R): Legal Counsel, Contracts &amp; Commercial Manager (Senior Counsel)
+Accountable (A): VP Legal
+Duration: 3–5 days</bpmn:documentation>
+        <bpmn:incoming>W230_Flow16</bpmn:incoming>
+        <bpmn:outgoing>W230_Flow17</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W230_Task9" name="Negotiation">
         <bpmn:documentation>Step 3: Negotiation: Collaborative editing with external party to finalize terms
 Responsible (R): Legal Counsel
 Accountable (A): Dept Manager
 Duration: 1–2 weeks</bpmn:documentation>
-        <bpmn:incoming>W230_Flow16</bpmn:incoming>
-        <bpmn:outgoing>W230_Flow17</bpmn:outgoing>
+        <bpmn:incoming>W230_Flow17</bpmn:incoming>
+        <bpmn:outgoing>W230_Flow18</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W230_Task9" name="Finalization">
+      <bpmn:userTask id="W230_Task10" name="Finalization">
         <bpmn:documentation>Step 4: Finalization: Generate final execution version; obtain internal signatures per Matrix
 Responsible (R): Legal Counsel
 Accountable (A): CEO/CFO
 Duration: 1 day</bpmn:documentation>
-        <bpmn:incoming>W230_Flow17</bpmn:incoming>
-        <bpmn:outgoing>W230_Flow18</bpmn:outgoing>
+        <bpmn:incoming>W230_Flow18</bpmn:incoming>
+        <bpmn:outgoing>W230_Flow19</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W230_Task10" name="Archiving">
+      <bpmn:userTask id="W230_Task11" name="Archiving">
         <bpmn:documentation>Step 5: Archiving: Scan and file executed contract in Document Management System (DMS)
 Responsible (R): Legal Assistant
 Accountable (A): —
 Duration: 30 min</bpmn:documentation>
-        <bpmn:incoming>W230_Flow18</bpmn:incoming>
-        <bpmn:outgoing>W230_Flow19</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:endEvent id="W230_End11" name="Complete">
         <bpmn:incoming>W230_Flow19</bpmn:incoming>
+        <bpmn:outgoing>W230_Flow20</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:endEvent id="W230_End12" name="Complete">
+        <bpmn:incoming>W230_Flow20</bpmn:incoming>
       </bpmn:endEvent>
-      <bpmn:textAnnotation id="W230_Annotation12">
+      <bpmn:textAnnotation id="W230_Annotation13">
         <bpmn:text>Controls: - CTL-154 (ensure legal matter &amp; IP portfolio control — contract obligations tracked to fulfillment) | - operational: authority-matrix sign-off gate — CLM blocks contract execution absent the required VP/CEO approval
 Owner: Legal Counsel</bpmn:text>
       </bpmn:textAnnotation>
-      <bpmn:association id="W230_Assoc13" sourceRef="W230_Annotation12" targetRef="W230_Start5" associationDirection="None" />
-      <bpmn:sequenceFlow id="W230_Flow14" sourceRef="W230_Start5" targetRef="W230_Task6" />
-      <bpmn:sequenceFlow id="W230_Flow15" sourceRef="W230_Task6" targetRef="W230_Task7" />
+      <bpmn:association id="W230_Assoc14" sourceRef="W230_Annotation13" targetRef="W230_Start6" associationDirection="None" />
+      <bpmn:sequenceFlow id="W230_Flow15" sourceRef="W230_Start6" targetRef="W230_Task7" />
       <bpmn:sequenceFlow id="W230_Flow16" sourceRef="W230_Task7" targetRef="W230_Task8" />
       <bpmn:sequenceFlow id="W230_Flow17" sourceRef="W230_Task8" targetRef="W230_Task9" />
       <bpmn:sequenceFlow id="W230_Flow18" sourceRef="W230_Task9" targetRef="W230_Task10" />
-      <bpmn:sequenceFlow id="W230_Flow19" sourceRef="W230_Task10" targetRef="W230_End11" />
+      <bpmn:sequenceFlow id="W230_Flow19" sourceRef="W230_Task10" targetRef="W230_Task11" />
+      <bpmn:sequenceFlow id="W230_Flow20" sourceRef="W230_Task11" targetRef="W230_End12" />
     </bpmn:process>
     <bpmndi:BPMNDiagram id="W230_diag">
       <bpmndi:BPMNPlane id="W230_plane" bpmnElement="W_W230">
         <bpmndi:BPMNShape id="W230_Lane1_di" bpmnElement="W230_Lane1" isHorizontal="true"><dc:Bounds x="160" y="80" width="1370" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W230_Lane2_di" bpmnElement="W230_Lane2" isHorizontal="true"><dc:Bounds x="160" y="250" width="1370" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W230_Lane3_di" bpmnElement="W230_Lane3" isHorizontal="true"><dc:Bounds x="160" y="420" width="1370" height="170" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W230_Task6_di" bpmnElement="W230_Task6"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W230_Task7_di" bpmnElement="W230_Task7"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W230_Task8_di" bpmnElement="W230_Task8"><dc:Bounds x="820" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W230_Task9_di" bpmnElement="W230_Task9"><dc:Bounds x="1030" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W230_Task10_di" bpmnElement="W230_Task10"><dc:Bounds x="1240" y="465" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W230_Start5_di" bpmnElement="W230_Start5"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W230_End11_di" bpmnElement="W230_End11"><dc:Bounds x="1470" y="487" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W230_Annotation12_di" bpmnElement="W230_Annotation12"><dc:Bounds x="160" y="630" width="360" height="72" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNEdge id="W230_Flow14_di" bpmnElement="W230_Flow14"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W230_Flow15_di" bpmnElement="W230_Flow15"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W230_Flow16_di" bpmnElement="W230_Flow16"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W230_Flow17_di" bpmnElement="W230_Flow17"><di:waypoint x="1000" y="335" /><di:waypoint x="1030" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W230_Flow18_di" bpmnElement="W230_Flow18"><di:waypoint x="1210" y="335" /><di:waypoint x="1240" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W230_Flow19_di" bpmnElement="W230_Flow19"><di:waypoint x="1420" y="505" /><di:waypoint x="1470" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W230_Assoc13_di" bpmnElement="W230_Assoc13"><di:waypoint x="340" y="630" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNShape id="W230_Lane4_di" bpmnElement="W230_Lane4" isHorizontal="true"><dc:Bounds x="160" y="590" width="1370" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W230_Task7_di" bpmnElement="W230_Task7"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W230_Task8_di" bpmnElement="W230_Task8"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W230_Task9_di" bpmnElement="W230_Task9"><dc:Bounds x="820" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W230_Task10_di" bpmnElement="W230_Task10"><dc:Bounds x="1030" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W230_Task11_di" bpmnElement="W230_Task11"><dc:Bounds x="1240" y="635" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W230_Start6_di" bpmnElement="W230_Start6"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W230_End12_di" bpmnElement="W230_End12"><dc:Bounds x="1470" y="657" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W230_Annotation13_di" bpmnElement="W230_Annotation13"><dc:Bounds x="160" y="800" width="360" height="72" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="W230_Flow15_di" bpmnElement="W230_Flow15"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W230_Flow16_di" bpmnElement="W230_Flow16"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W230_Flow17_di" bpmnElement="W230_Flow17"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W230_Flow18_di" bpmnElement="W230_Flow18"><di:waypoint x="1000" y="505" /><di:waypoint x="1030" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W230_Flow19_di" bpmnElement="W230_Flow19"><di:waypoint x="1210" y="505" /><di:waypoint x="1240" y="675" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W230_Flow20_di" bpmnElement="W230_Flow20"><di:waypoint x="1420" y="675" /><di:waypoint x="1470" y="675" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W230_Assoc14_di" bpmnElement="W230_Assoc14"><di:waypoint x="340" y="800" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
       </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W276" name="W276. Asset Under Construction (AUC) &amp; Mass Capitalization" isExecutable="false">

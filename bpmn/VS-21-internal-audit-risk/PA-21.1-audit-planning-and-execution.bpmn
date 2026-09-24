@@ -118,100 +118,102 @@ Volume: ~3–4 audits executed per month
 Owner: Senior Internal Auditor
 Participants: Audit Team, Store/DC Manager (Auditee), Audit Manager, Field Compliance Auditor
 Source: workflow W121 — Operational Audit Execution (Store/DC/HQ)</bpmn:documentation>
-      <bpmn:laneSet id="W121_LaneSet5">
+      <bpmn:laneSet id="W121_LaneSet6">
         <bpmn:lane id="W121_Lane1" name="Audit Team">
-        <bpmn:flowNodeRef>W121_Task7</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W121_Task8</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W121_Task9</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W121_Task11</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W121_Start6</bpmn:flowNodeRef>
-        </bpmn:lane>
-        <bpmn:lane id="W121_Lane2" name="Senior Auditor">
         <bpmn:flowNodeRef>W121_Task10</bpmn:flowNodeRef>
-        </bpmn:lane>
-        <bpmn:lane id="W121_Lane3" name="Auditee">
         <bpmn:flowNodeRef>W121_Task12</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W121_Start7</bpmn:flowNodeRef>
         </bpmn:lane>
-        <bpmn:lane id="W121_Lane4" name="Head of IA">
+        <bpmn:lane id="W121_Lane2" name="Audit Team, Audit Manager, Field Compliance…">
+        <bpmn:flowNodeRef>W121_Task9</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W121_Lane3" name="Senior Auditor">
+        <bpmn:flowNodeRef>W121_Task11</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W121_Lane4" name="Auditee">
         <bpmn:flowNodeRef>W121_Task13</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W121_End14</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W121_Lane5" name="Head of IA">
+        <bpmn:flowNodeRef>W121_Task14</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W121_End15</bpmn:flowNodeRef>
         </bpmn:lane>
       </bpmn:laneSet>
-      <bpmn:startEvent id="W121_Start6" name="Approved Audit Plan (W120) or special request from CEO">
-        <bpmn:outgoing>W121_Flow17</bpmn:outgoing>
+      <bpmn:startEvent id="W121_Start7" name="Approved Audit Plan (W120) or special request from CEO">
+        <bpmn:outgoing>W121_Flow18</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:userTask id="W121_Task7" name="Announcement of audit (or unannounced for cash/inventory checks)">
+      <bpmn:userTask id="W121_Task8" name="Announcement of audit (or unannounced for cash/inventory checks)">
         <bpmn:documentation>Step 1: Announcement of audit (or unannounced for cash/inventory checks)
 Responsible (R): Audit Team
 Accountable (A): Head of IA
 Duration: —</bpmn:documentation>
-        <bpmn:incoming>W121_Flow17</bpmn:incoming>
-        <bpmn:outgoing>W121_Flow18</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:userTask id="W121_Task8" name="Fieldwork: Test controls for POS (W5), Inventory (W4), Petty Cash (W25), LP…">
-        <bpmn:documentation>Step 2: Fieldwork: Test controls for POS (W5), Inventory (W4), Petty Cash (W25), LP (W37)
-Responsible (R): Audit Team
-Accountable (A): Senior Auditor
-Duration: 3–5 days</bpmn:documentation>
         <bpmn:incoming>W121_Flow18</bpmn:incoming>
         <bpmn:outgoing>W121_Flow19</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W121_Task9" name="Identify discrepancies: Missing documents, unauthorized overrides, stock…">
+      <bpmn:userTask id="W121_Task9" name="Fieldwork: Test controls for POS (W5), Inventory (W4), Petty Cash (W25), LP…">
+        <bpmn:documentation>Step 2: Fieldwork: Test controls for POS (W5), Inventory (W4), Petty Cash (W25), LP (W37)
+Responsible (R): Audit Team, Audit Manager, Field Compliance Auditor
+Accountable (A): Senior Auditor
+Duration: 3–5 days</bpmn:documentation>
+        <bpmn:incoming>W121_Flow19</bpmn:incoming>
+        <bpmn:outgoing>W121_Flow20</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W121_Task10" name="Identify discrepancies: Missing documents, unauthorized overrides, stock…">
         <bpmn:documentation>Step 3: Identify discrepancies: Missing documents, unauthorized overrides, stock variance
 Responsible (R): Audit Team
 Accountable (A): Senior Auditor
 Duration: Ongoing</bpmn:documentation>
-        <bpmn:incoming>W121_Flow19</bpmn:incoming>
-        <bpmn:outgoing>W121_Flow20</bpmn:outgoing>
+        <bpmn:incoming>W121_Flow20</bpmn:incoming>
+        <bpmn:outgoing>W121_Flow21</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W121_Task10" name="Exit Meeting: Discuss preliminary findings with the Auditee">
+      <bpmn:userTask id="W121_Task11" name="Exit Meeting: Discuss preliminary findings with the Auditee">
         <bpmn:documentation>Step 4: Exit Meeting: Discuss preliminary findings with the Auditee
 Responsible (R): Senior Auditor
 Accountable (A): Senior Auditor
 Duration: 2 hours</bpmn:documentation>
-        <bpmn:incoming>W121_Flow20</bpmn:incoming>
-        <bpmn:outgoing>W121_Flow21</bpmn:outgoing>
+        <bpmn:incoming>W121_Flow21</bpmn:incoming>
+        <bpmn:outgoing>W121_Flow22</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W121_Task11" name="Draft Audit Report: Categorize findings (Critical, Major, Minor)">
+      <bpmn:userTask id="W121_Task12" name="Draft Audit Report: Categorize findings (Critical, Major, Minor)">
         <bpmn:documentation>Step 5: Draft Audit Report: Categorize findings (Critical, Major, Minor)
 Responsible (R): Audit Team
 Accountable (A): Senior Auditor
 Duration: 3 days</bpmn:documentation>
-        <bpmn:incoming>W121_Flow21</bpmn:incoming>
-        <bpmn:outgoing>W121_Flow22</bpmn:outgoing>
+        <bpmn:incoming>W121_Flow22</bpmn:incoming>
+        <bpmn:outgoing>W121_Flow23</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W121_Task12" name="Management Response: Auditee provides Corrective Action Plan (CAP)">
+      <bpmn:userTask id="W121_Task13" name="Management Response: Auditee provides Corrective Action Plan (CAP)">
         <bpmn:documentation>Step 6: Management Response: Auditee provides Corrective Action Plan (CAP)
 Responsible (R): Auditee
 Accountable (A): Auditee
 Duration: 1 week</bpmn:documentation>
-        <bpmn:incoming>W121_Flow22</bpmn:incoming>
-        <bpmn:outgoing>W121_Flow23</bpmn:outgoing>
+        <bpmn:incoming>W121_Flow23</bpmn:incoming>
+        <bpmn:outgoing>W121_Flow24</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W121_Task13" name="Final Report Distribution &amp; Filing in ERP">
+      <bpmn:userTask id="W121_Task14" name="Final Report Distribution &amp; Filing in ERP">
         <bpmn:documentation>Step 7: Final Report Distribution &amp; Filing in ERP
 Responsible (R): Head of IA
 Accountable (A): Audit Committee
 Duration: 1 day</bpmn:documentation>
-        <bpmn:incoming>W121_Flow23</bpmn:incoming>
-        <bpmn:outgoing>W121_Flow24</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:endEvent id="W121_End14" name="Complete">
         <bpmn:incoming>W121_Flow24</bpmn:incoming>
+        <bpmn:outgoing>W121_Flow25</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:endEvent id="W121_End15" name="Complete">
+        <bpmn:incoming>W121_Flow25</bpmn:incoming>
       </bpmn:endEvent>
-      <bpmn:textAnnotation id="W121_Annotation15">
+      <bpmn:textAnnotation id="W121_Annotation16">
         <bpmn:text>Controls: - CTL-224 (ensure audit-plan execution &amp; remediation.) | - operational: standard operating procedures; system-enforced validation rules
 Owner: Senior Internal Auditor</bpmn:text>
       </bpmn:textAnnotation>
-      <bpmn:association id="W121_Assoc16" sourceRef="W121_Annotation15" targetRef="W121_Start6" associationDirection="None" />
-      <bpmn:sequenceFlow id="W121_Flow17" sourceRef="W121_Start6" targetRef="W121_Task7" />
-      <bpmn:sequenceFlow id="W121_Flow18" sourceRef="W121_Task7" targetRef="W121_Task8" />
+      <bpmn:association id="W121_Assoc17" sourceRef="W121_Annotation16" targetRef="W121_Start7" associationDirection="None" />
+      <bpmn:sequenceFlow id="W121_Flow18" sourceRef="W121_Start7" targetRef="W121_Task8" />
       <bpmn:sequenceFlow id="W121_Flow19" sourceRef="W121_Task8" targetRef="W121_Task9" />
       <bpmn:sequenceFlow id="W121_Flow20" sourceRef="W121_Task9" targetRef="W121_Task10" />
       <bpmn:sequenceFlow id="W121_Flow21" sourceRef="W121_Task10" targetRef="W121_Task11" />
       <bpmn:sequenceFlow id="W121_Flow22" sourceRef="W121_Task11" targetRef="W121_Task12" />
       <bpmn:sequenceFlow id="W121_Flow23" sourceRef="W121_Task12" targetRef="W121_Task13" />
-      <bpmn:sequenceFlow id="W121_Flow24" sourceRef="W121_Task13" targetRef="W121_End14" />
+      <bpmn:sequenceFlow id="W121_Flow24" sourceRef="W121_Task13" targetRef="W121_Task14" />
+      <bpmn:sequenceFlow id="W121_Flow25" sourceRef="W121_Task14" targetRef="W121_End15" />
     </bpmn:process>
     <bpmndi:BPMNDiagram id="W121_diag">
       <bpmndi:BPMNPlane id="W121_plane" bpmnElement="W_W121">
@@ -219,25 +221,26 @@ Owner: Senior Internal Auditor</bpmn:text>
         <bpmndi:BPMNShape id="W121_Lane2_di" bpmnElement="W121_Lane2" isHorizontal="true"><dc:Bounds x="160" y="250" width="1790" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W121_Lane3_di" bpmnElement="W121_Lane3" isHorizontal="true"><dc:Bounds x="160" y="420" width="1790" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W121_Lane4_di" bpmnElement="W121_Lane4" isHorizontal="true"><dc:Bounds x="160" y="590" width="1790" height="170" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W121_Task7_di" bpmnElement="W121_Task7"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W121_Task8_di" bpmnElement="W121_Task8"><dc:Bounds x="610" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W121_Task9_di" bpmnElement="W121_Task9"><dc:Bounds x="820" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W121_Task10_di" bpmnElement="W121_Task10"><dc:Bounds x="1030" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W121_Task11_di" bpmnElement="W121_Task11"><dc:Bounds x="1240" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W121_Task12_di" bpmnElement="W121_Task12"><dc:Bounds x="1450" y="465" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W121_Task13_di" bpmnElement="W121_Task13"><dc:Bounds x="1660" y="635" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W121_Start6_di" bpmnElement="W121_Start6"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W121_End14_di" bpmnElement="W121_End14"><dc:Bounds x="1890" y="657" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W121_Annotation15_di" bpmnElement="W121_Annotation15"><dc:Bounds x="160" y="800" width="360" height="60" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNEdge id="W121_Flow17_di" bpmnElement="W121_Flow17"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W121_Flow18_di" bpmnElement="W121_Flow18"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W121_Flow19_di" bpmnElement="W121_Flow19"><di:waypoint x="790" y="165" /><di:waypoint x="820" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W121_Flow20_di" bpmnElement="W121_Flow20"><di:waypoint x="1000" y="165" /><di:waypoint x="1030" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W121_Flow21_di" bpmnElement="W121_Flow21"><di:waypoint x="1210" y="335" /><di:waypoint x="1240" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W121_Flow22_di" bpmnElement="W121_Flow22"><di:waypoint x="1420" y="165" /><di:waypoint x="1450" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W121_Flow23_di" bpmnElement="W121_Flow23"><di:waypoint x="1630" y="505" /><di:waypoint x="1660" y="675" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W121_Flow24_di" bpmnElement="W121_Flow24"><di:waypoint x="1840" y="675" /><di:waypoint x="1890" y="675" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W121_Assoc16_di" bpmnElement="W121_Assoc16"><di:waypoint x="340" y="800" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNShape id="W121_Lane5_di" bpmnElement="W121_Lane5" isHorizontal="true"><dc:Bounds x="160" y="760" width="1790" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W121_Task8_di" bpmnElement="W121_Task8"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W121_Task9_di" bpmnElement="W121_Task9"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W121_Task10_di" bpmnElement="W121_Task10"><dc:Bounds x="820" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W121_Task11_di" bpmnElement="W121_Task11"><dc:Bounds x="1030" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W121_Task12_di" bpmnElement="W121_Task12"><dc:Bounds x="1240" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W121_Task13_di" bpmnElement="W121_Task13"><dc:Bounds x="1450" y="635" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W121_Task14_di" bpmnElement="W121_Task14"><dc:Bounds x="1660" y="805" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W121_Start7_di" bpmnElement="W121_Start7"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W121_End15_di" bpmnElement="W121_End15"><dc:Bounds x="1890" y="827" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W121_Annotation16_di" bpmnElement="W121_Annotation16"><dc:Bounds x="160" y="970" width="360" height="60" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="W121_Flow18_di" bpmnElement="W121_Flow18"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W121_Flow19_di" bpmnElement="W121_Flow19"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W121_Flow20_di" bpmnElement="W121_Flow20"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W121_Flow21_di" bpmnElement="W121_Flow21"><di:waypoint x="1000" y="165" /><di:waypoint x="1030" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W121_Flow22_di" bpmnElement="W121_Flow22"><di:waypoint x="1210" y="505" /><di:waypoint x="1240" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W121_Flow23_di" bpmnElement="W121_Flow23"><di:waypoint x="1420" y="165" /><di:waypoint x="1450" y="675" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W121_Flow24_di" bpmnElement="W121_Flow24"><di:waypoint x="1630" y="675" /><di:waypoint x="1660" y="845" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W121_Flow25_di" bpmnElement="W121_Flow25"><di:waypoint x="1840" y="845" /><di:waypoint x="1890" y="845" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W121_Assoc17_di" bpmnElement="W121_Assoc17"><di:waypoint x="340" y="970" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
       </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W159" name="W159. Anti-Bribery &amp; Corruption (ABC) Monitoring &amp; Audit" isExecutable="false">

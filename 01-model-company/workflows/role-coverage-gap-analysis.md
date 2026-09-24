@@ -22,7 +22,7 @@
 | Class C — healthy (≥1 chartered owner) | 4042 |
 | Class B — owner-grain gap (chartered roles touched, owner not chartered) | 1271 |
 | Class A — role-less (no chartered role in any RACI cell) | 120 |
-| Anchoring census (role → workflow arm, pinned by Check 71) | 259 chartered / 259 anchored / 0 zero-anchor / 59 weak |
+| Anchoring census (role → workflow arm, pinned by Check 71) | 259 chartered / 259 anchored / 0 zero-anchor / 58 weak |
 
 > **Adjudication policy.** Department-grain ownership ('Finance', 'Legal',
 > 'HR' as performer) is acceptable only where the work is genuinely
@@ -2312,7 +2312,6 @@ candidate for the same governance path.
 | B2B Support Representative | Customer Service | 2 | 0 |
 | Banking & Cash-Management Specialist | Finance & Accounting | 2 | 0 |
 | Business Process & IMS Lead | Strategy / Corporate Planning | 2 | 0 |
-| Compensation Analyst | Human Resources | 2 | 0 |
 | Corporate Secretary Analyst | Legal & Compliance | 2 | 0 |
 | CPM (Corporate Performance Management) Analyst | Strategy / Corporate Planning | 2 | 0 |
 | Cross-Dock Team | DC (field, per-DC roster) | 2 | 0 |
@@ -2331,6 +2330,7 @@ candidate for the same governance path.
 | Senior FP&A Analyst | Finance & Accounting | 2 | 0 |
 | Strategy Analyst | Strategy / Corporate Planning | 2 | 0 |
 | Timekeeping & Attendance Analyst | Human Resources | 2 | 0 |
+| Compensation Analyst | Human Resources | 3 | 0 |
 | Document Control Coordinator | Strategy / Corporate Planning | 3 | 0 |
 | Field Compliance Auditor | Internal Audit & Risk | 3 | 0 |
 | Senior Demand Planner | Supply Chain & Logistics | 3 | 0 |

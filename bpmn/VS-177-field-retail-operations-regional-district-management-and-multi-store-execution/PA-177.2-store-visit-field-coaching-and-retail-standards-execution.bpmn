@@ -37,7 +37,7 @@ Duration: Continuous</bpmn:documentation>
       </bpmn:userTask>
       <bpmn:userTask id="W5113_Task6" name="Communicate &amp; coordinate: share the cadence with Store Managers (the announced…">
         <bpmn:documentation>Step 3: Communicate &amp; coordinate: share the cadence with Store Managers (the announced portion), coordinate with LP/operations-standards specialists, and log the plan in the field system
-Responsible (R): Regional/District Manager / Store Ops
+Responsible (R): Regional/District Manager / Store Ops, Operations Compliance Lead, Field Compliance Auditor
 Accountable (A): Regional/District Manager
 Duration: Continuous</bpmn:documentation>
         <bpmn:incoming>W5113_Flow12</bpmn:incoming>

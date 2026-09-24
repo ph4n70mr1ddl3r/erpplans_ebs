@@ -2923,111 +2923,114 @@ Volume: 5 legal entities on one PFRS policy set; ~30 new/amended standard items 
 Owner: Controller
 Participants: Chief Accountant, Accounting Manager, Tax Compliance Manager (PAS 12 interplay), FP&amp;A Manager, Head of Internal Audit, External Auditors (engagement partner), Legal Counsel (entity/contract matters), Technical Accounting Manager, Accounting Policy Analyst
 Source: workflow W5528 — Accounting Policy, Technical Accounting (PFRS) Position &amp; New-Standard Adoption Governance</bpmn:documentation>
-      <bpmn:laneSet id="W5528_LaneSet4">
-        <bpmn:lane id="W5528_Lane1" name="Chief Accountant">
-        <bpmn:flowNodeRef>W5528_Task6</bpmn:flowNodeRef>
+      <bpmn:laneSet id="W5528_LaneSet5">
+        <bpmn:lane id="W5528_Lane1" name="Chief Accountant, Technical Accounting Manager">
         <bpmn:flowNodeRef>W5528_Task7</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W5528_Start6</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W5528_Lane2" name="Chief Accountant">
         <bpmn:flowNodeRef>W5528_Task8</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W5528_Start5</bpmn:flowNodeRef>
-        </bpmn:lane>
-        <bpmn:lane id="W5528_Lane2" name="Accounting Manager">
         <bpmn:flowNodeRef>W5528_Task9</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W5528_Task11</bpmn:flowNodeRef>
         </bpmn:lane>
-        <bpmn:lane id="W5528_Lane3" name="Controller">
+        <bpmn:lane id="W5528_Lane3" name="Accounting Manager">
         <bpmn:flowNodeRef>W5528_Task10</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W5528_End12</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W5528_Task12</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W5528_Lane4" name="Controller">
+        <bpmn:flowNodeRef>W5528_Task11</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W5528_End13</bpmn:flowNodeRef>
         </bpmn:lane>
       </bpmn:laneSet>
-      <bpmn:startEvent id="W5528_Start5" name="New or amended PFRS issuance or effective-date trigger on the FRSC/SEC calendar; a new or…">
-        <bpmn:outgoing>W5528_Flow15</bpmn:outgoing>
+      <bpmn:startEvent id="W5528_Start6" name="New or amended PFRS issuance or effective-date trigger on the FRSC/SEC calendar; a new or…">
+        <bpmn:outgoing>W5528_Flow16</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:userTask id="W5528_Task6" name="Standards radar &amp; adoption assessment">
+      <bpmn:userTask id="W5528_Task7" name="Standards radar &amp; adoption assessment">
         <bpmn:documentation>Step 1: Standards radar &amp; adoption assessment: monitor the FRSC/SEC issuance calendar; for each new or amended PFRS produce an impact assessment (recognition, measurement, disclosure, systems) and an adoption roadmap with W1409-gated system/configuration changes and an accounting-team training note
-Responsible (R): Chief Accountant
+Responsible (R): Chief Accountant, Technical Accounting Manager
 Accountable (A): Controller
 Duration: 6 hours/item midpoint × ~30 items/year</bpmn:documentation>
-        <bpmn:incoming>W5528_Flow15</bpmn:incoming>
-        <bpmn:outgoing>W5528_Flow16</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:userTask id="W5528_Task7" name="Policy manual maintenance">
-        <bpmn:documentation>Step 2: Policy manual maintenance: annual review of the accounting policy manual across the 5 entities (recognition, measurement and presentation policies, including the W1875 lease policy and the VS-157 revenue policies), version-controlled under W186
-Responsible (R): Chief Accountant / Accounting Manager
-Accountable (A): Controller
-Duration: 24 hours/year</bpmn:documentation>
         <bpmn:incoming>W5528_Flow16</bpmn:incoming>
         <bpmn:outgoing>W5528_Flow17</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W5528_Task8" name="Technical position papers">
+      <bpmn:userTask id="W5528_Task8" name="Policy manual maintenance">
+        <bpmn:documentation>Step 2: Policy manual maintenance: annual review of the accounting policy manual across the 5 entities (recognition, measurement and presentation policies, including the W1875 lease policy and the VS-157 revenue policies), version-controlled under W186
+Responsible (R): Chief Accountant / Accounting Manager, Accounting Policy Analyst
+Accountable (A): Controller
+Duration: 24 hours/year</bpmn:documentation>
+        <bpmn:incoming>W5528_Flow17</bpmn:incoming>
+        <bpmn:outgoing>W5528_Flow18</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W5528_Task9" name="Technical position papers">
         <bpmn:documentation>Step 3: Technical position papers: for novel transactions, a written position (facts, relevant PFRS, conclusion, audit-concurrence note) filed before first posting; complex contract accounting coordinated with the VS-157 onboarding gate
 Responsible (R): Chief Accountant
 Accountable (A): Controller
 Duration: 9 hours/paper midpoint × ~8 papers/year</bpmn:documentation>
-        <bpmn:incoming>W5528_Flow17</bpmn:incoming>
-        <bpmn:outgoing>W5528_Flow18</bpmn:outgoing>
+        <bpmn:incoming>W5528_Flow18</bpmn:incoming>
+        <bpmn:outgoing>W5528_Flow19</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W5528_Task9" name="Close-integration &amp; disclosure control">
+      <bpmn:userTask id="W5528_Task10" name="Close-integration &amp; disclosure control">
         <bpmn:documentation>Step 4: Close-integration &amp; disclosure control: policy changes folded into the W9 close instructions and the W638 JE review checklists; disclosure checklists updated for SEC/BIR filings re-verified at W481
 Responsible (R): Accounting Manager
 Accountable (A): Controller
 Duration: 8 hours/quarter × 4</bpmn:documentation>
-        <bpmn:incoming>W5528_Flow18</bpmn:incoming>
-        <bpmn:outgoing>W5528_Flow19</bpmn:outgoing>
+        <bpmn:incoming>W5528_Flow19</bpmn:incoming>
+        <bpmn:outgoing>W5528_Flow20</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W5528_Task10" name="External-audit concurrence">
+      <bpmn:userTask id="W5528_Task11" name="External-audit concurrence">
         <bpmn:documentation>Step 5: External-audit concurrence: position papers and policy elections tabled with the engagement partner during the W351 PBC cycle; management-letter treatment points dispositioned and closed
 Responsible (R): Controller
 Accountable (A): CFO
 Duration: 8 hours/year</bpmn:documentation>
-        <bpmn:incoming>W5528_Flow19</bpmn:incoming>
-        <bpmn:outgoing>W5528_Flow20</bpmn:outgoing>
+        <bpmn:incoming>W5528_Flow20</bpmn:incoming>
+        <bpmn:outgoing>W5528_Flow21</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W5528_Task11" name="Training &amp; communication">
+      <bpmn:userTask id="W5528_Task12" name="Training &amp; communication">
         <bpmn:documentation>Step 6: Training &amp; communication: policy-change briefings to the entity accounting teams; quick-reference cards for store/DC finance users on affected transactions
 Responsible (R): Accounting Manager
 Accountable (A): Controller
 Duration: 8 hours/year</bpmn:documentation>
-        <bpmn:incoming>W5528_Flow20</bpmn:incoming>
-        <bpmn:outgoing>W5528_Flow21</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:endEvent id="W5528_End12" name="Complete">
         <bpmn:incoming>W5528_Flow21</bpmn:incoming>
+        <bpmn:outgoing>W5528_Flow22</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:endEvent id="W5528_End13" name="Complete">
+        <bpmn:incoming>W5528_Flow22</bpmn:incoming>
       </bpmn:endEvent>
-      <bpmn:textAnnotation id="W5528_Annotation13">
+      <bpmn:textAnnotation id="W5528_Annotation14">
         <bpmn:text>Controls: - CTL-292 (ensure controlled execution — FP&amp;A &amp; Reporting (PA-17.4).) | - operational: no novel transaction posts without an approved position paper | - operational: annual policy-manual review completed before the W9 year-end close
 Owner: Controller</bpmn:text>
       </bpmn:textAnnotation>
-      <bpmn:association id="W5528_Assoc14" sourceRef="W5528_Annotation13" targetRef="W5528_Start5" associationDirection="None" />
-      <bpmn:sequenceFlow id="W5528_Flow15" sourceRef="W5528_Start5" targetRef="W5528_Task6" />
-      <bpmn:sequenceFlow id="W5528_Flow16" sourceRef="W5528_Task6" targetRef="W5528_Task7" />
+      <bpmn:association id="W5528_Assoc15" sourceRef="W5528_Annotation14" targetRef="W5528_Start6" associationDirection="None" />
+      <bpmn:sequenceFlow id="W5528_Flow16" sourceRef="W5528_Start6" targetRef="W5528_Task7" />
       <bpmn:sequenceFlow id="W5528_Flow17" sourceRef="W5528_Task7" targetRef="W5528_Task8" />
       <bpmn:sequenceFlow id="W5528_Flow18" sourceRef="W5528_Task8" targetRef="W5528_Task9" />
       <bpmn:sequenceFlow id="W5528_Flow19" sourceRef="W5528_Task9" targetRef="W5528_Task10" />
       <bpmn:sequenceFlow id="W5528_Flow20" sourceRef="W5528_Task10" targetRef="W5528_Task11" />
-      <bpmn:sequenceFlow id="W5528_Flow21" sourceRef="W5528_Task11" targetRef="W5528_End12" />
+      <bpmn:sequenceFlow id="W5528_Flow21" sourceRef="W5528_Task11" targetRef="W5528_Task12" />
+      <bpmn:sequenceFlow id="W5528_Flow22" sourceRef="W5528_Task12" targetRef="W5528_End13" />
     </bpmn:process>
     <bpmndi:BPMNDiagram id="W5528_diag">
       <bpmndi:BPMNPlane id="W5528_plane" bpmnElement="W_W5528">
         <bpmndi:BPMNShape id="W5528_Lane1_di" bpmnElement="W5528_Lane1" isHorizontal="true"><dc:Bounds x="160" y="80" width="1580" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W5528_Lane2_di" bpmnElement="W5528_Lane2" isHorizontal="true"><dc:Bounds x="160" y="250" width="1580" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W5528_Lane3_di" bpmnElement="W5528_Lane3" isHorizontal="true"><dc:Bounds x="160" y="420" width="1580" height="170" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W5528_Task6_di" bpmnElement="W5528_Task6"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W5528_Task7_di" bpmnElement="W5528_Task7"><dc:Bounds x="610" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W5528_Task8_di" bpmnElement="W5528_Task8"><dc:Bounds x="820" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W5528_Task9_di" bpmnElement="W5528_Task9"><dc:Bounds x="1030" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W5528_Task10_di" bpmnElement="W5528_Task10"><dc:Bounds x="1240" y="465" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W5528_Task11_di" bpmnElement="W5528_Task11"><dc:Bounds x="1450" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W5528_Start5_di" bpmnElement="W5528_Start5"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W5528_End12_di" bpmnElement="W5528_End12"><dc:Bounds x="1680" y="487" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W5528_Annotation13_di" bpmnElement="W5528_Annotation13"><dc:Bounds x="160" y="630" width="360" height="86" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNEdge id="W5528_Flow15_di" bpmnElement="W5528_Flow15"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W5528_Flow16_di" bpmnElement="W5528_Flow16"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W5528_Flow17_di" bpmnElement="W5528_Flow17"><di:waypoint x="790" y="165" /><di:waypoint x="820" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W5528_Flow18_di" bpmnElement="W5528_Flow18"><di:waypoint x="1000" y="165" /><di:waypoint x="1030" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W5528_Flow19_di" bpmnElement="W5528_Flow19"><di:waypoint x="1210" y="335" /><di:waypoint x="1240" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W5528_Flow20_di" bpmnElement="W5528_Flow20"><di:waypoint x="1420" y="505" /><di:waypoint x="1450" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W5528_Flow21_di" bpmnElement="W5528_Flow21"><di:waypoint x="1630" y="335" /><di:waypoint x="1680" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W5528_Assoc14_di" bpmnElement="W5528_Assoc14"><di:waypoint x="340" y="630" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNShape id="W5528_Lane4_di" bpmnElement="W5528_Lane4" isHorizontal="true"><dc:Bounds x="160" y="590" width="1580" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5528_Task7_di" bpmnElement="W5528_Task7"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5528_Task8_di" bpmnElement="W5528_Task8"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5528_Task9_di" bpmnElement="W5528_Task9"><dc:Bounds x="820" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5528_Task10_di" bpmnElement="W5528_Task10"><dc:Bounds x="1030" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5528_Task11_di" bpmnElement="W5528_Task11"><dc:Bounds x="1240" y="635" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5528_Task12_di" bpmnElement="W5528_Task12"><dc:Bounds x="1450" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5528_Start6_di" bpmnElement="W5528_Start6"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5528_End13_di" bpmnElement="W5528_End13"><dc:Bounds x="1680" y="657" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W5528_Annotation14_di" bpmnElement="W5528_Annotation14"><dc:Bounds x="160" y="800" width="360" height="86" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="W5528_Flow16_di" bpmnElement="W5528_Flow16"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5528_Flow17_di" bpmnElement="W5528_Flow17"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5528_Flow18_di" bpmnElement="W5528_Flow18"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5528_Flow19_di" bpmnElement="W5528_Flow19"><di:waypoint x="1000" y="335" /><di:waypoint x="1030" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5528_Flow20_di" bpmnElement="W5528_Flow20"><di:waypoint x="1210" y="505" /><di:waypoint x="1240" y="675" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5528_Flow21_di" bpmnElement="W5528_Flow21"><di:waypoint x="1420" y="675" /><di:waypoint x="1450" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5528_Flow22_di" bpmnElement="W5528_Flow22"><di:waypoint x="1630" y="505" /><di:waypoint x="1680" y="675" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W5528_Assoc15_di" bpmnElement="W5528_Assoc15"><di:waypoint x="340" y="800" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
       </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W5531" name="W5531. PFRS 8 Operating-Segment Reporting, CODM Disclosure Package &amp; Segment-Note Production" isExecutable="false">

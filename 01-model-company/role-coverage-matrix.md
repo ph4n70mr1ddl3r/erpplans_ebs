@@ -50,9 +50,9 @@
 | Chartered roles (register 192 + IT seats 32 + store 8 + DC 27) | 259 |
 | With ≥1 explicit RACI anchor | 259 (100%) |
 | ZERO-anchor — the anchoring worklist | 0 (hq 0 · it 0 · store 0 · dc 0) |
-| Weakly anchored (1–2 workflows) — demand-verification watchlist | 59 |
+| Weakly anchored (1–2 workflows) — demand-verification watchlist | 58 |
 
-### Weak-anchor watchlist — 59 chartered roles anchored in only 1–2 workflows
+### Weak-anchor watchlist — 58 chartered roles anchored in only 1–2 workflows
 
 | Role | Charter source | HC | Workflows touched |
 |---|---|---|---|
@@ -89,7 +89,6 @@
 | B2B Support Representative | §5.3 register — Customer Service | 4 | 2 |
 | Banking & Cash-Management Specialist | §5.3 register — Finance & Accounting | 2 | 2 |
 | Business Process & IMS Lead | §5.3 register — Strategy / Corporate Planning | 1 | 2 |
-| Compensation Analyst | §5.3 register — Human Resources | 1 | 2 |
 | Corporate Secretary Analyst | §5.3 register — Legal & Compliance | 1 | 2 |
 | CPM (Corporate Performance Management) Analyst | §5.3 register — Strategy / Corporate Planning | 1 | 2 |
 | DC Cost-to-Serve Analyst | §5.3 register — Finance & Accounting | 1 | 2 |
@@ -155,8 +154,8 @@
 | Banking & Cash-Management Specialist | Finance & Accounting | 2 | 0 | 2 | 0 | 0 | 2 | 1 | 1 | 0 |
 | DC Cost-to-Serve Analyst | Finance & Accounting | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 1 | 1 |
 | Senior FP&A Analyst | Finance & Accounting | 2 | 0 | 2 | 0 | 0 | 2 | 1 | 0 | 1 |
-| Accounting Policy Analyst | Finance & Accounting | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
-| Technical Accounting Manager | Finance & Accounting | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
+| Accounting Policy Analyst | Finance & Accounting | 1 | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 |
+| Technical Accounting Manager | Finance & Accounting | 1 | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 |
 | Category Manager | Merchandising & Buying | 5 | 127 | 616 | 656 | 560 | 733 | 119 | 482 | 132 |
 | VP for Merchandising | Merchandising & Buying | 1 | 59 | 182 | 123 | 919 | 542 | 87 | 353 | 102 |
 | Merchandise Planner / Allocator | Merchandising & Buying | 6 | 51 | 105 | 171 | 23 | 122 | 12 | 91 | 19 |
@@ -211,7 +210,7 @@
 | Talent Acquisition Manager | Human Resources | 1 | 3 | 3 | 9 | 34 | 16 | 0 | 13 | 3 |
 | Talent Acquisition Specialist | Human Resources | 5 | 3 | 2 | 9 | 8 | 5 | 1 | 2 | 2 |
 | HR Services Specialist | Human Resources | 4 | 2 | 1 | 8 | 8 | 3 | 2 | 1 | 0 |
-| Compensation Analyst | Human Resources | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 2 | 0 |
+| Compensation Analyst | Human Resources | 1 | 0 | 2 | 1 | 0 | 3 | 0 | 2 | 1 |
 | Payroll Supervisor | Human Resources | 1 | 0 | 2 | 1 | 0 | 2 | 1 | 1 | 0 |
 | Timekeeping & Attendance Analyst | Human Resources | 1 | 0 | 2 | 1 | 0 | 2 | 2 | 0 | 0 |
 | Payroll & Statutory Remittance Officer | Human Resources | 1 | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 0 |
@@ -243,7 +242,7 @@
 | OpEx / Continuous-Improvement Process Lead | Store Operations | 1 | 27 | 34 | 104 | 26 | 56 | 1 | 28 | 27 |
 | District Manager | Store Operations | 13 | 9 | 11 | 26 | 25 | 23 | 5 | 17 | 1 |
 | Facilities Coordination Specialist | Store Operations | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 2 | 0 |
-| Field Communications Manager | Store Operations | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
+| Field Communications Manager | Store Operations | 1 | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 |
 | VP Legal & Compliance | Legal & Compliance | 1 | 109 | 131 | 184 | 1114 | 636 | 200 | 388 | 48 |
 | Compliance Manager / MLRO | Legal & Compliance | 1 | 60 | 31 | 104 | 167 | 125 | 45 | 67 | 13 |
 | Government Affairs Manager | Legal & Compliance | 1 | 43 | 41 | 95 | 25 | 59 | 5 | 51 | 3 |
@@ -258,16 +257,16 @@
 | Legal Counsel — Contracts | Legal & Compliance | 2 | 1 | 0 | 0 | 4 | 1 | 0 | 1 | 0 |
 | Privacy Officer | Legal & Compliance | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Corporate Secretary Analyst | Legal & Compliance | 1 | 0 | 2 | 0 | 0 | 2 | 1 | 1 | 0 |
-| Contracts & Commercial Manager (Senior Counsel) | Legal & Compliance | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 1 |
+| Contracts & Commercial Manager (Senior Counsel) | Legal & Compliance | 1 | 0 | 1 | 1 | 0 | 1 | 0 | 0 | 1 |
 | ERM & TPRM Analyst | Internal Audit & Risk | 1 | 29 | 28 | 106 | 60 | 59 | 11 | 44 | 4 |
 | Head of Internal Audit & Risk | Internal Audit & Risk | 1 | 27 | 11 | 76 | 276 | 148 | 17 | 85 | 46 |
 | Internal Auditor | Internal Audit & Risk | 2 | 7 | 8 | 25 | 14 | 14 | 5 | 8 | 1 |
 | IT / ERP Auditor | Internal Audit & Risk | 2 | 6 | 0 | 25 | 6 | 13 | 0 | 0 | 13 |
 | Senior Internal Auditor | Internal Audit & Risk | 1 | 3 | 0 | 2 | 45 | 21 | 0 | 0 | 21 |
-| Field Compliance Auditor | Internal Audit & Risk | 4 | 0 | 3 | 0 | 0 | 3 | 0 | 2 | 1 |
-| Audit Manager | Internal Audit & Risk | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 0 | 2 |
-| Forensic / Fraud Investigator | Internal Audit & Risk | 1 | 0 | 2 | 0 | 0 | 2 | 2 | 0 | 0 |
-| Operations Compliance Lead | Internal Audit & Risk | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 2 | 0 |
+| Field Compliance Auditor | Internal Audit & Risk | 4 | 0 | 3 | 2 | 0 | 3 | 0 | 2 | 1 |
+| Audit Manager | Internal Audit & Risk | 1 | 0 | 2 | 1 | 0 | 2 | 0 | 0 | 2 |
+| Forensic / Fraud Investigator | Internal Audit & Risk | 1 | 0 | 2 | 1 | 0 | 2 | 2 | 0 | 0 |
+| Operations Compliance Lead | Internal Audit & Risk | 1 | 0 | 2 | 1 | 0 | 2 | 0 | 2 | 0 |
 | Customer Service Representative | Customer Service | 22 | 24 | 44 | 54 | 3 | 64 | 9 | 48 | 7 |
 | Head of Customer Service | Customer Service | 1 | 21 | 18 | 18 | 68 | 53 | 10 | 38 | 5 |
 | Contact Center Supervisor | Customer Service | 2 | 8 | 17 | 14 | 25 | 24 | 8 | 12 | 4 |
@@ -306,7 +305,7 @@
 | Document Control Coordinator | Strategy / Corporate Planning | 1 | 0 | 3 | 0 | 0 | 3 | 0 | 3 | 0 |
 | Business Process & IMS Lead | Strategy / Corporate Planning | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 2 | 0 |
 | CPM (Corporate Performance Management) Analyst | Strategy / Corporate Planning | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 1 | 1 |
-| Strategy Analyst | Strategy / Corporate Planning | 1 | 0 | 2 | 0 | 0 | 2 | 1 | 0 | 1 |
+| Strategy Analyst | Strategy / Corporate Planning | 1 | 0 | 2 | 1 | 0 | 2 | 1 | 0 | 1 |
 | Trade Account Manager | Trade / Account Management | 2 | 22 | 54 | 90 | 13 | 56 | 13 | 38 | 5 |
 | Key Account Manager | Trade / Account Management | 2 | 16 | 25 | 52 | 18 | 34 | 7 | 25 | 2 |
 | Head of Trade & Account Management | Trade / Account Management | 1 | 11 | 4 | 20 | 58 | 41 | 2 | 29 | 10 |

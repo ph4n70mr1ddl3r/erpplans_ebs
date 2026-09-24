@@ -18,7 +18,7 @@ Source: workflow W1661 — Competitor Store Visit Program &amp; Systematic Data 
         <bpmn:lane id="W1661_Lane3" name="Visitor">
         <bpmn:flowNodeRef>W1661_Task9</bpmn:flowNodeRef>
         </bpmn:lane>
-        <bpmn:lane id="W1661_Lane4" name="FP&amp;A">
+        <bpmn:lane id="W1661_Lane4" name="FP&amp;A, Strategy Analyst">
         <bpmn:flowNodeRef>W1661_Task10</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W1661_End11</bpmn:flowNodeRef>
         </bpmn:lane>
@@ -52,7 +52,7 @@ Duration: 30 min</bpmn:documentation>
       </bpmn:userTask>
       <bpmn:userTask id="W1661_Task10" name="FP&amp;A consolidates visit data into quarterly competitive intelligence report…">
         <bpmn:documentation>Step 4: FP&amp;A consolidates visit data into quarterly competitive intelligence report: (a) pricing comparison (benchmark SKU basket price index vs. BuildRight), (b) assortment comparison (categories where competitors have deeper/broader range), (c) operational benchmarking (staffing, technology adoption), (d) competitive threat assessment by region
-Responsible (R): FP&amp;A
+Responsible (R): FP&amp;A, Strategy Analyst
 Accountable (A): VP Merchandising
 Duration: 1 day</bpmn:documentation>
         <bpmn:incoming>W1661_Flow17</bpmn:incoming>

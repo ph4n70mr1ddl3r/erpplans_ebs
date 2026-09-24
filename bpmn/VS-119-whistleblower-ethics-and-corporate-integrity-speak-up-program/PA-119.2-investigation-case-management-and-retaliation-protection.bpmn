@@ -21,7 +21,7 @@ Source: workflow W3721 — Investigation Planning, Scoping &amp; Evidence Collec
       </bpmn:startEvent>
       <bpmn:userTask id="W3721_Task4" name="Lead Investigator plan and scope the investigation: define the allegation, the…">
         <bpmn:documentation>Step 1: Lead Investigator plan and scope the investigation: define the allegation, the investigation objectives, scope/limits, the investigation team (and independence/conflict-recusal), the evidence sources, and the investigation plan/SLA
-Responsible (R): Lead Investigator / Ethics &amp; Compliance Officer / Legal
+Responsible (R): Lead Investigator / Ethics &amp; Compliance Officer / Legal, Forensic / Fraud Investigator
 Accountable (A): Ethics &amp; Compliance Officer
 Duration: Per case</bpmn:documentation>
         <bpmn:incoming>W3721_Flow10</bpmn:incoming>

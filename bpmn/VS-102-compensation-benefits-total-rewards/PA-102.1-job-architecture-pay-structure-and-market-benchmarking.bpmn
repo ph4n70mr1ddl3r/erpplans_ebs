@@ -229,69 +229,72 @@ Volume: ~150–250 benchmarked jobs
 Owner: Compensation &amp; Benefits Manager
 Participants: C&amp;B Manager, Survey providers, CHRO, Strategic Planning (links to VS-33.3)
 Source: workflow W3308 — Market Compensation Benchmarking Survey Participation &amp; Pay Positioning</bpmn:documentation>
-      <bpmn:laneSet id="W3308_LaneSet2">
+      <bpmn:laneSet id="W3308_LaneSet3">
         <bpmn:lane id="W3308_Lane1" name="C&amp;B Manager">
-        <bpmn:flowNodeRef>W3308_Task4</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W3308_Task5</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W3308_Task7</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W3308_Start4</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W3308_Lane2" name="C&amp;B Manager, Compensation Analyst">
         <bpmn:flowNodeRef>W3308_Task6</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W3308_Start3</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W3308_End7</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W3308_End8</bpmn:flowNodeRef>
         </bpmn:lane>
       </bpmn:laneSet>
-      <bpmn:startEvent id="W3308_Start3" name="Annual survey cycle; ad-hoc market intelligence">
-        <bpmn:outgoing>W3308_Flow10</bpmn:outgoing>
-      </bpmn:startEvent>
-      <bpmn:userTask id="W3308_Task4" name="C&amp;B Manager select compensation surveys (Philippine retail/industry), match…">
-        <bpmn:documentation>Step 1: C&amp;B Manager select compensation surveys (Philippine retail/industry), match BuildRight jobs to survey benchmark jobs using job descriptions (W3305), and submit anonymized pay data per survey methodology
-Responsible (R): C&amp;B Manager
-Accountable (A): CHRO
-Duration: Annual</bpmn:documentation>
-        <bpmn:incoming>W3308_Flow10</bpmn:incoming>
+      <bpmn:startEvent id="W3308_Start4" name="Annual survey cycle; ad-hoc market intelligence">
         <bpmn:outgoing>W3308_Flow11</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:userTask id="W3308_Task5" name="C&amp;B Manager analyze survey cuts (base, TCC, short-term incentive, benefits) by…">
-        <bpmn:documentation>Step 2: C&amp;B Manager analyze survey cuts (base, TCC, short-term incentive, benefits) by grade/family; determine BuildRight&#x27;s market position (percentile) and gaps; recommend pay positioning and hot-skill premiums
+      </bpmn:startEvent>
+      <bpmn:userTask id="W3308_Task5" name="C&amp;B Manager select compensation surveys (Philippine retail/industry), match…">
+        <bpmn:documentation>Step 1: C&amp;B Manager select compensation surveys (Philippine retail/industry), match BuildRight jobs to survey benchmark jobs using job descriptions (W3305), and submit anonymized pay data per survey methodology
 Responsible (R): C&amp;B Manager
 Accountable (A): CHRO
 Duration: Annual</bpmn:documentation>
         <bpmn:incoming>W3308_Flow11</bpmn:incoming>
         <bpmn:outgoing>W3308_Flow12</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W3308_Task6" name="C&amp;B Manager feed market data into the salary structure (W3307) and merit/budget…">
-        <bpmn:documentation>Step 3: C&amp;B Manager feed market data into the salary structure (W3307) and merit/budget planning (W3327); brief executives and retain survey data under license/privacy (links to VS-91)
-Responsible (R): C&amp;B Manager
+      <bpmn:userTask id="W3308_Task6" name="C&amp;B Manager analyze survey cuts (base, TCC, short-term incentive, benefits) by…">
+        <bpmn:documentation>Step 2: C&amp;B Manager analyze survey cuts (base, TCC, short-term incentive, benefits) by grade/family; determine BuildRight&#x27;s market position (percentile) and gaps; recommend pay positioning and hot-skill premiums
+Responsible (R): C&amp;B Manager, Compensation Analyst
 Accountable (A): CHRO
 Duration: Annual</bpmn:documentation>
         <bpmn:incoming>W3308_Flow12</bpmn:incoming>
         <bpmn:outgoing>W3308_Flow13</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:endEvent id="W3308_End7" name="Complete">
+      <bpmn:userTask id="W3308_Task7" name="C&amp;B Manager feed market data into the salary structure (W3307) and merit/budget…">
+        <bpmn:documentation>Step 3: C&amp;B Manager feed market data into the salary structure (W3307) and merit/budget planning (W3327); brief executives and retain survey data under license/privacy (links to VS-91)
+Responsible (R): C&amp;B Manager
+Accountable (A): CHRO
+Duration: Annual</bpmn:documentation>
         <bpmn:incoming>W3308_Flow13</bpmn:incoming>
+        <bpmn:outgoing>W3308_Flow14</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:endEvent id="W3308_End8" name="Complete">
+        <bpmn:incoming>W3308_Flow14</bpmn:incoming>
       </bpmn:endEvent>
-      <bpmn:textAnnotation id="W3308_Annotation8">
+      <bpmn:textAnnotation id="W3308_Annotation9">
         <bpmn:text>Controls: - CTL-535 (ensure controlled execution — Job Architecture, Pay Structure &amp; Market Benchmarking (PA-102.1).) | - operational: disciplined matching; operational: license controls (links to VS-91)
 Owner: Compensation &amp; Benefits Manager</bpmn:text>
       </bpmn:textAnnotation>
-      <bpmn:association id="W3308_Assoc9" sourceRef="W3308_Annotation8" targetRef="W3308_Start3" associationDirection="None" />
-      <bpmn:sequenceFlow id="W3308_Flow10" sourceRef="W3308_Start3" targetRef="W3308_Task4" />
-      <bpmn:sequenceFlow id="W3308_Flow11" sourceRef="W3308_Task4" targetRef="W3308_Task5" />
+      <bpmn:association id="W3308_Assoc10" sourceRef="W3308_Annotation9" targetRef="W3308_Start4" associationDirection="None" />
+      <bpmn:sequenceFlow id="W3308_Flow11" sourceRef="W3308_Start4" targetRef="W3308_Task5" />
       <bpmn:sequenceFlow id="W3308_Flow12" sourceRef="W3308_Task5" targetRef="W3308_Task6" />
-      <bpmn:sequenceFlow id="W3308_Flow13" sourceRef="W3308_Task6" targetRef="W3308_End7" />
+      <bpmn:sequenceFlow id="W3308_Flow13" sourceRef="W3308_Task6" targetRef="W3308_Task7" />
+      <bpmn:sequenceFlow id="W3308_Flow14" sourceRef="W3308_Task7" targetRef="W3308_End8" />
     </bpmn:process>
     <bpmndi:BPMNDiagram id="W3308_diag">
       <bpmndi:BPMNPlane id="W3308_plane" bpmnElement="W_W3308">
         <bpmndi:BPMNShape id="W3308_Lane1_di" bpmnElement="W3308_Lane1" isHorizontal="true"><dc:Bounds x="160" y="80" width="950" height="170" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W3308_Task4_di" bpmnElement="W3308_Task4"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W3308_Task5_di" bpmnElement="W3308_Task5"><dc:Bounds x="610" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W3308_Task6_di" bpmnElement="W3308_Task6"><dc:Bounds x="820" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W3308_Start3_di" bpmnElement="W3308_Start3"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W3308_End7_di" bpmnElement="W3308_End7"><dc:Bounds x="1050" y="147" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W3308_Annotation8_di" bpmnElement="W3308_Annotation8"><dc:Bounds x="160" y="290" width="360" height="72" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNEdge id="W3308_Flow10_di" bpmnElement="W3308_Flow10"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W3308_Flow11_di" bpmnElement="W3308_Flow11"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W3308_Flow12_di" bpmnElement="W3308_Flow12"><di:waypoint x="790" y="165" /><di:waypoint x="820" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W3308_Flow13_di" bpmnElement="W3308_Flow13"><di:waypoint x="1000" y="165" /><di:waypoint x="1050" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W3308_Assoc9_di" bpmnElement="W3308_Assoc9"><di:waypoint x="340" y="290" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNShape id="W3308_Lane2_di" bpmnElement="W3308_Lane2" isHorizontal="true"><dc:Bounds x="160" y="250" width="950" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W3308_Task5_di" bpmnElement="W3308_Task5"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W3308_Task6_di" bpmnElement="W3308_Task6"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W3308_Task7_di" bpmnElement="W3308_Task7"><dc:Bounds x="820" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W3308_Start4_di" bpmnElement="W3308_Start4"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W3308_End8_di" bpmnElement="W3308_End8"><dc:Bounds x="1050" y="317" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W3308_Annotation9_di" bpmnElement="W3308_Annotation9"><dc:Bounds x="160" y="460" width="360" height="72" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="W3308_Flow11_di" bpmnElement="W3308_Flow11"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W3308_Flow12_di" bpmnElement="W3308_Flow12"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W3308_Flow13_di" bpmnElement="W3308_Flow13"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W3308_Flow14_di" bpmnElement="W3308_Flow14"><di:waypoint x="1000" y="165" /><di:waypoint x="1050" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W3308_Assoc10_di" bpmnElement="W3308_Assoc10"><di:waypoint x="340" y="460" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
       </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W3309" name="W3309. Pay Equity, Equal-Pay-for-Equal-Work Analysis &amp; Gender/Wage-Gap Remediation" isExecutable="false">

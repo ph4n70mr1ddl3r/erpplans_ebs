@@ -1,14 +1,14 @@
-# Weak-Anchor Demand Verification (generated — batch 40, 2026-09-23)
+# Weak-Anchor Demand Verification (generated — batch 41, 2026-09-23)
 
 > **Verification record** for the Role-Anchoring Contract's weak-anchor watchlist — the
-> 59 chartered roles anchored in only 1–2 workflows. Per the contract, no headcount
+> 58 chartered roles anchored in only 1–2 workflows. Per the contract, no headcount
 > or structure decision may touch a weak-anchor role until its per-role annual demand is
 > verified against chartered capacity. Instrument: `virtual-gemba-walk.py motion --full`
 > (per-role annual demand hours from the corpus's own step durations × event cadence vs
 > chartered TO capacity; 1,800/1,900 net productive hours; ~53% frequency-parse coverage).
 > Batch 40 upgraded the gemba's role-cell splitting to the generator's paren-aware comma
-> semantics (grc_split), so the batch-39 co-performer elevations now attribute; generated —
-> do not hand-edit; regenerate alongside the gap analysis.
+> semantics; batches 39/41 elevated nineteen roles into Role (R) cells (waves 1–2); generated
+> — do not hand-edit; regenerate alongside the gap analysis.
 
 ## Verdict legend
 
@@ -58,7 +58,6 @@
 | B2B Support Representative | §5.3 register — Customer Service | 2 | — | 4 | — | NO PARSED CADENCE |
 | Banking & Cash-Management Specialist | §5.3 register — Finance & Accounting | 2 | — | 2 | — | NO PARSED CADENCE |
 | Business Process & IMS Lead | §5.3 register — Strategy / Corporate Planning | 2 | — | 1 | — | NO PARSED CADENCE |
-| Compensation Analyst | §5.3 register — Human Resources | 2 | — | 1 | — | NO PARSED CADENCE |
 | Corporate Secretary Analyst | §5.3 register — Legal & Compliance | 2 | — | 1 | — | NO PARSED CADENCE |
 | CPM (Corporate Performance Management) Analyst | §5.3 register — Strategy / Corporate Planning | 2 | — | 1 | — | NO PARSED CADENCE |
 | Cross-Dock Team | §7.3 DC roster — DC (field, per-DC roster) | 2 | — | — | — | NO PARSED CADENCE |
@@ -90,9 +89,9 @@
 | CONFIRMED | 1 |
 | OVERLOAD | 1 |
 | UNDER-UTILIZED | 3 |
-| NO PARSED CADENCE | 54 |
+| NO PARSED CADENCE | 53 |
 
 > OVERLOAD rows are the headcount-real candidates this doctrine exists to find. UNDER-UTILIZED
 > rows are merge/resize candidates. NO PARSED CADENCE rows are the step-level anchoring backlog:
-> elevate the role into Role (R)/(A) cells with durations (the batch-39 pattern), or measure by
-> gemba. Interpretation guardrails as printed by the tool.
+> elevate the role into Role (R)/(A) cells with durations (the batch-39/41 pattern), or measure
+> by gemba. Interpretation guardrails as printed by the tool.
