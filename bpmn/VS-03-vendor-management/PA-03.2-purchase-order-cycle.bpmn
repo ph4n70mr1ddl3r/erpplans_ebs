@@ -403,201 +403,202 @@ Volume: Primarily with the top 20 vendors by spend (the top-20 = 45% of COGS con
 Owner: Buyer
 Participants: Buyer, Category Manager, Cost Accountant, Finance Manager
 Source: workflow W2C — Blanket Purchase Orders</bpmn:documentation>
-      <bpmn:laneSet id="W2C_LaneSet9">
+      <bpmn:laneSet id="W2C_LaneSet10">
         <bpmn:lane id="W2C_Lane1" name="Buyer">
-        <bpmn:flowNodeRef>W2C_Task11</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W2C_Task14</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W2C_Task16</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W2C_Task20</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W2C_Task23</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W2C_Task12</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W2C_Task17</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W2C_Task21</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W2C_Task24</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W2C_Task25</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W2C_Task26</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W2C_Start10</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W2C_Task27</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W2C_Start11</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W2C_Lane2" name="Category Manager">
-        <bpmn:flowNodeRef>W2C_Task12</bpmn:flowNodeRef>
-        </bpmn:lane>
-        <bpmn:lane id="W2C_Lane3" name="Controller">
         <bpmn:flowNodeRef>W2C_Task13</bpmn:flowNodeRef>
         </bpmn:lane>
-        <bpmn:lane id="W2C_Lane4" name="System">
+        <bpmn:lane id="W2C_Lane3" name="Controller">
+        <bpmn:flowNodeRef>W2C_Task14</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W2C_Lane4" name="Buyer, Purchasing">
         <bpmn:flowNodeRef>W2C_Task15</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W2C_Task17</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W2C_Lane5" name="System">
+        <bpmn:flowNodeRef>W2C_Task16</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W2C_Task18</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W2C_Task20</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W2C_Task23</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W2C_Lane6" name="Vendor">
         <bpmn:flowNodeRef>W2C_Task19</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W2C_Lane7" name="Buyer + Category Manager">
         <bpmn:flowNodeRef>W2C_Task22</bpmn:flowNodeRef>
         </bpmn:lane>
-        <bpmn:lane id="W2C_Lane5" name="Vendor">
-        <bpmn:flowNodeRef>W2C_Task18</bpmn:flowNodeRef>
-        </bpmn:lane>
-        <bpmn:lane id="W2C_Lane6" name="Buyer + Category Manager">
-        <bpmn:flowNodeRef>W2C_Task21</bpmn:flowNodeRef>
-        </bpmn:lane>
-        <bpmn:lane id="W2C_Lane7" name="Finance Manager">
-        <bpmn:flowNodeRef>W2C_Task27</bpmn:flowNodeRef>
-        </bpmn:lane>
-        <bpmn:lane id="W2C_Lane8" name="Cost Accountant">
+        <bpmn:lane id="W2C_Lane8" name="Finance Manager">
         <bpmn:flowNodeRef>W2C_Task28</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W2C_End29</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W2C_Lane9" name="Cost Accountant">
+        <bpmn:flowNodeRef>W2C_Task29</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W2C_End30</bpmn:flowNodeRef>
         </bpmn:lane>
       </bpmn:laneSet>
-      <bpmn:startEvent id="W2C_Start10" name="Vendor disputes rebate settlement amount calculated by BuildRight&#x27;s system (W27 step 6)">
-        <bpmn:outgoing>W2C_Flow32</bpmn:outgoing>
+      <bpmn:startEvent id="W2C_Start11" name="Vendor disputes rebate settlement amount calculated by BuildRight&#x27;s system (W27 step 6)">
+        <bpmn:outgoing>W2C_Flow33</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:userTask id="W2C_Task11" name="Buyer negotiates annual supply agreement with vendor: product range, pricing…">
+      <bpmn:userTask id="W2C_Task12" name="Buyer negotiates annual supply agreement with vendor: product range, pricing…">
         <bpmn:documentation>Step 1: Buyer negotiates annual supply agreement with vendor: product range, pricing tiers, minimum/maximum commitment quantities, delivery schedule, payment terms, rebate structure
 Responsible (R): Buyer
 Accountable (A): Category Manager
 Duration: 4–8 hours/vendor</bpmn:documentation>
-        <bpmn:incoming>W2C_Flow32</bpmn:incoming>
-        <bpmn:outgoing>W2C_Flow33</bpmn:outgoing>
+        <bpmn:incoming>W2C_Flow33</bpmn:incoming>
+        <bpmn:outgoing>W2C_Flow34</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W2C_Task12" name="Category Manager approves contract terms; VP Merchandising approves if total…">
+      <bpmn:userTask id="W2C_Task13" name="Category Manager approves contract terms; VP Merchandising approves if total…">
         <bpmn:documentation>Step 2: Category Manager approves contract terms; VP Merchandising approves if total contract value &gt; PHP 5M
 Responsible (R): Category Manager / VP
 Accountable (A): VP Merchandising
 Duration: 30 min</bpmn:documentation>
-        <bpmn:incoming>W2C_Flow33</bpmn:incoming>
-        <bpmn:outgoing>W2C_Flow34</bpmn:outgoing>
+        <bpmn:incoming>W2C_Flow34</bpmn:incoming>
+        <bpmn:outgoing>W2C_Flow35</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W2C_Task13" name="Finance validates contract commitment against annual purchase budget">
+      <bpmn:userTask id="W2C_Task14" name="Finance validates contract commitment against annual purchase budget">
         <bpmn:documentation>Step 3: Finance validates contract commitment against annual purchase budget
 Responsible (R): Controller
 Accountable (A): CFO
 Duration: 30 min</bpmn:documentation>
-        <bpmn:incoming>W2C_Flow34</bpmn:incoming>
-        <bpmn:outgoing>W2C_Flow35</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:userTask id="W2C_Task14" name="Buyer creates Blanket PO in system: vendor, SKU lines with contract price…">
-        <bpmn:documentation>Step 4: Buyer creates Blanket PO in system: vendor, SKU lines with contract price, validity period (typically 1 year), min/max commitment quantities, agreed delivery schedule or release parameters
-Responsible (R): Buyer
-Accountable (A): Category Manager
-Duration: 30–60 min</bpmn:documentation>
         <bpmn:incoming>W2C_Flow35</bpmn:incoming>
         <bpmn:outgoing>W2C_Flow36</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:serviceTask id="W2C_Task15" name="System enforces contract pricing on all release orders; alerts Buyer if release…">
+      <bpmn:userTask id="W2C_Task15" name="Buyer creates Blanket PO in system: vendor, SKU lines with contract price…">
+        <bpmn:documentation>Step 4: Buyer creates Blanket PO in system: vendor, SKU lines with contract price, validity period (typically 1 year), min/max commitment quantities, agreed delivery schedule or release parameters
+Responsible (R): Buyer, Purchasing / PO Specialist
+Accountable (A): Category Manager
+Duration: 30–60 min</bpmn:documentation>
+        <bpmn:incoming>W2C_Flow36</bpmn:incoming>
+        <bpmn:outgoing>W2C_Flow37</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:serviceTask id="W2C_Task16" name="System enforces contract pricing on all release orders; alerts Buyer if release…">
         <bpmn:documentation>Step 5: System enforces contract pricing on all release orders; alerts Buyer if release quantity would exceed maximum commitment
 Responsible (R): System
 Accountable (A): —
 Duration: Automated</bpmn:documentation>
-        <bpmn:incoming>W2C_Flow36</bpmn:incoming>
-        <bpmn:outgoing>W2C_Flow37</bpmn:outgoing>
+        <bpmn:incoming>W2C_Flow37</bpmn:incoming>
+        <bpmn:outgoing>W2C_Flow38</bpmn:outgoing>
       </bpmn:serviceTask>
-      <bpmn:serviceTask id="W2C_Task16" name="Buyer or system creates Release Order against Blanket PO (per agreed schedule…">
+      <bpmn:serviceTask id="W2C_Task17" name="Buyer or system creates Release Order against Blanket PO (per agreed schedule…">
         <bpmn:documentation>Step 6: Buyer or system creates Release Order against Blanket PO (per agreed schedule or triggered by ROP): specifies exact quantity and delivery date for this release
 Responsible (R): Buyer / System
 Accountable (A): Buyer
 Duration: 10 min</bpmn:documentation>
-        <bpmn:incoming>W2C_Flow37</bpmn:incoming>
-        <bpmn:outgoing>W2C_Flow38</bpmn:outgoing>
+        <bpmn:incoming>W2C_Flow38</bpmn:incoming>
+        <bpmn:outgoing>W2C_Flow39</bpmn:outgoing>
       </bpmn:serviceTask>
-      <bpmn:serviceTask id="W2C_Task17" name="Release Order follows standard PO approval (W2A.5–6) if release value exceeds…">
+      <bpmn:serviceTask id="W2C_Task18" name="Release Order follows standard PO approval (W2A.5–6) if release value exceeds…">
         <bpmn:documentation>Step 7: Release Order follows standard PO approval (W2A.5–6) if release value exceeds threshold; otherwise auto-approved within contract parameters
 Responsible (R): System
 Accountable (A): —
 Duration: Automated</bpmn:documentation>
-        <bpmn:incoming>W2C_Flow38</bpmn:incoming>
-        <bpmn:outgoing>W2C_Flow39</bpmn:outgoing>
+        <bpmn:incoming>W2C_Flow39</bpmn:incoming>
+        <bpmn:outgoing>W2C_Flow40</bpmn:outgoing>
       </bpmn:serviceTask>
-      <bpmn:userTask id="W2C_Task18" name="Vendor ships per release order; standard receiving (W3) and AP matching (W7)…">
+      <bpmn:userTask id="W2C_Task19" name="Vendor ships per release order; standard receiving (W3) and AP matching (W7)…">
         <bpmn:documentation>Step 8: Vendor ships per release order; standard receiving (W3) and AP matching (W7) apply
 Responsible (R): Vendor
 Accountable (A): Buyer
 Duration: Per W3/W7</bpmn:documentation>
-        <bpmn:incoming>W2C_Flow39</bpmn:incoming>
-        <bpmn:outgoing>W2C_Flow40</bpmn:outgoing>
+        <bpmn:incoming>W2C_Flow40</bpmn:incoming>
+        <bpmn:outgoing>W2C_Flow41</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:serviceTask id="W2C_Task19" name="System tracks cumulative released quantity and value against contract…">
+      <bpmn:serviceTask id="W2C_Task20" name="System tracks cumulative released quantity and value against contract…">
         <bpmn:documentation>Step 9: System tracks cumulative released quantity and value against contract commitment; Buyer monitors to ensure min-commit targets are met
 Responsible (R): System
 Accountable (A): Buyer
 Duration: Automated</bpmn:documentation>
-        <bpmn:incoming>W2C_Flow40</bpmn:incoming>
-        <bpmn:outgoing>W2C_Flow41</bpmn:outgoing>
+        <bpmn:incoming>W2C_Flow41</bpmn:incoming>
+        <bpmn:outgoing>W2C_Flow42</bpmn:outgoing>
       </bpmn:serviceTask>
-      <bpmn:userTask id="W2C_Task20" name="Monthly: Buyer reviews contract utilization report; identifies contracts below…">
+      <bpmn:userTask id="W2C_Task21" name="Monthly: Buyer reviews contract utilization report; identifies contracts below…">
         <bpmn:documentation>Step 10: Monthly: Buyer reviews contract utilization report; identifies contracts below minimum commitment pace (risk of penalty or unfavorable renegotiation)
 Responsible (R): Buyer
 Accountable (A): Category Manager
 Duration: 1 hour/month</bpmn:documentation>
-        <bpmn:incoming>W2C_Flow41</bpmn:incoming>
-        <bpmn:outgoing>W2C_Flow42</bpmn:outgoing>
+        <bpmn:incoming>W2C_Flow42</bpmn:incoming>
+        <bpmn:outgoing>W2C_Flow43</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W2C_Task21" name="Quarterly: Buyer and Category Manager evaluate contract performance vs. spot…">
+      <bpmn:userTask id="W2C_Task22" name="Quarterly: Buyer and Category Manager evaluate contract performance vs. spot…">
         <bpmn:documentation>Step 11: Quarterly: Buyer and Category Manager evaluate contract performance vs. spot buying; decide renewal, renegotiation, or termination
 Responsible (R): Buyer + Category Manager
 Accountable (A): VP Merchandising
 Duration: 2 hours/quarter</bpmn:documentation>
-        <bpmn:incoming>W2C_Flow42</bpmn:incoming>
-        <bpmn:outgoing>W2C_Flow43</bpmn:outgoing>
+        <bpmn:incoming>W2C_Flow43</bpmn:incoming>
+        <bpmn:outgoing>W2C_Flow44</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:serviceTask id="W2C_Task22" name="At contract expiry: system alerts Buyer 60 days before; if not renewed, system…">
+      <bpmn:serviceTask id="W2C_Task23" name="At contract expiry: system alerts Buyer 60 days before; if not renewed, system…">
         <bpmn:documentation>Step 12: At contract expiry: system alerts Buyer 60 days before; if not renewed, system blocks further release orders
 Responsible (R): System
 Accountable (A): —
 Duration: Automated</bpmn:documentation>
-        <bpmn:incoming>W2C_Flow43</bpmn:incoming>
-        <bpmn:outgoing>W2C_Flow44</bpmn:outgoing>
+        <bpmn:incoming>W2C_Flow44</bpmn:incoming>
+        <bpmn:outgoing>W2C_Flow45</bpmn:outgoing>
       </bpmn:serviceTask>
-      <bpmn:userTask id="W2C_Task23" name="Vendor disputes settlement amount: Buyer receives vendor&#x27;s written objection…">
+      <bpmn:userTask id="W2C_Task24" name="Vendor disputes settlement amount: Buyer receives vendor&#x27;s written objection…">
         <bpmn:documentation>Step 13: Vendor disputes settlement amount: Buyer receives vendor&#x27;s written objection with vendor&#x27;s calculation
 Responsible (R): Buyer
 Accountable (A): Category Manager
 Duration: 15 min</bpmn:documentation>
-        <bpmn:incoming>W2C_Flow44</bpmn:incoming>
-        <bpmn:outgoing>W2C_Flow45</bpmn:outgoing>
+        <bpmn:incoming>W2C_Flow45</bpmn:incoming>
+        <bpmn:outgoing>W2C_Flow46</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W2C_Task24" name="Buyer and Cost Accountant jointly review: compare BuildRight&#x27;s settlement data…">
+      <bpmn:userTask id="W2C_Task25" name="Buyer and Cost Accountant jointly review: compare BuildRight&#x27;s settlement data…">
         <bpmn:documentation>Step 14: Buyer and Cost Accountant jointly review: compare BuildRight&#x27;s settlement data (qualifying volume, rebate rate applied) to vendor&#x27;s claim; identify specific discrepancy (volume count difference, rate tier interpretation, timing gap, excluded transactions)
 Responsible (R): Buyer / Cost Accountant
 Accountable (A): Category Manager
 Duration: 30–60 min</bpmn:documentation>
-        <bpmn:incoming>W2C_Flow45</bpmn:incoming>
-        <bpmn:outgoing>W2C_Flow46</bpmn:outgoing>
+        <bpmn:incoming>W2C_Flow46</bpmn:incoming>
+        <bpmn:outgoing>W2C_Flow47</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W2C_Task25" name="If BuildRight calculation confirmed correct: Buyer responds to vendor with…">
+      <bpmn:userTask id="W2C_Task26" name="If BuildRight calculation confirmed correct: Buyer responds to vendor with…">
         <bpmn:documentation>Step 15: If BuildRight calculation confirmed correct: Buyer responds to vendor with supporting data; dispute closed; no settlement adjustment
 Responsible (R): Buyer
 Accountable (A): Category Manager
 Duration: 15 min</bpmn:documentation>
-        <bpmn:incoming>W2C_Flow46</bpmn:incoming>
-        <bpmn:outgoing>W2C_Flow47</bpmn:outgoing>
+        <bpmn:incoming>W2C_Flow47</bpmn:incoming>
+        <bpmn:outgoing>W2C_Flow48</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W2C_Task26" name="If partial vendor claim valid: Buyer proposes adjusted settlement; Category…">
+      <bpmn:userTask id="W2C_Task27" name="If partial vendor claim valid: Buyer proposes adjusted settlement; Category…">
         <bpmn:documentation>Step 16: If partial vendor claim valid: Buyer proposes adjusted settlement; Category Manager approves adjustment; Cost Accountant posts adjustment with Category Manager approval and documentation in system
 Responsible (R): Buyer / Category Manager / Cost Accountant
 Accountable (A): Finance Manager
 Duration: 30 min</bpmn:documentation>
-        <bpmn:incoming>W2C_Flow47</bpmn:incoming>
-        <bpmn:outgoing>W2C_Flow48</bpmn:outgoing>
+        <bpmn:incoming>W2C_Flow48</bpmn:incoming>
+        <bpmn:outgoing>W2C_Flow49</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W2C_Task27" name="If dispute unresolved within 15 business days: Buyer escalates to Finance…">
+      <bpmn:userTask id="W2C_Task28" name="If dispute unresolved within 15 business days: Buyer escalates to Finance…">
         <bpmn:documentation>Step 17: If dispute unresolved within 15 business days: Buyer escalates to Finance Manager for mediation; Finance Manager reviews both calculations and makes binding recommendation within 5 business days
 Responsible (R): Finance Manager
 Accountable (A): CFO
 Duration: 30 min</bpmn:documentation>
-        <bpmn:incoming>W2C_Flow48</bpmn:incoming>
-        <bpmn:outgoing>W2C_Flow49</bpmn:outgoing>
+        <bpmn:incoming>W2C_Flow49</bpmn:incoming>
+        <bpmn:outgoing>W2C_Flow50</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W2C_Task28" name="Monthly: Cost Accountant tracks rebate dispute frequency and resolution time…">
+      <bpmn:userTask id="W2C_Task29" name="Monthly: Cost Accountant tracks rebate dispute frequency and resolution time…">
         <bpmn:documentation>Step 18: Monthly: Cost Accountant tracks rebate dispute frequency and resolution time per vendor; feeds into vendor scorecard (W44); chronic disputing vendors flagged for contract renegotiation (W2C)
 Responsible (R): Cost Accountant
 Accountable (A): Controller
 Duration: 15 min/month</bpmn:documentation>
-        <bpmn:incoming>W2C_Flow49</bpmn:incoming>
-        <bpmn:outgoing>W2C_Flow50</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:endEvent id="W2C_End29" name="Complete">
         <bpmn:incoming>W2C_Flow50</bpmn:incoming>
+        <bpmn:outgoing>W2C_Flow51</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:endEvent id="W2C_End30" name="Complete">
+        <bpmn:incoming>W2C_Flow51</bpmn:incoming>
       </bpmn:endEvent>
-      <bpmn:textAnnotation id="W2C_Annotation30">
+      <bpmn:textAnnotation id="W2C_Annotation31">
         <bpmn:text>Controls: - CTL-247 (ensure controlled execution — Purchase Order Cycle (PA-03.2).) | - operational: Buyer review and approval gate
 Owner: Buyer</bpmn:text>
       </bpmn:textAnnotation>
-      <bpmn:association id="W2C_Assoc31" sourceRef="W2C_Annotation30" targetRef="W2C_Start10" associationDirection="None" />
-      <bpmn:sequenceFlow id="W2C_Flow32" sourceRef="W2C_Start10" targetRef="W2C_Task11" />
-      <bpmn:sequenceFlow id="W2C_Flow33" sourceRef="W2C_Task11" targetRef="W2C_Task12" />
+      <bpmn:association id="W2C_Assoc32" sourceRef="W2C_Annotation31" targetRef="W2C_Start11" associationDirection="None" />
+      <bpmn:sequenceFlow id="W2C_Flow33" sourceRef="W2C_Start11" targetRef="W2C_Task12" />
       <bpmn:sequenceFlow id="W2C_Flow34" sourceRef="W2C_Task12" targetRef="W2C_Task13" />
       <bpmn:sequenceFlow id="W2C_Flow35" sourceRef="W2C_Task13" targetRef="W2C_Task14" />
       <bpmn:sequenceFlow id="W2C_Flow36" sourceRef="W2C_Task14" targetRef="W2C_Task15" />
@@ -614,7 +615,8 @@ Owner: Buyer</bpmn:text>
       <bpmn:sequenceFlow id="W2C_Flow47" sourceRef="W2C_Task25" targetRef="W2C_Task26" />
       <bpmn:sequenceFlow id="W2C_Flow48" sourceRef="W2C_Task26" targetRef="W2C_Task27" />
       <bpmn:sequenceFlow id="W2C_Flow49" sourceRef="W2C_Task27" targetRef="W2C_Task28" />
-      <bpmn:sequenceFlow id="W2C_Flow50" sourceRef="W2C_Task28" targetRef="W2C_End29" />
+      <bpmn:sequenceFlow id="W2C_Flow50" sourceRef="W2C_Task28" targetRef="W2C_Task29" />
+      <bpmn:sequenceFlow id="W2C_Flow51" sourceRef="W2C_Task29" targetRef="W2C_End30" />
     </bpmn:process>
     <bpmndi:BPMNDiagram id="W2C_diag">
       <bpmndi:BPMNPlane id="W2C_plane" bpmnElement="W_W2C">
@@ -626,47 +628,48 @@ Owner: Buyer</bpmn:text>
         <bpmndi:BPMNShape id="W2C_Lane6_di" bpmnElement="W2C_Lane6" isHorizontal="true"><dc:Bounds x="160" y="930" width="4100" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W2C_Lane7_di" bpmnElement="W2C_Lane7" isHorizontal="true"><dc:Bounds x="160" y="1100" width="4100" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W2C_Lane8_di" bpmnElement="W2C_Lane8" isHorizontal="true"><dc:Bounds x="160" y="1270" width="4100" height="170" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W2C_Task11_di" bpmnElement="W2C_Task11"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W2C_Task12_di" bpmnElement="W2C_Task12"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W2C_Task13_di" bpmnElement="W2C_Task13"><dc:Bounds x="820" y="465" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W2C_Task14_di" bpmnElement="W2C_Task14"><dc:Bounds x="1030" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W2C_Task15_di" bpmnElement="W2C_Task15"><dc:Bounds x="1240" y="635" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W2C_Task16_di" bpmnElement="W2C_Task16"><dc:Bounds x="1450" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W2C_Task17_di" bpmnElement="W2C_Task17"><dc:Bounds x="1660" y="635" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W2C_Task18_di" bpmnElement="W2C_Task18"><dc:Bounds x="1870" y="805" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W2C_Task19_di" bpmnElement="W2C_Task19"><dc:Bounds x="2080" y="635" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W2C_Task20_di" bpmnElement="W2C_Task20"><dc:Bounds x="2290" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W2C_Task21_di" bpmnElement="W2C_Task21"><dc:Bounds x="2500" y="975" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W2C_Task22_di" bpmnElement="W2C_Task22"><dc:Bounds x="2710" y="635" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W2C_Task23_di" bpmnElement="W2C_Task23"><dc:Bounds x="2920" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W2C_Task24_di" bpmnElement="W2C_Task24"><dc:Bounds x="3130" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W2C_Task25_di" bpmnElement="W2C_Task25"><dc:Bounds x="3340" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W2C_Task26_di" bpmnElement="W2C_Task26"><dc:Bounds x="3550" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W2C_Task27_di" bpmnElement="W2C_Task27"><dc:Bounds x="3760" y="1145" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W2C_Task28_di" bpmnElement="W2C_Task28"><dc:Bounds x="3970" y="1315" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W2C_Start10_di" bpmnElement="W2C_Start10"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W2C_End29_di" bpmnElement="W2C_End29"><dc:Bounds x="4200" y="1337" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W2C_Annotation30_di" bpmnElement="W2C_Annotation30"><dc:Bounds x="160" y="1480" width="360" height="60" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNEdge id="W2C_Flow32_di" bpmnElement="W2C_Flow32"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W2C_Flow33_di" bpmnElement="W2C_Flow33"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W2C_Flow34_di" bpmnElement="W2C_Flow34"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W2C_Flow35_di" bpmnElement="W2C_Flow35"><di:waypoint x="1000" y="505" /><di:waypoint x="1030" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W2C_Flow36_di" bpmnElement="W2C_Flow36"><di:waypoint x="1210" y="165" /><di:waypoint x="1240" y="675" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W2C_Flow37_di" bpmnElement="W2C_Flow37"><di:waypoint x="1420" y="675" /><di:waypoint x="1450" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W2C_Flow38_di" bpmnElement="W2C_Flow38"><di:waypoint x="1630" y="165" /><di:waypoint x="1660" y="675" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W2C_Flow39_di" bpmnElement="W2C_Flow39"><di:waypoint x="1840" y="675" /><di:waypoint x="1870" y="845" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W2C_Flow40_di" bpmnElement="W2C_Flow40"><di:waypoint x="2050" y="845" /><di:waypoint x="2080" y="675" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W2C_Flow41_di" bpmnElement="W2C_Flow41"><di:waypoint x="2260" y="675" /><di:waypoint x="2290" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W2C_Flow42_di" bpmnElement="W2C_Flow42"><di:waypoint x="2470" y="165" /><di:waypoint x="2500" y="1015" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W2C_Flow43_di" bpmnElement="W2C_Flow43"><di:waypoint x="2680" y="1015" /><di:waypoint x="2710" y="675" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W2C_Flow44_di" bpmnElement="W2C_Flow44"><di:waypoint x="2890" y="675" /><di:waypoint x="2920" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W2C_Flow45_di" bpmnElement="W2C_Flow45"><di:waypoint x="3100" y="165" /><di:waypoint x="3130" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W2C_Flow46_di" bpmnElement="W2C_Flow46"><di:waypoint x="3310" y="165" /><di:waypoint x="3340" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W2C_Flow47_di" bpmnElement="W2C_Flow47"><di:waypoint x="3520" y="165" /><di:waypoint x="3550" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W2C_Flow48_di" bpmnElement="W2C_Flow48"><di:waypoint x="3730" y="165" /><di:waypoint x="3760" y="1185" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W2C_Flow49_di" bpmnElement="W2C_Flow49"><di:waypoint x="3940" y="1185" /><di:waypoint x="3970" y="1355" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W2C_Flow50_di" bpmnElement="W2C_Flow50"><di:waypoint x="4150" y="1355" /><di:waypoint x="4200" y="1355" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W2C_Assoc31_di" bpmnElement="W2C_Assoc31"><di:waypoint x="340" y="1480" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNShape id="W2C_Lane9_di" bpmnElement="W2C_Lane9" isHorizontal="true"><dc:Bounds x="160" y="1440" width="4100" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W2C_Task12_di" bpmnElement="W2C_Task12"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W2C_Task13_di" bpmnElement="W2C_Task13"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W2C_Task14_di" bpmnElement="W2C_Task14"><dc:Bounds x="820" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W2C_Task15_di" bpmnElement="W2C_Task15"><dc:Bounds x="1030" y="635" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W2C_Task16_di" bpmnElement="W2C_Task16"><dc:Bounds x="1240" y="805" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W2C_Task17_di" bpmnElement="W2C_Task17"><dc:Bounds x="1450" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W2C_Task18_di" bpmnElement="W2C_Task18"><dc:Bounds x="1660" y="805" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W2C_Task19_di" bpmnElement="W2C_Task19"><dc:Bounds x="1870" y="975" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W2C_Task20_di" bpmnElement="W2C_Task20"><dc:Bounds x="2080" y="805" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W2C_Task21_di" bpmnElement="W2C_Task21"><dc:Bounds x="2290" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W2C_Task22_di" bpmnElement="W2C_Task22"><dc:Bounds x="2500" y="1145" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W2C_Task23_di" bpmnElement="W2C_Task23"><dc:Bounds x="2710" y="805" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W2C_Task24_di" bpmnElement="W2C_Task24"><dc:Bounds x="2920" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W2C_Task25_di" bpmnElement="W2C_Task25"><dc:Bounds x="3130" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W2C_Task26_di" bpmnElement="W2C_Task26"><dc:Bounds x="3340" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W2C_Task27_di" bpmnElement="W2C_Task27"><dc:Bounds x="3550" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W2C_Task28_di" bpmnElement="W2C_Task28"><dc:Bounds x="3760" y="1315" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W2C_Task29_di" bpmnElement="W2C_Task29"><dc:Bounds x="3970" y="1485" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W2C_Start11_di" bpmnElement="W2C_Start11"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W2C_End30_di" bpmnElement="W2C_End30"><dc:Bounds x="4200" y="1507" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W2C_Annotation31_di" bpmnElement="W2C_Annotation31"><dc:Bounds x="160" y="1650" width="360" height="60" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="W2C_Flow33_di" bpmnElement="W2C_Flow33"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W2C_Flow34_di" bpmnElement="W2C_Flow34"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W2C_Flow35_di" bpmnElement="W2C_Flow35"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W2C_Flow36_di" bpmnElement="W2C_Flow36"><di:waypoint x="1000" y="505" /><di:waypoint x="1030" y="675" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W2C_Flow37_di" bpmnElement="W2C_Flow37"><di:waypoint x="1210" y="675" /><di:waypoint x="1240" y="845" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W2C_Flow38_di" bpmnElement="W2C_Flow38"><di:waypoint x="1420" y="845" /><di:waypoint x="1450" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W2C_Flow39_di" bpmnElement="W2C_Flow39"><di:waypoint x="1630" y="165" /><di:waypoint x="1660" y="845" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W2C_Flow40_di" bpmnElement="W2C_Flow40"><di:waypoint x="1840" y="845" /><di:waypoint x="1870" y="1015" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W2C_Flow41_di" bpmnElement="W2C_Flow41"><di:waypoint x="2050" y="1015" /><di:waypoint x="2080" y="845" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W2C_Flow42_di" bpmnElement="W2C_Flow42"><di:waypoint x="2260" y="845" /><di:waypoint x="2290" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W2C_Flow43_di" bpmnElement="W2C_Flow43"><di:waypoint x="2470" y="165" /><di:waypoint x="2500" y="1185" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W2C_Flow44_di" bpmnElement="W2C_Flow44"><di:waypoint x="2680" y="1185" /><di:waypoint x="2710" y="845" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W2C_Flow45_di" bpmnElement="W2C_Flow45"><di:waypoint x="2890" y="845" /><di:waypoint x="2920" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W2C_Flow46_di" bpmnElement="W2C_Flow46"><di:waypoint x="3100" y="165" /><di:waypoint x="3130" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W2C_Flow47_di" bpmnElement="W2C_Flow47"><di:waypoint x="3310" y="165" /><di:waypoint x="3340" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W2C_Flow48_di" bpmnElement="W2C_Flow48"><di:waypoint x="3520" y="165" /><di:waypoint x="3550" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W2C_Flow49_di" bpmnElement="W2C_Flow49"><di:waypoint x="3730" y="165" /><di:waypoint x="3760" y="1355" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W2C_Flow50_di" bpmnElement="W2C_Flow50"><di:waypoint x="3940" y="1355" /><di:waypoint x="3970" y="1525" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W2C_Flow51_di" bpmnElement="W2C_Flow51"><di:waypoint x="4150" y="1525" /><di:waypoint x="4200" y="1525" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W2C_Assoc32_di" bpmnElement="W2C_Assoc32"><di:waypoint x="340" y="1650" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
       </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W38" name="W38. Special Order / Non-Stock Item Fulfillment" isExecutable="false">

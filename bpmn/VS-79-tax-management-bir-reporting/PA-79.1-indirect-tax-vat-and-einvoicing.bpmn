@@ -559,7 +559,7 @@ Source: workflow W2760 — POS BIR-Registered Accreditation, CAS Registration &a
       </bpmn:startEvent>
       <bpmn:userTask id="W2760_Task6" name="Tax Manager maintains BIR Computerized Accounting System (CAS)/POS permit…">
         <bpmn:documentation>Step 1: Tax Manager maintains BIR Computerized Accounting System (CAS)/POS permit inventory per location; processes new/refresh permits (BIR Form 1907) for every terminal swap or software upgrade
-Responsible (R): Tax Manager / IT
+Responsible (R): Tax Manager / IT, Tax Compliance &amp; eFPS Specialist
 Accountable (A): CFO
 Duration: Per event</bpmn:documentation>
         <bpmn:incoming>W2760_Flow12</bpmn:incoming>

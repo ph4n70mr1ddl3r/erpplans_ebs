@@ -89,7 +89,7 @@ Duration: 10 min</bpmn:documentation>
       </bpmn:serviceTask>
       <bpmn:userTask id="W98_Task14" name="Delivery — customer reports wrong item">
         <bpmn:documentation>Step 7: Delivery — customer reports wrong item: (a) Customer contacts Ecommerce Customer Support (chat, email, phone) reporting wrong item delivered; (b) CSR verifies: compares order contents vs. delivery confirmation photo; (c) if carrier error (wrong package delivered): CSR initiates carrier claim (W19.12b) and reships correct item from DC; (d) if DC pick error (DC picked wrong SKU): DC Dispatch investigates pick process; correct item reshipped; wrong item scheduled for carrier pickup (reverse logistics per W19.12a); (e) system creates exception order with priority flag for reshipment
-Responsible (R): CSR / DC Dispatch
+Responsible (R): CSR / DC Dispatch, Ecommerce Support Specialist
 Accountable (A): DC Supervisor
 Duration: 15 min/case</bpmn:documentation>
         <bpmn:incoming>W98_Flow32</bpmn:incoming>

@@ -7,72 +7,75 @@ Volume: Per campaign
 Owner: Retail Media &amp; Marketplace Manager
 Participants: Retail Media &amp; Marketplace Manager, Creative Designer, Vendor, Retail Media Operations Specialist
 Source: workflow W2006 — Vendor Media Campaign Briefing &amp; Creative Development</bpmn:documentation>
-      <bpmn:laneSet id="W2006_LaneSet3">
-        <bpmn:lane id="W2006_Lane1" name="Retail Media &amp; Marketplace Manager">
-        <bpmn:flowNodeRef>W2006_Task5</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W2006_Task7</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W2006_Start4</bpmn:flowNodeRef>
+      <bpmn:laneSet id="W2006_LaneSet4">
+        <bpmn:lane id="W2006_Lane1" name="Retail Media &amp; Marketplace Manager, Retail…">
+        <bpmn:flowNodeRef>W2006_Task6</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W2006_Start5</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W2006_Lane2" name="Creative Designer">
-        <bpmn:flowNodeRef>W2006_Task6</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W2006_End8</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W2006_Task7</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W2006_Lane3" name="Retail Media &amp; Marketplace Manager">
+        <bpmn:flowNodeRef>W2006_Task8</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W2006_End9</bpmn:flowNodeRef>
         </bpmn:lane>
       </bpmn:laneSet>
-      <bpmn:startEvent id="W2006_Start4" name="Vendor books media campaign">
-        <bpmn:outgoing>W2006_Flow11</bpmn:outgoing>
+      <bpmn:startEvent id="W2006_Start5" name="Vendor books media campaign">
+        <bpmn:outgoing>W2006_Flow12</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:userTask id="W2006_Task5" name="Retail Media &amp; Marketplace Manager conducts campaign briefing with vendor: (a)…">
+      <bpmn:userTask id="W2006_Task6" name="Retail Media &amp; Marketplace Manager conducts campaign briefing with vendor: (a)…">
         <bpmn:documentation>Step 1: Retail Media &amp; Marketplace Manager conducts campaign briefing with vendor: (a) campaign objectives: brand awareness, new product launch, promotional sales lift, (b) target audience: DIY homeowners, trade professionals, specific category buyers, (c) key message and call-to-action, (d) campaign duration and channels, (e) creative assets available from vendor or BuildRight creative needed
-Responsible (R): Retail Media &amp; Marketplace Manager
+Responsible (R): Retail Media &amp; Marketplace Manager, Retail Media Operations Specialist
 Accountable (A): Marketing Manager
 Duration: 30–60 min</bpmn:documentation>
-        <bpmn:incoming>W2006_Flow11</bpmn:incoming>
-        <bpmn:outgoing>W2006_Flow12</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:userTask id="W2006_Task6" name="Creative development: (a) if vendor provides creative: review for BuildRight…">
-        <bpmn:documentation>Step 2: Creative development: (a) if vendor provides creative: review for BuildRight brand guidelines compliance, (b) if BuildRight produces: Creative Designer develops per vendor brief (additional production fee), (c) creative specifications: size, resolution, format per media type, (d) vendor approves final creative before production
-Responsible (R): Creative Designer
-Accountable (A): Marketing Manager
-Duration: 3–5 days</bpmn:documentation>
         <bpmn:incoming>W2006_Flow12</bpmn:incoming>
         <bpmn:outgoing>W2006_Flow13</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W2006_Task7" name="Production and distribution: (a) print materials: produced and shipped to…">
-        <bpmn:documentation>Step 3: Production and distribution: (a) print materials: produced and shipped to stores per W2000, (b) digital content: uploaded to CMS or ecommerce platform per W2001/W2003
-Responsible (R): Retail Media &amp; Marketplace Manager / Visual Merchandiser
+      <bpmn:userTask id="W2006_Task7" name="Creative development: (a) if vendor provides creative: review for BuildRight…">
+        <bpmn:documentation>Step 2: Creative development: (a) if vendor provides creative: review for BuildRight brand guidelines compliance, (b) if BuildRight produces: Creative Designer develops per vendor brief (additional production fee), (c) creative specifications: size, resolution, format per media type, (d) vendor approves final creative before production
+Responsible (R): Creative Designer
 Accountable (A): Marketing Manager
 Duration: 3–5 days</bpmn:documentation>
         <bpmn:incoming>W2006_Flow13</bpmn:incoming>
         <bpmn:outgoing>W2006_Flow14</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:endEvent id="W2006_End8" name="Complete">
+      <bpmn:userTask id="W2006_Task8" name="Production and distribution: (a) print materials: produced and shipped to…">
+        <bpmn:documentation>Step 3: Production and distribution: (a) print materials: produced and shipped to stores per W2000, (b) digital content: uploaded to CMS or ecommerce platform per W2001/W2003
+Responsible (R): Retail Media &amp; Marketplace Manager / Visual Merchandiser
+Accountable (A): Marketing Manager
+Duration: 3–5 days</bpmn:documentation>
         <bpmn:incoming>W2006_Flow14</bpmn:incoming>
+        <bpmn:outgoing>W2006_Flow15</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:endEvent id="W2006_End9" name="Complete">
+        <bpmn:incoming>W2006_Flow15</bpmn:incoming>
       </bpmn:endEvent>
-      <bpmn:textAnnotation id="W2006_Annotation9">
+      <bpmn:textAnnotation id="W2006_Annotation10">
         <bpmn:text>Controls: - CTL-386 (ensure controlled execution — Vendor Advertising Campaign Execution (PA-48.2).) | - operational: Retail Media &amp; Marketplace Manager review and approval gate | ---
 Owner: Retail Media &amp; Marketplace Manager</bpmn:text>
       </bpmn:textAnnotation>
-      <bpmn:association id="W2006_Assoc10" sourceRef="W2006_Annotation9" targetRef="W2006_Start4" associationDirection="None" />
-      <bpmn:sequenceFlow id="W2006_Flow11" sourceRef="W2006_Start4" targetRef="W2006_Task5" />
-      <bpmn:sequenceFlow id="W2006_Flow12" sourceRef="W2006_Task5" targetRef="W2006_Task6" />
+      <bpmn:association id="W2006_Assoc11" sourceRef="W2006_Annotation10" targetRef="W2006_Start5" associationDirection="None" />
+      <bpmn:sequenceFlow id="W2006_Flow12" sourceRef="W2006_Start5" targetRef="W2006_Task6" />
       <bpmn:sequenceFlow id="W2006_Flow13" sourceRef="W2006_Task6" targetRef="W2006_Task7" />
-      <bpmn:sequenceFlow id="W2006_Flow14" sourceRef="W2006_Task7" targetRef="W2006_End8" />
+      <bpmn:sequenceFlow id="W2006_Flow14" sourceRef="W2006_Task7" targetRef="W2006_Task8" />
+      <bpmn:sequenceFlow id="W2006_Flow15" sourceRef="W2006_Task8" targetRef="W2006_End9" />
     </bpmn:process>
     <bpmndi:BPMNDiagram id="W2006_diag">
       <bpmndi:BPMNPlane id="W2006_plane" bpmnElement="W_W2006">
         <bpmndi:BPMNShape id="W2006_Lane1_di" bpmnElement="W2006_Lane1" isHorizontal="true"><dc:Bounds x="160" y="80" width="950" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W2006_Lane2_di" bpmnElement="W2006_Lane2" isHorizontal="true"><dc:Bounds x="160" y="250" width="950" height="170" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W2006_Task5_di" bpmnElement="W2006_Task5"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W2006_Task6_di" bpmnElement="W2006_Task6"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W2006_Task7_di" bpmnElement="W2006_Task7"><dc:Bounds x="820" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W2006_Start4_di" bpmnElement="W2006_Start4"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W2006_End8_di" bpmnElement="W2006_End8"><dc:Bounds x="1050" y="317" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W2006_Annotation9_di" bpmnElement="W2006_Annotation9"><dc:Bounds x="160" y="460" width="360" height="72" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNEdge id="W2006_Flow11_di" bpmnElement="W2006_Flow11"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W2006_Flow12_di" bpmnElement="W2006_Flow12"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W2006_Flow13_di" bpmnElement="W2006_Flow13"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W2006_Flow14_di" bpmnElement="W2006_Flow14"><di:waypoint x="1000" y="165" /><di:waypoint x="1050" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W2006_Assoc10_di" bpmnElement="W2006_Assoc10"><di:waypoint x="340" y="460" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNShape id="W2006_Lane3_di" bpmnElement="W2006_Lane3" isHorizontal="true"><dc:Bounds x="160" y="420" width="950" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W2006_Task6_di" bpmnElement="W2006_Task6"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W2006_Task7_di" bpmnElement="W2006_Task7"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W2006_Task8_di" bpmnElement="W2006_Task8"><dc:Bounds x="820" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W2006_Start5_di" bpmnElement="W2006_Start5"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W2006_End9_di" bpmnElement="W2006_End9"><dc:Bounds x="1050" y="487" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W2006_Annotation10_di" bpmnElement="W2006_Annotation10"><dc:Bounds x="160" y="630" width="360" height="72" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="W2006_Flow12_di" bpmnElement="W2006_Flow12"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W2006_Flow13_di" bpmnElement="W2006_Flow13"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W2006_Flow14_di" bpmnElement="W2006_Flow14"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W2006_Flow15_di" bpmnElement="W2006_Flow15"><di:waypoint x="1000" y="505" /><di:waypoint x="1050" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W2006_Assoc11_di" bpmnElement="W2006_Assoc11"><di:waypoint x="340" y="630" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
       </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W2007" name="W2007. Multi-Channel Campaign Orchestration &amp; Launch" isExecutable="false">

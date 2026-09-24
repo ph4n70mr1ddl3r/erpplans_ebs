@@ -50,9 +50,9 @@
 | Chartered roles (register 192 + IT seats 32 + store 8 + DC 27) | 259 |
 | With ≥1 explicit RACI anchor | 259 (100%) |
 | ZERO-anchor — the anchoring worklist | 0 (hq 0 · it 0 · store 0 · dc 0) |
-| Weakly anchored (1–2 workflows) — demand-verification watchlist | 61 |
+| Weakly anchored (1–2 workflows) — demand-verification watchlist | 59 |
 
-### Weak-anchor watchlist — 61 chartered roles anchored in only 1–2 workflows
+### Weak-anchor watchlist — 59 chartered roles anchored in only 1–2 workflows
 
 | Role | Charter source | HC | Workflows touched |
 |---|---|---|---|
@@ -105,10 +105,8 @@
 | Purchasing / PO Specialist | §5.3 register — Supply Chain & Logistics | 6 | 2 |
 | Real-Estate & Site-Selection Analyst | §5.3 register — Facilities & Real Estate | 1 | 2 |
 | Retail Media Operations Specialist | §5.3 register — Marketing | 1 | 2 |
-| Senior Demand Planner | §5.3 register — Supply Chain & Logistics | 1 | 2 |
 | Senior FP&A Analyst | §5.3 register — Finance & Accounting | 2 | 2 |
 | Strategy Analyst | §5.3 register — Strategy / Corporate Planning | 1 | 2 |
-| Tax Compliance & eFPS Specialist | §5.3 register — Finance & Accounting | 1 | 2 |
 | Timekeeping & Attendance Analyst | §5.3 register — Human Resources | 1 | 2 |
 | Vendor Portal & Collaboration Specialist | §5.3 register — Supply Chain & Logistics | 2 | 2 |
 | AAP Agent Engineer | IT product-model seats — Information Technology (product model) | — | 2 |
@@ -153,10 +151,10 @@
 | Revenue Assurance Analyst | Finance & Accounting | 1 | 3 | 0 | 6 | 2 | 4 | 1 | 3 | 0 |
 | S&OP Finance Partner | Finance & Accounting | 1 | 2 | 8 | 10 | 0 | 8 | 0 | 3 | 5 |
 | Payroll Accounting Liaison | Finance & Accounting | 1 | 0 | 3 | 3 | 2 | 4 | 3 | 0 | 1 |
+| Tax Compliance & eFPS Specialist | Finance & Accounting | 1 | 0 | 2 | 1 | 0 | 3 | 3 | 0 | 0 |
 | Banking & Cash-Management Specialist | Finance & Accounting | 2 | 0 | 2 | 0 | 0 | 2 | 1 | 1 | 0 |
 | DC Cost-to-Serve Analyst | Finance & Accounting | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 1 | 1 |
 | Senior FP&A Analyst | Finance & Accounting | 2 | 0 | 2 | 0 | 0 | 2 | 1 | 0 | 1 |
-| Tax Compliance & eFPS Specialist | Finance & Accounting | 1 | 0 | 2 | 0 | 0 | 2 | 2 | 0 | 0 |
 | Accounting Policy Analyst | Finance & Accounting | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Technical Accounting Manager | Finance & Accounting | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Category Manager | Merchandising & Buying | 5 | 127 | 616 | 656 | 560 | 733 | 119 | 482 | 132 |
@@ -191,10 +189,10 @@
 | Vendor Scorecard & Performance Analyst | Supply Chain & Logistics | 1 | 2 | 7 | 6 | 4 | 8 | 3 | 4 | 1 |
 | 3PL & Freight Specialist | Supply Chain & Logistics | 2 | 2 | 0 | 8 | 8 | 2 | 0 | 2 | 0 |
 | Vendor Portal & Collaboration Specialist | Supply Chain & Logistics | 2 | 1 | 2 | 12 | 1 | 2 | 1 | 1 | 0 |
+| Senior Demand Planner | Supply Chain & Logistics | 1 | 0 | 2 | 1 | 0 | 3 | 3 | 0 | 0 |
 | DC Operations Analyst | Supply Chain & Logistics | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 1 | 1 |
 | Import Documentation Specialist | Supply Chain & Logistics | 1 | 0 | 2 | 0 | 0 | 2 | 1 | 1 | 0 |
-| Purchasing / PO Specialist | Supply Chain & Logistics | 6 | 0 | 2 | 0 | 0 | 2 | 2 | 0 | 0 |
-| Senior Demand Planner | Supply Chain & Logistics | 1 | 0 | 2 | 0 | 0 | 2 | 2 | 0 | 0 |
+| Purchasing / PO Specialist | Supply Chain & Logistics | 6 | 0 | 2 | 1 | 0 | 2 | 2 | 0 | 0 |
 | Replenishment & Allocation Analyst | Supply Chain & Logistics | 2 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Learning & Development Manager | Human Resources | 1 | 39 | 38 | 115 | 18 | 47 | 9 | 34 | 4 |
 | Compensation & Benefits Manager | Human Resources | 1 | 24 | 38 | 79 | 2 | 41 | 7 | 30 | 4 |
@@ -214,11 +212,11 @@
 | Talent Acquisition Specialist | Human Resources | 5 | 3 | 2 | 9 | 8 | 5 | 1 | 2 | 2 |
 | HR Services Specialist | Human Resources | 4 | 2 | 1 | 8 | 8 | 3 | 2 | 1 | 0 |
 | Compensation Analyst | Human Resources | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 2 | 0 |
-| Payroll Supervisor | Human Resources | 1 | 0 | 2 | 0 | 0 | 2 | 1 | 1 | 0 |
-| Timekeeping & Attendance Analyst | Human Resources | 1 | 0 | 2 | 0 | 0 | 2 | 2 | 0 | 0 |
-| Payroll & Statutory Remittance Officer | Human Resources | 1 | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
+| Payroll Supervisor | Human Resources | 1 | 0 | 2 | 1 | 0 | 2 | 1 | 1 | 0 |
+| Timekeeping & Attendance Analyst | Human Resources | 1 | 0 | 2 | 1 | 0 | 2 | 2 | 0 | 0 |
+| Payroll & Statutory Remittance Officer | Human Resources | 1 | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 0 |
 | Sourcing & Screening Coordinator | Human Resources | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
-| TA Coordinator | Human Resources | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
+| TA Coordinator | Human Resources | 1 | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 |
 | Marketplace Manager | Marketing | 2 | 34 | 66 | 59 | 92 | 79 | 10 | 53 | 16 |
 | Marketing Operations Manager | Marketing | 1 | 25 | 30 | 52 | 56 | 56 | 7 | 31 | 18 |
 | Loyalty & CRM Manager | Marketing | 1 | 25 | 30 | 68 | 41 | 43 | 3 | 28 | 12 |
@@ -236,7 +234,7 @@
 | Campaign Manager | Marketing | 2 | 2 | 14 | 28 | 5 | 14 | 3 | 8 | 3 |
 | Performance-Marketing Specialist | Marketing | 2 | 1 | 4 | 16 | 0 | 4 | 0 | 1 | 3 |
 | Marketing Comms Specialist | Marketing | 1 | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 |
-| Retail Media Operations Specialist | Marketing | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 1 | 1 |
+| Retail Media Operations Specialist | Marketing | 1 | 0 | 2 | 1 | 0 | 2 | 0 | 1 | 1 |
 | Ecommerce Marketing Specialist | Marketing | 2 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 1 |
 | Promotions Specialist | Marketing | 2 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | VP Store Operations (Director Field Retail Operations) | Store Operations | 1 | 98 | 166 | 212 | 539 | 366 | 66 | 242 | 58 |
@@ -274,7 +272,7 @@
 | Head of Customer Service | Customer Service | 1 | 21 | 18 | 18 | 68 | 53 | 10 | 38 | 5 |
 | Contact Center Supervisor | Customer Service | 2 | 8 | 17 | 14 | 25 | 24 | 8 | 12 | 4 |
 | Services Manager | Customer Service | 1 | 5 | 10 | 15 | 45 | 24 | 9 | 10 | 5 |
-| Ecommerce Support Specialist | Customer Service | 3 | 2 | 2 | 0 | 0 | 2 | 2 | 0 | 0 |
+| Ecommerce Support Specialist | Customer Service | 3 | 2 | 2 | 1 | 0 | 2 | 2 | 0 | 0 |
 | B2B Support Representative | Customer Service | 4 | 0 | 2 | 0 | 0 | 2 | 0 | 2 | 0 |
 | Quality & Workforce Analyst | Customer Service | 2 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Director, Regional Loss Prevention | Regional Loss Prevention | 1 | 54 | 28 | 101 | 169 | 103 | 24 | 70 | 9 |

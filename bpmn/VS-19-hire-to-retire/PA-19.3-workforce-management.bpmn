@@ -175,141 +175,142 @@ Volume: Higher on Mondays (+25%), after holidays (+40%), during rainy season/typ
 Owner: HR Supervisor / Store Manager (store-level)
 Participants: Employee (R for self-service), Department Supervisor (R for approval), HR Supervisor, Payroll Specialist (I), Store Manager (A for store-level), Timekeeping &amp; Attendance Analyst
 Source: workflow W561 — Employee Attendance Exception Management</bpmn:documentation>
-      <bpmn:laneSet id="W561_LaneSet6">
+      <bpmn:laneSet id="W561_LaneSet7">
         <bpmn:lane id="W561_Lane1" name="System">
-        <bpmn:flowNodeRef>W561_Task8</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W561_Task17</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W561_Start7</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W561_Task9</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W561_Task18</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W561_Start8</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W561_Lane2" name="HR Supervisor">
-        <bpmn:flowNodeRef>W561_Task9</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W561_Task10</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W561_Task12</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W561_Task11</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W561_Task13</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W561_Task15</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W561_Task18</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W561_Task19</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W561_Task14</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W561_Task16</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W561_Task20</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W561_Lane3" name="Department Supervisor">
-        <bpmn:flowNodeRef>W561_Task11</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W561_Task12</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W561_Lane4" name="Employee">
-        <bpmn:flowNodeRef>W561_Task14</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W561_Task15</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W561_Lane5" name="CHRO">
-        <bpmn:flowNodeRef>W561_Task16</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W561_End20</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W561_Task17</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W561_Lane6" name="HR Supervisor, Timekeeping &amp; Attendance Analyst">
+        <bpmn:flowNodeRef>W561_Task19</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W561_End21</bpmn:flowNodeRef>
         </bpmn:lane>
       </bpmn:laneSet>
-      <bpmn:startEvent id="W561_Start7" name="Biometric/attendance system generates exception (late arrival, unauthorized absence…">
-        <bpmn:outgoing>W561_Flow23</bpmn:outgoing>
+      <bpmn:startEvent id="W561_Start8" name="Biometric/attendance system generates exception (late arrival, unauthorized absence…">
+        <bpmn:outgoing>W561_Flow24</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:serviceTask id="W561_Task8" name="System generates daily exception report from biometric/attendance system…">
+      <bpmn:serviceTask id="W561_Task9" name="System generates daily exception report from biometric/attendance system…">
         <bpmn:documentation>Step 1: System generates daily exception report from biometric/attendance system, categorized by type: (a) late arrival (punch-in after shift start + grace period); (b) unauthorized absence (no punch for full shift, no pre-filed leave); (c) undertime (punch-out before shift end); (d) missing punch (only in-punch or out-punch recorded); (e) biometric failure (system unable to read fingerprint/face); (f) unauthorized overtime (punch-out after shift end without pre-approved OT)
 Responsible (R): System
 Accountable (A): —
 Duration: Automated (daily batch at 06:00)</bpmn:documentation>
-        <bpmn:incoming>W561_Flow23</bpmn:incoming>
-        <bpmn:outgoing>W561_Flow24</bpmn:outgoing>
+        <bpmn:incoming>W561_Flow24</bpmn:incoming>
+        <bpmn:outgoing>W561_Flow25</bpmn:outgoing>
       </bpmn:serviceTask>
-      <bpmn:userTask id="W561_Task9" name="HR Supervisor reviews exception dashboard prioritized by severity: unauthorized…">
+      <bpmn:userTask id="W561_Task10" name="HR Supervisor reviews exception dashboard prioritized by severity: unauthorized…">
         <bpmn:documentation>Step 2: HR Supervisor reviews exception dashboard prioritized by severity: unauthorized absence (critical) &gt; missing punch (high) &gt; late arrival (medium) &gt; undertime (low); dashboard shows exception count by store, department, and category with trend comparison to previous period
 Responsible (R): HR Supervisor
 Accountable (A): Store Manager
 Duration: 30–45 min/day</bpmn:documentation>
-        <bpmn:incoming>W561_Flow24</bpmn:incoming>
-        <bpmn:outgoing>W561_Flow25</bpmn:outgoing>
+        <bpmn:incoming>W561_Flow25</bpmn:incoming>
+        <bpmn:outgoing>W561_Flow26</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W561_Task10" name="For biometric failures: HR Supervisor verifies employee identity against…">
+      <bpmn:userTask id="W561_Task11" name="For biometric failures: HR Supervisor verifies employee identity against…">
         <bpmn:documentation>Step 3: For biometric failures: HR Supervisor verifies employee identity against employee photo in HR master, creates manual punch entry with reason code &quot;biometric failure,&quot; obtains Department Supervisor confirmation that employee was present; submits IT ticket per W48 for biometric reader repair/maintenance; recurring biometric failures (&gt;3/month for same employee) trigger re-enrollment with alternate biometric (e.g., switch from fingerprint to face recognition)
 Responsible (R): HR Supervisor
 Accountable (A): Store Manager
 Duration: 5 min/exception</bpmn:documentation>
-        <bpmn:incoming>W561_Flow25</bpmn:incoming>
-        <bpmn:outgoing>W561_Flow26</bpmn:outgoing>
+        <bpmn:incoming>W561_Flow26</bpmn:incoming>
+        <bpmn:outgoing>W561_Flow27</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W561_Task11" name="For late arrivals: Department Supervisor confirms whether late arrival was…">
+      <bpmn:userTask id="W561_Task12" name="For late arrivals: Department Supervisor confirms whether late arrival was…">
         <bpmn:documentation>Step 4: For late arrivals: Department Supervisor confirms whether late arrival was communicated in advance (SMS, call, team messaging app); system auto-calculates deduction per company policy — grace period: 15 minutes (no deduction); 16–60 minutes late: 1-hour deduction; &gt;60 minutes late: half-day deduction; if late was due to verified force majeure (MRT breakdown, flooding), HR Supervisor applies excused tardiness with no deduction
 Responsible (R): Department Supervisor / HR Supervisor
 Accountable (A): Store Manager
 Duration: 3 min/exception</bpmn:documentation>
-        <bpmn:incoming>W561_Flow26</bpmn:incoming>
-        <bpmn:outgoing>W561_Flow27</bpmn:outgoing>
+        <bpmn:incoming>W561_Flow27</bpmn:incoming>
+        <bpmn:outgoing>W561_Flow28</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W561_Task12" name="For absences: system checks if leave was pre-filed per HR-007 leave management…">
+      <bpmn:userTask id="W561_Task13" name="For absences: system checks if leave was pre-filed per HR-007 leave management…">
         <bpmn:documentation>Step 5: For absences: system checks if leave was pre-filed per HR-007 leave management; if leave filed and approved → no exception (system auto-clears); if leave not filed → classify as absent without pay; if absence due to force majeure (typhoon signal, declared calamity) → classify per company policy as excused with pay (up to 5 days/year) or special emergency leave per DOLE advisory
 Responsible (R): HR Supervisor
 Accountable (A): Store Manager
 Duration: 5 min/exception</bpmn:documentation>
-        <bpmn:incoming>W561_Flow27</bpmn:incoming>
-        <bpmn:outgoing>W561_Flow28</bpmn:outgoing>
+        <bpmn:incoming>W561_Flow28</bpmn:incoming>
+        <bpmn:outgoing>W561_Flow29</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W561_Task13" name="For undertime: verify if early departure was authorized by Department…">
+      <bpmn:userTask id="W561_Task14" name="For undertime: verify if early departure was authorized by Department…">
         <bpmn:documentation>Step 6: For undertime: verify if early departure was authorized by Department Supervisor (system checks for approved early departure request); if authorized → no deduction, update timesheet; if unauthorized → system deducts proportional hours from daily pay; pattern detection: employee with &gt;3 unauthorized undertime incidents in 30 days flagged for Store Manager counseling
 Responsible (R): HR Supervisor
 Accountable (A): Store Manager
 Duration: 3 min/exception</bpmn:documentation>
-        <bpmn:incoming>W561_Flow28</bpmn:incoming>
-        <bpmn:outgoing>W561_Flow29</bpmn:outgoing>
+        <bpmn:incoming>W561_Flow29</bpmn:incoming>
+        <bpmn:outgoing>W561_Flow30</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W561_Task14" name="For missing punches: employee submits self-service correction request via HR…">
+      <bpmn:userTask id="W561_Task15" name="For missing punches: employee submits self-service correction request via HR…">
         <bpmn:documentation>Step 7: For missing punches: employee submits self-service correction request via HR portal or mobile app with reason (forgot to punch, system down, was at other location for task); Department Supervisor approves or denies within 2 business days; if approved → system creates corrected punch entry with audit trail; if denied → exception remains and standard deduction applies
 Responsible (R): Employee / Department Supervisor
 Accountable (A): HR Supervisor
 Duration: 2 min/exception (system); 5 min if manual</bpmn:documentation>
-        <bpmn:incoming>W561_Flow29</bpmn:incoming>
-        <bpmn:outgoing>W561_Flow30</bpmn:outgoing>
+        <bpmn:incoming>W561_Flow30</bpmn:incoming>
+        <bpmn:outgoing>W561_Flow31</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W561_Task15" name="For unauthorized overtime: system verifies against pre-approved overtime per…">
+      <bpmn:userTask id="W561_Task16" name="For unauthorized overtime: system verifies against pre-approved overtime per…">
         <bpmn:documentation>Step 8: For unauthorized overtime: system verifies against pre-approved overtime per W34 shift schedule; if OT was pre-approved → clear exception, system calculates OT pay (125% regular, 130% rest day, per Labor Code); if unapproved → flag for Store Manager review — Store Manager decides whether to approve retroactively (with justification) or deny (OT hours not compensated); pattern detection: employee with repeated unapproved OT flagged for counseling
 Responsible (R): HR Supervisor / Store Manager
 Accountable (A): Store Manager
 Duration: 5 min/exception</bpmn:documentation>
-        <bpmn:incoming>W561_Flow30</bpmn:incoming>
-        <bpmn:outgoing>W561_Flow31</bpmn:outgoing>
+        <bpmn:incoming>W561_Flow31</bpmn:incoming>
+        <bpmn:outgoing>W561_Flow32</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W561_Task16" name="Mass exception handling (typhoon, transportation strike, widespread flooding)…">
+      <bpmn:userTask id="W561_Task17" name="Mass exception handling (typhoon, transportation strike, widespread flooding)…">
         <bpmn:documentation>Step 9: Mass exception handling (typhoon, transportation strike, widespread flooding): CHRO issues blanket excused attendance directive per DOLE advisory — specifies affected areas, dates, and pay treatment (excused with pay, offset against leave credits, or no-pay); system applies mass exception clearance for all affected employees in specified locations; no individual review required for covered exceptions
 Responsible (R): CHRO
 Accountable (A): CHRO
 Duration: 1–2 hours/event</bpmn:documentation>
-        <bpmn:incoming>W561_Flow31</bpmn:incoming>
-        <bpmn:outgoing>W561_Flow32</bpmn:outgoing>
+        <bpmn:incoming>W561_Flow32</bpmn:incoming>
+        <bpmn:outgoing>W561_Flow33</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:serviceTask id="W561_Task17" name="Approved exceptions update payroll input file for W10: system generates…">
+      <bpmn:serviceTask id="W561_Task18" name="Approved exceptions update payroll input file for W10: system generates…">
         <bpmn:documentation>Step 10: Approved exceptions update payroll input file for W10: system generates corrected attendance file with all resolved exceptions reflected; unresolved exceptions (pending supervisor approval) carry forward to next payroll cutoff with default deduction applied; exceptions resolved after payroll run trigger retroactive adjustment in next payroll period
 Responsible (R): System
 Accountable (A): —
 Duration: Automated (daily sync)</bpmn:documentation>
-        <bpmn:incoming>W561_Flow32</bpmn:incoming>
-        <bpmn:outgoing>W561_Flow33</bpmn:outgoing>
-      </bpmn:serviceTask>
-      <bpmn:userTask id="W561_Task18" name="Weekly exception trend analysis: HR Supervisor generates exception trend report…">
-        <bpmn:documentation>Step 11: Weekly exception trend analysis: HR Supervisor generates exception trend report by store, department, and category; identifies: stores with exception rates &gt;20% (above company average), repeat offenders (&gt;5 exceptions/month), exception categories trending upward; report shared with Store Manager and HR Business Partner for corrective action
-Responsible (R): HR Supervisor
-Accountable (A): HR Business Partner
-Duration: 1 hour/week</bpmn:documentation>
         <bpmn:incoming>W561_Flow33</bpmn:incoming>
         <bpmn:outgoing>W561_Flow34</bpmn:outgoing>
+      </bpmn:serviceTask>
+      <bpmn:userTask id="W561_Task19" name="Weekly exception trend analysis: HR Supervisor generates exception trend report…">
+        <bpmn:documentation>Step 11: Weekly exception trend analysis: HR Supervisor generates exception trend report by store, department, and category; identifies: stores with exception rates &gt;20% (above company average), repeat offenders (&gt;5 exceptions/month), exception categories trending upward; report shared with Store Manager and HR Business Partner for corrective action
+Responsible (R): HR Supervisor, Timekeeping &amp; Attendance Analyst
+Accountable (A): HR Business Partner
+Duration: 1 hour/week</bpmn:documentation>
+        <bpmn:incoming>W561_Flow34</bpmn:incoming>
+        <bpmn:outgoing>W561_Flow35</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W561_Task19" name="Monthly attendance compliance report: aggregated exception data feeds into W72…">
+      <bpmn:userTask id="W561_Task20" name="Monthly attendance compliance report: aggregated exception data feeds into W72…">
         <bpmn:documentation>Step 12: Monthly attendance compliance report: aggregated exception data feeds into W72 (employee performance — attendance scorecard component) and W67 (store performance — labor compliance metric); stores with exception rates &gt;20% for 2 consecutive months flagged for HR Business Partner intervention; annual attendance compliance data supports DOLE labor standards audit documentation
 Responsible (R): HR Supervisor
 Accountable (A): CHRO
 Duration: 2 hours/month</bpmn:documentation>
-        <bpmn:incoming>W561_Flow34</bpmn:incoming>
-        <bpmn:outgoing>W561_Flow35</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:endEvent id="W561_End20" name="Complete">
         <bpmn:incoming>W561_Flow35</bpmn:incoming>
+        <bpmn:outgoing>W561_Flow36</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:endEvent id="W561_End21" name="Complete">
+        <bpmn:incoming>W561_Flow36</bpmn:incoming>
       </bpmn:endEvent>
-      <bpmn:textAnnotation id="W561_Annotation21">
+      <bpmn:textAnnotation id="W561_Annotation22">
         <bpmn:text>Controls: - CTL-298 (ensure controlled execution — Workforce Management (PA-19.3).) | - operational: IT preventive maintenance schedule per W48 and alternative punch methods (RFID badge backup); operational: automated mass exception clearance (step 9); operational: mobile app simplification and associate training
 Owner: HR Supervisor / Store Manager (store-level)</bpmn:text>
       </bpmn:textAnnotation>
-      <bpmn:association id="W561_Assoc22" sourceRef="W561_Annotation21" targetRef="W561_Start7" associationDirection="None" />
-      <bpmn:sequenceFlow id="W561_Flow23" sourceRef="W561_Start7" targetRef="W561_Task8" />
-      <bpmn:sequenceFlow id="W561_Flow24" sourceRef="W561_Task8" targetRef="W561_Task9" />
+      <bpmn:association id="W561_Assoc23" sourceRef="W561_Annotation22" targetRef="W561_Start8" associationDirection="None" />
+      <bpmn:sequenceFlow id="W561_Flow24" sourceRef="W561_Start8" targetRef="W561_Task9" />
       <bpmn:sequenceFlow id="W561_Flow25" sourceRef="W561_Task9" targetRef="W561_Task10" />
       <bpmn:sequenceFlow id="W561_Flow26" sourceRef="W561_Task10" targetRef="W561_Task11" />
       <bpmn:sequenceFlow id="W561_Flow27" sourceRef="W561_Task11" targetRef="W561_Task12" />
@@ -320,7 +321,8 @@ Owner: HR Supervisor / Store Manager (store-level)</bpmn:text>
       <bpmn:sequenceFlow id="W561_Flow32" sourceRef="W561_Task16" targetRef="W561_Task17" />
       <bpmn:sequenceFlow id="W561_Flow33" sourceRef="W561_Task17" targetRef="W561_Task18" />
       <bpmn:sequenceFlow id="W561_Flow34" sourceRef="W561_Task18" targetRef="W561_Task19" />
-      <bpmn:sequenceFlow id="W561_Flow35" sourceRef="W561_Task19" targetRef="W561_End20" />
+      <bpmn:sequenceFlow id="W561_Flow35" sourceRef="W561_Task19" targetRef="W561_Task20" />
+      <bpmn:sequenceFlow id="W561_Flow36" sourceRef="W561_Task20" targetRef="W561_End21" />
     </bpmn:process>
     <bpmndi:BPMNDiagram id="W561_diag">
       <bpmndi:BPMNPlane id="W561_plane" bpmnElement="W_W561">
@@ -329,35 +331,36 @@ Owner: HR Supervisor / Store Manager (store-level)</bpmn:text>
         <bpmndi:BPMNShape id="W561_Lane3_di" bpmnElement="W561_Lane3" isHorizontal="true"><dc:Bounds x="160" y="420" width="2840" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W561_Lane4_di" bpmnElement="W561_Lane4" isHorizontal="true"><dc:Bounds x="160" y="590" width="2840" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W561_Lane5_di" bpmnElement="W561_Lane5" isHorizontal="true"><dc:Bounds x="160" y="760" width="2840" height="170" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W561_Task8_di" bpmnElement="W561_Task8"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W561_Task9_di" bpmnElement="W561_Task9"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W561_Task10_di" bpmnElement="W561_Task10"><dc:Bounds x="820" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W561_Task11_di" bpmnElement="W561_Task11"><dc:Bounds x="1030" y="465" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W561_Task12_di" bpmnElement="W561_Task12"><dc:Bounds x="1240" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W561_Task13_di" bpmnElement="W561_Task13"><dc:Bounds x="1450" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W561_Task14_di" bpmnElement="W561_Task14"><dc:Bounds x="1660" y="635" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W561_Task15_di" bpmnElement="W561_Task15"><dc:Bounds x="1870" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W561_Task16_di" bpmnElement="W561_Task16"><dc:Bounds x="2080" y="805" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W561_Task17_di" bpmnElement="W561_Task17"><dc:Bounds x="2290" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W561_Task18_di" bpmnElement="W561_Task18"><dc:Bounds x="2500" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W561_Task19_di" bpmnElement="W561_Task19"><dc:Bounds x="2710" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W561_Start7_di" bpmnElement="W561_Start7"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W561_End20_di" bpmnElement="W561_End20"><dc:Bounds x="2940" y="827" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W561_Annotation21_di" bpmnElement="W561_Annotation21"><dc:Bounds x="160" y="970" width="360" height="100" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNEdge id="W561_Flow23_di" bpmnElement="W561_Flow23"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W561_Flow24_di" bpmnElement="W561_Flow24"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W561_Flow25_di" bpmnElement="W561_Flow25"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W561_Flow26_di" bpmnElement="W561_Flow26"><di:waypoint x="1000" y="335" /><di:waypoint x="1030" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W561_Flow27_di" bpmnElement="W561_Flow27"><di:waypoint x="1210" y="505" /><di:waypoint x="1240" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W561_Flow28_di" bpmnElement="W561_Flow28"><di:waypoint x="1420" y="335" /><di:waypoint x="1450" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W561_Flow29_di" bpmnElement="W561_Flow29"><di:waypoint x="1630" y="335" /><di:waypoint x="1660" y="675" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W561_Flow30_di" bpmnElement="W561_Flow30"><di:waypoint x="1840" y="675" /><di:waypoint x="1870" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W561_Flow31_di" bpmnElement="W561_Flow31"><di:waypoint x="2050" y="335" /><di:waypoint x="2080" y="845" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W561_Flow32_di" bpmnElement="W561_Flow32"><di:waypoint x="2260" y="845" /><di:waypoint x="2290" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W561_Flow33_di" bpmnElement="W561_Flow33"><di:waypoint x="2470" y="165" /><di:waypoint x="2500" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W561_Flow34_di" bpmnElement="W561_Flow34"><di:waypoint x="2680" y="335" /><di:waypoint x="2710" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W561_Flow35_di" bpmnElement="W561_Flow35"><di:waypoint x="2890" y="335" /><di:waypoint x="2940" y="845" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W561_Assoc22_di" bpmnElement="W561_Assoc22"><di:waypoint x="340" y="970" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNShape id="W561_Lane6_di" bpmnElement="W561_Lane6" isHorizontal="true"><dc:Bounds x="160" y="930" width="2840" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W561_Task9_di" bpmnElement="W561_Task9"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W561_Task10_di" bpmnElement="W561_Task10"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W561_Task11_di" bpmnElement="W561_Task11"><dc:Bounds x="820" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W561_Task12_di" bpmnElement="W561_Task12"><dc:Bounds x="1030" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W561_Task13_di" bpmnElement="W561_Task13"><dc:Bounds x="1240" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W561_Task14_di" bpmnElement="W561_Task14"><dc:Bounds x="1450" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W561_Task15_di" bpmnElement="W561_Task15"><dc:Bounds x="1660" y="635" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W561_Task16_di" bpmnElement="W561_Task16"><dc:Bounds x="1870" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W561_Task17_di" bpmnElement="W561_Task17"><dc:Bounds x="2080" y="805" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W561_Task18_di" bpmnElement="W561_Task18"><dc:Bounds x="2290" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W561_Task19_di" bpmnElement="W561_Task19"><dc:Bounds x="2500" y="975" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W561_Task20_di" bpmnElement="W561_Task20"><dc:Bounds x="2710" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W561_Start8_di" bpmnElement="W561_Start8"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W561_End21_di" bpmnElement="W561_End21"><dc:Bounds x="2940" y="997" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W561_Annotation22_di" bpmnElement="W561_Annotation22"><dc:Bounds x="160" y="1140" width="360" height="100" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="W561_Flow24_di" bpmnElement="W561_Flow24"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W561_Flow25_di" bpmnElement="W561_Flow25"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W561_Flow26_di" bpmnElement="W561_Flow26"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W561_Flow27_di" bpmnElement="W561_Flow27"><di:waypoint x="1000" y="335" /><di:waypoint x="1030" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W561_Flow28_di" bpmnElement="W561_Flow28"><di:waypoint x="1210" y="505" /><di:waypoint x="1240" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W561_Flow29_di" bpmnElement="W561_Flow29"><di:waypoint x="1420" y="335" /><di:waypoint x="1450" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W561_Flow30_di" bpmnElement="W561_Flow30"><di:waypoint x="1630" y="335" /><di:waypoint x="1660" y="675" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W561_Flow31_di" bpmnElement="W561_Flow31"><di:waypoint x="1840" y="675" /><di:waypoint x="1870" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W561_Flow32_di" bpmnElement="W561_Flow32"><di:waypoint x="2050" y="335" /><di:waypoint x="2080" y="845" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W561_Flow33_di" bpmnElement="W561_Flow33"><di:waypoint x="2260" y="845" /><di:waypoint x="2290" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W561_Flow34_di" bpmnElement="W561_Flow34"><di:waypoint x="2470" y="165" /><di:waypoint x="2500" y="1015" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W561_Flow35_di" bpmnElement="W561_Flow35"><di:waypoint x="2680" y="1015" /><di:waypoint x="2710" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W561_Flow36_di" bpmnElement="W561_Flow36"><di:waypoint x="2890" y="335" /><di:waypoint x="2940" y="1015" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W561_Assoc23_di" bpmnElement="W561_Assoc23"><di:waypoint x="340" y="1140" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
       </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W594" name="W594. Store-Level Employee Daily Attendance Verification &amp; Exception Processing" isExecutable="false">

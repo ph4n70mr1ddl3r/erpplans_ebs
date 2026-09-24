@@ -1619,7 +1619,7 @@ Owner: VP Supply Chain
 Participants: VP Supply Chain, VP Merchandising, Category Managers, Demand Planner, Supply Planner, Finance Controller, DC Operations Manager
 Source: workflow W1533 — S&amp;OP Monthly Consensus Demand Review, Cross-Functional Alignment &amp; Supply Plan Ratification</bpmn:documentation>
       <bpmn:laneSet id="W1533_LaneSet7">
-        <bpmn:lane id="W1533_Lane1" name="Demand Planner">
+        <bpmn:lane id="W1533_Lane1" name="Demand Planner, Senior Demand Planner">
         <bpmn:flowNodeRef>W1533_Task9</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W1533_Start8</bpmn:flowNodeRef>
         </bpmn:lane>
@@ -1646,7 +1646,7 @@ Source: workflow W1533 — S&amp;OP Monthly Consensus Demand Review, Cross-Funct
       </bpmn:startEvent>
       <bpmn:userTask id="W1533_Task9" name="Demand review">
         <bpmn:documentation>Step 1: Demand review: Demand Planner presents statistical forecast by category with accuracy metrics (MAPE, bias); highlights significant changes from prior month (new product launches, seasonal shifts, promotional impacts)
-Responsible (R): Demand Planner
+Responsible (R): Demand Planner, Senior Demand Planner
 Accountable (A): VP Supply Chain
 Duration: 1 hour</bpmn:documentation>
         <bpmn:incoming>W1533_Flow19</bpmn:incoming>
