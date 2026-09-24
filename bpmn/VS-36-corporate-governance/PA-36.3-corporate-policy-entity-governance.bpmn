@@ -414,7 +414,7 @@ Source: workflow W1733 — Whistleblower &amp; Ethics Reporting Channel Manageme
         <bpmn:outgoing>W1733_Flow13</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:userTask id="W1733_Task5" name="Maintain confidential ethics reporting channel: (a) toll-free hotline…">
-        <bpmn:documentation>Step 1: Maintain confidential ethics reporting channel: (a) toll-free hotline (outsourced to third-party provider for anonymity), (b) web-based reporting portal (encrypted, accessible to all 6,925 employees), (c) email to dedicated ethics mailbox, (d) physical drop boxes at each store/DC/HQ, (e) option for anonymous reporting in all channels
+        <bpmn:documentation>Step 1: Maintain confidential ethics reporting channel: (a) toll-free hotline (outsourced to third-party provider for anonymity), (b) web-based reporting portal (encrypted, accessible to all 6,918 employees), (c) email to dedicated ethics mailbox, (d) physical drop boxes at each store/DC/HQ, (e) option for anonymous reporting in all channels
 Responsible (R): Head of Internal Audit
 Accountable (A): CEO / Audit Committee
 Duration: Continuous</bpmn:documentation>
@@ -491,8 +491,8 @@ Owner: Head of Internal Audit</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W1734" name="W1734. Conflict of Interest Disclosure &amp; Management" isExecutable="false">
       <bpmn:documentation>Trigger: Annual disclosure requirement; new hire; triggered by specific situation
-Frequency: Annual disclosure (~315 managers-and-above for full/detailed disclosure; ~6,925 employees for simplified acknowledgment)
-Volume: ~315 detailed disclosures/year from managers and above; ~6,925 simplified for all employees
+Frequency: Annual disclosure (~315 managers-and-above for full/detailed disclosure; ~6,918 employees for simplified acknowledgment)
+Volume: ~315 detailed disclosures/year from managers and above; ~6,918 simplified for all employees
 Owner: Corporate Secretary
 Participants: Corporate Secretary, CHRO, all managers and above, Board
 Source: workflow W1734 — Conflict of Interest Disclosure &amp; Management</bpmn:documentation>
@@ -579,7 +579,7 @@ Owner: Corporate Secretary</bpmn:text>
     <bpmn:process id="W_W1735" name="W1735. Data Privacy Governance &amp; NPC Compliance" isExecutable="false">
       <bpmn:documentation>Trigger: Data Privacy Act (RA 10173) compliance requirement; new data processing activity; NPC audit; data breach
 Frequency: Continuous governance; annual review; event-driven for breaches
-Volume: Ongoing compliance for 600,000 customer records + 6,925 employee records + vendor data
+Volume: Ongoing compliance for 600,000 customer records + 6,918 employee records + vendor data
 Owner: Data Protection Officer (DPO)
 Participants: DPO, CIO, Legal Counsel, Corporate Secretary, all department heads
 Source: workflow W1735 — Data Privacy Governance &amp; NPC Compliance</bpmn:documentation>

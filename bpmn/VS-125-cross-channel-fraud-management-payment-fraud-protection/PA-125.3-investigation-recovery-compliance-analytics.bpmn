@@ -221,7 +221,7 @@ Owner: Fraud Management / Payments</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W3876" name="W3876. Internal / Employee Fraud &amp; Collusion Investigation" isExecutable="false">
       <bpmn:documentation>Trigger: Employee-fraud alert (links to W3865/W3860); tip-off (links to VS-119)
-Frequency: Continuous (~6,925 employees + ~10–20% contingent)
+Frequency: Continuous (~6,918 employees + ~10–20% contingent)
 Volume: ~50–200 employee-fraud cases/yr
 Owner: Fraud Management / LP / HR / Internal Audit
 Participants: Fraud Management, LP (links to VS-23), Internal Audit (links to VS-21), HR (links to VS-19/VS-103), Legal (links to VS-100), IT Security (links to VS-27.3), Store Ops (links to VS-07), Speak-Up (links to VS-119)
@@ -438,7 +438,7 @@ Owner: Fraud Management / Internal Audit</bpmn:text>
     <bpmn:process id="W_W3879" name="W3879. Fraud Awareness Training &amp; Store/Agent Enablement" isExecutable="false">
       <bpmn:documentation>Trigger: Training cycle; new-scheme alert; onboarding
 Frequency: Annual + onboarding + on alert
-Volume: ~6,925 employees + ~10–20% contingent; ~5,800 store staff focus
+Volume: ~6,918 employees + ~10–20% contingent; ~5,800 store staff focus
 Owner: Fraud Management / L&amp;D
 Participants: Fraud Management, L&amp;D (links to VS-19.4/VS-124), Store Ops (links to VS-07), Ecommerce (links to VS-10), Customer Service (links to VS-13/VS-32), HR (links to VS-19), Sales Enablement (links to VS-124)
 Source: workflow W3879 — Fraud Awareness Training &amp; Store/Agent Enablement</bpmn:documentation>

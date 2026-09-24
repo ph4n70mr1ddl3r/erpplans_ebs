@@ -113,7 +113,7 @@ Source: workflow W1669 — IT Equipment &amp; Software Procurement</bpmn:documen
         <bpmn:outgoing>W1669_Flow12</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:userTask id="W1669_Task5" name="CIO develops annual IT procurement plan: (a) POS hardware refresh schedule (600…">
-        <bpmn:documentation>Step 1: CIO develops annual IT procurement plan: (a) POS hardware refresh schedule (600 terminals; target 5-year lifecycle = ~120 replacements/year), (b) server and network infrastructure upgrades, (c) employee laptop/desktop refresh (525 active HQ + DC office staff — the TO&#x27;s 532-role design retains the disabled—prepared Trade department), (d) software license renewals (annual), (e) new technology projects (per strategic plan W1645), (f) barcode scanners, RF guns, printers for stores and DCs
+        <bpmn:documentation>Step 1: CIO develops annual IT procurement plan: (a) POS hardware refresh schedule (600 terminals; target 5-year lifecycle = ~120 replacements/year), (b) server and network infrastructure upgrades, (c) employee laptop/desktop refresh (518 active HQ + DC office staff — the TO&#x27;s 532-role design retains the disabled—prepared Trade department), (d) software license renewals (annual), (e) new technology projects (per strategic plan W1645), (f) barcode scanners, RF guns, printers for stores and DCs
 Responsible (R): CIO
 Accountable (A): CFO
 Duration: 1 week</bpmn:documentation>

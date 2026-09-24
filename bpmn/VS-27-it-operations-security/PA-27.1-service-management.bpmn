@@ -3,7 +3,7 @@
     <bpmn:process id="W_W48" name="W48. IT Operations &amp; Helpdesk Support" isExecutable="false">
       <bpmn:documentation>Trigger: User reports issue (phone, email, or the JSM self-service portal); system generates automated alert; scheduled change window
 Frequency: Continuous; ~800–1,200 support tickets/month across all locations
-Volume: ~6,925 users; 600 POS terminals; 4 WMS Systems; ~500 RF devices; 200+ network locations
+Volume: ~6,918 users; 600 POS terminals; 4 WMS Systems; ~500 RF devices; 200+ network locations
 Owner: IT Helpdesk Lead
 Participants: IT Helpdesk, IT Infrastructure, IT Applications, end users, external vendors
 Source: workflow W48 — IT Operations &amp; Helpdesk Support</bpmn:documentation>
@@ -483,7 +483,7 @@ Owner: IT Project Manager / Department Heads</bpmn:text>
     <bpmn:process id="W_W113" name="W113. Business Intelligence &amp; Data Governance" isExecutable="false">
       <bpmn:documentation>Trigger: Monthly BI governance review; ad-hoc report request; dashboard lifecycle milestone; or data quality issue identified
 Frequency: Monthly governance review; continuous report request management; quarterly dashboard lifecycle review
-Volume: ~50–100 ad-hoc report requests/month from across the organization; ~20–30 active dashboards at any time; 6,925 potential users across 14 requirement categories
+Volume: ~50–100 ad-hoc report requests/month from across the organization; ~20–30 active dashboards at any time; 6,918 potential users across 14 requirement categories
 Owner: BI Manager / Data Analyst
 Participants: BI Manager, Data Analysts, IT Manager, Department Heads, Controller, CIO
 Source: workflow W113 — Business Intelligence &amp; Data Governance</bpmn:documentation>
@@ -858,7 +858,7 @@ Owner: Application Manager</bpmn:text>
     <bpmn:process id="W_W152" name="W152. Employee IT Provisioning &amp; Access Lifecycle Management" isExecutable="false">
       <bpmn:documentation>Trigger: New hire notification (W15); employee transfer (W43.15); or separation (W43)
 Frequency: 100–150 provisioning events/month
-Volume: Covers ~6,925 employees and ~1,500 ERP users
+Volume: Covers ~6,918 employees and ~1,500 ERP users
 Owner: IT Infrastructure Manager
 Participants: HR, IT Helpdesk, Hiring Manager, Security
 Source: workflow W152 — Employee IT Provisioning &amp; Access Lifecycle Management</bpmn:documentation>
@@ -1245,7 +1245,7 @@ Owner: IT Support Specialist</bpmn:text>
     <bpmn:process id="W_W370" name="W370. Software License &amp; SaaS Subscription Management" isExecutable="false">
       <bpmn:documentation>Trigger: New software request; employee separation (W43); or annual true-up
 Frequency: Monthly reconciliation; annual true-up
-Volume: ~50+ SaaS applications; ~1,500 ERP users; ~6,925 M365/Email users
+Volume: ~50+ SaaS applications; ~1,500 ERP users; ~6,918 M365/Email users
 Owner: Software Asset Manager
 Participants: IT Helpdesk, Procurement, Finance
 Source: workflow W370 — Software License &amp; SaaS Subscription Management</bpmn:documentation>
@@ -1332,7 +1332,7 @@ Owner: Software Asset Manager</bpmn:text>
     <bpmn:process id="W_W372" name="W372. IT Policy, Security Awareness &amp; User Training" isExecutable="false">
       <bpmn:documentation>Trigger: New hire onboarding (W15); policy update; or security incident trend
 Frequency: Continuous (onboarding); Quarterly (refreshers)
-Volume: 6,925 employees; ~100–130 new hires/month (per profile §11.4)
+Volume: 6,918 employees; ~100–130 new hires/month (per profile §11.4)
 Owner: IT Security Manager
 Participants: HR Training Team, IT Security Analyst, All Employees
 Source: workflow W372 — IT Policy, Security Awareness &amp; User Training</bpmn:documentation>
@@ -3498,7 +3498,7 @@ Owner: Loss Prevention Manager</bpmn:text>
     <bpmn:process id="W_W1408" name="W1408. ERP User Access Quarterly Review, Segregation of Duties (SoD) Audit &amp; Excessive Access Remediation" isExecutable="false">
       <bpmn:documentation>Trigger: Quarterly access review calendar (Q1: January, Q2: April, Q3: July, Q4: October); or triggered by employee role change (W152), separation (W43), or internal audit finding (W21.1)
 Frequency: Quarterly comprehensive review; continuous system-level SoD monitoring
-Volume: ~1,500 active ERP user accounts across 5 legal entities (per W152/W370; 6,925 is the M365/email estate); ~500–800 role-based access profiles; quarterly review covers ~375 accounts (25% risk-based sample)
+Volume: ~1,500 active ERP user accounts across 5 legal entities (per W152/W370; 6,918 is the M365/email estate); ~500–800 role-based access profiles; quarterly review covers ~375 accounts (25% risk-based sample)
 Owner: IT Security Manager
 Participants: IT Security Manager, System Administrator, Department Heads (access certifiers), Internal Auditor, HR Manager, Data Protection Officer (DPO)
 Source: workflow W1408 — ERP User Access Quarterly Review, Segregation of Duties (SoD) Audit &amp; Excessive Access Remediation</bpmn:documentation>

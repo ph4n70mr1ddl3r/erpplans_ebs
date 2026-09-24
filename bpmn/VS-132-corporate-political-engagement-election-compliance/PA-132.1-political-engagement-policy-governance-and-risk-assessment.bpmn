@@ -375,7 +375,7 @@ Owner: Government Affairs Manager / VP Legal</bpmn:text>
     <bpmn:process id="W_W4030" name="W4030. Employee Political Activity, Time-Off &amp; Non-Coercion Governance" isExecutable="false">
       <bpmn:documentation>Trigger: Policy; employee question; election cycle
 Frequency: Maintained + on inquiry
-Volume: ~6,925 employees + contingent (links to VS-98)
+Volume: ~6,918 employees + contingent (links to VS-98)
 Owner: CHRO / VP Legal
 Participants: HR (links to VS-19/VS-103), Legal (links to VS-100), Compliance (links to VS-119), Labor Relations (links to VS-84), Communications (links to VS-103.1)
 Source: workflow W4030 — Employee Political Activity, Time-Off &amp; Non-Coercion Governance</bpmn:documentation>

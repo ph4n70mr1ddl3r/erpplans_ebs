@@ -16,7 +16,7 @@
 | HQ | Davao City, Philippines |
 | Legal Entities | 5 (Holdings, Depot, Logistics, Digital Commerce, Property Mgmt) |
 | Annual Revenue | ~PHP 62.3 Billion |
-| Employees | 6,925 active (Trade / Account Management disabled — prepared; the TO design holds 532 HQ) |
+| Employees | 6,918 active (Trade / Account Management disabled — prepared (x); the IT estate's TPS build squad deferred — prepared (ad); the TO design holds 532 HQ) |
 | Active SKUs | 35,000 |
 | POS Terminals | 600 (3 per store) |
 | Monthly Transactions | 2.8 million |
@@ -35,7 +35,8 @@ The business runs on **Oracle E-Business Suite 12.2** as the in-suite ERP core u
 |---|---|---|
 | ERP Core — Oracle E-Business Suite 12.2 (financials, P2P, inventory ledger, POS masters & posting, HR core, approvals) | In-suite (realization blueprint: `02-oracle-ebs/`) | Fully Operational (core) |
 | Warehouse & transport execution — Oracle WMS/MSCA, Shipping/Transportation Execution | In-suite (two-tier doctrine) | Fully Operational (in-suite) |
-| Order Orchestration (OMO) · Trade & Project Services (TPS) | Built in-house (SEP paved road) | Fully Operational (differentiators) |
+| Order Orchestration (OMO) | Built in-house (SEP paved road) | Fully Operational (differentiator) |
+| Trade & Project Services (TPS) | Built in-house (SEP paved road) | Deferred — prepared (2026-09-23 (ad): the squad's 7 seats stand down with the trade desk disabled (x); project services dormant; consumer bulky install/haul-away rides the in-suite Field Service dispatch core and the dispatch experience layer; re-stands at CAP-B01 re-enablement) |
 | Already-built platforms — POS estate, ecommerce platform, gift-card/loyalty stack | Built in-house (existing; integrated via the IAP/event backbone) | Fully Operational (integrated) |
 | Payroll PH · store workforce scheduling · the dispatch experience layer (Field Service dispatch core in-suite) | Built in-house | Fully Operational (builds) |
 | AI & Agent Platform (AAP) | Built in-house on bought foundation-model APIs (VS-128 governance) | Fully Operational (agentic automation) |
@@ -88,6 +89,7 @@ erpplans/
 
 ---
 
+*Date: 2026-09-23 (TPS build squad deferred — prepared, 2026-09-23 (ad): with the trade desk disabled (x) the TPS build squad's project-side workload is dormant; by direction the squad's 7 seats defer — IT 122 → 115 active, 16 of 17 teams active, the 122-FTE 17-team design of record retained (OM v3.25; sourcing register §4 amendment, v3.15; TO v3.1); consumer bulky install/haul-away rides the in-suite Field Service dispatch core and the dispatch experience layer; active headcount re-based 6,925 → 6,918 (HQ 518), revenue/employee ~PHP 9.01M — 728 requirements, 5,433 workflows, 188 value streams, 6,918 employees — HQ 518 — see CHANGELOG 2026-09-23 (ad)).*
 *Date: 2026-09-23 (trade-desk disablement, 2026-09-23 (x): the Trade / Account Management department (7 HQ roles) is DISABLED — PREPARED — not staffed, design retained (TO §5.3; registry CAP-B01–B04); B2B customers are retail POS customers at any store — every sale still completes as a regular POS sale; active headcount re-based 6,932 → 6,925 (HQ 525), revenue/employee ~PHP 9.00M — 728 requirements, 5,433 workflows, 188 value streams, 6,925 employees — HQ 525 — see CHANGELOG 2026-09-23 (x)).*
 
 *Date: 2026-09-23 (capability-switchboard admission, batch 30: W5580 Capability Switchboard Operation & Channel Enablement Impact Governance added in PA-113.2 (VS-113) — the owning workflow for the channel-capability registry's enable/disable state changes; corpus 728 requirements, 5,433 workflows, 188 value streams, 6,932 employees — HQ 532 — unchanged otherwise; see CHANGELOG 2026-09-23 (v)).*

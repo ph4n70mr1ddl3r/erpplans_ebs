@@ -54,9 +54,11 @@ PROFILE = os.path.join(REPO, "01-model-company", "model-company-profile.md")
 # canonical §3.3 HQ department totals (spot anchors used by prose claims)
 # Re-based 2026-09-14 to the PROMOTED structure of record (TO v2.3 / profile
 # v3.1 §3.3: HQ 532 (2026-09-18 actual-org gap-fill; the 2026-09-14 promotion figure was 511); IT 122 per the 17-team product model, OM v3.13).
-RETIRED_HC_CANON = "6,932"   # retired 2026-09-23 (x): Trade / Account Management disabled —
-# prepared (registry CAP-B01); the ACTIVE employee canon is 6,925 (HQ 525 active of the
-# 532-role design). Version footers and dated history lines are exempt.
+RETIRED_HC_CANON = "6,932|6,925"   # 6,932 retired 2026-09-23 (x): Trade / Account Management
+# disabled — prepared (registry CAP-B01); 6,925 retired 2026-09-23 (ad): the IT estate's
+# TPS build squad deferred — prepared (sourcing register §4 amendment). The ACTIVE employee
+# canon is 6,918 (HQ 518 active of the 532-role design). Version footers and dated history
+# lines are exempt.
 
 # 2026-09-23 seventy-ninth-wave review: the (x) sweep's own residue — live
 # population cells still sizing off the RETIRED HQ-ACTIVE canon (532) after the
@@ -82,25 +84,25 @@ RETIRED_HQ_ACTIVE_FORMS = [
 ]
 REQ_HQ_ACTIVE_ANCHORS = [
     ("PA-19.3-workforce-management.md",
-     "HQ corporate functions (~525 active staff, profile §3.3/§11.1"),
+     "HQ corporate functions (~518 active staff, profile §3.3/§11.1"),
     ("PA-40.2-project-cost-tracking.md",
-     "Holdings/HQ: ~525 active per profile §3.3/§11.1"),
+     "Holdings/HQ: ~518 active per profile §3.3/§11.1"),
     ("PA-138.2-hard-and-soft-fm-service-operations.md",
-     "HQ (~525 active staff, profile §3.3"),
+     "HQ (~518 active staff, profile §3.3"),
     ("PA-72.3-shared-services-performance-analytics.md",
-     "~525 active HQ staff across shared services"),
+     "~518 active HQ staff across shared services"),
     ("PA-34.1-non-merchandise-procurement.md",
-     "525 active HQ + DC office staff"),
+     "518 active HQ + DC office staff"),
     ("PA-22.1-regulatory-permits-and-licenses.md",
-     "the active org is **HQ 525**"),
+     "the active org is **HQ 518**"),
     ("PA-22.1-regulatory-permits-and-licenses.md",
-     "active HQ 525, the design register's 532 retained"),
+     "active HQ 518, the design register's 532 retained"),
     ("PA-13.1-customer-support-and-complaints.md",
-     "525 active of the 532-role design"),
+     "518 active of the 532-role design"),
 ]
 REQ_HQ_ACTIVE_README_ANCHORS = [
     ("VS-169-employee-uniform-workwear-and-ppe-issuance-program/README.md",
-     "~525 HQ active"),
+     "~518 HQ active"),
 ]
 
 DEPT_TOTALS = {
@@ -334,16 +336,16 @@ def main():
         for m in re.finditer(RETIRED_HC_CANON, text):
             line = text[:m.start()].count("\n") + 1
             hits.append(("retired-headcount", rel, line,
-                         "6,932 (retired active canon — 6,925 since the "
-                         "trade-desk disablement, 2026-09-23 (x))"))
+                         "retired active canon — 6,918 since the TPS-squad "
+                         "deferral, 2026-09-23 (ad); 6,932 retired at (x))"))
     for f in readme_files:
         text = open(f, encoding="utf-8").read()
         rel = os.path.relpath(f, REPO)
         for m in re.finditer(RETIRED_HC_CANON, text):
             line = text[:m.start()].count("\n") + 1
             hits.append(("retired-headcount", rel, line,
-                         "6,932 (retired active canon — 6,925 since the "
-                         "trade-desk disablement, 2026-09-23 (x))"))
+                         "retired active canon — 6,918 since the TPS-squad "
+                         "deferral, 2026-09-23 (ad); 6,932 retired at (x))"))
     # 2026-09-23 seventy-ninth wave: the retired HQ-ACTIVE forms (532) banned on
     # live PA/README lines, and the repaired cells' two-canon anchors required —
     # the (x) sweep's own residue (see the module-head notes).
@@ -354,9 +356,9 @@ def main():
             for m in re.finditer(re.escape(lit), text, re.I):
                 line = text[:m.start()].count("\n") + 1
                 hits.append(("retired-hq-active", rel, line,
-                             f"{lit} (retired HQ-active canon — HQ 525 active of the "
-                             "532-role design since the trade-desk disablement, "
-                             "2026-09-23 (x))"))
+                             f"{lit} (retired HQ-active canon — HQ 518 active of the "
+                             "532-role design since the trade-desk disablement (x) "
+                             "and the TPS-squad deferral (ad))"))
     text_by_base = {os.path.basename(f): open(f, encoding="utf-8").read()
                     for f in files}
     for base, anchor in REQ_HQ_ACTIVE_ANCHORS:

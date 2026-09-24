@@ -568,8 +568,8 @@ Duration: 1 week</bpmn:documentation>
         <bpmn:incoming>W2525_Flow12</bpmn:incoming>
         <bpmn:outgoing>W2525_Flow13</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W2525_Task7" name="HR coordinates annual typhoon preparedness training for all 6,925 employees…">
-        <bpmn:documentation>Step 2: HR coordinates annual typhoon preparedness training for all 6,925 employees (online module + in-store tabletop exercise); ensures new hires receive orientation; certifies first aid responders per store (minimum 2 per store); conducts evacuation drill at each location
+      <bpmn:userTask id="W2525_Task7" name="HR coordinates annual typhoon preparedness training for all 6,918 employees…">
+        <bpmn:documentation>Step 2: HR coordinates annual typhoon preparedness training for all 6,918 employees (online module + in-store tabletop exercise); ensures new hires receive orientation; certifies first aid responders per store (minimum 2 per store); conducts evacuation drill at each location
 Responsible (R): HR / Safety Officer
 Accountable (A): CHRO
 Duration: 2–3 weeks</bpmn:documentation>

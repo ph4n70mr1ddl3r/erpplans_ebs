@@ -3,7 +3,7 @@
     <bpmn:process id="W_W51" name="W51. Employee Training &amp; Skills Development" isExecutable="false">
       <bpmn:documentation>Trigger: New hire onboarding (W15), new system rollout, compliance requirement, periodic schedule, performance review finding
 Frequency: Continuous; formal training sessions monthly per store; compliance training quarterly
-Volume: ~6,925 employees; ~1,200–1,600 new hires/year requiring onboarding training; all employees require periodic refresher
+Volume: ~6,918 employees; ~1,200–1,600 new hires/year requiring onboarding training; all employees require periodic refresher
 Owner: HR — Training Officer
 Participants: Training Officer, Department Supervisors, Store Managers, Category Managers (product knowledge), IT (system training), external trainers
 Source: workflow W51 — Employee Training &amp; Skills Development</bpmn:documentation>
@@ -131,7 +131,7 @@ Owner: HR — Training Officer</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W567" name="W567. Employee Cross-Training &amp; Skill Matrix Management" isExecutable="false">
       <bpmn:documentation>Trigger: New department assignment; quarterly skill assessment cycle; new product category launch; staffing gap requiring cross-trained coverage
-Frequency: Quarterly skill assessments for all 6,925 employees; continuous cross-training assignments (~1,500–2,000 per quarter)
+Frequency: Quarterly skill assessments for all 6,918 employees; continuous cross-training assignments (~1,500–2,000 per quarter)
 Volume: Higher during new store openings (cross-training for new departments) and seasonal peaks
 Owner: Training Manager / Store Manager (store-level execution)
 Participants: Training Manager, Department Supervisor (R for training execution), Employee, Store Manager (A for assignment), HR Business Partner (I)
@@ -324,7 +324,7 @@ Owner: Training Manager / Store Manager (store-level execution)</bpmn:text>
     <bpmn:process id="W_W683" name="W683. Employee Competency Assessment &amp; Certification Management" isExecutable="false">
       <bpmn:documentation>Trigger: Annual competency assessment cycle; role-change events; regulatory certification requirements
 Frequency: Annual formal assessment; semi-annual recertification for safety-critical roles; ad-hoc for role changes
-Volume: 6,925 employees across 5 entities; ~200 unique competency profiles across roles
+Volume: 6,918 employees across 5 entities; ~200 unique competency profiles across roles
 Owner: HR Training Manager
 Participants: Department Supervisor/Manager, HR Business Partner, Employee, External Certification Body
 Source: workflow W683 — Employee Competency Assessment &amp; Certification Management</bpmn:documentation>
@@ -635,7 +635,7 @@ Owner: HR Business Partner</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W956" name="W956. Employee Annual Physical Examination &amp; Occupational Health Clearance Management" isExecutable="false">
       <bpmn:documentation>Trigger: Employee reaches annual physical examination (APE) due date (employment anniversary or birth month, depending on company policy)
-Frequency: ~560 employees/month (6,925 ÷ 12)
+Frequency: ~575 employees/month (6,918 ÷ 12)
 Volume: 1 employee per examination event
 Owner: HR Manager
 Participants: Employee, HR Assistant, Accredited Clinic/Hospital, Payroll Officer, Store Manager/Department Head, Occupational Health Nurse
@@ -868,7 +868,7 @@ Source: workflow W973 — Employee Long Service Award &amp; Milestone Recognitio
         <bpmn:outgoing>W973_Flow13</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:serviceTask id="W973_Task6" name="Milestone Identification &amp; Verification">
-        <bpmn:documentation>Step 1: Milestone Identification &amp; Verification: System automatically identifies upcoming service milestones: (a) monthly batch job scans all 6,925 employee records for hire dates falling in the next 60 days that coincide with milestone years (5, 10, 15, 20, 25); (b) system generates milestone eligibility list with: employee name, entity, location, hire date, upcoming milestone, current position, and direct manager; (c) HR Service Desk verifies eligibility: (i) continuous service — no break in employment (approved leaves of absence do not break continuity); (ii) performance standing — employee is not on active PIP (performance improvement plan) or under disciplinary action per W603; (iii) rehired employees — previous tenure counted only if rehired within 12 months of separation; (d) ineligible employees flagged with reason and escalated to HR Manager for review
+        <bpmn:documentation>Step 1: Milestone Identification &amp; Verification: System automatically identifies upcoming service milestones: (a) monthly batch job scans all 6,918 employee records for hire dates falling in the next 60 days that coincide with milestone years (5, 10, 15, 20, 25); (b) system generates milestone eligibility list with: employee name, entity, location, hire date, upcoming milestone, current position, and direct manager; (c) HR Service Desk verifies eligibility: (i) continuous service — no break in employment (approved leaves of absence do not break continuity); (ii) performance standing — employee is not on active PIP (performance improvement plan) or under disciplinary action per W603; (iii) rehired employees — previous tenure counted only if rehired within 12 months of separation; (d) ineligible employees flagged with reason and escalated to HR Manager for review
 Responsible (R): System / HR Service Desk
 Accountable (A): CHRO
 Duration: 2–4 hours/month</bpmn:documentation>
@@ -1142,7 +1142,7 @@ Owner: Store Manager</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W1127" name="W1127. Store-Level Employee Annual Competency Re-Certification &amp; Skills Refresher" isExecutable="false">
       <bpmn:documentation>Trigger: Annual re-certification cycle (employee&#x27;s hire anniversary month), or regulatory requirement renewal, or new product/equipment introduction
-Frequency: ~5,600 re-certifications/year (6,925 employees × ~85% requiring annual refresh, spread across 12 months)
+Frequency: ~5,900 re-certifications/year (6,918 employees × ~85% requiring annual refresh, spread across 12 months)
 Volume: 1–4 competency modules per employee per cycle
 Owner: Department Supervisor
 Participants: Department Supervisor, Sales Associate / Cashier / Stock Associate, HR Training Coordinator
@@ -1362,7 +1362,7 @@ Owner: Department Supervisor</bpmn:text>
     <bpmn:process id="W_W5525" name="W5525. Learning Platform (LMS) Administration, Integration &amp; Learning-Records Operations" isExecutable="false">
       <bpmn:documentation>Trigger: OLA outage, integration failure or completion-data discrepancy (W48 ticket); new-hire enrollment event from W15/W152; annual OLA currency &amp; security review (RUP/CPU intake); or the quarterly learning-records integrity audit
 Frequency: Continuous platform monitoring; per-enrollment event; quarterly records audit; annual currency review
-Volume: ~6,925 employees enrolled across ~180 active courses; ~1,200–1,600 new hires/year auto-enrolled; ~40 integration/exception events/month; 200 stores + 4 DCs + HQ
+Volume: ~6,918 employees enrolled across ~180 active courses; ~1,200–1,600 new hires/year auto-enrolled; ~40 integration/exception events/month; 200 stores + 4 DCs + HQ
 Owner: HR Technology Manager
 Participants: LMS Administrator, Training Manager, HR Training Manager, IT Application Manager (integration &amp; SSO), HR Manager, Data Protection Officer
 Source: workflow W5525 — Learning Platform (LMS) Administration, Integration &amp; Learning-Records Operations</bpmn:documentation>
@@ -1412,7 +1412,7 @@ Duration: 2 hours/week</bpmn:documentation>
         <bpmn:outgoing>W5525_Flow19</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W5525_Task10" name="Learning-records integrity &amp; custody">
-        <bpmn:documentation>Step 4: Learning-records integrity &amp; custody: quarterly reconciliation of completion records against the HRIS headcount (~6,925); certification-expiry register feeding W683/W1127; retention and RA 10173 access controls per the W256 schedule; DOLE inspection evidence pack for OSH-critical courses
+        <bpmn:documentation>Step 4: Learning-records integrity &amp; custody: quarterly reconciliation of completion records against the HRIS headcount (~6,918); certification-expiry register feeding W683/W1127; retention and RA 10173 access controls per the W256 schedule; DOLE inspection evidence pack for OSH-critical courses
 Responsible (R): LMS Administrator / HR Technology Manager
 Accountable (A): HR Manager
 Duration: 4 hours/quarter</bpmn:documentation>

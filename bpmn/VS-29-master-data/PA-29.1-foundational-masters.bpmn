@@ -672,7 +672,7 @@ Owner: Master Data Manager</bpmn:text>
     <bpmn:process id="W_W292" name="W292. Employee Master Data Governance &amp; Cross-Entity Lifecycle" isExecutable="false">
       <bpmn:documentation>Trigger: New hire onboarding (W15), cross-entity transfer, position/department change, statutory ID update, or annual data verification
 Frequency: Continuous (onboarding ~1,200–1,600 new hires/year per profile §11.4); Quarterly bulk data verification
-Volume: ~1,200–1,600 new employee records/year; ~200 cross-entity transfers/year; 6,925 records under governance
+Volume: ~1,200–1,600 new employee records/year; ~200 cross-entity transfers/year; 6,918 records under governance
 Owner: HR Data Steward
 Participants: HR Specialist, Payroll Manager, IT ERP Administrator, Department Head
 Source: workflow W292 — Employee Master Data Governance &amp; Cross-Entity Lifecycle</bpmn:documentation>

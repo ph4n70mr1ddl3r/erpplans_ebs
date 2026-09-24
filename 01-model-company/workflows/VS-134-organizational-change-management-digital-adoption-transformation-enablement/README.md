@@ -9,7 +9,7 @@
 Organizational Change Management (OCM), Digital Adoption & Transformation Enablement workflows for
 BuildRight Depot Corp. — owning the enterprise discipline of **leading the people side of change**
 so that transformation initiatives actually land and stick across a 5-entity, 200-store, 4-DC,
-~6,925-employee operation distributed over 13+ Philippine regions. BuildRight runs a continuous
+~6,918-employee operation distributed over 13+ Philippine regions. BuildRight runs a continuous
 pipeline of major change: the unified ERP program, omnichannel/marketplace/retail-media
 build-out, 10–15 new-store openings/year (VS-37), the store-remodel program (VS-109), the net-zero/
 renewable program (VS-108), BIR e-invoicing and statutory digitization, and ongoing process
@@ -39,7 +39,7 @@ experience operations* (this value stream owns *transformation-specific change*)
 change management is the *people-side-of-change* discipline — distinct from technology, project
 delivery, training, and HR operations.
 
-BuildRight's exposure is structural: a distributed, ~6,925-person workforce with varying tech
+BuildRight's exposure is structural: a distributed, ~6,918-person workforce with varying tech
 literacy, high frontline turnover (15–20%), and simultaneous large transformations will stall or
 fail without a dedicated OCM capability — every failed/slow adoption directly delays benefit
 realization, sustains shadow ways-of-working, and erodes the return on PHP-hundreds-of-millions

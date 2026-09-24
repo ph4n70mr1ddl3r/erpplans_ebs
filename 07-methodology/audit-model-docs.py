@@ -712,7 +712,17 @@ row, where no row names the VS) — so a future estate change re-fires the arm
 until consciously re-pointed (the Check-71 CENSUS-pin contract). Teeth: two
 synthetic injections through the full audit, each caught at its exact arm with
 file named, fixtures restored via /tmp copies sha256-verified byte-identical.
-"""
+
+
+2026-09-23 eighty-second wave (directed: the TPS build squad deferred — prepared —
+IT 122 → 115 active): the headcount-canon re-point — every active-population literal
+moves 6,925 → 6,918 / HQ 525 → 518 (§4 two-canon anchor, guide §1.4 anchors + retired-form
+bans, tg ≈466-concurrent anchor + retired-form bans, BOM 643-filer anchor + 650-filer/
+≈7,800 bans + ×6,918 HRMS arithmetic, blueprint W4 anchor, classification W10 cell,
+requirement-family rows, domain-companion anchors incl. the people SS1 line's extended
+design clause, the TO's two active-annotation anchors, quote-coverage's 7,247 | 9,271 |
+6,918 row); the two-canon settlement stands (the TO's 532/6,932 design of record is
+unchanged; 6,925 joined 6,932 on the retired-active ban lists)."""
 
 def _doc_versions():
     """Current '*Document Version:' footer of each versioned doc (basename -> 'N.M')."""
@@ -1029,7 +1039,7 @@ ANCHORS = {
         "Outbound (50)",
         "**532** | **6,932**",
         "**Total HQ** | **362** | **~440–515** | **532**",
-        "**518 + 7 = 525**",
+        "**511 + 7 = 518**",
         "× 4 DCs = **600**",
     ],
     # 2026-09-07 eighth-wave review — the corrected forms the data-volumes doc's own
@@ -1614,7 +1624,7 @@ def guide_figure_hits():
     if m6932:
         hits.append((rel, line_of(m6932.start()),
                      "retired census form '6,932 employees' on the §1.4 "
-                     "reference-parameters cell (active canon: 6,925 employees "
+                     "reference-parameters cell (active canon: 6,918 employees "
                      "— TO design 6,932; joined-text probe — the pre-repair "
                      "cell wrapped the figure across lines)"))
     if "on 2026-09-18 \u2014 was" in body:
@@ -1623,13 +1633,22 @@ def guide_figure_hits():
                      "§1.4 reference-parameters cell (the 09-18 gap-fill edit's "
                      "residue)")
                      )
-    if "HQ 525 active" not in body:
-        hits.append((rel, 0, "required active-census anchor 'HQ 525 active' missing "
+    if "HQ 518 active" not in body:
+        hits.append((rel, 0, "required active-census anchor 'HQ 518 active' missing "
                              "from the §1.4 reference-parameters cell"))
-    if "6,925 employees (TO design 6,932)" not in body:
-        hits.append((rel, 0, "required active-census anchor '6,925 employees (TO "
+    if "6,918 employees (TO design 6,932)" not in body:
+        hits.append((rel, 0, "required active-census anchor '6,918 employees (TO "
                              "design 6,932)' missing from the §1.4 "
                              "reference-parameters cell"))
+    for bad6925, why6925 in (("HQ 525 active",
+                              "the retired HQ-active census form"),
+                             ("6,925 employees (TO design 6,932)",
+                              "the retired active-census form")):
+        pos = body.find(bad6925)
+        if pos >= 0:
+            hits.append((rel, body[:pos].count("\n") + 1,
+                         f"retired form '{bad6925}' on the §1.4 "
+                         f"reference-parameters cell ({why6925})"))
     return hits
 
 
@@ -2090,15 +2109,18 @@ def tg_hq_bandwidth_hits():
     hits = []
     raw = open(os.path.join(REPO, "07-methodology", rel), encoding="utf-8").read()
     body = strip_footer(raw)
-    req = "~525 active HQ staff (≈473 concurrent users"
+    req = "~518 active HQ staff (≈466 concurrent users"
     if req not in body:
         hits.append((rel, 0, f'required §2.2 HQ sizing anchor missing: "{req} …" '
                              '(the active canon at the ~90% concurrency ratio — the '
                              'TO’s 532-role design retains the disabled—prepared '
                              'Trade department)'))
     for bad, why in (("~532 HQ staff", "the retired HQ-active sizing base"),
+                     ("~525 active HQ staff", "the retired HQ-active sizing base"),
                      ("≈480 concurrent users",
-                      "the retired concurrency estimate (≈473 at 525 × ~90%)")):
+                      "the retired concurrency estimate"),
+                     ("≈473 concurrent users",
+                      "the retired concurrency estimate (≈466 at 518 × ~90%)")):
         pos = body.find(bad)
         if pos >= 0:
             hits.append((rel, body[:pos].count("\n") + 1,
@@ -2237,13 +2259,13 @@ def profile_derived_figure_hits():
                      r"\(the promoted 532-role structure of record", prof)
     if not m_hq:
         hits.append((rel, 0, "\u00a74 Corporate-HQ-Personnel row not in the two-canon "
-                             "active form ('525 active (the promoted 532-role structure "
+                             "active form ('518 active (the promoted 532-role structure "
                              "of record … retains the disabled—prepared Trade / Account "
                              "Management department)')"))
         hq_active = None
     else:
         hq_active = int(m_hq.group(1).replace(",", ""))
-        if hq_active != 525:
+        if hq_active != 518:
             hits.append((rel, 0, f"\u00a74 Corporate-HQ-Personnel row reads {hq_active} "
                                  "active but the (x) active canon is 525"))
     if re.search(r"Corporate HQ Personnel\s*\|\s*\*{0,2}532\s*\(", prof):
@@ -2830,17 +2852,17 @@ def ebs_blueprint_hits():
     if m6932:
         add("README.md (02-oracle-ebs)", rd[:m6932.start()].count("\n") + 1,
             "retired census form '6,932 employees' on the §4 wave-plan body "
-            "(active canon: 6,925 employees — TO design 6,932; joined-text "
+            "(active canon: 6,918 employees — TO design 6,932; joined-text "
             "probe)")
     w4_row = next((l for l in rd.splitlines() if l.startswith("| **W4 — People** |")), None)
     if w4_row is None:
         add("README.md (02-oracle-ebs)", 0,
             "§4 wave-plan W4 People row not found (expected the live "
             "'| **W4 — People** |' marker — re-point the arm)")
-    elif "6,925 employees" not in w4_row:
+    elif "6,918 employees" not in w4_row:
         add("README.md (02-oracle-ebs)", 0,
             "W4 People row does not carry the active-employee anchor "
-            "'6,925 employees (active; the TO's 6,932 design retains the "
+            "'6,918 employees (active; the TO's 6,932 design retains the "
             "disabled—prepared Trade department)'")
     return hits
 
@@ -2927,9 +2949,9 @@ def licensing_bom_hits():
             if name.startswith("~~") or "Total" in name:
                 continue
             price, lic = num(m.group(3)), num(m.group(4))
-            if abs(price * 6925 - lic) > 0.5:
+            if abs(price * 6918 - lic) > 0.5:
                 add(rel, text[:m.start()].count("\n") + 1,
-                    f"Employee-metric HRMS row '{name}': {price} × 6,925 != {lic}")
+                    f"Employee-metric HRMS row '{name}': {price} × 6,918 != {lic}")
             total += lic
         stated = re.search(r"\*\*Perpetual license total\*\* \| \*\*\$([\d,]+)\*\*", sec_a)
         if not stated:
@@ -3215,16 +3237,18 @@ def licensing_bom_hits():
     # (the Prior segments' dated recitals exempt by the strip). A future
     # headcount move re-fires the arm until consciously re-pointed (the
     # Check-71 CENSUS-pin contract).
-    req_filer = ("the 650-filer population (all HQ 525 active of the 532-role design "
+    req_filer = ("the 643-filer population (all HQ 518 active of the 532-role design "
                  "+ DC office staff ~100 + district/region field ~25) files "
-                 "~12 reports/yr ≈ 7,800")
+                 "~12 reports/yr ≈ 7,700")
     if " ".join(body.split()).find(req_filer) < 0:
         hits.append((rel, 0, 'missing the §2.4 iExpenses two-canon filer anchor '
-                             '("the 650-filer population (all HQ 525 active of the '
-                             '532-role design + …) files ~12 reports/yr ≈ 7,800")'))
-    for bad, why in (("657-filer", "the retired HQ-active filer population (650 filers "
-                                  "at HQ 525 active of the 532-role design)"),
-                     ("7,884", "the retired reports/yr derivation (650 filers × ~12 ≈ 7,800)")):
+                             '("the 643-filer population (all HQ 518 active of the '
+                             '532-role design + …) files ~12 reports/yr ≈ 7,700")'))
+    for bad, why in (("657-filer", "the retired HQ-active filer population"),
+                     ("7,884", "the retired reports/yr derivation"),
+                     ("650-filer", "the retired HQ-active filer population (643 filers "
+                                  "at HQ 518 active of the 532-role design)"),
+                     ("≈ 7,800", "the retired reports/yr derivation (643 filers × ~12 ≈ 7,700)")):
         pos = body.find(bad)
         if pos >= 0:
             hits.append((rel, body[:pos].count("\n") + 1,
@@ -3396,9 +3420,9 @@ def gap_fill_straggler_hits():
             hits.append(("workflow-criticality-classification.md", i + 1,
                          'retired 6,911 employee total on a live line (the dated '
                          'batch-note blockquotes are the frozen-history surfaces)'))
-    if not any("6,925 employees" in l for l in lines[:fi]):
+    if not any("6,918 employees" in l for l in lines[:fi]):
         hits.append(("workflow-criticality-classification.md", 0,
-                     'missing live "6,925 employees" W10 significance cell'))
+                     'missing live "6,918 employees" W10 significance cell'))
     # (b) TO §1 design stance — footer-stripped body
     tpath = os.path.join(REPO, "01-model-company", "optimal-table-of-organization.md")
     tbody = open(tpath, encoding="utf-8").read().split("*Document Version:")[0]
@@ -3433,10 +3457,10 @@ def gap_fill_straggler_hits():
         if row is None:
             hits.append(("erp-requirements.md", 0,
                          f"employee-count requirement row {rid} not found"))
-        elif "6,925" not in row[1]:
+        elif "6,918" not in row[1]:
             hits.append(("erp-requirements.md", row[0],
                          f"requirement row {rid} is in the v24.2-declared "
-                         f"employee/user-count family but does not carry the 6,925 canon"))
+                         f"employee/user-count family but does not carry the 6,918 canon"))
     # (d) 2026-09-21 sixty-second-wave arm — the live workflow-census canon. Batch 26
     # moved the corpus 5,430 → 5,432 and its cascade trued each document's headline
     # figures, but the present-tense count cells no rule read at that grain kept the
@@ -4363,7 +4387,7 @@ def domain_companion_hits():
             if bad in body:
                 hits.append((name, body[:body.index(bad)].count("\n") + 1,
                              f"retired canon figure '{bad}' on a live line of "
-                             f"a domain companion (the active canon is 6,925 "
+                             f"a domain companion (the active canon is 6,918 "
                              f"employees / 5,433 workflows; these surfaces "
                              f"carry no version footer, so the whole file is "
                              f"live)"))
@@ -4376,22 +4400,22 @@ def domain_companion_hits():
                          f"workflows and the Technology & Data family is 394 "
                          f"since batch 30)"))
     for anc in ("**394 workflows**", "VS-113 (32)",
-                "~6,925 M365/email users"):
+                "~6,918 M365/email users"):
         if anc not in it:
             hits.append(("workflow-gap-analysis-it.md", 0,
                          f'missing corrected roster anchor "{anc}"'))
     _t, ops = _plain(
         "01-model-company/workflows/workflow-gap-analysis-operations.md")
-    for anc in ("payroll of 6,925 employees",
-                "furnishing campaign to ~6,925 employees"):
+    for anc in ("payroll of 6,918 employees",
+                "furnishing campaign to ~6,918 employees"):
         if anc not in ops:
             hits.append(("workflow-gap-analysis-operations.md", 0,
                          f'missing corrected headcount anchor "{anc}"'))
     _t, people = _plain(
         "01-model-company/workflows/workflow-gap-analysis-people.md")
-    if "~6,925 employees (active); ~1,200–1,600 new hires/year" not in people:
+    if "~6,918 employees (active; the TO's 532-design retains the disabled—prepared Trade department and the deferred—prepared TPS build squad (ad)); ~1,200–1,600 new hires/year" not in people:
         hits.append(("workflow-gap-analysis-people.md", 0,
-                     'missing §1 scope anchor "~6,925 employees (active); '
+                     'missing §1 scope anchor "~6,918 employees (active; … TPS build squad (ad)); '
                      '~1,200–1,600 new hires/year"'))
 
     # ---- (d) the 2026-09-23 (x) trade-desk disablement estate — the CAP-B01–B04
@@ -4420,8 +4444,8 @@ def domain_companion_hits():
                              "optimal-table-of-organization.md"),
                 encoding="utf-8").read()
     for anc in ("**DISABLED — PREPARED (2026-09-23 (x))** — not staffed; design retained. 5,200 trade accounts",
-                "active HQ **525** (Trade's 7 disabled — prepared)",
-                "Design total; active **6,925**",
+                "active HQ **518** (Trade's 7 disabled — prepared (x); the TPS build squad's 7 deferred — prepared (ad))",
+                "Design total; active **6,918**",
                 "#### Trade / Account Management (7 — DISABLED — PREPARED 2026-09-23 per registry CAP-B01"):
         if anc not in to_t:
             hits.append(("optimal-table-of-organization.md", 0,
@@ -4669,7 +4693,7 @@ def quote_coverage_hits():
     for anc in ("Post-review RFQ movement (recorded 2026-09-18",
                 "**$20,273,515**",
                 "coverage dispositions stand unchanged",
-                "7,247 | 9,271 | 6,925"):
+                "7,247 | 9,271 | 6,918"):
         if anc not in body:
             hits.append((rel, 0, f'missing required anchor "{anc}"'))
     return hits

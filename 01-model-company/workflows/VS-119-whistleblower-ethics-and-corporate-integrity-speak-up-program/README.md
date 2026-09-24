@@ -10,7 +10,7 @@ Whistleblower, Ethics & Corporate Integrity (Speak-Up) Program workflows for Bui
 Corp. — governing the **enterprise-wide speak-up and business-ethics program** that gives every
 employee, contractor, vendor, and stakeholder a confidential channel to raise concerns about
 misconduct, and that investigates, resolves, and learns from those concerns. BuildRight operates
-6,925 employees across 200 stores, 4 DCs, and 5 legal entities (profile §4), uses ~10–20%
+6,918 employees across 200 stores, 4 DCs, and 5 legal entities (profile §4), uses ~10–20%
 contingent/outsourced labor (VS-98), runs ~800–1,000 vendors and ~40% import spend, earns ~10%
 B2G revenue (RA 9184 procurement) and ~30% B2B/project revenue, and handles cash, payments, and
 consumer data at scale — an exposure surface that spans anti-bribery/corruption (ABC), anti-

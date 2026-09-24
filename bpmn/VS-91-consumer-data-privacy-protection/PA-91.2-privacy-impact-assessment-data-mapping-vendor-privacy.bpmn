@@ -537,7 +537,7 @@ Owner: Data Protection Officer (DPO)</bpmn:text>
     <bpmn:process id="W_W3056" name="W3056. Privacy Awareness Training &amp; Employee Compliance Program" isExecutable="false">
       <bpmn:documentation>Trigger: Onboarding + annual refresh
 Frequency: Annual + onboarding
-Volume: ~6,925 employees
+Volume: ~6,918 employees
 Owner: DPO (with HR/L&amp;D)
 Participants: DPO, HR/L&amp;D, Compliance, IT Security
 Source: workflow W3056 — Privacy Awareness Training &amp; Employee Compliance Program</bpmn:documentation>
