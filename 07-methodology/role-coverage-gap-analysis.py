@@ -115,9 +115,14 @@ def analyze():
             touched |= {b for b, _ in resolve_all(res, r)}
         est = estate(w["vs"])
         if not touched & CHARTERED:
+            note = est or ""
+            if not note and "sys" in touched and w["owner"]:
+                ob, _, ot, _ = res.resolve(w["owner"])
+                if ob == "sys":
+                    note = "Automated (system-owned)"
             class_a.append({"wid": w["id"], "title": w["title"], "vs": w["vs"],
                             "pa": w["pa"], "owner": grc.norm(w["owner"]) if w["owner"] else "—",
-                            "est": est or ""})
+                            "est": note})
         elif own[0][0] not in CHARTERED and not any(b in CHARTERED for b, _ in own):
             key = grc.norm(w["owner"])
             e = b_forms[key]
@@ -191,8 +196,11 @@ def render(wfs, class_a, class_b, span, part_only, anchor):
     a("")
 
     est_a = sum(1 for r in class_a if r["est"])
+    sys_a = sum(1 for r in class_a if r["est"].startswith("Automated"))
     a(f"> {est_a} of the {len(class_a)} Class-A rows sit inside registered dormancy")
-    a(f"> estates (by-design retained design); {len(class_a) - est_a} are open gaps.")
+    a(f"> estates (by-design retained design) and {sys_a} more are system-owned")
+    a(f"> automated workflows (no human role by design);")
+    a(f"> {len(class_a) - est_a - sys_a} are open gaps.")
     a("")
 
     forms = defaultdict(lambda: {"n": 0, "vs": set()})

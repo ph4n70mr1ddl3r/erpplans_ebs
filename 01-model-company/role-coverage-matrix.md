@@ -22,7 +22,7 @@
 |---|---|
 | Workflows mapped | 5433 (exactly one Owner each — asserted) |
 | Confirmed Tier register | 5456 rows (Tier 1: 1396 · Tier 2: 3302 · Tier 3: 758) |
-| Distinct resolved actors | 4231 — §5.3 register roles 195 · IT product-model seats 32 · store field 12 · DC field 27 · department-level actors 2973 · system actors 31 · governance 59 · workforce 101 · external 801 · uncharted 0 |
+| Distinct resolved actors | 4226 — §5.3 register roles 195 · IT product-model seats 32 · store field 12 · DC field 27 · department-level actors 2968 · system actors 31 · governance 59 · workforce 101 · external 801 · uncharted 0 |
 
 > Tier mix = confirmed tiers of the workflows a role touches (a workflow
 > counts once per role regardless of how many steps mention it). HC is
@@ -50,9 +50,9 @@
 | Chartered roles (register 192 + IT seats 32 + store 8 + DC 27) | 259 |
 | With ≥1 explicit RACI anchor | 259 (100%) |
 | ZERO-anchor — the anchoring worklist | 0 (hq 0 · it 0 · store 0 · dc 0) |
-| Weakly anchored (1–2 workflows) — demand-verification watchlist | 64 |
+| Weakly anchored (1–2 workflows) — demand-verification watchlist | 62 |
 
-### Weak-anchor watchlist — 64 chartered roles anchored in only 1–2 workflows
+### Weak-anchor watchlist — 62 chartered roles anchored in only 1–2 workflows
 
 | Role | Charter source | HC | Workflows touched |
 |---|---|---|---|
@@ -71,7 +71,6 @@
 | Replenishment & Allocation Analyst | §5.3 register — Supply Chain & Logistics | 2 | 1 |
 | Senior LP Analytics Analyst | §5.3 register — Regional Loss Prevention | 1 | 1 |
 | Sourcing & Screening Coordinator | §5.3 register — Human Resources | 1 | 1 |
-| Store HR Coordinator (one per district) | §5.3 register — Human Resources | 13 | 1 |
 | TA Coordinator | §5.3 register — Human Resources | 1 | 1 |
 | Technical Accounting Manager | §5.3 register — Finance & Accounting | 1 | 1 |
 | Wellness Coordinator | §5.3 register — Health, Safety & Environment | 1 | 1 |
@@ -104,7 +103,6 @@
 | Operations Compliance Lead | §5.3 register — Internal Audit & Risk | 1 | 2 |
 | Paralegal / Contracts Specialist | §5.3 register — Legal & Compliance | 2 | 2 |
 | Payroll Supervisor | §5.3 register — Human Resources | 1 | 2 |
-| Promotions & Campaigns Manager | §5.3 register — Marketing | 1 | 2 |
 | Purchasing / PO Specialist | §5.3 register — Supply Chain & Logistics | 6 | 2 |
 | Real-Estate & Site-Selection Analyst | §5.3 register — Facilities & Real Estate | 1 | 2 |
 | Retail Media Operations Specialist | §5.3 register — Marketing | 1 | 2 |
@@ -199,10 +197,10 @@
 | Purchasing / PO Specialist | Supply Chain & Logistics | 6 | 0 | 2 | 0 | 0 | 2 | 2 | 0 | 0 |
 | Senior Demand Planner | Supply Chain & Logistics | 1 | 0 | 2 | 0 | 0 | 2 | 2 | 0 | 0 |
 | Replenishment & Allocation Analyst | Supply Chain & Logistics | 2 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
+| Learning & Development Manager | Human Resources | 1 | 39 | 38 | 115 | 18 | 47 | 9 | 34 | 4 |
 | Compensation & Benefits Manager | Human Resources | 1 | 24 | 38 | 79 | 2 | 41 | 7 | 30 | 4 |
 | HR Shared Services Lead | Human Resources | 1 | 21 | 7 | 11 | 18 | 31 | 2 | 26 | 3 |
 | Labor Relations Director | Human Resources | 1 | 19 | 21 | 40 | 4 | 26 | 12 | 12 | 2 |
-| Learning & Development Manager | Human Resources | 1 | 15 | 12 | 43 | 18 | 21 | 5 | 15 | 1 |
 | People Analytics Analyst | Human Resources | 1 | 13 | 21 | 40 | 0 | 26 | 0 | 9 | 17 |
 | Payroll Manager | Human Resources | 1 | 11 | 15 | 31 | 51 | 30 | 19 | 10 | 1 |
 | HR Business Partner (one per region) | Human Resources | 6 | 10 | 47 | 84 | 17 | 55 | 22 | 28 | 5 |
@@ -210,6 +208,7 @@
 | Benefits Specialist | Human Resources | 2 | 5 | 1 | 10 | 2 | 6 | 5 | 1 | 0 |
 | L&D Specialist / Trainer | Human Resources | 4 | 5 | 0 | 11 | 12 | 6 | 0 | 5 | 1 |
 | Payroll Specialist | Human Resources | 4 | 4 | 21 | 58 | 8 | 29 | 18 | 10 | 1 |
+| Store HR Coordinator (one per district) | Human Resources | 13 | 4 | 3 | 13 | 16 | 7 | 1 | 6 | 0 |
 | HRIS & HR-Technology Administrator | Human Resources | 1 | 4 | 2 | 11 | 5 | 5 | 1 | 4 | 0 |
 | VP Human Resources | Human Resources | 1 | 3 | 7 | 20 | 37 | 22 | 7 | 15 | 0 |
 | Talent Acquisition Manager | Human Resources | 1 | 3 | 3 | 9 | 34 | 16 | 0 | 13 | 3 |
@@ -220,11 +219,11 @@
 | Timekeeping & Attendance Analyst | Human Resources | 1 | 0 | 2 | 0 | 0 | 2 | 2 | 0 | 0 |
 | Payroll & Statutory Remittance Officer | Human Resources | 1 | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
 | Sourcing & Screening Coordinator | Human Resources | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
-| Store HR Coordinator (one per district) | Human Resources | 13 | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 |
 | TA Coordinator | Human Resources | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Marketplace Manager | Marketing | 2 | 34 | 66 | 59 | 92 | 79 | 10 | 53 | 16 |
 | Loyalty & CRM Manager | Marketing | 1 | 25 | 30 | 68 | 41 | 43 | 3 | 28 | 12 |
 | Retail Media & Marketplace Manager | Marketing | 1 | 25 | 7 | 53 | 19 | 30 | 2 | 22 | 6 |
+| Promotions & Campaigns Manager | Marketing | 1 | 22 | 0 | 0 | 0 | 22 | 1 | 20 | 1 |
 | Consumer Insights Manager | Marketing | 1 | 21 | 24 | 35 | 4 | 34 | 1 | 11 | 22 |
 | Brand & Communications Manager | Marketing | 1 | 19 | 67 | 75 | 4 | 86 | 21 | 57 | 8 |
 | Digital Marketing Manager | Marketing | 3 | 19 | 23 | 57 | 10 | 28 | 1 | 13 | 14 |
@@ -236,7 +235,6 @@
 | CRM Manager | Marketing | 1 | 4 | 6 | 6 | 16 | 10 | 3 | 2 | 5 |
 | CRM Data Steward | Marketing | 2 | 3 | 5 | 11 | 4 | 5 | 3 | 2 | 0 |
 | Campaign Manager | Marketing | 2 | 2 | 14 | 28 | 5 | 14 | 3 | 8 | 3 |
-| Promotions & Campaigns Manager | Marketing | 1 | 2 | 0 | 0 | 0 | 2 | 0 | 2 | 0 |
 | Performance-Marketing Specialist | Marketing | 2 | 1 | 4 | 16 | 0 | 4 | 0 | 1 | 3 |
 | Marketing Comms Specialist | Marketing | 1 | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 |
 | Retail Media Operations Specialist | Marketing | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 1 | 1 |
@@ -294,7 +292,7 @@
 | Metrology & Weights-Measures Specialist | Quality Management | 1 | 25 | 39 | 85 | 5 | 29 | 3 | 22 | 4 |
 | Quality Inspector (Incoming Inspection) | Quality Management | 2 | 3 | 15 | 27 | 1 | 20 | 5 | 13 | 2 |
 | Supplier-Quality (Vendor QA) Auditor | Quality Management | 1 | 1 | 2 | 5 | 4 | 3 | 0 | 3 | 0 |
-| Energy Manager | Facilities & Real Estate | 1 | 28 | 42 | 71 | 43 | 50 | 2 | 36 | 12 |
+| Energy Manager | Facilities & Real Estate | 1 | 51 | 66 | 143 | 104 | 73 | 4 | 52 | 17 |
 | Facilities Manager | Facilities & Real Estate | 2 | 24 | 23 | 90 | 67 | 60 | 7 | 36 | 17 |
 | Surety Program Manager | Facilities & Real Estate | 1 | 23 | 24 | 65 | 1 | 24 | 4 | 16 | 4 |
 | Director, Facilities & Real Estate (dual-hat GM, BuildRight Property Mgmt, Inc.) | Facilities & Real Estate | 1 | 14 | 0 | 0 | 0 | 14 | 3 | 10 | 1 |
@@ -381,11 +379,11 @@
 |---|---|---|---|---|---|---|---|---|---|
 | DC Manager | DC (field, per-DC roster) | 18 | 133 | 99 | 147 | 209 | 82 | 98 | 29 |
 | Receiving Clerks | DC (field, per-DC roster) | 18 | 72 | 166 | 9 | 112 | 35 | 71 | 6 |
+| Shift Supervisors | DC (field, per-DC roster) | 14 | 7 | 9 | 31 | 17 | 12 | 4 | 1 |
 | Inventory Control Supervisor | DC (field, per-DC roster) | 11 | 22 | 27 | 30 | 26 | 7 | 17 | 2 |
 | Dispatch Coordinators | DC (field, per-DC roster) | 9 | 19 | 49 | 27 | 35 | 18 | 12 | 5 |
 | Returns Processors | DC (field, per-DC roster) | 8 | 13 | 18 | 0 | 16 | 5 | 11 | 0 |
 | Outbound/Shipping Supervisor | DC (field, per-DC roster) | 6 | 8 | 12 | 7 | 11 | 7 | 1 | 3 |
-| Shift Supervisors | DC (field, per-DC roster) | 6 | 3 | 6 | 12 | 9 | 7 | 2 | 0 |
 | Incoming Inspection Checkers | DC (field, per-DC roster) | 5 | 11 | 31 | 0 | 14 | 4 | 10 | 0 |
 | Safety & Compliance Coordinator | DC (field, per-DC roster) | 5 | 5 | 17 | 12 | 9 | 3 | 4 | 2 |
 | Receiving Supervisor | DC (field, per-DC roster) | 4 | 15 | 17 | 17 | 19 | 9 | 8 | 2 |
@@ -1545,7 +1543,6 @@
 | Web Scraping Tools | Information Technology | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Hr | Human Resources | 64 | 389 | 391 | 18 | 442 | 96 | 292 | 54 |
 | Hr Manager | Human Resources | 26 | 41 | 96 | 110 | 89 | 36 | 43 | 10 |
-| Eeo | Human Resources | 23 | 24 | 72 | 61 | 24 | 2 | 17 | 5 |
 | Screening Program Manager | Human Resources | 23 | 1 | 66 | 2 | 24 | 4 | 18 | 2 |
 | L&D | Human Resources | 19 | 72 | 76 | 0 | 78 | 4 | 67 | 7 |
 | Ta Marketing | Human Resources | 17 | 19 | 47 | 2 | 20 | 0 | 16 | 4 |
@@ -1731,7 +1728,6 @@
 | Wellness Vendors | Human Resources | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Wfm Lead | Human Resources | 0 | 0 | 0 | 1 | 1 | 0 | 1 | 0 |
 | Sales Enablement | Marketing | 28 | 35 | 77 | 0 | 37 | 1 | 27 | 9 |
-| Event Marketing Manager | Marketing | 20 | 0 | 0 | 0 | 20 | 1 | 18 | 1 |
 | Marketing Manager | Marketing | 19 | 27 | 49 | 51 | 50 | 5 | 27 | 18 |
 | Marketing | Marketing | 16 | 248 | 189 | 3 | 284 | 21 | 205 | 58 |
 | Insights | Marketing | 10 | 67 | 68 | 0 | 76 | 8 | 47 | 21 |
@@ -2771,7 +2767,6 @@
 | Project Sponsor | Strategy / Corporate Planning | 1 | 3 | 1 | 0 | 4 | 1 | 2 | 1 |
 | Transformation | Strategy / Corporate Planning | 1 | 1 | 2 | 0 | 1 | 0 | 1 | 0 |
 | Sponsors | Strategy / Corporate Planning | 0 | 12 | 0 | 0 | 12 | 0 | 9 | 3 |
-| Trade Capability | Trade / Account Management | 24 | 26 | 72 | 0 | 26 | 4 | 19 | 3 |
 | Pro-Referral Network Manager | Trade / Account Management | 24 | 0 | 0 | 0 | 24 | 1 | 21 | 2 |
 | Account Manager | Trade / Account Management | 21 | 36 | 80 | 3 | 46 | 2 | 35 | 9 |
 | Commercial | Trade / Account Management | 21 | 3 | 35 | 0 | 25 | 3 | 18 | 4 |
@@ -2891,7 +2886,6 @@
 | Tax | Finance & Accounting (Tax) | 9 | 84 | 76 | 0 | 96 | 33 | 60 | 3 |
 | Master Data | Merchandising & Buying (Master Data) | 9 | 40 | 36 | 0 | 49 | 16 | 32 | 1 |
 | Data Science | DP Data Scientist / ML | 8 | 34 | 39 | 0 | 37 | 13 | 16 | 8 |
-| Dark Store Shift Supervisor | Digital Commerce (IT-built platforms) | 8 | 4 | 3 | 19 | 8 | 5 | 2 | 1 |
 | Gm, Digital Commerce Inc | Digital Commerce (IT-built platforms) | 6 | 0 | 0 | 0 | 6 | 0 | 4 | 2 |
 | Department Head | Generic / cross-department | 5 | 27 | 31 | 24 | 50 | 15 | 29 | 6 |
 | Ecommerce Operations | Digital Commerce (IT-built platforms) | 5 | 9 | 3 | 12 | 14 | 2 | 10 | 2 |
@@ -2899,7 +2893,6 @@
 | Loyalty | Marketing (Loyalty) | 4 | 56 | 26 | 0 | 56 | 15 | 30 | 11 |
 | Payroll | Human Resources (Payroll) | 4 | 43 | 46 | 1 | 49 | 16 | 33 | 0 |
 | Department Heads | Generic / cross-department | 4 | 33 | 15 | 3 | 44 | 15 | 22 | 7 |
-| Store Hr Administrator | Store HR Coordinator | 4 | 2 | 12 | 16 | 6 | 1 | 5 | 0 |
 | Cross-Entity | Generic / cross-department | 3 | 9 | 12 | 0 | 14 | 6 | 7 | 1 |
 | Requesting Department Head | Generic / cross-department | 3 | 3 | 0 | 0 | 5 | 2 | 2 | 1 |
 | E-Commerce Operations Manager | Digital Commerce (IT-built platforms) | 3 | 1 | 3 | 1 | 3 | 2 | 0 | 1 |

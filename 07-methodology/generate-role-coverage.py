@@ -213,6 +213,19 @@ ROLE_ALIASES = {
     "fp&a": "FP&A Manager",
     "compliance officer": "Compliance Manager / MLRO",
     "market research analyst": "Insights Analyst",
+    # open Class-A (role-less) clusters promoted to the chartered seats they
+    # denote — EEO (the RA-11285 Energy Efficiency Officer, VS-120) -> Energy
+    # Manager; Event Marketing Manager (VS-139) -> Promotions & Campaigns
+    # Manager (whose mandate carries event P&L); Trade Capability (VS-123
+    # apprenticeship) -> Learning & Development Manager; plus Store HR
+    # Administrator -> Store HR Coordinator (one per district) and Dark Store
+    # Shift Supervisor -> DC:Shift Supervisors (dark stores are DC-model nodes).
+    "eeo": "Energy Manager",
+    "event marketing manager": "Promotions & Campaigns Manager",
+    "trade capability": "Learning & Development Manager",
+    "store hr administrator": "Store HR Coordinator (one per district)",
+    "dark store shift supervisor": "DC:Shift Supervisors",
+
     "receiving clerk": "DC:Receiving Clerk",
     # --- Role-anchoring worklist remediation (batch 31, 2026-09-23): corpus
     # forms promoted to the chartered titles they denote (zero-anchor worklist
@@ -958,10 +971,10 @@ DEPT_ACTORS = {
     "b2b sales manager": "Trade / Account Management", "field sales rep": "Trade / Account Management",
     "trade sales representative": "Trade / Account Management", "solar sales coordinator": "Trade / Account Management",
     "project sales manager": "Trade / Account Management", "trade marketing manager": "Trade / Account Management",
-    "pro-referral network manager": "Trade / Account Management", "trade capability": "Trade / Account Management",
+    "pro-referral network manager": "Trade / Account Management",
     "sales operations": "Trade / Account Management",
     "dark store operations manager": "Digital Commerce (IT-built platforms)",
-    "dark store shift supervisor": "Digital Commerce (IT-built platforms)",
+   
     "e-commerce operations manager": "Digital Commerce (IT-built platforms)",
     "ecommerce operations": "Digital Commerce (IT-built platforms)",
     "ecommerce product manager": "Digital Commerce (IT-built platforms)",
@@ -982,8 +995,8 @@ DEPT_ACTORS = {
     "employer brand lead": "Human Resources", "ta operations": "Human Resources",
     "screening program manager": "Human Resources", "head of global mobility": "Human Resources",
     "immigration operations lead": "Human Resources", "ocm lead": "Human Resources",
-    "store hr administrator": "Store HR Coordinator", "eap manager": "Human Resources", "eeo": "Human Resources",
-    "event marketing manager": "Marketing", "marketing events coordinator": "Marketing",
+    "eap manager": "Human Resources",
+    "marketing events coordinator": "Marketing",
     "marketing analyst": "Marketing", "visual merchandiser": "Merchandising & Buying",
     "store design manager": "Merchandising & Buying",
     "it integration lead": "Information Technology", "it innovation lead": "Information Technology",

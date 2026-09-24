@@ -19,10 +19,10 @@
 | Measure | Value |
 |---|---|
 | Workflows analyzed | 5433 (population-pinned) |
-| Class C — healthy (≥1 chartered owner) | 3799 |
-| Class B — owner-grain gap (chartered roles touched, owner not chartered) | 1447 |
-| Class A — role-less (no chartered role in any RACI cell) | 187 |
-| Anchoring census (role → workflow arm, pinned by Check 71) | 259 chartered / 259 anchored / 0 zero-anchor / 64 weak |
+| Class C — healthy (≥1 chartered owner) | 3871 |
+| Class B — owner-grain gap (chartered roles touched, owner not chartered) | 1412 |
+| Class A — role-less (no chartered role in any RACI cell) | 150 |
+| Anchoring census (role → workflow arm, pinned by Check 71) | 259 chartered / 259 anchored / 0 zero-anchor / 62 weak |
 
 > **Adjudication policy.** Department-grain ownership ('Finance', 'Legal',
 > 'HR' as performer) is acceptable only where the work is genuinely
@@ -35,7 +35,7 @@
 > disable-not-delete doctrine). Classes A/B only legitimately move
 > downward; any increase forces conscious re-adjudication.
 
-## Class A — Role-less workflows (187)
+## Class A — Role-less workflows (150)
 
 No chartered role appears in Owner, Participants, or either Steps Role
 cell. Estate-annotated rows are retained design under a registered
@@ -61,19 +61,19 @@ estate).
 | W2137 | Extended Warranty Claim Processing | VS-53 | PA-53.3 | Extended Warranty Claims Specialist |  |
 | W2144 | Digital Gift Card Sale & Delivery | VS-54 | PA-54.1 | Ecommerce Operations |  |
 | W2145 | Corporate Bulk Gift Card Program | VS-54 | PA-54.1 | Corporate Sales Manager |  |
-| W2151 | Online Gift Card Redemption | VS-54 | PA-54.2 | Ecommerce System |  |
+| W2151 | Online Gift Card Redemption | VS-54 | PA-54.2 | Ecommerce System | Automated (system-owned) |
 | W2158 | Daily Gift Card Liability Reconciliation | VS-54 | PA-54.3 | Accountant (AP/AR) |  |
 | W5511 | Gift Card Dormancy Monitoring, Escheat Evaluation & Expired-Liability Derecognition | VS-54 | PA-54.3 | Finance Manager |  |
 | W2200 | Customer Home Delivery SLA Management | VS-56 | PA-56.2 | Ecommerce Logistics Coordinator |  |
 | W2227 | Trade Price Competitive Alignment | VS-57 | PA-57.2 | Trade Sales Manager |  |
-| W2247 | Online Coupon & Promo Code Redemption | VS-58 | PA-58.2 | Ecommerce System |  |
+| W2247 | Online Coupon & Promo Code Redemption | VS-58 | PA-58.2 | Ecommerce System | Automated (system-owned) |
 | W2253 | Coupon Vendor Reconciliation | VS-58 | PA-58.2 | Finance Analyst |  |
 | W2286 | Order Source Selection Engine | VS-60 | PA-60.1 | Ecommerce Operations Manager | OMO build squad deferred—prepared (ah), sourcing register §4 |
 | W2287 | Mixed-Basket Order Splitting | VS-60 | PA-60.1 | Order Management System | OMO build squad deferred—prepared (ah), sourcing register §4 |
 | W2294 | Multi-Source Fulfillment Coordination | VS-60 | PA-60.2 | Order Management System | OMO build squad deferred—prepared (ah), sourcing register §4 |
 | W2296 | Split Order Customer Communication | VS-60 | PA-60.2 | Customer Communication System | OMO build squad deferred—prepared (ah), sourcing register §4 |
 | W2300 | Fulfillment Quality Control | VS-60 | PA-60.2 | Ecommerce Quality Coordinator | OMO build squad deferred—prepared (ah), sourcing register §4 |
-| W2414 | Marketplace Order Download & Processing | VS-65 | PA-65.2 | Order Management System |  |
+| W2414 | Marketplace Order Download & Processing | VS-65 | PA-65.2 | Order Management System | Automated (system-owned) |
 | W2431 | In-Home Measurement Visit | VS-66 | PA-66.1 | Project Consultant |  |
 | W2443 | Project Payment Collection & Milestone Billing | VS-66 | PA-66.2 | Finance Analyst |  |
 | W2447 | Project Timeline Management | VS-66 | PA-66.3 | Project Consultant |  |
@@ -97,9 +97,6 @@ estate).
 | W3036 | Damage Claim Refund, Credit Note & Financial Reconciliation | VS-90 | PA-90.3 | Finance Manager (AR) |  |
 | W3038 | Damage Claims Subrogation to Vendor / Carrier | VS-90 | PA-90.3 | Claims Manager |  |
 | W3092 | Dark Store System Integration, WMS & Robotics Commissioning | VS-93 | PA-93.1 | IT – Applications |  |
-| W3101 | Dispatch Scheduling, Carrier Handoff & Route Consolidation | VS-93 | PA-93.2 | Dark Store Shift Supervisor |  |
-| W3102 | Same-Day / Next-Day Delivery Cut-Off & SLA Management | VS-93 | PA-93.2 | Dark Store Shift Supervisor |  |
-| W3104 | Dark Store Returns, Reverse Putaway & Exception Handling | VS-93 | PA-93.2 | Dark Store Shift Supervisor |  |
 | W3171 | Lease Asset Tracking, Maintenance & Inspection | VS-96 | PA-96.2 | Lease Operations Manager |  |
 | W3175 | Lease Maturity, Return Inspection & Disposition | VS-96 | PA-96.2 | Lease Operations Manager |  |
 | W3194 | Commercial Tenant Acquisition & Lease Origination | VS-97 | PA-97.2 | Leasing Manager |  |
@@ -135,31 +132,6 @@ estate).
 | W3724 | Disciplinary, Corrective & Remediation Action | VS-119 | PA-119.2 | Ethics & Compliance Officer / HR |  |
 | W3725 | Retaliation Monitoring & Protection | VS-119 | PA-119.2 | Ethics & Compliance Officer / HR |  |
 | W3734 | Ethics Program Audit & Assurance | VS-119 | PA-119.3 | Ethics & Compliance Officer / Internal Audit |  |
-| W3738 | RA 11285 Designated-Establishment Classification & DOE Registration | VS-120 | PA-120.1 | EEO / Compliance |  |
-| W3742 | Energy Procurement, Retail Competition (RES) & Contract Management | VS-120 | PA-120.1 | EEO / Procurement |  |
-| W3744 | EEC Policy, Authority & Records Management | VS-120 | PA-120.1 | EEO / Compliance |  |
-| W3745 | Mandatory Energy Audit & Audit-Firm Management | VS-120 | PA-120.2 | EEO / Facilities |  |
-| W3746 | Investment-Grade Energy Audit & ECM Identification | VS-120 | PA-120.2 | EEO / Facilities |  |
-| W3748 | Energy Conservation Plan Development & DOE Submission | VS-120 | PA-120.2 | EEO / Compliance |  |
-| W3750 | Building Systems & Operations Energy Optimization | VS-120 | PA-120.2 | EEO / Facilities |  |
-| W3751 | Behavioral, Organizational & Store-Level Energy Management | VS-120 | PA-120.2 | EEO / Store Ops / HR |  |
-| W3752 | Renewable, Self-Generation & Grid-Interaction Integration | VS-120 | PA-120.2 | EEO / Renewable Program |  |
-| W3753 | ECM Project Delivery, Commissioning & Handover | VS-120 | PA-120.3 | EEO / Facilities / PMO |  |
-| W3755 | DOE EICC/Energy Reporting & Compliance Submission | VS-120 | PA-120.3 | EEO / Compliance |  |
-| W3758 | Multi-Entity/Site Energy Management & Consolidated Reporting | VS-120 | PA-120.3 | EEO / Cross-Entity |  |
-| W3759 | Energy Compliance Audit & Assurance | VS-120 | PA-120.3 | EEO / Internal Audit |  |
-| W3810 | Apprenticeship Curriculum & Competency Standard Design | VS-123 | PA-123.1 | Trade Capability / L&D |  |
-| W3811 | TESDA Program Registration, Dual-Training & Compliance | VS-123 | PA-123.1 | Trade Capability / Compliance |  |
-| W3814 | Apprentice Recruitment, Selection & Employer-Brand Linkage | VS-123 | PA-123.1 | Trade Capability / TA Marketing |  |
-| W3819 | Trade Competency Assessment, Practical Examination & Certification Sign-Off | VS-123 | PA-123.2 | Trade Capability / Master Tradespersons |  |
-| W3820 | Mentor / Master-Tradesperson Network & Coaching Operations | VS-123 | PA-123.2 | Trade Capability / Store Ops |  |
-| W3821 | Apprentice Progress Tracking, Feedback & Welfare Management | VS-123 | PA-123.2 | Trade Capability / HR |  |
-| W3823 | Apprenticeship Safety, PPE & Trade-Specific HSE Integration | VS-123 | PA-123.2 | Trade Capability / HSE |  |
-| W3827 | Instructor / Master-Trainer Pipeline, Qualification & Development | VS-123 | PA-123.3 | Trade Capability / L&D |  |
-| W3828 | Assessor Qualification, Standardization & Calibration | VS-123 | PA-123.3 | Trade Capability / Quality / Compliance |  |
-| W3829 | Trade Knowledge Management, Content Library & Curriculum Asset Management | VS-123 | PA-123.3 | Trade Capability / L&D |  |
-| W3831 | Trade-Certification Compliance Audit & External Accreditation Maintenance | VS-123 | PA-123.3 | Trade Capability / Compliance / Audit |  |
-| W3841 | Product Knowledge Mastery Program & Role-Based Knowledge Standards | VS-124 | PA-124.2 | Sales Enablement / Merchandising |  |
 | W3842 | Product Knowledge Certification, Assessment & Recertification | VS-124 | PA-124.2 | Sales Enablement / L&D |  |
 | W3858 | Fraud Risk Assessment & Cross-Channel Fraud Typology Catalog | VS-125 | PA-125.1 | Fraud Management / Risk |  |
 | W3860 | Fraud Case Management & Investigation Workflow | VS-125 | PA-125.1 | Fraud Management |  |
@@ -177,15 +149,7 @@ estate).
 | W4156 | How-To & Rich Content Authoring (Guides, Video, 360°) | VS-137 | PA-137.2 | Content Marketing Lead (VS-14) / DAM |  |
 | W4158 | Asset Versioning, Localization & Obsolescence | VS-137 | PA-137.2 | DAM Manager |  |
 | W4178 | Pest Control, Vector & Rodent Management | VS-138 | PA-138.2 | Facilities Soft-Services Lead / Licensed Pest-Control Provider |  |
-| W4197 | Vendor Co-Funding, Co-Exhibition & MDF Coordination | VS-139 | PA-139.1 | Event Marketing Manager / Vendor Mgmt (VS-03) / Trade Marketing |  |
-| W4198 | Event Compliance, Permits & Promo-Prize Governance | VS-139 | PA-139.1 | Event Marketing Manager / Compliance (VS-22) / Legal (VS-100.3) |  |
-| W4200 | Event Brief, Objectives & Success-Metric Definition | VS-139 | PA-139.1 | Event Marketing Manager |  |
-| W4202 | Show Registration, Sponsorship & Space Contracting | VS-139 | PA-139.2 | Event Marketing Manager / Legal (VS-100.3) |  |
-| W4203 | Product Display, Demo & Sample Coordination | VS-139 | PA-139.2 | Event Marketing Manager / Merchandising (VS-01) / Trade Marketing |  |
-| W4206 | Event Travel, Accommodation & Per-Diem Management | VS-139 | PA-139.2 | Event Marketing Manager / Admin / Travel Coordinator |  |
-| W4207 | Show Teardown, Asset Recovery & Return Logistics | VS-139 | PA-139.2 | Event Marketing Manager / Logistics (VS-06) |  |
 | W4208 | Health, Safety & Incident Management at Events | VS-139 | PA-139.2 | Event Lead / HSE (VS-24) |  |
-| W4213 | Digital & Hybrid Event / Webinar Operations | VS-139 | PA-139.3 | Event Marketing Manager / Digital (VS-10/VS-14) |  |
 | W4291 | Customer Delivery Scheduling, Time-Window & Routing Management | VS-143 | PA-143.1 | Bulky-Delivery Scheduling / Customer Service (VS-13) |  |
 | W4292 | Bulky Item Order Capture, Eligibility & Pre-Delivery Verification | VS-143 | PA-143.1 | Merchandising (VS-01) / Bulky-Delivery Ops / Ecommerce (VS-10) |  |
 | W4293 | Two-Man Crew, Driver & Installer Authorization, Training & Certification | VS-143 | PA-143.1 | Bulky-Delivery Operations / HR (VS-19) / HSE (VS-24) |  |
@@ -221,7 +185,6 @@ estate).
 | W5217 | Conditional Progress Waiver of Lien Issuance (upon Delivery) | VS-181 | PA-181.3 | Project Billing Clerk / AR Specialist |  |
 | W5241 | Direct Port-to-Jobsite Transit Logistics Planning and Route Survey | VS-182 | PA-182.3 | Logistics Fleet Supervisor |  |
 | W5243 | Direct Delivery Container Devanning and Joint Quantity Survey at Jobsite | VS-182 | PA-182.3 | B2B Sourcing Quality Inspector |  |
-| W5254 | Student-Trainee Profiling and Non-Employee Profile Provisioning | VS-183 | PA-183.1 | Store HR Administrator |  |
 | W5275 | Detailed Technical Damage Quantification and Geodetic Survey | VS-184 | PA-184.1 | Quantity Surveyor / Project Engineer |  |
 | W5276 | Insurance Loss Adjuster Audit Coordination and Proof of Loss Submission | VS-184 | PA-184.1 | Insurance Administrator |  |
 | W5313 | Quarterly Cooperative Purchase Volume Accumulation Audit | VS-185 | PA-185.3 | Chief Accountant |  |
@@ -233,10 +196,12 @@ estate).
 | W5484 | Green Fleet Driver & Technician Training, Certification & Behavior Incentive Program | VS-192 | PA-192.3 | Fleet Training & Enablement Lead (VS-06.2/VS-19.4) |  |
 | W5487 | EV Battery Second-Life, End-of-Life Recycling & RA 11898 EPR Linkage | VS-192 | PA-192.3 | Fleet Maintenance Manager (VS-06.2) |  |
 
-> 14 of the 187 Class-A rows sit inside registered dormancy
-> estates (by-design retained design); 173 are open gaps.
+> 17 of the 150 Class-A rows sit inside registered dormancy
+> estates (by-design retained design) and 3 more are system-owned
+> automated workflows (no human role by design);
+> 130 are open gaps.
 
-## Class B — Owner-grain gaps (1447)
+## Class B — Owner-grain gaps (1412)
 
 The Owner cell resolves to no chartered role while chartered roles are
 touched elsewhere in the workflow. Aggregated by the literal Owner-cell
@@ -275,7 +240,6 @@ form — the full per-workflow appendix follows the aggregate.
 | Rental Fleet Manager | 7 | 2 | Rental Fleet Manager |
 | Solar Sales Coordinator | 7 | 1 | Solar Sales Coordinator |
 | CIT Operations Manager | 6 | 1 | Cit Operations Manager |
-| EEO / Sustainability | 6 | 1 | Eeo / Sustainability |
 | Employee Experience Manager | 6 | 1 | Employee Experience Manager |
 | Fleet Supervisor | 6 | 1 | Fleet Supervisor |
 | Lease Origination Manager | 6 | 1 | Lease Origination Manager |
@@ -286,7 +250,6 @@ form — the full per-workflow appendix follows the aggregate.
 | Treasury | 6 | 3 | Treasury |
 | Compliance Specialist | 5 | 3 | Compliance Specialist |
 | Compliance Specialist (Environmental) | 5 | 1 | Compliance Specialist |
-| Dark Store Shift Supervisor | 5 | 1 | Dark Store Shift Supervisor |
 | Ethics & Compliance Officer | 5 | 1 | Ethics & Compliance Officer |
 | Fleet Maintenance Supervisor | 5 | 1 | Fleet Maintenance Supervisor |
 | Fleet Manager | 5 | 3 | Fleet Manager |
@@ -312,6 +275,7 @@ form — the full per-workflow appendix follows the aggregate.
 | Real Estate Investment Manager | 4 | 1 | Real Estate Investment Manager |
 | Regulatory Officer | 4 | 1 | Regulatory Officer |
 | S&OP / Demand Planning | 4 | 1 | S&Op / Demand Planning |
+| Sales Enablement / Merchandising | 4 | 1 | Sales Enablement / Merchandising |
 | AR Accountant | 3 | 2 | Ar Accountant |
 | AR Analyst | 3 | 2 | Ar Analyst |
 | B2B Sourcing Manager | 3 | 2 | B2B Sourcing Manager |
@@ -337,7 +301,6 @@ form — the full per-workflow appendix follows the aggregate.
 | Requesting Department Head | 3 | 3 | Requesting Department Head |
 | SCM / DC Operations | 3 | 1 | Scm / Dc Operations |
 | Sales Enablement / IT | 3 | 1 | Sales Enablement / It |
-| Sales Enablement / Merchandising | 3 | 1 | Sales Enablement / Merchandising |
 | Supply Chain Planning Manager | 3 | 3 | Supply Chain Planning Manager |
 | Trade Marketing Manager | 3 | 3 | Trade Marketing Manager |
 | ABL & Collateral Operations Manager / Finance | 2 | 1 | Abl & Collateral Operations Manager / Finance |
@@ -351,12 +314,10 @@ form — the full per-workflow appendix follows the aggregate.
 | Compliance Specialist (VS-22) | 2 | 1 | Compliance Specialist |
 | Digital Analytics Manager | 2 | 1 | Digital Analytics Manager |
 | Driver | 2 | 1 | Driver |
-| EEO / Finance | 2 | 1 | Eeo / Finance |
 | Ecommerce Catalog Manager | 2 | 1 | Ecommerce Catalog Manager |
 | Ecommerce Content Manager | 2 | 2 | Ecommerce Content Manager |
 | Ecommerce Content Moderator | 2 | 1 | Ecommerce Content Moderator |
 | Ecommerce Merchandiser | 2 | 1 | Ecommerce Merchandiser |
-| Event Marketing Manager | 2 | 1 | Event Marketing Manager |
 | Facilities & Real Estate Manager | 2 | 2 | Facilities & Real Estate Manager |
 | Field Sales Rep / Sales Operations | 2 | 1 | Field Sales Rep / Sales Operations |
 | Finance (Dealer Finance) | 2 | 1 | Finance |
@@ -402,12 +363,10 @@ form — the full per-workflow appendix follows the aggregate.
 | Site Cleanup Supervisor | 2 | 1 | Site Cleanup Supervisor |
 | Solar Technical Support | 2 | 1 | Solar Technical Support |
 | Store Design Manager | 2 | 1 | Store Design Manager |
-| Store HR Administrator | 2 | 1 | Store Hr Administrator |
 | Store Operations IT | 2 | 1 | Store Operations It |
 | Supply Planning Analyst | 2 | 2 | Supply Planning Analyst |
 | TA Marketing / Employer Brand Lead | 2 | 1 | Ta Marketing / Employer Brand Lead |
 | Tax Technology Lead | 2 | 2 | Tax Technology Lead |
-| Trade Capability / L&D | 2 | 1 | Trade Capability / L&D |
 | VP Investor Relations | 2 | 1 | Vp Investor Relations |
 | VP for Engineering & Construction | 2 | 2 | Vp For Engineering & Construction |
 | Visual Merchandiser | 2 | 1 | Visual Merchandiser |
@@ -541,7 +500,6 @@ form — the full per-workflow appendix follows the aggregate.
 | Driver / Delivery Crew | 1 | 1 | Driver / Delivery Crew |
 | E-Commerce Content Manager | 1 | 1 | E-Commerce Content Manager |
 | E-Commerce Operations Supervisor | 1 | 1 | E-Commerce Operations Supervisor |
-| EEO / Facilities-IT | 1 | 1 | Eeo / Facilities-It |
 | ERP Application Manager | 1 | 1 | Erp Application Manager |
 | ESG (VS-25) / Circular Lead / Merchandising | 1 | 1 | Esg / Circular Lead / Merchandising |
 | EV Program Manager / Facilities (VS-138) | 1 | 1 | Ev Program Manager / Facilities |
@@ -576,12 +534,6 @@ form — the full per-workflow appendix follows the aggregate.
 | Ethics & Compliance Officer / Risk | 1 | 1 | Ethics & Compliance Officer / Risk |
 | Ethics & Compliance Officer / Vendor Management | 1 | 1 | Ethics & Compliance Officer / Vendor Management |
 | Event Lead / Trade Sales (VS-11/VS-107) | 1 | 1 | Event Lead / Trade Sales |
-| Event Marketing Manager / Exhibit Designer | 1 | 1 | Event Marketing Manager / Exhibit Designer |
-| Event Marketing Manager / Finance (VS-17.4) | 1 | 1 | Event Marketing Manager / Finance |
-| Event Marketing Manager / Marketing (VS-14) | 1 | 1 | Event Marketing Manager / Marketing |
-| Event Marketing Manager / Trade Sales (VS-11/VS-107) | 1 | 1 | Event Marketing Manager / Trade Sales |
-| Event Marketing Manager / Trade Sales (VS-11/VS-107) / Sales Ops | 1 | 1 | Event Marketing Manager / Trade Sales / Sales Ops |
-| Event Marketing Manager / Trade-Pro Program (VS-43) / Trade Sales | 1 | 1 | Event Marketing Manager / Trade-Pro Program / Trade Sales |
 | Executive Sponsor | 1 | 1 | Executive Sponsor |
 | Facilities / MEP Engineer | 1 | 1 | Facilities / Mep Engineer |
 | Facilities Asset Manager / Real Estate (VS-97/VS-20) / Fixed Assets (VS-35) | 1 | 1 | Facilities Asset Manager / Real Estate / Fixed Assets |
@@ -1057,16 +1009,6 @@ form — the full per-workflow appendix follows the aggregate.
 | Talent Acquisition (VS-121) / Occupational Health (VS-83) / HR | 1 | 1 | Talent Acquisition / Occupational Health / Hr |
 | Tax (VS-79) / Finance (VS-17) / Legal (VS-100.3) | 1 | 1 | Tax / Finance / Legal |
 | Trade & Institutional Sales Manager | 1 | 1 | Trade & Institutional Sales Manager |
-| Trade Capability / Compliance | 1 | 1 | Trade Capability / Compliance |
-| Trade Capability / Finance / HR | 1 | 1 | Trade Capability / Finance / Hr |
-| Trade Capability / HR / Store Ops | 1 | 1 | Trade Capability / Hr / Store Ops |
-| Trade Capability / HR / Strategy | 1 | 1 | Trade Capability / Hr / Strategy |
-| Trade Capability / L&D / Store Ops | 1 | 1 | Trade Capability / L&D / Store Ops |
-| Trade Capability / Merchandising | 1 | 1 | Trade Capability / Merchandising |
-| Trade Capability / Records / L&D | 1 | 1 | Trade Capability / Records / L&D |
-| Trade Capability / Store Ops | 1 | 1 | Trade Capability / Store Ops |
-| Trade Capability / TA Marketing | 1 | 1 | Trade Capability / Ta Marketing |
-| Trade Capability / TA Marketing / HR | 1 | 1 | Trade Capability / Ta Marketing / Hr |
 | Trade Sales (VS-11.2) / Government Sales (VS-46) / PCAB Compliance Lead | 1 | 1 | Trade Sales / Government Sales / Pcab Compliance Lead |
 | Trade Sales (VS-11/VS-107) / Sales Ops | 1 | 1 | Trade Sales / Sales Ops |
 | Transport Dispatcher / Fleet Driver Mgmt (VS-06.2) | 1 | 1 | Transport Dispatcher / Fleet Driver Mgmt |
@@ -1103,7 +1045,7 @@ form — the full per-workflow appendix follows the aggregate.
 | Vendor Warranty Coordinator | 1 | 1 | Vendor Warranty Coordinator |
 | Warranty (VS-53) / Legal (VS-100.3) / Merchandising | 1 | 1 | Warranty / Legal / Merchandising |
 
-### Class B appendix — all 1447 workflows
+### Class B appendix — all 1412 workflows
 
 | Workflow | Title | VS | Owner form (resolved) | Estate |
 |---|---|---|---|---|
@@ -1341,11 +1283,6 @@ form — the full per-workflow appendix follows the aggregate.
 | W3110 | Dark Store Demand Sensing & Dynamic SKU Ranging | VS-93 | Dark Store Operations Manager |  |
 | W3111 | Dark Store Service Level & Customer Experience Analytics | VS-93 | Dark Store Operations Manager |  |
 | W3112 | Dark Store Sustainability, Energy & Waste Optimization | VS-93 | Dark Store Operations Manager |  |
-| W3097 | Dark Store Order Wave Planning & Batch Release | VS-93 | Dark Store Shift Supervisor |  |
-| W3098 | Multi-Order Batch Picking & RF/Automation-Guided Walk Optimization | VS-93 | Dark Store Shift Supervisor |  |
-| W3099 | Pack Station Operations, Quality Check & Right-Box Selection | VS-93 | Dark Store Shift Supervisor |  |
-| W3100 | Pack-Station Consumables, Labeling & Manifest Management | VS-93 | Dark Store Shift Supervisor |  |
-| W3103 | BOPIS / Click-and-Collect Stage & Customer Handover | VS-93 | Dark Store Shift Supervisor |  |
 | W1191 | Construction Site Delivery Coordination, Access Assessment & Crane/Boom Truck Scheduling | VS-6 | Delivery Dispatch Coordinator |  |
 | W4274 | Doorstep Cash Collection, Receipting & POD Capture | VS-142 | Driver / 3Pl / Last-Mile Ops |  |
 | W3906 | Demand Planning & Statistical Baseline Forecasting | VS-127 | Demand Planning |  |
@@ -1394,15 +1331,6 @@ form — the full per-workflow appendix follows the aggregate.
 | W2866 | Mental Health Act (RA 11036) Compliance & DOH Mental Health Program | VS-83 | Eap Manager |  |
 | W2867 | Critical Incident Stress Debriefing & Crisis Support | VS-83 | Eap Manager |  |
 | W5502 | Employee Financial Wellness Program — Literacy Education, Salary-Linked Lender Governance & Debt-Stress Support | VS-83 | Eap Manager |  |
-| W3741 | Energy Data, Metering & Energy Accounting Infrastructure | VS-120 | Eeo / Facilities-It |  |
-| W3743 | EEC Budget, Capex & Investment Governance | VS-120 | Eeo / Finance |  |
-| W3749 | ECM Business Case, Prioritization & Investment Decision | VS-120 | Eeo / Finance |  |
-| W3739 | Energy Efficiency Officer, Energy Manager & Energy Team Management | VS-120 | Eeo / Sustainability |  |
-| W3740 | Energy Policy, Targets & ISO 50001 Energy Management System | VS-120 | Eeo / Sustainability |  |
-| W3747 | Measurement & Verification (M&V) and Energy Performance Tracking | VS-120 | Eeo / Sustainability |  |
-| W3754 | Continuous Energy Performance Monitoring & Optimization | VS-120 | Eeo / Sustainability |  |
-| W3757 | Benchmarking, Store-Energy Rating & Performance Comparison | VS-120 | Eeo / Sustainability |  |
-| W3760 | EEC Program Maturity & Continuous Improvement | VS-120 | Eeo / Sustainability |  |
 | W616 | ERP Business Change Request & Enhancement Backlog Management | VS-27 | Erp Application Manager |  |
 | W4600 | Circular-Economy Impact, ESG Reporting & Program Review | VS-155 | Esg / Circular Lead / Merchandising |  |
 | W4785 | Preventive Maintenance, Cleaning & EVSE Health Monitoring | VS-163 | Ev Program Manager / Facilities |  |
@@ -1494,14 +1422,6 @@ form — the full per-workflow appendix follows the aggregate.
 | W3730 | Ethics Risk Assessment & Heat-Mapping | VS-119 | Ethics & Compliance Officer / Risk |  |
 | W3733 | Third-Party & Supply-Chain Integrity Due Diligence | VS-119 | Ethics & Compliance Officer / Vendor Management |  |
 | W4204 | On-Site Sales, Engagement & Lead Capture | VS-139 | Event Lead / Trade Sales |  |
-| W4194 | Annual Event Portfolio & Calendar Planning | VS-139 | Event Marketing Manager |  |
-| W4199 | Event Cross-Functional Team & Resource Planning | VS-139 | Event Marketing Manager |  |
-| W4201 | Booth/Stand Design, Build & Logistics | VS-139 | Event Marketing Manager / Exhibit Designer |  |
-| W4195 | Event Budget, Business Case & Sponsorship Funding | VS-139 | Event Marketing Manager / Finance |  |
-| W4193 | Event Marketing Strategy & Channel Role | VS-139 | Event Marketing Manager / Marketing |  |
-| W4196 | Event Audience, Targeting & Trade-Pro Invitation | VS-139 | Event Marketing Manager / Trade Sales |  |
-| W4214 | Lead Capture, Qualification & CRM Routing | VS-139 | Event Marketing Manager / Trade Sales / Sales Ops |  |
-| W4209 | Hosted Trade Day & Contractor Event Operations | VS-139 | Event Marketing Manager / Trade-Pro Program / Trade Sales |  |
 | W3438 | Executive-to-Executive Engagement & C-Suite Relationship Programs | VS-107 | Executive Sponsor | B2B estate disabled—prepared (x), registry CAP-B01–B04 |
 | W5323 | Rental Equipment Yard, Wash Bay & Heavy-Equipment Storage Infrastructure Setup | VS-186 | Facilities & Real Estate Manager |  |
 | W5349 | In-Store Take-Back Collection Point Design, Containment & Safety Infrastructure | VS-187 | Facilities & Real Estate Manager |  |
@@ -2330,6 +2250,7 @@ form — the full per-workflow appendix follows the aggregate.
 | W3834 | Selling-Skills Curriculum & Consultative Selling Playbook Development | VS-124 | Sales Enablement / L&D |  |
 | W3845 | Loyalty, Identification & Enrollment Enablement at Point of Sale | VS-124 | Sales Enablement / Loyalty |  |
 | W3835 | Department & Category Selling Playbooks (Attachment, Linked, Project Selling) | VS-124 | Sales Enablement / Merchandising |  |
+| W3841 | Product Knowledge Mastery Program & Role-Based Knowledge Standards | VS-124 | Sales Enablement / Merchandising |  |
 | W3843 | New-Product Launch Enablement & Rapid Knowledge Rollout | VS-124 | Sales Enablement / Merchandising |  |
 | W3848 | Product Knowledge Content & Vendor Training Governance | VS-124 | Sales Enablement / Merchandising |  |
 | W3833 | Sales Enablement Strategy, Operating Model & Governance | VS-124 | Sales Enablement / Store Ops |  |
@@ -2389,8 +2310,6 @@ form — the full per-workflow appendix follows the aggregate.
 | W3477 | Store Design, Layout & Fixture Planning | VS-109 | Store Design Lead |  |
 | W2171 | Store Layout Zone Optimization | VS-55 | Store Design Manager |  |
 | W2186 | Store Format Segmentation | VS-55 | Store Design Manager |  |
-| W5257 | Student Biometric Time and Attendance Monitoring | VS-183 | Store Hr Administrator |  |
-| W5259 | Store Department Rotation and Skills Diversification Scheduling | VS-183 | Store Hr Administrator |  |
 | W147 | DIY Workshop & In-Store Event Management | VS-12 | Store Marketing Coordinator |  |
 | W1848 | Private Label In-Store Display, Planogram & Merchandising Standards | VS-41 | Store Operations Coordinator |  |
 | W2654 | In-Store Kiosk Management & Content Updates | VS-75 | Store Operations It |  |
@@ -2457,18 +2376,6 @@ form — the full per-workflow appendix follows the aggregate.
 | W2756 | BIR EIS E-Invoicing Transmission & Daily Sales Report Sync | VS-79 | Tax Technology Lead |  |
 | W2975 | BIR-Compliant E-Invoice, E-Receipt & E-Book Archiving | VS-88 | Tax Technology Lead |  |
 | W1197 | Government Agency & LGU Annual Procurement Catalog Listing & Price Registration | VS-11 | Trade & Institutional Sales Manager | B2B estate disabled—prepared (x), registry CAP-B01–B04 |
-| W3813 | Apprenticeship Governance, Authority & Policy | VS-123 | Trade Capability / Compliance |  |
-| W3812 | Apprenticeship Funding, Stipend & DOLE Labor Compliance | VS-123 | Trade Capability / Finance / Hr |  |
-| W3822 | Apprentice-to-Role Conversion, Placement & Career Pathway | VS-123 | Trade Capability / Hr / Store Ops |  |
-| W3830 | Trade-Capability Workforce Planning & Demand Modeling | VS-123 | Trade Capability / Hr / Strategy |  |
-| W3816 | Apprenticeship Program Continuous Improvement & Curriculum Refresh | VS-123 | Trade Capability / L&D |  |
-| W3817 | Apprenticeship Cohort Planning, Scheduling & Resource Allocation | VS-123 | Trade Capability / L&D |  |
-| W3809 | Trade-Capability Strategy & Apprenticeship Program Charter | VS-123 | Trade Capability / L&D / Store Ops |  |
-| W3824 | Apprenticeship Vendor/Product Training Integration & Sponsorship | VS-123 | Trade Capability / Merchandising |  |
-| W3815 | Apprenticeship Records, Certification Issuance & Compliance Documentation | VS-123 | Trade Capability / Records / L&D |  |
-| W3818 | Apprentice On-the-Job Training, Rotation & Store Assignment Operations | VS-123 | Trade Capability / Store Ops |  |
-| W3825 | Vocational School, Senior-High & TESDA Partner Network Management | VS-123 | Trade Capability / Ta Marketing |  |
-| W3826 | Vocational Feeder Pipeline, OJT Placement & School-to-Work Transition | VS-123 | Trade Capability / Ta Marketing / Hr |  |
 | W2946 | Tariff Commission Advance Ruling on Tariff Classification Application | VS-87 | Trade Compliance Manager |  |
 | W2953 | FTA Preference Strategy & Annual Duty Savings Analysis | VS-87 | Trade Compliance Manager |  |
 | W2955 | Duty Drawback Scheme Application & Re-export Processing | VS-87 | Trade Compliance Manager |  |
@@ -2555,7 +2462,7 @@ form — the full per-workflow appendix follows the aggregate.
 | W5386 | Dealer Collection, Workout, Restructuring & Skip-Tracing for Missing Collateral | VS-188 | Workout/Recovery Manager |  |
 | W5387 | Collateral Repossession, Redemption & Disposition of Defaulted Floor-Plan Units | VS-188 | Workout/Recovery Manager |  |
 
-## Class C — Healthy (3799)
+## Class C — Healthy (3871)
 
 At least one chartered role owns the workflow. No action.
 
@@ -2579,7 +2486,7 @@ At least one chartered role owns the workflow. No action.
 | Chief Operating Officer (COO) | hq | 45 |
 | Compliance Manager / MLRO | hq | 45 |
 
-## Participate-only chartered roles (58)
+## Participate-only chartered roles (57)
 
 Chartered roles anchored in the catalog (the role-anchoring contract is
 satisfied) that own no workflow — their accountability may be understated;
@@ -2608,7 +2515,6 @@ candidate for the same governance path.
 | Senior LP Analytics Analyst | Regional Loss Prevention | 1 | 0 |
 | Sourcing & Screening Coordinator | Human Resources | 1 | 0 |
 | Special Handling Lead | DC (field, per-DC roster) | 1 | 0 |
-| Store HR Coordinator (one per district) | Human Resources | 1 | 0 |
 | TA Coordinator | Human Resources | 1 | 0 |
 | Tax Compliance Manager | Information Technology (product model) | 1 | 0 |
 | Technical Accounting Manager | Finance & Accounting | 1 | 0 |
