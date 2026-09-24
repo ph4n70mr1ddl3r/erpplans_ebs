@@ -7,125 +7,126 @@ Volume: ~2 lines per receipt on average (the ~12,000 PO-lines/month all-types ca
 Owner: DC Receiving Supervisor
 Participants: Receiving Clerk, Quality Checker, Putaway Staff, DC Supervisor, Buyer (if discrepancy), Special Handling Lead, Discrepancy Analysts
 Source: workflow W3 — Warehouse Receiving &amp; Putaway</bpmn:documentation>
-      <bpmn:laneSet id="W3_LaneSet7">
+      <bpmn:laneSet id="W3_LaneSet8">
         <bpmn:lane id="W3_Lane1" name="Guard">
-        <bpmn:flowNodeRef>W3_Task9</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W3_Start8</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W3_Task10</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W3_Start9</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W3_Lane2" name="Receiving Clerk">
-        <bpmn:flowNodeRef>W3_Task10</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W3_Task12</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W3_Task14</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W3_Task15</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W3_Task11</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W3_Task13</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W3_Task16</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W3_Lane3" name="Unloading Crew">
-        <bpmn:flowNodeRef>W3_Task11</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W3_Task12</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W3_Lane4" name="Quality Checker">
-        <bpmn:flowNodeRef>W3_Task13</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W3_Task14</bpmn:flowNodeRef>
         </bpmn:lane>
-        <bpmn:lane id="W3_Lane5" name="System">
-        <bpmn:flowNodeRef>W3_Task16</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W3_Task18</bpmn:flowNodeRef>
+        <bpmn:lane id="W3_Lane5" name="Receiving Clerk, Discrepancy Analysts">
+        <bpmn:flowNodeRef>W3_Task15</bpmn:flowNodeRef>
         </bpmn:lane>
-        <bpmn:lane id="W3_Lane6" name="Putaway Staff">
+        <bpmn:lane id="W3_Lane6" name="System">
         <bpmn:flowNodeRef>W3_Task17</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W3_End19</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W3_Task19</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W3_Lane7" name="Putaway Staff">
+        <bpmn:flowNodeRef>W3_Task18</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W3_End20</bpmn:flowNodeRef>
         </bpmn:lane>
       </bpmn:laneSet>
-      <bpmn:startEvent id="W3_Start8" name="Vendor delivery truck arrives at DC (or container from port)">
-        <bpmn:outgoing>W3_Flow22</bpmn:outgoing>
+      <bpmn:startEvent id="W3_Start9" name="Vendor delivery truck arrives at DC (or container from port)">
+        <bpmn:outgoing>W3_Flow23</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:userTask id="W3_Task9" name="Truck arrives at DC gate; guard checks delivery schedule vs. appointment log">
+      <bpmn:userTask id="W3_Task10" name="Truck arrives at DC gate; guard checks delivery schedule vs. appointment log">
         <bpmn:documentation>Step 1: Truck arrives at DC gate; guard checks delivery schedule vs. appointment log
 Responsible (R): Guard
 Accountable (A): DC Supervisor
 Duration: 5 min</bpmn:documentation>
-        <bpmn:incoming>W3_Flow22</bpmn:incoming>
-        <bpmn:outgoing>W3_Flow23</bpmn:outgoing>
+        <bpmn:incoming>W3_Flow23</bpmn:incoming>
+        <bpmn:outgoing>W3_Flow24</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W3_Task10" name="Receiving Clerk pulls up expected PO or Transfer Order in system">
+      <bpmn:userTask id="W3_Task11" name="Receiving Clerk pulls up expected PO or Transfer Order in system">
         <bpmn:documentation>Step 2: Receiving Clerk pulls up expected PO or Transfer Order in system
 Responsible (R): Receiving Clerk
 Accountable (A): DC Supervisor
 Duration: 2 min</bpmn:documentation>
-        <bpmn:incoming>W3_Flow23</bpmn:incoming>
-        <bpmn:outgoing>W3_Flow24</bpmn:outgoing>
+        <bpmn:incoming>W3_Flow24</bpmn:incoming>
+        <bpmn:outgoing>W3_Flow25</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W3_Task11" name="Unload truck; stage in receiving area">
+      <bpmn:userTask id="W3_Task12" name="Unload truck; stage in receiving area">
         <bpmn:documentation>Step 3: Unload truck; stage in receiving area
 Responsible (R): Unloading Crew (3–4)
 Accountable (A): Receiving Clerk
 Duration: 30–60 min</bpmn:documentation>
-        <bpmn:incoming>W3_Flow24</bpmn:incoming>
-        <bpmn:outgoing>W3_Flow25</bpmn:outgoing>
+        <bpmn:incoming>W3_Flow25</bpmn:incoming>
+        <bpmn:outgoing>W3_Flow26</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W3_Task12" name="Scan/verify each item against PO: SKU, quantity, lot/batch (if applicable)">
+      <bpmn:userTask id="W3_Task13" name="Scan/verify each item against PO: SKU, quantity, lot/batch (if applicable)">
         <bpmn:documentation>Step 4: Scan/verify each item against PO: SKU, quantity, lot/batch (if applicable)
 Responsible (R): Receiving Clerk
 Accountable (A): DC Supervisor
 Duration: 20–40 min</bpmn:documentation>
-        <bpmn:incoming>W3_Flow25</bpmn:incoming>
-        <bpmn:outgoing>W3_Flow26</bpmn:outgoing>
+        <bpmn:incoming>W3_Flow26</bpmn:incoming>
+        <bpmn:outgoing>W3_Flow27</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W3_Task13" name="Quality check on sampled items (damage, correctness, expiry if applicable) per…">
+      <bpmn:userTask id="W3_Task14" name="Quality check on sampled items (damage, correctness, expiry if applicable) per…">
         <bpmn:documentation>Step 5: Quality check on sampled items (damage, correctness, expiry if applicable) per category-specific inspection checklist (see Quality Inspection Standards below)
 Responsible (R): Quality Checker
 Accountable (A): DC Supervisor
 Duration: 10–20 min</bpmn:documentation>
-        <bpmn:incoming>W3_Flow26</bpmn:incoming>
-        <bpmn:outgoing>W3_Flow27</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:userTask id="W3_Task14" name="If discrepancy (shortage, damage, wrong item): flag in system; notify Buyer">
-        <bpmn:documentation>Step 6: If discrepancy (shortage, damage, wrong item): flag in system; notify Buyer
-Responsible (R): Receiving Clerk
-Accountable (A): DC Supervisor
-Duration: 5 min</bpmn:documentation>
         <bpmn:incoming>W3_Flow27</bpmn:incoming>
         <bpmn:outgoing>W3_Flow28</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W3_Task15" name="Confirm Goods Receipt in system; inventory increases in real-time">
-        <bpmn:documentation>Step 7: Confirm Goods Receipt in system; inventory increases in real-time
-Responsible (R): Receiving Clerk
+      <bpmn:userTask id="W3_Task15" name="If discrepancy (shortage, damage, wrong item): flag in system; notify Buyer">
+        <bpmn:documentation>Step 6: If discrepancy (shortage, damage, wrong item): flag in system; notify Buyer
+Responsible (R): Receiving Clerk, Discrepancy Analysts
 Accountable (A): DC Supervisor
 Duration: 5 min</bpmn:documentation>
         <bpmn:incoming>W3_Flow28</bpmn:incoming>
         <bpmn:outgoing>W3_Flow29</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:serviceTask id="W3_Task16" name="System suggests putaway location based on zone, bin capacity, item velocity">
+      <bpmn:userTask id="W3_Task16" name="Confirm Goods Receipt in system; inventory increases in real-time">
+        <bpmn:documentation>Step 7: Confirm Goods Receipt in system; inventory increases in real-time
+Responsible (R): Receiving Clerk
+Accountable (A): DC Supervisor
+Duration: 5 min</bpmn:documentation>
+        <bpmn:incoming>W3_Flow29</bpmn:incoming>
+        <bpmn:outgoing>W3_Flow30</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:serviceTask id="W3_Task17" name="System suggests putaway location based on zone, bin capacity, item velocity">
         <bpmn:documentation>Step 8: System suggests putaway location based on zone, bin capacity, item velocity
 Responsible (R): System
 Accountable (A): —
 Duration: Automated</bpmn:documentation>
-        <bpmn:incoming>W3_Flow29</bpmn:incoming>
-        <bpmn:outgoing>W3_Flow30</bpmn:outgoing>
+        <bpmn:incoming>W3_Flow30</bpmn:incoming>
+        <bpmn:outgoing>W3_Flow31</bpmn:outgoing>
       </bpmn:serviceTask>
-      <bpmn:userTask id="W3_Task17" name="Putaway staff moves goods to assigned bin; scan-confirm in system">
+      <bpmn:userTask id="W3_Task18" name="Putaway staff moves goods to assigned bin; scan-confirm in system">
         <bpmn:documentation>Step 9: Putaway staff moves goods to assigned bin; scan-confirm in system
 Responsible (R): Putaway Staff
 Accountable (A): DC Supervisor
 Duration: 15–30 min</bpmn:documentation>
-        <bpmn:incoming>W3_Flow30</bpmn:incoming>
-        <bpmn:outgoing>W3_Flow31</bpmn:outgoing>
+        <bpmn:incoming>W3_Flow31</bpmn:incoming>
+        <bpmn:outgoing>W3_Flow32</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:serviceTask id="W3_Task18" name="Update PO/TO status; trigger vendor invoice matching (AP)">
+      <bpmn:serviceTask id="W3_Task19" name="Update PO/TO status; trigger vendor invoice matching (AP)">
         <bpmn:documentation>Step 10: Update PO/TO status; trigger vendor invoice matching (AP)
 Responsible (R): System
 Accountable (A): —
 Duration: Automated</bpmn:documentation>
-        <bpmn:incoming>W3_Flow31</bpmn:incoming>
-        <bpmn:outgoing>W3_Flow32</bpmn:outgoing>
-      </bpmn:serviceTask>
-      <bpmn:endEvent id="W3_End19" name="Complete">
         <bpmn:incoming>W3_Flow32</bpmn:incoming>
+        <bpmn:outgoing>W3_Flow33</bpmn:outgoing>
+      </bpmn:serviceTask>
+      <bpmn:endEvent id="W3_End20" name="Complete">
+        <bpmn:incoming>W3_Flow33</bpmn:incoming>
       </bpmn:endEvent>
-      <bpmn:textAnnotation id="W3_Annotation20">
+      <bpmn:textAnnotation id="W3_Annotation21">
         <bpmn:text>Controls: - CTL-09 (separate purchasing from receiving.); CTL-56 (ensure barcode/GTIN master consistency.) | - operational: DC Receiving Supervisor review and approval gate
 Owner: DC Receiving Supervisor</bpmn:text>
       </bpmn:textAnnotation>
-      <bpmn:association id="W3_Assoc21" sourceRef="W3_Annotation20" targetRef="W3_Start8" associationDirection="None" />
-      <bpmn:sequenceFlow id="W3_Flow22" sourceRef="W3_Start8" targetRef="W3_Task9" />
-      <bpmn:sequenceFlow id="W3_Flow23" sourceRef="W3_Task9" targetRef="W3_Task10" />
+      <bpmn:association id="W3_Assoc22" sourceRef="W3_Annotation21" targetRef="W3_Start9" associationDirection="None" />
+      <bpmn:sequenceFlow id="W3_Flow23" sourceRef="W3_Start9" targetRef="W3_Task10" />
       <bpmn:sequenceFlow id="W3_Flow24" sourceRef="W3_Task10" targetRef="W3_Task11" />
       <bpmn:sequenceFlow id="W3_Flow25" sourceRef="W3_Task11" targetRef="W3_Task12" />
       <bpmn:sequenceFlow id="W3_Flow26" sourceRef="W3_Task12" targetRef="W3_Task13" />
@@ -134,7 +135,8 @@ Owner: DC Receiving Supervisor</bpmn:text>
       <bpmn:sequenceFlow id="W3_Flow29" sourceRef="W3_Task15" targetRef="W3_Task16" />
       <bpmn:sequenceFlow id="W3_Flow30" sourceRef="W3_Task16" targetRef="W3_Task17" />
       <bpmn:sequenceFlow id="W3_Flow31" sourceRef="W3_Task17" targetRef="W3_Task18" />
-      <bpmn:sequenceFlow id="W3_Flow32" sourceRef="W3_Task18" targetRef="W3_End19" />
+      <bpmn:sequenceFlow id="W3_Flow32" sourceRef="W3_Task18" targetRef="W3_Task19" />
+      <bpmn:sequenceFlow id="W3_Flow33" sourceRef="W3_Task19" targetRef="W3_End20" />
     </bpmn:process>
     <bpmndi:BPMNDiagram id="W3_diag">
       <bpmndi:BPMNPlane id="W3_plane" bpmnElement="W_W3">
@@ -144,31 +146,32 @@ Owner: DC Receiving Supervisor</bpmn:text>
         <bpmndi:BPMNShape id="W3_Lane4_di" bpmnElement="W3_Lane4" isHorizontal="true"><dc:Bounds x="160" y="590" width="2420" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W3_Lane5_di" bpmnElement="W3_Lane5" isHorizontal="true"><dc:Bounds x="160" y="760" width="2420" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W3_Lane6_di" bpmnElement="W3_Lane6" isHorizontal="true"><dc:Bounds x="160" y="930" width="2420" height="170" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W3_Task9_di" bpmnElement="W3_Task9"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W3_Task10_di" bpmnElement="W3_Task10"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W3_Task11_di" bpmnElement="W3_Task11"><dc:Bounds x="820" y="465" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W3_Task12_di" bpmnElement="W3_Task12"><dc:Bounds x="1030" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W3_Task13_di" bpmnElement="W3_Task13"><dc:Bounds x="1240" y="635" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W3_Task14_di" bpmnElement="W3_Task14"><dc:Bounds x="1450" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W3_Task15_di" bpmnElement="W3_Task15"><dc:Bounds x="1660" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W3_Task16_di" bpmnElement="W3_Task16"><dc:Bounds x="1870" y="805" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W3_Task17_di" bpmnElement="W3_Task17"><dc:Bounds x="2080" y="975" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W3_Task18_di" bpmnElement="W3_Task18"><dc:Bounds x="2290" y="805" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W3_Start8_di" bpmnElement="W3_Start8"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W3_End19_di" bpmnElement="W3_End19"><dc:Bounds x="2520" y="997" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W3_Annotation20_di" bpmnElement="W3_Annotation20"><dc:Bounds x="160" y="1140" width="360" height="60" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNEdge id="W3_Flow22_di" bpmnElement="W3_Flow22"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W3_Flow23_di" bpmnElement="W3_Flow23"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W3_Flow24_di" bpmnElement="W3_Flow24"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W3_Flow25_di" bpmnElement="W3_Flow25"><di:waypoint x="1000" y="505" /><di:waypoint x="1030" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W3_Flow26_di" bpmnElement="W3_Flow26"><di:waypoint x="1210" y="335" /><di:waypoint x="1240" y="675" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W3_Flow27_di" bpmnElement="W3_Flow27"><di:waypoint x="1420" y="675" /><di:waypoint x="1450" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W3_Flow28_di" bpmnElement="W3_Flow28"><di:waypoint x="1630" y="335" /><di:waypoint x="1660" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W3_Flow29_di" bpmnElement="W3_Flow29"><di:waypoint x="1840" y="335" /><di:waypoint x="1870" y="845" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W3_Flow30_di" bpmnElement="W3_Flow30"><di:waypoint x="2050" y="845" /><di:waypoint x="2080" y="1015" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W3_Flow31_di" bpmnElement="W3_Flow31"><di:waypoint x="2260" y="1015" /><di:waypoint x="2290" y="845" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W3_Flow32_di" bpmnElement="W3_Flow32"><di:waypoint x="2470" y="845" /><di:waypoint x="2520" y="1015" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W3_Assoc21_di" bpmnElement="W3_Assoc21"><di:waypoint x="340" y="1140" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNShape id="W3_Lane7_di" bpmnElement="W3_Lane7" isHorizontal="true"><dc:Bounds x="160" y="1100" width="2420" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W3_Task10_di" bpmnElement="W3_Task10"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W3_Task11_di" bpmnElement="W3_Task11"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W3_Task12_di" bpmnElement="W3_Task12"><dc:Bounds x="820" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W3_Task13_di" bpmnElement="W3_Task13"><dc:Bounds x="1030" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W3_Task14_di" bpmnElement="W3_Task14"><dc:Bounds x="1240" y="635" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W3_Task15_di" bpmnElement="W3_Task15"><dc:Bounds x="1450" y="805" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W3_Task16_di" bpmnElement="W3_Task16"><dc:Bounds x="1660" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W3_Task17_di" bpmnElement="W3_Task17"><dc:Bounds x="1870" y="975" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W3_Task18_di" bpmnElement="W3_Task18"><dc:Bounds x="2080" y="1145" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W3_Task19_di" bpmnElement="W3_Task19"><dc:Bounds x="2290" y="975" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W3_Start9_di" bpmnElement="W3_Start9"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W3_End20_di" bpmnElement="W3_End20"><dc:Bounds x="2520" y="1167" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W3_Annotation21_di" bpmnElement="W3_Annotation21"><dc:Bounds x="160" y="1310" width="360" height="60" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="W3_Flow23_di" bpmnElement="W3_Flow23"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W3_Flow24_di" bpmnElement="W3_Flow24"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W3_Flow25_di" bpmnElement="W3_Flow25"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W3_Flow26_di" bpmnElement="W3_Flow26"><di:waypoint x="1000" y="505" /><di:waypoint x="1030" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W3_Flow27_di" bpmnElement="W3_Flow27"><di:waypoint x="1210" y="335" /><di:waypoint x="1240" y="675" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W3_Flow28_di" bpmnElement="W3_Flow28"><di:waypoint x="1420" y="675" /><di:waypoint x="1450" y="845" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W3_Flow29_di" bpmnElement="W3_Flow29"><di:waypoint x="1630" y="845" /><di:waypoint x="1660" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W3_Flow30_di" bpmnElement="W3_Flow30"><di:waypoint x="1840" y="335" /><di:waypoint x="1870" y="1015" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W3_Flow31_di" bpmnElement="W3_Flow31"><di:waypoint x="2050" y="1015" /><di:waypoint x="2080" y="1185" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W3_Flow32_di" bpmnElement="W3_Flow32"><di:waypoint x="2260" y="1185" /><di:waypoint x="2290" y="1015" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W3_Flow33_di" bpmnElement="W3_Flow33"><di:waypoint x="2470" y="1015" /><di:waypoint x="2520" y="1185" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W3_Assoc22_di" bpmnElement="W3_Assoc22"><di:waypoint x="340" y="1310" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
       </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W3B" name="W3B. Yard &amp; Outdoor Inventory Management" isExecutable="false">

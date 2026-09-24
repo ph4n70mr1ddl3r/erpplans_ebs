@@ -386,11 +386,11 @@
 | Forklift Operators (inbound) | DC (field, per-DC roster) | 0 | 15 | 9 | 0 | 15 | 5 | 8 | 2 |
 | Packers / Load Builders | DC (field, per-DC roster) | 0 | 5 | 9 | 0 | 8 | 6 | 2 | 0 |
 | Putaway Staff | DC (field, per-DC roster) | 0 | 4 | 4 | 0 | 4 | 2 | 0 | 2 |
-| Cross-Dock Team | DC (field, per-DC roster) | 0 | 2 | 0 | 0 | 2 | 0 | 1 | 1 |
+| Cross-Dock Team | DC (field, per-DC roster) | 0 | 2 | 1 | 0 | 2 | 0 | 1 | 1 |
 | Assistant DC Manager — Outbound | DC (field, per-DC roster) | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
 | Cycle Counters | DC (field, per-DC roster) | 0 | 1 | 2 | 0 | 1 | 0 | 1 | 0 |
 | DC Office Administrator | DC (field, per-DC roster) | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 1 |
-| Discrepancy Analysts | DC (field, per-DC roster) | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
+| Discrepancy Analysts | DC (field, per-DC roster) | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 0 |
 | Facilities/Utility | DC (field, per-DC roster) | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Special Handling Lead | DC (field, per-DC roster) | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
 | Tile & Heavy/Breakbulk Crew | DC (field, per-DC roster) | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |

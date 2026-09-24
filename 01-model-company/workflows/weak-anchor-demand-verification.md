@@ -54,7 +54,7 @@
 | Business Process & IMS Lead | §5.3 register — Strategy / Corporate Planning | 2 | — | 1 | — | NO PARSED CADENCE |
 | Corporate Secretary Analyst | §5.3 register — Legal & Compliance | 2 | — | 1 | — | NO PARSED CADENCE |
 | CPM (Corporate Performance Management) Analyst | §5.3 register — Strategy / Corporate Planning | 2 | — | 1 | — | NO PARSED CADENCE |
-| Cross-Dock Team | §7.3 DC roster — DC (field, per-DC roster) | 2 | — | — | — | NO PARSED CADENCE |
+| Cross-Dock Team | §7.3 DC roster — DC (field, per-DC roster) | 2 | 91 | 24 | 0% | UNDER-UTILIZED |
 | DC Cost-to-Serve Analyst | §5.3 register — Finance & Accounting | 2 | — | 1 | — | NO PARSED CADENCE |
 | DC Operations Analyst | §5.3 register — Supply Chain & Logistics | 2 | — | 1 | — | NO PARSED CADENCE |
 | Ecommerce Support Specialist | §5.3 register — Customer Service | 2 | — | 3 | — | NO PARSED CADENCE |
@@ -86,8 +86,8 @@
 |---|---|
 | CONFIRMED | 2 |
 | OVERLOAD | 2 |
-| UNDER-UTILIZED | 3 |
-| NO PARSED CADENCE | 46 |
+| UNDER-UTILIZED | 4 |
+| NO PARSED CADENCE | 45 |
 
 > OVERLOAD rows are the headcount-real candidates this doctrine exists to find. UNDER-UTILIZED
 > rows are merge/resize candidates. ZERO-DURATION rows carry days-based work — audit the cycle,

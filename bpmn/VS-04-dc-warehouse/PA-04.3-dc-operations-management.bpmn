@@ -280,137 +280,138 @@ Volume: 4 DCs; each DC operates ~16 hours/day; ~40 inbound trucks/day + ~15–20
 Owner: DC Manager
 Participants: DC Shift Supervisors (2 per DC), DC Receiving Supervisor, DC Dispatch Supervisor, DC Receiving Clerks, Putaway Staff, Pickers, Loaders, Quality Checkers, Yard Staff, Forklift Operators, Cross-Dock Coordinator, Gate Guard, DC Office Administrator
 Source: workflow W584 — DC Daily Operations &amp; Shift Management</bpmn:documentation>
-      <bpmn:laneSet id="W584_LaneSet4">
+      <bpmn:laneSet id="W584_LaneSet5">
         <bpmn:lane id="W584_Lane1" name="System">
-        <bpmn:flowNodeRef>W584_Task6</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W584_Task15</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W584_Start5</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W584_Task7</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W584_Task16</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W584_Start6</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W584_Lane2" name="DC Shift Supervisor">
-        <bpmn:flowNodeRef>W584_Task7</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W584_Task8</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W584_Task9</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W584_Task10</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W584_Task11</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W584_Task12</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W584_Task13</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W584_Task14</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W584_Task15</bpmn:flowNodeRef>
         </bpmn:lane>
-        <bpmn:lane id="W584_Lane3" name="DC Manager">
-        <bpmn:flowNodeRef>W584_Task16</bpmn:flowNodeRef>
+        <bpmn:lane id="W584_Lane3" name="DC Shift Supervisor, Cross-Dock Team">
+        <bpmn:flowNodeRef>W584_Task9</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W584_Lane4" name="DC Manager">
         <bpmn:flowNodeRef>W584_Task17</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W584_End18</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W584_Task18</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W584_End19</bpmn:flowNodeRef>
         </bpmn:lane>
       </bpmn:laneSet>
-      <bpmn:startEvent id="W584_Start5" name="Daily DC operations cycle; shift start (6:00 AM for Day Shift A, 2:00 PM for Night Shift…">
-        <bpmn:outgoing>W584_Flow21</bpmn:outgoing>
+      <bpmn:startEvent id="W584_Start6" name="Daily DC operations cycle; shift start (6:00 AM for Day Shift A, 2:00 PM for Night Shift…">
+        <bpmn:outgoing>W584_Flow22</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:serviceTask id="W584_Task6" name="Night-before preparation">
+      <bpmn:serviceTask id="W584_Task7" name="Night-before preparation">
         <bpmn:documentation>Step 1: Night-before preparation (10:00 PM prior day): System generates next-day DC operations plan from: (a) inbound delivery appointments from W585 dock scheduling (confirmed inbound trucks, expected POs, estimated pallet/cube volume per time slot), (b) outbound dispatch plan from W106 (confirmed store replenishment orders, home delivery batches, inter-DC transfers), (c) pending putaway backlog from current shift, (d) pending pick/pack backlog from current shift, (e) staffing availability (planned absences, approved leaves, overtime authorizations); system calculates projected labor-hours required per function (receiving, putaway, picking, packing, dispatch, yard) vs. scheduled staff per shift
 Responsible (R): System
 Accountable (A): —
 Duration: Automated (overnight batch)</bpmn:documentation>
-        <bpmn:incoming>W584_Flow21</bpmn:incoming>
-        <bpmn:outgoing>W584_Flow22</bpmn:outgoing>
-      </bpmn:serviceTask>
-      <bpmn:userTask id="W584_Task7" name="Day Shift A start-up briefing">
-        <bpmn:documentation>Step 2: Day Shift A start-up briefing (6:00 AM): DC Shift Supervisor (A) conducts 15-minute standing briefing with functional leads (Receiving Supervisor, Dispatch Supervisor, Cross-Dock Coordinator, Yard Supervisor) covering: (a) today&#x27;s volume forecast from step 1 (inbound truck count, outbound load count, total lines to process), (b) critical priorities (promotional pre-positioning shipments per W57, import container appointments, urgent backorder fulfillments per W56), (c) staffing adjustments (reallocate labor from low-volume function to bottleneck function — e.g., shift 2 putaway staff to receiving during 8–10 AM peak), (d) carry-over exceptions from Night Shift B (unresolved receiving discrepancies per W3.6, incomplete picks, delayed dispatches), (e) safety reminders (daily topic: forklift pedestrian zones, hazmat handling, wet floor from yard rain)
-Responsible (R): DC Shift Supervisor (A)
-Accountable (A): DC Manager
-Duration: 15 min</bpmn:documentation>
         <bpmn:incoming>W584_Flow22</bpmn:incoming>
         <bpmn:outgoing>W584_Flow23</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:userTask id="W584_Task8" name="Labor allocation and task assignment">
-        <bpmn:documentation>Step 3: Labor allocation and task assignment (6:15 AM): DC Shift Supervisor assigns staff to functional areas based on step 2 briefing: (a) Receiving: 3–4 Receiving Clerks + 3–4 Unloading Crew for ~40 inbound trucks (peak 8–10 AM: 15–20 trucks in 2-hour window requiring maximum receiving staffing); (b) Quality Check: 2 Quality Checkers during peak receiving, 1 during off-peak; (c) Putaway: 4–6 Putaway Staff, prioritizing cross-dock items and forward-pick zone replenishment before standard putaway; (d) Picking: 8–10 Pickers for outbound replenishment orders per W4 picking waves (Wave 1: 8:00 AM, Wave 2: 12:00 PM, Wave 3: 4:00 PM); (e) Dispatch: 2–3 Loaders for outbound truck loading per W106; (f) Yard: 2–3 Yard Staff for outdoor receipts and staging; system records shift labor allocation for W586 labor utilization tracking
-Responsible (R): DC Shift Supervisor
+      </bpmn:serviceTask>
+      <bpmn:userTask id="W584_Task8" name="Day Shift A start-up briefing">
+        <bpmn:documentation>Step 2: Day Shift A start-up briefing (6:00 AM): DC Shift Supervisor (A) conducts 15-minute standing briefing with functional leads (Receiving Supervisor, Dispatch Supervisor, Cross-Dock Coordinator, Yard Supervisor) covering: (a) today&#x27;s volume forecast from step 1 (inbound truck count, outbound load count, total lines to process), (b) critical priorities (promotional pre-positioning shipments per W57, import container appointments, urgent backorder fulfillments per W56), (c) staffing adjustments (reallocate labor from low-volume function to bottleneck function — e.g., shift 2 putaway staff to receiving during 8–10 AM peak), (d) carry-over exceptions from Night Shift B (unresolved receiving discrepancies per W3.6, incomplete picks, delayed dispatches), (e) safety reminders (daily topic: forklift pedestrian zones, hazmat handling, wet floor from yard rain)
+Responsible (R): DC Shift Supervisor (A)
 Accountable (A): DC Manager
 Duration: 15 min</bpmn:documentation>
         <bpmn:incoming>W584_Flow23</bpmn:incoming>
         <bpmn:outgoing>W584_Flow24</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W584_Task9" name="Mid-morning operational pace check">
+      <bpmn:userTask id="W584_Task9" name="Labor allocation and task assignment">
+        <bpmn:documentation>Step 3: Labor allocation and task assignment (6:15 AM): DC Shift Supervisor assigns staff to functional areas based on step 2 briefing: (a) Receiving: 3–4 Receiving Clerks + 3–4 Unloading Crew for ~40 inbound trucks (peak 8–10 AM: 15–20 trucks in 2-hour window requiring maximum receiving staffing); (b) Quality Check: 2 Quality Checkers during peak receiving, 1 during off-peak; (c) Putaway: 4–6 Putaway Staff, prioritizing cross-dock items and forward-pick zone replenishment before standard putaway; (d) Picking: 8–10 Pickers for outbound replenishment orders per W4 picking waves (Wave 1: 8:00 AM, Wave 2: 12:00 PM, Wave 3: 4:00 PM); (e) Dispatch: 2–3 Loaders for outbound truck loading per W106; (f) Yard: 2–3 Yard Staff for outdoor receipts and staging; system records shift labor allocation for W586 labor utilization tracking
+Responsible (R): DC Shift Supervisor, Cross-Dock Team
+Accountable (A): DC Manager
+Duration: 15 min</bpmn:documentation>
+        <bpmn:incoming>W584_Flow24</bpmn:incoming>
+        <bpmn:outgoing>W584_Flow25</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W584_Task10" name="Mid-morning operational pace check">
         <bpmn:documentation>Step 4: Mid-morning operational pace check (9:00 AM): DC Shift Supervisor walks DC floor and reviews real-time operational dashboard on wall-mounted display: (a) dock door utilization per W585 — are all scheduled inbound trucks on time? Any no-shows?; (b) receiving throughput — actual receipts completed vs. planned for the morning window; (c) putaway backlog — staged pallets awaiting putaway should not exceed 2-hour backlog; (d) picking progress — Wave 1 pick completion % (target: 100% by 10:00 AM for morning dispatch); (e) outbound staging — trucks loaded and departing on schedule per W106; (f) any congestion or bottleneck observed during floor walk; DC Shift Supervisor reassigns labor in real-time if any function is behind plan
 Responsible (R): DC Shift Supervisor
 Accountable (A): DC Manager
 Duration: 20 min</bpmn:documentation>
-        <bpmn:incoming>W584_Flow24</bpmn:incoming>
-        <bpmn:outgoing>W584_Flow25</bpmn:outgoing>
+        <bpmn:incoming>W584_Flow25</bpmn:incoming>
+        <bpmn:outgoing>W584_Flow26</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W584_Task10" name="Exception handling">
+      <bpmn:userTask id="W584_Task11" name="Exception handling">
         <bpmn:documentation>Step 5: Exception handling (ongoing throughout shift): DC Shift Supervisor resolves escalated operational exceptions: (a) receiving discrepancies requiring immediate Buyer coordination (W3.6b) — truck occupying dock door while awaiting Buyer response; (b) equipment failures (forklift breakdown, conveyor jam, RF scanner issues) — arrange backup equipment or manual workaround, notify IT per W48 if system-related; (c) staffing emergencies (no-show, medical incident) — cross-trained staff redeployment from lower-priority function; (d) vendor/carrier disputes at gate (unscheduled delivery, documentation issues) — authorize or reject per W585 unscheduled delivery protocol; (e) quality holds blocking putaway (W3 quality hold process) — coordinate with Buyer for expedited vendor resolution; log all exceptions in shift log with resolution and time-to-resolve
 Responsible (R): DC Shift Supervisor
 Accountable (A): DC Manager
 Duration: 5–30 min per exception; ~4–6 exceptions/shift</bpmn:documentation>
-        <bpmn:incoming>W584_Flow25</bpmn:incoming>
-        <bpmn:outgoing>W584_Flow26</bpmn:outgoing>
+        <bpmn:incoming>W584_Flow26</bpmn:incoming>
+        <bpmn:outgoing>W584_Flow27</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W584_Task11" name="Afternoon operational pace check">
+      <bpmn:userTask id="W584_Task12" name="Afternoon operational pace check">
         <bpmn:documentation>Step 6: Afternoon operational pace check (1:00 PM): DC Shift Supervisor reviews second operational dashboard snapshot: (a) total inbound receipts completed vs. plan (target: 100% of morning appointments completed by 1:00 PM); (b) total outbound dispatches completed vs. plan; (c) afternoon inbound appointment schedule for 1:00–6:00 PM window; (d) picking progress — Wave 2 completion status; (e) dock door availability for afternoon dispatch wave per W106 step 9; (f) putaway and picking backlogs — should be near-zero before shift handover
 Responsible (R): DC Shift Supervisor
 Accountable (A): DC Manager
 Duration: 15 min</bpmn:documentation>
-        <bpmn:incoming>W584_Flow26</bpmn:incoming>
-        <bpmn:outgoing>W584_Flow27</bpmn:outgoing>
+        <bpmn:incoming>W584_Flow27</bpmn:incoming>
+        <bpmn:outgoing>W584_Flow28</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W584_Task12" name="Shift handover log">
+      <bpmn:userTask id="W584_Task13" name="Shift handover log">
         <bpmn:documentation>Step 7: Shift handover log (1:45 PM — end of Day Shift A / start of Night Shift B): DC Shift Supervisor (A) completes shift handover log in system and conducts face-to-face handover with incoming DC Shift Supervisor (B). Handover log captures: (a) inbound status: receipts completed (count and lines), receipts pending (with reason — late truck, quality hold, Buyer pending), dock door occupancy, unscheduled deliveries handled; (b) outbound status: dispatches completed, dispatches pending (with reason — pick incomplete, truck late, 3PL no-show), truck utilization rate for completed dispatches; (c) inventory operations: putaway backlog (pallet count and estimated hours to clear), pick wave completion status, cycle count results if any per W6; (d) exceptions: unresolved exceptions from step 5 with current status and required actions; (e) equipment status: forklift availability, RF scanner status, dock leveler issues; (f) staffing: actual headcount vs. planned, overtime hours consumed, any injuries or incidents; incoming Shift Supervisor (B) acknowledges handover in system
 Responsible (R): DC Shift Supervisor (A) / DC Shift Supervisor (B)
 Accountable (A): DC Manager
 Duration: 20 min</bpmn:documentation>
-        <bpmn:incoming>W584_Flow27</bpmn:incoming>
-        <bpmn:outgoing>W584_Flow28</bpmn:outgoing>
+        <bpmn:incoming>W584_Flow28</bpmn:incoming>
+        <bpmn:outgoing>W584_Flow29</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W584_Task13" name="Night Shift B start-up briefing">
+      <bpmn:userTask id="W584_Task14" name="Night Shift B start-up briefing">
         <bpmn:documentation>Step 8: Night Shift B start-up briefing (2:00 PM): DC Shift Supervisor (B) conducts abbreviated briefing with night shift functional leads covering: (a) carry-over items from Day Shift A handover log; (b) afternoon inbound appointment schedule; (c) afternoon dispatch wave per W106; (d) any night-specific activities (cycle counts per W6, scheduled maintenance per W188, putaway catch-up, next-day preparation tasks)
 Responsible (R): DC Shift Supervisor (B)
 Accountable (A): DC Manager
 Duration: 10 min</bpmn:documentation>
-        <bpmn:incoming>W584_Flow28</bpmn:incoming>
-        <bpmn:outgoing>W584_Flow29</bpmn:outgoing>
+        <bpmn:incoming>W584_Flow29</bpmn:incoming>
+        <bpmn:outgoing>W584_Flow30</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W584_Task14" name="Night shift operations">
+      <bpmn:userTask id="W584_Task15" name="Night shift operations">
         <bpmn:documentation>Step 9: Night shift operations (2:00–10:00 PM): Night shift focuses on: (a) completing remaining afternoon inbound receipts and outbound dispatches; (b) putaway backlog clearance — target: zero staged pallets in receiving area by end of shift; (c) picking for next-morning dispatch wave (Wave 1 for following day); (d) cycle counting per W6 schedule (if tonight&#x27;s zone is due); (e) yard organization and staging for next-morning deliveries; (f) next-day preparation: confirm dock appointments for following day per W585, pre-stage outbound loads for early morning dispatch
 Responsible (R): DC Shift Supervisor (B)
 Accountable (A): DC Manager
 Duration: 8 hours</bpmn:documentation>
-        <bpmn:incoming>W584_Flow29</bpmn:incoming>
-        <bpmn:outgoing>W584_Flow30</bpmn:outgoing>
+        <bpmn:incoming>W584_Flow30</bpmn:incoming>
+        <bpmn:outgoing>W584_Flow31</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:serviceTask id="W584_Task15" name="End-of-day KPI snapshot">
+      <bpmn:serviceTask id="W584_Task16" name="End-of-day KPI snapshot">
         <bpmn:documentation>Step 10: End-of-day KPI snapshot (10:00 PM — end of Night Shift B): System automatically calculates end-of-day operational KPIs per DC and posts to W586 dashboard: (a) Receiving throughput: total receipts completed vs. planned, average time per receipt (gate-to-bin), receiving accuracy % (correct GRs / total GRs); (b) Putaway: total pallets put away, putaway backlog at EOD (target: 0), average putaway time per pallet; (c) Picking productivity: lines picked per picker-hour, pick accuracy %, wave completion on-time %; (d) Dispatch: outbound loads dispatched vs. planned, on-time departure rate, truck utilization %, delivery on-time rate (from prior-day dispatch POD returns); (e) Labor utilization: actual labor-hours vs. planned, overtime hours, labor-hours per unit processed (receipts + dispatches); (f) Exceptions: count and category breakdown, average time-to-resolve; DC Shift Supervisor (B) reviews snapshot, adds narrative comments for any KPI below target, and closes shift log
 Responsible (R): System / DC Shift Supervisor (B)
 Accountable (A): DC Manager
 Duration: 15 min (supervisor review) + automated calculation</bpmn:documentation>
-        <bpmn:incoming>W584_Flow30</bpmn:incoming>
-        <bpmn:outgoing>W584_Flow31</bpmn:outgoing>
+        <bpmn:incoming>W584_Flow31</bpmn:incoming>
+        <bpmn:outgoing>W584_Flow32</bpmn:outgoing>
       </bpmn:serviceTask>
-      <bpmn:userTask id="W584_Task16" name="DC Manager daily review">
+      <bpmn:userTask id="W584_Task17" name="DC Manager daily review">
         <bpmn:documentation>Step 11: DC Manager daily review (8:00 AM following morning): DC Manager reviews overnight KPI snapshot from step 10, shift handover logs from both shifts, and exception log; identifies: (a) trends requiring corrective action (e.g., receiving throughput declining 3 consecutive days), (b) staffing adjustments needed for today&#x27;s volume, (c) escalation items for Supply Chain Manager (e.g., chronic carrier no-shows, vendor quality issues); DC Manager documents daily operational summary and submits to VP Supply Chain via automated report
 Responsible (R): DC Manager
 Accountable (A): VP Supply Chain
 Duration: 20 min/day</bpmn:documentation>
-        <bpmn:incoming>W584_Flow31</bpmn:incoming>
-        <bpmn:outgoing>W584_Flow32</bpmn:outgoing>
+        <bpmn:incoming>W584_Flow32</bpmn:incoming>
+        <bpmn:outgoing>W584_Flow33</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W584_Task17" name="Weekly operations review">
+      <bpmn:userTask id="W584_Task18" name="Weekly operations review">
         <bpmn:documentation>Step 12: Weekly operations review (Monday 9:00 AM): DC Manager conducts weekly review with Shift Supervisors and functional leads: (a) weekly KPI trend analysis per W586 (comparing daily snapshots across 7 days); (b) labor productivity trend — lines processed per labor-hour, overtime trend; (c) recurring exception analysis — top 5 exception categories by frequency and impact; (d) dock utilization patterns — peak hours, under-utilized slots per W585; (e) staffing forecast for next week based on projected inbound/outbound volume; (f) action items from previous week — status update; (g) improvement initiatives — at least 1 process improvement proposal per month (e.g., new putaway zone strategy, revised pick wave timing)
 Responsible (R): DC Manager
 Accountable (A): VP Supply Chain
 Duration: 1 hour/week</bpmn:documentation>
-        <bpmn:incoming>W584_Flow32</bpmn:incoming>
-        <bpmn:outgoing>W584_Flow33</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:endEvent id="W584_End18" name="Complete">
         <bpmn:incoming>W584_Flow33</bpmn:incoming>
+        <bpmn:outgoing>W584_Flow34</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:endEvent id="W584_End19" name="Complete">
+        <bpmn:incoming>W584_Flow34</bpmn:incoming>
       </bpmn:endEvent>
-      <bpmn:textAnnotation id="W584_Annotation19">
+      <bpmn:textAnnotation id="W584_Annotation20">
         <bpmn:text>Controls: - CTL-252 (ensure controlled execution — DC Operations Management (PA-04.3).) | - operational: mandatory handover log acknowledgment
 Owner: DC Manager</bpmn:text>
       </bpmn:textAnnotation>
-      <bpmn:association id="W584_Assoc20" sourceRef="W584_Annotation19" targetRef="W584_Start5" associationDirection="None" />
-      <bpmn:sequenceFlow id="W584_Flow21" sourceRef="W584_Start5" targetRef="W584_Task6" />
-      <bpmn:sequenceFlow id="W584_Flow22" sourceRef="W584_Task6" targetRef="W584_Task7" />
+      <bpmn:association id="W584_Assoc21" sourceRef="W584_Annotation20" targetRef="W584_Start6" associationDirection="None" />
+      <bpmn:sequenceFlow id="W584_Flow22" sourceRef="W584_Start6" targetRef="W584_Task7" />
       <bpmn:sequenceFlow id="W584_Flow23" sourceRef="W584_Task7" targetRef="W584_Task8" />
       <bpmn:sequenceFlow id="W584_Flow24" sourceRef="W584_Task8" targetRef="W584_Task9" />
       <bpmn:sequenceFlow id="W584_Flow25" sourceRef="W584_Task9" targetRef="W584_Task10" />
@@ -421,42 +422,44 @@ Owner: DC Manager</bpmn:text>
       <bpmn:sequenceFlow id="W584_Flow30" sourceRef="W584_Task14" targetRef="W584_Task15" />
       <bpmn:sequenceFlow id="W584_Flow31" sourceRef="W584_Task15" targetRef="W584_Task16" />
       <bpmn:sequenceFlow id="W584_Flow32" sourceRef="W584_Task16" targetRef="W584_Task17" />
-      <bpmn:sequenceFlow id="W584_Flow33" sourceRef="W584_Task17" targetRef="W584_End18" />
+      <bpmn:sequenceFlow id="W584_Flow33" sourceRef="W584_Task17" targetRef="W584_Task18" />
+      <bpmn:sequenceFlow id="W584_Flow34" sourceRef="W584_Task18" targetRef="W584_End19" />
     </bpmn:process>
     <bpmndi:BPMNDiagram id="W584_diag">
       <bpmndi:BPMNPlane id="W584_plane" bpmnElement="W_W584">
         <bpmndi:BPMNShape id="W584_Lane1_di" bpmnElement="W584_Lane1" isHorizontal="true"><dc:Bounds x="160" y="80" width="2840" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W584_Lane2_di" bpmnElement="W584_Lane2" isHorizontal="true"><dc:Bounds x="160" y="250" width="2840" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W584_Lane3_di" bpmnElement="W584_Lane3" isHorizontal="true"><dc:Bounds x="160" y="420" width="2840" height="170" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W584_Task6_di" bpmnElement="W584_Task6"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W584_Task7_di" bpmnElement="W584_Task7"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W584_Task8_di" bpmnElement="W584_Task8"><dc:Bounds x="820" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W584_Task9_di" bpmnElement="W584_Task9"><dc:Bounds x="1030" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W584_Task10_di" bpmnElement="W584_Task10"><dc:Bounds x="1240" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W584_Task11_di" bpmnElement="W584_Task11"><dc:Bounds x="1450" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W584_Task12_di" bpmnElement="W584_Task12"><dc:Bounds x="1660" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W584_Task13_di" bpmnElement="W584_Task13"><dc:Bounds x="1870" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W584_Task14_di" bpmnElement="W584_Task14"><dc:Bounds x="2080" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W584_Task15_di" bpmnElement="W584_Task15"><dc:Bounds x="2290" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W584_Task16_di" bpmnElement="W584_Task16"><dc:Bounds x="2500" y="465" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W584_Task17_di" bpmnElement="W584_Task17"><dc:Bounds x="2710" y="465" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W584_Start5_di" bpmnElement="W584_Start5"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W584_End18_di" bpmnElement="W584_End18"><dc:Bounds x="2940" y="487" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W584_Annotation19_di" bpmnElement="W584_Annotation19"><dc:Bounds x="160" y="630" width="360" height="60" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNEdge id="W584_Flow21_di" bpmnElement="W584_Flow21"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W584_Flow22_di" bpmnElement="W584_Flow22"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W584_Flow23_di" bpmnElement="W584_Flow23"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W584_Flow24_di" bpmnElement="W584_Flow24"><di:waypoint x="1000" y="335" /><di:waypoint x="1030" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W584_Flow25_di" bpmnElement="W584_Flow25"><di:waypoint x="1210" y="335" /><di:waypoint x="1240" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W584_Flow26_di" bpmnElement="W584_Flow26"><di:waypoint x="1420" y="335" /><di:waypoint x="1450" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W584_Flow27_di" bpmnElement="W584_Flow27"><di:waypoint x="1630" y="335" /><di:waypoint x="1660" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W584_Flow28_di" bpmnElement="W584_Flow28"><di:waypoint x="1840" y="335" /><di:waypoint x="1870" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W584_Flow29_di" bpmnElement="W584_Flow29"><di:waypoint x="2050" y="335" /><di:waypoint x="2080" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W584_Flow30_di" bpmnElement="W584_Flow30"><di:waypoint x="2260" y="335" /><di:waypoint x="2290" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W584_Flow31_di" bpmnElement="W584_Flow31"><di:waypoint x="2470" y="165" /><di:waypoint x="2500" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W584_Flow32_di" bpmnElement="W584_Flow32"><di:waypoint x="2680" y="505" /><di:waypoint x="2710" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W584_Flow33_di" bpmnElement="W584_Flow33"><di:waypoint x="2890" y="505" /><di:waypoint x="2940" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W584_Assoc20_di" bpmnElement="W584_Assoc20"><di:waypoint x="340" y="630" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNShape id="W584_Lane4_di" bpmnElement="W584_Lane4" isHorizontal="true"><dc:Bounds x="160" y="590" width="2840" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W584_Task7_di" bpmnElement="W584_Task7"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W584_Task8_di" bpmnElement="W584_Task8"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W584_Task9_di" bpmnElement="W584_Task9"><dc:Bounds x="820" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W584_Task10_di" bpmnElement="W584_Task10"><dc:Bounds x="1030" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W584_Task11_di" bpmnElement="W584_Task11"><dc:Bounds x="1240" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W584_Task12_di" bpmnElement="W584_Task12"><dc:Bounds x="1450" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W584_Task13_di" bpmnElement="W584_Task13"><dc:Bounds x="1660" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W584_Task14_di" bpmnElement="W584_Task14"><dc:Bounds x="1870" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W584_Task15_di" bpmnElement="W584_Task15"><dc:Bounds x="2080" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W584_Task16_di" bpmnElement="W584_Task16"><dc:Bounds x="2290" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W584_Task17_di" bpmnElement="W584_Task17"><dc:Bounds x="2500" y="635" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W584_Task18_di" bpmnElement="W584_Task18"><dc:Bounds x="2710" y="635" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W584_Start6_di" bpmnElement="W584_Start6"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W584_End19_di" bpmnElement="W584_End19"><dc:Bounds x="2940" y="657" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W584_Annotation20_di" bpmnElement="W584_Annotation20"><dc:Bounds x="160" y="800" width="360" height="60" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="W584_Flow22_di" bpmnElement="W584_Flow22"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W584_Flow23_di" bpmnElement="W584_Flow23"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W584_Flow24_di" bpmnElement="W584_Flow24"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W584_Flow25_di" bpmnElement="W584_Flow25"><di:waypoint x="1000" y="505" /><di:waypoint x="1030" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W584_Flow26_di" bpmnElement="W584_Flow26"><di:waypoint x="1210" y="335" /><di:waypoint x="1240" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W584_Flow27_di" bpmnElement="W584_Flow27"><di:waypoint x="1420" y="335" /><di:waypoint x="1450" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W584_Flow28_di" bpmnElement="W584_Flow28"><di:waypoint x="1630" y="335" /><di:waypoint x="1660" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W584_Flow29_di" bpmnElement="W584_Flow29"><di:waypoint x="1840" y="335" /><di:waypoint x="1870" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W584_Flow30_di" bpmnElement="W584_Flow30"><di:waypoint x="2050" y="335" /><di:waypoint x="2080" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W584_Flow31_di" bpmnElement="W584_Flow31"><di:waypoint x="2260" y="335" /><di:waypoint x="2290" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W584_Flow32_di" bpmnElement="W584_Flow32"><di:waypoint x="2470" y="165" /><di:waypoint x="2500" y="675" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W584_Flow33_di" bpmnElement="W584_Flow33"><di:waypoint x="2680" y="675" /><di:waypoint x="2710" y="675" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W584_Flow34_di" bpmnElement="W584_Flow34"><di:waypoint x="2890" y="675" /><di:waypoint x="2940" y="675" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W584_Assoc21_di" bpmnElement="W584_Assoc21"><di:waypoint x="340" y="800" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
       </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W585" name="W585. DC Dock Scheduling &amp; Appointment Management" isExecutable="false">
