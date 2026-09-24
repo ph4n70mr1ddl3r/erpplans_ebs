@@ -201,6 +201,13 @@ ROLE_ALIASES = {
     "customer service rep": "STORE:Customer Service Rep",
     "sales rep": "STORE:Sales Associate",
     "security guard": "EXTERNAL:Security Guard (contracted)",
+    # chartered titles they denote (see fix-owner-grain-promotions.py and the
+    # workflow→role gap analysis).
+    "cost accountant": "GL Accountant (one per entity)",
+    "fixed asset accountant": "GL Accountant (one per entity)",
+    "logistics manager": "Fleet & Logistics Manager",
+    "cost accounting manager": "Manager, GL & Consolidation (Assistant Controller)",
+    "data protection officer": "Data Privacy Officer (DPO)",
     "receiving clerk": "DC:Receiving Clerk",
     # --- Role-anchoring worklist remediation (batch 31, 2026-09-23): corpus
     # forms promoted to the chartered titles they denote (zero-anchor worklist
@@ -877,8 +884,8 @@ DEPT_ACTORS = {
     "finance": "Finance & Accounting", "accounting": "Finance & Accounting",
     "finance manager": "Finance & Accounting", "finance analyst": "Finance & Accounting",
     "finance analysts": "Finance & Accounting", "accounting manager": "Finance & Accounting",
-    "chief accountant": "Finance & Accounting", "cost accountant": "Finance & Accounting",
-    "fixed asset accountant": "Finance & Accounting", "ap": "Finance & Accounting",
+    "chief accountant": "Finance & Accounting",
+    "ap": "Finance & Accounting",
     "ar": "Finance & Accounting", "ap clerk": "Finance & Accounting",
     "treasury": "Finance & Accounting", "insurance": "Finance & Accounting",
     "fraud management lead": "Finance & Accounting",
@@ -902,7 +909,7 @@ DEPT_ACTORS = {
     "master data analyst": "Merchandising & Buying",
     "procurement": "Supply Chain & Logistics", "procurement specialist": "Supply Chain & Logistics",
     "procurement director": "Supply Chain & Logistics", "vendor mgmt": "Supply Chain & Logistics",
-    "logistics": "Supply Chain & Logistics", "logistics manager": "Supply Chain & Logistics",
+    "logistics": "Supply Chain & Logistics",
     "supply planning": "Supply Chain & Logistics", "supply planning manager": "Supply Chain & Logistics",
     "supply planner": "Supply Chain & Logistics", "dc ops": "Supply Chain & Logistics",
     "store ops": "Store Operations", "store operation": "Store Operations",
@@ -925,7 +932,7 @@ DEPT_ACTORS = {
     # --- Thirty-second-wave reconciliation (2026-09-15): recurring uncharted
     # Owner forms adjudicated at department grain — functions the register
     # charters without a distinct manager/specialist title for the corpus form.
-    "cost accounting manager": "Finance & Accounting",
+   
     "ar accountant": "Finance & Accounting", "ar settlement accountant": "Finance & Accounting",
     "ar analyst": "Finance & Accounting", "claims manager": "Finance & Accounting",
     "project accountant": "Finance & Accounting", "risk & insurance manager": "Finance & Accounting",
@@ -1100,7 +1107,7 @@ DEPT_ACTORS = {
     "gm": "Generic / cross-department",
     "management": "Generic / cross-department",
     "department heads": "Generic / cross-department",
-    "data protection officer": "Data Privacy Officer (DPO)",
+   
     "vp merch": "VP for Merchandising",
     "vp finance": "VP Finance & Accounting / Corporate Controller",
     "regulatory officer": "Regulatory Affairs Specialist",

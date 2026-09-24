@@ -5040,7 +5040,7 @@ C71_RC_OUT=$(python3 "$REPO_ROOT/07-methodology/generate-role-coverage.py" --che
 C71_CENSUS_OUT=$(python3 "$REPO_ROOT/07-methodology/generate-role-coverage.py" --census 2>&1) && C71_CENSUS_RC=0 || C71_CENSUS_RC=$?
 C71_CENSUS_OK=0
 case "$C71_CENSUS_OUT" in
-  *"CENSUS workflows=5433 owner_resolved=5433 owner_uncharted=0 owner_uncharted_forms=0 uncharted_forms=0 ctl_owner_cells=808 ctl_owner_resolved=808 ctl_owner_uncharted=0 ctl_owner_uncharted_forms=0 prose_role_uncharted=0 prose_role_forms=0 anchor_chartered=259 anchor_anchored=259 anchor_zero=0 anchor_weak=65"*) C71_CENSUS_OK=1;;
+  *"CENSUS workflows=5433 owner_resolved=5433 owner_uncharted=0 owner_uncharted_forms=0 uncharted_forms=0 ctl_owner_cells=808 ctl_owner_resolved=808 ctl_owner_uncharted=0 ctl_owner_uncharted_forms=0 prose_role_uncharted=0 prose_role_forms=0 anchor_chartered=259 anchor_anchored=259 anchor_zero=0 anchor_weak=64"*) C71_CENSUS_OK=1;;
 esac
 # Part E/F (2026-09-16 forty-seventh-wave consistency review): the shipped
 # generated trees' byte-currency. generate-role-coverage.py --check (Part C)

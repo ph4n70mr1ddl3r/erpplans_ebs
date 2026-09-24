@@ -22,7 +22,7 @@
 |---|---|
 | Workflows mapped | 5433 (exactly one Owner each — asserted) |
 | Confirmed Tier register | 5456 rows (Tier 1: 1396 · Tier 2: 3302 · Tier 3: 758) |
-| Distinct resolved actors | 4239 — §5.3 register roles 195 · IT product-model seats 32 · store field 12 · DC field 27 · department-level actors 2981 · system actors 31 · governance 59 · workforce 101 · external 801 · uncharted 0 |
+| Distinct resolved actors | 4234 — §5.3 register roles 195 · IT product-model seats 32 · store field 12 · DC field 27 · department-level actors 2976 · system actors 31 · governance 59 · workforce 101 · external 801 · uncharted 0 |
 
 > Tier mix = confirmed tiers of the workflows a role touches (a workflow
 > counts once per role regardless of how many steps mention it). HC is
@@ -50,9 +50,9 @@
 | Chartered roles (register 192 + IT seats 32 + store 8 + DC 27) | 259 |
 | With ≥1 explicit RACI anchor | 259 (100%) |
 | ZERO-anchor — the anchoring worklist | 0 (hq 0 · it 0 · store 0 · dc 0) |
-| Weakly anchored (1–2 workflows) — demand-verification watchlist | 65 |
+| Weakly anchored (1–2 workflows) — demand-verification watchlist | 64 |
 
-### Weak-anchor watchlist — 65 chartered roles anchored in only 1–2 workflows
+### Weak-anchor watchlist — 64 chartered roles anchored in only 1–2 workflows
 
 | Role | Charter source | HC | Workflows touched |
 |---|---|---|---|
@@ -62,7 +62,6 @@
 | ESG Reporting & Data Analyst | §5.3 register — Sustainability / ESG | 1 | 1 |
 | Field Communications Manager | §5.3 register — Store Operations | 1 | 1 |
 | Legal Counsel — Contracts | §5.3 register — Legal & Compliance | 2 | 1 |
-| Manager, GL & Consolidation (Assistant Controller) | §5.3 register — Finance & Accounting | 1 | 1 |
 | Marketing Comms Specialist | §5.3 register — Marketing | 1 | 1 |
 | Payroll & Statutory Remittance Officer | §5.3 register — Human Resources | 1 | 1 |
 | Privacy Officer | §5.3 register — Legal & Compliance | 1 | 1 |
@@ -140,9 +139,11 @@
 | AR & Credit Manager | Finance & Accounting | 1 | 38 | 50 | 107 | 243 | 104 | 36 | 60 | 8 |
 | AR Supervisor | Finance & Accounting | 1 | 30 | 34 | 103 | 97 | 57 | 39 | 18 | 0 |
 | Credit Analyst | Finance & Accounting | 2 | 27 | 62 | 149 | 21 | 85 | 28 | 50 | 7 |
+| GL Accountant (one per entity) | Finance & Accounting | 5 | 27 | 55 | 123 | 30 | 71 | 30 | 39 | 2 |
 | FP&A Manager | Finance & Accounting | 1 | 26 | 13 | 51 | 9 | 34 | 6 | 23 | 5 |
 | Senior Revenue Accountant | Finance & Accounting | 1 | 26 | 6 | 74 | 0 | 30 | 9 | 20 | 1 |
 | Leases Accountant | Finance & Accounting | 1 | 25 | 5 | 60 | 0 | 25 | 6 | 17 | 2 |
+| Manager, GL & Consolidation (Assistant Controller) | Finance & Accounting | 1 | 24 | 1 | 2 | 0 | 25 | 5 | 19 | 1 |
 | Treasury Analyst | Finance & Accounting | 3 | 23 | 64 | 209 | 28 | 88 | 56 | 26 | 6 |
 | AR Clerk | Finance & Accounting | 2 | 17 | 49 | 132 | 20 | 66 | 40 | 22 | 4 |
 | AP Manager | Finance & Accounting | 1 | 17 | 33 | 65 | 30 | 41 | 18 | 20 | 3 |
@@ -154,14 +155,12 @@
 | Collections Specialist | Finance & Accounting | 2 | 4 | 13 | 16 | 1 | 15 | 7 | 8 | 0 |
 | Revenue Assurance Analyst | Finance & Accounting | 1 | 3 | 0 | 6 | 2 | 4 | 1 | 3 | 0 |
 | S&OP Finance Partner | Finance & Accounting | 1 | 2 | 8 | 10 | 0 | 8 | 0 | 3 | 5 |
-| GL Accountant (one per entity) | Finance & Accounting | 5 | 1 | 5 | 10 | 0 | 8 | 6 | 2 | 0 |
 | Payroll Accounting Liaison | Finance & Accounting | 1 | 0 | 3 | 3 | 2 | 4 | 3 | 0 | 1 |
 | Banking & Cash-Management Specialist | Finance & Accounting | 2 | 0 | 2 | 0 | 0 | 2 | 1 | 1 | 0 |
 | DC Cost-to-Serve Analyst | Finance & Accounting | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 1 | 1 |
 | Senior FP&A Analyst | Finance & Accounting | 2 | 0 | 2 | 0 | 0 | 2 | 1 | 0 | 1 |
 | Tax Compliance & eFPS Specialist | Finance & Accounting | 1 | 0 | 2 | 0 | 0 | 2 | 2 | 0 | 0 |
 | Accounting Policy Analyst | Finance & Accounting | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
-| Manager, GL & Consolidation (Assistant Controller) | Finance & Accounting | 1 | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
 | Technical Accounting Manager | Finance & Accounting | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Category Manager | Merchandising & Buying | 5 | 127 | 616 | 656 | 560 | 733 | 119 | 482 | 132 |
 | VP for Merchandising | Merchandising & Buying | 1 | 59 | 182 | 123 | 919 | 542 | 87 | 353 | 102 |
@@ -177,6 +176,7 @@
 | Promotions & Vendor-Funding Coordinator | Merchandising & Buying | 3 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | VP Supply Chain & Logistics (dual-hat GM, BuildRight Logistics, Inc.) | Supply Chain & Logistics | 1 | 58 | 128 | 112 | 528 | 338 | 85 | 180 | 73 |
 | Fleet Compliance & Safety Specialist | Supply Chain & Logistics | 1 | 49 | 35 | 146 | 20 | 37 | 22 | 13 | 2 |
+| Fleet & Logistics Manager | Supply Chain & Logistics | 1 | 40 | 53 | 129 | 191 | 145 | 27 | 93 | 25 |
 | Procurement Manager | Supply Chain & Logistics | 1 | 35 | 55 | 87 | 99 | 97 | 35 | 45 | 17 |
 | Logistics Coordinator | Supply Chain & Logistics | 2 | 28 | 34 | 71 | 24 | 47 | 9 | 37 | 1 |
 | DC Operations Manager | Supply Chain & Logistics | 1 | 25 | 33 | 57 | 91 | 67 | 25 | 38 | 4 |
@@ -190,7 +190,6 @@
 | Supply & Allocation Planner | Supply Chain & Logistics | 1 | 3 | 21 | 43 | 9 | 29 | 10 | 18 | 1 |
 | Demand Planner | Supply Chain & Logistics | 2 | 3 | 8 | 25 | 2 | 11 | 6 | 3 | 2 |
 | Inventory Planner | Supply Chain & Logistics | 2 | 3 | 6 | 16 | 5 | 11 | 7 | 4 | 0 |
-| Fleet & Logistics Manager | Supply Chain & Logistics | 1 | 3 | 0 | 8 | 13 | 3 | 0 | 1 | 2 |
 | Imports & Customs Manager | Supply Chain & Logistics | 1 | 3 | 1 | 0 | 2 | 3 | 2 | 1 | 0 |
 | Vendor Scorecard & Performance Analyst | Supply Chain & Logistics | 1 | 2 | 7 | 6 | 4 | 8 | 3 | 4 | 1 |
 | 3PL & Freight Specialist | Supply Chain & Logistics | 2 | 2 | 0 | 8 | 8 | 2 | 0 | 2 | 0 |
@@ -225,7 +224,7 @@
 | TA Coordinator | Human Resources | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Marketplace Manager | Marketing | 2 | 34 | 66 | 59 | 92 | 79 | 10 | 53 | 16 |
 | Loyalty & CRM Manager | Marketing | 1 | 25 | 30 | 68 | 41 | 43 | 3 | 28 | 12 |
-| Retail Media & Marketplace Manager | Marketing | 1 | 23 | 3 | 47 | 19 | 26 | 2 | 19 | 5 |
+| Retail Media & Marketplace Manager | Marketing | 1 | 25 | 7 | 53 | 19 | 30 | 2 | 22 | 6 |
 | Consumer Insights Manager | Marketing | 1 | 21 | 24 | 35 | 4 | 34 | 1 | 11 | 22 |
 | Brand & Communications Manager | Marketing | 1 | 19 | 67 | 75 | 4 | 86 | 21 | 57 | 8 |
 | Digital Marketing Manager | Marketing | 3 | 19 | 23 | 57 | 10 | 28 | 1 | 13 | 14 |
@@ -252,12 +251,12 @@
 | Field Communications Manager | Store Operations | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | VP Legal & Compliance | Legal & Compliance | 1 | 109 | 131 | 184 | 1114 | 636 | 200 | 388 | 48 |
 | Government Affairs Manager | Legal & Compliance | 1 | 43 | 41 | 95 | 25 | 59 | 5 | 51 | 3 |
+| Data Privacy Officer (DPO) | Legal & Compliance | 1 | 38 | 103 | 159 | 127 | 136 | 52 | 74 | 10 |
 | Corporate Secretary | Legal & Compliance | 1 | 38 | 41 | 123 | 19 | 61 | 21 | 35 | 5 |
 | Regulatory Affairs Specialist | Legal & Compliance | 3 | 29 | 5 | 74 | 58 | 38 | 20 | 17 | 1 |
 | Compliance Manager / MLRO | Legal & Compliance | 1 | 27 | 4 | 22 | 63 | 40 | 6 | 29 | 5 |
 | Litigation & IP Counsel | Legal & Compliance | 2 | 20 | 30 | 73 | 21 | 43 | 17 | 25 | 1 |
 | Customs & Trade Compliance Specialist | Legal & Compliance | 1 | 13 | 25 | 48 | 10 | 27 | 16 | 11 | 0 |
-| Data Privacy Officer (DPO) | Legal & Compliance | 1 | 12 | 94 | 156 | 122 | 126 | 50 | 66 | 10 |
 | Compliance Analyst | Legal & Compliance | 1 | 12 | 0 | 12 | 3 | 12 | 7 | 5 | 0 |
 | AML / ABC Officer | Legal & Compliance | 1 | 7 | 42 | 26 | 4 | 45 | 19 | 23 | 3 |
 | Paralegal / Contracts Specialist | Legal & Compliance | 2 | 2 | 0 | 2 | 4 | 2 | 0 | 2 | 0 |
@@ -470,11 +469,9 @@
 | Treasury | Finance & Accounting | 50 | 256 | 258 | 4 | 297 | 89 | 180 | 28 |
 | Finance Analyst | Finance & Accounting | 30 | 60 | 158 | 5 | 116 | 29 | 62 | 25 |
 | Fraud Management | Finance & Accounting | 24 | 22 | 69 | 0 | 25 | 17 | 8 | 0 |
-| Cost Accounting Manager | Finance & Accounting | 24 | 0 | 2 | 0 | 24 | 4 | 19 | 1 |
 | Vp Investor Relations | Finance & Accounting | 24 | 0 | 0 | 0 | 24 | 3 | 18 | 3 |
 | Abl & Collateral Operations Manager | Finance & Accounting | 23 | 0 | 0 | 0 | 23 | 10 | 11 | 2 |
 | Finance Manager | Finance & Accounting | 22 | 78 | 80 | 283 | 197 | 81 | 98 | 18 |
-| Fixed Asset Accountant | Finance & Accounting | 21 | 29 | 62 | 18 | 35 | 9 | 25 | 1 |
 | Payment Ops | Finance & Accounting | 19 | 6 | 41 | 1 | 27 | 7 | 16 | 4 |
 | Accounting Manager | Finance & Accounting | 13 | 42 | 43 | 123 | 82 | 32 | 47 | 3 |
 | Insurance Coordinator | Finance & Accounting | 7 | 19 | 38 | 8 | 26 | 11 | 14 | 1 |
@@ -486,7 +483,6 @@
 | Finance Desk | Finance & Accounting | 6 | 3 | 17 | 0 | 10 | 1 | 9 | 0 |
 | Lease Operations Manager | Finance & Accounting | 6 | 0 | 0 | 13 | 8 | 2 | 6 | 0 |
 | Lease Origination Manager | Finance & Accounting | 6 | 0 | 0 | 5 | 6 | 0 | 6 | 0 |
-| Cost Accountant | Finance & Accounting | 5 | 21 | 51 | 12 | 32 | 18 | 13 | 1 |
 | Chief Accountant | Finance & Accounting | 5 | 20 | 47 | 14 | 25 | 17 | 8 | 0 |
 | Fraud | Finance & Accounting | 5 | 21 | 20 | 0 | 25 | 3 | 20 | 2 |
 | O2C | Finance & Accounting | 5 | 9 | 21 | 0 | 15 | 3 | 11 | 1 |
@@ -835,7 +831,6 @@
 | Vs-67 Vendor Scorecard | Merchandising & Buying | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 1 |
 | Procurement | Supply Chain & Logistics | 63 | 319 | 391 | 6 | 383 | 54 | 270 | 59 |
 | Logistics | Supply Chain & Logistics | 44 | 159 | 184 | 1 | 173 | 48 | 107 | 18 |
-| Logistics Manager | Supply Chain & Logistics | 37 | 53 | 121 | 178 | 142 | 27 | 92 | 23 |
 | Ev Program Manager | Supply Chain & Logistics | 21 | 0 | 6 | 45 | 23 | 3 | 17 | 3 |
 | Transport Lead | Supply Chain & Logistics | 20 | 1 | 32 | 15 | 24 | 2 | 19 | 3 |
 | Supply Planning | Supply Chain & Logistics | 14 | 82 | 86 | 0 | 94 | 15 | 58 | 21 |
@@ -2780,7 +2775,7 @@
 | Sponsors | Strategy / Corporate Planning | 0 | 12 | 0 | 0 | 12 | 0 | 9 | 3 |
 | Trade Capability | Trade / Account Management | 24 | 26 | 72 | 0 | 26 | 4 | 19 | 3 |
 | Pro-Referral Network Manager | Trade / Account Management | 24 | 0 | 0 | 0 | 24 | 1 | 21 | 2 |
-| Account Manager | Trade / Account Management | 23 | 40 | 86 | 3 | 50 | 2 | 38 | 10 |
+| Account Manager | Trade / Account Management | 21 | 36 | 80 | 3 | 46 | 2 | 35 | 9 |
 | Commercial | Trade / Account Management | 21 | 3 | 35 | 0 | 25 | 3 | 18 | 4 |
 | Trade Sales Manager | Trade / Account Management | 16 | 16 | 49 | 29 | 42 | 9 | 28 | 5 |
 | Trade Sales | Trade / Account Management | 12 | 52 | 50 | 0 | 64 | 13 | 47 | 4 |
@@ -2888,7 +2883,6 @@
 | Vp Commercial | Trade / Account Management | 0 | 0 | 0 | 1 | 1 | 0 | 1 | 0 |
 | Wholesale Manager | Trade / Account Management | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
 | Fp&A | Finance & Accounting (FP&A) | 38 | 155 | 202 | 14 | 183 | 13 | 113 | 57 |
-| Data Protection Officer | Data Privacy Officer (DPO) | 26 | 9 | 3 | 5 | 38 | 22 | 16 | 0 |
 | Ecommerce Operations Manager | Digital Commerce (IT-built platforms) | 26 | 4 | 4 | 41 | 34 | 13 | 19 | 2 |
 | Global Sourcing | Merchandising & Buying (Direct Sourcing) | 25 | 35 | 73 | 0 | 36 | 5 | 27 | 4 |
 | Project Manager | Strategy / Corporate Planning (PMO) | 18 | 36 | 73 | 15 | 47 | 2 | 37 | 8 |

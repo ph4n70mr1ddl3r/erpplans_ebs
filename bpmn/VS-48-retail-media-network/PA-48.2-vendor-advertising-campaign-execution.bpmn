@@ -4,11 +4,11 @@
       <bpmn:documentation>Trigger: Vendor books media campaign
 Frequency: ~50–100 campaigns/quarter
 Volume: Per campaign
-Owner: Account Manager
-Participants: Account Manager, Creative Designer, Vendor, Retail Media Operations Specialist
+Owner: Retail Media &amp; Marketplace Manager
+Participants: Retail Media &amp; Marketplace Manager, Creative Designer, Vendor, Retail Media Operations Specialist
 Source: workflow W2006 — Vendor Media Campaign Briefing &amp; Creative Development</bpmn:documentation>
       <bpmn:laneSet id="W2006_LaneSet3">
-        <bpmn:lane id="W2006_Lane1" name="Account Manager">
+        <bpmn:lane id="W2006_Lane1" name="Retail Media &amp; Marketplace Manager">
         <bpmn:flowNodeRef>W2006_Task5</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W2006_Task7</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W2006_Start4</bpmn:flowNodeRef>
@@ -21,9 +21,9 @@ Source: workflow W2006 — Vendor Media Campaign Briefing &amp; Creative Develop
       <bpmn:startEvent id="W2006_Start4" name="Vendor books media campaign">
         <bpmn:outgoing>W2006_Flow11</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:userTask id="W2006_Task5" name="Account Manager conducts campaign briefing with vendor: (a) campaign…">
-        <bpmn:documentation>Step 1: Account Manager conducts campaign briefing with vendor: (a) campaign objectives: brand awareness, new product launch, promotional sales lift, (b) target audience: DIY homeowners, trade professionals, specific category buyers, (c) key message and call-to-action, (d) campaign duration and channels, (e) creative assets available from vendor or BuildRight creative needed
-Responsible (R): Account Manager
+      <bpmn:userTask id="W2006_Task5" name="Retail Media &amp; Marketplace Manager conducts campaign briefing with vendor: (a)…">
+        <bpmn:documentation>Step 1: Retail Media &amp; Marketplace Manager conducts campaign briefing with vendor: (a) campaign objectives: brand awareness, new product launch, promotional sales lift, (b) target audience: DIY homeowners, trade professionals, specific category buyers, (c) key message and call-to-action, (d) campaign duration and channels, (e) creative assets available from vendor or BuildRight creative needed
+Responsible (R): Retail Media &amp; Marketplace Manager
 Accountable (A): Marketing Manager
 Duration: 30–60 min</bpmn:documentation>
         <bpmn:incoming>W2006_Flow11</bpmn:incoming>
@@ -39,7 +39,7 @@ Duration: 3–5 days</bpmn:documentation>
       </bpmn:userTask>
       <bpmn:userTask id="W2006_Task7" name="Production and distribution: (a) print materials: produced and shipped to…">
         <bpmn:documentation>Step 3: Production and distribution: (a) print materials: produced and shipped to stores per W2000, (b) digital content: uploaded to CMS or ecommerce platform per W2001/W2003
-Responsible (R): Account Manager / Visual Merchandiser
+Responsible (R): Retail Media &amp; Marketplace Manager / Visual Merchandiser
 Accountable (A): Marketing Manager
 Duration: 3–5 days</bpmn:documentation>
         <bpmn:incoming>W2006_Flow13</bpmn:incoming>
@@ -49,8 +49,8 @@ Duration: 3–5 days</bpmn:documentation>
         <bpmn:incoming>W2006_Flow14</bpmn:incoming>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W2006_Annotation9">
-        <bpmn:text>Controls: - CTL-386 (ensure controlled execution — Vendor Advertising Campaign Execution (PA-48.2).) | - operational: Account Manager review and approval gate | ---
-Owner: Account Manager</bpmn:text>
+        <bpmn:text>Controls: - CTL-386 (ensure controlled execution — Vendor Advertising Campaign Execution (PA-48.2).) | - operational: Retail Media &amp; Marketplace Manager review and approval gate | ---
+Owner: Retail Media &amp; Marketplace Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W2006_Assoc10" sourceRef="W2006_Annotation9" targetRef="W2006_Start4" associationDirection="None" />
       <bpmn:sequenceFlow id="W2006_Flow11" sourceRef="W2006_Start4" targetRef="W2006_Task5" />
@@ -67,7 +67,7 @@ Owner: Account Manager</bpmn:text>
         <bpmndi:BPMNShape id="W2006_Task7_di" bpmnElement="W2006_Task7"><dc:Bounds x="820" y="125" width="180" height="80" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W2006_Start4_di" bpmnElement="W2006_Start4"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W2006_End8_di" bpmnElement="W2006_End8"><dc:Bounds x="1050" y="317" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W2006_Annotation9_di" bpmnElement="W2006_Annotation9"><dc:Bounds x="160" y="460" width="360" height="60" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W2006_Annotation9_di" bpmnElement="W2006_Annotation9"><dc:Bounds x="160" y="460" width="360" height="72" /></bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="W2006_Flow11_di" bpmnElement="W2006_Flow11"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W2006_Flow12_di" bpmnElement="W2006_Flow12"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="W2006_Flow13_di" bpmnElement="W2006_Flow13"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="165" /></bpmndi:BPMNEdge>
@@ -295,11 +295,11 @@ Owner: Digital Marketing Manager</bpmn:text>
       <bpmn:documentation>Trigger: Vendor has co-op advertising fund agreement per W513
 Frequency: Per campaign; ~50–100 co-op funded campaigns/year
 Volume: ~30–50% of media campaigns funded partly by vendor co-op
-Owner: Account Manager
-Participants: Account Manager, Marketing Manager, AP Clerk, Vendor
+Owner: Retail Media &amp; Marketplace Manager
+Participants: Retail Media &amp; Marketplace Manager, Marketing Manager, AP Clerk, Vendor
 Source: workflow W2010 — Vendor Co-Op Advertising Fund Integration</bpmn:documentation>
       <bpmn:laneSet id="W2010_LaneSet3">
-        <bpmn:lane id="W2010_Lane1" name="Account Manager">
+        <bpmn:lane id="W2010_Lane1" name="Retail Media &amp; Marketplace Manager">
         <bpmn:flowNodeRef>W2010_Task5</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W2010_Task6</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W2010_Start4</bpmn:flowNodeRef>
@@ -312,9 +312,9 @@ Source: workflow W2010 — Vendor Co-Op Advertising Fund Integration</bpmn:docum
       <bpmn:startEvent id="W2010_Start4" name="Vendor has co-op advertising fund agreement per W513">
         <bpmn:outgoing>W2010_Flow11</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:userTask id="W2010_Task5" name="Account Manager checks vendor co-op fund availability: (a) annual co-op budget…">
-        <bpmn:documentation>Step 1: Account Manager checks vendor co-op fund availability: (a) annual co-op budget per vendor agreement per W513, (b) YTD co-op spend, (c) remaining balance available for current campaign
-Responsible (R): Account Manager
+      <bpmn:userTask id="W2010_Task5" name="Retail Media &amp; Marketplace Manager checks vendor co-op fund availability: (a)…">
+        <bpmn:documentation>Step 1: Retail Media &amp; Marketplace Manager checks vendor co-op fund availability: (a) annual co-op budget per vendor agreement per W513, (b) YTD co-op spend, (c) remaining balance available for current campaign
+Responsible (R): Retail Media &amp; Marketplace Manager
 Accountable (A): Marketing Manager
 Duration: Per campaign</bpmn:documentation>
         <bpmn:incoming>W2010_Flow11</bpmn:incoming>
@@ -322,7 +322,7 @@ Duration: Per campaign</bpmn:documentation>
       </bpmn:userTask>
       <bpmn:serviceTask id="W2010_Task6" name="Campaign cost allocation: (a) total campaign cost: BuildRight media rate +…">
         <bpmn:documentation>Step 2: Campaign cost allocation: (a) total campaign cost: BuildRight media rate + production costs, (b) vendor co-op contribution: per agreement (typically 50–100% of media cost), (c) BuildRight contribution: remaining portion, (d) system records co-op fund utilization per vendor
-Responsible (R): Account Manager / System
+Responsible (R): Retail Media &amp; Marketplace Manager / System
 Accountable (A): Marketing Manager
 Duration: Per campaign</bpmn:documentation>
         <bpmn:incoming>W2010_Flow12</bpmn:incoming>
@@ -341,7 +341,7 @@ Duration: Per campaign</bpmn:documentation>
       </bpmn:endEvent>
       <bpmn:textAnnotation id="W2010_Annotation9">
         <bpmn:text>Controls: - CTL-193 (ensure retail-media billing &amp; placement delivery.) | - operational: standard operating procedures; system-enforced validation rules | ---
-Owner: Account Manager</bpmn:text>
+Owner: Retail Media &amp; Marketplace Manager</bpmn:text>
       </bpmn:textAnnotation>
       <bpmn:association id="W2010_Assoc10" sourceRef="W2010_Annotation9" targetRef="W2010_Start4" associationDirection="None" />
       <bpmn:sequenceFlow id="W2010_Flow11" sourceRef="W2010_Start4" targetRef="W2010_Task5" />
@@ -371,14 +371,14 @@ Owner: Account Manager</bpmn:text>
 Frequency: Per campaign completion; monthly vendor reports
 Volume: ~50–100 campaign reports/quarter
 Owner: Marketing Manager
-Participants: Marketing Manager, Account Manager, Vendor
+Participants: Marketing Manager, Retail Media &amp; Marketplace Manager, Vendor
 Source: workflow W2011 — Retail Media Campaign Reporting &amp; Vendor Presentation</bpmn:documentation>
       <bpmn:laneSet id="W2011_LaneSet4">
         <bpmn:lane id="W2011_Lane1" name="System">
         <bpmn:flowNodeRef>W2011_Task6</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W2011_Start5</bpmn:flowNodeRef>
         </bpmn:lane>
-        <bpmn:lane id="W2011_Lane2" name="Account Manager">
+        <bpmn:lane id="W2011_Lane2" name="Retail Media &amp; Marketplace Manager">
         <bpmn:flowNodeRef>W2011_Task7</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W2011_Lane3" name="Marketing Manager">
@@ -397,9 +397,9 @@ Duration: Automated</bpmn:documentation>
         <bpmn:incoming>W2011_Flow12</bpmn:incoming>
         <bpmn:outgoing>W2011_Flow13</bpmn:outgoing>
       </bpmn:serviceTask>
-      <bpmn:userTask id="W2011_Task7" name="Account Manager presents report to vendor: (a) campaign performance vs…">
-        <bpmn:documentation>Step 2: Account Manager presents report to vendor: (a) campaign performance vs. objectives, (b) ROI analysis: vendor investment vs. sales lift, (c) recommendations for next campaign: optimization insights, (d) upsell: suggest additional placements or channels based on performance
-Responsible (R): Account Manager
+      <bpmn:userTask id="W2011_Task7" name="Retail Media &amp; Marketplace Manager presents report to vendor: (a) campaign…">
+        <bpmn:documentation>Step 2: Retail Media &amp; Marketplace Manager presents report to vendor: (a) campaign performance vs. objectives, (b) ROI analysis: vendor investment vs. sales lift, (c) recommendations for next campaign: optimization insights, (d) upsell: suggest additional placements or channels based on performance
+Responsible (R): Retail Media &amp; Marketplace Manager
 Accountable (A): Marketing Manager
 Duration: 30–60 min/vendor</bpmn:documentation>
         <bpmn:incoming>W2011_Flow13</bpmn:incoming>
@@ -449,7 +449,7 @@ Owner: Marketing Manager</bpmn:text>
 Frequency: 6 seasonal packages/year (bi-monthly)
 Volume: ~30–60 seasonal packages sold/year (within the 5–10/season availability)
 Owner: Marketing Manager
-Participants: Marketing Manager, Account Manager, VP Merchandising, Vendor
+Participants: Marketing Manager, Retail Media &amp; Marketplace Manager, VP Merchandising, Vendor
 Source: workflow W2012 — Seasonal Media Package Development &amp; Sales</bpmn:documentation>
       <bpmn:laneSet id="W2012_LaneSet3">
         <bpmn:lane id="W2012_Lane1" name="Marketing Manager">
@@ -457,7 +457,7 @@ Source: workflow W2012 — Seasonal Media Package Development &amp; Sales</bpmn:
         <bpmn:flowNodeRef>W2012_Task7</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W2012_Start4</bpmn:flowNodeRef>
         </bpmn:lane>
-        <bpmn:lane id="W2012_Lane2" name="Account Manager">
+        <bpmn:lane id="W2012_Lane2" name="Retail Media &amp; Marketplace Manager">
         <bpmn:flowNodeRef>W2012_Task6</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W2012_End8</bpmn:flowNodeRef>
         </bpmn:lane>
@@ -473,9 +473,9 @@ Duration: 1 week/season</bpmn:documentation>
         <bpmn:incoming>W2012_Flow11</bpmn:incoming>
         <bpmn:outgoing>W2012_Flow12</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W2012_Task6" name="Account Manager sells seasonal packages to vendors: (a) priority offer to…">
-        <bpmn:documentation>Step 2: Account Manager sells seasonal packages to vendors: (a) priority offer to existing media vendors, (b) present seasonal sales opportunity (higher foot traffic during seasonal peaks), (c) close deals before seasonal catalog deadline
-Responsible (R): Account Manager
+      <bpmn:userTask id="W2012_Task6" name="Retail Media &amp; Marketplace Manager sells seasonal packages to vendors: (a)…">
+        <bpmn:documentation>Step 2: Retail Media &amp; Marketplace Manager sells seasonal packages to vendors: (a) priority offer to existing media vendors, (b) present seasonal sales opportunity (higher foot traffic during seasonal peaks), (c) close deals before seasonal catalog deadline
+Responsible (R): Retail Media &amp; Marketplace Manager
 Accountable (A): Marketing Manager
 Duration: 2–3 weeks/season</bpmn:documentation>
         <bpmn:incoming>W2012_Flow12</bpmn:incoming>

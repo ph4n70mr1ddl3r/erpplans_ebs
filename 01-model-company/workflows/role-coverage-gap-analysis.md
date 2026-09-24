@@ -19,10 +19,10 @@
 | Measure | Value |
 |---|---|
 | Workflows analyzed | 5433 (population-pinned) |
-| Class C — healthy (≥1 chartered owner) | 3610 |
-| Class B — owner-grain gap (chartered roles touched, owner not chartered) | 1612 |
-| Class A — role-less (no chartered role in any RACI cell) | 211 |
-| Anchoring census (role → workflow arm, pinned by Check 71) | 259 chartered / 259 anchored / 0 zero-anchor / 65 weak |
+| Class C — healthy (≥1 chartered owner) | 3722 |
+| Class B — owner-grain gap (chartered roles touched, owner not chartered) | 1519 |
+| Class A — role-less (no chartered role in any RACI cell) | 192 |
+| Anchoring census (role → workflow arm, pinned by Check 71) | 259 chartered / 259 anchored / 0 zero-anchor / 64 weak |
 
 > **Adjudication policy.** Department-grain ownership ('Finance', 'Legal',
 > 'HR' as performer) is acceptable only where the work is genuinely
@@ -35,7 +35,7 @@
 > disable-not-delete doctrine). Classes A/B only legitimately move
 > downward; any increase forces conscious re-adjudication.
 
-## Class A — Role-less workflows (211)
+## Class A — Role-less workflows (192)
 
 No chartered role appears in Owner, Participants, or either Steps Role
 cell. Estate-annotated rows are retained design under a registered
@@ -45,8 +45,6 @@ estate).
 
 | Workflow | Title | VS | PA | Owner form | Estate |
 |---|---|---|---|---|---|
-| W1400 | Driver License Expiration Monitoring, LTO Compliance & Renewal Tracking | VS-6 | PA-06.2 | Fleet Maintenance Supervisor |  |
-| W1401 | Fleet Vehicle Annual LTO Registration Renewal & Motor Vehicle Inspection Compliance | VS-6 | PA-06.2 | Fleet Maintenance Supervisor |  |
 | W1242 | E-Commerce B2B Corporate Punchout Catalog & Procurement Integration | VS-10 | PA-10.1 | Ecommerce Platform Manager |  |
 | W1013 | E-Commerce Last-Mile Delivery Partner Performance Weekly Review | VS-10 | PA-10.2 | Ecommerce Logistics Manager |  |
 | W947 | Ecommerce Live Video Shopping & Virtual Store Walkthrough | VS-10 | PA-10.3 | Ecommerce Manager |  |
@@ -55,15 +53,10 @@ estate).
 | W769 | Customer Overpayment Detection & Refund Processing | VS-15 | PA-15.2 | AR Accountant |  |
 | W791 | Construction Document Control, Drawing Revision & As-Built Management | VS-20 | PA-20.2 | Project Document Controller |  |
 | W480 | CAAP Height Clearance Permit Compliance | VS-22 | PA-22.1 | Engineering & Director, Facilities & Real Estate |  |
-| W401 | Fleet & Vehicle Master Governance | VS-29 | PA-29.1 | Logistics Manager |  |
 | W1623 | Ecommerce Customer Return Initiation & Authorization | VS-32 | PA-32.1 | Customer Service — Ecommerce Returns Specialist |  |
 | W1673 | Office Supplies & Administrative Procurement | VS-34 | PA-34.1 | Admin Manager |  |
-| W1693 | Asset Transfer Between Locations | VS-35 | PA-35.1 | Fixed Asset Accountant |  |
-| W1713 | Asset Register Cleanup & Archiving | VS-35 | PA-35.3 | Fixed Asset Accountant |  |
 | W1817 | Capex Requisition to Purchase Order Conversion | VS-40 | PA-40.1 | Procurement |  |
 | W1819 | Project Cost Capture & Allocation | VS-40 | PA-40.2 | Project Accountant |  |
-| W1829 | CIP-to-Fixed Asset Conversion Processing | VS-40 | PA-40.3 | Fixed Asset Accountant |  |
-| W2749 | Partial Asset Turnover (Phased Project Completion) | VS-40 | PA-40.3 | Fixed Asset Accountant |  |
 | W2119 | Online Purchase Warranty Registration | VS-53 | PA-53.1 | Ecommerce System / CRM |  |
 | W2124 | Warranty Digital Wallet & Customer Portal | VS-53 | PA-53.1 | Digital Product Manager |  |
 | W2137 | Extended Warranty Claim Processing | VS-53 | PA-53.3 | Extended Warranty Claims Specialist |  |
@@ -81,10 +74,6 @@ estate).
 | W2294 | Multi-Source Fulfillment Coordination | VS-60 | PA-60.2 | Order Management System | OMO build squad deferred—prepared (ah), sourcing register §4 |
 | W2296 | Split Order Customer Communication | VS-60 | PA-60.2 | Customer Communication System | OMO build squad deferred—prepared (ah), sourcing register §4 |
 | W2300 | Fulfillment Quality Control | VS-60 | PA-60.2 | Ecommerce Quality Coordinator | OMO build squad deferred—prepared (ah), sourcing register §4 |
-| W2312 | Vehicle Fuel Efficiency Monitoring | VS-61 | PA-61.1 | Fleet Supervisor |  |
-| W2314 | Driver Fuel Efficiency Training | VS-61 | PA-61.1 | Fleet Supervisor |  |
-| W2319 | RFID Fleet Toll Account Management | VS-61 | PA-61.2 | Fleet Supervisor |  |
-| W2328 | Fleet Utilization Rate Analysis | VS-61 | PA-61.3 | Fleet Supervisor |  |
 | W2414 | Marketplace Order Download & Processing | VS-65 | PA-65.2 | Order Management System |  |
 | W2431 | In-Home Measurement Visit | VS-66 | PA-66.1 | Project Consultant |  |
 | W2443 | Project Payment Collection & Milestone Billing | VS-66 | PA-66.2 | Finance Analyst |  |
@@ -110,7 +99,6 @@ estate).
 | W3033 | Customer Delivery Damage & Shortage Claim Intake | VS-90 | PA-90.3 | Customer Service Manager |  |
 | W3034 | B2B / Trade Delivery Damage Claim Investigation & Resolution | VS-90 | PA-90.3 | Trade Sales Manager |  |
 | W3036 | Damage Claim Refund, Credit Note & Financial Reconciliation | VS-90 | PA-90.3 | Finance Manager (AR) |  |
-| W3037 | Third-Party Delivery Partner (Lalamove / Transportify) Damage Recovery | VS-90 | PA-90.3 | Logistics Manager |  |
 | W3038 | Damage Claims Subrogation to Vendor / Carrier | VS-90 | PA-90.3 | Claims Manager |  |
 | W3092 | Dark Store System Integration, WMS & Robotics Commissioning | VS-93 | PA-93.1 | IT – Applications |  |
 | W3101 | Dispatch Scheduling, Carrier Handoff & Route Consolidation | VS-93 | PA-93.2 | Dark Store Shift Supervisor |  |
@@ -133,9 +121,6 @@ estate).
 | W3433 | Share-of-Wallet, Opportunity & White-Space Analysis | VS-107 | PA-107.2 | Account Manager | B2B estate disabled—prepared (x), registry CAP-B01–B04 |
 | W3435 | Solutioning & Value-Proposition Development for Strategic Accounts | VS-107 | PA-107.2 | Account Manager | B2B estate disabled—prepared (x), registry CAP-B01–B04 |
 | W3437 | Customer Success, Adoption & Product/Service Expansion | VS-107 | PA-107.2 | Account Manager | B2B estate disabled—prepared (x), registry CAP-B01–B04 |
-| W3504 | Carrier Onboarding, Insurance & Regulatory Compliance | VS-110 | PA-110.1 | Procurement / Logistics |  |
-| W3506 | Last-Mile & Customer Delivery Freight Management | VS-110 | PA-110.2 | Logistics / Ecommerce Fulfillment |  |
-| W3510 | Inter-Island / Inter-Region Freight Coordination | VS-110 | PA-110.2 | Logistics |  |
 | W3546 | Project Intake, Classification & Portfolio Registration | VS-112 | PA-112.1 | PMO |  |
 | W3548 | Stage-Gate Methodology & Project Lifecycle Standards | VS-112 | PA-112.1 | PMO |  |
 | W3549 | Program Management (Multi-Project Initiatives) | VS-112 | PA-112.1 | Program Manager / PMO |  |
@@ -231,17 +216,13 @@ estate).
 | W5010 | Investor & Shareholder Database, Targeting & Ownership Intelligence | VS-173 | PA-173.1 | VP Investor Relations / Treasury (VS-18) |  |
 | W5036 | Portable & Mobile Storage Container-Fleet Strategy, Sizing & Procurement | VS-174 | PA-174.1 | Director, Storage & Rental Services / Fleet (VS-06) |  |
 | W5044 | Storage Tenant Billing, Auto-Pay, Late-Fee & Delinquency Management | VS-174 | PA-174.2 | O2C / Property Manager (Storage) |  |
-| W5045 | Portable/Mobile Container Delivery, Placement, Relocation & Pickup Operations | VS-174 | PA-174.2 | Fleet/Logistics (VS-06) / Property Manager (Storage) |  |
 | W5046 | Customer Move-Out, Unit Inspection, Damage Assessment & Final Settlement | VS-174 | PA-174.2 | Property Manager (Storage) / O2C (VS-16) |  |
-| W5053 | Portable Container Fleet Maintenance, Cleaning, Sanitization & Lifecycle | VS-174 | PA-174.3 | Fleet/Logistics (VS-06) / Property Manager |  |
-| W5076 | Cylinder-Asset, Deposit & Float Reconciliation & Audit | VS-175 | PA-175.3 | Inventory/Fixed-Asset/O2C (VS-05/VS-35/VS-16) / Finance |  |
 | W5130 | Land Ownership Search, Title Verification & Due Diligence | VS-178 | PA-178.1 | Legal & Compliance Counsel / Land Acquisition Manager |  |
 | W5132 | Extrajudicial Settlement (EJS) of Estate Negotiation & Heir Consent | VS-178 | PA-178.1 | Land Acquisition Manager / Legal Specialist |  |
 | W5133 | Boundary Dispute, Land Survey & Technical Description Verification | VS-178 | PA-178.1 | Geodetic Engineer (In-house/Contracted) / Land Acquisition Specialist |  |
 | W5135 | Registry of Deeds (RD) Title Transfer & Registration | VS-178 | PA-178.1 | Land Liaison Officer / Legal Specialist |  |
 | W5140 | Certificate of Non-Overlap (CNO) Application & Boundary Survey | VS-178 | PA-178.2 | Land Liaison Officer / Geodetic Engineer |  |
 | W5143 | Tenant Farmer Compensation, Settlement & Relocation Governance | VS-178 | PA-178.2 | Land Acquisition Manager / HR Specialist |  |
-| W5164 | Logistics Consolidation, Baling & Transport of Recovered Plastics to DCs | VS-179 | PA-179.2 | Logistics Manager / Fleet Supervisor (VS-06) |  |
 | W5217 | Conditional Progress Waiver of Lien Issuance (upon Delivery) | VS-181 | PA-181.3 | Project Billing Clerk / AR Specialist |  |
 | W5241 | Direct Port-to-Jobsite Transit Logistics Planning and Route Survey | VS-182 | PA-182.3 | Logistics Fleet Supervisor |  |
 | W5243 | Direct Delivery Container Devanning and Joint Quantity Survey at Jobsite | VS-182 | PA-182.3 | B2B Sourcing Quality Inspector |  |
@@ -257,10 +238,10 @@ estate).
 | W5484 | Green Fleet Driver & Technician Training, Certification & Behavior Incentive Program | VS-192 | PA-192.3 | Fleet Training & Enablement Lead (VS-06.2/VS-19.4) |  |
 | W5487 | EV Battery Second-Life, End-of-Life Recycling & RA 11898 EPR Linkage | VS-192 | PA-192.3 | Fleet Maintenance Manager (VS-06.2) |  |
 
-> 14 of the 211 Class-A rows sit inside registered dormancy
-> estates (by-design retained design); 197 are open gaps.
+> 14 of the 192 Class-A rows sit inside registered dormancy
+> estates (by-design retained design); 178 are open gaps.
 
-## Class B — Owner-grain gaps (1612)
+## Class B — Owner-grain gaps (1519)
 
 The Owner cell resolves to no chartered role while chartered roles are
 touched elsewhere in the workflow. Aggregated by the literal Owner-cell
@@ -268,23 +249,19 @@ form — the full per-workflow appendix follows the aggregate.
 
 | Owner form (literal) | Workflows | Distinct VSs | Resolved grain |
 |---|---|---|---|
-| Logistics Manager | 30 | 8 | Logistics Manager |
-| Data Protection Officer (DPO) | 26 | 7 | Data Protection Officer |
 | FP&A | 25 | 10 | Fp&A |
 | Compliance Officer | 22 | 7 | Compliance Officer |
 | Ecommerce Operations Manager | 22 | 7 | Ecommerce Operations Manager |
 | Finance Analyst | 22 | 14 | Finance Analyst |
-| Cost Accounting Manager | 20 | 1 | Cost Accounting Manager |
 | HR Manager | 19 | 6 | Hr Manager |
 | Internal Audit | 17 | 6 | Internal Audit |
-| Fixed Asset Accountant | 16 | 2 | Fixed Asset Accountant |
 | Market Research Analyst | 16 | 1 | Market Research Analyst |
 | Marketing Manager | 15 | 4 | Marketing Manager |
-| Account Manager | 14 | 3 | Account Manager |
 | Customer Service Manager | 13 | 5 | Customer Service Manager |
 | Dark Store Operations Manager | 13 | 1 | Dark Store Operations Manager |
 | IT Infrastructure Manager | 13 | 3 | It Infrastructure Manager |
 | Trade Sales Manager | 13 | 4 | Trade Sales Manager |
+| Account Manager | 12 | 2 | Account Manager |
 | Accounting Manager | 12 | 6 | Accounting Manager |
 | Digital Product Manager | 12 | 4 | Digital Product Manager |
 | Finance Manager | 12 | 11 | Finance Manager |
@@ -308,6 +285,7 @@ form — the full per-workflow appendix follows the aggregate.
 | CIT Operations Manager | 6 | 1 | Cit Operations Manager |
 | EEO / Sustainability | 6 | 1 | Eeo / Sustainability |
 | Employee Experience Manager | 6 | 1 | Employee Experience Manager |
+| Fleet Supervisor | 6 | 1 | Fleet Supervisor |
 | Lease Origination Manager | 6 | 1 | Lease Origination Manager |
 | Procurement Specialist | 6 | 3 | Procurement Specialist |
 | Product Safety & Compliance Manager | 6 | 1 | Product Safety & Compliance Manager |
@@ -318,6 +296,7 @@ form — the full per-workflow appendix follows the aggregate.
 | Compliance Specialist (Environmental) | 5 | 1 | Compliance Specialist |
 | Dark Store Shift Supervisor | 5 | 1 | Dark Store Shift Supervisor |
 | Ethics & Compliance Officer | 5 | 1 | Ethics & Compliance Officer |
+| Fleet Maintenance Supervisor | 5 | 1 | Fleet Maintenance Supervisor |
 | Fleet Manager | 5 | 3 | Fleet Manager |
 | HR Compliance Manager | 5 | 4 | Hr Compliance Manager |
 | IT Innovation Lead | 5 | 2 | It Innovation Lead |
@@ -346,21 +325,18 @@ form — the full per-workflow appendix follows the aggregate.
 | B2B Sourcing Manager | 3 | 2 | B2B Sourcing Manager |
 | Chief Accountant | 3 | 1 | Chief Accountant |
 | Compliance Officer / Internal Audit | 3 | 1 | Compliance Officer / Internal Audit |
-| Cost Accountant | 3 | 2 | Cost Accountant |
 | E-Commerce Operations Manager | 3 | 1 | E-Commerce Operations Manager |
 | Ecommerce Product Manager | 3 | 1 | Ecommerce Product Manager |
 | Ethics & Compliance Officer / Legal | 3 | 1 | Ethics & Compliance Officer / Legal |
 | FinOps Lead | 3 | 1 | Finops Lead |
 | Finance | 3 | 2 | Finance |
 | Finance (Receivables Finance) | 3 | 1 | Finance |
-| Fleet Maintenance Supervisor | 3 | 1 | Fleet Maintenance Supervisor |
 | Head of Corporate Development | 3 | 1 | Head Of Corporate Development |
 | Head of Global Mobility | 3 | 1 | Head Of Global Mobility |
 | Lease Credit Manager | 3 | 1 | Lease Credit Manager |
 | Locker Program Manager / Store Ops (VS-07) | 3 | 1 | Locker Program Manager / Store Ops |
 | Logistics / Procurement | 3 | 1 | Logistics / Procurement |
 | Logistics / Transportation | 3 | 1 | Logistics / Transportation |
-| Logistics Manager (HQ) | 3 | 2 | Logistics Manager |
 | Logistics Planner | 3 | 2 | Logistics Planner |
 | Marketing Team | 3 | 2 | Marketing Team |
 | Product Compliance Manager / Merchandising | 3 | 1 | Product Compliance Manager / Merchandising |
@@ -396,7 +372,6 @@ form — the full per-workflow appendix follows the aggregate.
 | Finance Manager (Consolidation) | 2 | 1 | Finance Manager |
 | Finance Manager (FP&A) | 2 | 2 | Finance Manager |
 | Fleet Maintenance Manager (VS-06.2) | 2 | 1 | Fleet Maintenance Manager |
-| Fleet Supervisor | 2 | 1 | Fleet Supervisor |
 | Fraud Management / Finance | 2 | 1 | Fraud Management / Finance |
 | Global Sourcing | 2 | 1 | Global Sourcing |
 | Global Sourcing / Freight | 2 | 1 | Global Sourcing / Freight |
@@ -538,9 +513,6 @@ form — the full per-workflow appendix follows the aggregate.
 | Contingent Workforce (VS-98) / HR / Procurement (VS-34) | 1 | 1 | Contingent Workforce / Hr / Procurement |
 | Contract Owner (department head) | 1 | 1 | Contract Owner |
 | Contractor Site Representative | 1 | 1 | Contractor Site Representative |
-| Cost Accounting Manager (Controller org) | 1 | 1 | Cost Accounting Manager |
-| Cost Accounting Manager / IT Finance Lead | 1 | 1 | Cost Accounting Manager / It Finance Lead |
-| Cost Accounting Manager / Project Controller | 1 | 1 | Cost Accounting Manager / Project Controller |
 | Customer Experience (VS-13) / Marketing (VS-14) | 1 | 1 | Customer Experience / Marketing |
 | Customer Experience / Insights | 1 | 1 | Customer Experience / Insights |
 | Customer Relations Officer | 1 | 1 | Customer Relations Officer |
@@ -688,6 +660,8 @@ form — the full per-workflow appendix follows the aggregate.
 | Fleet Manager / Logistics Finance (VS-06/VS-17.4) | 1 | 1 | Fleet Manager / Logistics Finance |
 | Fleet Procurement Lead (VS-03/VS-06) | 1 | 1 | Fleet Procurement Lead |
 | Fleet/Hauling Safety Manager (VS-06) | 1 | 1 | Fleet / Hauling Safety Manager |
+| Fleet/Logistics (VS-06) / Property Manager | 1 | 1 | Fleet / Logistics / Property Manager |
+| Fleet/Logistics (VS-06) / Property Manager (Storage) | 1 | 1 | Fleet / Logistics / Property Manager |
 | Foundation ED / BCP (VS-26) / Programs | 1 | 1 | Foundation Ed / Bcp / Programs |
 | Foundation ED / Finance (VS-17.4) / M&E | 1 | 1 | Foundation Ed / Finance / M&E |
 | Foundation ED / HR (VS-103) / Programs | 1 | 1 | Foundation Ed / Hr / Programs |
@@ -796,10 +770,10 @@ form — the full per-workflow appendix follows the aggregate.
 | Internal Audit (Environmental compliance) | 1 | 1 | Internal Audit |
 | Internal Audit (VS-21) / ABL & Collateral Operations Manager | 1 | 1 | Internal Audit / Abl & Collateral Operations Manager |
 | Internal Audit (VS-21) / Customer Safety / Governance (VS-36) | 1 | 1 | Internal Audit / Customer Safety / Governance |
-| Internal Audit / Fixed Asset Accountant | 1 | 1 | Internal Audit / Fixed Asset Accountant |
 | Internal Audit / Legal Counsel | 1 | 1 | Internal Audit / Legal Counsel |
 | Internal Audit / Real Estate Compliance | 1 | 1 | Internal Audit / Real Estate Compliance |
 | Inventory Accountant | 1 | 1 | Inventory Accountant |
+| Inventory/Fixed-Asset/O2C (VS-05/VS-35/VS-16) / Finance | 1 | 1 | Inventory / Fixed-Asset / O2C / Finance |
 | L&D (VS-19.4) / HR (VS-103) / HSE (VS-24) | 1 | 1 | L&D / Hr / Hse |
 | LGU Compliance Liaison (VS-76) | 1 | 1 | Lgu Compliance Liaison |
 | LP (VS-23) / Fraud (VS-125) / Auto-ID Lead | 1 | 1 | Lp / Fraud / Auto-Id Lead |
@@ -831,14 +805,15 @@ form — the full per-workflow appendix follows the aggregate.
 | Locker Program Manager / Real Estate (VS-97) / Legal (VS-100.3) | 1 | 1 | Locker Program Manager / Real Estate / Legal |
 | Locker Program Manager / Real Estate (VS-97) / Store Ops (VS-07) | 1 | 1 | Locker Program Manager / Real Estate / Store Ops |
 | Locker Program Manager / Store Ops (VS-07) / Finance | 1 | 1 | Locker Program Manager / Store Ops / Finance |
+| Logistics | 1 | 1 | Logistics |
 | Logistics / AP (Freight Audit) | 1 | 1 | Logistics / Ap |
 | Logistics / Claims | 1 | 1 | Logistics / Claims |
 | Logistics / Control Tower | 1 | 1 | Logistics / Control Tower |
 | Logistics / DC Operations | 1 | 1 | Logistics / Dc Operations |
+| Logistics / Ecommerce Fulfillment | 1 | 1 | Logistics / Ecommerce Fulfillment |
 | Logistics / FP&A | 1 | 1 | Logistics / Fp&A |
 | Logistics / Procurement (Category) | 1 | 1 | Logistics / Procurement |
 | Logistics / Risk | 1 | 1 | Logistics / Risk |
-| Logistics Manager / Import Compliance | 1 | 1 | Logistics Manager / Import Compliance |
 | Logistics Planner (Inter-Island) | 1 | 1 | Logistics Planner |
 | Loss Prevention (LP) Manager | 1 | 1 | Loss Prevention Manager |
 | Loss Prevention (VS-23) / Stores (VS-07) | 1 | 1 | Loss Prevention / Stores |
@@ -941,6 +916,7 @@ form — the full per-workflow appendix follows the aggregate.
 | Procurement (VS-34) / Payment Ops / Last-Mile (VS-06.3/VS-56) | 1 | 1 | Procurement / Payment Ops / Last-Mile |
 | Procurement (VS-34) / Service Quality | 1 | 1 | Procurement / Service Quality |
 | Procurement (VS-34) / Transport Lead | 1 | 1 | Procurement / Transport Lead |
+| Procurement / Logistics | 1 | 1 | Procurement / Logistics |
 | Procurement / Real Estate | 1 | 1 | Procurement / Real Estate |
 | Procurement / Store Design | 1 | 1 | Procurement / Store Design |
 | Procurement Specialist / Compliance Officer | 1 | 1 | Procurement Specialist / Compliance Officer |
@@ -1143,7 +1119,7 @@ form — the full per-workflow appendix follows the aggregate.
 | Vendor Warranty Coordinator | 1 | 1 | Vendor Warranty Coordinator |
 | Warranty (VS-53) / Legal (VS-100.3) / Merchandising | 1 | 1 | Warranty / Legal / Merchandising |
 
-### Class B appendix — all 1612 workflows
+### Class B appendix — all 1519 workflows
 
 | Workflow | Title | VS | Owner form (resolved) | Estate |
 |---|---|---|---|---|
@@ -1180,8 +1156,6 @@ form — the full per-workflow appendix follows the aggregate.
 | W1884 | Trade Account Offboarding & Account Closure | VS-43 | Account Manager | B2B estate disabled—prepared (x), registry CAP-B01–B04 |
 | W1887 | Contractor Points Earning, Redemption & Statement Management | VS-43 | Account Manager | B2B estate disabled—prepared (x), registry CAP-B01–B04 |
 | W1889 | Contractor Referral Program & New Account Acquisition Incentive | VS-43 | Account Manager | B2B estate disabled—prepared (x), registry CAP-B01–B04 |
-| W2006 | Vendor Media Campaign Briefing & Creative Development | VS-48 | Account Manager |  |
-| W2010 | Vendor Co-Op Advertising Fund Integration | VS-48 | Account Manager |  |
 | W3434 | Enterprise Pricing, Contract & Trading-Terms Negotiation | VS-107 | Account Manager | B2B estate disabled—prepared (x), registry CAP-B01–B04 |
 | W3436 | Strategic Project Pursuit, Bid Strategy & Win-Plan | VS-107 | Account Manager | B2B estate disabled—prepared (x), registry CAP-B01–B04 |
 | W3439 | Joint Marketing, CSR & Co-Marketing with Strategic Accounts | VS-107 | Account Manager | B2B estate disabled—prepared (x), registry CAP-B01–B04 |
@@ -1358,32 +1332,6 @@ form — the full per-workflow appendix follows the aggregate.
 | W3231 | Outsourced Function Transition & Insourcing/Outsourcing Decisions | VS-98 | Contingent Workforce Manager |  |
 | W1678 | Service Level Agreement (SLA) Monitoring & Performance Tracking | VS-34 | Contract Owner |  |
 | W2703 | On-Site Material Verification & Receipt | VS-77 | Contractor Site Representative | TPS build squad deferred—prepared (ad), sourcing register §4 |
-| W39 | Fixed Asset Disposal & Retirement | VS-17 | Cost Accountant |  |
-| W85 | Product Costing & Margin Analysis Review | VS-17 | Cost Accountant |  |
-| W5246 | Landed Cost Reconciliation and Arm's-Length Transfer Price Accounting | VS-182 | Cost Accountant |  |
-| W4650 | Purchase-Price, Vendor-Quote & Should-Cost Data Aggregation | VS-158 | Cost Accounting Manager |  |
-| W4651 | Import Landed-Cost Build-Up: Freight, Duty, Brokerage, Insurance & Port Freight | VS-158 | Cost Accounting Manager |  |
-| W4652 | Domestic Freight, Handling & Inbound Cost Allocation to SKU | VS-158 | Cost Accounting Manager |  |
-| W4653 | Catch-Weight & Cut-to-Length Unit-Cost Computation (per Board-Foot / Meter / Kg) | VS-158 | Cost Accounting Manager |  |
-| W4654 | Kit / BOM Cost Roll-Up & Component Costing | VS-158 | Cost Accounting Manager |  |
-| W4655 | Private-Label Fully-Burdened Cost Build (COGS+, Tooling, Royalty, MOQ) | VS-158 | Cost Accounting Manager |  |
-| W4656 | Periodic Standard-Cost Roll, Revaluation & WAC/Standard Reclass | VS-158 | Cost Accounting Manager |  |
-| W4657 | Purchase-Price Variance (PPV) Analysis & Vendor Accountability | VS-158 | Cost Accounting Manager |  |
-| W4658 | Landed-Cost Variance vs. Standard & Import Rate Volatility Analysis | VS-158 | Cost Accounting Manager |  |
-| W4659 | Production / Conversion Variance for Kitting & Build-to-Order | VS-158 | Cost Accounting Manager |  |
-| W4660 | Inventory Adjustment, Write-Down & NRV Cost Impact | VS-158 | Cost Accounting Manager |  |
-| W4661 | Gross-Margin, MMU/IMU & Maintained-Margin Analytics by SKU / Category / Store | VS-158 | Cost Accounting Manager |  |
-| W4662 | Freight, Duty & Handling Cost Absorption vs. Billback Analysis | VS-158 | Cost Accounting Manager |  |
-| W4663 | Cost-of-Goods-Sold Reconciliation, Cut-off & Period Matching | VS-158 | Cost Accounting Manager |  |
-| W4664 | Markdown, Promo & Vendor-Funding Net-Cost Impact Accounting | VS-158 | Cost Accounting Manager |  |
-| W4666 | Service & Installation Costing (Labor, Subcontractor, Burden) | VS-158 | Cost Accounting Manager |  |
-| W4667 | Intercompany Cost Transfer & Transfer-Pricing Cost Build | VS-158 | Cost Accounting Manager |  |
-| W4668 | Consignment & VMI Cost-Basis & Margin-on-Sell-Through | VS-158 | Cost Accounting Manager |  |
-| W4669 | Cost-Accounting Calendar, Period Close & Cost Allocation Cycles | VS-158 | Cost Accounting Manager |  |
-| W4670 | Cost-Master Data Governance, Change-Control & Approval Matrix | VS-158 | Cost Accounting Manager |  |
-| W4649 | Item Cost-Master & Standard-Cost Policy Framework | VS-158 | Cost Accounting Manager |  |
-| W4671 | Costing System Configuration: Cost-Sheet, Overhead Rates & GL Integration | VS-158 | Cost Accounting Manager / It Finance Lead |  |
-| W4665 | Project / Job Costing for B2B & Government Contracts | VS-158 | Cost Accounting Manager / Project Controller |  |
 | W4598 | Customer Experience, Trust & Reviews Management | VS-155 | Customer Experience / Marketing |  |
 | W3492 | Remodel Customer Experience & Feedback Assessment | VS-109 | Customer Experience / Insights |  |
 | W2546 | Solar Customer Satisfaction & NPS Survey | VS-70 | Customer Experience Analyst |  |
@@ -1439,32 +1387,6 @@ form — the full per-workflow appendix follows the aggregate.
 | W3099 | Pack Station Operations, Quality Check & Right-Box Selection | VS-93 | Dark Store Shift Supervisor |  |
 | W3100 | Pack-Station Consumables, Labeling & Manifest Management | VS-93 | Dark Store Shift Supervisor |  |
 | W3103 | BOPIS / Click-and-Collect Stage & Customer Handover | VS-93 | Dark Store Shift Supervisor |  |
-| W647 | Employee Data Privacy Compliance Operations | VS-19 | Data Protection Officer |  |
-| W1203 | Philippine Data Privacy Act (RA 10173) Compliance Audit, DPO Reporting & NPC Registration | VS-22 | Data Protection Officer |  |
-| W834 | Customer Account Data Deletion & RA 10173 Privacy Compliance Processing | VS-22 | Data Protection Officer |  |
-| W271 | Data Subject Access & Deletion Requests (DPA Compliance) | VS-22 | Data Protection Officer |  |
-| W434 | NPC Annual DPO & System Registration | VS-27 | Data Protection Officer |  |
-| W389 | Data Privacy Impact Assessment (DPIA) Lifecycle | VS-27 | Data Protection Officer |  |
-| W53 | Data Privacy Breach Response | VS-27 | Data Protection Officer |  |
-| W405 | Data Privacy & Consent Preferences Master Governance | VS-29 | Data Protection Officer |  |
-| W1735 | Data Privacy Governance & NPC Compliance | VS-36 | Data Protection Officer |  |
-| W3041 | Data Privacy Program Governance, NPC Registration & DPO Operations | VS-91 | Data Protection Officer |  |
-| W3042 | Personal Data Inventory, Data Mapping & Records of Processing Activities (ROPA) | VS-91 | Data Protection Officer |  |
-| W3044 | Data Subject Access Request (DSAR) Fulfillment & Verification | VS-91 | Data Protection Officer |  |
-| W3045 | Data Rectification, Erasure & Objection Request Processing | VS-91 | Data Protection Officer |  |
-| W3047 | Loyalty Member Data Portability & Account Data Export | VS-91 | Data Protection Officer |  |
-| W3048 | Minors' Data, Sensitive Data & Special Category Processing Controls | VS-91 | Data Protection Officer |  |
-| W3049 | Privacy Impact Assessment (PIA) & DPIA for New Initiatives | VS-91 | Data Protection Officer |  |
-| W3050 | Cross-Border Transfer Assessment & Adequacy Determination | VS-91 | Data Protection Officer |  |
-| W3052 | Third-Party Processor Oversight & Privacy Audit | VS-91 | Data Protection Officer |  |
-| W3053 | Data Minimization, Retention & Privacy-by-Design Review | VS-91 | Data Protection Officer |  |
-| W3055 | CCTV / Surveillance Privacy Impact & Signage Compliance | VS-91 | Data Protection Officer |  |
-| W3059 | NPC Breach Notification (72-Hour) & Regulatory Reporting | VS-91 | Data Protection Officer |  |
-| W3060 | Affected Data Subject Notification & Remediation | VS-91 | Data Protection Officer |  |
-| W3062 | Breach Post-Incident Review & Corrective Action | VS-91 | Data Protection Officer |  |
-| W3063 | Privacy Metrics, Compliance Reporting & DPO Board Reporting | VS-91 | Data Protection Officer |  |
-| W3064 | Data Privacy Audit, NPC Investigation Response & Remediation | VS-91 | Data Protection Officer |  |
-| W3159 | Marketplace Data Privacy, Seller Data Governance & DPA Compliance | VS-95 | Data Protection Officer |  |
 | W1191 | Construction Site Delivery Coordination, Access Assessment & Crane/Boom Truck Scheduling | VS-6 | Delivery Dispatch Coordinator |  |
 | W4274 | Doorstep Cash Collection, Receipting & POD Capture | VS-142 | Driver / 3Pl / Last-Mile Ops |  |
 | W3906 | Demand Planning & Statistical Baseline Forecasting | VS-127 | Demand Planning |  |
@@ -1759,22 +1681,6 @@ form — the full per-workflow appendix follows the aggregate.
 | W488 | Credit Card Chargeback Dispute Management | VS-15 | Finance — Payment Settlement Specialist |  |
 | W1685 | Company Expense Card & Corporate Credit Card Management | VS-34 | Finance — Treasury |  |
 | W5302 | Cooperative Group Credit Limit Allocation & System Activation | VS-185 | Financial Systems Administrator |  |
-| W1431 | Multi-Entity Fixed Asset Capitalization, Intercompany Asset Transfer & Depreciation Consolidation | VS-17 | Fixed Asset Accountant |  |
-| W276 | Asset Under Construction (AUC) & Mass Capitalization | VS-17 | Fixed Asset Accountant |  |
-| W184 | Fixed Asset Physical Verification (Audit) | VS-17 | Fixed Asset Accountant |  |
-| W661 | Fixed Asset Depreciation Run & Component Accounting Operations | VS-17 | Fixed Asset Accountant |  |
-| W1690 | New Fixed Asset Registration & Capitalization | VS-35 | Fixed Asset Accountant |  |
-| W1691 | Asset Classification & Category Assignment | VS-35 | Fixed Asset Accountant |  |
-| W1692 | Asset Tag & Label Generation & Application | VS-35 | Fixed Asset Accountant |  |
-| W1694 | Asset Component & Sub-Asset Management | VS-35 | Fixed Asset Accountant |  |
-| W1698 | Monthly Depreciation Run & Journal Posting | VS-35 | Fixed Asset Accountant |  |
-| W1699 | Depreciation Method Review & Useful Life Adjustment | VS-35 | Fixed Asset Accountant |  |
-| W1702 | Fixed Asset Register Reconciliation & Reporting | VS-35 | Fixed Asset Accountant |  |
-| W1705 | Capital Work-in-Progress Reconciliation | VS-35 | Fixed Asset Accountant |  |
-| W1708 | Asset Retirement & Disposal Processing | VS-35 | Fixed Asset Accountant |  |
-| W1709 | Asset Write-Off Due to Loss, Theft or Damage | VS-35 | Fixed Asset Accountant |  |
-| W1710 | Asset Sale, Trade-In & Salvage Processing | VS-35 | Fixed Asset Accountant |  |
-| W1711 | Gain/Loss on Asset Disposal Recognition | VS-35 | Fixed Asset Accountant |  |
 | W198 | Fuel Management & Consumption Monitoring | VS-6 | Fleet Accountant |  |
 | W5488 | Green Fleet Performance Analytics, Decarbonization Tracking & Continuous Improvement | VS-192 | Fleet Analytics & Continuous Improvement Lead |  |
 | W5473 | EV Fleet Daily Charging Operations, Load Scheduling & Smart-Charge Management | VS-192 | Fleet Charging Operations Supervisor |  |
@@ -1782,6 +1688,8 @@ form — the full per-workflow appendix follows the aggregate.
 | W5480 | EV-Specific Preventive Maintenance, Diagnostics, Roadside & Towing Operations | VS-192 | Fleet Maintenance Manager |  |
 | W1348 | Fleet Vehicle Preventive Maintenance Scheduling, Work Order & Parts Management | VS-6 | Fleet Maintenance Supervisor |  |
 | W1349 | Fleet Tire Lifecycle Management, Tread Monitoring & Replacement Scheduling | VS-6 | Fleet Maintenance Supervisor |  |
+| W1400 | Driver License Expiration Monitoring, LTO Compliance & Renewal Tracking | VS-6 | Fleet Maintenance Supervisor |  |
+| W1401 | Fleet Vehicle Annual LTO Registration Renewal & Motor Vehicle Inspection Compliance | VS-6 | Fleet Maintenance Supervisor |  |
 | W1515 | Delivery Vehicle Fuel Card Management, Consumption Tracking & Cost Control | VS-6 | Fleet Maintenance Supervisor |  |
 | W188 | Fleet Spare Parts & Preventive Maintenance (PM) Management | VS-4 | Fleet Manager |  |
 | W1536 | Fleet Vehicle Registration Renewal, LTO Compliance & LTFRB Cargo Freight License Management | VS-6 | Fleet Manager |  |
@@ -1793,9 +1701,15 @@ form — the full per-workflow appendix follows the aggregate.
 | W859 | Vehicle & Fleet Insurance Claim Processing | VS-26 | Fleet Manager / Insurance Coordinator |  |
 | W5471 | Green Fleet Capital Governance, Financing & Board Investment Approval | VS-192 | Fleet Manager / Logistics Finance |  |
 | W5467 | Electric & Alternative-Fuel Vehicle Procurement, OEM Vendor Selection & Homologation | VS-192 | Fleet Procurement Lead |  |
+| W2312 | Vehicle Fuel Efficiency Monitoring | VS-61 | Fleet Supervisor |  |
+| W2314 | Driver Fuel Efficiency Training | VS-61 | Fleet Supervisor |  |
+| W2319 | RFID Fleet Toll Account Management | VS-61 | Fleet Supervisor |  |
 | W2324 | Vehicle Maintenance Cost Tracking | VS-61 | Fleet Supervisor |  |
 | W2327 | Vehicle Replacement Cost-Benefit Analysis | VS-61 | Fleet Supervisor |  |
+| W2328 | Fleet Utilization Rate Analysis | VS-61 | Fleet Supervisor |  |
 | W5456 | Hauling Safety, Spill Response & Road/Route Compliance | VS-191 | Fleet / Hauling Safety Manager |  |
+| W5053 | Portable Container Fleet Maintenance, Cleaning, Sanitization & Lifecycle | VS-174 | Fleet / Logistics / Property Manager |  |
+| W5045 | Portable/Mobile Container Delivery, Placement, Relocation & Pickup Operations | VS-174 | Fleet / Logistics / Property Manager |  |
 | W4517 | Community Disaster Relief & Resilience Programs | VS-152 | Foundation Ed / Bcp / Programs |  |
 | W4522 | Social Return on Investment (SROI) & Benefit Valuation | VS-152 | Foundation Ed / Finance / M&E |  |
 | W4518 | Employee Volunteerism, Payroll-Giving & Donation Drives | VS-152 | Foundation Ed / Hr / Programs |  |
@@ -2019,12 +1933,12 @@ form — the full per-workflow appendix follows the aggregate.
 | W5365 | Product Stewardship Compliance Audit, TPRM of Transporters/TSD & Regulatory Inspection Response | VS-187 | Internal Audit |  |
 | W4958 | Internal Audit, Bank Covenant Assurance & Issue Remediation | VS-170 | Internal Audit / Abl & Collateral Operations Manager |  |
 | W4407 | Customer-Safety Audit, Assurance & Board Reporting | VS-147 | Internal Audit / Customer Safety / Governance |  |
-| W352 | Fixed Asset Verification & Audit | VS-21 | Internal Audit / Fixed Asset Accountant |  |
 | W355 | Intellectual Property (IP) & Brand Protection Audit | VS-21 | Internal Audit / Legal Counsel |  |
 | W340 | Unannounced Store Cash & Vault Audit | VS-21 | Internal Audit / Loss Prevention |  |
 | W358 | Physical Security, CCTV & Guard Force Audit | VS-21 | Internal Audit / Loss Prevention |  |
 | W343 | Lease & CAM (Common Area Maintenance) Compliance Audit | VS-21 | Internal Audit / Real Estate Compliance |  |
 | W1188 | Consignment Inventory Monthly Reconciliation & Vendor Settlement Processing | VS-5 | Inventory Accountant |  |
+| W5076 | Cylinder-Asset, Deposit & Float Reconciliation & Audit | VS-175 | Inventory / Fixed-Asset / O2C / Finance |  |
 | W4461 | Drug-Free Workplace Training, Communication & Culture | VS-150 | L&D / Hr / Hse |  |
 | W5190 | State of Calamity LGU Regulatory Permit Clearance & Fee Deferrals | VS-180 | Lgu Compliance Liaison |  |
 | W4504 | Auto-ID Security, Privacy & Fraud-Vector Control | VS-151 | Lp / Fraud / Auto-Id Lead |  |
@@ -2127,10 +2041,12 @@ form — the full per-workflow appendix follows the aggregate.
 | W4804 | Overflow Management, Abandonment & Compartment Reclaim | VS-164 | Locker Program Manager / Store Ops |  |
 | W4806 | Oversize / Bulky & Refrigerated Locker Handling | VS-164 | Locker Program Manager / Store Ops |  |
 | W4808 | Daily Locker Reconciliation, Inventory Accuracy & Exception Handling | VS-164 | Locker Program Manager / Store Ops / Finance |  |
+| W3510 | Inter-Island / Inter-Region Freight Coordination | VS-110 | Logistics |  |
 | W3513 | Freight Invoice Audit & Match | VS-110 | Logistics / Ap |  |
 | W3511 | Freight Claims, Loss & Damage Recovery | VS-110 | Logistics / Claims |  |
 | W3508 | Freight Tracking, Visibility & Exception Management | VS-110 | Logistics / Control Tower |  |
 | W3505 | Outbound DC-to-Store Freight Planning & Load Tendering | VS-110 | Logistics / Dc Operations |  |
+| W3506 | Last-Mile & Customer Delivery Freight Management | VS-110 | Logistics / Ecommerce Fulfillment |  |
 | W3516 | Freight Cost-to-Serve & Lane Profitability Analytics | VS-110 | Logistics / Fp&A |  |
 | W3515 | Landed Cost & Freight Cost Component Capture | VS-110 | Logistics / Finance |  |
 | W3519 | Fuel Surcharge, Index Management & Freight Rate Volatility | VS-110 | Logistics / Finance |  |
@@ -2148,40 +2064,6 @@ form — the full per-workflow appendix follows the aggregate.
 | W2641 | Contractor Delivery Route Optimization Analytics | VS-74 | Logistics Analyst | TPS build squad deferred—prepared (ad), sourcing register §4 |
 | W2644 | Contractor Delivery KPI Dashboard | VS-74 | Logistics Analyst | TPS build squad deferred—prepared (ad), sourcing register §4 |
 | W2711 | Project Delivery Performance Analytics | VS-77 | Logistics Analyst | TPS build squad deferred—prepared (ad), sourcing register §4 |
-| W249 | Import Port Demurrage & Detention Management | VS-2 | Logistics Manager |  |
-| W727 | Carrier & Freight Forwarder Daily Performance Monitoring | VS-2 | Logistics Manager |  |
-| W762 | Carrier Performance Weekly Review & Freight Rate Benchmarking | VS-2 | Logistics Manager |  |
-| W1190 | Inter-Island DC-to-Store RoRo & Ferry Consolidated Shipment Planning | VS-6 | Logistics Manager |  |
-| W1514 | Inter-Island Emergency Cargo Air Freight & Charter Coordination for Critical Stock Replenishment | VS-6 | Logistics Manager |  |
-| W1207 | Third-Party Logistics (3PL) Provider Quarterly Performance Review & Contract Renewal | VS-6 | Logistics Manager |  |
-| W1163 | 3PL & Delivery Partner Daily Operations Management | VS-6 | Logistics Manager |  |
-| W1166 | Carrier Rate Management, Freight Audit & Cost Optimization | VS-6 | Logistics Manager |  |
-| W1439 | Third-Party Logistics (3PL) Partner Quarterly Business Review, Rate Benchmarking & Contract Optimization | VS-6 | Logistics Manager |  |
-| W1440 | Fuel Price Volatility Impact Assessment, Freight Cost Adjustment & Route Efficiency Optimization | VS-6 | Logistics Manager |  |
-| W699 | Hazmat Transportation & Carrier Compliance Management | VS-24 | Logistics Manager |  |
-| W2190 | Delivery Partner Identification & Screening | VS-56 | Logistics Manager |  |
-| W2193 | 3PL Rate Card Negotiation & Renewal | VS-56 | Logistics Manager |  |
-| W2194 | 3PL Insurance & Liability Management | VS-56 | Logistics Manager |  |
-| W2195 | 3PL Capacity Planning & Allocation | VS-56 | Logistics Manager |  |
-| W2196 | 3PL Partner Performance Scorecard | VS-56 | Logistics Manager |  |
-| W2197 | 3PL Contract Termination & Transition | VS-56 | Logistics Manager |  |
-| W2205 | Seasonal Delivery Surge Management | VS-56 | Logistics Manager |  |
-| W2208 | 3PL Cost Benchmarking | VS-56 | Logistics Manager |  |
-| W2209 | Route Cost Optimization | VS-56 | Logistics Manager |  |
-| W2210 | 3PL Fuel Surcharge Management | VS-56 | Logistics Manager |  |
-| W2212 | 3PL Payment Terms Management | VS-56 | Logistics Manager |  |
-| W2310 | Fleet Fuel Card Program Management | VS-61 | Logistics Manager |  |
-| W2316 | Fuel Cost Pass-Through to 3PL | VS-61 | Logistics Manager |  |
-| W2317 | Emergency Fuel Supply Management | VS-61 | Logistics Manager |  |
-| W2321 | Route Cost Benchmarking | VS-61 | Logistics Manager |  |
-| W2322 | Backhaul Utilization & Revenue | VS-61 | Logistics Manager |  |
-| W2512 | Emergency Merchandise Rapid Replenishment Dispatch | VS-69 | Logistics Manager |  |
-| W3005 | Recall Product Retrieval Logistics & Reverse Consolidation | VS-89 | Logistics Manager |  |
-| W3026 | Freight Carrier / 3PL Damage & Shortage Claim Filing | VS-90 | Logistics Manager |  |
-| W1132 | Vendor Logistics Performance Weekly Scorecard & Carrier Lane Analysis | VS-3 | Logistics Manager |  |
-| W1371 | 3PL Carrier Onboarding, Qualification Audit & Service Level Agreement Management | VS-6 | Logistics Manager |  |
-| W1373 | 3PL Carrier Driver Accreditation, Vehicle Inspection & Compliance Management | VS-6 | Logistics Manager |  |
-| W284 | Customs Bonded Warehouse (CBW) Operations & Duty Deferral | VS-2 | Logistics Manager / Import Compliance |  |
 | W786 | DC-to-Store Delivery Route Optimization & Multi-Stop Planning | VS-2 | Logistics Planner |  |
 | W196 | Route Planning & Dispatch Optimization | VS-6 | Logistics Planner |  |
 | W431 | LGU-Specific "Truck Ban" & Route Governance | VS-6 | Logistics Planner |  |
@@ -2358,6 +2240,7 @@ form — the full per-workflow appendix follows the aggregate.
 | W4268 | Driver/3PL COD Authorization, Bonding & Contract Terms | VS-142 | Procurement / Payment Ops / Last-Mile |  |
 | W4366 | Service-Quality Vendor (Mystery-Shop Agency) Selection & Contract | VS-146 | Procurement / Service Quality |  |
 | W4257 | Shuttle/Charter Vendor Sourcing, Qualification & Contracting | VS-141 | Procurement / Transport Lead |  |
+| W3504 | Carrier Onboarding, Insurance & Regulatory Compliance | VS-110 | Procurement / Logistics |  |
 | W3482 | Remodel Construction Vendor Selection & Contracting | VS-109 | Procurement / Real Estate |  |
 | W3481 | Remodel Fixture, Equipment & FF&E Procurement | VS-109 | Procurement / Store Design |  |
 | W3379 | Vendor SCF Eligibility, Enrollment & KYC Onboarding | VS-105 | Procurement Director |  |
@@ -2760,7 +2643,7 @@ form — the full per-workflow appendix follows the aggregate.
 | W5386 | Dealer Collection, Workout, Restructuring & Skip-Tracing for Missing Collateral | VS-188 | Workout/Recovery Manager |  |
 | W5387 | Collateral Repossession, Redemption & Disposition of Defaulted Floor-Plan Units | VS-188 | Workout/Recovery Manager |  |
 
-## Class C — Healthy (3610)
+## Class C — Healthy (3722)
 
 At least one chartered role owns the workflow. No action.
 
@@ -2784,7 +2667,7 @@ At least one chartered role owns the workflow. No action.
 | Chief Operating Officer (COO) | hq | 45 |
 | VP Supply Chain & Logistics (dual-hat GM, BuildRight Logistics, Inc.) | hq | 45 |
 
-## Participate-only chartered roles (60)
+## Participate-only chartered roles (59)
 
 Chartered roles anchored in the catalog (the role-anchoring contract is
 satisfied) that own no workflow — their accountability may be understated;
@@ -2805,7 +2688,6 @@ candidate for the same governance path.
 | Facilities/Utility | DC (field, per-DC roster) | 1 | 0 |
 | Field Communications Manager | Store Operations | 1 | 0 |
 | IAP Integration Engineer | Information Technology (product model) | 1 | 0 |
-| Manager, GL & Consolidation (Assistant Controller) | Finance & Accounting | 1 | 0 |
 | Payroll & Statutory Remittance Officer | Human Resources | 1 | 0 |
 | Promotions & Vendor-Funding Coordinator | Merchandising & Buying | 1 | 0 |
 | Promotions Specialist | Marketing | 1 | 0 |
