@@ -221,7 +221,7 @@ Owner: CFO</bpmn:text>
 Frequency: Per campaign; quarterly aggregated analysis
 Volume: ~50–100 campaigns/quarter
 Owner: Marketing Manager
-Participants: Marketing Manager, Digital Marketing Manager, Category Manager
+Participants: Marketing Manager, Digital Marketing Manager, Category Manager, Retail Media Operations Specialist
 Source: workflow W2017 — Retail Media Sales Lift Attribution &amp; Vendor ROI Reporting</bpmn:documentation>
       <bpmn:laneSet id="W2017_LaneSet3">
         <bpmn:lane id="W2017_Lane1" name="Marketing Manager">

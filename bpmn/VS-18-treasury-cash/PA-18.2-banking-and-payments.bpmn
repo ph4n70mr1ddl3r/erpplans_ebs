@@ -5,7 +5,7 @@
 Frequency: 40–60 LCs/month (imports, consistent with W1199); 5–10 Bank Guarantees/year
 Volume: High-value import shipments (Machinery, bulk construction materials)
 Owner: Treasury Manager
-Participants: Import Coordinator, Buyer, Bank, Finance
+Participants: Import Coordinator, Buyer, Bank, Finance, Banking &amp; Cash-Management Specialist
 Source: workflow W232 — Letter of Credit (LC) &amp; Bank Guarantee Lifecycle</bpmn:documentation>
       <bpmn:laneSet id="W232_LaneSet5">
         <bpmn:lane id="W232_Lane1" name="Import Coord">
@@ -587,7 +587,7 @@ Owner: Treasury Manager</bpmn:text>
 Frequency: ~50–80 petty cash disbursements per store per month; replenishment every 2–4 weeks per store; annual policy review
 Volume: 200 stores × the authorized petty cash fund of PHP 20,000 per store = ~PHP 4.2M total petty cash float (incl. DC floats, per profile §10.4); ~10,000–16,000 disbursements/month chain-wide
 Owner: Store Manager (custodian)
-Participants: Cash Office Clerk, Store Manager, Regional Manager (approval &gt; PHP 5,000), AP Clerk (replenishment processing), Finance Controller
+Participants: Cash Office Clerk, Store Manager, Regional Manager (approval &gt; PHP 5,000), AP Clerk (replenishment processing), Finance Controller, Banking &amp; Cash-Management Specialist
 Source: workflow W1343 — Petty Cash Fund Lifecycle, Custodian Accountability &amp; Periodic Replenishment</bpmn:documentation>
       <bpmn:laneSet id="W1343_LaneSet5">
         <bpmn:lane id="W1343_Lane1" name="Store Manager">

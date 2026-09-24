@@ -5,7 +5,7 @@
 Frequency: Annual
 Volume: 20 owned vehicles
 Owner: Finance Controller
-Participants: VP Supply Chain, CFO
+Participants: VP Supply Chain, CFO, DC Cost-to-Serve Analyst
 Source: workflow W2326 — Annual Fleet TCO Analysis</bpmn:documentation>
       <bpmn:laneSet id="W2326_LaneSet2">
         <bpmn:lane id="W2326_Lane1" name="Finance Controller">

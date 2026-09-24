@@ -278,7 +278,7 @@ Owner: DC Manager (DC-level); Store Receiving Clerk (store-level)</bpmn:text>
 Frequency: Continuous; 2 shifts per day, 7 days/week per DC
 Volume: 4 DCs; each DC operates ~16 hours/day; ~40 inbound trucks/day + ~15–20 outbound loads/day per DC (the ~60–80 outbound loads/day chain-wide consolidated-drop canon per W836); ~150 DC staff per DC in total across two shifts (~60–80 on duty per shift)
 Owner: DC Manager
-Participants: DC Shift Supervisors (2 per DC), DC Receiving Supervisor, DC Dispatch Supervisor, DC Receiving Clerks, Putaway Staff, Pickers, Loaders, Quality Checkers, Yard Staff, Forklift Operators, Cross-Dock Coordinator, Gate Guard
+Participants: DC Shift Supervisors (2 per DC), DC Receiving Supervisor, DC Dispatch Supervisor, DC Receiving Clerks, Putaway Staff, Pickers, Loaders, Quality Checkers, Yard Staff, Forklift Operators, Cross-Dock Coordinator, Gate Guard, DC Office Administrator
 Source: workflow W584 — DC Daily Operations &amp; Shift Management</bpmn:documentation>
       <bpmn:laneSet id="W584_LaneSet4">
         <bpmn:lane id="W584_Lane1" name="System">
@@ -608,7 +608,7 @@ Owner: DC Receiving Supervisor (inbound) / DC Dispatch Supervisor (outbound)</bp
 Frequency: Daily per DC (overnight calculation, morning review); weekly trend analysis; monthly executive summary
 Volume: 4 DCs; ~20 KPIs tracked per DC across 6 operational categories
 Owner: DC Manager
-Participants: DC Shift Supervisors, DC Receiving Supervisor, DC Dispatch Supervisor, VP Supply Chain, Supply Planning Manager
+Participants: DC Shift Supervisors, DC Receiving Supervisor, DC Dispatch Supervisor, VP Supply Chain, Supply Planning Manager, DC Operations Analyst
 Source: workflow W586 — DC Daily KPI Dashboard &amp; Performance Tracking</bpmn:documentation>
       <bpmn:laneSet id="W586_LaneSet4">
         <bpmn:lane id="W586_Lane1" name="System">

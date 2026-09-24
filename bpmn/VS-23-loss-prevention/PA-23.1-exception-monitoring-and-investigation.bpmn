@@ -5,7 +5,7 @@
 Frequency: Daily (every store, every operating day)
 Volume: 200 stores × ~15–25 flagged exceptions per store per day = ~3,000–5,000 exception alerts daily chain-wide
 Owner: Loss Prevention Manager (Regional)
-Participants: Store Manager, LP Analyst, POS System Administrator, Finance Controller
+Participants: Store Manager, LP Analyst, POS System Administrator, Finance Controller, Senior LP Analytics Analyst
 Source: workflow W837 — Daily Store Exception-Based Reporting &amp; Transaction Monitoring</bpmn:documentation>
       <bpmn:laneSet id="W837_LaneSet3">
         <bpmn:lane id="W837_Lane1" name="LP Analyst">
@@ -128,7 +128,7 @@ Owner: Loss Prevention Manager (Regional)</bpmn:text>
 Frequency: As-needed; estimated 5–10 active investigations ongoing at any time chain-wide
 Volume: ~50–80 completed investigations per year; average case duration 2–6 weeks
 Owner: LP Manager (Regional)
-Participants: LP Investigator, HR Manager, Legal Counsel, Store Manager, Finance Controller, Union Representative (if applicable)
+Participants: LP Investigator, HR Manager, Legal Counsel, Store Manager, Finance Controller, Union Representative (if applicable), Forensic / Fraud Investigator
 Source: workflow W839 — Internal Theft Investigation &amp; Employee Dishonesty Case Management</bpmn:documentation>
       <bpmn:laneSet id="W839_LaneSet3">
         <bpmn:lane id="W839_Lane1" name="LP Investigator">

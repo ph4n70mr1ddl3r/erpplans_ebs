@@ -638,7 +638,7 @@ Owner: Returns Processing Supervisor (DC)</bpmn:text>
 Frequency: ~2,000–3,000 new reviews/month across 35,000 SKUs
 Volume: ~2,500 average/month; peaks 2 weeks after major promo (+50%)
 Owner: Digital Content Manager
-Participants: Customer Experience Representative, Category Manager, Vendor Manager
+Participants: Customer Experience Representative, Category Manager, Vendor Manager, Ecommerce Marketing Specialist
 Source: workflow W510 — Ecommerce Product Review &amp; Rating Management</bpmn:documentation>
       <bpmn:laneSet id="W510_LaneSet6">
         <bpmn:lane id="W510_Lane1" name="Customer">

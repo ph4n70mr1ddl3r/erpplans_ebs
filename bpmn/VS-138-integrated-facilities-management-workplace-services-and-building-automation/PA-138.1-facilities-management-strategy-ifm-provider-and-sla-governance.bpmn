@@ -5,7 +5,7 @@
 Frequency: Annual + on major change
 Volume: Enterprise footprint (~205 sites; ~1.6–3.0M sqm selling + ~130,000 sqm DC + ~3,000 sqm HQ)
 Owner: Head of Facilities / Store Operations Support
-Participants: COO, Store Ops (VS-07), Real Estate (VS-97/VS-20), Procurement (VS-34), Finance (VS-17.4)
+Participants: COO, Store Ops (VS-07), Real Estate (VS-97/VS-20), Procurement (VS-34), Finance (VS-17.4), Facilities Coordination Specialist
 Source: workflow W4169 — Facilities Management Strategy &amp; Operating Model</bpmn:documentation>
       <bpmn:laneSet id="W4169_LaneSet2">
         <bpmn:lane id="W4169_Lane1" name="Head of Facilities">
@@ -296,7 +296,7 @@ Owner: Facilities Asset Manager / Real Estate (VS-97/VS-20) / Fixed Assets (VS-3
 Frequency: Continuous scheduling (daily/weekly/monthly/annual cycles)
 Volume: ~205 sites × building systems (HVAC filters/coils, fire-system tests, elevator certs, generator, BMS calibration)
 Owner: Facilities Maintenance Lead
-Participants: Providers/contractors, Store Ops (VS-07), DC Ops (VS-04), HSE (VS-24), Calibration (VS-115)
+Participants: Providers/contractors, Store Ops (VS-07), DC Ops (VS-04), HSE (VS-24), Calibration (VS-115), Maintenance &amp; Projects Coordinator
 Source: workflow W4173 — Preventive Maintenance Planning &amp; Scheduling</bpmn:documentation>
       <bpmn:laneSet id="W4173_LaneSet3">
         <bpmn:lane id="W4173_Lane1" name="Facilities Maintenance Lead">

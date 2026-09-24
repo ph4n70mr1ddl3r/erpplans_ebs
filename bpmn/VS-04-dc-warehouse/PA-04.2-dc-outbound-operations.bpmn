@@ -5,7 +5,7 @@
 Frequency: Daily per DC; 2–3 dispatch waves per day (morning, midday, afternoon)
 Volume: ~425 replenishment orders/DC/day (the ~50,000/month production-calibrated canon, per data-volumes §1.1; ~20–30 orders consolidate into each store delivery drop) + ~140–145 home delivery orders/DC/day (the ~17,200/month canon) + occasional inter-DC transfers (W22); loaded onto ~6–10 outbound trucks per DC per day
 Owner: DC Dispatch Supervisor
-Participants: DC Dispatch Supervisor, DC Supervisor, Loaders, Drivers, Fleet Manager, Supply Planner
+Participants: DC Dispatch Supervisor, DC Supervisor, Loaders, Drivers, Fleet Manager, Supply Planner, Assistant DC Manager — Outbound, Tile &amp; Heavy/Breakbulk Crew
 Source: workflow W106 — DC Outbound Dispatch &amp; Load Planning</bpmn:documentation>
       <bpmn:laneSet id="W106_LaneSet5">
         <bpmn:lane id="W106_Lane1" name="System">
@@ -182,7 +182,7 @@ Owner: DC Dispatch Supervisor</bpmn:text>
 Frequency: Quarterly review; semi-annual re-slotting execution
 Volume: 4 DCs × ~35,000 SKUs slotting assessment; ~5,000–10,000 SKU re-slotting moves per execution
 Owner: DC Operations Manager
-Participants: DC Operations Manager, Warehouse Planner, WMS Analyst, Stock Associates
+Participants: DC Operations Manager, Warehouse Planner, WMS Analyst, Stock Associates, DC Operations Analyst
 Source: workflow W784 — DC Inventory Slotting Optimization &amp; Periodic Re-Slotting Execution</bpmn:documentation>
       <bpmn:laneSet id="W784_LaneSet6">
         <bpmn:lane id="W784_Lane1" name="Warehouse Planner">

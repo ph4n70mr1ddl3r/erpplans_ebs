@@ -533,7 +533,7 @@ Owner: Real Estate / Compliance</bpmn:text>
 Frequency: Per remodel
 Volume: ~30–40 remodels/year
 Owner: Project Manager / PMO
-Participants: Project Manager (links to VS-112), Store Manager (links to VS-07), Contractor, Merchandising (links to VS-01), HSE (links to VS-24), Finance (links to VS-40)
+Participants: Project Manager (links to VS-112), Store Manager (links to VS-07), Contractor, Merchandising (links to VS-01), HSE (links to VS-24), Finance (links to VS-40), Maintenance &amp; Projects Coordinator
 Source: workflow W3480 — Remodel Project Plan, Phasing &amp; Live-Operations Continuity</bpmn:documentation>
       <bpmn:laneSet id="W3480_LaneSet2">
         <bpmn:lane id="W3480_Lane1" name="Project Manager">

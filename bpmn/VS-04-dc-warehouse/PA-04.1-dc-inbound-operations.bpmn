@@ -5,7 +5,7 @@
 Frequency: ~6,000 goods receipts/month across all DCs; ~1,500/DC/month; ~50/day per DC
 Volume: ~2 lines per receipt on average (the ~12,000 PO-lines/month all-types canon across the ~6,000 goods-receipts/month canon — bulk POs arrive as multiple partial truck receipts, per data-volumes §1.1/§1.2)
 Owner: DC Receiving Supervisor
-Participants: Receiving Clerk, Quality Checker, Putaway Staff, DC Supervisor, Buyer (if discrepancy)
+Participants: Receiving Clerk, Quality Checker, Putaway Staff, DC Supervisor, Buyer (if discrepancy), Special Handling Lead, Discrepancy Analysts
 Source: workflow W3 — Warehouse Receiving &amp; Putaway</bpmn:documentation>
       <bpmn:laneSet id="W3_LaneSet7">
         <bpmn:lane id="W3_Lane1" name="Guard">

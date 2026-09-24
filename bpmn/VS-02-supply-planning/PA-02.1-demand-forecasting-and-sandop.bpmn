@@ -5,7 +5,7 @@
 Frequency: Weekly recalculation; monthly review; quarterly adjustment
 Volume: 35,000 active SKUs across 205 locations (200 stores + 4 DCs + HQ) = up to ~7.2M SKU-location forecasts; typically forecasted at DC level (140,000 SKU-DC combinations) and disaggregated to stores
 Owner: Demand Planner
-Participants: Demand Planner, Supply Planner, Category Manager, Pricing Analyst
+Participants: Demand Planner, Supply Planner, Category Manager, Pricing Analyst, Senior Demand Planner
 Source: workflow W31 — Demand Forecasting Cycle</bpmn:documentation>
       <bpmn:laneSet id="W31_LaneSet3">
         <bpmn:lane id="W31_Lane1" name="System">
@@ -329,7 +329,7 @@ Owner: Category Manager</bpmn:text>
 Frequency: Monthly
 Volume: Covers all product categories and all 4 DCs
 Owner: VP for Supply Chain
-Participants: CEO, COO, CFO, VP Merchandising, VP Store Operations, Supply Planning Manager, Demand Planner, Category Managers
+Participants: CEO, COO, CFO, VP Merchandising, VP Store Operations, Supply Planning Manager, Demand Planner, Category Managers, Senior Demand Planner
 Source: workflow W133 — Sales &amp; Operations Planning (S&amp;OP) Cycle</bpmn:documentation>
       <bpmn:laneSet id="W133_LaneSet6">
         <bpmn:lane id="W133_Lane1" name="Demand Planner">

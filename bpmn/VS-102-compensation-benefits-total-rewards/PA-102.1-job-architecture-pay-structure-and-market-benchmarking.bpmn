@@ -5,7 +5,7 @@
 Frequency: Continuous + annual
 Volume: ~250–350 distinct jobs across 6,911 employees
 Owner: Compensation &amp; Benefits Manager
-Participants: C&amp;B Manager, HR Business Partners, Hiring Managers, Master Data (links to VS-29)
+Participants: C&amp;B Manager, HR Business Partners, Hiring Managers, Master Data (links to VS-29), Compensation Analyst
 Source: workflow W3305 — Job Analysis, Documentation &amp; Job Description Management</bpmn:documentation>
       <bpmn:laneSet id="W3305_LaneSet2">
         <bpmn:lane id="W3305_Lane1" name="C&amp;B Manager">
@@ -152,7 +152,7 @@ Owner: Compensation &amp; Benefits Manager</bpmn:text>
 Frequency: Annual
 Volume: One structure per entity/region (5 entities)
 Owner: Compensation &amp; Benefits Manager
-Participants: C&amp;B Manager, CHRO, CFO, FP&amp;A (links to VS-17.4), Payroll (links to VS-19.2)
+Participants: C&amp;B Manager, CHRO, CFO, FP&amp;A (links to VS-17.4), Payroll (links to VS-19.2), Compensation Analyst
 Source: workflow W3307 — Annual Salary Structure Design, Range Setting &amp; Range Penetration</bpmn:documentation>
       <bpmn:laneSet id="W3307_LaneSet3">
         <bpmn:lane id="W3307_Lane1" name="C&amp;B Manager">

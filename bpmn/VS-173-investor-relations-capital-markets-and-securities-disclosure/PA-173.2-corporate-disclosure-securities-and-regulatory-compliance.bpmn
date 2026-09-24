@@ -5,7 +5,7 @@
 Frequency: Continuous + per-disclosure
 Volume: ~every investor-facing statement × disclosure events
 Owner: VP Investor Relations / VP Legal &amp; Compliance (VS-100) / CFO
-Participants: Legal (VS-100), Compliance (VS-22), CFO/CEO, Disclosure Committee, Internal Audit (VS-21)
+Participants: Legal (VS-100), Compliance (VS-22), CFO/CEO, Disclosure Committee, Internal Audit (VS-21), Corporate Secretary Analyst
 Source: workflow W5017 — Corporate Disclosure Controls, Materiality Assessment &amp; Selective-Disclosure / Fair-Disclosure Program</bpmn:documentation>
       <bpmn:laneSet id="W5017_LaneSet2">
         <bpmn:lane id="W5017_Lane1" name="VP IR">
@@ -77,7 +77,7 @@ Owner: VP Investor Relations / VP Legal &amp; Compliance (VS-100) / CFO</bpmn:te
 Frequency: Annual + periodic statutory filings
 Volume: ~1 annual report + GIS + periodic statutory filings × 5 entities
 Owner: VP Investor Relations / CFO / VP Legal &amp; Compliance (VS-100)
-Participants: R2R (VS-17), Legal (VS-100), Compliance (VS-22), Treasury (VS-18), ESG (VS-25), External Auditor, Governance (VS-36)
+Participants: R2R (VS-17), Legal (VS-100), Compliance (VS-22), Treasury (VS-18), ESG (VS-25), External Auditor, Governance (VS-36), Corporate Secretary Analyst
 Source: workflow W5018 — Annual Report, General Information Sheet &amp; Statutory SEC/Commissioner Investor Disclosure</bpmn:documentation>
       <bpmn:laneSet id="W5018_LaneSet3">
         <bpmn:lane id="W5018_Lane1" name="VP IR">

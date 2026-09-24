@@ -22,12 +22,105 @@
 |---|---|
 | Workflows mapped | 5433 (exactly one Owner each — asserted) |
 | Confirmed Tier register | 5456 rows (Tier 1: 1396 · Tier 2: 3302 · Tier 3: 758) |
-| Distinct resolved actors | 4200 — §5.3 register roles 153 · IT product-model seats 30 · store field 12 · DC field 18 · department-level actors 2991 · system actors 31 · governance 59 · workforce 105 · external 801 · uncharted 0 |
+| Distinct resolved actors | 4239 — §5.3 register roles 195 · IT product-model seats 32 · store field 12 · DC field 27 · department-level actors 2981 · system actors 31 · governance 59 · workforce 101 · external 801 · uncharted 0 |
 
 > Tier mix = confirmed tiers of the workflows a role touches (a workflow
 > counts once per role regardless of how many steps mention it). HC is
 > shown for §5.3 register roles; field rosters are per-store/per-DC and
 > external/system actors carry no headcount by definition.
+
+## Role-Anchoring Contract (chartered roles × explicit workflow presence)
+
+> **Contract (by direction 2026-09-23; supersedes the function-level contract
+> of TO v2.4/v2.5).** A role that is not explicitly in a workflow cannot be
+> measured: no Owner / Participant / Step presence means no demand signal, no
+> cycle time, no handoff count — nothing to optimize. Every chartered role
+> therefore carries at least one explicit RACI anchor in the catalog, and no
+> headcount or structure decision may touch an unanchored or demand-unverified
+> role: anchor it into its owning workflow (or consciously re-scope the
+> charter), and verify per-role annual demand via
+> [`virtual-gemba-walk.py`](../07-methodology/virtual-gemba-walk.py) against
+> the chartered TO capacity first. The zero-anchor rows are the anchoring
+> worklist; the weak-anchor rows (anchored in only 1–2 workflows) are the
+> demand-verification watchlist. The census numbers below are pinned by
+> `validate-repo.sh` Check 71 — any movement is a conscious re-adjudication.
+
+| Measure | Value |
+|---|---|
+| Chartered roles (register 192 + IT seats 32 + store 8 + DC 27) | 259 |
+| With ≥1 explicit RACI anchor | 259 (100%) |
+| ZERO-anchor — the anchoring worklist | 0 (hq 0 · it 0 · store 0 · dc 0) |
+| Weakly anchored (1–2 workflows) — demand-verification watchlist | 65 |
+
+### Weak-anchor watchlist — 65 chartered roles anchored in only 1–2 workflows
+
+| Role | Charter source | HC | Workflows touched |
+|---|---|---|---|
+| Accounting Policy Analyst | §5.3 register — Finance & Accounting | 1 | 1 |
+| Contracts & Commercial Manager (Senior Counsel) | §5.3 register — Legal & Compliance | 1 | 1 |
+| Ecommerce Marketing Specialist | §5.3 register — Marketing | 2 | 1 |
+| ESG Reporting & Data Analyst | §5.3 register — Sustainability / ESG | 1 | 1 |
+| Field Communications Manager | §5.3 register — Store Operations | 1 | 1 |
+| Legal Counsel — Contracts | §5.3 register — Legal & Compliance | 2 | 1 |
+| Manager, GL & Consolidation (Assistant Controller) | §5.3 register — Finance & Accounting | 1 | 1 |
+| Marketing Comms Specialist | §5.3 register — Marketing | 1 | 1 |
+| Payroll & Statutory Remittance Officer | §5.3 register — Human Resources | 1 | 1 |
+| Privacy Officer | §5.3 register — Legal & Compliance | 1 | 1 |
+| Promotions & Vendor-Funding Coordinator | §5.3 register — Merchandising & Buying | 3 | 1 |
+| Promotions Specialist | §5.3 register — Marketing | 2 | 1 |
+| Quality & Workforce Analyst | §5.3 register — Customer Service | 2 | 1 |
+| Replenishment & Allocation Analyst | §5.3 register — Supply Chain & Logistics | 2 | 1 |
+| Senior LP Analytics Analyst | §5.3 register — Regional Loss Prevention | 1 | 1 |
+| Sourcing & Screening Coordinator | §5.3 register — Human Resources | 1 | 1 |
+| Store HR Coordinator (one per district) | §5.3 register — Human Resources | 13 | 1 |
+| TA Coordinator | §5.3 register — Human Resources | 1 | 1 |
+| Technical Accounting Manager | §5.3 register — Finance & Accounting | 1 | 1 |
+| Wellness Coordinator | §5.3 register — Health, Safety & Environment | 1 | 1 |
+| Build-Squad Tech Lead | IT product-model seats — Information Technology (product model) | — | 1 |
+| IAP Integration Engineer | IT product-model seats — Information Technology (product model) | — | 1 |
+| ASM | §7.2 store roster — Store (field, per-store roster) | — | 1 |
+| Assistant DC Manager — Outbound | §7.3 DC roster — DC (field, per-DC roster) | — | 1 |
+| Cycle Counters | §7.3 DC roster — DC (field, per-DC roster) | — | 1 |
+| DC Office Administrator | §7.3 DC roster — DC (field, per-DC roster) | — | 1 |
+| Discrepancy Analysts | §7.3 DC roster — DC (field, per-DC roster) | — | 1 |
+| Facilities/Utility | §7.3 DC roster — DC (field, per-DC roster) | — | 1 |
+| Special Handling Lead | §7.3 DC roster — DC (field, per-DC roster) | — | 1 |
+| Tile & Heavy/Breakbulk Crew | §7.3 DC roster — DC (field, per-DC roster) | — | 1 |
+| 3PL & Freight Specialist | §5.3 register — Supply Chain & Logistics | 2 | 2 |
+| Audit Manager | §5.3 register — Internal Audit & Risk | 1 | 2 |
+| B2B Support Representative | §5.3 register — Customer Service | 4 | 2 |
+| Banking & Cash-Management Specialist | §5.3 register — Finance & Accounting | 2 | 2 |
+| Business Process & IMS Lead | §5.3 register — Strategy / Corporate Planning | 1 | 2 |
+| Compensation Analyst | §5.3 register — Human Resources | 1 | 2 |
+| Corporate Secretary Analyst | §5.3 register — Legal & Compliance | 1 | 2 |
+| CPM (Corporate Performance Management) Analyst | §5.3 register — Strategy / Corporate Planning | 1 | 2 |
+| DC Cost-to-Serve Analyst | §5.3 register — Finance & Accounting | 1 | 2 |
+| DC Operations Analyst | §5.3 register — Supply Chain & Logistics | 1 | 2 |
+| Ecommerce Support Specialist | §5.3 register — Customer Service | 3 | 2 |
+| Facilities Coordination Specialist | §5.3 register — Store Operations | 1 | 2 |
+| Forensic / Fraud Investigator | §5.3 register — Internal Audit & Risk | 1 | 2 |
+| Head of Strategy & Corporate Planning | §5.3 register — Strategy / Corporate Planning | 1 | 2 |
+| Import Documentation Specialist | §5.3 register — Supply Chain & Logistics | 1 | 2 |
+| Maintenance & Projects Coordinator | §5.3 register — Facilities & Real Estate | 2 | 2 |
+| Operations Compliance Lead | §5.3 register — Internal Audit & Risk | 1 | 2 |
+| Paralegal / Contracts Specialist | §5.3 register — Legal & Compliance | 2 | 2 |
+| Payroll Supervisor | §5.3 register — Human Resources | 1 | 2 |
+| Promotions & Campaigns Manager | §5.3 register — Marketing | 1 | 2 |
+| Purchasing / PO Specialist | §5.3 register — Supply Chain & Logistics | 6 | 2 |
+| Real-Estate & Site-Selection Analyst | §5.3 register — Facilities & Real Estate | 1 | 2 |
+| Retail Media Operations Specialist | §5.3 register — Marketing | 1 | 2 |
+| Senior Demand Planner | §5.3 register — Supply Chain & Logistics | 1 | 2 |
+| Senior FP&A Analyst | §5.3 register — Finance & Accounting | 2 | 2 |
+| Strategy Analyst | §5.3 register — Strategy / Corporate Planning | 1 | 2 |
+| Tax Compliance & eFPS Specialist | §5.3 register — Finance & Accounting | 1 | 2 |
+| Timekeeping & Attendance Analyst | §5.3 register — Human Resources | 1 | 2 |
+| Vendor Portal & Collaboration Specialist | §5.3 register — Supply Chain & Logistics | 2 | 2 |
+| AAP Agent Engineer | IT product-model seats — Information Technology (product model) | — | 2 |
+| IAP Integration Support Engineer | IT product-model seats — Information Technology (product model) | — | 2 |
+| INFRA Site Reliability Engineer | IT product-model seats — Information Technology (product model) | — | 2 |
+| Assistant DC Manager — Inbound | §7.3 DC roster — DC (field, per-DC roster) | — | 2 |
+| Cross-Dock Team | §7.3 DC roster — DC (field, per-DC roster) | — | 2 |
+| Lumber / Long-Length Crew | §7.3 DC roster — DC (field, per-DC roster) | — | 2 |
 
 ## §5.3 Enterprise Role Register (HQ roles)
 
@@ -62,6 +155,14 @@
 | Revenue Assurance Analyst | Finance & Accounting | 1 | 3 | 0 | 6 | 2 | 4 | 1 | 3 | 0 |
 | S&OP Finance Partner | Finance & Accounting | 1 | 2 | 8 | 10 | 0 | 8 | 0 | 3 | 5 |
 | GL Accountant (one per entity) | Finance & Accounting | 5 | 1 | 5 | 10 | 0 | 8 | 6 | 2 | 0 |
+| Payroll Accounting Liaison | Finance & Accounting | 1 | 0 | 3 | 3 | 2 | 4 | 3 | 0 | 1 |
+| Banking & Cash-Management Specialist | Finance & Accounting | 2 | 0 | 2 | 0 | 0 | 2 | 1 | 1 | 0 |
+| DC Cost-to-Serve Analyst | Finance & Accounting | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 1 | 1 |
+| Senior FP&A Analyst | Finance & Accounting | 2 | 0 | 2 | 0 | 0 | 2 | 1 | 0 | 1 |
+| Tax Compliance & eFPS Specialist | Finance & Accounting | 1 | 0 | 2 | 0 | 0 | 2 | 2 | 0 | 0 |
+| Accounting Policy Analyst | Finance & Accounting | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
+| Manager, GL & Consolidation (Assistant Controller) | Finance & Accounting | 1 | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
+| Technical Accounting Manager | Finance & Accounting | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Category Manager | Merchandising & Buying | 5 | 127 | 616 | 656 | 560 | 733 | 119 | 482 | 132 |
 | VP for Merchandising | Merchandising & Buying | 1 | 59 | 182 | 123 | 919 | 542 | 87 | 353 | 102 |
 | Merchandise Planner / Allocator | Merchandising & Buying | 6 | 51 | 105 | 171 | 23 | 122 | 12 | 91 | 19 |
@@ -73,6 +174,7 @@
 | Pricing Manager | Merchandising & Buying | 1 | 8 | 6 | 17 | 14 | 16 | 4 | 11 | 1 |
 | Private Brand Product Manager | Merchandising & Buying | 3 | 4 | 13 | 14 | 6 | 15 | 4 | 11 | 0 |
 | Assortment & Space Analyst | Merchandising & Buying | 3 | 4 | 8 | 16 | 0 | 8 | 3 | 5 | 0 |
+| Promotions & Vendor-Funding Coordinator | Merchandising & Buying | 3 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | VP Supply Chain & Logistics (dual-hat GM, BuildRight Logistics, Inc.) | Supply Chain & Logistics | 1 | 58 | 128 | 112 | 528 | 338 | 85 | 180 | 73 |
 | Fleet Compliance & Safety Specialist | Supply Chain & Logistics | 1 | 49 | 35 | 146 | 20 | 37 | 22 | 13 | 2 |
 | Procurement Manager | Supply Chain & Logistics | 1 | 35 | 55 | 87 | 99 | 97 | 35 | 45 | 17 |
@@ -93,6 +195,11 @@
 | Vendor Scorecard & Performance Analyst | Supply Chain & Logistics | 1 | 2 | 7 | 6 | 4 | 8 | 3 | 4 | 1 |
 | 3PL & Freight Specialist | Supply Chain & Logistics | 2 | 2 | 0 | 8 | 8 | 2 | 0 | 2 | 0 |
 | Vendor Portal & Collaboration Specialist | Supply Chain & Logistics | 2 | 1 | 2 | 12 | 1 | 2 | 1 | 1 | 0 |
+| DC Operations Analyst | Supply Chain & Logistics | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 1 | 1 |
+| Import Documentation Specialist | Supply Chain & Logistics | 1 | 0 | 2 | 0 | 0 | 2 | 1 | 1 | 0 |
+| Purchasing / PO Specialist | Supply Chain & Logistics | 6 | 0 | 2 | 0 | 0 | 2 | 2 | 0 | 0 |
+| Senior Demand Planner | Supply Chain & Logistics | 1 | 0 | 2 | 0 | 0 | 2 | 2 | 0 | 0 |
+| Replenishment & Allocation Analyst | Supply Chain & Logistics | 2 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Compensation & Benefits Manager | Human Resources | 1 | 24 | 38 | 79 | 2 | 41 | 7 | 30 | 4 |
 | HR Shared Services Lead | Human Resources | 1 | 21 | 7 | 11 | 18 | 31 | 2 | 26 | 3 |
 | Labor Relations Director | Human Resources | 1 | 19 | 21 | 40 | 4 | 26 | 12 | 12 | 2 |
@@ -109,7 +216,13 @@
 | Talent Acquisition Manager | Human Resources | 1 | 3 | 3 | 9 | 34 | 16 | 0 | 13 | 3 |
 | Talent Acquisition Specialist | Human Resources | 5 | 3 | 2 | 9 | 8 | 5 | 1 | 2 | 2 |
 | HR Services Specialist | Human Resources | 4 | 2 | 1 | 8 | 8 | 3 | 2 | 1 | 0 |
+| Compensation Analyst | Human Resources | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 2 | 0 |
+| Payroll Supervisor | Human Resources | 1 | 0 | 2 | 0 | 0 | 2 | 1 | 1 | 0 |
+| Timekeeping & Attendance Analyst | Human Resources | 1 | 0 | 2 | 0 | 0 | 2 | 2 | 0 | 0 |
+| Payroll & Statutory Remittance Officer | Human Resources | 1 | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
+| Sourcing & Screening Coordinator | Human Resources | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Store HR Coordinator (one per district) | Human Resources | 13 | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 |
+| TA Coordinator | Human Resources | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Marketplace Manager | Marketing | 2 | 34 | 66 | 59 | 92 | 79 | 10 | 53 | 16 |
 | Loyalty & CRM Manager | Marketing | 1 | 25 | 30 | 68 | 41 | 43 | 3 | 28 | 12 |
 | Retail Media & Marketplace Manager | Marketing | 1 | 23 | 3 | 47 | 19 | 26 | 2 | 19 | 5 |
@@ -126,11 +239,17 @@
 | Promotions & Campaigns Manager | Marketing | 1 | 2 | 0 | 0 | 0 | 2 | 0 | 2 | 0 |
 | Performance-Marketing Specialist | Marketing | 2 | 1 | 4 | 16 | 0 | 4 | 0 | 1 | 3 |
 | Marketing Comms Specialist | Marketing | 1 | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 |
+| Insights Analyst | Marketing | 2 | 0 | 3 | 3 | 0 | 3 | 0 | 1 | 2 |
+| Retail Media Operations Specialist | Marketing | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 1 | 1 |
+| Ecommerce Marketing Specialist | Marketing | 2 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 1 |
+| Promotions Specialist | Marketing | 2 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | VP Store Operations (Director Field Retail Operations) | Store Operations | 1 | 98 | 166 | 212 | 539 | 366 | 66 | 242 | 58 |
 | Retail Standards & Store-Opening Manager (Store Support Center lead) | Store Operations | 1 | 31 | 26 | 24 | 37 | 53 | 9 | 42 | 2 |
 | Regional Manager | Store Operations | 6 | 28 | 116 | 140 | 201 | 209 | 62 | 125 | 22 |
 | OpEx / Continuous-Improvement Process Lead | Store Operations | 1 | 27 | 34 | 104 | 26 | 56 | 1 | 28 | 27 |
 | District Manager | Store Operations | 13 | 9 | 11 | 26 | 25 | 23 | 5 | 17 | 1 |
+| Facilities Coordination Specialist | Store Operations | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 2 | 0 |
+| Field Communications Manager | Store Operations | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | VP Legal & Compliance | Legal & Compliance | 1 | 109 | 131 | 184 | 1114 | 636 | 200 | 388 | 48 |
 | Government Affairs Manager | Legal & Compliance | 1 | 43 | 41 | 95 | 25 | 59 | 5 | 51 | 3 |
 | Corporate Secretary | Legal & Compliance | 1 | 38 | 41 | 123 | 19 | 61 | 21 | 35 | 5 |
@@ -144,20 +263,30 @@
 | Paralegal / Contracts Specialist | Legal & Compliance | 2 | 2 | 0 | 2 | 4 | 2 | 0 | 2 | 0 |
 | Legal Counsel — Contracts | Legal & Compliance | 2 | 1 | 0 | 0 | 4 | 1 | 0 | 1 | 0 |
 | Privacy Officer | Legal & Compliance | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 |
+| Corporate Secretary Analyst | Legal & Compliance | 1 | 0 | 2 | 0 | 0 | 2 | 1 | 1 | 0 |
+| Contracts & Commercial Manager (Senior Counsel) | Legal & Compliance | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 1 |
 | ERM & TPRM Analyst | Internal Audit & Risk | 1 | 29 | 28 | 106 | 60 | 59 | 11 | 44 | 4 |
 | Head of Internal Audit & Risk | Internal Audit & Risk | 1 | 27 | 11 | 76 | 276 | 148 | 17 | 85 | 46 |
 | Internal Auditor | Internal Audit & Risk | 2 | 7 | 8 | 25 | 14 | 14 | 5 | 8 | 1 |
 | IT / ERP Auditor | Internal Audit & Risk | 2 | 6 | 0 | 25 | 6 | 13 | 0 | 0 | 13 |
 | Senior Internal Auditor | Internal Audit & Risk | 1 | 3 | 0 | 2 | 45 | 21 | 0 | 0 | 21 |
+| Field Compliance Auditor | Internal Audit & Risk | 4 | 0 | 3 | 0 | 0 | 3 | 0 | 2 | 1 |
+| Audit Manager | Internal Audit & Risk | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 0 | 2 |
+| Forensic / Fraud Investigator | Internal Audit & Risk | 1 | 0 | 2 | 0 | 0 | 2 | 2 | 0 | 0 |
+| Operations Compliance Lead | Internal Audit & Risk | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 2 | 0 |
 | Customer Service Representative | Customer Service | 22 | 24 | 44 | 54 | 3 | 64 | 9 | 48 | 7 |
 | Contact Center Supervisor | Customer Service | 2 | 8 | 17 | 14 | 25 | 24 | 8 | 12 | 4 |
 | Services Manager | Customer Service | 1 | 5 | 10 | 15 | 45 | 24 | 9 | 10 | 5 |
 | Head of Customer Service | Customer Service | 1 | 5 | 1 | 6 | 30 | 17 | 0 | 15 | 2 |
+| Ecommerce Support Specialist | Customer Service | 3 | 2 | 2 | 0 | 0 | 2 | 2 | 0 | 0 |
+| B2B Support Representative | Customer Service | 4 | 0 | 2 | 0 | 0 | 2 | 0 | 2 | 0 |
+| Quality & Workforce Analyst | Customer Service | 2 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Director, Regional Loss Prevention | Regional Loss Prevention | 1 | 54 | 28 | 101 | 169 | 103 | 24 | 70 | 9 |
 | LP Analytics Analyst | Regional Loss Prevention | 2 | 20 | 30 | 95 | 9 | 50 | 20 | 23 | 7 |
 | Regional LP Officer | Regional Loss Prevention | 20 | 12 | 47 | 77 | 26 | 59 | 29 | 29 | 1 |
 | LP Investigator | Regional Loss Prevention | 2 | 3 | 8 | 25 | 0 | 12 | 8 | 3 | 1 |
 | Senior LP Investigator | Regional Loss Prevention | 1 | 3 | 3 | 7 | 0 | 3 | 3 | 0 | 0 |
+| Senior LP Analytics Analyst | Regional Loss Prevention | 1 | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
 | Head of HSE | Health, Safety & Environment | 1 | 24 | 9 | 35 | 163 | 86 | 28 | 53 | 5 |
 | Safety Officer (HSE Officer, DOLE-accredited SO2) | Health, Safety & Environment | 10 | 23 | 78 | 145 | 63 | 107 | 51 | 46 | 10 |
 | Company Nurse | Health, Safety & Environment | 1 | 9 | 35 | 40 | 0 | 27 | 11 | 16 | 0 |
@@ -172,12 +301,18 @@
 | Director, Facilities & Real Estate (dual-hat GM, BuildRight Property Mgmt, Inc.) | Facilities & Real Estate | 1 | 14 | 0 | 0 | 0 | 14 | 3 | 10 | 1 |
 | Lease Administrator | Facilities & Real Estate | 1 | 13 | 25 | 35 | 4 | 30 | 4 | 24 | 2 |
 | Facilities Coordinator | Facilities & Real Estate | 3 | 8 | 27 | 40 | 23 | 35 | 10 | 24 | 1 |
+| Maintenance & Projects Coordinator | Facilities & Real Estate | 2 | 0 | 2 | 0 | 0 | 2 | 0 | 2 | 0 |
+| Real-Estate & Site-Selection Analyst | Facilities & Real Estate | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 2 | 0 |
 | Head of Sustainability / ESG (Sustainability/ESG Manager) | Sustainability / ESG | 1 | 75 | 51 | 173 | 182 | 138 | 16 | 76 | 46 |
 | Environmental Compliance Specialist | Sustainability / ESG | 1 | 25 | 13 | 84 | 59 | 37 | 15 | 19 | 3 |
 | Sustainability Coordinator | Sustainability / ESG | 1 | 20 | 40 | 77 | 3 | 49 | 2 | 33 | 14 |
 | ESG Reporting & Data Analyst | Sustainability / ESG | 1 | 1 | 0 | 5 | 0 | 1 | 1 | 0 | 0 |
 | Competitive Intelligence Manager | Strategy / Corporate Planning | 1 | 2 | 4 | 0 | 1 | 5 | 0 | 3 | 2 |
 | Head of Strategy & Corporate Planning | Strategy / Corporate Planning | 1 | 1 | 1 | 0 | 1 | 2 | 0 | 2 | 0 |
+| Document Control Coordinator | Strategy / Corporate Planning | 1 | 0 | 3 | 0 | 0 | 3 | 0 | 3 | 0 |
+| Business Process & IMS Lead | Strategy / Corporate Planning | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 2 | 0 |
+| CPM (Corporate Performance Management) Analyst | Strategy / Corporate Planning | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 1 | 1 |
+| Strategy Analyst | Strategy / Corporate Planning | 1 | 0 | 2 | 0 | 0 | 2 | 1 | 0 | 1 |
 | Trade Account Manager | Trade / Account Management | 2 | 22 | 54 | 90 | 13 | 56 | 13 | 38 | 5 |
 | Key Account Manager | Trade / Account Management | 2 | 16 | 25 | 52 | 18 | 34 | 7 | 25 | 2 |
 | Head of Trade & Account Management | Trade / Account Management | 1 | 11 | 4 | 20 | 58 | 41 | 2 | 29 | 10 |
@@ -220,7 +355,9 @@
 | AAP Agent Engineer | Information Technology (product model) | 1 | 2 | 4 | 5 | 2 | 0 | 2 | 0 |
 | INFRA Site Reliability Engineer | Information Technology (product model) | 1 | 2 | 5 | 0 | 2 | 0 | 2 | 0 |
 | Information Technology (department) | Information Technology (product model) | 0 | 1 | 22 | 1 | 15 | 8 | 6 | 1 |
+| IAP Integration Support Engineer | Information Technology (product model) | 0 | 2 | 1 | 1 | 2 | 1 | 1 | 0 |
 | Build-Squad Tech Lead | Information Technology (product model) | 0 | 1 | 1 | 0 | 1 | 0 | 0 | 1 |
+| IAP Integration Engineer | Information Technology (product model) | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 
 ## Store field roles (§7.2 roster)
 
@@ -258,9 +395,18 @@
 | Assistant DC Manager — Inbound | DC (field, per-DC roster) | 2 | 2 | 8 | 1 | 2 | 1 | 1 | 0 |
 | Lumber / Long-Length Crew | DC (field, per-DC roster) | 2 | 1 | 3 | 2 | 2 | 0 | 2 | 0 |
 | Certified Hazmat/Paint Handlers | DC (field, per-DC roster) | 1 | 3 | 4 | 0 | 3 | 3 | 0 | 0 |
+| Order Pickers | DC (field, per-DC roster) | 0 | 15 | 19 | 0 | 18 | 8 | 8 | 2 |
 | Forklift Operators (inbound) | DC (field, per-DC roster) | 0 | 15 | 9 | 0 | 15 | 5 | 8 | 2 |
+| Packers / Load Builders | DC (field, per-DC roster) | 0 | 5 | 9 | 0 | 8 | 6 | 2 | 0 |
 | Putaway Staff | DC (field, per-DC roster) | 0 | 4 | 4 | 0 | 4 | 2 | 0 | 2 |
+| Cross-Dock Team | DC (field, per-DC roster) | 0 | 2 | 0 | 0 | 2 | 0 | 1 | 1 |
+| Assistant DC Manager — Outbound | DC (field, per-DC roster) | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
 | Cycle Counters | DC (field, per-DC roster) | 0 | 1 | 2 | 0 | 1 | 0 | 1 | 0 |
+| DC Office Administrator | DC (field, per-DC roster) | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 1 |
+| Discrepancy Analysts | DC (field, per-DC roster) | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
+| Facilities/Utility | DC (field, per-DC roster) | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
+| Special Handling Lead | DC (field, per-DC roster) | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
+| Tile & Heavy/Breakbulk Crew | DC (field, per-DC roster) | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
 
 ## Department-level actors (department or generic form named as performer)
 
@@ -793,7 +939,6 @@
 | Mechanic | Supply Chain & Logistics | 0 | 5 | 14 | 0 | 10 | 4 | 5 | 1 |
 | Transport | Supply Chain & Logistics | 0 | 1 | 10 | 0 | 9 | 1 | 6 | 2 |
 | Warehouse Supervisor | Supply Chain & Logistics | 0 | 7 | 9 | 1 | 9 | 4 | 5 | 0 |
-| Dc Picker | Supply Chain & Logistics | 0 | 6 | 5 | 0 | 8 | 5 | 3 | 0 |
 | Delivery Coordinator | Supply Chain & Logistics | 0 | 6 | 14 | 3 | 8 | 1 | 6 | 1 |
 | Dispatcher | Supply Chain & Logistics | 0 | 1 | 12 | 0 | 8 | 3 | 4 | 1 |
 | Dc Receiving | Supply Chain & Logistics | 0 | 7 | 4 | 0 | 7 | 3 | 4 | 0 |
@@ -830,11 +975,9 @@
 | Store Receiving | Supply Chain & Logistics | 0 | 3 | 0 | 0 | 3 | 1 | 2 | 0 |
 | Transportation Planner | Supply Chain & Logistics | 0 | 3 | 5 | 1 | 3 | 2 | 0 | 1 |
 | 3Pl Transport Coordinator | Supply Chain & Logistics | 0 | 2 | 0 | 0 | 2 | 2 | 0 | 0 |
-| Cross-Dock Coordinator | Supply Chain & Logistics | 0 | 2 | 0 | 0 | 2 | 0 | 1 | 1 |
 | Cutter | Supply Chain & Logistics | 0 | 1 | 6 | 0 | 2 | 0 | 1 | 1 |
 | Dc Assembly Staff | Supply Chain & Logistics | 0 | 1 | 1 | 0 | 2 | 1 | 1 | 0 |
 | Dc Clerk | Supply Chain & Logistics | 0 | 0 | 2 | 0 | 2 | 0 | 2 | 0 |
-| Dc Packer | Supply Chain & Logistics | 0 | 1 | 1 | 0 | 2 | 1 | 1 | 0 |
 | Dc Receiving Lead | Supply Chain & Logistics | 0 | 2 | 5 | 0 | 2 | 2 | 0 | 0 |
 | Dc Warehouse Crew | Supply Chain & Logistics | 0 | 0 | 2 | 0 | 2 | 1 | 1 | 0 |
 | Delivery | Supply Chain & Logistics | 0 | 2 | 0 | 0 | 2 | 0 | 2 | 0 |
@@ -896,7 +1039,6 @@
 | Dc Kitting | Supply Chain & Logistics | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Dc Maintenance Supervisors | Supply Chain & Logistics | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 1 |
 | Dc Ops Supervisor | Supply Chain & Logistics | 0 | 0 | 1 | 0 | 1 | 0 | 0 | 1 |
-| Dc Pick Staff | Supply Chain & Logistics | 0 | 0 | 1 | 0 | 1 | 0 | 1 | 0 |
 | Dc Planner | Supply Chain & Logistics | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 0 |
 | Dc Quality Inspectors | Supply Chain & Logistics | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Dc Receiver | Supply Chain & Logistics | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
@@ -977,7 +1119,6 @@
 | Lumber Yard Sales Associate | Supply Chain & Logistics | 0 | 1 | 4 | 0 | 1 | 0 | 1 | 0 |
 | Marketplace Logistics | Supply Chain & Logistics | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Network Planning Analyst | Supply Chain & Logistics | 0 | 0 | 2 | 0 | 1 | 0 | 1 | 0 |
-| Outbound Picker | Supply Chain & Logistics | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 |
 | Own Fleet | Supply Chain & Logistics | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
 | Pack | Supply Chain & Logistics | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
 | Packaging Engineers | Supply Chain & Logistics | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
@@ -1039,7 +1180,6 @@
 | Vs-187 Hazmat Tsd | Supply Chain & Logistics | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
 | Warehouse Associate | Supply Chain & Logistics | 0 | 1 | 2 | 0 | 1 | 0 | 1 | 0 |
 | Warehouse Clerk | Supply Chain & Logistics | 0 | 0 | 1 | 0 | 1 | 0 | 1 | 0 |
-| Warehouse Picker | Supply Chain & Logistics | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
 | Warehouse Planner | Supply Chain & Logistics | 0 | 1 | 3 | 0 | 1 | 0 | 1 | 0 |
 | Warehouse Receiving Lead | Supply Chain & Logistics | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Warehouse Receiving Team | Supply Chain & Logistics | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
@@ -1149,7 +1289,6 @@
 | It Admin | Information Technology | 0 | 0 | 2 | 3 | 3 | 2 | 0 | 1 |
 | It Applications | Information Technology | 0 | 3 | 2 | 0 | 3 | 1 | 2 | 0 |
 | It Asset Mgmt | Information Technology | 0 | 3 | 1 | 0 | 3 | 0 | 3 | 0 |
-| Marketing Data Analyst | Information Technology | 0 | 3 | 3 | 0 | 3 | 0 | 1 | 2 |
 | Merchandising Analytics | Information Technology | 0 | 3 | 3 | 0 | 3 | 0 | 1 | 2 |
 | Network Engineering | Information Technology | 0 | 3 | 0 | 0 | 3 | 0 | 3 | 0 |
 | Ot Soc | Information Technology | 0 | 3 | 0 | 0 | 3 | 1 | 0 | 2 |
@@ -1290,7 +1429,6 @@
 | Integration Developers | Information Technology | 0 | 1 | 2 | 0 | 1 | 0 | 1 | 0 |
 | Integration Leads | Information Technology | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 1 |
 | Integration Middleware | Information Technology | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
-| Integration Specialist | Information Technology | 0 | 1 | 1 | 1 | 1 | 1 | 0 | 0 |
 | Integration Steering | Information Technology | 0 | 0 | 0 | 2 | 1 | 0 | 1 | 0 |
 | Iot | Information Technology | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Iot System | Information Technology | 0 | 0 | 1 | 0 | 1 | 0 | 1 | 0 |
@@ -1483,7 +1621,6 @@
 | Hr Compliance Mgr | Human Resources | 0 | 1 | 14 | 4 | 4 | 2 | 2 | 0 |
 | Labor Compliance Mgr | Human Resources | 0 | 4 | 10 | 0 | 4 | 2 | 2 | 0 |
 | Mobility | Human Resources | 0 | 2 | 5 | 0 | 4 | 1 | 3 | 0 |
-| Payroll Accountant | Human Resources | 0 | 3 | 3 | 2 | 4 | 3 | 0 | 1 |
 | C&B | Human Resources | 0 | 3 | 0 | 0 | 3 | 0 | 1 | 2 |
 | Compensation Committee | Human Resources | 0 | 3 | 0 | 4 | 3 | 0 | 3 | 0 |
 | Contingent Coordinator | Human Resources | 0 | 2 | 3 | 0 | 3 | 0 | 2 | 1 |
@@ -2207,7 +2344,6 @@
 | Warranty | Customer Service | 3 | 7 | 8 | 0 | 9 | 0 | 9 | 0 |
 | Cs Manager | Customer Service | 2 | 9 | 35 | 34 | 14 | 2 | 11 | 1 |
 | Warranty Administrator | Customer Service | 2 | 2 | 2 | 0 | 4 | 0 | 3 | 1 |
-| Ecommerce Customer Support | Customer Service | 2 | 2 | 0 | 0 | 2 | 2 | 0 | 0 |
 | Solar Technical Support | Customer Service | 2 | 0 | 0 | 0 | 2 | 0 | 1 | 1 |
 | Cx Manager | Customer Service | 1 | 5 | 17 | 15 | 13 | 3 | 8 | 2 |
 | Customer Support | Customer Service | 1 | 9 | 8 | 0 | 10 | 0 | 10 | 0 |
@@ -3368,12 +3504,10 @@
 | Operator | Workforce (generic) | 0 | 7 | 24 | 0 | 13 | 1 | 12 | 0 |
 | All Staff | Workforce (generic) | 0 | 1 | 11 | 0 | 9 | 5 | 4 | 0 |
 | Student Trainee | Workforce (generic) | 0 | 9 | 3 | 0 | 9 | 1 | 8 | 0 |
-| Picker | Workforce (generic) | 0 | 3 | 12 | 0 | 8 | 5 | 2 | 1 |
 | Technician | Workforce (generic) | 0 | 2 | 12 | 0 | 8 | 1 | 4 | 3 |
 | Staff | Workforce (generic) | 0 | 3 | 5 | 0 | 7 | 2 | 5 | 0 |
 | Take-Back Associate | Workforce (generic) | 0 | 0 | 26 | 0 | 7 | 3 | 4 | 0 |
 | Attendants | Workforce (generic) | 0 | 3 | 3 | 0 | 6 | 2 | 4 | 0 |
-| Packer | Workforce (generic) | 0 | 1 | 8 | 0 | 6 | 6 | 0 | 0 |
 | Attendant | Workforce (generic) | 0 | 0 | 8 | 0 | 5 | 1 | 3 | 1 |
 | Buddy | Workforce (generic) | 0 | 1 | 11 | 0 | 5 | 0 | 4 | 1 |
 | Champions | Workforce (generic) | 0 | 5 | 3 | 0 | 5 | 0 | 5 | 0 |
@@ -3381,13 +3515,11 @@
 | Floor Associates | Workforce (generic) | 0 | 4 | 0 | 0 | 4 | 3 | 1 | 0 |
 | Loader | Workforce (generic) | 0 | 0 | 4 | 0 | 4 | 0 | 4 | 0 |
 | Mentors | Workforce (generic) | 0 | 3 | 6 | 0 | 4 | 0 | 4 | 0 |
-| Pickers | Workforce (generic) | 0 | 4 | 0 | 0 | 4 | 0 | 2 | 2 |
 | Specialist | Workforce (generic) | 0 | 2 | 7 | 0 | 4 | 0 | 4 | 0 |
 | End User | Workforce (generic) | 0 | 0 | 4 | 0 | 3 | 1 | 2 | 0 |
 | Injured Employee | Workforce (generic) | 0 | 3 | 0 | 0 | 3 | 1 | 2 | 0 |
 | New Employee | Workforce (generic) | 0 | 3 | 5 | 0 | 3 | 0 | 3 | 0 |
 | New Hire | Workforce (generic) | 0 | 1 | 2 | 0 | 3 | 1 | 2 | 0 |
-| Packers | Workforce (generic) | 0 | 3 | 0 | 0 | 3 | 2 | 1 | 0 |
 | Process Participants | Workforce (generic) | 0 | 3 | 0 | 0 | 3 | 0 | 2 | 1 |
 | Spotter | Workforce (generic) | 0 | 0 | 5 | 0 | 3 | 0 | 3 | 0 |
 | Spotters | Workforce (generic) | 0 | 3 | 0 | 0 | 3 | 0 | 3 | 0 |

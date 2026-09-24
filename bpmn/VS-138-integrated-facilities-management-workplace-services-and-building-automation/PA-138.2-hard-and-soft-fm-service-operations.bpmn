@@ -5,7 +5,7 @@
 Frequency: Daily (stores/DC/HQ) + periodic deep clean
 Volume: ~205 sites × daily cleaning (selling floor, restrooms, backroom, yards, HQ offices)
 Owner: Facilities Soft-Services Lead / Cleaning Provider
-Participants: Site staff (VS-07/VS-04), Provider workforce (VS-98), HSE (VS-24), Store Ops
+Participants: Site staff (VS-07/VS-04), Provider workforce (VS-98), HSE (VS-24), Store Ops, Facilities Coordination Specialist
 Source: workflow W4177 — Janitorial, Cleaning &amp; Hygiene Service Operations</bpmn:documentation>
       <bpmn:laneSet id="W4177_LaneSet3">
         <bpmn:lane id="W4177_Lane1" name="Provider">
@@ -308,7 +308,7 @@ Owner: Facilities Soft/Hard-Services Lead / Grounds Provider</bpmn:text>
 Frequency: Daily (waste) + monthly (utilities) + periodic (hazwaste)
 Volume: ~205 sites × waste streams + ~205 utility accounts (electricity/water)
 Owner: Facilities Site Coordinator / Waste (VS-73) / Energy (VS-120)
-Participants: Site staff (VS-07/VS-04), Waste hauler (VS-73), Utility providers, HSE (VS-24.3)
+Participants: Site staff (VS-07/VS-04), Waste hauler (VS-73), Utility providers, HSE (VS-24.3), Facilities/Utility (DC)
 Source: workflow W4181 — Waste, Recycling &amp; Utilities Coordination at Site</bpmn:documentation>
       <bpmn:laneSet id="W4181_LaneSet2">
         <bpmn:lane id="W4181_Lane1" name="Facilities Site Coord">

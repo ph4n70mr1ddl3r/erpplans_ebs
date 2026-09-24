@@ -1481,7 +1481,7 @@ Owner: VP for Legal &amp; Compliance</bpmn:text>
 Frequency: High; ~40–60 contracts/month
 Volume: Lease agreements, vendor master contracts, service agreements
 Owner: Legal Counsel
-Participants: Requesting Dept, Legal, External Party
+Participants: Requesting Dept, Legal, External Party, Contracts &amp; Commercial Manager (Senior Counsel)
 Source: workflow W230 — Legal Contract Review &amp; Approval</bpmn:documentation>
       <bpmn:laneSet id="W230_LaneSet4">
         <bpmn:lane id="W230_Lane1" name="Dept Manager">

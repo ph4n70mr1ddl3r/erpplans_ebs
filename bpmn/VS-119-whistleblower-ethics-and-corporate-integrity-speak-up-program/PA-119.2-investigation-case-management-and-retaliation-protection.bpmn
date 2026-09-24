@@ -5,7 +5,7 @@
 Frequency: Per case
 Volume: Investigation caseload
 Owner: Ethics &amp; Compliance Officer / Lead Investigator
-Participants: Lead Investigator, Ethics &amp; Compliance Officer, Legal (links to VS-100.3), LP (links to VS-23), HR (links to VS-19), IT/Security (links to VS-27.3), ABC (links to VS-86), Audit (links to VS-21), Records (links to VS-88)
+Participants: Lead Investigator, Ethics &amp; Compliance Officer, Legal (links to VS-100.3), LP (links to VS-23), HR (links to VS-19), IT/Security (links to VS-27.3), ABC (links to VS-86), Audit (links to VS-21), Records (links to VS-88), Forensic / Fraud Investigator
 Source: workflow W3721 — Investigation Planning, Scoping &amp; Evidence Collection</bpmn:documentation>
       <bpmn:laneSet id="W3721_LaneSet2">
         <bpmn:lane id="W3721_Lane1" name="Lead Investigator">

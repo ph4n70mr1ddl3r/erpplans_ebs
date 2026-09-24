@@ -5,7 +5,7 @@
 Frequency: Occasional; estimated 1–2 BIR audits/year across 5 entities; higher probability for entities with large revenue or import activity
 Volume: Audit scope varies — from specific tax type (VAT only) to comprehensive (income tax, VAT, withholding tax) for 1–3 taxable years
 Owner: Tax Accountant (operational); Controller (oversight); CFO (escalation)
-Participants: Tax Accountant, Controller, CFO, Chief Accountant, AP Clerk, AR Clerk, IT, Legal, external tax advisor, BIR Revenue Officers
+Participants: Tax Accountant, Controller, CFO, Chief Accountant, AP Clerk, AR Clerk, IT, Legal, external tax advisor, BIR Revenue Officers, Operations Compliance Lead
 Source: workflow W77 — BIR Tax Audit Response</bpmn:documentation>
       <bpmn:laneSet id="W77_LaneSet4">
         <bpmn:lane id="W77_Lane1" name="Tax Accountant">

@@ -5,7 +5,7 @@
 Frequency: Weekly per store; published 1 week in advance
 Volume: ~29 staff × 200 stores = ~5,800 weekly shift assignments (per profile §4); 2–3 shifts per day (opening: 7 AM–2 PM, mid: 10 AM–6 PM, closing: 2 PM–10 PM)
 Owner: Store Manager
-Participants: Store Manager, Assistant Store Manager, Department Supervisors, HR Assistant
+Participants: Store Manager, Assistant Store Manager, Department Supervisors, HR Assistant, Timekeeping &amp; Attendance Analyst
 Source: workflow W34 — Store Shift Scheduling</bpmn:documentation>
       <bpmn:laneSet id="W34_LaneSet6">
         <bpmn:lane id="W34_Lane1" name="System">
@@ -173,7 +173,7 @@ Owner: Store Manager</bpmn:text>
 Frequency: ~800–1,200 exceptions per day across 200 stores + 4 DCs + HQ (6,911 employees, ~12–18% exception rate)
 Volume: Higher on Mondays (+25%), after holidays (+40%), during rainy season/typhoons (+30%, Metro Manila and low-lying areas), during MRT/LRT service disruptions
 Owner: HR Supervisor / Store Manager (store-level)
-Participants: Employee (R for self-service), Department Supervisor (R for approval), HR Supervisor, Payroll Specialist (I), Store Manager (A for store-level)
+Participants: Employee (R for self-service), Department Supervisor (R for approval), HR Supervisor, Payroll Specialist (I), Store Manager (A for store-level), Timekeeping &amp; Attendance Analyst
 Source: workflow W561 — Employee Attendance Exception Management</bpmn:documentation>
       <bpmn:laneSet id="W561_LaneSet6">
         <bpmn:lane id="W561_Lane1" name="System">

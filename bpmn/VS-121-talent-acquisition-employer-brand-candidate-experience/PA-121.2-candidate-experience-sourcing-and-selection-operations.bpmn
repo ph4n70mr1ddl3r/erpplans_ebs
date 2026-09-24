@@ -149,7 +149,7 @@ Owner: TA Operations / TA Marketing</bpmn:text>
 Frequency: Continuous
 Volume: Sourcing pipeline for priority roles
 Owner: TA Sourcing / Recruiting
-Participants: TA Sourcing, Recruiting (links to VS-19.1), Hiring Managers (links to VS-07/VS-19), Analytics (links to VS-28.1), Loyalty/CRM (links to VS-13)
+Participants: TA Sourcing, Recruiting (links to VS-19.1), Hiring Managers (links to VS-07/VS-19), Analytics (links to VS-28.1), Loyalty/CRM (links to VS-13), Sourcing &amp; Screening Coordinator
 Source: workflow W3771 — Proactive Candidate Sourcing &amp; Talent Mining Operations</bpmn:documentation>
       <bpmn:laneSet id="W3771_LaneSet2">
         <bpmn:lane id="W3771_Lane1" name="TA Sourcing">
@@ -221,7 +221,7 @@ Owner: TA Sourcing / Recruiting</bpmn:text>
 Frequency: Per candidate
 Volume: ~1,200–1,600 hires/yr; several× applicant volume
 Owner: Recruiting / TA Operations
-Participants: Recruiting, Hiring Managers (links to VS-07/VS-19), TA Operations, Trade/Technical assessors (links to VS-09/VS-12), Compliance (links to VS-22), Data Privacy (links to VS-91)
+Participants: Recruiting, Hiring Managers (links to VS-07/VS-19), TA Operations, Trade/Technical assessors (links to VS-09/VS-12), Compliance (links to VS-22), Data Privacy (links to VS-91), TA Coordinator
 Source: workflow W3772 — Candidate Screening, Assessment &amp; Structured Interview Operations</bpmn:documentation>
       <bpmn:laneSet id="W3772_LaneSet3">
         <bpmn:lane id="W3772_Lane1" name="Recruiting">

@@ -350,7 +350,7 @@ Owner: B2B E-commerce Manager</bpmn:text>
 Frequency: ~80–120 quotations/month; tier assessments quarterly; price list updates monthly or upon cost change
 Volume: ~100–150 active resellers across 4 wholesale tiers (Bronze/Silver/Gold/Platinum); trade accounts represent ~30% of revenue (PHP ~18.7B annually); ~15–20 government procurement quotations/year; ~30–40 project-based quotations/year
 Owner: B2B Sales Manager
-Participants: B2B Sales Manager, Sales Representative, Category Manager (A for below-threshold pricing), VP Merchandising (A for government/project pricing), Finance Analyst (R for margin validation), Credit Analyst (R for customer tier assessment)
+Participants: B2B Sales Manager, Sales Representative, Category Manager (A for below-threshold pricing), VP Merchandising (A for government/project pricing), Finance Analyst (R for margin validation), Credit Analyst (R for customer tier assessment), B2B Support Representative
 Source: workflow W598 — Wholesale Pricing &amp; Quotation Management</bpmn:documentation>
       <bpmn:laneSet id="W598_LaneSet6">
         <bpmn:lane id="W598_Lane1" name="Credit Analyst">

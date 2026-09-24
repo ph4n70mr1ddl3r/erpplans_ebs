@@ -227,7 +227,7 @@ Owner: Logistics / Finance</bpmn:text>
 Frequency: Monthly + quarterly
 Volume: All lanes/orders/customers
 Owner: Logistics / FP&amp;A
-Participants: Logistics (links to VS-06), FP&amp;A (links to VS-17.4/VS-33.2), BI (links to VS-28.1), Merchandising (links to VS-01/VS-101), Ecommerce (links to VS-10)
+Participants: Logistics (links to VS-06), FP&amp;A (links to VS-17.4/VS-33.2), BI (links to VS-28.1), Merchandising (links to VS-01/VS-101), Ecommerce (links to VS-10), DC Cost-to-Serve Analyst
 Source: workflow W3516 — Freight Cost-to-Serve &amp; Lane Profitability Analytics</bpmn:documentation>
       <bpmn:laneSet id="W3516_LaneSet3">
         <bpmn:lane id="W3516_Lane1" name="Logistics">

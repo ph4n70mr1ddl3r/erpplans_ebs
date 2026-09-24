@@ -5,7 +5,7 @@
 Frequency: Weekly; ~20–30 import shipments/month (multiple containers per shipment; ~400–600 TEUs/month)
 Volume: Primary sourcing from China, Vietnam, Thailand, and Europe
 Owner: Import Coordinator
-Participants: Buyer, Import Coordinator, Freight Forwarder, Customs Broker, Finance, DC Receiving
+Participants: Buyer, Import Coordinator, Freight Forwarder, Customs Broker, Finance, DC Receiving, Import Documentation Specialist
 Source: workflow W144 — International Logistics &amp; Import Operations</bpmn:documentation>
       <bpmn:laneSet id="W144_LaneSet7">
         <bpmn:lane id="W144_Lane1" name="Buyer">
@@ -176,7 +176,7 @@ Owner: Import Coordinator</bpmn:text>
 Frequency: Ongoing per import shipment
 Volume: ~400–600 TEUs/month
 Owner: Import Coordinator
-Participants: Buyer, Insurance Provider, Finance, Freight Forwarder
+Participants: Buyer, Insurance Provider, Finance, Freight Forwarder, Import Documentation Specialist
 Source: workflow W191 — Global Supply Chain — Incoterm &amp; Marine Insurance Tracking</bpmn:documentation>
       <bpmn:laneSet id="W191_LaneSet5">
         <bpmn:lane id="W191_Lane1" name="Buyer">

@@ -95,7 +95,7 @@ Owner: CFO</bpmn:text>
 Frequency: Weekly (52×/year)
 Volume: Chain-wide with store-level drill-down
 Owner: FP&amp;A
-Participants: FP&amp;A, CEO, COO, CMO, VP Store Operations
+Participants: FP&amp;A, CEO, COO, CMO, VP Store Operations, Senior FP&amp;A Analyst, CPM (Corporate Performance Management) Analyst
 Source: workflow W1654 — Weekly Sales Flash &amp; KPI Dashboard</bpmn:documentation>
       <bpmn:laneSet id="W1654_LaneSet3">
         <bpmn:lane id="W1654_Lane1" name="System">
@@ -338,7 +338,7 @@ Owner: VP Merchandising</bpmn:text>
 Frequency: Quarterly (4×/year)
 Volume: 1 comprehensive governance package
 Owner: CFO
-Participants: CFO, CEO, Corporate Secretary, Board of Directors
+Participants: CFO, CEO, Corporate Secretary, Board of Directors, CPM (Corporate Performance Management) Analyst
 Source: workflow W1657 — Quarterly Board Performance Report &amp; Governance Package</bpmn:documentation>
       <bpmn:laneSet id="W1657_LaneSet4">
         <bpmn:lane id="W1657_Lane1" name="CFO">

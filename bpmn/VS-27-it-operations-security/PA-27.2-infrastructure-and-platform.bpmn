@@ -590,7 +590,7 @@ Owner: IT FinOps Analyst / CIO</bpmn:text>
 Frequency: Quarterly
 Volume: Monitoring 200+ stores, 4 DCs, and cloud infrastructure (~150+ instances)
 Owner: IT Infrastructure Manager
-Participants: Cloud Architect, Database Administrator, Network Engineer, CIO, Finance (Budgeting)
+Participants: Cloud Architect, Database Administrator, Network Engineer, CIO, Finance (Budgeting), IAP Integration Engineer, IAP Integration Support Engineer
 Source: workflow W376 — IT Capacity &amp; Performance Planning</bpmn:documentation>
       <bpmn:laneSet id="W376_LaneSet5">
         <bpmn:lane id="W376_Lane1" name="IT Infra Lead">

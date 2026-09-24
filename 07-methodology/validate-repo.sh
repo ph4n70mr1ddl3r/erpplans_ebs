@@ -5025,16 +5025,22 @@ C71_RC_OUT=$(python3 "$REPO_ROOT/07-methodology/generate-role-coverage.py" --che
 # Owner cells now resolve through the resolution order (owner_uncharted = 0 —
 # full role↔org consistency on the accountability surface); 5,125 distinct
 # uncharted forms remain across participant/step prose (down from 10,829),
-# the watchlist for future vocabulary governance. Adjudicated standing:
-# direction A — 94 of the §5.3 register's 186 ex-IT titles with zero workflow
-# touches — is by design (workflow presence is contracted at function level,
-# every department has ≥1 resolved role; recorded in the TO §5.3 note).
+# the watchlist for future vocabulary governance. Re-pointed 2026-09-23 by
+# direction: the role-level workflow-anchoring contract supersedes the former
+# function-level standing (which had recorded 94 ex-IT register titles with
+# zero workflow touches as by-design) — every chartered role (register row,
+# IT seat, store/DC roster role) must now carry ≥1 explicit RACI anchor; the
+# census carries anchor_chartered/anchor_anchored/anchor_zero/anchor_weak and
+# the zero-anchor rows are the anchoring worklist emitted in the matrix's
+# Role-Anchoring Contract section (no headcount or structure decision may
+# touch an unanchored or demand-unverified role — anchor it, or verify
+# per-role demand via virtual-gemba-walk.py, first).
 # Any movement of these numbers must be a conscious re-adjudication with the
 # baseline re-pointed (the Check-74 deferred-anchor pattern).
 C71_CENSUS_OUT=$(python3 "$REPO_ROOT/07-methodology/generate-role-coverage.py" --census 2>&1) && C71_CENSUS_RC=0 || C71_CENSUS_RC=$?
 C71_CENSUS_OK=0
 case "$C71_CENSUS_OUT" in
-  *"CENSUS workflows=5433 owner_resolved=5433 owner_uncharted=0 owner_uncharted_forms=0 uncharted_forms=0 ctl_owner_cells=808 ctl_owner_resolved=808 ctl_owner_uncharted=0 ctl_owner_uncharted_forms=0 prose_role_uncharted=0 prose_role_forms=0"*) C71_CENSUS_OK=1;;
+  *"CENSUS workflows=5433 owner_resolved=5433 owner_uncharted=0 owner_uncharted_forms=0 uncharted_forms=0 ctl_owner_cells=808 ctl_owner_resolved=808 ctl_owner_uncharted=0 ctl_owner_uncharted_forms=0 prose_role_uncharted=0 prose_role_forms=0 anchor_chartered=259 anchor_anchored=259 anchor_zero=0 anchor_weak=65"*) C71_CENSUS_OK=1;;
 esac
 # Part E/F (2026-09-16 forty-seventh-wave consistency review): the shipped
 # generated trees' byte-currency. generate-role-coverage.py --check (Part C)

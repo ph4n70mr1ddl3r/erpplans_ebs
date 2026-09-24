@@ -5,7 +5,7 @@
 Frequency: Monthly per entity (5 entities)
 Volume: 5 returns/month; ~PHP 5.19B monthly revenue at 12% output VAT
 Owner: Tax Manager
-Participants: Tax Manager, GL Accountant, AP/AR, Tax Accountant
+Participants: Tax Manager, GL Accountant, AP/AR, Tax Accountant, Tax Compliance &amp; eFPS Specialist
 Source: workflow W2753 — VAT Output/Input Ledger Reconciliation &amp; Monthly Form 2550M Preparation</bpmn:documentation>
       <bpmn:laneSet id="W2753_LaneSet4">
         <bpmn:lane id="W2753_Lane1" name="GL Accountant">

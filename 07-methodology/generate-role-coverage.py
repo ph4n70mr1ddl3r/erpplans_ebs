@@ -35,6 +35,18 @@ matrix is a derived view, never hand-edited).
 
 Data integrity asserted at generation: every workflow has exactly one Owner;
 every workflow id resolves to exactly one confirmed Tier.
+
+Role-anchoring contract (by direction 2026-09-23; supersedes the TO v2.4/v2.5
+function-level contract): a role that is not explicitly in a workflow cannot be
+measured — no Owner/Participant/Step presence means no demand signal, no cycle
+time, no handoff count, nothing to optimize. Every chartered role (each §5.3
+register row ex-IT, every IT product-model seat, every §7.2/§7.3 roster role)
+must therefore carry ≥1 explicit RACI anchor in the catalog. build() computes
+the census; render() emits the zero-anchor worklist and the weak-anchor (1–2
+workflows) watchlist; --census pins the numbers for validate-repo.sh Check 71 —
+any movement forces conscious re-adjudication, and no headcount decision may
+touch an unanchored or demand-unverified role (anchor it, or verify demand via
+virtual-gemba-walk.py against the chartered TO capacity, first).
 """
 import os
 import re
@@ -94,6 +106,8 @@ IT_SEATS = {
     "dp customer data platform": "DP Customer Data Platform",
     "build-squad software engineer": "Build-Squad Software Engineer",
     "fs itam administrator": "FS ITAM Administrator",
+    "iap integration engineer": "IAP Integration Engineer",
+    "iap integration support engineer": "IAP Integration Support Engineer",
     "aap ai-governance liaison": "AAP AI-Governance Liaison",
     "head of enterprise architecture": "Head of Enterprise Architecture (CIO Office)",
     "sec security engineer": "SEC Security Engineer",
@@ -188,6 +202,30 @@ ROLE_ALIASES = {
     "sales rep": "STORE:Sales Associate",
     "security guard": "EXTERNAL:Security Guard (contracted)",
     "receiving clerk": "DC:Receiving Clerk",
+    # --- Role-anchoring worklist remediation (batch 31, 2026-09-23): corpus
+    # forms promoted to the chartered titles they denote (zero-anchor worklist
+    # clearance; see fix-role-anchor-worklist.py and the matrix's
+    # Role-Anchoring Contract section).
+    "picker": "DC:Order Pickers",
+    "pickers": "DC:Order Pickers",
+    "packer": "DC:Packers / Load Builders",
+    "packers": "DC:Packers / Load Builders",
+    "load builder": "DC:Packers / Load Builders",
+    "load builders": "DC:Packers / Load Builders",
+    "cross-dock coordinator": "DC:Cross-Dock Team",
+    "cross-dock team": "DC:Cross-Dock Team",
+    "dc outbound supervisor": "DC:Assistant DC Manager — Outbound",
+    "outbound supervisor": "DC:Assistant DC Manager — Outbound",
+    "dc packer": "DC:Packers / Load Builders",
+    "dc pick staff": "DC:Order Pickers",
+    "dc picker": "DC:Order Pickers",
+    "outbound picker": "DC:Order Pickers",
+    "warehouse picker": "DC:Order Pickers",
+    "payroll accountant": "Payroll Accounting Liaison",
+    "assistant controller": "Manager, GL & Consolidation (Assistant Controller)",
+    "marketing data analyst": "Insights Analyst",
+    "ecommerce customer support": "Ecommerce Support Specialist",
+    "integration specialist": "IAP Integration Support Engineer",
     "receiving clerks": "DC:Receiving Clerk",
     # --- Thirty-second-wave role-vocabulary reconciliation (2026-09-15): every
     # recurring uncharted Owner form (>=2 workflows) adjudicated against the org
@@ -2146,10 +2184,7 @@ DEPT_ACTORS_W36 = {
     "dc logistics": "Supply Chain & Logistics",
     "dc maintenance supervisors": "Supply Chain & Logistics",
     "dc ops supervisor": "Supply Chain & Logistics",
-    "dc packer": "Supply Chain & Logistics",
     "dc pick": "Supply Chain & Logistics",
-    "dc pick staff": "Supply Chain & Logistics",
-    "dc picker": "Supply Chain & Logistics",
     "dc planner": "Supply Chain & Logistics",
     "dc quality inspectors": "Supply Chain & Logistics",
     "dc receiver": "Supply Chain & Logistics",
@@ -3083,7 +3118,6 @@ DEPT_ACTORS_W36 = {
     "ot soc": "Information Technology",
     "ot soc analyst": "Generic / cross-department",
     "ot threat intel analyst": "Generic / cross-department",
-    "outbound picker": "Supply Chain & Logistics",
     "own fleet": "Supply Chain & Logistics",
     "owner": "Generic / cross-department",
     "owners": "Generic / cross-department",
@@ -3829,7 +3863,6 @@ DEPT_ACTORS_W36 = {
     "wape: weighted by revenue contribution": "Generic / cross-department",
     "warehouse associate": "Supply Chain & Logistics",
     "warehouse clerk": "Supply Chain & Logistics",
-    "warehouse picker": "Supply Chain & Logistics",
     "warehouse planner": "Supply Chain & Logistics",
     "warehouse receiving lead": "Supply Chain & Logistics",
     "warehouse receiving team": "Supply Chain & Logistics",
@@ -5324,6 +5357,13 @@ def parse_toc():
         for token in re.split(r";", cells[1]):
             t = re.sub(r"^\d+\s+", "", norm(token))
             t = re.sub(r"\s*\(.*?\)$", "", t).strip()
+            # batch 31: skip staffing-note fragments — §7.2 roster-cell prose
+            # ('Receiving pair (lead clerk + 1)', '3 Sales Associates + 1 Stock
+            # Associate each', 'holds Safety Officer 1 duty') describes the
+            # model's composition, it does not charter role titles.
+            if (not t or t.startswith("holds ") or " pair" in f" {t} "
+                    or re.search(r"\+\s*\d+", t) or t.endswith(" each")):
+                continue
             add_store(t)
     return hq, dc, store, dept_order
 
@@ -5384,12 +5424,47 @@ def build():
                      "part": st["part"], "sr": st["sr"], "sa": st["sa"],
                      "touched": len(st["w"]), "t1": tmix[1], "t2": tmix[2],
                      "t3": tmix[3]})
+    # Role-anchoring census: every chartered role — each §5.3 register row
+    # (ex the by-reference IT portfolio row, which the seats carry), every IT
+    # product-model seat, every §7.2 store-roster and §7.3 DC-roster role —
+    # must appear in ≥1 RACI cell. Roles absent from stats have zero explicit
+    # workflow presence: the anchoring worklist.
+    bucket_rank = ["hq", "it", "store", "dc", "dept", "sys", "gov", "wf", "ext", "unc"]
+    chartered = {}
+    for _k, (title, dept, hc) in hq.items():
+        if title.startswith("IT product portfolio"):
+            continue  # by-reference IT portfolio row — carried by the seats below
+        chartered.setdefault(key(title), {"bucket": "hq", "dept": dept,
+                                          "title": title, "hc": hc})
+    for _k, (title, dept) in store.items():
+        chartered.setdefault(key(title), {"bucket": "store", "dept": dept,
+                                          "title": title, "hc": None})
+    for _k, (title, dept) in dc.items():
+        chartered.setdefault(key(title), {"bucket": "dc", "dept": dept,
+                                          "title": title, "hc": None})
+    for seat in IT_SEATS.values():
+        chartered.setdefault(key(seat), {"bucket": "it",
+                                         "dept": "Information Technology (product model)",
+                                         "title": seat, "hc": None})
+    anchor_zero = sorted((c for k, c in chartered.items() if k not in stats),
+                         key=lambda c: (bucket_rank.index(c["bucket"]),
+                                        c["dept"].lower(), c["title"].lower()))
+    anchor_weak = sorted(((len(stats[k]["w"]), c) for k, c in chartered.items()
+                          if k in stats and len(stats[k]["w"]) <= 2),
+                         key=lambda t: (t[0], bucket_rank.index(t[1]["bucket"]),
+                                        t[1]["title"].lower()))
+    anchor_counts = defaultdict(int)
+    for c in anchor_zero:
+        anchor_counts[c["bucket"]] += 1
+    anchor = {"chartered": chartered, "zero": anchor_zero, "weak": anchor_weak,
+              "zero_counts": dict(anchor_counts),
+              "anchored": len(chartered) - len(anchor_zero)}
+
     dept_rank = {d: i for i, d in enumerate(dept_order)}
-    rows.sort(key=lambda r: (["hq", "it", "store", "dc", "dept", "sys", "gov",
-                              "wf", "ext", "unc"].index(r["bucket"]),
+    rows.sort(key=lambda r: (bucket_rank.index(r["bucket"]),
                              dept_rank.get(r["dept"], 99),
                              -r["own"], -r["touched"], r["title"].lower()))
-    return wfs, tier, rows, dept_order
+    return wfs, tier, rows, dept_order, anchor
 
 
 def esc(s):
@@ -5399,7 +5474,7 @@ def esc(s):
 BUCKET_ORDER = ["hq", "it", "store", "dc", "dept", "sys", "gov", "wf", "ext", "unc"]
 
 
-def render(wfs, tier, rows, dept_order):
+def render(wfs, tier, rows, dept_order, anchor):
     L = []
     a = L.append
     a("# BuildRight Depot Corp. — Role–Workflow Coverage Matrix (generated)")
@@ -5439,6 +5514,66 @@ def render(wfs, tier, rows, dept_order):
     a("> shown for §5.3 register roles; field rosters are per-store/per-DC and")
     a("> external/system actors carry no headcount by definition.")
     a("")
+
+    # --- Role-anchoring contract section -------------------------------
+    ch = anchor["chartered"]
+    z = anchor["zero"]
+    wk = anchor["weak"]
+    zc = anchor["zero_counts"]
+    ch_hq = sum(1 for c in ch.values() if c["bucket"] == "hq")
+    ch_it = sum(1 for c in ch.values() if c["bucket"] == "it")
+    ch_st = sum(1 for c in ch.values() if c["bucket"] == "store")
+    ch_dc = sum(1 for c in ch.values() if c["bucket"] == "dc")
+    a("## Role-Anchoring Contract (chartered roles × explicit workflow presence)")
+    a("")
+    a("> **Contract (by direction 2026-09-23; supersedes the function-level contract")
+    a("> of TO v2.4/v2.5).** A role that is not explicitly in a workflow cannot be")
+    a("> measured: no Owner / Participant / Step presence means no demand signal, no")
+    a("> cycle time, no handoff count — nothing to optimize. Every chartered role")
+    a("> therefore carries at least one explicit RACI anchor in the catalog, and no")
+    a("> headcount or structure decision may touch an unanchored or demand-unverified")
+    a("> role: anchor it into its owning workflow (or consciously re-scope the")
+    a("> charter), and verify per-role annual demand via")
+    a("> [`virtual-gemba-walk.py`](../07-methodology/virtual-gemba-walk.py) against")
+    a("> the chartered TO capacity first. The zero-anchor rows are the anchoring")
+    a("> worklist; the weak-anchor rows (anchored in only 1–2 workflows) are the")
+    a("> demand-verification watchlist. The census numbers below are pinned by")
+    a("> `validate-repo.sh` Check 71 — any movement is a conscious re-adjudication.")
+    a("")
+    a("| Measure | Value |")
+    a("|---|---|")
+    a(f"| Chartered roles (register {ch_hq} + IT seats {ch_it} + store {ch_st} + DC {ch_dc}) | {len(ch)} |")
+    a(f"| With ≥1 explicit RACI anchor | {anchor['anchored']} ({anchor['anchored'] * 100 // max(len(ch), 1)}%) |")
+    a(f"| ZERO-anchor — the anchoring worklist | {len(z)} (hq {zc.get('hq', 0)} · it {zc.get('it', 0)} · store {zc.get('store', 0)} · dc {zc.get('dc', 0)}) |")
+    a(f"| Weakly anchored (1–2 workflows) — demand-verification watchlist | {len(wk)} |")
+    a("")
+    src = {"hq": "§5.3 register", "it": "IT product-model seats",
+           "store": "§7.2 store roster", "dc": "§7.3 DC roster"}
+    if z:
+        a(f"### Zero-anchor worklist — {len(z)} chartered roles with no explicit workflow presence")
+        a("")
+        a("None of these roles is named in any Owner, Participants, Step Role (R) or")
+        a(f"Role (A) cell of the {len(wfs):,}-workflow catalog. Until anchored, their charter")
+        a("headcount has no measured demand basis — the exact class of silent capacity")
+        a("the headcount-reality-check and the TPS/OMO deferral precedents exist to")
+        a("prevent.")
+        a("")
+        a("| Role | Charter source | HC |")
+        a("|---|---|---|")
+        for c in z:
+            hc = str(c["hc"]) if c["hc"] else "—"
+            a(f"| {esc(c['title'])} | {src[c['bucket']]} — {esc(c['dept'])} | {hc} |")
+        a("")
+    if wk:
+        a(f"### Weak-anchor watchlist — {len(wk)} chartered roles anchored in only 1–2 workflows")
+        a("")
+        a("| Role | Charter source | HC | Workflows touched |")
+        a("|---|---|---|---|")
+        for n, c in wk:
+            hc = str(c["hc"]) if c["hc"] else "—"
+            a(f"| {esc(c['title'])} | {src[c['bucket']]} — {esc(c['dept'])} | {hc} | {n} |")
+        a("")
+
 
     labels = {
         "hq": "§5.3 Enterprise Role Register (HQ roles)",
@@ -5542,7 +5677,7 @@ def census():
     re-adjudication with the baseline re-pointed (the Check-74 deferred-anchor
     pattern; armed by the 2026-09-15 thirty-first-wave review).
     """
-    wfs, tier, rows, dept_order = build()
+    wfs, tier, rows, dept_order, anchor = build()
     hq, dc, store, dorder = parse_toc()
     res = Resolver(hq, dc, store, dorder)
 
@@ -5705,15 +5840,17 @@ def census():
           f"uncharted_forms={unc_rows} "
           f"ctl_owner_cells={ctl_rows} ctl_owner_resolved={ctl_resolved} "
           f"ctl_owner_uncharted={ctl_uncharted} ctl_owner_uncharted_forms={len(ctl_unc_forms)} "
-          f"prose_role_uncharted={prose_uncharted} prose_role_forms={len(prose_unc_forms)}")
+          f"prose_role_uncharted={prose_uncharted} prose_role_forms={len(prose_unc_forms)} "
+          f"anchor_chartered={len(anchor['chartered'])} anchor_anchored={anchor['anchored']} "
+          f"anchor_zero={len(anchor['zero'])} anchor_weak={len(anchor['weak'])}")
     return 0
 
 
 def main():
     if "--census" in sys.argv:
         return census()
-    wfs, tier, rows, dept_order = build()
-    out = render(wfs, tier, rows, dept_order)
+    wfs, tier, rows, dept_order, anchor = build()
+    out = render(wfs, tier, rows, dept_order, anchor)
     if "--check" in sys.argv:
         if os.path.exists(OUT):
             shipped = open(OUT, encoding="utf-8").read()

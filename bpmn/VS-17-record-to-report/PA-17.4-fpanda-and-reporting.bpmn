@@ -47,7 +47,7 @@ Duration: —</bpmn:documentation>
 Frequency: Monthly
 Volume: 5 entities × 12 months = 60 entity-month closes/year
 Owner: Chief Accountant / Controller
-Participants: Chief Accountant, AP Supervisor, AR Supervisor, Treasury Analyst, Tax Accountant, Cost Accountant, GL Accountant, CFO
+Participants: Chief Accountant, AP Supervisor, AR Supervisor, Treasury Analyst, Tax Accountant, Cost Accountant, GL Accountant, CFO, Assistant Controller
 Source: workflow W9A — Month-End Close</bpmn:documentation>
       <bpmn:laneSet id="W9A_LaneSet10">
         <bpmn:lane id="W9A_Lane1" name="Chief Accountant">
@@ -587,7 +587,7 @@ Owner: Requesting Department Head</bpmn:text>
 Frequency: Annual budget cycle; monthly variance review
 Volume: 5 entities × 200+ cost centers; ~500–800 GL accounts per entity
 Owner: Controller
-Participants: Controller, CFO, Department Heads, Category Managers (merchandising budget), VP Store Operations (store-level budget), HR (payroll budget), IT (capex budget)
+Participants: Controller, CFO, Department Heads, Category Managers (merchandising budget), VP Store Operations (store-level budget), HR (payroll budget), IT (capex budget), Senior FP&amp;A Analyst
 Source: workflow W26 — Annual Budget Preparation &amp; Monthly Variance Review</bpmn:documentation>
       <bpmn:laneSet id="W26_LaneSet8">
         <bpmn:lane id="W26_Lane1" name="CFO">
@@ -2921,7 +2921,7 @@ Owner: FP&amp;A Analyst</bpmn:text>
 Frequency: Annual manual review; per-adoption assessment on issuance; per-transaction position paper; annual external-audit concurrence cycle
 Volume: 5 legal entities on one PFRS policy set; ~30 new/amended standard items assessed/year; ~8 technical position papers/year; ~1,000+ GL account mappings governed by the policy manual
 Owner: Controller
-Participants: Chief Accountant, Accounting Manager, Tax Compliance Manager (PAS 12 interplay), FP&amp;A Manager, Head of Internal Audit, External Auditors (engagement partner), Legal Counsel (entity/contract matters)
+Participants: Chief Accountant, Accounting Manager, Tax Compliance Manager (PAS 12 interplay), FP&amp;A Manager, Head of Internal Audit, External Auditors (engagement partner), Legal Counsel (entity/contract matters), Technical Accounting Manager, Accounting Policy Analyst
 Source: workflow W5528 — Accounting Policy, Technical Accounting (PFRS) Position &amp; New-Standard Adoption Governance</bpmn:documentation>
       <bpmn:laneSet id="W5528_LaneSet4">
         <bpmn:lane id="W5528_Lane1" name="Chief Accountant">

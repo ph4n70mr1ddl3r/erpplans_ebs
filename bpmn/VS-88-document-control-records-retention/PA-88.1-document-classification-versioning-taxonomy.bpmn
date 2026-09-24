@@ -5,7 +5,7 @@
 Frequency: Annual + event-driven
 Volume: ~200–300 document types
 Owner: Records Manager
-Participants: Records Mgr, Compliance, IT, Department Owners
+Participants: Records Mgr, Compliance, IT, Department Owners, Document Control Coordinator
 Source: workflow W2969 — Enterprise Document Taxonomy &amp; Classification Scheme Maintenance</bpmn:documentation>
       <bpmn:laneSet id="W2969_LaneSet4">
         <bpmn:lane id="W2969_Lane1" name="Records Manager">
@@ -158,7 +158,7 @@ Owner: Department Records Custodian</bpmn:text>
 Frequency: Event-driven
 Volume: Policy/contract/procedure documents
 Owner: Document Owner
-Participants: Document Owner, Records Manager
+Participants: Document Owner, Records Manager, Document Control Coordinator
 Source: workflow W2971 — Version Control, Check-Out/In &amp; Authoritative Source Management</bpmn:documentation>
       <bpmn:laneSet id="W2971_LaneSet3">
         <bpmn:lane id="W2971_Lane1" name="Document Owner">

@@ -212,7 +212,7 @@ Owner: Credit Manager</bpmn:text>
 Frequency: ~400–600 disputes/month across ~5,200 trade accounts (~8–10% dispute rate)
 Volume: 1–5 disputed line items per dispute event
 Owner: AR Analyst
-Participants: Customer (B2B), Sales Associate/Store, AR Analyst, Credit Manager, AP Analyst (for vendor-side resolution)
+Participants: Customer (B2B), Sales Associate/Store, AR Analyst, Credit Manager, AP Analyst (for vendor-side resolution), B2B Support Representative
 Source: workflow W1022 — Customer Trade Account Statement Dispute &amp; Resolution Processing</bpmn:documentation>
       <bpmn:laneSet id="W1022_LaneSet3">
         <bpmn:lane id="W1022_Lane1" name="Customer">

@@ -5,7 +5,7 @@
 Frequency: Annual (with quarterly updates)
 Volume: ~30–40 high-priority audits planned per year
 Owner: Head of Internal Audit
-Participants: Audit Team, Board Audit Committee, CEO, CFO
+Participants: Audit Team, Board Audit Committee, CEO, CFO, Audit Manager
 Source: workflow W120 — Internal Audit Planning &amp; Risk Assessment</bpmn:documentation>
       <bpmn:laneSet id="W120_LaneSet3">
         <bpmn:lane id="W120_Lane1" name="Audit Team">
@@ -116,7 +116,7 @@ Owner: Head of Internal Audit</bpmn:text>
 Frequency: Monthly (rotational)
 Volume: ~3–4 audits executed per month
 Owner: Senior Internal Auditor
-Participants: Audit Team, Store/DC Manager (Auditee)
+Participants: Audit Team, Store/DC Manager (Auditee), Audit Manager, Field Compliance Auditor
 Source: workflow W121 — Operational Audit Execution (Store/DC/HQ)</bpmn:documentation>
       <bpmn:laneSet id="W121_LaneSet5">
         <bpmn:lane id="W121_Lane1" name="Audit Team">

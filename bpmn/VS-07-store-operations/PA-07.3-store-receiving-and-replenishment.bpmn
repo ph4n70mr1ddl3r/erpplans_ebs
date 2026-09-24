@@ -263,7 +263,7 @@ Owner: Buyer (coordination); Receiving Clerk (store execution)</bpmn:text>
 Frequency: Monthly audit per store (all 200 stores); ad-hoc after planogram resets or new store openings (W16)
 Volume: 200 stores × 2–3 departments per month (per the step-5 rotation) = ~400–600 department-level audits/month; each department contains 50–200 SKUs in the planogram
 Owner: Department Supervisor (in-store execution); Merchandise Planner (planogram design)
-Participants: Department Supervisor, Stock Associate, Merchandise Planner, Store Manager, Regional Manager
+Participants: Department Supervisor, Stock Associate, Merchandise Planner, Store Manager, Regional Manager, Replenishment &amp; Allocation Analyst
 Source: workflow W86 — Planogram Compliance &amp; Store Layout Verification</bpmn:documentation>
       <bpmn:laneSet id="W86_LaneSet8">
         <bpmn:lane id="W86_Lane1" name="Merchandise Planner">

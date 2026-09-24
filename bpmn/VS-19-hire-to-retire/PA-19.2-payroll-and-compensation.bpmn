@@ -5,7 +5,7 @@
 Frequency: 10 payroll runs/month (5 entities × 2)
 Volume: ~6,911 employees total
 Owner: Payroll Manager
-Participants: Payroll Officer, HR Assistant, Department Heads (OT/leave approval), Finance (bank file)
+Participants: Payroll Officer, HR Assistant, Department Heads (OT/leave approval), Finance (bank file), Payroll Supervisor, Payroll &amp; Statutory Remittance Officer
 Source: workflow W10 — Payroll Processing</bpmn:documentation>
       <bpmn:laneSet id="W10_LaneSet6">
         <bpmn:lane id="W10_Lane1" name="Payroll Officer">
@@ -314,7 +314,7 @@ Owner: Payroll Manager</bpmn:text>
 Frequency: ~75–100 off-cycle payments/month
 Volume: ~15–20 per entity per month
 Owner: Payroll Manager
-Participants: HR Business Partner (requester), Finance Manager (approver), Payroll Specialist (processor), Treasury (bank-file transmission per W10 step 8), Employee (payee)
+Participants: HR Business Partner (requester), Finance Manager (approver), Payroll Specialist (processor), Treasury (bank-file transmission per W10 step 8), Employee (payee), Payroll Supervisor
 Source: workflow W641 — Off-Cycle &amp; Ad-Hoc Payment Processing</bpmn:documentation>
       <bpmn:laneSet id="W641_LaneSet6">
         <bpmn:lane id="W641_Lane1" name="HR Business Partner">
