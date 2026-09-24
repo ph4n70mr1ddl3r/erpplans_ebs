@@ -68,6 +68,35 @@ fire — proven by injection (stripping the touchpoint anchor left the guard
 silent at 0 hits). The comparison re-pointed to the live '511 active HQ + DC
 office staff' form; the same injection now fires 'found 1 of 2' at the exact
 arm and the clean tree is silent.
+
+2026-09-23 eighty-eighth-wave review: the pre-promotion sizing family the
+(canon-digit) sweeps could not see — three live cells sizing their populations
+at figures two or more IT/HQ generations retired, each invisible to the
+retired-canon arms because the retired digits (360/50/30/5,800) are not in any
+ban list (only the 6,9xx/5xx headcount forms are): (a) PA-19.4's W-training
+delivery step still decomposed the training audience 'Store staff (5,800) /
+DC staff (600) / HQ staff (~360)' — the HQ component at the pre-promotion
+362-era figure beside store/DC cells already at canon, footing ~6,760 against
+its own file's ~6,911 Volume rows (the sibling decompositions PA-40.2/VS-169
+carry the annotated ~511 form); (b) PA-27.2's W55 DR staffing line still read
+'part of the planned ~50 IT staff in W48' — the review-#34-era sizing (the
+canon since moved 50 → 80 → 115 → the 122-FTE 17-team design, 108 active
+post-(ad)/(ah)); (c) PA-27.3's W394 Volume still read '~30 IT staff' — the
+2026-06-09 authoring figure, pre-dating every sizing generation. Repaired to
+the annotated canon forms; the retired joined forms banned ('HQ staff (~360)',
+'planned ~50 IT staff', '~30 IT staff') with the repaired-cell anchors
+required (new retired-it-sizing arm). PA-19.5's W1383 resignation-volume
+cell — the derived-band class one scope layer deeper: '~60–80 resignations/
+month across all entities (based on ~15% annual turnover rate × ~5,800
+employees ÷ 12)' derived the band from the STORE population under an
+all-entities scope (5,800 was store-only even at the 2026-06-10 authoring,
+when the company total was 6,757 — the cell escaped every sweep because its
+digits are canon digits), and its 720–960/year volume echoed into W1384's
+prorated-computations cell; re-derived at the active canon (15% × 6,911 ÷ 12
+≈ 86.4 → ~85–90/month; ~1,020–1,080/year) with W1384's echo re-pointed to
+the separations canon its own words name (1,200–1,600, matching W43); hours
+and staffing tails re-footed. The retired forms banned and the corrected
+anchors required (new retired-derived-volume arm).
 """
 import argparse, glob, os, re, sys
 
@@ -118,6 +147,13 @@ RETIRED_HQ_ACTIVE_FORMS = [
     # endpoint 'active HQ 518' where the (x) canon is 525 (518 is the (ad)
     # endpoint; the recital's own final clause correctly ends at 511).
     "active HQ 518",
+    # 2026-09-23 eighty-eighth wave: the pre-promotion HQ family — PA-19.4's
+    # training-audience decomposition sized the HQ component at the 362-era
+    # figure beside store/DC cells already at canon (the sibling
+    # decompositions PA-40.2/VS-169 carry the annotated ~511 form). Joined
+    # forms only — bare '~360' is legitimate hour/day arithmetic elsewhere.
+    "HQ staff (~360)",
+    "~360 HQ staff",
 ]
 REQ_HQ_ACTIVE_ANCHORS = [
     ("PA-19.3-workforce-management.md",
@@ -166,6 +202,11 @@ REQ_HQ_ACTIVE_ANCHORS = [
      "the disabled—prepared Trade department's 7, the deferred—prepared "
      "TPS build squad's 7 and the deferred—prepared OMO build squad's 7 "
      "all retained in the design"),
+    # 2026-09-23 eighty-eighth wave: the training-audience decomposition's
+    # HQ component pinned at the annotated two-canon form (the sibling
+    # decompositions PA-40.2/VS-169 convention).
+    ("PA-19.4-learning-and-development.md",
+     "HQ staff (~511 active of the TO's 532-role design)"),
 ]
 # 2026-09-23 eighty-fifth-wave review: the (ad) sweep's own annotation residue —
 # seven live cells pair the 518/6,918 active canon with a design annotation
@@ -201,6 +242,49 @@ RETIRED_DERIVED_TE_FIGURES = ["~13,836"]
 REQ_DERIVED_TE_ANCHORS = [
     ("PA-30.3-document-and-knowledge-management.md",
      "~13,822 hours (annual reassessment)"),
+]
+
+# 2026-09-23 eighty-eighth wave: the pre-promotion IT-sizing family — live
+# cells sizing the IT department at figures two or more sizing generations
+# retired (the canon: 122-FTE 17-team design, 108 active post-(ad)/(ah);
+# 50 was the review-#34-era cell PA-27.2's W55 staffing line still quoted,
+# 30 the 2026-06-09 authoring figure PA-27.3's W394 Volume still carried).
+# The retired-canon arms cannot see these — the retired digits are not
+# headcount-canon forms — so the class gets its own arm; the repaired cells'
+# annotated-canon anchors are required (the Check-71 CENSUS-pin contract).
+RETIRED_IT_SIZING_FORMS = [
+    "planned ~50 IT staff",
+    "~30 IT staff",
+]
+REQ_IT_SIZING_ANCHORS = [
+    ("PA-27.2-infrastructure-and-platform.md",
+     "part of the IT department's ~108 active of the 122-FTE 17-team design"),
+    ("PA-27.3-cybersecurity-and-privacy.md",
+     "~108 IT staff active (122-design"),
+]
+
+# 2026-09-23 eighty-eighth wave: the resignation-volume family — W1383's
+# Frequency derived its band from the STORE population (~5,800) under an
+# all-entities scope (store-only even at authoring; the company total was
+# 6,757 then), and the 720–960/year volume echoed into W1384's
+# prorated-computations cell. Re-derived at the active canon (15% × 6,911
+# ÷ 12 ≈ 86.4/month); W1384's echo re-pointed to the separations canon its
+# own words name (1,200–1,600, matching W43). The retired forms banned on
+# live PA/README lines, the corrected anchors required.
+RETIRED_DERIVED_VOLUME_FORMS = [
+    "~5,800 employees ÷ 12",
+    "60–80 resignations",
+    "adds ~60–80 hours/month",
+    "720–960 resignations",
+    "720–960 prorated",
+]
+REQ_DERIVED_VOLUME_ANCHORS = [
+    ("PA-19.5-separation-and-benefits.md",
+     "~15% annual turnover rate × ~6,911 active employees ÷ 12"),
+    ("PA-19.5-separation-and-benefits.md",
+     "~1,020–1,080 resignations/year"),
+    ("PA-19.5-separation-and-benefits.md",
+     "~1,200–1,600 prorated computations for separations"),
 ]
 
 DEPT_TOTALS = {
@@ -519,6 +603,50 @@ def main():
         elif anchor not in text:
             hits.append(("missing-derived-anchor", base, 0,
                          f'required derived-figure anchor missing: "{anchor}"'))
+    # 2026-09-23 eighty-eighth wave: the pre-promotion IT-sizing family banned
+    # on live PA/README lines, the repaired cells' annotated-canon anchors
+    # required (the arm's module-head note has the class).
+    for f in files + readme_files:
+        text = open(f, encoding="utf-8").read()
+        rel = os.path.relpath(f, REPO)
+        for lit in RETIRED_IT_SIZING_FORMS:
+            for m in re.finditer(re.escape(lit), text, re.I):
+                line = text[:m.start()].count("\n") + 1
+                hits.append(("retired-it-sizing", rel, line,
+                             f"{lit} (retired IT-sizing figure — the IT department "
+                             "runs the 122-FTE 17-team product model at ~108 active "
+                             "since the TPS (ad) and OMO (ah) build-squad deferrals, "
+                             "OM v3.28)"))
+    for base, anchor in REQ_IT_SIZING_ANCHORS:
+        text = text_by_base.get(base)
+        if text is None:
+            hits.append(("missing-it-sizing-anchor", base, 0,
+                         f"anchor file not found: {base}"))
+        elif anchor not in text:
+            hits.append(("missing-it-sizing-anchor", base, 0,
+                         f'required annotated-canon anchor missing: "{anchor}"'))
+    # 2026-09-23 eighty-eighth wave: the resignation-volume family (the
+    # store-only base under the all-entities scope, and its W1384 echo)
+    # banned on live PA/README lines, the corrected anchors required.
+    for f in files + readme_files:
+        text = open(f, encoding="utf-8").read()
+        rel = os.path.relpath(f, REPO)
+        for lit in RETIRED_DERIVED_VOLUME_FORMS:
+            for m in re.finditer(re.escape(lit), text, re.I):
+                line = text[:m.start()].count("\n") + 1
+                hits.append(("retired-derived-volume", rel, line,
+                             f"{lit} (retired resignation-volume family — W1383's "
+                             "band derives at the 6,911 active canon: ~85–90/month, "
+                             "~1,020–1,080/year; W1384's echo follows the W43 churn "
+                             "canon 1,200–1,600)"))
+    for base, anchor in REQ_DERIVED_VOLUME_ANCHORS:
+        text = text_by_base.get(base)
+        if text is None:
+            hits.append(("missing-derived-volume-anchor", base, 0,
+                         f"anchor file not found: {base}"))
+        elif anchor not in text:
+            hits.append(("missing-derived-volume-anchor", base, 0,
+                         f'required derived-volume anchor missing: "{anchor}"'))
     # 2026-09-09 sixteenth-wave addition: the DC-catchment class (profile + PAs)
     hits.extend(dc_catchment_hits())
     for kind, rel, line, detail in hits:

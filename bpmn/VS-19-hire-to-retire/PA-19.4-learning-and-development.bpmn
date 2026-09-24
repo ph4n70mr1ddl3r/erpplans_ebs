@@ -46,7 +46,7 @@ Duration: Ongoing</bpmn:documentation>
         <bpmn:outgoing>W51_Flow19</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W51_Task9" name="Store staff (5,800)">
-        <bpmn:documentation>Step 3: Training delivery methods by audience: (a) Store staff (5,800): monthly 30-minute department huddles led by Department Supervisors using provided materials; quarterly 2-hour group sessions at store level; (b) DC staff (600): quarterly safety and equipment training at DC; (c) HQ staff (~360): quarterly system and process training at HQ; (d) New hires: W15 onboarding program (2–3 days); (e) Managers and supervisors: semi-annual leadership and management skills workshops
+        <bpmn:documentation>Step 3: Training delivery methods by audience: (a) Store staff (5,800): monthly 30-minute department huddles led by Department Supervisors using provided materials; quarterly 2-hour group sessions at store level; (b) DC staff (600): quarterly safety and equipment training at DC; (c) HQ staff (~511 active of the TO&#x27;s 532-role design): quarterly system and process training at HQ; (d) New hires: W15 onboarding program (2–3 days); (e) Managers and supervisors: semi-annual leadership and management skills workshops
 Responsible (R): Training Officer / Dept. Supervisor / External Trainers
 Accountable (A): HR Head
 Duration: Per schedule</bpmn:documentation>

@@ -1173,7 +1173,7 @@ Owner: CIO</bpmn:text>
     <bpmn:process id="W_W394" name="W394. IT Technical Skills, Training &amp; Certification Lifecycle" isExecutable="false">
       <bpmn:documentation>Trigger: Annual performance review; or new technology adoption
 Frequency: Annual planning; Quarterly progress review
-Volume: ~30 IT staff
+Volume: ~108 IT staff active (122-design; the TPS build squad&#x27;s 7 deferred — prepared, (ad), and the OMO build squad&#x27;s 7 deferred — prepared, (ah))
 Owner: CIO
 Participants: IT Leads, HR Training Team
 Source: workflow W394 — IT Technical Skills, Training &amp; Certification Lifecycle</bpmn:documentation>

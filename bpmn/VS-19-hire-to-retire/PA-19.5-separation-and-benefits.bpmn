@@ -800,8 +800,8 @@ Owner: HR Head (CHRO)</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W1383" name="W1383. Employee Resignation Processing, Clearance &amp; Final Pay Computation (Philippine Labor Code)" isExecutable="false">
       <bpmn:documentation>Trigger: Employee submits written resignation letter (30-day notice per Philippine Labor Code, Article 300) or initiates resignation via HR self-service portal
-Frequency: ~60–80 resignations/month across all entities (based on ~15% annual turnover rate × ~5,800 employees ÷ 12)
-Volume: ~720–960 resignations/year
+Frequency: ~85–90 resignations/month across all entities (based on ~15% annual turnover rate × ~6,911 active employees ÷ 12)
+Volume: ~1,020–1,080 resignations/year
 Owner: HR Specialist (HR Operations)
 Participants: HR Specialist, HR Manager, resigned employee, Department Manager, IT, Finance, Store Manager (if store-based)
 Source: workflow W1383 — Employee Resignation Processing, Clearance &amp; Final Pay Computation (Philippine Labor Code)</bpmn:documentation>
@@ -957,7 +957,7 @@ Owner: HR Specialist (HR Operations)</bpmn:text>
     <bpmn:process id="W_W1384" name="W1384. Employee 13th Month Pay Computation, Proration &amp; BIR Taxable Benefit Reporting" isExecutable="false">
       <bpmn:documentation>Trigger: Scheduled — annual computation (November–December); ad-hoc for mid-year separations
 Frequency: Annual (November computation, December payment); prorated at separation for each departing employee
-Volume: ~6,911 employees across 5 entities (rank-and-file and management); ~720–960 prorated computations for separations
+Volume: ~6,911 employees across 5 entities (rank-and-file and management); ~1,200–1,600 prorated computations for separations (matching the hiring churn canon per W43)
 Owner: Payroll Manager
 Participants: Payroll Officer, HR Specialist, Controller, BIR
 Source: workflow W1384 — Employee 13th Month Pay Computation, Proration &amp; BIR Taxable Benefit Reporting</bpmn:documentation>
