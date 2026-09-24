@@ -780,7 +780,31 @@ to the canonical two-deferral form — PA-138.2/PA-34.1/PA-40.2/PA-72.3/PA-19.3/
 cells (reconcile-staffing-claims anchors + retired-single-deferral bans) and the
 blueprint README W4 row (ebs_blueprint_hits arm (l2), README v3.10). Teeth: four
 synthetic injections through the full audits, each caught at its exact arm with file and
-line named, fixtures restored via /tmp copies sha256-verified byte-identical."""
+line named, fixtures restored via /tmp copies sha256-verified byte-identical.
+
+2026-09-23 (ah) OMO build-squad deferral: by direction the IT estate's OMO build squad
+(7 seats) is deferred — prepared — with BOPIS the only enabled online fulfillment option
+(registry CAP-F01) every sale completes as a regular POS sale at the customer-selected
+store and order routing is deterministic, VS-60's multi-source orchestration workload
+being the disabled—prepared fulfillment estate; IT 115 → 108 active (15 of 17 teams),
+active canon 6,918 → 6,911 (HQ 511), the 532/6,932 design of record retained. Canon
+re-points: the headcount-literal arms re-derived (guide §1.4 / tg ≈460 / BOM ×6,911 +
+636-filer / W4 three-deferral / classification + requirements + companions retired lists
+gain 6,918, active anchors 6,911), the reconcile-staffing-anchors re-pointed to the
+three-deferral forms with 6,918/+ 518 HQ joining the retired sets, and the
+licensing-bom approximation arms subordinated to the chain arm (the 0.22×license
+support cell non-integrality at the new canon — the chain check is strictly stronger).
+Version cascade: OM v3.28, TO v3.2, profile v3.11, sourcing v3.18, registry v1.5,
+tech-guidelines v3.8, BOM v2.14, requirements v24.8, guide v1.19, assumptions v11.
+Completion-review additions (same (ah) sitting): the VS-60 README gains the routing-
+estate banner (the VS-74/VS-93 convention) and the new omo_routing_estate_hits rule
+derives the VS set from the sourcing register's Omnichannel-order-routing row every run
+(banner class / sourcing-register link / registry link / designed-capacity / W5580 —
+no seam VS: the deterministic-BOPIS live posture is inside the banner); the estate-
+state intro anchors gain the OMO deferral (root README + exec-summary intros, guide
+§13 row to the three-state form 15 teams / 108 FTE active); PA-22.1's IT row and
+PA-113.1's W5517 Volume/Participants cells re-based (deferred-squad seats marked as
+design seats; live paved-road scope re-pointed to the doctrine's remaining builds)."""
 
 def _doc_versions():
     """Current '*Document Version:' footer of each versioned doc (basename -> 'N.M')."""
@@ -1097,7 +1121,7 @@ ANCHORS = {
         "Outbound (50)",
         "**532** | **6,932**",
         "**Total HQ** | **362** | **~440–515** | **532**",
-        "**511 + 7 = 518**",
+        "**504 + 7 = 511**",
         "× 4 DCs = **600**",
     ],
     # 2026-09-07 eighth-wave review — the corrected forms the data-volumes doc's own
@@ -1691,17 +1715,23 @@ def guide_figure_hits():
                      "§1.4 reference-parameters cell (the 09-18 gap-fill edit's "
                      "residue)")
                      )
-    if "HQ 518 active" not in body:
-        hits.append((rel, 0, "required active-census anchor 'HQ 518 active' missing "
+    if "HQ 511 active" not in body:
+        hits.append((rel, 0, "required active-census anchor 'HQ 511 active' missing "
                              "from the §1.4 reference-parameters cell"))
-    if "6,918 employees (TO design 6,932)" not in body:
-        hits.append((rel, 0, "required active-census anchor '6,918 employees (TO "
+    if "6,911 employees (TO design 6,932)" not in body:
+        hits.append((rel, 0, "required active-census anchor '6,911 employees (TO "
                              "design 6,932)' missing from the §1.4 "
                              "reference-parameters cell"))
     for bad6925, why6925 in (("HQ 525 active",
                               "the retired HQ-active census form"),
                              ("6,925 employees (TO design 6,932)",
-                              "the retired active-census form")):
+                              "the retired active-census form"),
+                             ("HQ 518 active",
+                              "the retired HQ-active census form (HQ 511 active "
+                              "since the (ah) OMO-squad deferral)"),
+                             ("6,918 employees (TO design 6,932)",
+                              "the retired active-census form (6,911 employees "
+                              "since the (ah) OMO-squad deferral)")):
         pos = body.find(bad6925)
         if pos >= 0:
             hits.append((rel, body[:pos].count("\n") + 1,
@@ -2090,6 +2120,7 @@ def estate_state_intro_hits():
         "Registry](01-model-company/channel-capability-registry.md)",
         "the B2B trade desk **disabled — prepared** (x)",
         "the TPS build squad **deferred — prepared** (ad)",
+        "the OMO build squad **deferred — prepared** (ah)",
         "dormant capabilities keep their prepared designs at designed capacity",
     )
     for anchor in root_anchors:
@@ -2155,8 +2186,9 @@ def estate_state_intro_hits():
         row = body[row_start:pos + len(marker)]
         ln = body[:row_start].count("\n") + 1
         for anchor in ("17 teams of record / 122 FTE design",
-                       "16 teams / 115 FTE active",
-                       "the TPS build squad deferred — prepared, 2026-09-23 (ad)"):
+                       "15 teams / 108 FTE active",
+                       "the TPS build squad deferred — prepared, 2026-09-23 (ad)",
+                       "the OMO build squad deferred — prepared, 2026-09-23 (ah)"):
             if anchor not in row:
                 hits.append((rel, ln,
                              f'required §13 OM-row two-state anchor missing: '
@@ -2167,6 +2199,14 @@ def estate_state_intro_hits():
         hits.append((rel, body[:pos].count("\n") + 1,
                      f"retired bare §13 OM-row form '{bad}' (the two-state form "
                      "is the annotation)"))
+    for bad_two in ("16 teams / 115 FTE active",
+                    "the TPS build squad deferred — prepared, 2026-09-23 (ad))"):
+        pos = body.find(bad_two)
+        if pos >= 0:
+            hits.append((rel, body[:pos].count("\n") + 1,
+                         f"retired §13 OM-row two-deferral form '{bad_two}' "
+                         "(the (ah) OMO deferral completes the estate — 15 teams "
+                         "/ 108 FTE active)"))
     return hits
 
 
@@ -2244,16 +2284,16 @@ def companion_pin_hits():
                      "§13 OM row not found for the headcount-clause arm"))
     else:
         row = " ".join(row_m.group(1).split())
-        if f"active headcount re-based 6,918" not in row:
+        if f"active headcount re-based 6,911" not in row:
             hits.append(("capability-sourcing-and-engineering-model.md",
                          src_body[:row_m.start()].count("\n") + 1,
                          'missing §13 OM-row headcount anchor "active headcount '
-                         're-based 6,918" (the active canon)'))
-        if "re-based 6,925" in row:
+                         're-based 6,911" (the active canon)'))
+        if "re-based 6,925" in row or "re-based 6,918" in row:
             hits.append(("capability-sourcing-and-engineering-model.md",
                          src_body[:row_m.start()].count("\n") + 1,
-                         'retired §13 OM-row clause "re-based 6,925" (the '
-                         '(ad) deferral re-based the active canon to 6,918)'))
+                         'retired §13 OM-row clause "re-based 6,925/6,918" (the '
+                         '(ah) OMO-squad deferral re-based the active canon to 6,911)'))
     # (d) OM §13 doc-map self-pin 'this vN.M model'
     for ln, l in enumerate(om.splitlines(), 1):
         if "capability-sourcing-and-engineering-model.md" in l and "this v" in l \
@@ -2307,7 +2347,7 @@ def tg_hq_bandwidth_hits():
     hits = []
     raw = open(os.path.join(REPO, "07-methodology", rel), encoding="utf-8").read()
     body = strip_footer(raw)
-    req = "~518 active HQ staff (≈466 concurrent users"
+    req = "~511 active HQ staff (≈460 concurrent users"
     if req not in body:
         hits.append((rel, 0, f'required §2.2 HQ sizing anchor missing: "{req} …" '
                              '(the active canon at the ~90% concurrency ratio — the '
@@ -2315,10 +2355,14 @@ def tg_hq_bandwidth_hits():
                              'Trade department)'))
     for bad, why in (("~532 HQ staff", "the retired HQ-active sizing base"),
                      ("~525 active HQ staff", "the retired HQ-active sizing base"),
+                     ("~518 active HQ staff", "the retired HQ-active sizing base "
+                      "(~511 active since the (ah) OMO-squad deferral)"),
                      ("≈480 concurrent users",
                       "the retired concurrency estimate"),
                      ("≈473 concurrent users",
-                      "the retired concurrency estimate (≈466 at 518 × ~90%)")):
+                      "the retired concurrency estimate"),
+                     ("≈466 concurrent users",
+                      "the retired concurrency estimate (≈460 at 511 × ~90%)")):
         pos = body.find(bad)
         if pos >= 0:
             hits.append((rel, body[:pos].count("\n") + 1,
@@ -2333,9 +2377,9 @@ def om_benchmark_hits():
     figures read 100–168 — derived at the 6,715-total authoring-time headcount
     (1.5% ≈ 100.7, 2.5% ≈ 167.9) and carried verbatim through three headcount
     regimes while the parenthetical itself was re-pointed twice (6,932 → 6,925
-    at (x), → 6,918 at (ad)) — the derived-figure half-repair class, invisible
+    at (x), → 6,918 at (ad), → 6,911 at (ah)) — the derived-figure half-repair class, invisible
     to every arm because no rule read §9.2's benchmark row. Required: the
-    ~104–173 band at the 6,918 active canon (joined-text probe — the wave-72
+    ~104–173 band at the 6,911 active canon (joined-text probe — the wave-72
     line-wrap lesson); banned on the footer-stripped body: the retired 100–168
     band and the two retired headcount parentheticals (the new footer segment
     quotes the retired band — the strip scopes the ban to live prose, the
@@ -2348,7 +2392,7 @@ def om_benchmark_hits():
     raw = open(os.path.join(REPO, "07-methodology", rel), encoding="utf-8").read()
     body = strip_footer(raw)
     joined = " ".join(body.split())
-    canon_hc = 6918
+    canon_hc = 6911
     exp_lo, exp_hi = round(canon_hc * 0.015), round(canon_hc * 0.025)
     anchor = f"~{exp_lo}–{exp_hi} (1.5–2.5% of the {canon_hc:,} active headcount)"
     if anchor not in joined:
@@ -2503,15 +2547,16 @@ def profile_derived_figure_hits():
                      r"\(the promoted 532-role structure of record", prof)
     if not m_hq:
         hits.append((rel, 0, "\u00a74 Corporate-HQ-Personnel row not in the two-canon "
-                             "active form ('518 active (the promoted 532-role structure "
+                             "active form ('511 active (the promoted 532-role structure "
                              "of record … retains the disabled—prepared Trade / Account "
                              "Management department)')"))
         hq_active = None
     else:
         hq_active = int(m_hq.group(1).replace(",", ""))
-        if hq_active != 518:
+        if hq_active != 511:
             hits.append((rel, 0, f"\u00a74 Corporate-HQ-Personnel row reads {hq_active} "
-                                 "active but the (x) active canon is 525"))
+                                 "active but the active canon is 511 (HQ 518 retired "
+                                 "at the (ah) OMO-squad deferral)"))
     if re.search(r"Corporate HQ Personnel\s*\|\s*\*{0,2}532\s*\(", prof):
         hits.append((rel, 0, 'retired \u00a74 HQ-row form "Corporate HQ Personnel | 532 (" '
                              '(the bare design 532 presented as the row\u2019s census — the '
@@ -3096,37 +3141,37 @@ def ebs_blueprint_hits():
     if m6932:
         add("README.md (02-oracle-ebs)", rd[:m6932.start()].count("\n") + 1,
             "retired census form '6,932 employees' on the §4 wave-plan body "
-            "(active canon: 6,918 employees — TO design 6,932; joined-text "
+            "(active canon: 6,911 employees — TO design 6,932; joined-text "
             "probe)")
     w4_row = next((l for l in rd.splitlines() if l.startswith("| **W4 — People** |")), None)
     if w4_row is None:
         add("README.md (02-oracle-ebs)", 0,
             "§4 wave-plan W4 People row not found (expected the live "
             "'| **W4 — People** |' marker — re-point the arm)")
-    elif "6,918 employees" not in w4_row:
+    elif "6,911 employees" not in w4_row:
         add("README.md (02-oracle-ebs)", 0,
             "W4 People row does not carry the active-employee anchor "
-            "'6,918 employees (active; the TO's 6,932 design retains the "
+            "'6,911 employees (active; the TO's 6,932 design retains the "
             "disabled—prepared Trade department)'")
     # ---- (l2) 2026-09-23 eighty-fifth-wave review — the W4 row's design
-    # annotation must be the TWO-DEFERRAL form. The (ad) re-base moved the
-    # row's figure to 6,918 but left the (x)-era single-deferral annotation
-    # ('retains the disabled—prepared Trade department') — a pair that
-    # explains 7 of the 14 gap (6,932 − 6,918 = 7 trade + 7 TPS build squad);
-    # the two-deferral form is required at the row and the retired
-    # single-deferral form banned on the footer-stripped body.
+    # annotation must be the multi-deferral form. The (ad) re-base moved the
+    # row's figure but left the (x)-era single-deferral annotation; the (ah)
+    # OMO-squad deferral re-based the canon again (6,918 → 6,911; the gap is
+    # 6,932 − 6,911 = 7 trade + 7 TPS + 7 OMO) — the THREE-deferral form is
+    # required at the row and the shorter forms banned on the footer-stripped
+    # body.
     if w4_row is not None and \
-            "the disabled—prepared Trade department and the deferred—prepared TPS build squad" not in w4_row:
+            "the disabled—prepared Trade department and the deferred—prepared TPS and OMO build squads" not in w4_row:
         add("README.md (02-oracle-ebs)", 0,
-            "W4 People row's design annotation is not the two-deferral form "
+            "W4 People row's design annotation is not the three-deferral form "
             "('retains the disabled—prepared Trade department and the "
-            "deferred—prepared TPS build squad' — the 6,932 − 6,918 gap is "
-            "7 trade + 7 TPS)")
-    m_sdf = re.search(r"retains the disabled—prepared Trade department\)", rd)
+            "deferred—prepared TPS and OMO build squads' — the 6,932 − 6,911 gap is "
+            "7 trade + 7 TPS + 7 OMO)")
+    m_sdf = re.search(r"retains the disabled—prepared Trade department and the deferred—prepared TPS build squad\)", rd)
     if m_sdf:
         add("README.md (02-oracle-ebs)", rd[:m_sdf.start()].count("\n") + 1,
-            "retired single-deferral annotation form on the footer-stripped "
-            "body (the (ad) deferral's 7 belong in the design-retention "
+            "retired two-deferral annotation form on the footer-stripped "
+            "body (the (ah) OMO deferral's 7 belong in the design-retention "
             "clause)")
     return hits
 
@@ -3213,9 +3258,9 @@ def licensing_bom_hits():
             if name.startswith("~~") or "Total" in name:
                 continue
             price, lic = num(m.group(3)), num(m.group(4))
-            if abs(price * 6918 - lic) > 0.5:
+            if abs(price * 6911 - lic) > 0.5:
                 add(rel, text[:m.start()].count("\n") + 1,
-                    f"Employee-metric HRMS row '{name}': {price} × 6,918 != {lic}")
+                    f"Employee-metric HRMS row '{name}': {price} × 6,911 != {lic}")
             total += lic
         stated = re.search(r"\*\*Perpetual license total\*\* \| \*\*\$([\d,]+)\*\*", sec_a)
         if not stated:
@@ -3228,9 +3273,18 @@ def licensing_bom_hits():
         sup = re.search(r"Annual SUL&S \(22%\) \| \$([\d,]+)/yr", sec_a)
         t3 = re.search(r"3-yr TCO \(license \+ 3× support\) \| \$([\d,]+)", sec_a)
         t5 = re.search(r"5-yr TCO \(license \+ 5× support\) \| \*\*\$([\d,]+)\*\*", sec_a)
-        for pat, name, want in ((sup, "support", livetot * 0.22),
-                                (t3, "3-yr TCO", livetot * 1.66),
-                                (t5, "5-yr TCO", livetot * 2.1)):
+        # The support row is checked against the 22%-of-license approximation.
+        # The 3-yr/5-yr approximation checks (×1.66/×2.1) run only when the
+        # support row does NOT parse — when it does, the chain arm below derives
+        # both cells exactly from the stated support (±0.5) and the coarse
+        # approximations would contradict it at headcounts where 0.22×license
+        # is not near-integral (the (ah) re-base class). The chain arm is
+        # strictly stronger, so it supersedes.
+        approx_checks = [(sup, "support", livetot * 0.22)]
+        if not sup:
+            approx_checks += [(t3, "3-yr TCO", livetot * 1.66),
+                              (t5, "5-yr TCO", livetot * 2.1)]
+        for pat, name, want in approx_checks:
             if not pat:
                 hits.append((rel, 0, f"§2.10 {name} row not found"))
             elif abs(num(pat.group(1)) - want) > 1.5:
@@ -3357,7 +3411,7 @@ def licensing_bom_hits():
                 "~4.5 lines/order"):
         if anc not in body:
             hits.append((rel, 0, f'missing required footing anchor "{anc}"'))
-    for lit in ("DC 550", "(≈2.3M OM order lines) |", "+ 511 HQ"):
+    for lit in ("DC 550", "(≈2.3M OM order lines) |", "+ 518 HQ", "+ 525 HQ", "+ 532 HQ"):
         if lit in body:
             hits.append((rel, body[:body.index(lit)].count("\n") + 1,
                          f'retired unqualified build-up form "{lit}"'))
@@ -3365,9 +3419,11 @@ def licensing_bom_hits():
     # ---- (e) fifty-fifth-wave driver-row arm — the §1 Total-employees driver row
     # must carry its store/DC/HQ breakdown parenthetical and the breakdown must
     # foot to the row's own leading figure. The 2026-09-18 gap-fill re-based the
-    # leading figure to 6,932 but left the parenthetical at the retired
-    # '+ 511 HQ' — a 21-seat contradiction inside the one row every employee-
-    # derived quantity prices off, invisible to the line-item arms above.
+    # leading figure but has repeatedly left the parenthetical at the retired
+    # HQ-active census ('+ 511 HQ' at the gap-fill, '+ 518 HQ' after the (ah)
+    # OMO-squad deferral re-based the active canon to 511) — a seat contradiction
+    # inside the one row every employee-derived quantity prices off, invisible
+    # to the line-item arms above. The retired-active build-up forms are banned.
     m = re.search(r"\| Total employees \| \*\*([\d,]+)\*\* \(([\d,]+) store \+ ([\d,]+) DC \+ ([\d,]+) HQ\)",
                   body)
     if not m:
@@ -3501,18 +3557,20 @@ def licensing_bom_hits():
     # (the Prior segments' dated recitals exempt by the strip). A future
     # headcount move re-fires the arm until consciously re-pointed (the
     # Check-71 CENSUS-pin contract).
-    req_filer = ("the 643-filer population (all HQ 518 active of the 532-role design "
+    req_filer = ("the 636-filer population (all HQ 511 active of the 532-role design "
                  "+ DC office staff ~100 + district/region field ~25) files "
-                 "~12 reports/yr ≈ 7,700")
+                 "~12 reports/yr ≈ 7,600")
     if " ".join(body.split()).find(req_filer) < 0:
         hits.append((rel, 0, 'missing the §2.4 iExpenses two-canon filer anchor '
-                             '("the 643-filer population (all HQ 518 active of the '
-                             '532-role design + …) files ~12 reports/yr ≈ 7,700")'))
+                             '("the 636-filer population (all HQ 511 active of the '
+                             '532-role design + …) files ~12 reports/yr ≈ 7,600")'))
     for bad, why in (("657-filer", "the retired HQ-active filer population"),
                      ("7,884", "the retired reports/yr derivation"),
-                     ("650-filer", "the retired HQ-active filer population (643 filers "
-                                  "at HQ 518 active of the 532-role design)"),
-                     ("≈ 7,800", "the retired reports/yr derivation (643 filers × ~12 ≈ 7,700)")):
+                     ("650-filer", "the retired HQ-active filer population"),
+                     ("≈ 7,800", "the retired reports/yr derivation"),
+                     ("643-filer", "the retired HQ-active filer population (636 filers "
+                                  "at HQ 511 active of the 532-role design)"),
+                     ("≈ 7,700", "the retired reports/yr derivation (636 filers × ~12 ≈ 7,600)")):
         pos = body.find(bad)
         if pos >= 0:
             hits.append((rel, body[:pos].count("\n") + 1,
@@ -3539,7 +3597,7 @@ def licensing_bom_hits():
             name = m.group(1).strip()
             if name.startswith("~~") or "Total" in name:
                 continue
-            hrms_sum += num(m.group(3)) * 6918
+            hrms_sum += num(m.group(3)) * 6911
         chain_vals = [v for v in (livetot, sup_v if sup else None,
                                   livetot + 3 * num(sup.group(1)) if sup else None,
                                   livetot + 5 * num(sup.group(1)) if sup else None,
@@ -3719,13 +3777,14 @@ def gap_fill_straggler_hits():
     for i, l in enumerate(lines[:fi]):
         if l.startswith(">"):
             continue
-        if "6,911" in l:
+        if "6,918" in l or "6,925" in l:
             hits.append(("workflow-criticality-classification.md", i + 1,
-                         'retired 6,911 employee total on a live line (the dated '
-                         'batch-note blockquotes are the frozen-history surfaces)'))
-    if not any("6,918 employees" in l for l in lines[:fi]):
+                         'retired employee total on a live line (6,911 active since '
+                         'the (ah) OMO-squad deferral; the dated batch-note blockquotes '
+                         'are the frozen-history surfaces)'))
+    if not any("6,911 employees" in l for l in lines[:fi]):
         hits.append(("workflow-criticality-classification.md", 0,
-                     'missing live "6,918 employees" W10 significance cell'))
+                     'missing live "6,911 employees" W10 significance cell'))
     # (b) TO §1 design stance — footer-stripped body
     tpath = os.path.join(REPO, "01-model-company", "optimal-table-of-organization.md")
     tbody = open(tpath, encoding="utf-8").read().split("*Document Version:")[0]
@@ -3751,19 +3810,20 @@ def gap_fill_straggler_hits():
     live = [(i + 1, l) for i, l in enumerate(rlines)
             if not l.startswith("*Document Version:")]
     for ln, l in live:
-        if "6,911" in l:
+        if "6,918" in l or "6,925" in l:
             hits.append(("erp-requirements.md", ln,
-                         'retired 6,911 employee/user total on a live requirement row '
-                         '(the version-footer lines are the frozen-history surface)'))
+                         'retired employee/user total on a live requirement row '
+                         '(6,911 active since the (ah) OMO-squad deferral; the '
+                         'version-footer lines are the frozen-history surface)'))
     for rid in ("MDM-011", "HR-036", "HR-039", "HSE-004", "HR-041", "HR-045", "NFR-041"):
         row = next(((ln, l) for ln, l in live if l.startswith(f"| {rid} |")), None)
         if row is None:
             hits.append(("erp-requirements.md", 0,
                          f"employee-count requirement row {rid} not found"))
-        elif "6,918" not in row[1]:
+        elif "6,911" not in row[1]:
             hits.append(("erp-requirements.md", row[0],
                          f"requirement row {rid} is in the v24.2-declared "
-                         f"employee/user-count family but does not carry the 6,918 canon"))
+                         f"employee/user-count family but does not carry the 6,911 canon"))
     # (d) 2026-09-21 sixty-second-wave arm — the live workflow-census canon. Batch 26
     # moved the corpus 5,430 → 5,432 and its cascade trued each document's headline
     # figures, but the present-tense count cells no rule read at that grain kept the
@@ -4548,11 +4608,11 @@ def atlassian_suite_hits():
     # to 6,918 — the half-repaired-cell class, the (x) pass having itself
     # re-based this very cell 6,932 → 6,925; a future census move re-fires
     # until consciously re-pointed, the Check-71 CENSUS-pin contract)
-    if "avoids ~6,918-seat cost" not in asm:
+    if "avoids ~6,911-seat cost" not in asm:
         hits.append(("assumptions-and-design-decisions.md", 0,
-                     'missing A6.6 seat-avoidance anchor "avoids ~6,918-seat '
-                     'cost" (the active canon since the (ad) deferral)'))
-    for bad in ("~6,925-seat cost", "~6,932-seat cost"):
+                     'missing A6.6 seat-avoidance anchor "avoids ~6,911-seat '
+                     'cost" (the active canon since the (ah) deferral)'))
+    for bad in ("~6,925-seat cost", "~6,932-seat cost", "~6,918-seat cost"):
         pos = asm.find(bad)
         if pos >= 0:
             hits.append(("assumptions-and-design-decisions.md",
@@ -4703,12 +4763,13 @@ def domain_companion_hits():
     for relp in sorted(companions):
         _t, body = _plain(relp)
         name = os.path.basename(relp)
-        for bad in ("6,762", "6,911", "5,426", "5,427", "5,430"):
+        for bad in ("6,762", "6,918", "5,426", "5,427", "5,430"):
             if bad in body:
                 hits.append((name, body[:body.index(bad)].count("\n") + 1,
                              f"retired canon figure '{bad}' on a live line of "
-                             f"a domain companion (the active canon is 6,918 "
-                             f"employees / 5,433 workflows; these surfaces "
+                             f"a domain companion (the active canon is 6,911 "
+                             f"employees / 5,433 workflows since the (ah) "
+                             f"OMO-squad deferral; these surfaces "
                              f"carry no version footer, so the whole file is "
                              f"live)"))
     _t, it = _plain("01-model-company/workflows/workflow-gap-analysis-it.md")
@@ -4720,22 +4781,22 @@ def domain_companion_hits():
                          f"workflows and the Technology & Data family is 394 "
                          f"since batch 30)"))
     for anc in ("**394 workflows**", "VS-113 (32)",
-                "~6,918 M365/email users"):
+                "~6,911 M365/email users"):
         if anc not in it:
             hits.append(("workflow-gap-analysis-it.md", 0,
                          f'missing corrected roster anchor "{anc}"'))
     _t, ops = _plain(
         "01-model-company/workflows/workflow-gap-analysis-operations.md")
-    for anc in ("payroll of 6,918 employees",
-                "furnishing campaign to ~6,918 employees"):
+    for anc in ("payroll of 6,911 employees",
+                "furnishing campaign to ~6,911 employees"):
         if anc not in ops:
             hits.append(("workflow-gap-analysis-operations.md", 0,
                          f'missing corrected headcount anchor "{anc}"'))
     _t, people = _plain(
         "01-model-company/workflows/workflow-gap-analysis-people.md")
-    if "~6,918 employees (active; the TO's 532-design retains the disabled—prepared Trade department and the deferred—prepared TPS build squad (ad)); ~1,200–1,600 new hires/year" not in people:
+    if "~6,911 employees (active; the TO's 532-design retains the disabled—prepared Trade department, the deferred—prepared TPS build squad (ad) and the deferred—prepared OMO build squad (ah)); ~1,200–1,600 new hires/year" not in people:
         hits.append(("workflow-gap-analysis-people.md", 0,
-                     'missing §1 scope anchor "~6,918 employees (active; … TPS build squad (ad)); '
+                     'missing §1 scope anchor "~6,911 employees (active; … TPS build squad (ad) and OMO build squad (ah)); '
                      '~1,200–1,600 new hires/year"'))
 
     # ---- (d) the 2026-09-23 (x) trade-desk disablement estate — the CAP-B01–B04
@@ -4764,8 +4825,8 @@ def domain_companion_hits():
                              "optimal-table-of-organization.md"),
                 encoding="utf-8").read()
     for anc in ("**DISABLED — PREPARED (2026-09-23 (x))** — not staffed; design retained. 5,200 trade accounts",
-                "active HQ **518** (Trade's 7 disabled — prepared (x); the TPS build squad's 7 deferred — prepared (ad))",
-                "Design total; active **6,918**",
+                "active HQ **511** (Trade's 7 disabled — prepared (x); the TPS build squad's 7 deferred — prepared (ad); the OMO build squad's 7 deferred — prepared (ah))",
+                "Design total; active **6,911**",
                 "#### Trade / Account Management (7 — DISABLED — PREPARED 2026-09-23 per registry CAP-B01"):
         if anc not in to_t:
             hits.append(("optimal-table-of-organization.md", 0,
@@ -4911,8 +4972,12 @@ def channel_registry_hits():
     # (x)-disablement canon after the (ad) TPS-squad deferral re-based the
     # active population a second time — a future re-base re-fires until
     # consciously re-pointed, the Check-71 CENSUS-pin contract)
-    for anc in ("re-based again to **HQ 518 / total 6,918 active** by the TPS "
-                "build squad's deferral ((ad), sourcing register §4) — the "
+    for anc in ("re-based again to HQ 518 / total 6,918 by the TPS "
+                "build squad's deferral ((ad), sourcing register §4), and again "
+                "to **HQ 511 / total 6,911 active** by the OMO build squad's "
+                "deferral ((ah), sourcing register §4 — routing is "
+                "deterministic BOPIS with every sale completing as a regular "
+                "POS sale) — the "
                 "532/6,932 design of record retained throughout",
                 "re-base the headcount canon (HQ 518 → 525 active; the TPS "
                 "build squad's 525 → 532 hop rides the sourcing register's "
@@ -5024,6 +5089,79 @@ def tps_project_estate_hits():
                              f'anchor "{anchor}" ({why})'))
     return hits
 
+def omo_routing_estate_hits():
+    """2026-09-23 (ah) OMO build-squad deferral — the routing estate's own
+    navigation-surface guard (the tps_project_estate_hits template, one
+    register row over): the sourcing register §4 Omnichannel order routing
+    row (VS-60) holds the multi-source orchestration workload DORMANT ('Build
+    — squad deferred — prepared … with BOPIS the only enabled online
+    fulfillment option (registry CAP-F01) every sale completes as a regular
+    POS sale at the customer-selected store and routing is deterministic …
+    re-evaluation/stand-up trigger = any second online fulfillment origin
+    (CAP-F04–F09) or a marketplace channel (CAP-C03/C04) enabled'), and the
+    VS-60 README must carry the banner class saying so (the VS-74/VS-93
+    convention) — the sourcing-register link, the registry link, the
+    designed-capacity declaration and W5580 included. Unlike the TPS estate
+    there is no seam VS: the row's live-posture clause (the deterministic
+    BOPIS path on the already-built platform + in-suite order flows) is
+    spelled out inside the banner itself. A future register change re-fires
+    the arm until consciously re-pointed (the Check-71 CENSUS-pin
+    contract)."""
+    hits = []
+    src = open(os.path.join(REPO, "07-methodology",
+                            "capability-sourcing-and-engineering-model.md"),
+               encoding="utf-8").read()
+    src_body = src.split("*Document Version:")[0]
+    row = next((l for l in src_body.splitlines()
+                if l.startswith("| Omnichannel order routing")), None)
+    if row is None:
+        hits.append(("capability-sourcing-and-engineering-model.md", 0,
+                     "the §4 Omnichannel order routing row not found — the OMO "
+                     "routing-estate arm cannot derive its set"))
+        return hits
+    if "CAP-F04" not in row:
+        hits.append(("capability-sourcing-and-engineering-model.md", 0,
+                     "the sourcing register's OMO row no longer carries the "
+                     "second-fulfillment-origin re-enablement trigger "
+                     "(CAP-F04) — re-point the arm"))
+    vs_ids = []
+    for m in re.finditer(r"VS-(\d+)", row):
+        vsid = f"VS-{m.group(1)}"
+        if vsid not in vs_ids:
+            vs_ids.append(vsid)
+    wf_dir = os.path.join(REPO, "01-model-company", "workflows")
+    for vsid in vs_ids:
+        entry = None
+        for e in sorted(os.listdir(wf_dir)):
+            if re.match(re.escape(vsid) + r"-", e):
+                entry = e
+                break
+        if entry is None:
+            hits.append(("capability-sourcing-and-engineering-model.md", 0,
+                         f"the §4 OMO row names {vsid} but no workflows/VS-* "
+                         f"directory matches"))
+            continue
+        rel = f"workflows/{entry}/README.md"
+        text = open(os.path.join(wf_dir, entry, "README.md"),
+                    encoding="utf-8").read()
+        for anchor, why in (
+                ("Workload dormant — prepared (CAP-F01",
+                 "the OMO routing-estate banner class (the VS-74/VS-93 "
+                 "convention; the deterministic-BOPIS rationale)"),
+                ("capability-sourcing-and-engineering-model.md",
+                 "the sourcing register §4 link (the dormancy record of record)"),
+                ("channel-capability-registry.md",
+                 "the registry link (CAP-F01/CAP-F04–F09 own the state)"),
+                ("prepared design held at designed capacity",
+                 "the designed-capacity declaration"),
+                ("W5580",
+                 "the estate's state-change workflow")):
+            if anchor not in text:
+                hits.append((rel, 0,
+                             f"OMO routing-estate README missing required banner "
+                             f'anchor "{anchor}" ({why})'))
+    return hits
+
 def b2b_estate_hits():
     """2026-09-23 eightieth-wave consistency review — the (x) B2B disablement's
     navigation-surface residue: the four value-stream READMEs registry governing
@@ -5128,7 +5266,7 @@ def quote_coverage_hits():
     for anc in ("Post-review RFQ movement (recorded 2026-09-18",
                 "**$20,273,515**",
                 "coverage dispositions stand unchanged",
-                "7,247 | 9,271 | 6,918"):
+                "7,247 | 9,271 | 6,911"):
         if anc not in body:
             hits.append((rel, 0, f'missing required anchor "{anc}"'))
     return hits
@@ -5763,6 +5901,7 @@ def main():
     # estate's own navigation surfaces — the rule-7 README set bannered)
     hits.extend(b2b_estate_hits())
     hits.extend(tps_project_estate_hits())
+    hits.extend(omo_routing_estate_hits())
     for doc, line, detail in hits:
         print(f"model-doc: {doc}:{line}: {detail}")
     print(f"audit-model-docs: {len(hits)} hit(s) across {len(DOCS)} documents")

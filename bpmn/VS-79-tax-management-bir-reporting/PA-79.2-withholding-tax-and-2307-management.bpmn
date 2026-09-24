@@ -231,7 +231,7 @@ Owner: AR Manager</bpmn:text>
     <bpmn:process id="W_W2764" name="W2764. Compensation Withholding Tax (1601C) &amp; TRAIN Tax Table Maintenance" isExecutable="false">
       <bpmn:documentation>Trigger: Semi-monthly payroll run; monthly close
 Frequency: Semi-monthly withholding; monthly filing
-Volume: 6,918 employees across 5 entities
+Volume: 6,911 employees across 5 entities
 Owner: Payroll Manager
 Participants: Payroll Mgr, Tax Accountant, HR
 Source: workflow W2764 — Compensation Withholding Tax (1601C) &amp; TRAIN Tax Table Maintenance</bpmn:documentation>
@@ -309,7 +309,7 @@ Owner: Payroll Manager</bpmn:text>
     <bpmn:process id="W_W2765" name="W2765. Annual Information Return (1604E/1604C) &amp; Alphabetical Employee List" isExecutable="false">
       <bpmn:documentation>Trigger: Annual close (1604-C by January 31; 1604-E by March 1)
 Frequency: Annual per entity
-Volume: 5 entities; ~800 vendors + 6,918 employees
+Volume: 5 entities; ~800 vendors + 6,911 employees
 Owner: Tax Manager
 Participants: Tax Manager, Tax Accountant, Payroll, AP
 Source: workflow W2765 — Annual Information Return (1604E/1604C) &amp; Alphabetical Employee List</bpmn:documentation>
@@ -756,7 +756,7 @@ Owner: Tax Accountant</bpmn:text>
     <bpmn:process id="W_W5533" name="W5533. BIR Form 2316 Annual Issuance, Employee Acknowledgment &amp; Certificate Lifecycle" isExecutable="false">
       <bpmn:documentation>Trigger: Calendar year-end close (the W9A/W10 year-end payroll cycle); the January 31 BIR deadline for furnishing 2316 to employees; the February 28 deadline for the related 1604C/alphalist filing (W2765); an employee separation (W43/W643) requiring an interim certificate; an employee request for a replacement or corrected certificate; or a BIR/labor examination evidence request (W77)
 Frequency: Annual issuance cycle with per-separation interim issuances; event-driven replacements and corrections
-Volume: ~6,918 active employees furnished annually across the multi-entity payroll (W816 consolidation scope, 5 entities) + ~1,400–1,600 separated employees/year receiving separation 2316s; acknowledgment tracking to a ≥ 98% completion gate per entity; ~50–100 replacement/correction requests/year
+Volume: ~6,911 active employees furnished annually across the multi-entity payroll (W816 consolidation scope, 5 entities) + ~1,400–1,600 separated employees/year receiving separation 2316s; acknowledgment tracking to a ≥ 98% completion gate per entity; ~50–100 replacement/correction requests/year
 Owner: Tax Manager
 Participants: Payroll Specialist, HR Shared Services (W3334-class issuance/verification requests), HR Technology Manager (ESS distribution per W3330), Store/DC HR Administrators (printed-copy distribution), Controller, External Audit Team, BIR (deadline regime and examination requests), Employees (recipients)
 Source: workflow W5533 — BIR Form 2316 Annual Issuance, Employee Acknowledgment &amp; Certificate Lifecycle</bpmn:documentation>

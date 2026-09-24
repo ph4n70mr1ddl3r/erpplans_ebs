@@ -78,7 +78,7 @@ Owner: HR Shared Services (VS-103) / Store Manager / Uniform Program Manager</bp
     <bpmn:process id="W_W4922" name="W4922. Role-Based PPE Issuance, Fit-Testing &amp; Training" isExecutable="false">
       <bpmn:documentation>Trigger: New-hire (W4921); role/equipment change; PPE replacement (W4925); HSE review (VS-24)
 Frequency: Per employee + per replacement
-Volume: ~6,918 employees + contingent × role-PPE × replacement cycle
+Volume: ~6,911 employees + contingent × role-PPE × replacement cycle
 Owner: HSE (VS-24) / Uniform Program Manager / Site Supervisor
 Participants: HSE (VS-24), HR (VS-19), Store Ops (VS-07), DC Ops (VS-04), Occupational Health (VS-83), Supplier (W4917)
 Source: workflow W4922 — Role-Based PPE Issuance, Fit-Testing &amp; Training</bpmn:documentation>
@@ -225,7 +225,7 @@ Owner: Uniform Program Manager / Contingent-Workforce Lead (VS-98) / Vendor Mgmt
     <bpmn:process id="W_W4924" name="W4924. Uniform / Workwear Laundering Service — In-House vs Vendor (Industrial Laundry)" isExecutable="false">
       <bpmn:documentation>Trigger: Operating-model decision (W4913); laundering need for soiled/contaminated workwear
 Frequency: Continuous (weekly/biweekly cycles)
-Volume: ~6,918 employees × uniform sets × laundering cycle; incl. contaminated (paint/chemical/oil) workwear
+Volume: ~6,911 employees × uniform sets × laundering cycle; incl. contaminated (paint/chemical/oil) workwear
 Owner: Uniform Program Manager / Facilities (VS-138) / Procurement / HSE
 Participants: Facilities (VS-138), Laundry Vendor (W4917), HSE (VS-24), Store Ops (VS-07), DC Ops (VS-04)
 Source: workflow W4924 — Uniform / Workwear Laundering Service — In-House vs Vendor (Industrial Laundry)</bpmn:documentation>
@@ -300,7 +300,7 @@ Owner: Uniform Program Manager / Facilities (VS-138) / Procurement / HSE</bpmn:t
     <bpmn:process id="W_W4925" name="W4925. PPE Inspection, Maintenance, Replacement &amp; End-of-Life" isExecutable="false">
       <bpmn:documentation>Trigger: Inspection schedule; damage/wear; expiry; incident (VS-24)
 Frequency: Periodic inspection + on-condition + on expiry
-Volume: ~6,918 employees&#x27; PPE × inspection/replacement cycle
+Volume: ~6,911 employees&#x27; PPE × inspection/replacement cycle
 Owner: HSE (VS-24) / Site Supervisor / Uniform Program Manager
 Participants: HSE (VS-24), Site Supervisors (VS-07/VS-04), Occupational Health (VS-83), Supplier (W4917), Asset Mgmt (VS-35)
 Source: workflow W4925 — PPE Inspection, Maintenance, Replacement &amp; End-of-Life</bpmn:documentation>
@@ -372,7 +372,7 @@ Owner: HSE (VS-24) / Site Supervisor / Uniform Program Manager</bpmn:text>
     <bpmn:process id="W_W4926" name="W4926. Uniform Damage, Loss &amp; Replacement Processing" isExecutable="false">
       <bpmn:documentation>Trigger: Employee damage/loss/theft report; wear-out; laundering loss (W4924)
 Frequency: Continuous (~thousands of occurrences/yr)
-Volume: ~6,918 employees × damage/loss/replacement occurrences
+Volume: ~6,911 employees × damage/loss/replacement occurrences
 Owner: HR Shared Services (VS-103) / Uniform Program Manager / Site Supervisor
 Participants: HRSS (VS-103), Store Ops (VS-07), Employee, Supplier (W4917), Finance (W4916)
 Source: workflow W4926 — Uniform Damage, Loss &amp; Replacement Processing</bpmn:documentation>

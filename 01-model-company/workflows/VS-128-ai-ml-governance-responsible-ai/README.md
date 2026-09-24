@@ -13,7 +13,7 @@ fraud detection (links to VS-125 W3859), demand forecasting (links to VS-127 W39
 personalization/recommendation (links to VS-126 W3892), pricing/markdown, inventory optimization,
 loss-prevention analytics (links to VS-23), customer-service chatbots, document/OCR automation
 (links to VS-30.2), computer-vision/CCTV analytics (links to VS-23), and generative-AI assistants
-across the ~6,918-employee, PHP 62.3B-revenue, 5-entity operation.
+across the ~6,911-employee, PHP 62.3B-revenue, 5-entity operation.
 
 Today this discipline is **unowned as a program**: 'AI governance' is referenced in only ~3 PA
 files, 'responsible AI' in 1, 'AI ethics' in 2, and the defining terms 'model risk management'

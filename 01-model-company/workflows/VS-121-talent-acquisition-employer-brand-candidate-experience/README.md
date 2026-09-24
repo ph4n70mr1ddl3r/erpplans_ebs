@@ -8,7 +8,7 @@
 
 Talent Acquisition (TA) Marketing, Employer Brand & Candidate Experience workflows for
 BuildRight Depot Corp. — owning the **strategic attraction and candidate-side of hiring**
-across a 5-entity, 205-location, ~6,918-employee group that hires ~1,200–1,600 people per year
+across a 5-entity, 205-location, ~6,911-employee group that hires ~1,200–1,600 people per year
 (including turnover replacement at 15–20% annual turnover) and is growing ~10–15 stores/year.
 BuildRight competes for both **corporate talent** (Davao HQ and regional offices — merchandising,
 finance, supply chain, IT, marketing, legal) and **frontline retail and trade-knowledgeable

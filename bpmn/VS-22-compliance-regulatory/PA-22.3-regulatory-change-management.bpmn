@@ -885,7 +885,7 @@ Owner: Compliance Officer</bpmn:text>
     <bpmn:process id="W_W656" name="W656. Anti-Bribery &amp; Anti-Corruption (ABAC) Compliance Program" isExecutable="false">
       <bpmn:documentation>Trigger: Annual program cycle; triggered by suspicion of corrupt activity; periodic third-party due diligence
 Frequency: Annual risk assessment and training; continuous monitoring; quarterly gift register review
-Volume: ~6,918 employees (annual training); ~800–1,000 vendors (due diligence); ~200 LGUs (interaction points)
+Volume: ~6,911 employees (annual training); ~800–1,000 vendors (due diligence); ~200 LGUs (interaction points)
 Owner: Compliance Officer
 Participants: Legal Counsel, Internal Audit (W159), Procurement Manager, HR Manager
 Source: workflow W656 — Anti-Bribery &amp; Anti-Corruption (ABAC) Compliance Program</bpmn:documentation>

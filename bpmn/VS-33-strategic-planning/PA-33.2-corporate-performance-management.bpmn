@@ -426,7 +426,7 @@ Owner: CFO</bpmn:text>
     <bpmn:process id="W_W1658" name="W1658. Annual Performance Assessment &amp; Incentive Compensation Calculation" isExecutable="false">
       <bpmn:documentation>Trigger: Year-end (January for prior year performance)
 Frequency: Annual
-Volume: 6,918 employees (all headcount)
+Volume: 6,911 employees (all headcount)
 Owner: CHRO
 Participants: CHRO, CEO, C-Suite, HR, Payroll, Finance
 Source: workflow W1658 — Annual Performance Assessment &amp; Incentive Compensation Calculation</bpmn:documentation>

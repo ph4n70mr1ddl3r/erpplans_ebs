@@ -366,7 +366,7 @@ Owner: Data Quality Analyst / BI Manager</bpmn:text>
     <bpmn:process id="W_W1177" name="W1177. Enterprise Data Governance Council, Standards &amp; Stewardship Program" isExecutable="false">
       <bpmn:documentation>Trigger: Monthly Data Governance Council meeting; or data quality incident escalation; or new data domain onboarding (e.g., new ERP module go-live)
 Frequency: Monthly Council meetings; weekly steward working sessions; continuous governance operations
-Volume: 35,000 active SKUs, 200 stores, 5 legal entities, ~800 vendors, ~6,918 employees — all generating data across 30+ ERP modules
+Volume: 35,000 active SKUs, 200 stores, 5 legal entities, ~800 vendors, ~6,911 employees — all generating data across 30+ ERP modules
 Owner: Data Governance Lead / CIO
 Participants: Data Governance Council (CIO, CFO, COO, VP Merchandising, CHRO, Legal), Data Stewards (1 per functional domain), Data Architect, BI Manager
 Source: workflow W1177 — Enterprise Data Governance Council, Standards &amp; Stewardship Program</bpmn:documentation>

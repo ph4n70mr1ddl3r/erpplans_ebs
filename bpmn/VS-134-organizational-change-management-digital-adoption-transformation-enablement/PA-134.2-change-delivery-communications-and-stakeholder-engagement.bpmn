@@ -3,7 +3,7 @@
     <bpmn:process id="W_W4081" name="W4081. Change Communications Strategy, Messaging &amp; Channel Plan" isExecutable="false">
       <bpmn:documentation>Trigger: Initiative charter; major milestone
 Frequency: Per initiative + ongoing
-Volume: Per major initiative (audiences: ~6,918 employees, vendors, B2B customers, board)
+Volume: Per major initiative (audiences: ~6,911 employees, vendors, B2B customers, board)
 Owner: OCM Lead / Corporate Comms (links to VS-14.3)
 Participants: Comms (VS-14.3/VS-103.1), Internal Comms, sponsor, HR (VS-103)
 Source: workflow W4081 — Change Communications Strategy, Messaging &amp; Channel Plan</bpmn:documentation>

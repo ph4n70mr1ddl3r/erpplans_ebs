@@ -438,7 +438,7 @@ Duration: 2–3 hours/employee</bpmn:documentation>
         <bpmn:outgoing>W977_Flow19</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W977_Task11" name="Retirement Fund Financial Planning &amp; Reporting">
-        <bpmn:documentation>Step 5: Retirement Fund Financial Planning &amp; Reporting: Finance manages retirement fund: (a) annual actuarial valuation — commissioned to assess BuildRight&#x27;s retirement benefit liability across all 6,918 employees; (b) annual company contribution to retirement fund budgeted per W26 (annual budget) — typically 2–4% of total payroll; (c) fund investment management — retirement fund assets invested per board-approved investment policy (conservative: government securities, time deposits, high-grade corporate bonds); (d) monthly fund performance reporting to CFO; (e) annual retirement fund disclosure in financial statements per PFRS 19 (Employee Benefits) — defined benefit obligation, plan assets, and net liability; (f) quarterly report to SEC (if applicable) per W481
+        <bpmn:documentation>Step 5: Retirement Fund Financial Planning &amp; Reporting: Finance manages retirement fund: (a) annual actuarial valuation — commissioned to assess BuildRight&#x27;s retirement benefit liability across all 6,911 employees; (b) annual company contribution to retirement fund budgeted per W26 (annual budget) — typically 2–4% of total payroll; (c) fund investment management — retirement fund assets invested per board-approved investment policy (conservative: government securities, time deposits, high-grade corporate bonds); (d) monthly fund performance reporting to CFO; (e) annual retirement fund disclosure in financial statements per PFRS 19 (Employee Benefits) — defined benefit obligation, plan assets, and net liability; (f) quarterly report to SEC (if applicable) per W481
 Responsible (R): Finance / CFO
 Accountable (A): CHRO
 Duration: Ongoing (annual actuarial + quarterly reporting)</bpmn:documentation>
@@ -632,7 +632,7 @@ Owner: HR Head (CHRO)</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W1325" name="W1325. Employee Death-in-Service Benefits Processing &amp; Beneficiary Claim Management" isExecutable="false">
       <bpmn:documentation>Trigger: Notification of employee death (from family, supervisor, or workplace incident report per W140)
-Frequency: Estimated 3–5 employee deaths per year across 6,918 employees (based on Philippine actuarial mortality rates for working-age population)
+Frequency: Estimated 3–5 employee deaths per year across 6,911 employees (based on Philippine actuarial mortality rates for working-age population)
 Volume: 1 beneficiary claim per event; processing time-sensitive due to family&#x27;s financial need
 Owner: HR Head (CHRO)
 Participants: HR Head, HR Assistant, Payroll Officer, Finance, VP Legal, Insurance Coordinator, Department Head/Store Manager, Deceased Employee&#x27;s Beneficiary/Family, SSS, Pag-IBIG, HMO Provider
@@ -957,7 +957,7 @@ Owner: HR Specialist (HR Operations)</bpmn:text>
     <bpmn:process id="W_W1384" name="W1384. Employee 13th Month Pay Computation, Proration &amp; BIR Taxable Benefit Reporting" isExecutable="false">
       <bpmn:documentation>Trigger: Scheduled — annual computation (November–December); ad-hoc for mid-year separations
 Frequency: Annual (November computation, December payment); prorated at separation for each departing employee
-Volume: ~6,918 employees across 5 entities (rank-and-file and management); ~720–960 prorated computations for separations
+Volume: ~6,911 employees across 5 entities (rank-and-file and management); ~720–960 prorated computations for separations
 Owner: Payroll Manager
 Participants: Payroll Officer, HR Specialist, Controller, BIR
 Source: workflow W1384 — Employee 13th Month Pay Computation, Proration &amp; BIR Taxable Benefit Reporting</bpmn:documentation>

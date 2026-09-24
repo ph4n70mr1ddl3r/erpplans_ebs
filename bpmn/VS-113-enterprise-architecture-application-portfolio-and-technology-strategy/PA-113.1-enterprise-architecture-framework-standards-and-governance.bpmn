@@ -588,7 +588,7 @@ Owner: Chief Enterprise Architect</bpmn:text>
     <bpmn:process id="W_W5517" name="W5517. SEP Paved Road &amp; Engineering Standard Governance for Built Products" isExecutable="false">
       <bpmn:documentation>Trigger: New built-product service starting (golden-path bootstrap); ring expansion; security-gate result; quarterly QBR cycle
 Frequency: Continuous + per release ring + quarterly reporting
-Volume: 2 built products (OMO, TPS) × ~6–12 services each; 100% of new services start on the golden path minus ARB-recorded exceptions; every deploy rides the ring model (~weekly per squad)
+Volume: Designed: 2 build squads (OMO, TPS — both deferred — prepared, 2026-09-23 (ad)/(ah); sourcing register §4) × ~6–12 services each; live paved-road scope: the doctrine&#x27;s remaining builds (Payroll PH, store workforce, the dispatch experience layer) at squad stand-up; 100% of new services start on the golden path minus ARB-recorded exceptions; every deploy rides the ring model (~weekly per active squad)
 Owner: Head of Engineering (SEP)
 Participants: Head of Engineering, SEP DevEx engineers, AppSec engineer (dotted to SEC lead), QA automation lead, build SRE, OMO/TPS Tech Leads &amp; squad PMs, ARB (exception records — links to W3573), INFRA SRE (PRR co-owner), SEC GRC cell (Tier-1-touching changes), IAP (contract-first integration — links to W3579), DP (data contracts)
 Source: workflow W5517 — SEP Paved Road &amp; Engineering Standard Governance for Built Products</bpmn:documentation>

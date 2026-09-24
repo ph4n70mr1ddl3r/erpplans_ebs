@@ -189,7 +189,7 @@ Owner: HR Recruitment Officer</bpmn:text>
     <bpmn:process id="W_W72" name="W72. Employee Performance Management" isExecutable="false">
       <bpmn:documentation>Trigger: Annual performance review cycle; or periodic performance improvement need
 Frequency: Annual formal review; quarterly check-in; ongoing performance coaching
-Volume: ~6,918 employees; all employees reviewed annually
+Volume: ~6,911 employees; all employees reviewed annually
 Owner: Department Head (for direct reports); Store Manager (for store staff)
 Participants: Store Manager, Department Supervisors, Department Heads, HR Head, employees
 Source: workflow W72 — Employee Performance Management</bpmn:documentation>
@@ -624,7 +624,7 @@ Owner: HR Assistant (intake); Payroll Officer (processing)</bpmn:text>
     <bpmn:process id="W_W172" name="W172. Employee PPE &amp; Uniform Lifecycle" isExecutable="false">
       <bpmn:documentation>Trigger: New hire onboarding; or periodic replacement schedule; or damage/loss report
 Frequency: Annual mass distribution; semi-annual replenishment; ad-hoc for new hires
-Volume: ~6,918 employees; ~20,700 sets of uniforms (3 per employee) + safety gear
+Volume: ~6,911 employees; ~20,700 sets of uniforms (3 per employee) + safety gear
 Owner: HR Operations Manager
 Participants: HR Assistant, Store/DC Manager, Procurement, Vendor, Employee
 Source: workflow W172 — Employee PPE &amp; Uniform Lifecycle</bpmn:documentation>
@@ -942,7 +942,7 @@ Owner: CHRO</bpmn:text>
     <bpmn:process id="W_W251" name="W251. Philippine Statutory Benefits &amp; Claims Administration (SSS, PhilHealth, Pag-IBIG)" isExecutable="false">
       <bpmn:documentation>Trigger: Employee sickness event, maternity event, or application for SSS/Pag-IBIG statutory loan
 Frequency: Continuous; daily processing of claims and semi-monthly reconciliation
-Volume: 6,918 employee base; average ~120–180 sickness claims/month, ~40–60 maternity leaves/month, and ~250–350 loan applications/month
+Volume: 6,911 employee base; average ~120–180 sickness claims/month, ~40–60 maternity leaves/month, and ~250–350 loan applications/month
 Owner: HR Benefits Specialist
 Participants: Employee, HR Benefits Specialist, Payroll Specialist, Finance (Treasury)
 Source: workflow W251 — Philippine Statutory Benefits &amp; Claims Administration (SSS, PhilHealth, Pag-IBIG)</bpmn:documentation>
@@ -1578,7 +1578,7 @@ Owner: CHRO</bpmn:text>
     <bpmn:process id="W_W494" name="W494. Employee Wellness &amp; Mental Health Program Management" isExecutable="false">
       <bpmn:documentation>Trigger: Annual program planning cycle; DOLE/DOH wellness program mandates; post-incident support (W140 OHS, W484 pandemic); employee assistance request
 Frequency: Annual (program planning); quarterly (program activities); event-driven (crisis support)
-Volume: 6,918 employees across all locations
+Volume: 6,911 employees across all locations
 Owner: CHRO
 Participants: HR Training &amp; Development, HR Compliance Manager, External EAP Provider, Store Managers, Safety Officer
 Source: workflow W494 — Employee Wellness &amp; Mental Health Program Management</bpmn:documentation>
@@ -2247,7 +2247,7 @@ Owner: HR Business Partner / Store Manager (store-level coordination)</bpmn:text
     <bpmn:process id="W_W629" name="W629. Store-Level Employee Engagement Survey &amp; Action Planning" isExecutable="false">
       <bpmn:documentation>Trigger: Semi-annual survey calendar; annual comprehensive survey
 Frequency: Semi-annual pulse surveys; annual comprehensive engagement survey
-Volume: ~6,918 employees across 200 stores, 4 DCs, HQ
+Volume: ~6,911 employees across 200 stores, 4 DCs, HQ
 Owner: HR Business Partner
 Participants: HR Business Partner, CHRO, Store/DC Managers, Department Heads, all employees
 Source: workflow W629 — Store-Level Employee Engagement Survey &amp; Action Planning</bpmn:documentation>
@@ -2564,8 +2564,8 @@ Owner: HR Coordinator</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W642" name="W642. HMO &amp; Private Benefits Administration" isExecutable="false">
       <bpmn:documentation>Trigger: New hire enrollment (W15); annual renewal; qualifying life event (marriage, birth, dependent change); employee separation (W43)
-Frequency: ~100–130 enrollment/changes/month (new hires + events); annual renewal for 6,918 employees
-Volume: ~6,918 covered employees + ~2,000 dependents across 5 entities
+Frequency: ~100–130 enrollment/changes/month (new hires + events); annual renewal for 6,911 employees
+Volume: ~6,911 covered employees + ~2,000 dependents across 5 entities
 Owner: HR Benefits Specialist
 Participants: HR Business Partner, Employee, HMO Provider Representative, Finance Analyst
 Source: workflow W642 — HMO &amp; Private Benefits Administration</bpmn:documentation>
@@ -2820,7 +2820,7 @@ Owner: HR Service Desk Lead</bpmn:text>
     <bpmn:process id="W_W647" name="W647. Employee Data Privacy Compliance Operations" isExecutable="false">
       <bpmn:documentation>Trigger: Ongoing operational compliance with RA 10173 (Data Privacy Act); triggered by data subject request, privacy impact assessment requirement, or regulatory deadline
 Frequency: Continuous compliance operations; quarterly compliance review; annual privacy program assessment
-Volume: ~6,918 active employee records + ~100,000 former applicant records + ~20,000 former employee records under retention
+Volume: ~6,911 active employee records + ~100,000 former applicant records + ~20,000 former employee records under retention
 Owner: Data Protection Officer (DPO)
 Participants: HR Manager, IT Security Lead, Legal Counsel, NPC (regulator)
 Source: workflow W647 — Employee Data Privacy Compliance Operations</bpmn:documentation>
@@ -3107,7 +3107,7 @@ Owner: HR Business Partner</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W715" name="W715. Employee Referral Program Management &amp; Reward Processing" isExecutable="false">
       <bpmn:documentation>Trigger: Employee submits a referral for an open position; or referred candidate is hired
-Frequency: Ongoing (~100–150 referrals/month across 6,918 employees)
+Frequency: Ongoing (~100–150 referrals/month across 6,911 employees)
 Volume: ~1,200–1,600 annual hires, target 20-25% from referrals (~240–400 referral hires/year)
 Owner: HR Manager
 Participants: Referring Employee, Hiring Manager, HR Recruiter, Payroll Accountant
@@ -3228,7 +3228,7 @@ Owner: HR Manager</bpmn:text>
     <bpmn:process id="W_W716" name="W716. Internal Communication &amp; Company-Wide Announcement Management" isExecutable="false">
       <bpmn:documentation>Trigger: Need to communicate company-wide or targeted information to employees; regulatory update affecting operations; policy change; crisis communication; executive announcement
 Frequency: Daily (mixed channels); major announcements ~2–4/month
-Volume: ~10–15 internal communications/week across 6,918 employees in 205+ locations
+Volume: ~10–15 internal communications/week across 6,911 employees in 205+ locations
 Owner: Internal Communications Manager
 Participants: Department Head (content owner), CHRO, CEO/Executive Office, IT (distribution), Store Manager (cascading)
 Source: workflow W716 — Internal Communication &amp; Company-Wide Announcement Management</bpmn:documentation>
@@ -3618,7 +3618,7 @@ Owner: HR Manager</bpmn:text>
     <bpmn:process id="W_W719" name="W719. Diversity, Equity &amp; Inclusion (DEI) Program Management" isExecutable="false">
       <bpmn:documentation>Trigger: Annual DEI program calendar; quarterly DEI metrics review; or specific DEI incident/complaint
 Frequency: Ongoing program with quarterly review cycles
-Volume: 6,918 employees across 5 entities, 200 stores, 4 DCs
+Volume: 6,911 employees across 5 entities, 200 stores, 4 DCs
 Owner: HR Manager
 Participants: CHRO, Department Heads, DEI Committee, Legal Counsel, External DEI Consultant
 Source: workflow W719 — Diversity, Equity &amp; Inclusion (DEI) Program Management</bpmn:documentation>
@@ -3738,7 +3738,7 @@ Owner: HR Manager</bpmn:text>
     <bpmn:process id="W_W754" name="W754. Store-Level New Hire First-30-Day Performance Check-In &amp; Early Intervention" isExecutable="false">
       <bpmn:documentation>Trigger: New hire completes 7, 15, and 30 days of employment
 Frequency: 3 check-ins per new hire within first 30 days
-Volume: ~200 new hires chain-wide at any given time (based on annual turnover ~40% × 6,918 employees / 12 months)
+Volume: ~200 new hires chain-wide at any given time (based on annual turnover ~40% × 6,911 employees / 12 months)
 Owner: Department Supervisor
 Participants: New Hire, Department Supervisor, Store Manager, HR (W15 onboarding)
 Source: workflow W754 — Store-Level New Hire First-30-Day Performance Check-In &amp; Early Intervention</bpmn:documentation>
@@ -4026,7 +4026,7 @@ Owner: Store Manager (Operations); LP Analyst (Oversight)</bpmn:text>
     <bpmn:process id="W_W777" name="W777. Employee Leave Balance Management &amp; Annual Leave Carry-Forward Processing" isExecutable="false">
       <bpmn:documentation>Trigger: Semi-monthly payroll cycle; annual leave year-end processing
 Frequency: Continuous (leave requests daily); monthly balance reconciliation; annual carry-forward (December)
-Volume: 6,918 employees × ~4–6 leave requests/year = ~27,000–40,000 leave transactions/year
+Volume: 6,911 employees × ~4–6 leave requests/year = ~27,000–40,000 leave transactions/year
 Owner: HR Business Partner
 Participants: Employee, Direct Supervisor, HR Business Partner, Payroll Accountant
 Source: workflow W777 — Employee Leave Balance Management &amp; Annual Leave Carry-Forward Processing</bpmn:documentation>
@@ -4158,7 +4158,7 @@ Owner: HR Business Partner</bpmn:text>
     <bpmn:process id="W_W778" name="W778. Employee Benefits Annual Open Enrollment &amp; Plan Selection Management" isExecutable="false">
       <bpmn:documentation>Trigger: Annual benefits enrollment period (typically November for January 1 effective date)
 Frequency: Annual open enrollment; ad-hoc for qualifying life events
-Volume: 6,918 employees × annual enrollment + ~200 qualifying life event changes/year
+Volume: 6,911 employees × annual enrollment + ~200 qualifying life event changes/year
 Owner: HR Benefits Administrator
 Participants: HR Benefits Admin, Employee, HMO Provider, Payroll Accountant, HR Manager
 Source: workflow W778 — Employee Benefits Annual Open Enrollment &amp; Plan Selection Management</bpmn:documentation>
@@ -4811,7 +4811,7 @@ Owner: Store Manager</bpmn:text>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W5551" name="W5551. Employee Arrest, Detention &amp; Criminal-Case Employment-Status Response Protocol" isExecutable="false">
       <bpmn:documentation>Trigger: An employee is arrested, detained, or formally charged with a crime — whether arising from work (a fleet accident per W653, a loss-prevention case per W839, an on-duty incident per W717/W471) or from private life — so the employment-status, legal-support, payroll-continuity and family-liaison response must run before any court outcome
-Frequency: Occasional-to-rare; ~6–10 events/year chain-wide across ~6,918 employees (driver reckless-imprudence cases dominating, plus LP-referred arrests and off-duty detentions)
+Frequency: Occasional-to-rare; ~6–10 events/year chain-wide across ~6,911 employees (driver reckless-imprudence cases dominating, plus LP-referred arrests and off-duty detentions)
 Volume: 1 event × the affected employee × a decision surface spanning payroll continuity, statutory benefits (W251), the employee&#x27;s family, the sponsoring manager, and the work-relatedness determination that fixes who pays for counsel
 Owner: HR Manager (case mechanic); VP Legal &amp; Compliance (work-related legal posture)
 Participants: HR Business Partner, VP Legal, Outside Counsel, Fleet Safety Officer (driver cases per W653), LP Director (LP-origin cases per W839/W471), Payroll Manager (W10/W641), HR Benefits, Store/DC Manager, CHRO, Labor Relations Director where the employee is union-covered (VS-84)

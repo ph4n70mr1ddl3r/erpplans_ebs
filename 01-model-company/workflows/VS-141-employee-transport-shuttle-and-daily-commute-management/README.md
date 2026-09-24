@@ -7,7 +7,7 @@
 ## Overview
 
 Employee Transport, Shuttle & Daily Commute Management workflows for BuildRight Depot Corp. —
-owning the enterprise **daily people-movement discipline** that gets **~6,918 employees** to and
+owning the enterprise **daily people-movement discipline** that gets **~6,911 employees** to and
 from **205 operating sites** (200 stores + 4 DCs + Davao HQ) across the Philippine archipelago,
 safely, on time, and at controlled cost. BuildRight runs **2–3 shifts per store** (early-open,
 mid, and late/close shifts including the 10 PM–6 AM night-differential window) and **24-hour DC
@@ -41,7 +41,7 @@ pay/benefits (including a transport allowance line) — this value stream *opera
 services and the allowance program day-to-day. Employee transport is the *daily people-movement*
 discipline — distinct from business travel, goods fleet, facilities, and benefits design.
 
-BuildRight's exposure is structural: ~6,918 employees at 205 distributed sites, a 15–20% annual
+BuildRight's exposure is structural: ~6,911 employees at 205 distributed sites, a 15–20% annual
 turnover rate in which commute difficulty is a documented frontline attrition driver, 2–3 daily
 shifts with after-hours start/end times, provincial and island geography with poor transit, DOLE
 OSH and LTFRB franchise obligations for any operated/contracted passenger service, and a direct

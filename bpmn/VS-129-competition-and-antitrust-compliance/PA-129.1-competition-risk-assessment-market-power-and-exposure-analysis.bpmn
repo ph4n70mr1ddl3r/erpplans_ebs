@@ -513,7 +513,7 @@ Owner: VP Legal / Head of Digital Commerce</bpmn:text>
     <bpmn:process id="W_W3960" name="W3960. Competition Law Training, Awareness &amp; Culture Program" isExecutable="false">
       <bpmn:documentation>Trigger: Annual training cycle; risk-assessment findings (W3953–W3959); incident lessons
 Frequency: Annual + on onboarding/role change
-Volume: ~6,918 employees; risk-role-targeted cohorts
+Volume: ~6,911 employees; risk-role-targeted cohorts
 Owner: VP Legal / L&amp;D
 Participants: Legal, L&amp;D (links to VS-19.4), HR (links to VS-103), Compliance (links to VS-119), Govt Affairs (links to VS-104), executives
 Source: workflow W3960 — Competition Law Training, Awareness &amp; Culture Program</bpmn:documentation>

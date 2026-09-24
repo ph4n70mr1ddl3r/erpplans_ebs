@@ -3,7 +3,7 @@
     <bpmn:process id="W_W3329" name="W3329. Employee Service Center (HR Helpdesk) Case Intake, Triage &amp; Resolution" isExecutable="false">
       <bpmn:documentation>Trigger: Employee/manager HR request (any channel)
 Frequency: Continuous
-Volume: ~thousands of cases/month across 6,918 employees
+Volume: ~thousands of cases/month across 6,911 employees
 Owner: HR Shared Services Manager
 Participants: HRSS team, Employees, Managers, HR Business Partners, Subject experts
 Source: workflow W3329 — Employee Service Center (HR Helpdesk) Case Intake, Triage &amp; Resolution</bpmn:documentation>
@@ -75,7 +75,7 @@ Owner: HR Shared Services Manager</bpmn:text>
     <bpmn:process id="W_W3330" name="W3330. Employee Self-Service (ESS) &amp; Manager Self-Service (MSS) Portal Operations" isExecutable="false">
       <bpmn:documentation>Trigger: Continuous portal use; release/enhancement
 Frequency: Continuous
-Volume: 6,918 employees + managers
+Volume: 6,911 employees + managers
 Owner: HR Shared Services Manager
 Participants: HRSS team, HR Technology (links to VS-103.3), IT (links to VS-27), Payroll (links to VS-19.2)
 Source: workflow W3330 — Employee Self-Service (ESS) &amp; Manager Self-Service (MSS) Portal Operations</bpmn:documentation>
@@ -303,7 +303,7 @@ Owner: HR Shared Services Manager</bpmn:text>
     <bpmn:process id="W_W3333" name="W3333. Employee Document Management, e-Signature &amp; HR Records" isExecutable="false">
       <bpmn:documentation>Trigger: Hire; policy acknowledgment; contract update; audit
 Frequency: Continuous
-Volume: 6,918 employee files + lifecycle documents
+Volume: 6,911 employee files + lifecycle documents
 Owner: HR Shared Services Manager
 Participants: HRSS team, Records (links to VS-88), Legal (links to VS-100), Data Privacy (links to VS-91), IT (links to VS-27)
 Source: workflow W3333 — Employee Document Management, e-Signature &amp; HR Records</bpmn:documentation>

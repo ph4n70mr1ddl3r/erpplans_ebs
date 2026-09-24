@@ -244,7 +244,7 @@ Source: workflow W2577 — HR Shared Services Cost Allocation</bpmn:documentatio
         <bpmn:outgoing>W2577_Flow11</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:userTask id="W2577_Task5" name="HR Finance Analyst compiles shared HR costs: payroll processing (semi-monthly…">
-        <bpmn:documentation>Step 1: HR Finance Analyst compiles shared HR costs: payroll processing (semi-monthly runs for 6,918 employees across 5 entities), recruitment shared services, training and development, benefits administration, HRIS system costs; separates entity-specific costs (entity-specific hiring, entity-specific training)
+        <bpmn:documentation>Step 1: HR Finance Analyst compiles shared HR costs: payroll processing (semi-monthly runs for 6,911 employees across 5 entities), recruitment shared services, training and development, benefits administration, HRIS system costs; separates entity-specific costs (entity-specific hiring, entity-specific training)
 Responsible (R): HR Finance Analyst
 Accountable (A): Finance Controller
 Duration: 1–2 days</bpmn:documentation>

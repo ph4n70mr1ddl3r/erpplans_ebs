@@ -3,7 +3,7 @@
     <bpmn:process id="W_W2865" name="W2865. Employee Assistance Program (EAP) Provision &amp; Confidential Counseling" isExecutable="false">
       <bpmn:documentation>Trigger: Employee self-referral or manager referral
 Frequency: Continuous; ~2–5% utilization/year
-Volume: ~6,918 employees + dependents
+Volume: ~6,911 employees + dependents
 Owner: EAP Manager
 Participants: EAP Mgr, EAP Provider, HR, OH Nurse
 Source: workflow W2865 — Employee Assistance Program (EAP) Provision &amp; Confidential Counseling</bpmn:documentation>
@@ -315,7 +315,7 @@ Owner: OH Nurse Manager</bpmn:text>
     <bpmn:process id="W_W2869" name="W2869. Lifestyle Disease (Diabetes/Hypertension) Management &amp; Screening" isExecutable="false">
       <bpmn:documentation>Trigger: Annual APE finding or wellness campaign
 Frequency: Annual screening + ongoing management
-Volume: ~6,918 employees
+Volume: ~6,911 employees
 Owner: OH Nurse
 Participants: OH Nurse, Company Physician, HMO, Employee
 Source: workflow W2869 — Lifestyle Disease (Diabetes/Hypertension) Management &amp; Screening</bpmn:documentation>
@@ -390,7 +390,7 @@ Owner: OH Nurse</bpmn:text>
     <bpmn:process id="W_W2870" name="W2870. Nutrition, Fitness &amp; Workplace Wellness Campaign" isExecutable="false">
       <bpmn:documentation>Trigger: Annual wellness calendar
 Frequency: Quarterly campaigns
-Volume: ~6,918 employees
+Volume: ~6,911 employees
 Owner: HR Wellness Coordinator
 Participants: Wellness Coord, HR, Marketing, OH Nurse
 Source: workflow W2870 — Nutrition, Fitness &amp; Workplace Wellness Campaign</bpmn:documentation>
@@ -621,7 +621,7 @@ Owner: HR Analytics Lead</bpmn:text>
     <bpmn:process id="W_W5502" name="W5502. Employee Financial Wellness Program — Literacy Education, Salary-Linked Lender Governance &amp; Debt-Stress Support" isExecutable="false">
       <bpmn:documentation>Trigger: (a) Program design/review cycle; (b) salary-linked lender onboarding or deduction-authorization request; (c) debt-distress indicators (EAP case mix, deduction-load spikes, post-calamity advance surges)
 Frequency: Education campaigns quarterly; lender-governance review annual; counseling continuous via EAP; deduction operations continuous
-Volume: 6,918 employees; Philippine salary-linked lending context (registered lending companies, digital salary-deduction apps, informal &#x27;5-6&#x27; exposure) makes deduction-load a chain-wide indicator — anonymized payroll data shows the concurrent-deduction distribution across ~200 stores/4 DCs/HQ; EAP financial-stress cases route from W2865
+Volume: 6,911 employees; Philippine salary-linked lending context (registered lending companies, digital salary-deduction apps, informal &#x27;5-6&#x27; exposure) makes deduction-load a chain-wide indicator — anonymized payroll data shows the concurrent-deduction distribution across ~200 stores/4 DCs/HQ; EAP financial-stress cases route from W2865
 Owner: EAP Manager
 Participants: HR Manager, Benefits (VS-102), Payroll (VS-19.2), Legal, IT/LMS (VS-19.4 training delivery), external financial-education provider, accredited credit counselors, LP/VS-125 (aggregate risk-indicator interface only)
 Source: workflow W5502 — Employee Financial Wellness Program — Literacy Education, Salary-Linked Lender Governance &amp; Debt-Stress Support</bpmn:documentation>

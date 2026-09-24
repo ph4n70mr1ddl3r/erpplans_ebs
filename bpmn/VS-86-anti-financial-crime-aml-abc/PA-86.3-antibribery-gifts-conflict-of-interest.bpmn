@@ -3,7 +3,7 @@
     <bpmn:process id="W_W2937" name="W2937. ABC Policy Maintenance, Risk Assessment &amp; Training" isExecutable="false">
       <bpmn:documentation>Trigger: Annual cycle or regulatory update
 Frequency: Annual
-Volume: ~6,918 employees; high-risk roles
+Volume: ~6,911 employees; high-risk roles
 Owner: Compliance Officer
 Participants: Compliance, Legal, HR, Training
 Source: workflow W2937 — ABC Policy Maintenance, Risk Assessment &amp; Training</bpmn:documentation>

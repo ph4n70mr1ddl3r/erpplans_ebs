@@ -3,7 +3,7 @@
     <bpmn:process id="W_W4865" name="W4865. Workforce Vetting &amp; Background-Screening Program Strategy &amp; Operating Model" isExecutable="false">
       <bpmn:documentation>Trigger: Program launch; annual HR/security strategy review; major insider-risk event; regulatory change
 Frequency: Annual + on trigger
-Volume: 1 group program; ~6,918 employees + contingent + vendor personnel + executives
+Volume: 1 group program; ~6,911 employees + contingent + vendor personnel + executives
 Owner: CHRO / Chief Compliance &amp; Security Officer / Screening Program Manager
 Participants: HR (VS-19/121), Security (VS-159), LP (VS-23), Legal (VS-100.3), Privacy (VS-91), Contingent Workforce (VS-98)
 Source: workflow W4865 — Workforce Vetting &amp; Background-Screening Program Strategy &amp; Operating Model</bpmn:documentation>

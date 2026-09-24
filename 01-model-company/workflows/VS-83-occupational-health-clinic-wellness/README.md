@@ -7,7 +7,7 @@
 ## Overview
 
 Occupational Health, Safety Clinic & Employee Wellness workflows for BuildRight Depot Corp. —
-covering the company-wide occupational health program for 6,918 employees across 200 stores,
+covering the company-wide occupational health program for 6,911 employees across 200 stores,
 4 DCs, and HQ. This includes in-store/DC clinic operations, pre-employment and annual medical
 examination (APE), DOLE-mandated OHS reporting, mental health (RA 11036) and Employee
 Assistance Program (EAP), disease surveillance, ergonomics, and wellness.

@@ -450,7 +450,7 @@ Owner: Sustainability Lead</bpmn:text>
     <bpmn:process id="W_W1331" name="W1331. Employee Volunteer Program Management, Tracking &amp; Impact Measurement" isExecutable="false">
       <bpmn:documentation>Trigger: Annual CSR calendar planning; quarterly volunteer event scheduling; or disaster relief activation requiring employee volunteer deployment
 Frequency: ~4–6 organized volunteer events per year (company-wide); ~1–2 local events per store per year; ad-hoc disaster relief deployment
-Volume: Target: 40% employee participation rate (2,700 of 6,918 employees volunteer at least once per year); ~8,000–10,000 volunteer hours/year
+Volume: Target: 40% employee participation rate (2,700 of 6,911 employees volunteer at least once per year); ~8,000–10,000 volunteer hours/year
 Owner: CSR Coordinator (within Marketing/HR)
 Participants: CHRO, Store Manager (local event coordination), NGO Partner, Department Heads (team participation), Sustainability Lead (impact measurement)
 Source: workflow W1331 — Employee Volunteer Program Management, Tracking &amp; Impact Measurement</bpmn:documentation>
@@ -695,7 +695,7 @@ Source: workflow W1333 — Stakeholder Engagement Matrix &amp; Materiality Asses
         <bpmn:outgoing>W1333_Flow13</bpmn:outgoing>
       </bpmn:startEvent>
       <bpmn:userTask id="W1333_Task4" name="Stakeholder identification &amp; mapping">
-        <bpmn:documentation>Step 1: Stakeholder identification &amp; mapping: Sustainability Lead updates stakeholder engagement matrix: (a) identify all stakeholder groups: (i) shareholders/owners, (ii) employees (6,918), (iii) customers (B2C, B2B, trade), (iv) vendors/suppliers (~800–1,000), (v) government/regulators (BIR, DENR, DOLE, SEC, LGU), (vi) communities (200 store locations), (vii) lenders/banks, (viii) insurance partners, (ix) industry associations, (x) media, (xi) NGOs/civil society, (xii) academic institutions; (b) classify stakeholders by: influence (ability to affect BuildRight&#x27;s operations), impact (degree to which BuildRight affects them), proximity (direct vs. indirect relationship); (c) map stakeholders on a 2×2 matrix: high influence/high impact (priority engagement), high influence/low impact (keep satisfied), low influence/high impact (keep informed), low influence/low impact (monitor)
+        <bpmn:documentation>Step 1: Stakeholder identification &amp; mapping: Sustainability Lead updates stakeholder engagement matrix: (a) identify all stakeholder groups: (i) shareholders/owners, (ii) employees (6,911), (iii) customers (B2C, B2B, trade), (iv) vendors/suppliers (~800–1,000), (v) government/regulators (BIR, DENR, DOLE, SEC, LGU), (vi) communities (200 store locations), (vii) lenders/banks, (viii) insurance partners, (ix) industry associations, (x) media, (xi) NGOs/civil society, (xii) academic institutions; (b) classify stakeholders by: influence (ability to affect BuildRight&#x27;s operations), impact (degree to which BuildRight affects them), proximity (direct vs. indirect relationship); (c) map stakeholders on a 2×2 matrix: high influence/high impact (priority engagement), high influence/low impact (keep satisfied), low influence/high impact (keep informed), low influence/low impact (monitor)
 Responsible (R): Sustainability Lead
 Accountable (A): VP Legal
 Duration: 2–3 days</bpmn:documentation>

@@ -54,11 +54,12 @@ PROFILE = os.path.join(REPO, "01-model-company", "model-company-profile.md")
 # canonical §3.3 HQ department totals (spot anchors used by prose claims)
 # Re-based 2026-09-14 to the PROMOTED structure of record (TO v2.3 / profile
 # v3.1 §3.3: HQ 532 (2026-09-18 actual-org gap-fill; the 2026-09-14 promotion figure was 511); IT 122 per the 17-team product model, OM v3.13).
-RETIRED_HC_CANON = "6,932|6,925"   # 6,932 retired 2026-09-23 (x): Trade / Account Management
-# disabled — prepared (registry CAP-B01); 6,925 retired 2026-09-23 (ad): the IT estate's
-# TPS build squad deferred — prepared (sourcing register §4 amendment). The ACTIVE employee
-# canon is 6,918 (HQ 518 active of the 532-role design). Version footers and dated history
-# lines are exempt.
+RETIRED_HC_CANON = "6,932|6,925|6,918"   # 6,932 retired 2026-09-23 (x): Trade / Account Management
+# disabled — prepared (registry CAP-B01); 6,925 retired 2026-09-23 (ad) and 6,918 retired
+# 2026-09-23 (ah): the IT estate's TPS and OMO build squads deferred — prepared (sourcing
+# register §4 amendments — routing is deterministic BOPIS, every sale a regular POS sale).
+# The ACTIVE employee canon is 6,911 (HQ 511 active of the 532-role design). Version footers
+# and dated history lines are exempt.
 
 # 2026-09-23 seventy-ninth-wave review: the (x) sweep's own residue — live
 # population cells still sizing off the RETIRED HQ-ACTIVE canon (532) after the
@@ -81,45 +82,56 @@ RETIRED_HQ_ACTIVE_FORMS = [
     "total HQ = 532",
     "532 HQ total",
     "532 HQ headcount",
+    "~518 staff",
+    "518 HQ staff",
+    "518 HQ +",
+    "+ ~518 HQ",
+    "total HQ = 518",
+    "518 HQ total",
+    "518 HQ headcount",
 ]
 REQ_HQ_ACTIVE_ANCHORS = [
     ("PA-19.3-workforce-management.md",
-     "HQ corporate functions (~518 active staff, profile §3.3/§11.1"),
+     "HQ corporate functions (~511 active staff, profile §3.3/§11.1"),
     ("PA-19.3-workforce-management.md",
-     "Trade / Account Management disabled — prepared 2026-09-23 (x) and the "
-     "TPS build squad deferred — prepared (ad), sourcing register §4, "
+     "Trade / Account Management disabled — prepared 2026-09-23 (x), the "
+     "TPS build squad deferred — prepared (ad) and the OMO build squad "
+     "deferred — prepared (ah), sourcing register §4 amendments, "
      "registry CAP-B01"),
     ("PA-40.2-project-cost-tracking.md",
-     "Holdings/HQ: ~518 active per profile §3.3/§11.1"),
+     "Holdings/HQ: ~511 active per profile §3.3/§11.1"),
     ("PA-40.2-project-cost-tracking.md",
      "the TO's 532-role design retains the disabled—prepared Trade "
-     "department — 2026-09-23 (x) — and the deferred—prepared TPS build "
-     "squad — 2026-09-23 (ad)"),
+     "department — 2026-09-23 (x) — and the deferred—prepared TPS and OMO "
+     "build squads — 2026-09-23 (ad)/(ah)"),
     ("PA-138.2-hard-and-soft-fm-service-operations.md",
-     "HQ (~518 active staff, profile §3.3"),
+     "HQ (~511 active staff, profile §3.3"),
     ("PA-138.2-hard-and-soft-fm-service-operations.md",
      "the TO's 532-role design retains the disabled—prepared Trade "
-     "department and the deferred—prepared TPS build squad"),
+     "department and the deferred—prepared TPS and OMO build squads"),
     ("PA-72.3-shared-services-performance-analytics.md",
-     "~518 active HQ staff across shared services"),
+     "~511 active HQ staff across shared services"),
     ("PA-72.3-shared-services-performance-analytics.md",
-     "Trade / Account Management disabled — prepared 2026-09-23 (x) and the "
-     "TPS build squad deferred — prepared (ad), sourcing register §4, "
+     "Trade / Account Management disabled — prepared 2026-09-23 (x), the "
+     "TPS build squad deferred — prepared (ad) and the OMO build squad "
+     "deferred — prepared (ah), sourcing register §4 amendments, "
      "registry CAP-B01"),
     ("PA-34.1-non-merchandise-procurement.md",
-     "518 active HQ + DC office staff"),
+     "511 active HQ + DC office staff"),
     ("PA-34.1-non-merchandise-procurement.md",
      "the TO's 532-role design retains the disabled—prepared Trade "
-     "department and the deferred—prepared TPS build squad"),
+     "department and the deferred—prepared TPS and OMO build squads"),
     ("PA-22.1-regulatory-permits-and-licenses.md",
-     "the active org is **HQ 518**"),
+     "the active org is **HQ 511**"),
     ("PA-22.1-regulatory-permits-and-licenses.md",
-     "active HQ 518, the design register's 532 retained"),
+     "the 2026-09-23 (ah) direction deferred the OMO build squad (7) — "
+     "prepared with every sale completing as a regular POS sale"),
     ("PA-13.1-customer-support-and-complaints.md",
-     "518 active of the 532-role design"),
+     "511 active of the 532-role design"),
     ("PA-13.1-customer-support-and-complaints.md",
-     "the disabled—prepared Trade department's 7 and the deferred—prepared "
-     "TPS build squad's 7 both retained in the design"),
+     "the disabled—prepared Trade department's 7, the deferred—prepared "
+     "TPS build squad's 7 and the deferred—prepared OMO build squad's 7 "
+     "all retained in the design"),
 ]
 # 2026-09-23 eighty-fifth-wave review: the (ad) sweep's own annotation residue —
 # seven live cells pair the 518/6,918 active canon with a design annotation
@@ -133,10 +145,14 @@ RETIRED_SINGLE_DEFERRAL_FORMS = [
     "retains the disabled—prepared Trade department)",
     "Trade department — 2026-09-23 (x); promoted",
     "disabled — prepared 2026-09-23, registry CAP-B01",
+    "and the deferred—prepared TPS build squad)",
+    "and the deferred—prepared TPS build squad — 2026-09-23 (ad)",
 ]
 REQ_HQ_ACTIVE_README_ANCHORS = [
     ("VS-169-employee-uniform-workwear-and-ppe-issuance-program/README.md",
-     "~518 HQ active"),
+     "~511 HQ active"),
+    ("VS-169-employee-uniform-workwear-and-ppe-issuance-program/README.md",
+     "the deferred—prepared TPS and OMO build squads (ad)/(ah)"),
 ]
 
 DEPT_TOTALS = {

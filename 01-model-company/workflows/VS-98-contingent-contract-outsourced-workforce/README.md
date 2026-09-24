@@ -10,7 +10,7 @@ Contingent, Contract & Outsourced Workforce Management workflows for BuildRight 
 governing the **non-employee labor** that supports operations across 200 stores, 4 DCs, and HQ:
 outsourced **security guards, janitorial/cleaning crews, promodizers, merchandising/service crews,
 construction labor (for store build and fit-out per VS-20.2/VS-37), delivery helpers (3PL per
-VS-06/VS-56), IT/project contractors, and seasonal/agency workers** beyond BuildRight's 6,918
+VS-06/VS-56), IT/project contractors, and seasonal/agency workers** beyond BuildRight's 6,911
 direct hires. This is the "integrated workforce" component that complements VS-19 (employees) and
 VS-34 (service-provider/vendor contracts).
 
