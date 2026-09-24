@@ -7,125 +7,126 @@ Volume: Primary sourcing from China, Vietnam, Thailand, and Europe
 Owner: Import Coordinator
 Participants: Buyer, Import Coordinator, Freight Forwarder, Customs Broker, Finance, DC Receiving, Import Documentation Specialist
 Source: workflow W144 — International Logistics &amp; Import Operations</bpmn:documentation>
-      <bpmn:laneSet id="W144_LaneSet7">
+      <bpmn:laneSet id="W144_LaneSet8">
         <bpmn:lane id="W144_Lane1" name="Buyer">
-        <bpmn:flowNodeRef>W144_Task9</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W144_Start8</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W144_Task10</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W144_Start9</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W144_Lane2" name="Finance">
-        <bpmn:flowNodeRef>W144_Task10</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W144_Task15</bpmn:flowNodeRef>
-        </bpmn:lane>
-        <bpmn:lane id="W144_Lane3" name="Import Coordinator">
         <bpmn:flowNodeRef>W144_Task11</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W144_Task12</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W144_Task13</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W144_Task16</bpmn:flowNodeRef>
         </bpmn:lane>
-        <bpmn:lane id="W144_Lane4" name="Customs Broker">
+        <bpmn:lane id="W144_Lane3" name="Import Coordinator">
+        <bpmn:flowNodeRef>W144_Task12</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W144_Task14</bpmn:flowNodeRef>
-        </bpmn:lane>
-        <bpmn:lane id="W144_Lane5" name="DC Receiving">
         <bpmn:flowNodeRef>W144_Task17</bpmn:flowNodeRef>
         </bpmn:lane>
-        <bpmn:lane id="W144_Lane6" name="System">
+        <bpmn:lane id="W144_Lane4" name="Import Coordinator, Import Documentation…">
+        <bpmn:flowNodeRef>W144_Task13</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W144_Lane5" name="Customs Broker">
+        <bpmn:flowNodeRef>W144_Task15</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W144_Lane6" name="DC Receiving">
         <bpmn:flowNodeRef>W144_Task18</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W144_End19</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W144_Lane7" name="System">
+        <bpmn:flowNodeRef>W144_Task19</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W144_End20</bpmn:flowNodeRef>
         </bpmn:lane>
       </bpmn:laneSet>
-      <bpmn:startEvent id="W144_Start8" name="Import Purchase Order (W2B) approved and sent to overseas vendor">
-        <bpmn:outgoing>W144_Flow22</bpmn:outgoing>
+      <bpmn:startEvent id="W144_Start9" name="Import Purchase Order (W2B) approved and sent to overseas vendor">
+        <bpmn:outgoing>W144_Flow23</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:userTask id="W144_Task9" name="Proforma Invoice (PI) Review">
+      <bpmn:userTask id="W144_Task10" name="Proforma Invoice (PI) Review">
         <bpmn:documentation>Step 1: Proforma Invoice (PI) Review: Receive PI from vendor; verify against PO (W2B); check payment terms (L/C, T/T, CAD)
 Responsible (R): Buyer
 Accountable (A): Category Manager
 Duration: 1 hour</bpmn:documentation>
-        <bpmn:incoming>W144_Flow22</bpmn:incoming>
-        <bpmn:outgoing>W144_Flow23</bpmn:outgoing>
+        <bpmn:incoming>W144_Flow23</bpmn:incoming>
+        <bpmn:outgoing>W144_Flow24</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W144_Task10" name="L/C Opening (if applicable)">
+      <bpmn:userTask id="W144_Task11" name="L/C Opening (if applicable)">
         <bpmn:documentation>Step 2: L/C Opening (if applicable): Finance coordinates with Bank to open Letter of Credit; sends L/C to vendor bank
 Responsible (R): Finance (Treasury)
 Accountable (A): CFO
 Duration: 2–3 days</bpmn:documentation>
-        <bpmn:incoming>W144_Flow23</bpmn:incoming>
-        <bpmn:outgoing>W144_Flow24</bpmn:outgoing>
+        <bpmn:incoming>W144_Flow24</bpmn:incoming>
+        <bpmn:outgoing>W144_Flow25</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W144_Task11" name="Production &amp; Booking">
+      <bpmn:userTask id="W144_Task12" name="Production &amp; Booking">
         <bpmn:documentation>Step 3: Production &amp; Booking: Vendor confirms production completion; Import Coordinator coordinates with Freight Forwarder for vessel booking (FCL/LCL)
 Responsible (R): Import Coordinator
 Accountable (A): —
 Duration: 2–5 days</bpmn:documentation>
-        <bpmn:incoming>W144_Flow24</bpmn:incoming>
-        <bpmn:outgoing>W144_Flow25</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:userTask id="W144_Task12" name="Shipping Documents">
-        <bpmn:documentation>Step 4: Shipping Documents: Receive set of documents: Bill of Lading (B/L), Commercial Invoice, Packing List, Certificate of Origin (for FTA benefits like ATIGA/ACFTA)
-Responsible (R): Import Coordinator
-Accountable (A): —
-Duration: 1 day</bpmn:documentation>
         <bpmn:incoming>W144_Flow25</bpmn:incoming>
         <bpmn:outgoing>W144_Flow26</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W144_Task13" name="In-Transit Tracking">
+      <bpmn:userTask id="W144_Task13" name="Shipping Documents">
+        <bpmn:documentation>Step 4: Shipping Documents: Receive set of documents: Bill of Lading (B/L), Commercial Invoice, Packing List, Certificate of Origin (for FTA benefits like ATIGA/ACFTA)
+Responsible (R): Import Coordinator, Import Documentation Specialist
+Accountable (A): —
+Duration: 1 day</bpmn:documentation>
+        <bpmn:incoming>W144_Flow26</bpmn:incoming>
+        <bpmn:outgoing>W144_Flow27</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W144_Task14" name="In-Transit Tracking">
         <bpmn:documentation>Step 5: In-Transit Tracking: Update system with vessel name, container ID, and ETA; monitor &quot;Estimated vs. Actual&quot; arrival dates
 Responsible (R): Import Coordinator
 Accountable (A): —
 Duration: Ongoing</bpmn:documentation>
-        <bpmn:incoming>W144_Flow26</bpmn:incoming>
-        <bpmn:outgoing>W144_Flow27</bpmn:outgoing>
+        <bpmn:incoming>W144_Flow27</bpmn:incoming>
+        <bpmn:outgoing>W144_Flow28</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W144_Task14" name="Customs Entry">
+      <bpmn:userTask id="W144_Task15" name="Customs Entry">
         <bpmn:documentation>Step 6: Customs Entry: Customs Broker files entry via BOC E2M system; calculates Duties &amp; Taxes (VAT + Import Duty)
 Responsible (R): Customs Broker
 Accountable (A): Import Coordinator
 Duration: 1–2 days</bpmn:documentation>
-        <bpmn:incoming>W144_Flow27</bpmn:incoming>
-        <bpmn:outgoing>W144_Flow28</bpmn:outgoing>
+        <bpmn:incoming>W144_Flow28</bpmn:incoming>
+        <bpmn:outgoing>W144_Flow29</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W144_Task15" name="Payment of Duties">
+      <bpmn:userTask id="W144_Task16" name="Payment of Duties">
         <bpmn:documentation>Step 7: Payment of Duties: Finance processes payment of duties/taxes to BOC via bank portal; system records as &quot;Inventory in Transit&quot; cost component
 Responsible (R): Finance
 Accountable (A): Controller
 Duration: 4 hours</bpmn:documentation>
-        <bpmn:incoming>W144_Flow28</bpmn:incoming>
-        <bpmn:outgoing>W144_Flow29</bpmn:outgoing>
+        <bpmn:incoming>W144_Flow29</bpmn:incoming>
+        <bpmn:outgoing>W144_Flow30</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W144_Task16" name="Release &amp; Haulage">
+      <bpmn:userTask id="W144_Task17" name="Release &amp; Haulage">
         <bpmn:documentation>Step 8: Release &amp; Haulage: BOC releases cargo; Forwarder coordinates haulage from Port to DC; monitor &quot;Port Out&quot; to avoid demurrage/detention fees
 Responsible (R): Import Coordinator
 Accountable (A): DC Manager
 Duration: 1–3 days</bpmn:documentation>
-        <bpmn:incoming>W144_Flow29</bpmn:incoming>
-        <bpmn:outgoing>W144_Flow30</bpmn:outgoing>
+        <bpmn:incoming>W144_Flow30</bpmn:incoming>
+        <bpmn:outgoing>W144_Flow31</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W144_Task17" name="DC Arrival &amp; Stripping">
+      <bpmn:userTask id="W144_Task18" name="DC Arrival &amp; Stripping">
         <bpmn:documentation>Step 9: DC Arrival &amp; Stripping: DC receives container; verifies seal integrity; strips container and performs &quot;Blind Count&quot; against Packing List
 Responsible (R): DC Receiving
 Accountable (A): DC Manager
 Duration: 4 hours</bpmn:documentation>
-        <bpmn:incoming>W144_Flow30</bpmn:incoming>
-        <bpmn:outgoing>W144_Flow31</bpmn:outgoing>
+        <bpmn:incoming>W144_Flow31</bpmn:incoming>
+        <bpmn:outgoing>W144_Flow32</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:serviceTask id="W144_Task18" name="Cost Finalization">
+      <bpmn:serviceTask id="W144_Task19" name="Cost Finalization">
         <bpmn:documentation>Step 10: Cost Finalization: System aggregates all landed costs (Product + Freight + Duties + Brokerage + Wharfage) to calculate final Landed WAC
 Responsible (R): System / Finance
 Accountable (A): Cost Accountant
 Duration: Automated</bpmn:documentation>
-        <bpmn:incoming>W144_Flow31</bpmn:incoming>
-        <bpmn:outgoing>W144_Flow32</bpmn:outgoing>
-      </bpmn:serviceTask>
-      <bpmn:endEvent id="W144_End19" name="Complete">
         <bpmn:incoming>W144_Flow32</bpmn:incoming>
+        <bpmn:outgoing>W144_Flow33</bpmn:outgoing>
+      </bpmn:serviceTask>
+      <bpmn:endEvent id="W144_End20" name="Complete">
+        <bpmn:incoming>W144_Flow33</bpmn:incoming>
       </bpmn:endEvent>
-      <bpmn:textAnnotation id="W144_Annotation20">
+      <bpmn:textAnnotation id="W144_Annotation21">
         <bpmn:text>Controls: - CTL-244 (ensure controlled execution — Import &amp; Customs Operations (PA-02.2).) | - operational: processing times vary widely
 Owner: Import Coordinator</bpmn:text>
       </bpmn:textAnnotation>
-      <bpmn:association id="W144_Assoc21" sourceRef="W144_Annotation20" targetRef="W144_Start8" associationDirection="None" />
-      <bpmn:sequenceFlow id="W144_Flow22" sourceRef="W144_Start8" targetRef="W144_Task9" />
-      <bpmn:sequenceFlow id="W144_Flow23" sourceRef="W144_Task9" targetRef="W144_Task10" />
+      <bpmn:association id="W144_Assoc22" sourceRef="W144_Annotation21" targetRef="W144_Start9" associationDirection="None" />
+      <bpmn:sequenceFlow id="W144_Flow23" sourceRef="W144_Start9" targetRef="W144_Task10" />
       <bpmn:sequenceFlow id="W144_Flow24" sourceRef="W144_Task10" targetRef="W144_Task11" />
       <bpmn:sequenceFlow id="W144_Flow25" sourceRef="W144_Task11" targetRef="W144_Task12" />
       <bpmn:sequenceFlow id="W144_Flow26" sourceRef="W144_Task12" targetRef="W144_Task13" />
@@ -134,7 +135,8 @@ Owner: Import Coordinator</bpmn:text>
       <bpmn:sequenceFlow id="W144_Flow29" sourceRef="W144_Task15" targetRef="W144_Task16" />
       <bpmn:sequenceFlow id="W144_Flow30" sourceRef="W144_Task16" targetRef="W144_Task17" />
       <bpmn:sequenceFlow id="W144_Flow31" sourceRef="W144_Task17" targetRef="W144_Task18" />
-      <bpmn:sequenceFlow id="W144_Flow32" sourceRef="W144_Task18" targetRef="W144_End19" />
+      <bpmn:sequenceFlow id="W144_Flow32" sourceRef="W144_Task18" targetRef="W144_Task19" />
+      <bpmn:sequenceFlow id="W144_Flow33" sourceRef="W144_Task19" targetRef="W144_End20" />
     </bpmn:process>
     <bpmndi:BPMNDiagram id="W144_diag">
       <bpmndi:BPMNPlane id="W144_plane" bpmnElement="W_W144">
@@ -144,31 +146,32 @@ Owner: Import Coordinator</bpmn:text>
         <bpmndi:BPMNShape id="W144_Lane4_di" bpmnElement="W144_Lane4" isHorizontal="true"><dc:Bounds x="160" y="590" width="2420" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W144_Lane5_di" bpmnElement="W144_Lane5" isHorizontal="true"><dc:Bounds x="160" y="760" width="2420" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W144_Lane6_di" bpmnElement="W144_Lane6" isHorizontal="true"><dc:Bounds x="160" y="930" width="2420" height="170" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W144_Task9_di" bpmnElement="W144_Task9"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W144_Task10_di" bpmnElement="W144_Task10"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W144_Task11_di" bpmnElement="W144_Task11"><dc:Bounds x="820" y="465" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W144_Task12_di" bpmnElement="W144_Task12"><dc:Bounds x="1030" y="465" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W144_Task13_di" bpmnElement="W144_Task13"><dc:Bounds x="1240" y="465" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W144_Task14_di" bpmnElement="W144_Task14"><dc:Bounds x="1450" y="635" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W144_Task15_di" bpmnElement="W144_Task15"><dc:Bounds x="1660" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W144_Task16_di" bpmnElement="W144_Task16"><dc:Bounds x="1870" y="465" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W144_Task17_di" bpmnElement="W144_Task17"><dc:Bounds x="2080" y="805" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W144_Task18_di" bpmnElement="W144_Task18"><dc:Bounds x="2290" y="975" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W144_Start8_di" bpmnElement="W144_Start8"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W144_End19_di" bpmnElement="W144_End19"><dc:Bounds x="2520" y="997" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W144_Annotation20_di" bpmnElement="W144_Annotation20"><dc:Bounds x="160" y="1140" width="360" height="60" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNEdge id="W144_Flow22_di" bpmnElement="W144_Flow22"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W144_Flow23_di" bpmnElement="W144_Flow23"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W144_Flow24_di" bpmnElement="W144_Flow24"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W144_Flow25_di" bpmnElement="W144_Flow25"><di:waypoint x="1000" y="505" /><di:waypoint x="1030" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W144_Flow26_di" bpmnElement="W144_Flow26"><di:waypoint x="1210" y="505" /><di:waypoint x="1240" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W144_Flow27_di" bpmnElement="W144_Flow27"><di:waypoint x="1420" y="505" /><di:waypoint x="1450" y="675" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W144_Flow28_di" bpmnElement="W144_Flow28"><di:waypoint x="1630" y="675" /><di:waypoint x="1660" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W144_Flow29_di" bpmnElement="W144_Flow29"><di:waypoint x="1840" y="335" /><di:waypoint x="1870" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W144_Flow30_di" bpmnElement="W144_Flow30"><di:waypoint x="2050" y="505" /><di:waypoint x="2080" y="845" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W144_Flow31_di" bpmnElement="W144_Flow31"><di:waypoint x="2260" y="845" /><di:waypoint x="2290" y="1015" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W144_Flow32_di" bpmnElement="W144_Flow32"><di:waypoint x="2470" y="1015" /><di:waypoint x="2520" y="1015" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W144_Assoc21_di" bpmnElement="W144_Assoc21"><di:waypoint x="340" y="1140" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNShape id="W144_Lane7_di" bpmnElement="W144_Lane7" isHorizontal="true"><dc:Bounds x="160" y="1100" width="2420" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W144_Task10_di" bpmnElement="W144_Task10"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W144_Task11_di" bpmnElement="W144_Task11"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W144_Task12_di" bpmnElement="W144_Task12"><dc:Bounds x="820" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W144_Task13_di" bpmnElement="W144_Task13"><dc:Bounds x="1030" y="635" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W144_Task14_di" bpmnElement="W144_Task14"><dc:Bounds x="1240" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W144_Task15_di" bpmnElement="W144_Task15"><dc:Bounds x="1450" y="805" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W144_Task16_di" bpmnElement="W144_Task16"><dc:Bounds x="1660" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W144_Task17_di" bpmnElement="W144_Task17"><dc:Bounds x="1870" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W144_Task18_di" bpmnElement="W144_Task18"><dc:Bounds x="2080" y="975" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W144_Task19_di" bpmnElement="W144_Task19"><dc:Bounds x="2290" y="1145" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W144_Start9_di" bpmnElement="W144_Start9"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W144_End20_di" bpmnElement="W144_End20"><dc:Bounds x="2520" y="1167" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W144_Annotation21_di" bpmnElement="W144_Annotation21"><dc:Bounds x="160" y="1310" width="360" height="60" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="W144_Flow23_di" bpmnElement="W144_Flow23"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W144_Flow24_di" bpmnElement="W144_Flow24"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W144_Flow25_di" bpmnElement="W144_Flow25"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W144_Flow26_di" bpmnElement="W144_Flow26"><di:waypoint x="1000" y="505" /><di:waypoint x="1030" y="675" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W144_Flow27_di" bpmnElement="W144_Flow27"><di:waypoint x="1210" y="675" /><di:waypoint x="1240" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W144_Flow28_di" bpmnElement="W144_Flow28"><di:waypoint x="1420" y="505" /><di:waypoint x="1450" y="845" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W144_Flow29_di" bpmnElement="W144_Flow29"><di:waypoint x="1630" y="845" /><di:waypoint x="1660" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W144_Flow30_di" bpmnElement="W144_Flow30"><di:waypoint x="1840" y="335" /><di:waypoint x="1870" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W144_Flow31_di" bpmnElement="W144_Flow31"><di:waypoint x="2050" y="505" /><di:waypoint x="2080" y="1015" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W144_Flow32_di" bpmnElement="W144_Flow32"><di:waypoint x="2260" y="1015" /><di:waypoint x="2290" y="1185" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W144_Flow33_di" bpmnElement="W144_Flow33"><di:waypoint x="2470" y="1185" /><di:waypoint x="2520" y="1185" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W144_Assoc22_di" bpmnElement="W144_Assoc22"><di:waypoint x="340" y="1310" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
       </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W191" name="W191. Global Supply Chain — Incoterm &amp; Marine Insurance Tracking" isExecutable="false">

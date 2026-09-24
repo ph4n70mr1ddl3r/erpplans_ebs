@@ -116,7 +116,7 @@ Owner: DC Manager
 Participants: Logistics, Warehouse, 3PL Carrier, Reseller
 Source: workflow W146 — Bulk Fulfillment &amp; Cross-Docking for Wholesale</bpmn:documentation>
       <bpmn:laneSet id="W146_LaneSet7">
-        <bpmn:lane id="W146_Lane1" name="Sales Rep">
+        <bpmn:lane id="W146_Lane1" name="Sales Rep, B2B Support Representative">
         <bpmn:flowNodeRef>W146_Task9</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W146_Start8</bpmn:flowNodeRef>
         </bpmn:lane>
@@ -143,7 +143,7 @@ Source: workflow W146 — Bulk Fulfillment &amp; Cross-Docking for Wholesale</bp
       </bpmn:startEvent>
       <bpmn:userTask id="W146_Task9" name="SO Entry">
         <bpmn:documentation>Step 1: SO Entry: Sales Rep enters wholesale order; system checks DC inventory (skipping store-level pools)
-Responsible (R): Sales Rep
+Responsible (R): Sales Rep, B2B Support Representative
 Accountable (A): B2B Sales Mgr
 Duration: 15 min</bpmn:documentation>
         <bpmn:incoming>W146_Flow19</bpmn:incoming>

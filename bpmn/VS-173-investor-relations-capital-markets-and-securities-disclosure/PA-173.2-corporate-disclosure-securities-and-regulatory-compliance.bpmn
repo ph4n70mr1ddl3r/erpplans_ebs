@@ -21,7 +21,7 @@ Source: workflow W5017 — Corporate Disclosure Controls, Materiality Assessment
       </bpmn:startEvent>
       <bpmn:userTask id="W5017_Task4" name="Operate the disclosure-controls framework: the disclosure committee, the…">
         <bpmn:documentation>Step 1: Operate the disclosure-controls framework: the disclosure committee, the material-information register, the who-can-speak-to-investors policy, the pre-clearance of external statements (earnings W5011, events W5012, ESG W5016), and the evidence/audit trail that every disclosure was reviewed and approved
-Responsible (R): VP IR / Legal / Compliance
+Responsible (R): VP IR / Legal / Compliance, Corporate Secretary Analyst
 Accountable (A): CFO / VP Legal &amp; Compliance
 Duration: Continuous</bpmn:documentation>
         <bpmn:incoming>W5017_Flow10</bpmn:incoming>

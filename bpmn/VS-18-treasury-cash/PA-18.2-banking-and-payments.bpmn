@@ -611,7 +611,7 @@ Source: workflow W1343 — Petty Cash Fund Lifecycle, Custodian Accountability &
       </bpmn:startEvent>
       <bpmn:userTask id="W1343_Task7" name="Petty cash fund establishment">
         <bpmn:documentation>Step 1: Petty cash fund establishment: For new stores per W16 or when existing fund amount is adjusted: (a) Store Manager requests petty cash fund authorization from Regional Manager: proposed amount, justification, (b) standard authorized levels: small stores (PHP 20,000), medium stores (PHP 30,000), large/flagship stores (PHP 50,000), (c) Finance Controller approves fund authorization and sets up petty cash GL account per store, (d) initial funding: Treasury transfers authorized amount to store bank account; Store Manager withdraws cash and secures in store safe per W541, (e) system records petty cash fund: store, authorized amount, custodian (Store Manager), establishment date
-Responsible (R): Store Manager / Finance Controller
+Responsible (R): Store Manager / Finance Controller, Banking &amp; Cash-Management Specialist
 Accountable (A): Regional Manager
 Duration: 1–2 days</bpmn:documentation>
         <bpmn:incoming>W1343_Flow15</bpmn:incoming>

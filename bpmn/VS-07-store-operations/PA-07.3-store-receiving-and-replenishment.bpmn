@@ -1018,13 +1018,12 @@ Volume: ~200–300 shelf replenishment tasks per store per day across 4 departme
 Owner: Stock Associate / Department Lead
 Participants: Stock Associate, Department Supervisor, Store Manager (I), System (task generation)
 Source: workflow W554 — Store-Level Daily Shelf Replenishment &amp; Restocking</bpmn:documentation>
-      <bpmn:laneSet id="W554_LaneSet4">
+      <bpmn:laneSet id="W554_LaneSet5">
         <bpmn:lane id="W554_Lane1" name="System">
-        <bpmn:flowNodeRef>W554_Task6</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W554_Start5</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W554_Task7</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W554_Start6</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W554_Lane2" name="Stock Associate">
-        <bpmn:flowNodeRef>W554_Task7</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W554_Task8</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W554_Task9</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W554_Task10</bpmn:flowNodeRef>
@@ -1035,120 +1034,122 @@ Source: workflow W554 — Store-Level Daily Shelf Replenishment &amp; Restocking
         <bpmn:flowNodeRef>W554_Task15</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W554_Task16</bpmn:flowNodeRef>
         </bpmn:lane>
-        <bpmn:lane id="W554_Lane3" name="Department Supervisor">
+        <bpmn:lane id="W554_Lane3" name="Stock Associate, Replenishment &amp; Allocation…">
         <bpmn:flowNodeRef>W554_Task17</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W554_End18</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W554_Lane4" name="Department Supervisor">
+        <bpmn:flowNodeRef>W554_Task18</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W554_End19</bpmn:flowNodeRef>
         </bpmn:lane>
       </bpmn:laneSet>
-      <bpmn:startEvent id="W554_Start5" name="Store opening / daily restocking schedule generated overnight by ERP">
-        <bpmn:outgoing>W554_Flow21</bpmn:outgoing>
+      <bpmn:startEvent id="W554_Start6" name="Store opening / daily restocking schedule generated overnight by ERP">
+        <bpmn:outgoing>W554_Flow22</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:serviceTask id="W554_Task6" name="System generates replenishment task list">
+      <bpmn:serviceTask id="W554_Task7" name="System generates replenishment task list">
         <bpmn:documentation>Step 1: System generates replenishment task list: overnight ERP calculates replenishment priorities from: (a) POS real-time sales deductions (POS-013) since last replenishment, (b) yesterday&#x27;s receiving putaway (W109) creating new backroom stock, (c) min-shelf-quantity rules per SKU per planogram position, (d) known out-of-shelf conditions flagged by prior day&#x27;s walk (W573); system ranks tasks by department, aisle sequence, and priority (OOS = critical, below min = high, below target = standard); task list pushed to Stock Associate handheld devices before store opening
 Responsible (R): System
 Accountable (A): —
 Duration: Automated (overnight batch)</bpmn:documentation>
-        <bpmn:incoming>W554_Flow21</bpmn:incoming>
-        <bpmn:outgoing>W554_Flow22</bpmn:outgoing>
+        <bpmn:incoming>W554_Flow22</bpmn:incoming>
+        <bpmn:outgoing>W554_Flow23</bpmn:outgoing>
       </bpmn:serviceTask>
-      <bpmn:userTask id="W554_Task7" name="Stock Associate reviews prioritized task list on handheld device">
+      <bpmn:userTask id="W554_Task8" name="Stock Associate reviews prioritized task list on handheld device">
         <bpmn:documentation>Step 2: Stock Associate reviews prioritized task list on handheld device: at store opening, Stock Associate logs into handheld, reviews assigned department task list sorted by priority; confirms task acceptance and estimated completion time; flags any tasks requiring two-person handling (cement bags, plywood, large tiles) for coordination with second Stock Associate
 Responsible (R): Stock Associate
 Accountable (A): Department Supervisor
 Duration: 5–10 min</bpmn:documentation>
-        <bpmn:incoming>W554_Flow22</bpmn:incoming>
-        <bpmn:outgoing>W554_Flow23</bpmn:outgoing>
+        <bpmn:incoming>W554_Flow23</bpmn:incoming>
+        <bpmn:outgoing>W554_Flow24</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W554_Task8" name="Pull pallets/cases from backroom staging area">
+      <bpmn:userTask id="W554_Task9" name="Pull pallets/cases from backroom staging area">
         <bpmn:documentation>Step 3: Pull pallets/cases from backroom staging area: Stock Associate proceeds to backroom; locates staged pallets/cases per task list (organized by department from W109 putaway); scans bin location barcode to confirm correct product; verifies product condition (no damage, no water exposure for yard-accessible backroom areas); loads pallet jack or push cart with task-assigned quantities
 Responsible (R): Stock Associate
 Accountable (A): —
 Duration: 15–20 min per trip</bpmn:documentation>
-        <bpmn:incoming>W554_Flow23</bpmn:incoming>
-        <bpmn:outgoing>W554_Flow24</bpmn:outgoing>
+        <bpmn:incoming>W554_Flow24</bpmn:incoming>
+        <bpmn:outgoing>W554_Flow25</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W554_Task9" name="Transport to department floor location">
+      <bpmn:userTask id="W554_Task10" name="Transport to department floor location">
         <bpmn:documentation>Step 4: Transport to department floor location: Stock Associate transports loaded pallet jack/cart from backroom through stockroom door to assigned department aisle; navigates around customer traffic (store is open or opening); for heavy items requiring forklift (yard area lumber/plywood): only certified operators per W171 safety protocol; secures pallet/cart in designated staging spot in aisle (not blocking customer path)
 Responsible (R): Stock Associate
 Accountable (A): —
 Duration: 5–10 min per trip</bpmn:documentation>
-        <bpmn:incoming>W554_Flow24</bpmn:incoming>
-        <bpmn:outgoing>W554_Flow25</bpmn:outgoing>
+        <bpmn:incoming>W554_Flow25</bpmn:incoming>
+        <bpmn:outgoing>W554_Flow26</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W554_Task10" name="Shelf replenishment per planogram position">
+      <bpmn:userTask id="W554_Task11" name="Shelf replenishment per planogram position">
         <bpmn:documentation>Step 5: Shelf replenishment per planogram position: Stock Associate places product on shelf per planogram: (a) check planogram image on handheld for correct position, (b) forward-fill existing stock to front of shelf (facing), (c) place new stock behind existing (FIFO — first in, first out for most items), (d) for FEFO items (paint, chemicals, adhesives with expiry): rotate stock to place earliest expiry at front, (e) for heavy items (cement, tiles): stack safely within weight limits per shelf rating label; verify shelf capacity not exceeded
 Responsible (R): Stock Associate
 Accountable (A): —
 Duration: 2–5 min per SKU position</bpmn:documentation>
-        <bpmn:incoming>W554_Flow25</bpmn:incoming>
-        <bpmn:outgoing>W554_Flow26</bpmn:outgoing>
+        <bpmn:incoming>W554_Flow26</bpmn:incoming>
+        <bpmn:outgoing>W554_Flow27</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W554_Task11" name="Update bin/shelf status on handheld">
+      <bpmn:userTask id="W554_Task12" name="Update bin/shelf status on handheld">
         <bpmn:documentation>Step 6: Update bin/shelf status on handheld: after each SKU position is replenished, Stock Associate confirms completion on handheld: (a) scans shelf barcode / enters position ID, (b) confirms quantity placed, (c) system updates perpetual inventory (INV-001) from backroom to floor location, (d) system marks task as complete; remaining backroom quantity displayed for next replenishment cycle
 Responsible (R): Stock Associate
 Accountable (A): —
 Duration: 30–60 sec per SKU</bpmn:documentation>
-        <bpmn:incoming>W554_Flow26</bpmn:incoming>
-        <bpmn:outgoing>W554_Flow27</bpmn:outgoing>
+        <bpmn:incoming>W554_Flow27</bpmn:incoming>
+        <bpmn:outgoing>W554_Flow28</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W554_Task12" name="Flag out-of-shelf conditions for Department Supervisor">
+      <bpmn:userTask id="W554_Task13" name="Flag out-of-shelf conditions for Department Supervisor">
         <bpmn:documentation>Step 7: Flag out-of-shelf conditions for Department Supervisor: if Stock Associate finds an out-of-shelf condition with no backroom stock: (a) flags &quot;OOS — No Backroom Stock&quot; on handheld, (b) system checks nearby stores for inter-store transfer availability, (c) system checks incoming DC shipment schedule, (d) if no replenishment source within 48 hours: system suggests product substitute facing per W279 to avoid empty shelf gap
 Responsible (R): Stock Associate
 Accountable (A): Department Supervisor
 Duration: 1–2 min per flag</bpmn:documentation>
-        <bpmn:incoming>W554_Flow27</bpmn:incoming>
-        <bpmn:outgoing>W554_Flow28</bpmn:outgoing>
+        <bpmn:incoming>W554_Flow28</bpmn:incoming>
+        <bpmn:outgoing>W554_Flow29</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W554_Task13" name="Handle catch-weight/bulk items — refill gravity bins">
+      <bpmn:userTask id="W554_Task14" name="Handle catch-weight/bulk items — refill gravity bins">
         <bpmn:documentation>Step 8: Handle catch-weight/bulk items — refill gravity bins: for bulk hardware items (nails, screws, bolts, nuts by kilo): (a) retrieve bulk container from backroom stock, (b) weigh out quantity per gravity bin capacity, (c) refill gravity bin display, (d) update catch-weight inventory (W463) on handheld — record weight added, (e) verify bin label matches product and correct price per kilo; for paint mixing station supplies: restock tint cans, mixing cups, stir sticks per W463 catch-weight protocol
 Responsible (R): Stock Associate
 Accountable (A): —
 Duration: 10–15 min per bulk bin refill</bpmn:documentation>
-        <bpmn:incoming>W554_Flow28</bpmn:incoming>
-        <bpmn:outgoing>W554_Flow29</bpmn:outgoing>
+        <bpmn:incoming>W554_Flow29</bpmn:incoming>
+        <bpmn:outgoing>W554_Flow30</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W554_Task14" name="Yard items — restack and organize outdoor displays">
+      <bpmn:userTask id="W554_Task15" name="Yard items — restack and organize outdoor displays">
         <bpmn:documentation>Step 9: Yard items — restack and organize outdoor displays: for outdoor yard items (lumber, cement, hollow blocks, steel bars, PVC pipes): (a) restack displaced items from customer handling, (b) reorganize display stacks to stable configuration, (c) cover exposed items with tarps if rain expected, (d) sweep and clear debris from yard aisles, (e) verify yard bin location labels are visible and intact; coordinate with Yard Loader (W438) for heavy repositioning
 Responsible (R): Stock Associate
 Accountable (A): —
 Duration: 20–30 min per yard section</bpmn:documentation>
-        <bpmn:incoming>W554_Flow29</bpmn:incoming>
-        <bpmn:outgoing>W554_Flow30</bpmn:outgoing>
+        <bpmn:incoming>W554_Flow30</bpmn:incoming>
+        <bpmn:outgoing>W554_Flow31</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W554_Task15" name="Report damaged shelf labels for reprint">
+      <bpmn:userTask id="W554_Task16" name="Report damaged shelf labels for reprint">
         <bpmn:documentation>Step 10: Report damaged shelf labels for reprint: during replenishment, Stock Associate identifies damaged, missing, or illegible shelf labels: (a) scan product barcode, (b) tap &quot;Damaged Label&quot; on handheld, (c) system generates label reprint task routed to W181 shelf label printing queue; priority given to promotional items and front-aisle positions
 Responsible (R): Stock Associate
 Accountable (A): —
 Duration: 30 sec per label</bpmn:documentation>
-        <bpmn:incoming>W554_Flow30</bpmn:incoming>
-        <bpmn:outgoing>W554_Flow31</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:userTask id="W554_Task16" name="End-of-replenishment cycle confirmation">
-        <bpmn:documentation>Step 11: End-of-replenishment cycle confirmation: Stock Associate completes all assigned tasks on handheld; system displays summary: (a) tasks completed vs. assigned, (b) unfilled items (OOS with no backroom stock), (c) time spent; Stock Associate confirms cycle completion; unfilled items auto-flagged for: (a) DC replenishment order (W4), (b) inter-store transfer request, or (c) backorder status with estimated availability date
-Responsible (R): Stock Associate
-Accountable (A): Department Supervisor
-Duration: 5 min</bpmn:documentation>
         <bpmn:incoming>W554_Flow31</bpmn:incoming>
         <bpmn:outgoing>W554_Flow32</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W554_Task17" name="Department Supervisor spot-checks replenishment quality">
+      <bpmn:userTask id="W554_Task17" name="End-of-replenishment cycle confirmation">
+        <bpmn:documentation>Step 11: End-of-replenishment cycle confirmation: Stock Associate completes all assigned tasks on handheld; system displays summary: (a) tasks completed vs. assigned, (b) unfilled items (OOS with no backroom stock), (c) time spent; Stock Associate confirms cycle completion; unfilled items auto-flagged for: (a) DC replenishment order (W4), (b) inter-store transfer request, or (c) backorder status with estimated availability date
+Responsible (R): Stock Associate, Replenishment &amp; Allocation Analyst
+Accountable (A): Department Supervisor
+Duration: 5 min</bpmn:documentation>
+        <bpmn:incoming>W554_Flow32</bpmn:incoming>
+        <bpmn:outgoing>W554_Flow33</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W554_Task18" name="Department Supervisor spot-checks replenishment quality">
         <bpmn:documentation>Step 12: Department Supervisor spot-checks replenishment quality: Department Supervisor walks 3–5 randomly selected aisle sections; verifies: (a) product correctly placed per planogram, (b) FIFO/FEFO rotation compliance, (c) facing quality (items pulled to shelf edge), (d) shelf not overloaded beyond weight rating, (e) no damaged products placed on shelf; documents exceptions on handheld; exceptions feed into W86 monthly planogram audit and W573 daily shelf walk
 Responsible (R): Department Supervisor
 Accountable (A): —
 Duration: 15–20 min</bpmn:documentation>
-        <bpmn:incoming>W554_Flow32</bpmn:incoming>
-        <bpmn:outgoing>W554_Flow33</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:endEvent id="W554_End18" name="Complete">
         <bpmn:incoming>W554_Flow33</bpmn:incoming>
+        <bpmn:outgoing>W554_Flow34</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:endEvent id="W554_End19" name="Complete">
+        <bpmn:incoming>W554_Flow34</bpmn:incoming>
       </bpmn:endEvent>
-      <bpmn:textAnnotation id="W554_Annotation19">
+      <bpmn:textAnnotation id="W554_Annotation20">
         <bpmn:text>Controls: - CTL-261 (ensure controlled execution — Store Receiving &amp; Replenishment (PA-07.3).) | - operational: overflow display pallets in power aisles and temporary endcap allocations approved by Store Manager; operational: scheduling two-person tasks in first hour before store opening; operational: tarp protocol and covered yard sections where feasible
 Owner: Stock Associate / Department Lead</bpmn:text>
       </bpmn:textAnnotation>
-      <bpmn:association id="W554_Assoc20" sourceRef="W554_Annotation19" targetRef="W554_Start5" associationDirection="None" />
-      <bpmn:sequenceFlow id="W554_Flow21" sourceRef="W554_Start5" targetRef="W554_Task6" />
-      <bpmn:sequenceFlow id="W554_Flow22" sourceRef="W554_Task6" targetRef="W554_Task7" />
+      <bpmn:association id="W554_Assoc21" sourceRef="W554_Annotation20" targetRef="W554_Start6" associationDirection="None" />
+      <bpmn:sequenceFlow id="W554_Flow22" sourceRef="W554_Start6" targetRef="W554_Task7" />
       <bpmn:sequenceFlow id="W554_Flow23" sourceRef="W554_Task7" targetRef="W554_Task8" />
       <bpmn:sequenceFlow id="W554_Flow24" sourceRef="W554_Task8" targetRef="W554_Task9" />
       <bpmn:sequenceFlow id="W554_Flow25" sourceRef="W554_Task9" targetRef="W554_Task10" />
@@ -1159,42 +1160,44 @@ Owner: Stock Associate / Department Lead</bpmn:text>
       <bpmn:sequenceFlow id="W554_Flow30" sourceRef="W554_Task14" targetRef="W554_Task15" />
       <bpmn:sequenceFlow id="W554_Flow31" sourceRef="W554_Task15" targetRef="W554_Task16" />
       <bpmn:sequenceFlow id="W554_Flow32" sourceRef="W554_Task16" targetRef="W554_Task17" />
-      <bpmn:sequenceFlow id="W554_Flow33" sourceRef="W554_Task17" targetRef="W554_End18" />
+      <bpmn:sequenceFlow id="W554_Flow33" sourceRef="W554_Task17" targetRef="W554_Task18" />
+      <bpmn:sequenceFlow id="W554_Flow34" sourceRef="W554_Task18" targetRef="W554_End19" />
     </bpmn:process>
     <bpmndi:BPMNDiagram id="W554_diag">
       <bpmndi:BPMNPlane id="W554_plane" bpmnElement="W_W554">
         <bpmndi:BPMNShape id="W554_Lane1_di" bpmnElement="W554_Lane1" isHorizontal="true"><dc:Bounds x="160" y="80" width="2840" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W554_Lane2_di" bpmnElement="W554_Lane2" isHorizontal="true"><dc:Bounds x="160" y="250" width="2840" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W554_Lane3_di" bpmnElement="W554_Lane3" isHorizontal="true"><dc:Bounds x="160" y="420" width="2840" height="170" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W554_Task6_di" bpmnElement="W554_Task6"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W554_Task7_di" bpmnElement="W554_Task7"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W554_Task8_di" bpmnElement="W554_Task8"><dc:Bounds x="820" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W554_Task9_di" bpmnElement="W554_Task9"><dc:Bounds x="1030" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W554_Task10_di" bpmnElement="W554_Task10"><dc:Bounds x="1240" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W554_Task11_di" bpmnElement="W554_Task11"><dc:Bounds x="1450" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W554_Task12_di" bpmnElement="W554_Task12"><dc:Bounds x="1660" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W554_Task13_di" bpmnElement="W554_Task13"><dc:Bounds x="1870" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W554_Task14_di" bpmnElement="W554_Task14"><dc:Bounds x="2080" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W554_Task15_di" bpmnElement="W554_Task15"><dc:Bounds x="2290" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W554_Task16_di" bpmnElement="W554_Task16"><dc:Bounds x="2500" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W554_Task17_di" bpmnElement="W554_Task17"><dc:Bounds x="2710" y="465" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W554_Start5_di" bpmnElement="W554_Start5"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W554_End18_di" bpmnElement="W554_End18"><dc:Bounds x="2940" y="487" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W554_Annotation19_di" bpmnElement="W554_Annotation19"><dc:Bounds x="160" y="630" width="360" height="100" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNEdge id="W554_Flow21_di" bpmnElement="W554_Flow21"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W554_Flow22_di" bpmnElement="W554_Flow22"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W554_Flow23_di" bpmnElement="W554_Flow23"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W554_Flow24_di" bpmnElement="W554_Flow24"><di:waypoint x="1000" y="335" /><di:waypoint x="1030" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W554_Flow25_di" bpmnElement="W554_Flow25"><di:waypoint x="1210" y="335" /><di:waypoint x="1240" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W554_Flow26_di" bpmnElement="W554_Flow26"><di:waypoint x="1420" y="335" /><di:waypoint x="1450" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W554_Flow27_di" bpmnElement="W554_Flow27"><di:waypoint x="1630" y="335" /><di:waypoint x="1660" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W554_Flow28_di" bpmnElement="W554_Flow28"><di:waypoint x="1840" y="335" /><di:waypoint x="1870" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W554_Flow29_di" bpmnElement="W554_Flow29"><di:waypoint x="2050" y="335" /><di:waypoint x="2080" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W554_Flow30_di" bpmnElement="W554_Flow30"><di:waypoint x="2260" y="335" /><di:waypoint x="2290" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W554_Flow31_di" bpmnElement="W554_Flow31"><di:waypoint x="2470" y="335" /><di:waypoint x="2500" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W554_Flow32_di" bpmnElement="W554_Flow32"><di:waypoint x="2680" y="335" /><di:waypoint x="2710" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W554_Flow33_di" bpmnElement="W554_Flow33"><di:waypoint x="2890" y="505" /><di:waypoint x="2940" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W554_Assoc20_di" bpmnElement="W554_Assoc20"><di:waypoint x="340" y="630" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNShape id="W554_Lane4_di" bpmnElement="W554_Lane4" isHorizontal="true"><dc:Bounds x="160" y="590" width="2840" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W554_Task7_di" bpmnElement="W554_Task7"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W554_Task8_di" bpmnElement="W554_Task8"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W554_Task9_di" bpmnElement="W554_Task9"><dc:Bounds x="820" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W554_Task10_di" bpmnElement="W554_Task10"><dc:Bounds x="1030" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W554_Task11_di" bpmnElement="W554_Task11"><dc:Bounds x="1240" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W554_Task12_di" bpmnElement="W554_Task12"><dc:Bounds x="1450" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W554_Task13_di" bpmnElement="W554_Task13"><dc:Bounds x="1660" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W554_Task14_di" bpmnElement="W554_Task14"><dc:Bounds x="1870" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W554_Task15_di" bpmnElement="W554_Task15"><dc:Bounds x="2080" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W554_Task16_di" bpmnElement="W554_Task16"><dc:Bounds x="2290" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W554_Task17_di" bpmnElement="W554_Task17"><dc:Bounds x="2500" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W554_Task18_di" bpmnElement="W554_Task18"><dc:Bounds x="2710" y="635" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W554_Start6_di" bpmnElement="W554_Start6"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W554_End19_di" bpmnElement="W554_End19"><dc:Bounds x="2940" y="657" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W554_Annotation20_di" bpmnElement="W554_Annotation20"><dc:Bounds x="160" y="800" width="360" height="100" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="W554_Flow22_di" bpmnElement="W554_Flow22"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W554_Flow23_di" bpmnElement="W554_Flow23"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W554_Flow24_di" bpmnElement="W554_Flow24"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W554_Flow25_di" bpmnElement="W554_Flow25"><di:waypoint x="1000" y="335" /><di:waypoint x="1030" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W554_Flow26_di" bpmnElement="W554_Flow26"><di:waypoint x="1210" y="335" /><di:waypoint x="1240" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W554_Flow27_di" bpmnElement="W554_Flow27"><di:waypoint x="1420" y="335" /><di:waypoint x="1450" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W554_Flow28_di" bpmnElement="W554_Flow28"><di:waypoint x="1630" y="335" /><di:waypoint x="1660" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W554_Flow29_di" bpmnElement="W554_Flow29"><di:waypoint x="1840" y="335" /><di:waypoint x="1870" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W554_Flow30_di" bpmnElement="W554_Flow30"><di:waypoint x="2050" y="335" /><di:waypoint x="2080" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W554_Flow31_di" bpmnElement="W554_Flow31"><di:waypoint x="2260" y="335" /><di:waypoint x="2290" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W554_Flow32_di" bpmnElement="W554_Flow32"><di:waypoint x="2470" y="335" /><di:waypoint x="2500" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W554_Flow33_di" bpmnElement="W554_Flow33"><di:waypoint x="2680" y="505" /><di:waypoint x="2710" y="675" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W554_Flow34_di" bpmnElement="W554_Flow34"><di:waypoint x="2890" y="675" /><di:waypoint x="2940" y="675" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W554_Assoc21_di" bpmnElement="W554_Assoc21"><di:waypoint x="340" y="800" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
       </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W573" name="W573. Store-Level Daily Planogram Execution &amp; Shelf Compliance Check" isExecutable="false">

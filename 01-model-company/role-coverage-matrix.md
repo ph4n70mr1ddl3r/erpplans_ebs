@@ -50,9 +50,9 @@
 | Chartered roles (register 192 + IT seats 32 + store 8 + DC 27) | 259 |
 | With ≥1 explicit RACI anchor | 259 (100%) |
 | ZERO-anchor — the anchoring worklist | 0 (hq 0 · it 0 · store 0 · dc 0) |
-| Weakly anchored (1–2 workflows) — demand-verification watchlist | 57 |
+| Weakly anchored (1–2 workflows) — demand-verification watchlist | 56 |
 
-### Weak-anchor watchlist — 57 chartered roles anchored in only 1–2 workflows
+### Weak-anchor watchlist — 56 chartered roles anchored in only 1–2 workflows
 
 | Role | Charter source | HC | Workflows touched |
 |---|---|---|---|
@@ -68,7 +68,6 @@
 | Promotions & Vendor-Funding Coordinator | §5.3 register — Merchandising & Buying | 3 | 1 |
 | Promotions Specialist | §5.3 register — Marketing | 2 | 1 |
 | Quality & Workforce Analyst | §5.3 register — Customer Service | 2 | 1 |
-| Replenishment & Allocation Analyst | §5.3 register — Supply Chain & Logistics | 2 | 1 |
 | Senior LP Analytics Analyst | §5.3 register — Regional Loss Prevention | 1 | 1 |
 | Sourcing & Screening Coordinator | §5.3 register — Human Resources | 1 | 1 |
 | TA Coordinator | §5.3 register — Human Resources | 1 | 1 |
@@ -86,7 +85,6 @@
 | Tile & Heavy/Breakbulk Crew | §7.3 DC roster — DC (field, per-DC roster) | — | 1 |
 | 3PL & Freight Specialist | §5.3 register — Supply Chain & Logistics | 2 | 2 |
 | Audit Manager | §5.3 register — Internal Audit & Risk | 1 | 2 |
-| B2B Support Representative | §5.3 register — Customer Service | 4 | 2 |
 | Banking & Cash-Management Specialist | §5.3 register — Finance & Accounting | 2 | 2 |
 | Business Process & IMS Lead | §5.3 register — Strategy / Corporate Planning | 1 | 2 |
 | Corporate Secretary Analyst | §5.3 register — Legal & Compliance | 1 | 2 |
@@ -103,6 +101,7 @@
 | Payroll Supervisor | §5.3 register — Human Resources | 1 | 2 |
 | Purchasing / PO Specialist | §5.3 register — Supply Chain & Logistics | 6 | 2 |
 | Real-Estate & Site-Selection Analyst | §5.3 register — Facilities & Real Estate | 1 | 2 |
+| Replenishment & Allocation Analyst | §5.3 register — Supply Chain & Logistics | 2 | 2 |
 | Retail Media Operations Specialist | §5.3 register — Marketing | 1 | 2 |
 | Senior FP&A Analyst | §5.3 register — Finance & Accounting | 2 | 2 |
 | Strategy Analyst | §5.3 register — Strategy / Corporate Planning | 1 | 2 |
@@ -150,7 +149,7 @@
 | S&OP Finance Partner | Finance & Accounting | 1 | 2 | 8 | 10 | 0 | 8 | 0 | 3 | 5 |
 | Payroll Accounting Liaison | Finance & Accounting | 1 | 0 | 3 | 3 | 2 | 4 | 3 | 0 | 1 |
 | Tax Compliance & eFPS Specialist | Finance & Accounting | 1 | 0 | 2 | 1 | 0 | 3 | 3 | 0 | 0 |
-| Banking & Cash-Management Specialist | Finance & Accounting | 2 | 0 | 2 | 0 | 0 | 2 | 1 | 1 | 0 |
+| Banking & Cash-Management Specialist | Finance & Accounting | 2 | 0 | 2 | 1 | 0 | 2 | 1 | 1 | 0 |
 | DC Cost-to-Serve Analyst | Finance & Accounting | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 1 | 1 |
 | Senior FP&A Analyst | Finance & Accounting | 2 | 0 | 2 | 0 | 0 | 2 | 1 | 0 | 1 |
 | Accounting Policy Analyst | Finance & Accounting | 1 | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 |
@@ -189,9 +188,9 @@
 | Vendor Portal & Collaboration Specialist | Supply Chain & Logistics | 2 | 1 | 2 | 12 | 1 | 2 | 1 | 1 | 0 |
 | Senior Demand Planner | Supply Chain & Logistics | 1 | 0 | 2 | 1 | 0 | 3 | 3 | 0 | 0 |
 | DC Operations Analyst | Supply Chain & Logistics | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 1 | 1 |
-| Import Documentation Specialist | Supply Chain & Logistics | 1 | 0 | 2 | 0 | 0 | 2 | 1 | 1 | 0 |
+| Import Documentation Specialist | Supply Chain & Logistics | 1 | 0 | 2 | 1 | 0 | 2 | 1 | 1 | 0 |
 | Purchasing / PO Specialist | Supply Chain & Logistics | 6 | 0 | 2 | 1 | 0 | 2 | 2 | 0 | 0 |
-| Replenishment & Allocation Analyst | Supply Chain & Logistics | 2 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
+| Replenishment & Allocation Analyst | Supply Chain & Logistics | 2 | 0 | 1 | 1 | 0 | 2 | 1 | 1 | 0 |
 | Learning & Development Manager | Human Resources | 1 | 39 | 38 | 115 | 18 | 47 | 9 | 34 | 4 |
 | Compensation & Benefits Manager | Human Resources | 1 | 24 | 38 | 79 | 2 | 41 | 7 | 30 | 4 |
 | HR Shared Services Lead | Human Resources | 1 | 21 | 7 | 11 | 18 | 31 | 2 | 26 | 3 |
@@ -255,7 +254,7 @@
 | Paralegal / Contracts Specialist | Legal & Compliance | 2 | 2 | 0 | 2 | 4 | 2 | 0 | 2 | 0 |
 | Legal Counsel — Contracts | Legal & Compliance | 2 | 1 | 0 | 0 | 4 | 1 | 0 | 1 | 0 |
 | Privacy Officer | Legal & Compliance | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 |
-| Corporate Secretary Analyst | Legal & Compliance | 1 | 0 | 2 | 0 | 0 | 2 | 1 | 1 | 0 |
+| Corporate Secretary Analyst | Legal & Compliance | 1 | 0 | 2 | 1 | 0 | 2 | 1 | 1 | 0 |
 | Contracts & Commercial Manager (Senior Counsel) | Legal & Compliance | 1 | 0 | 1 | 1 | 0 | 1 | 0 | 0 | 1 |
 | ERM & TPRM Analyst | Internal Audit & Risk | 1 | 29 | 28 | 106 | 60 | 59 | 11 | 44 | 4 |
 | Head of Internal Audit & Risk | Internal Audit & Risk | 1 | 27 | 11 | 76 | 276 | 148 | 17 | 85 | 46 |
@@ -271,7 +270,7 @@
 | Contact Center Supervisor | Customer Service | 2 | 8 | 17 | 14 | 25 | 24 | 8 | 12 | 4 |
 | Services Manager | Customer Service | 1 | 5 | 10 | 15 | 45 | 24 | 9 | 10 | 5 |
 | Ecommerce Support Specialist | Customer Service | 3 | 2 | 2 | 1 | 0 | 2 | 2 | 0 | 0 |
-| B2B Support Representative | Customer Service | 4 | 0 | 2 | 0 | 0 | 2 | 0 | 2 | 0 |
+| B2B Support Representative | Customer Service | 4 | 0 | 2 | 1 | 0 | 3 | 0 | 2 | 1 |
 | Quality & Workforce Analyst | Customer Service | 2 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Director, Regional Loss Prevention | Regional Loss Prevention | 1 | 54 | 28 | 101 | 169 | 103 | 24 | 70 | 9 |
 | LP Analytics Analyst | Regional Loss Prevention | 2 | 20 | 30 | 95 | 9 | 50 | 20 | 23 | 7 |
@@ -303,7 +302,7 @@
 | Competitive Intelligence Manager | Strategy / Corporate Planning | 1 | 2 | 4 | 0 | 1 | 5 | 0 | 3 | 2 |
 | Document Control Coordinator | Strategy / Corporate Planning | 1 | 0 | 3 | 0 | 0 | 3 | 0 | 3 | 0 |
 | Business Process & IMS Lead | Strategy / Corporate Planning | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 2 | 0 |
-| CPM (Corporate Performance Management) Analyst | Strategy / Corporate Planning | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 1 | 1 |
+| CPM (Corporate Performance Management) Analyst | Strategy / Corporate Planning | 1 | 0 | 2 | 1 | 0 | 2 | 0 | 1 | 1 |
 | Strategy Analyst | Strategy / Corporate Planning | 1 | 0 | 2 | 1 | 0 | 2 | 1 | 0 | 1 |
 | Trade Account Manager | Trade / Account Management | 2 | 22 | 54 | 90 | 13 | 56 | 13 | 38 | 5 |
 | Key Account Manager | Trade / Account Management | 2 | 16 | 25 | 52 | 18 | 34 | 7 | 25 | 2 |
