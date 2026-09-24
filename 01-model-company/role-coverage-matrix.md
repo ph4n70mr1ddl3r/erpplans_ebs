@@ -22,7 +22,7 @@
 |---|---|
 | Workflows mapped | 5433 (exactly one Owner each — asserted) |
 | Confirmed Tier register | 5456 rows (Tier 1: 1396 · Tier 2: 3302 · Tier 3: 758) |
-| Distinct resolved actors | 4226 — §5.3 register roles 195 · IT product-model seats 32 · store field 12 · DC field 27 · department-level actors 2968 · system actors 31 · governance 59 · workforce 101 · external 801 · uncharted 0 |
+| Distinct resolved actors | 4222 — §5.3 register roles 195 · IT product-model seats 32 · store field 12 · DC field 27 · department-level actors 2964 · system actors 31 · governance 59 · workforce 101 · external 801 · uncharted 0 |
 
 > Tier mix = confirmed tiers of the workflows a role touches (a workflow
 > counts once per role regardless of how many steps mention it). HC is
@@ -136,12 +136,12 @@
 | Tax Accountant | Finance & Accounting | 4 | 44 | 62 | 216 | 33 | 87 | 69 | 16 | 2 |
 | Revenue Assurance Lead | Finance & Accounting | 1 | 40 | 47 | 106 | 119 | 69 | 26 | 33 | 10 |
 | AR & Credit Manager | Finance & Accounting | 1 | 38 | 50 | 107 | 243 | 104 | 36 | 60 | 8 |
+| Manager, GL & Consolidation (Assistant Controller) | Finance & Accounting | 1 | 37 | 43 | 45 | 123 | 107 | 37 | 66 | 4 |
 | AR Supervisor | Finance & Accounting | 1 | 30 | 34 | 103 | 97 | 57 | 39 | 18 | 0 |
 | Credit Analyst | Finance & Accounting | 2 | 27 | 62 | 149 | 21 | 85 | 28 | 50 | 7 |
 | GL Accountant (one per entity) | Finance & Accounting | 5 | 27 | 55 | 123 | 30 | 71 | 30 | 39 | 2 |
 | Senior Revenue Accountant | Finance & Accounting | 1 | 26 | 6 | 74 | 0 | 30 | 9 | 20 | 1 |
 | Leases Accountant | Finance & Accounting | 1 | 25 | 5 | 60 | 0 | 25 | 6 | 17 | 2 |
-| Manager, GL & Consolidation (Assistant Controller) | Finance & Accounting | 1 | 24 | 1 | 2 | 0 | 25 | 5 | 19 | 1 |
 | Treasury Analyst | Finance & Accounting | 3 | 23 | 64 | 209 | 28 | 88 | 56 | 26 | 6 |
 | AR Clerk | Finance & Accounting | 2 | 17 | 49 | 132 | 20 | 66 | 40 | 22 | 4 |
 | AP Manager | Finance & Accounting | 1 | 17 | 33 | 65 | 30 | 41 | 18 | 20 | 3 |
@@ -175,9 +175,9 @@
 | VP Supply Chain & Logistics (dual-hat GM, BuildRight Logistics, Inc.) | Supply Chain & Logistics | 1 | 58 | 128 | 112 | 528 | 338 | 85 | 180 | 73 |
 | Fleet Compliance & Safety Specialist | Supply Chain & Logistics | 1 | 49 | 35 | 146 | 20 | 37 | 22 | 13 | 2 |
 | Fleet & Logistics Manager | Supply Chain & Logistics | 1 | 40 | 53 | 129 | 191 | 145 | 27 | 93 | 25 |
+| DC Operations Manager | Supply Chain & Logistics | 1 | 38 | 33 | 67 | 110 | 84 | 29 | 48 | 7 |
 | Procurement Manager | Supply Chain & Logistics | 1 | 35 | 55 | 87 | 99 | 97 | 35 | 45 | 17 |
 | Logistics Coordinator | Supply Chain & Logistics | 2 | 28 | 34 | 71 | 24 | 47 | 9 | 37 | 1 |
-| DC Operations Manager | Supply Chain & Logistics | 1 | 25 | 33 | 57 | 91 | 67 | 25 | 38 | 4 |
 | Import Coordinator | Supply Chain & Logistics | 2 | 15 | 38 | 70 | 15 | 50 | 25 | 22 | 3 |
 | S&OP/IBP Lead | Supply Chain & Logistics | 1 | 13 | 20 | 47 | 90 | 33 | 13 | 17 | 3 |
 | DC Operations Coordinator | Supply Chain & Logistics | 8 | 11 | 17 | 36 | 12 | 19 | 10 | 8 | 1 |
@@ -221,6 +221,7 @@
 | Sourcing & Screening Coordinator | Human Resources | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | TA Coordinator | Human Resources | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Marketplace Manager | Marketing | 2 | 34 | 66 | 59 | 92 | 79 | 10 | 53 | 16 |
+| Marketing Operations Manager | Marketing | 1 | 25 | 30 | 52 | 56 | 56 | 7 | 31 | 18 |
 | Loyalty & CRM Manager | Marketing | 1 | 25 | 30 | 68 | 41 | 43 | 3 | 28 | 12 |
 | Retail Media & Marketplace Manager | Marketing | 1 | 25 | 7 | 53 | 19 | 30 | 2 | 22 | 6 |
 | Promotions & Campaigns Manager | Marketing | 1 | 22 | 0 | 0 | 0 | 22 | 1 | 20 | 1 |
@@ -231,7 +232,6 @@
 | Insights Analyst | Marketing | 2 | 16 | 26 | 46 | 4 | 26 | 1 | 13 | 12 |
 | VP Marketing | Marketing | 1 | 10 | 45 | 20 | 174 | 110 | 9 | 69 | 32 |
 | Brand Manager | Marketing | 1 | 8 | 17 | 25 | 1 | 26 | 0 | 22 | 4 |
-| Marketing Operations Manager | Marketing | 1 | 6 | 3 | 3 | 5 | 6 | 2 | 4 | 0 |
 | CRM Manager | Marketing | 1 | 4 | 6 | 6 | 16 | 10 | 3 | 2 | 5 |
 | CRM Data Steward | Marketing | 2 | 3 | 5 | 11 | 4 | 5 | 3 | 2 | 0 |
 | Campaign Manager | Marketing | 2 | 2 | 14 | 28 | 5 | 14 | 3 | 8 | 3 |
@@ -325,13 +325,13 @@
 |---|---|---|---|---|---|---|---|---|---|
 | DP BI Platform | Information Technology (product model) | 98 | 255 | 521 | 67 | 378 | 39 | 154 | 185 |
 | Head of Enterprise Architecture (CIO Office) | Information Technology (product model) | 48 | 80 | 136 | 54 | 88 | 6 | 72 | 10 |
+| IT Operations (FS/INFRA) | Information Technology (product model) | 29 | 48 | 57 | 42 | 81 | 22 | 48 | 11 |
 | AAP AI-Governance Liaison | Information Technology (product model) | 28 | 25 | 72 | 56 | 27 | 13 | 10 | 4 |
 | SEC Security Engineer | Information Technology (product model) | 27 | 16 | 83 | 47 | 50 | 13 | 31 | 6 |
 | FS ITAM Administrator | Information Technology (product model) | 25 | 40 | 68 | 66 | 58 | 8 | 44 | 6 |
 | DP Customer Data Platform | Information Technology (product model) | 25 | 32 | 83 | 73 | 34 | 2 | 24 | 8 |
 | DP MDM Steward | Information Technology (product model) | 22 | 28 | 72 | 30 | 43 | 14 | 24 | 5 |
 | Build-Squad Software Engineer | Information Technology (product model) | 21 | 27 | 49 | 6 | 34 | 11 | 18 | 5 |
-| IT Operations (FS/INFRA) | Information Technology (product model) | 15 | 39 | 50 | 29 | 63 | 16 | 37 | 10 |
 | SEC OT Security Lead | Information Technology (product model) | 13 | 0 | 30 | 76 | 24 | 4 | 17 | 3 |
 | SEC (Cybersecurity, Privacy & OT Security) | Information Technology (product model) | 11 | 179 | 164 | 2 | 206 | 62 | 135 | 9 |
 | DP Data Scientist / ML | Information Technology (product model) | 11 | 18 | 50 | 7 | 23 | 5 | 5 | 13 |
@@ -471,7 +471,6 @@
 | Abl & Collateral Operations Manager | Finance & Accounting | 23 | 0 | 0 | 0 | 23 | 10 | 11 | 2 |
 | Finance Manager | Finance & Accounting | 22 | 78 | 80 | 283 | 197 | 81 | 98 | 18 |
 | Payment Ops | Finance & Accounting | 19 | 6 | 41 | 1 | 27 | 7 | 16 | 4 |
-| Accounting Manager | Finance & Accounting | 13 | 42 | 43 | 123 | 82 | 32 | 47 | 3 |
 | Insurance Coordinator | Finance & Accounting | 7 | 19 | 38 | 8 | 26 | 11 | 14 | 1 |
 | Project Accountant | Finance & Accounting | 7 | 11 | 28 | 9 | 16 | 3 | 13 | 0 |
 | Cit Operations Manager | Finance & Accounting | 7 | 0 | 2 | 16 | 10 | 2 | 5 | 3 |
@@ -1185,7 +1184,6 @@
 | Finops Lead | Information Technology | 23 | 0 | 66 | 12 | 23 | 1 | 16 | 6 |
 | Auto-Id Lead | Information Technology | 18 | 5 | 36 | 0 | 23 | 7 | 15 | 1 |
 | Network Strategy Lead | Information Technology | 16 | 0 | 42 | 0 | 16 | 2 | 6 | 8 |
-| It Infrastructure Manager | Information Technology | 14 | 9 | 7 | 13 | 19 | 6 | 12 | 1 |
 | It Integration Lead | Information Technology | 9 | 3 | 12 | 5 | 10 | 1 | 8 | 1 |
 | It Innovation Lead | Information Technology | 6 | 4 | 21 | 0 | 6 | 2 | 0 | 4 |
 | Integration Lead | Information Technology | 5 | 5 | 13 | 0 | 8 | 0 | 7 | 1 |
@@ -1728,7 +1726,6 @@
 | Wellness Vendors | Human Resources | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Wfm Lead | Human Resources | 0 | 0 | 0 | 1 | 1 | 0 | 1 | 0 |
 | Sales Enablement | Marketing | 28 | 35 | 77 | 0 | 37 | 1 | 27 | 9 |
-| Marketing Manager | Marketing | 19 | 27 | 49 | 51 | 50 | 5 | 27 | 18 |
 | Marketing | Marketing | 16 | 248 | 189 | 3 | 284 | 21 | 205 | 58 |
 | Insights | Marketing | 10 | 67 | 68 | 0 | 76 | 8 | 47 | 21 |
 | Crm | Marketing | 6 | 29 | 13 | 1 | 35 | 4 | 24 | 7 |
@@ -2880,7 +2877,6 @@
 | Project Manager | Strategy / Corporate Planning (PMO) | 18 | 36 | 73 | 15 | 47 | 2 | 37 | 8 |
 | Ecommerce | Digital Commerce (IT-built platforms) | 15 | 116 | 60 | 0 | 128 | 31 | 81 | 16 |
 | Digital Product Manager | Digital Commerce (IT-built platforms) | 13 | 11 | 43 | 5 | 24 | 3 | 14 | 7 |
-| Dark Store Operations Manager | Digital Commerce (IT-built platforms) | 13 | 0 | 10 | 19 | 17 | 4 | 10 | 3 |
 | Ecommerce Manager | Digital Commerce (IT-built platforms) | 12 | 15 | 35 | 37 | 28 | 4 | 17 | 7 |
 | Regulatory Officer | Regulatory Affairs Specialist | 10 | 24 | 78 | 11 | 35 | 20 | 14 | 1 |
 | Tax | Finance & Accounting (Tax) | 9 | 84 | 76 | 0 | 96 | 33 | 60 | 3 |

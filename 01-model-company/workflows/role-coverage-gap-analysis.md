@@ -19,9 +19,9 @@
 | Measure | Value |
 |---|---|
 | Workflows analyzed | 5433 (population-pinned) |
-| Class C — healthy (≥1 chartered owner) | 3871 |
-| Class B — owner-grain gap (chartered roles touched, owner not chartered) | 1412 |
-| Class A — role-less (no chartered role in any RACI cell) | 150 |
+| Class C — healthy (≥1 chartered owner) | 3927 |
+| Class B — owner-grain gap (chartered roles touched, owner not chartered) | 1359 |
+| Class A — role-less (no chartered role in any RACI cell) | 147 |
 | Anchoring census (role → workflow arm, pinned by Check 71) | 259 chartered / 259 anchored / 0 zero-anchor / 62 weak |
 
 > **Adjudication policy.** Department-grain ownership ('Finance', 'Legal',
@@ -35,7 +35,7 @@
 > disable-not-delete doctrine). Classes A/B only legitimately move
 > downward; any increase forces conscious re-adjudication.
 
-## Class A — Role-less workflows (150)
+## Class A — Role-less workflows (147)
 
 No chartered role appears in Owner, Participants, or either Steps Role
 cell. Estate-annotated rows are retained design under a registered
@@ -48,14 +48,12 @@ estate).
 | W1242 | E-Commerce B2B Corporate Punchout Catalog & Procurement Integration | VS-10 | PA-10.1 | Ecommerce Platform Manager |  |
 | W1013 | E-Commerce Last-Mile Delivery Partner Performance Weekly Review | VS-10 | PA-10.2 | Ecommerce Logistics Manager |  |
 | W947 | Ecommerce Live Video Shopping & Virtual Store Walkthrough | VS-10 | PA-10.3 | Ecommerce Manager |  |
-| W635 | PFRS 16 Lease Accounting Operations | VS-15 | PA-15.2 | Accounting Manager |  |
 | W750 | Credit Card Installment Sales Reconciliation & Bank Settlement Processing | VS-15 | PA-15.2 | Finance Analyst (Card Settlements) |  |
 | W769 | Customer Overpayment Detection & Refund Processing | VS-15 | PA-15.2 | AR Accountant |  |
 | W791 | Construction Document Control, Drawing Revision & As-Built Management | VS-20 | PA-20.2 | Project Document Controller |  |
 | W480 | CAAP Height Clearance Permit Compliance | VS-22 | PA-22.1 | Engineering & Director, Facilities & Real Estate |  |
 | W1623 | Ecommerce Customer Return Initiation & Authorization | VS-32 | PA-32.1 | Customer Service — Ecommerce Returns Specialist |  |
 | W1673 | Office Supplies & Administrative Procurement | VS-34 | PA-34.1 | Admin Manager |  |
-| W1819 | Project Cost Capture & Allocation | VS-40 | PA-40.2 | Project Accountant |  |
 | W2119 | Online Purchase Warranty Registration | VS-53 | PA-53.1 | Ecommerce System / CRM |  |
 | W2124 | Warranty Digital Wallet & Customer Portal | VS-53 | PA-53.1 | Digital Product Manager |  |
 | W2137 | Extended Warranty Claim Processing | VS-53 | PA-53.3 | Extended Warranty Claims Specialist |  |
@@ -96,7 +94,6 @@ estate).
 | W3034 | B2B / Trade Delivery Damage Claim Investigation & Resolution | VS-90 | PA-90.3 | Trade Sales Manager |  |
 | W3036 | Damage Claim Refund, Credit Note & Financial Reconciliation | VS-90 | PA-90.3 | Finance Manager (AR) |  |
 | W3038 | Damage Claims Subrogation to Vendor / Carrier | VS-90 | PA-90.3 | Claims Manager |  |
-| W3092 | Dark Store System Integration, WMS & Robotics Commissioning | VS-93 | PA-93.1 | IT – Applications |  |
 | W3171 | Lease Asset Tracking, Maintenance & Inspection | VS-96 | PA-96.2 | Lease Operations Manager |  |
 | W3175 | Lease Maturity, Return Inspection & Disposition | VS-96 | PA-96.2 | Lease Operations Manager |  |
 | W3194 | Commercial Tenant Acquisition & Lease Origination | VS-97 | PA-97.2 | Leasing Manager |  |
@@ -196,12 +193,12 @@ estate).
 | W5484 | Green Fleet Driver & Technician Training, Certification & Behavior Incentive Program | VS-192 | PA-192.3 | Fleet Training & Enablement Lead (VS-06.2/VS-19.4) |  |
 | W5487 | EV Battery Second-Life, End-of-Life Recycling & RA 11898 EPR Linkage | VS-192 | PA-192.3 | Fleet Maintenance Manager (VS-06.2) |  |
 
-> 17 of the 150 Class-A rows sit inside registered dormancy
+> 17 of the 147 Class-A rows sit inside registered dormancy
 > estates (by-design retained design) and 3 more are system-owned
 > automated workflows (no human role by design);
-> 130 are open gaps.
+> 127 are open gaps.
 
-## Class B — Owner-grain gaps (1412)
+## Class B — Owner-grain gaps (1359)
 
 The Owner cell resolves to no chartered role while chartered roles are
 touched elsewhere in the workflow. Aggregated by the literal Owner-cell
@@ -213,13 +210,9 @@ form — the full per-workflow appendix follows the aggregate.
 | Finance Analyst | 22 | 14 | Finance Analyst |
 | HR Manager | 20 | 7 | Hr Manager |
 | Internal Audit | 17 | 6 | Internal Audit |
-| Marketing Manager | 15 | 4 | Marketing Manager |
 | Customer Service Manager | 13 | 5 | Customer Service Manager |
-| Dark Store Operations Manager | 13 | 1 | Dark Store Operations Manager |
-| IT Infrastructure Manager | 13 | 3 | It Infrastructure Manager |
 | Trade Sales Manager | 13 | 4 | Trade Sales Manager |
 | Account Manager | 12 | 2 | Account Manager |
-| Accounting Manager | 12 | 6 | Accounting Manager |
 | Digital Product Manager | 12 | 4 | Digital Product Manager |
 | Finance Manager | 12 | 11 | Finance Manager |
 | Supply Planning Manager | 12 | 7 | Supply Planning Manager |
@@ -245,6 +238,7 @@ form — the full per-workflow appendix follows the aggregate.
 | Lease Origination Manager | 6 | 1 | Lease Origination Manager |
 | Procurement Specialist | 6 | 3 | Procurement Specialist |
 | Product Safety & Compliance Manager | 6 | 1 | Product Safety & Compliance Manager |
+| Project Accountant | 6 | 2 | Project Accountant |
 | Project Consultant | 6 | 1 | Project Consultant |
 | Supply Planner | 6 | 5 | Supply Planner |
 | Treasury | 6 | 3 | Treasury |
@@ -259,7 +253,6 @@ form — the full per-workflow appendix follows the aggregate.
 | Legal & Compliance Officer | 5 | 5 | Legal & Compliance Officer |
 | Loss Prevention Manager | 5 | 5 | Loss Prevention Manager |
 | Marketing Analyst | 5 | 3 | Marketing Analyst |
-| Project Accountant | 5 | 2 | Project Accountant |
 | Risk & Insurance Manager | 5 | 5 | Risk & Insurance Manager |
 | AR Settlement Accountant | 4 | 1 | Ar Settlement Accountant |
 | Contingent Workforce Coordinator | 4 | 1 | Contingent Workforce Coordinator |
@@ -695,6 +688,7 @@ form — the full per-workflow appendix follows the aggregate.
 | IT Store Operations Manager | 1 | 1 | It Store Operations Manager |
 | IT Training Lead | 1 | 1 | It Training Lead |
 | IT Training Specialist | 1 | 1 | It Training Specialist |
+| IT – Applications | 1 | 1 | It – Applications |
 | Installation Services Manager | 1 | 1 | Installation Services Manager |
 | Insurance & Risk Manager | 1 | 1 | Insurance & Risk Manager |
 | Insurance & Risk Officer | 1 | 1 | Insurance & Risk Officer |
@@ -761,8 +755,6 @@ form — the full per-workflow appendix follows the aggregate.
 | Loss Prevention Supervisor | 1 | 1 | Loss Prevention Supervisor |
 | MRO (Vendor W4460) / Occupational Health (VS-83) | 1 | 1 | Mro / Occupational Health |
 | Marketing (VS-14.3) / Foundation ED / EX (VS-103.2) | 1 | 1 | Marketing / Foundation Ed / Ex |
-| Marketing Manager (Content) | 1 | 1 | Marketing Manager |
-| Marketing Manager (Loyalty Program) | 1 | 1 | Marketing Manager |
 | Marketing Manager — Category | 1 | 1 | Marketing Manager — Category |
 | Marketing Team (Digital Content) | 1 | 1 | Marketing Team |
 | Marketing — CS Manager | 1 | 1 | Marketing — Cs Manager |
@@ -1045,7 +1037,7 @@ form — the full per-workflow appendix follows the aggregate.
 | Vendor Warranty Coordinator | 1 | 1 | Vendor Warranty Coordinator |
 | Warranty (VS-53) / Legal (VS-100.3) / Merchandising | 1 | 1 | Warranty / Legal / Merchandising |
 
-### Class B appendix — all 1412 workflows
+### Class B appendix — all 1359 workflows
 
 | Workflow | Title | VS | Owner form (resolved) | Estate |
 |---|---|---|---|---|
@@ -1087,18 +1079,6 @@ form — the full per-workflow appendix follows the aggregate.
 | W3439 | Joint Marketing, CSR & Co-Marketing with Strategic Accounts | VS-107 | Account Manager | B2B estate disabled—prepared (x), registry CAP-B01–B04 |
 | W3440 | Strategic Account Innovation, Feedback & Co-Creation Loop | VS-107 | Account Manager | B2B estate disabled—prepared (x), registry CAP-B01–B04 |
 | W3442 | Strategic Account Revenue Forecasting & Pipeline Analytics | VS-107 | Account Manager | B2B estate disabled—prepared (x), registry CAP-B01–B04 |
-| W636 | Standardized Balance Sheet Account Reconciliation | VS-17 | Accounting Manager |  |
-| W637 | Financial Controls Testing & Monitoring | VS-17 | Accounting Manager |  |
-| W638 | Period-End Journal Entry Review & Approval | VS-17 | Accounting Manager |  |
-| W1804 | Rebate Income Recognition & GL Posting | VS-39 | Accounting Manager |  |
-| W1949 | Consignment & VMI Audit Trail & Compliance Documentation | VS-45 | Accounting Manager |  |
-| W1969 | Government Year-End Liquidation & Reporting | VS-46 | Accounting Manager |  |
-| W1971 | Government Account Revenue Recognition (PFRS 15) | VS-46 | Accounting Manager |  |
-| W1973 | Government Account Aging & Bad Debt Provision | VS-46 | Accounting Manager |  |
-| W1978 | Subscription Revenue Model & Deferred Revenue Configuration | VS-47 | Accounting Manager |  |
-| W1992 | Service Completion Confirmation & Revenue Recognition Trigger | VS-47 | Accounting Manager |  |
-| W2020 | Retail Media Intercompany Revenue Allocation (Multi-Entity) | VS-48 | Accounting Manager |  |
-| W2021 | Retail Media Network Audit & Compliance Review | VS-48 | Accounting Manager |  |
 | W4259 | Transport Vendor Invoice, Reconciliation & Settlement | VS-141 | Accounts Payable / Finance / Transport Lead |  |
 | W4542 | Loss-Emergence, Reserving & Actuarial Reserve Review | VS-153 | Actuarial / Finance / Captive Board |  |
 | W4538 | Program Rating, Premium Pricing & Actuarial Valuation | VS-153 | Actuarial / Risk / Treasury |  |
@@ -1270,19 +1250,6 @@ form — the full per-workflow appendix follows the aggregate.
 | W4616 | VAS Customer Service, Complaints & Disclosure | VS-156 | Customer Support / Store Ops / Compliance |  |
 | W1228 | DC Multi-Stop Route Optimization & Dynamic Load Consolidation for Store Delivery | VS-6 | Dc Dispatch Planner |  |
 | W798 | DC Building Maintenance, Utility Operations & Facility Condition Monitoring | VS-4 | Dc Facilities Manager |  |
-| W3091 | Dark Store Layout Design, Fixture & Automation Configuration | VS-93 | Dark Store Operations Manager |  |
-| W3093 | Dark Store Staffing Model, Recruitment & Training | VS-93 | Dark Store Operations Manager |  |
-| W3094 | Dark Store Go-Live, Pilot & Ramp-Up | VS-93 | Dark Store Operations Manager |  |
-| W3095 | Dark Store Capacity Planning & Expansion Triggers | VS-93 | Dark Store Operations Manager |  |
-| W3096 | Dark Store Closure, Migration & Decommissioning | VS-93 | Dark Store Operations Manager |  |
-| W3105 | Dark Store Inventory Positioning, Safety Stock & Replenishment | VS-93 | Dark Store Operations Manager |  |
-| W3106 | Dark Store Slotting, Velocity Analysis & Re-Slotting | VS-93 | Dark Store Operations Manager |  |
-| W3107 | Dark Store Throughput, Utilization & Labor Productivity Analytics | VS-93 | Dark Store Operations Manager |  |
-| W3108 | Dark Store Order Cycle Time, Cut-Off Adherence & SLA Reporting | VS-93 | Dark Store Operations Manager |  |
-| W3109 | Dark Store Pick/Pack Accuracy, Damages & Cost-per-Order | VS-93 | Dark Store Operations Manager |  |
-| W3110 | Dark Store Demand Sensing & Dynamic SKU Ranging | VS-93 | Dark Store Operations Manager |  |
-| W3111 | Dark Store Service Level & Customer Experience Analytics | VS-93 | Dark Store Operations Manager |  |
-| W3112 | Dark Store Sustainability, Energy & Waste Optimization | VS-93 | Dark Store Operations Manager |  |
 | W1191 | Construction Site Delivery Coordination, Access Assessment & Crane/Boom Truck Scheduling | VS-6 | Delivery Dispatch Coordinator |  |
 | W4274 | Doorstep Cash Collection, Receipting & POD Capture | VS-142 | Driver / 3Pl / Last-Mile Ops |  |
 | W3906 | Demand Planning & Statistical Baseline Forecasting | VS-127 | Demand Planning |  |
@@ -1708,19 +1675,6 @@ form — the full per-workflow appendix follows the aggregate.
 | W2576 | IT Shared Services Chargeback Calculation & Allocation | VS-72 | It Finance Analyst |  |
 | W2595 | Shared Services Technology Investment ROI Tracking | VS-72 | It Finance Analyst |  |
 | W377 | Domain, SSL & Digital Certificate Management | VS-27 | It Infrastructure Lead |  |
-| W152 | Employee IT Provisioning & Access Lifecycle Management | VS-27 | It Infrastructure Manager |  |
-| W1544 | POS Terminal Lifecycle Management, Hardware Refresh Cycle & Peripheral Standardization | VS-27 | It Infrastructure Manager |  |
-| W366 | Network Infrastructure & Connectivity Management | VS-27 | It Infrastructure Manager |  |
-| W376 | IT Capacity & Performance Planning | VS-27 | It Infrastructure Manager |  |
-| W382 | IT Backup & Recovery Operations | VS-27 | It Infrastructure Manager |  |
-| W393 | Remote Access, VPN & Zero Trust Connectivity Management | VS-27 | It Infrastructure Manager |  |
-| W5518 | Collaboration & Productivity Platform (M365/Email/Teams) Operations & Tenant Governance | VS-27 | It Infrastructure Manager |  |
-| W5519 | Enterprise Messaging & Store Telephony Services (UCC) Lifecycle | VS-27 | It Infrastructure Manager |  |
-| W5520 | Core Network Services & IPAM (DNS/DHCP/IP-Schema) Management | VS-27 | It Infrastructure Manager |  |
-| W787 | ERP System Monthly Performance Review & Capacity Planning Update | VS-27 | It Infrastructure Manager |  |
-| W1741 | IT Infrastructure & Systems Setup Planning | VS-37 | It Infrastructure Manager |  |
-| W1752 | Store System Configuration & Go-Live Verification | VS-37 | It Infrastructure Manager |  |
-| W2660 | Customer In-Store Wi-Fi & Engagement Platform | VS-75 | It Infrastructure Manager |  |
 | W1457 | RFID-Based Smart Shelf Inventory Monitoring & Automated Replenishment Trigger PoC | VS-30 | It Innovation Lead |  |
 | W1458 | Autonomous Mobile Robot (AMR) Goods-to-Person Picking PoC for DC Operations | VS-30 | It Innovation Lead |  |
 | W1569 | Computer Vision-Based Shelf Gap Detection, Planogram Compliance Monitoring & Automated Replenishment Alerting PoC | VS-30 | It Innovation Lead |  |
@@ -1748,6 +1702,7 @@ form — the full per-workflow appendix follows the aggregate.
 | W2437 | Design Software & Tool Management | VS-66 | It System Admin |  |
 | W1749 | POS & Systems Training for New Store Staff | VS-37 | It Training Lead |  |
 | W2365 | Communication Platform Training & Support | VS-63 | It Training Specialist |  |
+| W3092 | Dark Store System Integration, WMS & Robotics Commissioning | VS-93 | It – Applications |  |
 | W4705 | DOLE Alien Employment Permit (AEP) Application & Renewal Operations | VS-160 | Immigration Operations Lead |  |
 | W4706 | Bureau of Immigration 9G Pre-Arranged Employee Visa & ACR I-Card Processing | VS-160 | Immigration Operations Lead |  |
 | W4707 | Special Work Permit (SWP), Treaty-Trader (9D) & Other Visa Category Selection | VS-160 | Immigration Operations Lead |  |
@@ -1949,23 +1904,6 @@ form — the full per-workflow appendix follows the aggregate.
 | W2356 | Competitor Sample Display Benchmarking | VS-62 | Marketing Analyst |  |
 | W1260 | In-Store DIY Workshop & Community Event Calendar Management | VS-14 | Marketing Events Coordinator |  |
 | W1292 | Seasonal Builder's Expo & Community Event Planning | VS-14 | Marketing Events Coordinator |  |
-| W1270 | Seasonal Promotional Catalog Production, Printing & Store Distribution | VS-14 | Marketing Manager |  |
-| W677 | Marketing Budget Management & Spend Analytics | VS-14 | Marketing Manager |  |
-| W833 | Marketing Campaign Compliance Review & Regulatory Approval | VS-14 | Marketing Manager |  |
-| W1998 | Retail Media Inventory Audit & Availability Mapping | VS-48 | Marketing Manager |  |
-| W2002 | Retail Media Booking & Reservation System Management | VS-48 | Marketing Manager |  |
-| W2005 | Retail Media Conflict Resolution & Competitive Separation | VS-48 | Marketing Manager |  |
-| W2007 | Multi-Channel Campaign Orchestration & Launch | VS-48 | Marketing Manager |  |
-| W2011 | Retail Media Campaign Reporting & Vendor Presentation | VS-48 | Marketing Manager |  |
-| W2012 | Seasonal Media Package Development & Sales | VS-48 | Marketing Manager |  |
-| W2013 | Retail Media Campaign Exception & Quality Issue Resolution | VS-48 | Marketing Manager |  |
-| W2017 | Retail Media Sales Lift Attribution & Vendor ROI Reporting | VS-48 | Marketing Manager |  |
-| W2018 | Retail Media Inventory Yield & Utilization Optimization | VS-48 | Marketing Manager |  |
-| W2729 | Green Building Workshop & Event Management | VS-78 | Marketing Manager |  |
-| W2739 | Green Building Award & Recognition Program | VS-78 | Marketing Manager |  |
-| W5352 | Take-Back Program Digital Platform, Customer Lookup & Awareness Campaign | VS-187 | Marketing Manager |  |
-| W1557 | Seasonal DIY Workshop Series Planning, Content Development & Customer Conversion Funnel Management | VS-12 | Marketing Manager |  |
-| W1120 | Customer Loyalty Points Donation to Charity / Community Cause | VS-13 | Marketing Manager |  |
 | W2533 | Solar Promotional Campaign & Trade Show Coordination | VS-70 | Marketing Manager — Category |  |
 | W1797 | Co-Op Marketing Activity Execution & Vendor Notification | VS-39 | Marketing Team |  |
 | W1798 | Co-Op Marketing Expense Documentation & Proof of Performance | VS-39 | Marketing Team |  |
@@ -2116,6 +2054,7 @@ form — the full per-workflow appendix follows the aggregate.
 | W3008 | Recall Progress Tracking, Daily Status Reporting & Effectiveness Measurement | VS-89 | Product Safety & Compliance Manager |  |
 | W3012 | Post-Recall Surveillance & Re-Occurrence Monitoring | VS-89 | Product Safety & Compliance Manager |  |
 | W5350 | Take-Back Acceptance Policy, Eligibility, Quantity Limits & Customer Incentive Program | VS-187 | Program Operations Lead |  |
+| W1819 | Project Cost Capture & Allocation | VS-40 | Project Accountant |  |
 | W1821 | Project Material & Equipment Cost Tracking | VS-40 | Project Accountant |  |
 | W1822 | Professional Service & Consulting Fee Tracking | VS-40 | Project Accountant |  |
 | W1823 | Project Cost Capitalization vs. Expense Determination | VS-40 | Project Accountant |  |
@@ -2462,7 +2401,7 @@ form — the full per-workflow appendix follows the aggregate.
 | W5386 | Dealer Collection, Workout, Restructuring & Skip-Tracing for Missing Collateral | VS-188 | Workout/Recovery Manager |  |
 | W5387 | Collateral Repossession, Redemption & Disposition of Defaulted Floor-Plan Units | VS-188 | Workout/Recovery Manager |  |
 
-## Class C — Healthy (3871)
+## Class C — Healthy (3927)
 
 At least one chartered role owns the workflow. No action.
 

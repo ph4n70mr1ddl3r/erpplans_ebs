@@ -208,6 +208,14 @@ ROLE_ALIASES = {
     "logistics manager": "Fleet & Logistics Manager",
     "cost accounting manager": "Manager, GL & Consolidation (Assistant Controller)",
     "data protection officer": "Data Privacy Officer (DPO)",
+    # --- Owner-grain promotion sweep III (batch 36, 2026-09-23): four
+    # further recurring Owner forms the gap analysis caught at department
+    # grain promoted to the chartered titles they denote (see
+    # fix-owner-grain-promotions-4.py and the workflow-to-role gap analysis).
+    "dark store operations manager": "DC Operations Manager",
+    "marketing manager": "Marketing Operations Manager",
+    "accounting manager": "Manager, GL & Consolidation (Assistant Controller)",
+    "it infrastructure manager": "IT Operations (FS/INFRA)",
     # promoted to the chartered titles they denote (see
     # fix-owner-grain-promotions-2.py and the workflow→role gap analysis).
     "fp&a": "FP&A Manager",
@@ -901,7 +909,7 @@ ROLE_ALIASES = {
 DEPT_ACTORS = {
     "finance": "Finance & Accounting", "accounting": "Finance & Accounting",
     "finance manager": "Finance & Accounting", "finance analyst": "Finance & Accounting",
-    "finance analysts": "Finance & Accounting", "accounting manager": "Finance & Accounting",
+    "finance analysts": "Finance & Accounting",
     "chief accountant": "Finance & Accounting",
     "ap": "Finance & Accounting",
     "ar": "Finance & Accounting", "ap clerk": "Finance & Accounting",
@@ -918,7 +926,7 @@ DEPT_ACTORS = {
     "ecommerce manager": "Digital Commerce (IT-built platforms)",
     "digital commerce inc": "Digital Commerce (IT-built platforms)",
     "digital product manager": "Digital Commerce (IT-built platforms)",
-    "marketing": "Marketing", "marketing manager": "Marketing",
+    "marketing": "Marketing",
     "insights": "Marketing", "insights analyst": "Marketing",
     "event marketing mgr": "Marketing",
     "sales enablement lead": "Marketing",
@@ -973,7 +981,7 @@ DEPT_ACTORS = {
     "project sales manager": "Trade / Account Management", "trade marketing manager": "Trade / Account Management",
     "pro-referral network manager": "Trade / Account Management",
     "sales operations": "Trade / Account Management",
-    "dark store operations manager": "Digital Commerce (IT-built platforms)",
+   
    
     "e-commerce operations manager": "Digital Commerce (IT-built platforms)",
     "ecommerce operations": "Digital Commerce (IT-built platforms)",
@@ -1000,7 +1008,7 @@ DEPT_ACTORS = {
     "marketing analyst": "Marketing", "visual merchandiser": "Merchandising & Buying",
     "store design manager": "Merchandising & Buying",
     "it integration lead": "Information Technology", "it innovation lead": "Information Technology",
-    "it infrastructure manager": "Information Technology", "finops lead": "Information Technology",
+    "finops lead": "Information Technology",
     "network strategy lead": "Information Technology", "mobility lead": "Information Technology",
     "store operations it": "Information Technology",
     "legal operations manager": "Legal & Compliance", "legal compliance officer": "Legal & Compliance",
