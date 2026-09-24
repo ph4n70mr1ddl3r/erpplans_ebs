@@ -4808,6 +4808,18 @@ echo "--- Check 70: Root-README figure annotations vs canonical registers ---"
 # disk on every run and asserts all five README annotations against them, so the
 # whole annotation family is guarded in one place. (The Key-Metrics requirement
 # rows were already guarded by Checks 37/41; the workflows rows were not.)
+# Enumeration-tail arm (2026-09-23 eighty-ninth-wave review): the two Coverage
+# rows also carry gap-fill-batch clause chains the five figure checks cannot see
+# — the batch-25/26/30 passes moved the register to W5580 while the Workflows
+# row's chain stood frozen at batch-23 (W5570–W5573) and the Criticality row's
+# at batch-24 (W5574) — so the arm re-derives the highest confirmed-register
+# workflow id on every run and requires each enumeration-tail surface to cite
+# it: any future
+# gap-fill batch re-fires the pin until the enumeration tails move with it (the
+# Check-71 CENSUS-pin contract). The same arm pins the WORKFLOW-FORMAT-GUIDE
+# completeness note — its figure was re-pointed 5,432 → 5,433 at the batch-30
+# pass while its own clause chain stood frozen at W5574 and its footer's newest
+# segment at batch-25 (batches 26/30 never added segments).
 README70="$REPO_ROOT/README.md"
 ACTUAL_WF70=$(grep -rhP '^## W\d+[A-Z]?\.' "$REPO_ROOT"/01-model-company/workflows/VS-*/PA-*.md 2>/dev/null | wc -l | tr -d ' ')
 REG_ROWS70=$(grep -cP '^\| W\d+[A-Z]? \|' "$REPO_ROOT"/01-model-company/workflows/workflow-criticality-classification.md)
@@ -4828,8 +4840,24 @@ COVA70=$(grep -oP '\(all \K[\d,]+(?= confirmed-classified)' "$README70" | tr -d 
 if [ -n "$COVA70" ]; then check70 "$COVA70" "$ACTUAL_WF70" "Coverage-row '(all X confirmed-classified)' figure"; else error "Could not locate the Coverage-row '(all X confirmed-classified)' figure in README.md"; C70_BAD=1; fi
 TR70=$(grep -oP 'workflow-criticality-classification\.md  Tier 1/2/3 confirmed priorities \(\K[\d,]+(?= rows\))' "$README70" | tr -d ',')
 if [ -n "$TR70" ]; then check70 "$TR70" "$REG_ROWS70" "classification tree-row '(N rows)' annotation"; else error "Could not locate the classification tree-row '(N rows)' annotation in README.md"; C70_BAD=1; fi
+# Enumeration-tail arm: the newest gap-fill admission must be cited on all
+# three enumeration-tail surfaces (the two root-README Coverage rows and the
+# format-guide completeness note).
+MAXW70=$(grep -oP '^\| W\K\d+' "$REPO_ROOT"/01-model-company/workflows/workflow-criticality-classification.md | sort -n | tail -1)
+tail70() { # $1 row content, $2 label
+    if [ -z "$1" ]; then
+        error "Could not locate the $2 enumeration surface"
+        C70_BAD=1
+    elif ! printf '%s' "$1" | grep -qE "W${MAXW70}([^0-9]|$)"; then
+        error "$2 enumeration does not cite W$MAXW70 (the highest confirmed-register workflow id — the newest gap-fill batch's tail clause is missing)"
+        C70_BAD=1
+    fi
+}
+tail70 "$(grep -m1 '^| Workflows | ' "$README70" || true)" "Root-README 'Workflows' Coverage-row"
+tail70 "$(grep -m1 '^| Criticality classification | ' "$README70" || true)" "Root-README 'Criticality classification' Coverage-row"
+tail70 "$(grep -m1 'Completeness note' "$REPO_ROOT"/01-model-company/workflows/WORKFLOW-FORMAT-GUIDE.md || true)" "Format-guide completeness-note"
 if [ "$C70_BAD" -eq 0 ]; then
-    ok "All 5 root-README figure annotations match the canonical registers ($ACTUAL_WF70 unique workflows / $REG_ROWS70 confirmed-register rows; guard added by the 2026-09-05 sixth-wave review after the batch-23 pass stranded the Key-Metrics row, the Coverage-row headline figures and the classification tree-row annotation one batch behind)"
+    ok "All 5 root-README figure annotations and all 3 enumeration-tail surfaces match the canonical registers ($ACTUAL_WF70 unique workflows / $REG_ROWS70 confirmed-register rows; newest gap-fill admission W$MAXW70 cited on both Coverage rows and the format-guide completeness note; figure guard added by the 2026-09-05 sixth-wave review after the batch-23 pass stranded the Key-Metrics row, the Coverage-row headline figures and the classification tree-row annotation one batch behind; enumeration-tail guard added by the 2026-09-23 eighty-ninth-wave review after the batch-25/26/30 passes moved the register to W5580 while the Workflows row's clause chain stood frozen at batch-23, the Criticality row's at batch-24, and the format-guide completeness note's at W5574 with its footer's newest segment at batch-25)"
 fi
 
 # --- Check 71: Generated BPMN/DMN trees vs the markdown corpus ---
