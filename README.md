@@ -277,6 +277,7 @@ erpplans/
     ├── audit-time-estimate-math.py    Inline-arithmetic audit of Time Estimate / Staffing paragraphs (unit-convention-aware chain re-derivation; Check 50 guard)
     ├── reconcile-staffing-claims.py  Headcount-anchor & Volume-product reconciliation vs canonical registers (Check 51 guard)
     ├── virtual-gemba-walk.py         Virtual gemba walk & time-and-motion analyzer — per-VS touch time / handoff / approval-gate walk + per-role annual demand vs chartered TO capacity (read-only; 39th wave)
+    ├── role-coverage-gap-analysis.py  Workflow→role coverage gap analyzer (read-only; batch 32) — the reverse arm of the role-anchoring contract: classifies every workflow by owner grain (healthy / owner-grain gap / role-less), aggregates the Owner-cell vocabulary forms for charter-or-alias governance, estate-annotates the dormancy workflows, and lists participate-only chartered roles; writes 01-model-company/workflows/role-coverage-gap-analysis.md, --check byte-verifies, population-pinned
     ├── audit-st-touchpoints.py       ST-vocabulary & duplicate-Trigger guard (Check 52)
     ├── fix-auto-keywords.py          Automation-keyword & RACI role-title repair/guard (Check 53)
     ├── audit-field-vocabulary.py    Risk-label / cadence / owner vocabulary guard (Check 54)
