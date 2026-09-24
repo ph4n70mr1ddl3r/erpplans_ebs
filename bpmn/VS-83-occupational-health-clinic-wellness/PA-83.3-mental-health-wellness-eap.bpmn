@@ -41,7 +41,7 @@ Duration: Per case</bpmn:documentation>
       </bpmn:userTask>
       <bpmn:userTask id="W2865_Task8" name="EAP Provider reports aggregate utilization and trend themes (no individual…">
         <bpmn:documentation>Step 3: EAP Provider reports aggregate utilization and trend themes (no individual detail) to EAP Manager; recommends workplace interventions
-Responsible (R): EAP Provider / EAP Manager
+Responsible (R): EAP Provider / EAP Manager, Wellness Coordinator
 Accountable (A): CHRO
 Duration: Quarterly</bpmn:documentation>
         <bpmn:incoming>W2865_Flow14</bpmn:incoming>

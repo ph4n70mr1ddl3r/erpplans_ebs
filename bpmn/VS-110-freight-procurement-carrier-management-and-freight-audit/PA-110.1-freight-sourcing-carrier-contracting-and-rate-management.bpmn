@@ -21,7 +21,7 @@ Source: workflow W3497 — Freight Category Strategy &amp; Spend Baseline</bpmn:
       </bpmn:startEvent>
       <bpmn:userTask id="W3497_Task4" name="Logistics/Procurement build the freight-spend baseline and category strategy…">
         <bpmn:documentation>Step 1: Logistics/Procurement build the freight-spend baseline and category strategy: spend by leg (import ocean, drayage, inbound vendor→DC/DSD, inter-DC/inter-island, DC→store, last-mile), by carrier, by lane/region, by mode, and by cost element (line-haul, fuel surcharge, accessorial); identify consolidation, mode-shift, and carrier-rationalization opportunities
-Responsible (R): Logistics / Procurement / FP&amp;A
+Responsible (R): Logistics / Procurement / FP&amp;A, 3PL &amp; Freight Specialist
 Accountable (A): COO
 Duration: Annual</bpmn:documentation>
         <bpmn:incoming>W3497_Flow10</bpmn:incoming>

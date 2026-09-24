@@ -7,123 +7,126 @@ Volume: ~1–2 major crises managed per year
 Owner: CMO / Public Relations (PR) Manager
 Participants: CEO, Legal (W125), HR, Store Ops (if applicable)
 Source: workflow W134 — Crisis Communication &amp; Brand Reputation Management</bpmn:documentation>
-      <bpmn:laneSet id="W134_LaneSet4">
+      <bpmn:laneSet id="W134_LaneSet5">
         <bpmn:lane id="W134_Lane1" name="PR Manager">
-        <bpmn:flowNodeRef>W134_Task6</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W134_Task9</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W134_Task10</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W134_Task7</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W134_Task11</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W134_Task12</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W134_Start5</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W134_Task13</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W134_Start6</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W134_Lane2" name="CMO">
-        <bpmn:flowNodeRef>W134_Task7</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W134_Task8</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W134_Lane3" name="Dept Head">
-        <bpmn:flowNodeRef>W134_Task8</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W134_End13</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W134_Task9</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W134_Lane4" name="PR Manager, Marketing Comms Specialist">
+        <bpmn:flowNodeRef>W134_Task10</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W134_End14</bpmn:flowNodeRef>
         </bpmn:lane>
       </bpmn:laneSet>
-      <bpmn:startEvent id="W134_Start5" name="Brand crisis (e.g., major safety issue, viral complaint, legal scandal)">
-        <bpmn:outgoing>W134_Flow16</bpmn:outgoing>
+      <bpmn:startEvent id="W134_Start6" name="Brand crisis (e.g., major safety issue, viral complaint, legal scandal)">
+        <bpmn:outgoing>W134_Flow17</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:userTask id="W134_Task6" name="Alert &amp; Verification: Identify and verify the scale of the crisis">
+      <bpmn:userTask id="W134_Task7" name="Alert &amp; Verification: Identify and verify the scale of the crisis">
         <bpmn:documentation>Step 1: Alert &amp; Verification: Identify and verify the scale of the crisis
 Responsible (R): PR Manager
 Accountable (A): CMO
 Duration: 1 hour</bpmn:documentation>
-        <bpmn:incoming>W134_Flow16</bpmn:incoming>
-        <bpmn:outgoing>W134_Flow17</bpmn:outgoing>
+        <bpmn:incoming>W134_Flow17</bpmn:incoming>
+        <bpmn:outgoing>W134_Flow18</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W134_Task7" name="Crisis Team Activation: Convene CEO, Legal, CMO, and relevant Dept Head">
+      <bpmn:userTask id="W134_Task8" name="Crisis Team Activation: Convene CEO, Legal, CMO, and relevant Dept Head">
         <bpmn:documentation>Step 2: Crisis Team Activation: Convene CEO, Legal, CMO, and relevant Dept Head
 Responsible (R): CMO
 Accountable (A): CEO
 Duration: 2 hours</bpmn:documentation>
-        <bpmn:incoming>W134_Flow17</bpmn:incoming>
-        <bpmn:outgoing>W134_Flow18</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:userTask id="W134_Task8" name="Fact Finding: Gather details and internal reports on the incident">
-        <bpmn:documentation>Step 3: Fact Finding: Gather details and internal reports on the incident
-Responsible (R): Dept Head
-Accountable (A): CEO
-Duration: 4 hours</bpmn:documentation>
         <bpmn:incoming>W134_Flow18</bpmn:incoming>
         <bpmn:outgoing>W134_Flow19</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W134_Task9" name="Messaging: Develop official statement and FAQ for press/social media">
-        <bpmn:documentation>Step 4: Messaging: Develop official statement and FAQ for press/social media
-Responsible (R): PR Manager
+      <bpmn:userTask id="W134_Task9" name="Fact Finding: Gather details and internal reports on the incident">
+        <bpmn:documentation>Step 3: Fact Finding: Gather details and internal reports on the incident
+Responsible (R): Dept Head
 Accountable (A): CEO
 Duration: 4 hours</bpmn:documentation>
         <bpmn:incoming>W134_Flow19</bpmn:incoming>
         <bpmn:outgoing>W134_Flow20</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W134_Task10" name="Channel Execution: Release statement via PR wires, website, and social media">
+      <bpmn:userTask id="W134_Task10" name="Messaging: Develop official statement and FAQ for press/social media">
+        <bpmn:documentation>Step 4: Messaging: Develop official statement and FAQ for press/social media
+Responsible (R): PR Manager, Marketing Comms Specialist
+Accountable (A): CEO
+Duration: 4 hours</bpmn:documentation>
+        <bpmn:incoming>W134_Flow20</bpmn:incoming>
+        <bpmn:outgoing>W134_Flow21</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W134_Task11" name="Channel Execution: Release statement via PR wires, website, and social media">
         <bpmn:documentation>Step 5: Channel Execution: Release statement via PR wires, website, and social media
 Responsible (R): PR Manager
 Accountable (A): CMO
 Duration: 1 hour</bpmn:documentation>
-        <bpmn:incoming>W134_Flow20</bpmn:incoming>
-        <bpmn:outgoing>W134_Flow21</bpmn:outgoing>
+        <bpmn:incoming>W134_Flow21</bpmn:incoming>
+        <bpmn:outgoing>W134_Flow22</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W134_Task11" name="Monitoring: Track sentiment and response; adjust messaging as needed">
+      <bpmn:userTask id="W134_Task12" name="Monitoring: Track sentiment and response; adjust messaging as needed">
         <bpmn:documentation>Step 6: Monitoring: Track sentiment and response; adjust messaging as needed
 Responsible (R): PR Manager
 Accountable (A): CMO
 Duration: 1–3 days</bpmn:documentation>
-        <bpmn:incoming>W134_Flow21</bpmn:incoming>
-        <bpmn:outgoing>W134_Flow22</bpmn:outgoing>
+        <bpmn:incoming>W134_Flow22</bpmn:incoming>
+        <bpmn:outgoing>W134_Flow23</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W134_Task12" name="Post-Crisis Review: Document impact and update crisis protocol">
+      <bpmn:userTask id="W134_Task13" name="Post-Crisis Review: Document impact and update crisis protocol">
         <bpmn:documentation>Step 7: Post-Crisis Review: Document impact and update crisis protocol
 Responsible (R): PR Manager
 Accountable (A): CMO
 Duration: 1 day</bpmn:documentation>
-        <bpmn:incoming>W134_Flow22</bpmn:incoming>
-        <bpmn:outgoing>W134_Flow23</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:endEvent id="W134_End13" name="Complete">
         <bpmn:incoming>W134_Flow23</bpmn:incoming>
+        <bpmn:outgoing>W134_Flow24</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:endEvent id="W134_End14" name="Complete">
+        <bpmn:incoming>W134_Flow24</bpmn:incoming>
       </bpmn:endEvent>
-      <bpmn:textAnnotation id="W134_Annotation14">
+      <bpmn:textAnnotation id="W134_Annotation15">
         <bpmn:text>Controls: - CTL-283 (ensure controlled execution — Brand, PR &amp; Corporate Communications (PA-14.3).) | - operational: CMO / Public Relations (PR) Manager review and approval gate
 Owner: CMO / Public Relations (PR) Manager</bpmn:text>
       </bpmn:textAnnotation>
-      <bpmn:association id="W134_Assoc15" sourceRef="W134_Annotation14" targetRef="W134_Start5" associationDirection="None" />
-      <bpmn:sequenceFlow id="W134_Flow16" sourceRef="W134_Start5" targetRef="W134_Task6" />
-      <bpmn:sequenceFlow id="W134_Flow17" sourceRef="W134_Task6" targetRef="W134_Task7" />
+      <bpmn:association id="W134_Assoc16" sourceRef="W134_Annotation15" targetRef="W134_Start6" associationDirection="None" />
+      <bpmn:sequenceFlow id="W134_Flow17" sourceRef="W134_Start6" targetRef="W134_Task7" />
       <bpmn:sequenceFlow id="W134_Flow18" sourceRef="W134_Task7" targetRef="W134_Task8" />
       <bpmn:sequenceFlow id="W134_Flow19" sourceRef="W134_Task8" targetRef="W134_Task9" />
       <bpmn:sequenceFlow id="W134_Flow20" sourceRef="W134_Task9" targetRef="W134_Task10" />
       <bpmn:sequenceFlow id="W134_Flow21" sourceRef="W134_Task10" targetRef="W134_Task11" />
       <bpmn:sequenceFlow id="W134_Flow22" sourceRef="W134_Task11" targetRef="W134_Task12" />
-      <bpmn:sequenceFlow id="W134_Flow23" sourceRef="W134_Task12" targetRef="W134_End13" />
+      <bpmn:sequenceFlow id="W134_Flow23" sourceRef="W134_Task12" targetRef="W134_Task13" />
+      <bpmn:sequenceFlow id="W134_Flow24" sourceRef="W134_Task13" targetRef="W134_End14" />
     </bpmn:process>
     <bpmndi:BPMNDiagram id="W134_diag">
       <bpmndi:BPMNPlane id="W134_plane" bpmnElement="W_W134">
         <bpmndi:BPMNShape id="W134_Lane1_di" bpmnElement="W134_Lane1" isHorizontal="true"><dc:Bounds x="160" y="80" width="1790" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W134_Lane2_di" bpmnElement="W134_Lane2" isHorizontal="true"><dc:Bounds x="160" y="250" width="1790" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W134_Lane3_di" bpmnElement="W134_Lane3" isHorizontal="true"><dc:Bounds x="160" y="420" width="1790" height="170" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W134_Task6_di" bpmnElement="W134_Task6"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W134_Task7_di" bpmnElement="W134_Task7"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W134_Task8_di" bpmnElement="W134_Task8"><dc:Bounds x="820" y="465" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W134_Task9_di" bpmnElement="W134_Task9"><dc:Bounds x="1030" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W134_Task10_di" bpmnElement="W134_Task10"><dc:Bounds x="1240" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W134_Task11_di" bpmnElement="W134_Task11"><dc:Bounds x="1450" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W134_Task12_di" bpmnElement="W134_Task12"><dc:Bounds x="1660" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W134_Start5_di" bpmnElement="W134_Start5"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W134_End13_di" bpmnElement="W134_End13"><dc:Bounds x="1890" y="487" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W134_Annotation14_di" bpmnElement="W134_Annotation14"><dc:Bounds x="160" y="630" width="360" height="60" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNEdge id="W134_Flow16_di" bpmnElement="W134_Flow16"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W134_Flow17_di" bpmnElement="W134_Flow17"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W134_Flow18_di" bpmnElement="W134_Flow18"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W134_Flow19_di" bpmnElement="W134_Flow19"><di:waypoint x="1000" y="505" /><di:waypoint x="1030" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W134_Flow20_di" bpmnElement="W134_Flow20"><di:waypoint x="1210" y="165" /><di:waypoint x="1240" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W134_Flow21_di" bpmnElement="W134_Flow21"><di:waypoint x="1420" y="165" /><di:waypoint x="1450" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W134_Flow22_di" bpmnElement="W134_Flow22"><di:waypoint x="1630" y="165" /><di:waypoint x="1660" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W134_Flow23_di" bpmnElement="W134_Flow23"><di:waypoint x="1840" y="165" /><di:waypoint x="1890" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W134_Assoc15_di" bpmnElement="W134_Assoc15"><di:waypoint x="340" y="630" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNShape id="W134_Lane4_di" bpmnElement="W134_Lane4" isHorizontal="true"><dc:Bounds x="160" y="590" width="1790" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W134_Task7_di" bpmnElement="W134_Task7"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W134_Task8_di" bpmnElement="W134_Task8"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W134_Task9_di" bpmnElement="W134_Task9"><dc:Bounds x="820" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W134_Task10_di" bpmnElement="W134_Task10"><dc:Bounds x="1030" y="635" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W134_Task11_di" bpmnElement="W134_Task11"><dc:Bounds x="1240" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W134_Task12_di" bpmnElement="W134_Task12"><dc:Bounds x="1450" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W134_Task13_di" bpmnElement="W134_Task13"><dc:Bounds x="1660" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W134_Start6_di" bpmnElement="W134_Start6"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W134_End14_di" bpmnElement="W134_End14"><dc:Bounds x="1890" y="657" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W134_Annotation15_di" bpmnElement="W134_Annotation15"><dc:Bounds x="160" y="800" width="360" height="60" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="W134_Flow17_di" bpmnElement="W134_Flow17"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W134_Flow18_di" bpmnElement="W134_Flow18"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W134_Flow19_di" bpmnElement="W134_Flow19"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W134_Flow20_di" bpmnElement="W134_Flow20"><di:waypoint x="1000" y="505" /><di:waypoint x="1030" y="675" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W134_Flow21_di" bpmnElement="W134_Flow21"><di:waypoint x="1210" y="675" /><di:waypoint x="1240" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W134_Flow22_di" bpmnElement="W134_Flow22"><di:waypoint x="1420" y="165" /><di:waypoint x="1450" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W134_Flow23_di" bpmnElement="W134_Flow23"><di:waypoint x="1630" y="165" /><di:waypoint x="1660" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W134_Flow24_di" bpmnElement="W134_Flow24"><di:waypoint x="1840" y="165" /><di:waypoint x="1890" y="675" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W134_Assoc16_di" bpmnElement="W134_Assoc16"><di:waypoint x="340" y="800" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
       </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W135" name="W135. CSR Program Execution" isExecutable="false">

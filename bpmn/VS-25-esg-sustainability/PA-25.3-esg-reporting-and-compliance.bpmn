@@ -7,112 +7,114 @@ Volume: 1 annual sustainability report covering all 5 BuildRight entities; ~15�
 Owner: Sustainability Lead
 Participants: All Department Heads (data providers), Finance (financial data), HR (social data), Legal (governance data), External Sustainability Auditor, CEO (approval)
 Source: workflow W694 — ESG Data Collection, Validation &amp; Annual Sustainability Report Preparation</bpmn:documentation>
-      <bpmn:laneSet id="W694_LaneSet6">
+      <bpmn:laneSet id="W694_LaneSet7">
         <bpmn:lane id="W694_Lane1" name="Sustainability Lead">
-        <bpmn:flowNodeRef>W694_Task8</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W694_Task10</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W694_Task11</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W694_Task15</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W694_Start7</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W694_Task9</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W694_Task12</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W694_Task16</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W694_Start8</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W694_Lane2" name="Department Heads">
-        <bpmn:flowNodeRef>W694_Task9</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W694_Task10</bpmn:flowNodeRef>
         </bpmn:lane>
-        <bpmn:lane id="W694_Lane3" name="Multiple Reviewers">
-        <bpmn:flowNodeRef>W694_Task12</bpmn:flowNodeRef>
+        <bpmn:lane id="W694_Lane3" name="Sustainability Lead, ESG Reporting &amp; Data…">
+        <bpmn:flowNodeRef>W694_Task11</bpmn:flowNodeRef>
         </bpmn:lane>
-        <bpmn:lane id="W694_Lane4" name="External Auditor">
+        <bpmn:lane id="W694_Lane4" name="Multiple Reviewers">
         <bpmn:flowNodeRef>W694_Task13</bpmn:flowNodeRef>
         </bpmn:lane>
-        <bpmn:lane id="W694_Lane5" name="CEO">
+        <bpmn:lane id="W694_Lane5" name="External Auditor">
         <bpmn:flowNodeRef>W694_Task14</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W694_End16</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W694_Lane6" name="CEO">
+        <bpmn:flowNodeRef>W694_Task15</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W694_End17</bpmn:flowNodeRef>
         </bpmn:lane>
       </bpmn:laneSet>
-      <bpmn:startEvent id="W694_Start7" name="Annual sustainability reporting cycle (SEC Memo Circular No. 4, 2019 compliance)…">
-        <bpmn:outgoing>W694_Flow19</bpmn:outgoing>
+      <bpmn:startEvent id="W694_Start8" name="Annual sustainability reporting cycle (SEC Memo Circular No. 4, 2019 compliance)…">
+        <bpmn:outgoing>W694_Flow20</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:userTask id="W694_Task8" name="Data collection kickoff">
+      <bpmn:userTask id="W694_Task9" name="Data collection kickoff">
         <bpmn:documentation>Step 1: Data collection kickoff: Sustainability Lead initiates annual data collection in Q1: distributes KPI templates to all Department Heads covering: (a) Environmental: energy consumption by source, GHG emissions (Scope 1, 2, 3 per W192), water consumption per W693, waste generated and diverted per W193, recycling revenue per W443; (b) Social: employee headcount and diversity, training hours per W51, safety incidents per W140, employee engagement scores per W629, community investment per W194, customer satisfaction scores; (c) Governance: board composition and meetings per W124, anti-corruption training completion per W656, data privacy incidents per W647, audit findings closure rate per W359
 Responsible (R): Sustainability Lead
 Accountable (A): CEO
 Duration: 1 day</bpmn:documentation>
-        <bpmn:incoming>W694_Flow19</bpmn:incoming>
-        <bpmn:outgoing>W694_Flow20</bpmn:outgoing>
+        <bpmn:incoming>W694_Flow20</bpmn:incoming>
+        <bpmn:outgoing>W694_Flow21</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W694_Task9" name="Department data submission">
+      <bpmn:userTask id="W694_Task10" name="Department data submission">
         <bpmn:documentation>Step 2: Department data submission: Department Heads compile and submit data for their functional areas with supporting documentation: (a) Finance: financial data (revenue, taxes paid, community investment spend); (b) HR: workforce data (headcount by gender, training hours, safety incidents, turnover rate); (c) Operations: environmental data (energy, water, waste, emissions); (d) Legal/Governance: governance data (board meetings, compliance status, litigation); (e) IT: data privacy incidents, system uptime; (f) Procurement: sustainable sourcing metrics per W195
 Responsible (R): Department Heads
 Accountable (A): Sustainability Lead
 Duration: 2-3 weeks</bpmn:documentation>
-        <bpmn:incoming>W694_Flow20</bpmn:incoming>
-        <bpmn:outgoing>W694_Flow21</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:userTask id="W694_Task10" name="Data validation">
-        <bpmn:documentation>Step 3: Data validation: Sustainability Lead validates all submitted data: (a) cross-reference against ERP system data (revenue, headcount, utility costs) for consistency; (b) compare to prior year: flag any KPI with &gt;20% change and request explanation; (c) verify calculation methodologies match prior year (or document change in methodology); (d) for GHG data: verify emission factors are current (DOE/DENR published factors); (e) engage External Sustainability Auditor for independent verification of material data points
-Responsible (R): Sustainability Lead
-Accountable (A): CFO
-Duration: 1-2 weeks</bpmn:documentation>
         <bpmn:incoming>W694_Flow21</bpmn:incoming>
         <bpmn:outgoing>W694_Flow22</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W694_Task11" name="Report drafting">
-        <bpmn:documentation>Step 4: Report drafting: Sustainability Lead drafts annual sustainability report following SEC template structure: (a) organizational profile; (b) sustainability governance structure; (c) materiality assessment (which ESG topics matter most to stakeholders); (d) environmental performance with GRI indicators; (e) social performance; (f) governance performance; (g) targets and commitments for next year; (h) GRI content index
-Responsible (R): Sustainability Lead
-Accountable (A): VP Legal
+      <bpmn:userTask id="W694_Task11" name="Data validation">
+        <bpmn:documentation>Step 3: Data validation: Sustainability Lead validates all submitted data: (a) cross-reference against ERP system data (revenue, headcount, utility costs) for consistency; (b) compare to prior year: flag any KPI with &gt;20% change and request explanation; (c) verify calculation methodologies match prior year (or document change in methodology); (d) for GHG data: verify emission factors are current (DOE/DENR published factors); (e) engage External Sustainability Auditor for independent verification of material data points
+Responsible (R): Sustainability Lead, ESG Reporting &amp; Data Analyst
+Accountable (A): CFO
 Duration: 1-2 weeks</bpmn:documentation>
         <bpmn:incoming>W694_Flow22</bpmn:incoming>
         <bpmn:outgoing>W694_Flow23</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W694_Task12" name="Internal review">
+      <bpmn:userTask id="W694_Task12" name="Report drafting">
+        <bpmn:documentation>Step 4: Report drafting: Sustainability Lead drafts annual sustainability report following SEC template structure: (a) organizational profile; (b) sustainability governance structure; (c) materiality assessment (which ESG topics matter most to stakeholders); (d) environmental performance with GRI indicators; (e) social performance; (f) governance performance; (g) targets and commitments for next year; (h) GRI content index
+Responsible (R): Sustainability Lead
+Accountable (A): VP Legal
+Duration: 1-2 weeks</bpmn:documentation>
+        <bpmn:incoming>W694_Flow23</bpmn:incoming>
+        <bpmn:outgoing>W694_Flow24</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W694_Task13" name="Internal review">
         <bpmn:documentation>Step 5: Internal review: route draft report for review: (a) Legal reviews governance and compliance language; (b) Finance reviews financial data and forward-looking statements; (c) COO reviews environmental data and operational targets; (d) CEO reviews executive summary and strategic commitments; (e) incorporate feedback and finalize
 Responsible (R): Multiple Reviewers
 Accountable (A): CEO
 Duration: 1 week</bpmn:documentation>
-        <bpmn:incoming>W694_Flow23</bpmn:incoming>
-        <bpmn:outgoing>W694_Flow24</bpmn:outgoing>
+        <bpmn:incoming>W694_Flow24</bpmn:incoming>
+        <bpmn:outgoing>W694_Flow25</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W694_Task13" name="External assurance">
+      <bpmn:userTask id="W694_Task14" name="External assurance">
         <bpmn:documentation>Step 6: External assurance: engage external sustainability auditor for limited assurance engagement on selected material KPIs (GHG emissions, energy consumption, waste diversion, workforce data); auditor issues assurance statement
 Responsible (R): External Auditor
 Accountable (A): CFO
 Duration: 2-3 weeks</bpmn:documentation>
-        <bpmn:incoming>W694_Flow24</bpmn:incoming>
-        <bpmn:outgoing>W694_Flow25</bpmn:outgoing>
+        <bpmn:incoming>W694_Flow25</bpmn:incoming>
+        <bpmn:outgoing>W694_Flow26</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W694_Task14" name="Board approval &amp; filing">
+      <bpmn:userTask id="W694_Task15" name="Board approval &amp; filing">
         <bpmn:documentation>Step 7: Board approval &amp; filing: CEO presents final sustainability report to Board of Directors for approval; approved report filed with SEC per regulatory deadline; published on BuildRight website and shared with key stakeholders (lenders, insurance partners, major vendors)
 Responsible (R): CEO / Corporate Secretary
 Accountable (A): Board of Directors
 Duration: 1 day</bpmn:documentation>
-        <bpmn:incoming>W694_Flow25</bpmn:incoming>
-        <bpmn:outgoing>W694_Flow26</bpmn:outgoing>
+        <bpmn:incoming>W694_Flow26</bpmn:incoming>
+        <bpmn:outgoing>W694_Flow27</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W694_Task15" name="Quarterly monitoring">
+      <bpmn:userTask id="W694_Task16" name="Quarterly monitoring">
         <bpmn:documentation>Step 8: Quarterly monitoring: Sustainability Lead tracks progress against annual sustainability targets quarterly: GHG reduction target, energy efficiency target, waste diversion target, training hours target; reports progress to COO and identifies corrective actions if targets are off-track
 Responsible (R): Sustainability Lead
 Accountable (A): COO
 Duration: 2 hours/quarter</bpmn:documentation>
-        <bpmn:incoming>W694_Flow26</bpmn:incoming>
-        <bpmn:outgoing>W694_Flow27</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:endEvent id="W694_End16" name="Complete">
         <bpmn:incoming>W694_Flow27</bpmn:incoming>
+        <bpmn:outgoing>W694_Flow28</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:endEvent id="W694_End17" name="Complete">
+        <bpmn:incoming>W694_Flow28</bpmn:incoming>
       </bpmn:endEvent>
-      <bpmn:textAnnotation id="W694_Annotation17">
+      <bpmn:textAnnotation id="W694_Annotation18">
         <bpmn:text>Controls: - CTL-318 (ensure controlled execution — ESG Reporting &amp; Compliance (PA-25.3).) | - operational: Sustainability Lead review and approval gate
 Owner: Sustainability Lead</bpmn:text>
       </bpmn:textAnnotation>
-      <bpmn:association id="W694_Assoc18" sourceRef="W694_Annotation17" targetRef="W694_Start7" associationDirection="None" />
-      <bpmn:sequenceFlow id="W694_Flow19" sourceRef="W694_Start7" targetRef="W694_Task8" />
-      <bpmn:sequenceFlow id="W694_Flow20" sourceRef="W694_Task8" targetRef="W694_Task9" />
+      <bpmn:association id="W694_Assoc19" sourceRef="W694_Annotation18" targetRef="W694_Start8" associationDirection="None" />
+      <bpmn:sequenceFlow id="W694_Flow20" sourceRef="W694_Start8" targetRef="W694_Task9" />
       <bpmn:sequenceFlow id="W694_Flow21" sourceRef="W694_Task9" targetRef="W694_Task10" />
       <bpmn:sequenceFlow id="W694_Flow22" sourceRef="W694_Task10" targetRef="W694_Task11" />
       <bpmn:sequenceFlow id="W694_Flow23" sourceRef="W694_Task11" targetRef="W694_Task12" />
       <bpmn:sequenceFlow id="W694_Flow24" sourceRef="W694_Task12" targetRef="W694_Task13" />
       <bpmn:sequenceFlow id="W694_Flow25" sourceRef="W694_Task13" targetRef="W694_Task14" />
       <bpmn:sequenceFlow id="W694_Flow26" sourceRef="W694_Task14" targetRef="W694_Task15" />
-      <bpmn:sequenceFlow id="W694_Flow27" sourceRef="W694_Task15" targetRef="W694_End16" />
+      <bpmn:sequenceFlow id="W694_Flow27" sourceRef="W694_Task15" targetRef="W694_Task16" />
+      <bpmn:sequenceFlow id="W694_Flow28" sourceRef="W694_Task16" targetRef="W694_End17" />
     </bpmn:process>
     <bpmndi:BPMNDiagram id="W694_diag">
       <bpmndi:BPMNPlane id="W694_plane" bpmnElement="W_W694">
@@ -121,27 +123,28 @@ Owner: Sustainability Lead</bpmn:text>
         <bpmndi:BPMNShape id="W694_Lane3_di" bpmnElement="W694_Lane3" isHorizontal="true"><dc:Bounds x="160" y="420" width="2000" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W694_Lane4_di" bpmnElement="W694_Lane4" isHorizontal="true"><dc:Bounds x="160" y="590" width="2000" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W694_Lane5_di" bpmnElement="W694_Lane5" isHorizontal="true"><dc:Bounds x="160" y="760" width="2000" height="170" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W694_Task8_di" bpmnElement="W694_Task8"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W694_Task9_di" bpmnElement="W694_Task9"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W694_Task10_di" bpmnElement="W694_Task10"><dc:Bounds x="820" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W694_Task11_di" bpmnElement="W694_Task11"><dc:Bounds x="1030" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W694_Task12_di" bpmnElement="W694_Task12"><dc:Bounds x="1240" y="465" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W694_Task13_di" bpmnElement="W694_Task13"><dc:Bounds x="1450" y="635" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W694_Task14_di" bpmnElement="W694_Task14"><dc:Bounds x="1660" y="805" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W694_Task15_di" bpmnElement="W694_Task15"><dc:Bounds x="1870" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W694_Start7_di" bpmnElement="W694_Start7"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W694_End16_di" bpmnElement="W694_End16"><dc:Bounds x="2100" y="827" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W694_Annotation17_di" bpmnElement="W694_Annotation17"><dc:Bounds x="160" y="970" width="360" height="60" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNEdge id="W694_Flow19_di" bpmnElement="W694_Flow19"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W694_Flow20_di" bpmnElement="W694_Flow20"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W694_Flow21_di" bpmnElement="W694_Flow21"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W694_Flow22_di" bpmnElement="W694_Flow22"><di:waypoint x="1000" y="165" /><di:waypoint x="1030" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W694_Flow23_di" bpmnElement="W694_Flow23"><di:waypoint x="1210" y="165" /><di:waypoint x="1240" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W694_Flow24_di" bpmnElement="W694_Flow24"><di:waypoint x="1420" y="505" /><di:waypoint x="1450" y="675" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W694_Flow25_di" bpmnElement="W694_Flow25"><di:waypoint x="1630" y="675" /><di:waypoint x="1660" y="845" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W694_Flow26_di" bpmnElement="W694_Flow26"><di:waypoint x="1840" y="845" /><di:waypoint x="1870" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W694_Flow27_di" bpmnElement="W694_Flow27"><di:waypoint x="2050" y="165" /><di:waypoint x="2100" y="845" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W694_Assoc18_di" bpmnElement="W694_Assoc18"><di:waypoint x="340" y="970" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNShape id="W694_Lane6_di" bpmnElement="W694_Lane6" isHorizontal="true"><dc:Bounds x="160" y="930" width="2000" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W694_Task9_di" bpmnElement="W694_Task9"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W694_Task10_di" bpmnElement="W694_Task10"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W694_Task11_di" bpmnElement="W694_Task11"><dc:Bounds x="820" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W694_Task12_di" bpmnElement="W694_Task12"><dc:Bounds x="1030" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W694_Task13_di" bpmnElement="W694_Task13"><dc:Bounds x="1240" y="635" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W694_Task14_di" bpmnElement="W694_Task14"><dc:Bounds x="1450" y="805" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W694_Task15_di" bpmnElement="W694_Task15"><dc:Bounds x="1660" y="975" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W694_Task16_di" bpmnElement="W694_Task16"><dc:Bounds x="1870" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W694_Start8_di" bpmnElement="W694_Start8"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W694_End17_di" bpmnElement="W694_End17"><dc:Bounds x="2100" y="997" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W694_Annotation18_di" bpmnElement="W694_Annotation18"><dc:Bounds x="160" y="1140" width="360" height="60" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="W694_Flow20_di" bpmnElement="W694_Flow20"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W694_Flow21_di" bpmnElement="W694_Flow21"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W694_Flow22_di" bpmnElement="W694_Flow22"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W694_Flow23_di" bpmnElement="W694_Flow23"><di:waypoint x="1000" y="505" /><di:waypoint x="1030" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W694_Flow24_di" bpmnElement="W694_Flow24"><di:waypoint x="1210" y="165" /><di:waypoint x="1240" y="675" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W694_Flow25_di" bpmnElement="W694_Flow25"><di:waypoint x="1420" y="675" /><di:waypoint x="1450" y="845" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W694_Flow26_di" bpmnElement="W694_Flow26"><di:waypoint x="1630" y="845" /><di:waypoint x="1660" y="1015" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W694_Flow27_di" bpmnElement="W694_Flow27"><di:waypoint x="1840" y="1015" /><di:waypoint x="1870" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W694_Flow28_di" bpmnElement="W694_Flow28"><di:waypoint x="2050" y="165" /><di:waypoint x="2100" y="1015" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W694_Assoc19_di" bpmnElement="W694_Assoc19"><di:waypoint x="340" y="1140" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
       </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W801" name="W801. ESG Incident Response, Regulatory Citation Management &amp; Stakeholder Communication" isExecutable="false">

@@ -239,7 +239,7 @@ Source: workflow W3772 — Candidate Screening, Assessment &amp; Structured Inte
       </bpmn:startEvent>
       <bpmn:userTask id="W3772_Task5" name="Recruiting/TA Operations run consistent screening: application review…">
         <bpmn:documentation>Step 1: Recruiting/TA Operations run consistent screening: application review, knock-out criteria, phone/video screen, work-eligibility/right-to-work and statutory checks (links to VS-22), and role-family-specific trade/skill assessment for trade-knowledgeable roles (e.g., a lumber/tile/paint/electrical practical or knowledge check, links to VS-09/VS-19.4 competency framework)
-Responsible (R): Recruiting / Hiring Managers
+Responsible (R): Recruiting / Hiring Managers, Sourcing &amp; Screening Coordinator
 Accountable (A): TA Lead
 Duration: Per candidate</bpmn:documentation>
         <bpmn:incoming>W3772_Flow11</bpmn:incoming>

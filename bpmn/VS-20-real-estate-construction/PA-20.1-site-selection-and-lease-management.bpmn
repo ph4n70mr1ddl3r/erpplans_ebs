@@ -1120,90 +1120,92 @@ Volume: Each assessment covers 1 candidate site; typically 2–3 candidate sites
 Owner: COO &amp; Construction
 Participants: COO, Real Estate Manager, VP Store Operations, Finance Controller, Category Manager (local demand assessment), Legal Counsel, External Real Estate Broker, LGU Planning Office
 Source: workflow W1445 — New Store Site Feasibility Assessment, Traffic Analysis, Competitive Mapping &amp; Real Estate Due Diligence</bpmn:documentation>
-      <bpmn:laneSet id="W1445_LaneSet5">
-        <bpmn:lane id="W1445_Lane1" name="Real Estate Manager">
-        <bpmn:flowNodeRef>W1445_Task7</bpmn:flowNodeRef>
+      <bpmn:laneSet id="W1445_LaneSet6">
+        <bpmn:lane id="W1445_Lane1" name="Real Estate Manager, Real-Estate &amp;…">
         <bpmn:flowNodeRef>W1445_Task8</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W1445_Task9</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W1445_Start6</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W1445_Start7</bpmn:flowNodeRef>
         </bpmn:lane>
-        <bpmn:lane id="W1445_Lane2" name="Finance Controller">
+        <bpmn:lane id="W1445_Lane2" name="Real Estate Manager">
+        <bpmn:flowNodeRef>W1445_Task9</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W1445_Task10</bpmn:flowNodeRef>
         </bpmn:lane>
-        <bpmn:lane id="W1445_Lane3" name="Legal Counsel">
+        <bpmn:lane id="W1445_Lane3" name="Finance Controller">
         <bpmn:flowNodeRef>W1445_Task11</bpmn:flowNodeRef>
         </bpmn:lane>
-        <bpmn:lane id="W1445_Lane4" name="COO">
+        <bpmn:lane id="W1445_Lane4" name="Legal Counsel">
         <bpmn:flowNodeRef>W1445_Task12</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W1445_End13</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W1445_Lane5" name="COO">
+        <bpmn:flowNodeRef>W1445_Task13</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W1445_End14</bpmn:flowNodeRef>
         </bpmn:lane>
       </bpmn:laneSet>
-      <bpmn:startEvent id="W1445_Start6" name="Expansion pipeline milestone (10–15 new stores/year target); or broker/landlord inbound…">
-        <bpmn:outgoing>W1445_Flow16</bpmn:outgoing>
-      </bpmn:startEvent>
-      <bpmn:userTask id="W1445_Task7" name="Market opportunity screening">
-        <bpmn:documentation>Step 1: Market opportunity screening: Real Estate Manager conducts initial market screening: (a) identify high-growth municipalities/cities using: (i) Philippine Statistics Authority population and household growth data, (ii) DTI registered construction permits (proxy for construction activity), (iii) residential development pipeline (new subdivisions, condominiums = future customers), (iv) existing BuildRight store coverage map — identify gaps in the network (&gt; 30-minute drive to nearest BuildRight = underserved), (b) prioritize regions aligned with BuildRight expansion strategy: North/Central Luzon (20 stores → 40+ target) and Visayas (40 stores → 60+ target), (c) produce shortlist of 5–10 candidate municipalities for deeper analysis
-Responsible (R): Real Estate Manager
-Accountable (A): COO
-Duration: 2 weeks</bpmn:documentation>
-        <bpmn:incoming>W1445_Flow16</bpmn:incoming>
+      <bpmn:startEvent id="W1445_Start7" name="Expansion pipeline milestone (10–15 new stores/year target); or broker/landlord inbound…">
         <bpmn:outgoing>W1445_Flow17</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:userTask id="W1445_Task8" name="Candidate site identification and traffic analysis">
-        <bpmn:documentation>Step 2: Candidate site identification and traffic analysis: For shortlisted municipalities: (a) Real Estate Manager identifies 2–3 candidate sites per municipality via: (i) broker network, (ii) property listings, (iii) direct landlord/developer outreach, (iv) LGU economic zone inquiries, (b) conduct traffic and accessibility analysis for each candidate site: (i) vehicle traffic count (DTI/LGU traffic data + manual count during peak hours), (ii) pedestrian foot traffic (proxy for walk-in potential), (iii) road network accessibility: major road frontage, highway proximity, truck accessibility for DC deliveries, (iv) public transportation access (jeepney/bus routes), (c) minimum site requirements: 8,000–15,000 sqm selling area + parking + loading dock; standalone or end-cap in retail park preferred
-Responsible (R): Real Estate Manager / External Broker
+      </bpmn:startEvent>
+      <bpmn:userTask id="W1445_Task8" name="Market opportunity screening">
+        <bpmn:documentation>Step 1: Market opportunity screening: Real Estate Manager conducts initial market screening: (a) identify high-growth municipalities/cities using: (i) Philippine Statistics Authority population and household growth data, (ii) DTI registered construction permits (proxy for construction activity), (iii) residential development pipeline (new subdivisions, condominiums = future customers), (iv) existing BuildRight store coverage map — identify gaps in the network (&gt; 30-minute drive to nearest BuildRight = underserved), (b) prioritize regions aligned with BuildRight expansion strategy: North/Central Luzon (20 stores → 40+ target) and Visayas (40 stores → 60+ target), (c) produce shortlist of 5–10 candidate municipalities for deeper analysis
+Responsible (R): Real Estate Manager, Real-Estate &amp; Site-Selection Analyst
 Accountable (A): COO
 Duration: 2 weeks</bpmn:documentation>
         <bpmn:incoming>W1445_Flow17</bpmn:incoming>
         <bpmn:outgoing>W1445_Flow18</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W1445_Task9" name="Competitive mapping">
+      <bpmn:userTask id="W1445_Task9" name="Candidate site identification and traffic analysis">
+        <bpmn:documentation>Step 2: Candidate site identification and traffic analysis: For shortlisted municipalities: (a) Real Estate Manager identifies 2–3 candidate sites per municipality via: (i) broker network, (ii) property listings, (iii) direct landlord/developer outreach, (iv) LGU economic zone inquiries, (b) conduct traffic and accessibility analysis for each candidate site: (i) vehicle traffic count (DTI/LGU traffic data + manual count during peak hours), (ii) pedestrian foot traffic (proxy for walk-in potential), (iii) road network accessibility: major road frontage, highway proximity, truck accessibility for DC deliveries, (iv) public transportation access (jeepney/bus routes), (c) minimum site requirements: 8,000–15,000 sqm selling area + parking + loading dock; standalone or end-cap in retail park preferred
+Responsible (R): Real Estate Manager / External Broker, Real-Estate &amp; Site-Selection Analyst
+Accountable (A): COO
+Duration: 2 weeks</bpmn:documentation>
+        <bpmn:incoming>W1445_Flow18</bpmn:incoming>
+        <bpmn:outgoing>W1445_Flow19</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W1445_Task10" name="Competitive mapping">
         <bpmn:documentation>Step 3: Competitive mapping: For each candidate site: (a) map all competing hardware/home improvement retailers within 10 km radius: (i) other hardware chains (Wilcon, CitiHardware, Truworths), (ii) independent hardware stores, (iii) building material dealers, (iv) online competitors (Lazada, Shopee delivery coverage), (b) assess competitive intensity: (i) number of competitors, (ii) estimated competitor revenue per store, (iii) BuildRight&#x27;s differentiation opportunity (wider assortment, lower prices, better service, BOPIS), (c) estimate BuildRight&#x27;s addressable market share based on competitive landscape
 Responsible (R): Real Estate Manager / Category Manager
 Accountable (A): VP Merchandising
 Duration: 1 week</bpmn:documentation>
-        <bpmn:incoming>W1445_Flow18</bpmn:incoming>
-        <bpmn:outgoing>W1445_Flow19</bpmn:outgoing>
+        <bpmn:incoming>W1445_Flow19</bpmn:incoming>
+        <bpmn:outgoing>W1445_Flow20</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W1445_Task10" name="Financial feasibility modeling">
+      <bpmn:userTask id="W1445_Task11" name="Financial feasibility modeling">
         <bpmn:documentation>Step 4: Financial feasibility modeling: Finance Controller builds store-level financial model: (a) revenue projection: (i) estimated monthly sales based on catchment population, household income, construction activity, and competitive share, (ii) Year 1–5 revenue ramp (typical: 60% of mature store revenue in Year 1, 80% in Year 2, 95% in Year 3, 100% in Year 4), (b) cost projection: (i) lease cost (base rent + CAM + escalation), (ii) fit-out and capex amortization, (iii) staffing cost (29 employees), (iv) inventory carrying cost, (v) DC delivery cost, (c) profitability analysis: (i) gross margin estimate (28–32%), (ii) store-level EBITDA breakeven timeline, (iii) NPV and IRR over lease term, (d) minimum investment criteria: NPV &gt; 0 at 15% discount rate; EBITDA positive by Year 3; payback period &lt; 5 years
 Responsible (R): Finance Controller
 Accountable (A): CFO
 Duration: 1 week</bpmn:documentation>
-        <bpmn:incoming>W1445_Flow19</bpmn:incoming>
-        <bpmn:outgoing>W1445_Flow20</bpmn:outgoing>
+        <bpmn:incoming>W1445_Flow20</bpmn:incoming>
+        <bpmn:outgoing>W1445_Flow21</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W1445_Task11" name="Real estate due diligence and LGU navigation">
+      <bpmn:userTask id="W1445_Task12" name="Real estate due diligence and LGU navigation">
         <bpmn:documentation>Step 5: Real estate due diligence and LGU navigation: For sites passing financial feasibility: (a) Legal Counsel conducts due diligence: (i) title verification (Registry of Deeds), (ii) zoning compliance (residential/commercial/mixed-use), (iii) tax declaration and real property tax status, (iv) environmental compliance (DENR clearance if applicable), (v) access rights and easements, (b) LGU engagement: (i) secure locational clearance from municipal/city planning office, (ii) confirm building permit requirements and timeline, (iii) identify local business tax rates and incentives (some LGUs offer tax holidays for new investors), (iv) assess political support (meeting with mayor/economic development office), (c) Real Estate Manager negotiates Letter of Intent (LOI) with landlord: (i) lease rate, (ii) lease term (5–10 years + renewal options), (iii) tenant improvement allowance, (iv) escalation terms, (v) exclusivity clause (prevent competing hardware tenant in same development)
 Responsible (R): Legal Counsel / Real Estate Manager
 Accountable (A): COO
 Duration: 2 weeks</bpmn:documentation>
-        <bpmn:incoming>W1445_Flow20</bpmn:incoming>
-        <bpmn:outgoing>W1445_Flow21</bpmn:outgoing>
+        <bpmn:incoming>W1445_Flow21</bpmn:incoming>
+        <bpmn:outgoing>W1445_Flow22</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W1445_Task12" name="Go/no-go decision and lease execution">
+      <bpmn:userTask id="W1445_Task13" name="Go/no-go decision and lease execution">
         <bpmn:documentation>Step 6: Go/no-go decision and lease execution: (a) COO presents complete feasibility package to CEO/CFO: market analysis, site specifics, competitive assessment, financial model, due diligence findings, lease terms, (b) CEO approves or rejects; if approved, Legal Counsel executes lease agreement, (c) VP Store Operations activates new store opening project per W702 (target: 4–6 months from lease signing to store opening)
 Responsible (R): COO
 Accountable (A): CEO
 Duration: 1 week</bpmn:documentation>
-        <bpmn:incoming>W1445_Flow21</bpmn:incoming>
-        <bpmn:outgoing>W1445_Flow22</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:endEvent id="W1445_End13" name="Complete">
         <bpmn:incoming>W1445_Flow22</bpmn:incoming>
+        <bpmn:outgoing>W1445_Flow23</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:endEvent id="W1445_End14" name="Complete">
+        <bpmn:incoming>W1445_Flow23</bpmn:incoming>
       </bpmn:endEvent>
-      <bpmn:textAnnotation id="W1445_Annotation14">
+      <bpmn:textAnnotation id="W1445_Annotation15">
         <bpmn:text>Controls: - CTL-301 (ensure controlled execution — Site Selection &amp; Lease Management (PA-20.1).) | - operational: COO &amp; Construction review and approval gate
 Owner: COO &amp; Construction</bpmn:text>
       </bpmn:textAnnotation>
-      <bpmn:association id="W1445_Assoc15" sourceRef="W1445_Annotation14" targetRef="W1445_Start6" associationDirection="None" />
-      <bpmn:sequenceFlow id="W1445_Flow16" sourceRef="W1445_Start6" targetRef="W1445_Task7" />
-      <bpmn:sequenceFlow id="W1445_Flow17" sourceRef="W1445_Task7" targetRef="W1445_Task8" />
+      <bpmn:association id="W1445_Assoc16" sourceRef="W1445_Annotation15" targetRef="W1445_Start7" associationDirection="None" />
+      <bpmn:sequenceFlow id="W1445_Flow17" sourceRef="W1445_Start7" targetRef="W1445_Task8" />
       <bpmn:sequenceFlow id="W1445_Flow18" sourceRef="W1445_Task8" targetRef="W1445_Task9" />
       <bpmn:sequenceFlow id="W1445_Flow19" sourceRef="W1445_Task9" targetRef="W1445_Task10" />
       <bpmn:sequenceFlow id="W1445_Flow20" sourceRef="W1445_Task10" targetRef="W1445_Task11" />
       <bpmn:sequenceFlow id="W1445_Flow21" sourceRef="W1445_Task11" targetRef="W1445_Task12" />
-      <bpmn:sequenceFlow id="W1445_Flow22" sourceRef="W1445_Task12" targetRef="W1445_End13" />
+      <bpmn:sequenceFlow id="W1445_Flow22" sourceRef="W1445_Task12" targetRef="W1445_Task13" />
+      <bpmn:sequenceFlow id="W1445_Flow23" sourceRef="W1445_Task13" targetRef="W1445_End14" />
     </bpmn:process>
     <bpmndi:BPMNDiagram id="W1445_diag">
       <bpmndi:BPMNPlane id="W1445_plane" bpmnElement="W_W1445">
@@ -1211,23 +1213,24 @@ Owner: COO &amp; Construction</bpmn:text>
         <bpmndi:BPMNShape id="W1445_Lane2_di" bpmnElement="W1445_Lane2" isHorizontal="true"><dc:Bounds x="160" y="250" width="1580" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1445_Lane3_di" bpmnElement="W1445_Lane3" isHorizontal="true"><dc:Bounds x="160" y="420" width="1580" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W1445_Lane4_di" bpmnElement="W1445_Lane4" isHorizontal="true"><dc:Bounds x="160" y="590" width="1580" height="170" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1445_Task7_di" bpmnElement="W1445_Task7"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1445_Task8_di" bpmnElement="W1445_Task8"><dc:Bounds x="610" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1445_Task9_di" bpmnElement="W1445_Task9"><dc:Bounds x="820" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1445_Task10_di" bpmnElement="W1445_Task10"><dc:Bounds x="1030" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1445_Task11_di" bpmnElement="W1445_Task11"><dc:Bounds x="1240" y="465" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1445_Task12_di" bpmnElement="W1445_Task12"><dc:Bounds x="1450" y="635" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1445_Start6_di" bpmnElement="W1445_Start6"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1445_End13_di" bpmnElement="W1445_End13"><dc:Bounds x="1680" y="657" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W1445_Annotation14_di" bpmnElement="W1445_Annotation14"><dc:Bounds x="160" y="800" width="360" height="60" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNEdge id="W1445_Flow16_di" bpmnElement="W1445_Flow16"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W1445_Flow17_di" bpmnElement="W1445_Flow17"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W1445_Flow18_di" bpmnElement="W1445_Flow18"><di:waypoint x="790" y="165" /><di:waypoint x="820" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W1445_Flow19_di" bpmnElement="W1445_Flow19"><di:waypoint x="1000" y="165" /><di:waypoint x="1030" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W1445_Flow20_di" bpmnElement="W1445_Flow20"><di:waypoint x="1210" y="335" /><di:waypoint x="1240" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W1445_Flow21_di" bpmnElement="W1445_Flow21"><di:waypoint x="1420" y="505" /><di:waypoint x="1450" y="675" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W1445_Flow22_di" bpmnElement="W1445_Flow22"><di:waypoint x="1630" y="675" /><di:waypoint x="1680" y="675" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W1445_Assoc15_di" bpmnElement="W1445_Assoc15"><di:waypoint x="340" y="800" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNShape id="W1445_Lane5_di" bpmnElement="W1445_Lane5" isHorizontal="true"><dc:Bounds x="160" y="760" width="1580" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1445_Task8_di" bpmnElement="W1445_Task8"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1445_Task9_di" bpmnElement="W1445_Task9"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1445_Task10_di" bpmnElement="W1445_Task10"><dc:Bounds x="820" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1445_Task11_di" bpmnElement="W1445_Task11"><dc:Bounds x="1030" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1445_Task12_di" bpmnElement="W1445_Task12"><dc:Bounds x="1240" y="635" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1445_Task13_di" bpmnElement="W1445_Task13"><dc:Bounds x="1450" y="805" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1445_Start7_di" bpmnElement="W1445_Start7"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1445_End14_di" bpmnElement="W1445_End14"><dc:Bounds x="1680" y="827" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W1445_Annotation15_di" bpmnElement="W1445_Annotation15"><dc:Bounds x="160" y="970" width="360" height="60" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="W1445_Flow17_di" bpmnElement="W1445_Flow17"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W1445_Flow18_di" bpmnElement="W1445_Flow18"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W1445_Flow19_di" bpmnElement="W1445_Flow19"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W1445_Flow20_di" bpmnElement="W1445_Flow20"><di:waypoint x="1000" y="335" /><di:waypoint x="1030" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W1445_Flow21_di" bpmnElement="W1445_Flow21"><di:waypoint x="1210" y="505" /><di:waypoint x="1240" y="675" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W1445_Flow22_di" bpmnElement="W1445_Flow22"><di:waypoint x="1420" y="675" /><di:waypoint x="1450" y="845" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W1445_Flow23_di" bpmnElement="W1445_Flow23"><di:waypoint x="1630" y="845" /><di:waypoint x="1680" y="845" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W1445_Assoc16_di" bpmnElement="W1445_Assoc16"><di:waypoint x="340" y="970" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
       </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W1446" name="W1446. Store Lease Renewal Negotiation, Market Rent Benchmarking &amp; Strategic Exit or Relocation Decision" isExecutable="false">

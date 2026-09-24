@@ -7,120 +7,123 @@ Volume: 200 stores × ~15–25 flagged exceptions per store per day = ~3,000–5
 Owner: Loss Prevention Manager (Regional)
 Participants: Store Manager, LP Analyst, POS System Administrator, Finance Controller, Senior LP Analytics Analyst
 Source: workflow W837 — Daily Store Exception-Based Reporting &amp; Transaction Monitoring</bpmn:documentation>
-      <bpmn:laneSet id="W837_LaneSet3">
-        <bpmn:lane id="W837_Lane1" name="LP Analyst">
-        <bpmn:flowNodeRef>W837_Task5</bpmn:flowNodeRef>
+      <bpmn:laneSet id="W837_LaneSet4">
+        <bpmn:lane id="W837_Lane1" name="LP Analyst, Senior LP Analytics Analyst">
         <bpmn:flowNodeRef>W837_Task6</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W837_Start5</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W837_Lane2" name="LP Analyst">
         <bpmn:flowNodeRef>W837_Task7</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W837_Task8</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W837_Task9</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W837_Task10</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W837_Start4</bpmn:flowNodeRef>
-        </bpmn:lane>
-        <bpmn:lane id="W837_Lane2" name="Store Manager">
         <bpmn:flowNodeRef>W837_Task11</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W837_End12</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W837_Lane3" name="Store Manager">
+        <bpmn:flowNodeRef>W837_Task12</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W837_End13</bpmn:flowNodeRef>
         </bpmn:lane>
       </bpmn:laneSet>
-      <bpmn:startEvent id="W837_Start4" name="Automated — POS transaction data feed processed nightly; exception alerts generated when…">
-        <bpmn:outgoing>W837_Flow15</bpmn:outgoing>
+      <bpmn:startEvent id="W837_Start5" name="Automated — POS transaction data feed processed nightly; exception alerts generated when…">
+        <bpmn:outgoing>W837_Flow16</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:userTask id="W837_Task5" name="Automated POS data extraction and exception rule engine execution — flag voids…">
+      <bpmn:userTask id="W837_Task6" name="Automated POS data extraction and exception rule engine execution — flag voids…">
         <bpmn:documentation>Step 1: Automated POS data extraction and exception rule engine execution — flag voids, no-sales, excessive discounts, high-value refunds, post-void patterns, and override frequency by cashier
-Responsible (R): LP Analyst
+Responsible (R): LP Analyst, Senior LP Analytics Analyst
 Accountable (A): LP Manager (Regional)
 Duration: 30 min (automated + validation)</bpmn:documentation>
-        <bpmn:incoming>W837_Flow15</bpmn:incoming>
-        <bpmn:outgoing>W837_Flow16</bpmn:outgoing>
+        <bpmn:incoming>W837_Flow16</bpmn:incoming>
+        <bpmn:outgoing>W837_Flow17</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W837_Task6" name="Review prioritized exception dashboard — sort by severity (critical: repeat…">
+      <bpmn:userTask id="W837_Task7" name="Review prioritized exception dashboard — sort by severity (critical: repeat…">
         <bpmn:documentation>Step 2: Review prioritized exception dashboard — sort by severity (critical: repeat offenders, high-value anomalies; medium: single threshold breach; low: borderline)
 Responsible (R): LP Analyst
 Accountable (A): LP Manager (Regional)
 Duration: 45 min</bpmn:documentation>
-        <bpmn:incoming>W837_Flow16</bpmn:incoming>
-        <bpmn:outgoing>W837_Flow17</bpmn:outgoing>
+        <bpmn:incoming>W837_Flow17</bpmn:incoming>
+        <bpmn:outgoing>W837_Flow18</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W837_Task7" name="Cross-reference flagged transactions against CCTV timestamp log and cashier…">
+      <bpmn:userTask id="W837_Task8" name="Cross-reference flagged transactions against CCTV timestamp log and cashier…">
         <bpmn:documentation>Step 3: Cross-reference flagged transactions against CCTV timestamp log and cashier shift schedule
 Responsible (R): LP Analyst
 Accountable (A): Store Manager
 Duration: 30 min</bpmn:documentation>
-        <bpmn:incoming>W837_Flow17</bpmn:incoming>
-        <bpmn:outgoing>W837_Flow18</bpmn:outgoing>
+        <bpmn:incoming>W837_Flow18</bpmn:incoming>
+        <bpmn:outgoing>W837_Flow19</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W837_Task8" name="Escalate critical exceptions (value &gt; PHP 10,000 or repeat pattern ≥ 3…">
+      <bpmn:userTask id="W837_Task9" name="Escalate critical exceptions (value &gt; PHP 10,000 or repeat pattern ≥ 3…">
         <bpmn:documentation>Step 4: Escalate critical exceptions (value &gt; PHP 10,000 or repeat pattern ≥ 3 occurrences) to regional LP Manager with evidence package
 Responsible (R): LP Analyst
 Accountable (A): LP Manager (Regional)
 Duration: 15 min</bpmn:documentation>
-        <bpmn:incoming>W837_Flow18</bpmn:incoming>
-        <bpmn:outgoing>W837_Flow19</bpmn:outgoing>
+        <bpmn:incoming>W837_Flow19</bpmn:incoming>
+        <bpmn:outgoing>W837_Flow20</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W837_Task9" name="Document non-critical exceptions in case log with disposition (explained, under…">
+      <bpmn:userTask id="W837_Task10" name="Document non-critical exceptions in case log with disposition (explained, under…">
         <bpmn:documentation>Step 5: Document non-critical exceptions in case log with disposition (explained, under review, escalated)
 Responsible (R): LP Analyst
 Accountable (A): Store Manager
 Duration: 20 min</bpmn:documentation>
-        <bpmn:incoming>W837_Flow19</bpmn:incoming>
-        <bpmn:outgoing>W837_Flow20</bpmn:outgoing>
+        <bpmn:incoming>W837_Flow20</bpmn:incoming>
+        <bpmn:outgoing>W837_Flow21</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W837_Task10" name="Generate daily LP summary report — total exceptions by category, store ranking…">
+      <bpmn:userTask id="W837_Task11" name="Generate daily LP summary report — total exceptions by category, store ranking…">
         <bpmn:documentation>Step 6: Generate daily LP summary report — total exceptions by category, store ranking, trend vs. prior week
 Responsible (R): LP Analyst
 Accountable (A): LP Manager (Regional)
 Duration: 15 min</bpmn:documentation>
-        <bpmn:incoming>W837_Flow20</bpmn:incoming>
-        <bpmn:outgoing>W837_Flow21</bpmn:outgoing>
+        <bpmn:incoming>W837_Flow21</bpmn:incoming>
+        <bpmn:outgoing>W837_Flow22</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W837_Task11" name="Store Manager reviews and acknowledges store-level exception summary; provides…">
+      <bpmn:userTask id="W837_Task12" name="Store Manager reviews and acknowledges store-level exception summary; provides…">
         <bpmn:documentation>Step 7: Store Manager reviews and acknowledges store-level exception summary; provides context for explained items
 Responsible (R): Store Manager
 Accountable (A): LP Manager (Regional)
 Duration: 20 min</bpmn:documentation>
-        <bpmn:incoming>W837_Flow21</bpmn:incoming>
-        <bpmn:outgoing>W837_Flow22</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:endEvent id="W837_End12" name="Complete">
         <bpmn:incoming>W837_Flow22</bpmn:incoming>
+        <bpmn:outgoing>W837_Flow23</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:endEvent id="W837_End13" name="Complete">
+        <bpmn:incoming>W837_Flow23</bpmn:incoming>
       </bpmn:endEvent>
-      <bpmn:textAnnotation id="W837_Annotation13">
+      <bpmn:textAnnotation id="W837_Annotation14">
         <bpmn:text>Controls: - CTL-225 (ensure shrinkage detection &amp; case governance.) | - operational: Loss Prevention Manager (Regional) review and approval gate
 Owner: Loss Prevention Manager (Regional)</bpmn:text>
       </bpmn:textAnnotation>
-      <bpmn:association id="W837_Assoc14" sourceRef="W837_Annotation13" targetRef="W837_Start4" associationDirection="None" />
-      <bpmn:sequenceFlow id="W837_Flow15" sourceRef="W837_Start4" targetRef="W837_Task5" />
-      <bpmn:sequenceFlow id="W837_Flow16" sourceRef="W837_Task5" targetRef="W837_Task6" />
+      <bpmn:association id="W837_Assoc15" sourceRef="W837_Annotation14" targetRef="W837_Start5" associationDirection="None" />
+      <bpmn:sequenceFlow id="W837_Flow16" sourceRef="W837_Start5" targetRef="W837_Task6" />
       <bpmn:sequenceFlow id="W837_Flow17" sourceRef="W837_Task6" targetRef="W837_Task7" />
       <bpmn:sequenceFlow id="W837_Flow18" sourceRef="W837_Task7" targetRef="W837_Task8" />
       <bpmn:sequenceFlow id="W837_Flow19" sourceRef="W837_Task8" targetRef="W837_Task9" />
       <bpmn:sequenceFlow id="W837_Flow20" sourceRef="W837_Task9" targetRef="W837_Task10" />
       <bpmn:sequenceFlow id="W837_Flow21" sourceRef="W837_Task10" targetRef="W837_Task11" />
-      <bpmn:sequenceFlow id="W837_Flow22" sourceRef="W837_Task11" targetRef="W837_End12" />
+      <bpmn:sequenceFlow id="W837_Flow22" sourceRef="W837_Task11" targetRef="W837_Task12" />
+      <bpmn:sequenceFlow id="W837_Flow23" sourceRef="W837_Task12" targetRef="W837_End13" />
     </bpmn:process>
     <bpmndi:BPMNDiagram id="W837_diag">
       <bpmndi:BPMNPlane id="W837_plane" bpmnElement="W_W837">
         <bpmndi:BPMNShape id="W837_Lane1_di" bpmnElement="W837_Lane1" isHorizontal="true"><dc:Bounds x="160" y="80" width="1790" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W837_Lane2_di" bpmnElement="W837_Lane2" isHorizontal="true"><dc:Bounds x="160" y="250" width="1790" height="170" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W837_Task5_di" bpmnElement="W837_Task5"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W837_Task6_di" bpmnElement="W837_Task6"><dc:Bounds x="610" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W837_Task7_di" bpmnElement="W837_Task7"><dc:Bounds x="820" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W837_Task8_di" bpmnElement="W837_Task8"><dc:Bounds x="1030" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W837_Task9_di" bpmnElement="W837_Task9"><dc:Bounds x="1240" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W837_Task10_di" bpmnElement="W837_Task10"><dc:Bounds x="1450" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W837_Task11_di" bpmnElement="W837_Task11"><dc:Bounds x="1660" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W837_Start4_di" bpmnElement="W837_Start4"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W837_End12_di" bpmnElement="W837_End12"><dc:Bounds x="1890" y="317" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W837_Annotation13_di" bpmnElement="W837_Annotation13"><dc:Bounds x="160" y="460" width="360" height="60" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNEdge id="W837_Flow15_di" bpmnElement="W837_Flow15"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W837_Flow16_di" bpmnElement="W837_Flow16"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W837_Flow17_di" bpmnElement="W837_Flow17"><di:waypoint x="790" y="165" /><di:waypoint x="820" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W837_Flow18_di" bpmnElement="W837_Flow18"><di:waypoint x="1000" y="165" /><di:waypoint x="1030" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W837_Flow19_di" bpmnElement="W837_Flow19"><di:waypoint x="1210" y="165" /><di:waypoint x="1240" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W837_Flow20_di" bpmnElement="W837_Flow20"><di:waypoint x="1420" y="165" /><di:waypoint x="1450" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W837_Flow21_di" bpmnElement="W837_Flow21"><di:waypoint x="1630" y="165" /><di:waypoint x="1660" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W837_Flow22_di" bpmnElement="W837_Flow22"><di:waypoint x="1840" y="335" /><di:waypoint x="1890" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W837_Assoc14_di" bpmnElement="W837_Assoc14"><di:waypoint x="340" y="460" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNShape id="W837_Lane3_di" bpmnElement="W837_Lane3" isHorizontal="true"><dc:Bounds x="160" y="420" width="1790" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W837_Task6_di" bpmnElement="W837_Task6"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W837_Task7_di" bpmnElement="W837_Task7"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W837_Task8_di" bpmnElement="W837_Task8"><dc:Bounds x="820" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W837_Task9_di" bpmnElement="W837_Task9"><dc:Bounds x="1030" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W837_Task10_di" bpmnElement="W837_Task10"><dc:Bounds x="1240" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W837_Task11_di" bpmnElement="W837_Task11"><dc:Bounds x="1450" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W837_Task12_di" bpmnElement="W837_Task12"><dc:Bounds x="1660" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W837_Start5_di" bpmnElement="W837_Start5"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W837_End13_di" bpmnElement="W837_End13"><dc:Bounds x="1890" y="487" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W837_Annotation14_di" bpmnElement="W837_Annotation14"><dc:Bounds x="160" y="630" width="360" height="60" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="W837_Flow16_di" bpmnElement="W837_Flow16"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W837_Flow17_di" bpmnElement="W837_Flow17"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W837_Flow18_di" bpmnElement="W837_Flow18"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W837_Flow19_di" bpmnElement="W837_Flow19"><di:waypoint x="1000" y="335" /><di:waypoint x="1030" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W837_Flow20_di" bpmnElement="W837_Flow20"><di:waypoint x="1210" y="335" /><di:waypoint x="1240" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W837_Flow21_di" bpmnElement="W837_Flow21"><di:waypoint x="1420" y="335" /><di:waypoint x="1450" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W837_Flow22_di" bpmnElement="W837_Flow22"><di:waypoint x="1630" y="335" /><di:waypoint x="1660" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W837_Flow23_di" bpmnElement="W837_Flow23"><di:waypoint x="1840" y="505" /><di:waypoint x="1890" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W837_Assoc15_di" bpmnElement="W837_Assoc15"><di:waypoint x="340" y="630" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
       </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W839" name="W839. Internal Theft Investigation &amp; Employee Dishonesty Case Management" isExecutable="false">

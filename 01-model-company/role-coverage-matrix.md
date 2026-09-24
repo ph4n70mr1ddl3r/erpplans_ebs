@@ -50,29 +50,25 @@
 | Chartered roles (register 192 + IT seats 32 + store 8 + DC 27) | 259 |
 | With ≥1 explicit RACI anchor | 259 (100%) |
 | ZERO-anchor — the anchoring worklist | 0 (hq 0 · it 0 · store 0 · dc 0) |
-| Weakly anchored (1–2 workflows) — demand-verification watchlist | 56 |
+| Weakly anchored (1–2 workflows) — demand-verification watchlist | 54 |
 
-### Weak-anchor watchlist — 56 chartered roles anchored in only 1–2 workflows
+### Weak-anchor watchlist — 54 chartered roles anchored in only 1–2 workflows
 
 | Role | Charter source | HC | Workflows touched |
 |---|---|---|---|
 | Accounting Policy Analyst | §5.3 register — Finance & Accounting | 1 | 1 |
 | Contracts & Commercial Manager (Senior Counsel) | §5.3 register — Legal & Compliance | 1 | 1 |
 | Ecommerce Marketing Specialist | §5.3 register — Marketing | 2 | 1 |
-| ESG Reporting & Data Analyst | §5.3 register — Sustainability / ESG | 1 | 1 |
 | Field Communications Manager | §5.3 register — Store Operations | 1 | 1 |
 | Legal Counsel — Contracts | §5.3 register — Legal & Compliance | 2 | 1 |
-| Marketing Comms Specialist | §5.3 register — Marketing | 1 | 1 |
 | Payroll & Statutory Remittance Officer | §5.3 register — Human Resources | 1 | 1 |
 | Privacy Officer | §5.3 register — Legal & Compliance | 1 | 1 |
 | Promotions & Vendor-Funding Coordinator | §5.3 register — Merchandising & Buying | 3 | 1 |
 | Promotions Specialist | §5.3 register — Marketing | 2 | 1 |
 | Quality & Workforce Analyst | §5.3 register — Customer Service | 2 | 1 |
 | Senior LP Analytics Analyst | §5.3 register — Regional Loss Prevention | 1 | 1 |
-| Sourcing & Screening Coordinator | §5.3 register — Human Resources | 1 | 1 |
 | TA Coordinator | §5.3 register — Human Resources | 1 | 1 |
 | Technical Accounting Manager | §5.3 register — Finance & Accounting | 1 | 1 |
-| Wellness Coordinator | §5.3 register — Health, Safety & Environment | 1 | 1 |
 | Build-Squad Tech Lead | IT product-model seats — Information Technology (product model) | — | 1 |
 | IAP Integration Engineer | IT product-model seats — Information Technology (product model) | — | 1 |
 | ASM | §7.2 store roster — Store (field, per-store roster) | — | 1 |
@@ -83,7 +79,6 @@
 | Facilities/Utility | §7.3 DC roster — DC (field, per-DC roster) | — | 1 |
 | Special Handling Lead | §7.3 DC roster — DC (field, per-DC roster) | — | 1 |
 | Tile & Heavy/Breakbulk Crew | §7.3 DC roster — DC (field, per-DC roster) | — | 1 |
-| 3PL & Freight Specialist | §5.3 register — Supply Chain & Logistics | 2 | 2 |
 | Audit Manager | §5.3 register — Internal Audit & Risk | 1 | 2 |
 | Banking & Cash-Management Specialist | §5.3 register — Finance & Accounting | 2 | 2 |
 | Business Process & IMS Lead | §5.3 register — Strategy / Corporate Planning | 1 | 2 |
@@ -92,20 +87,23 @@
 | DC Cost-to-Serve Analyst | §5.3 register — Finance & Accounting | 1 | 2 |
 | DC Operations Analyst | §5.3 register — Supply Chain & Logistics | 1 | 2 |
 | Ecommerce Support Specialist | §5.3 register — Customer Service | 3 | 2 |
+| ESG Reporting & Data Analyst | §5.3 register — Sustainability / ESG | 1 | 2 |
 | Facilities Coordination Specialist | §5.3 register — Store Operations | 1 | 2 |
 | Forensic / Fraud Investigator | §5.3 register — Internal Audit & Risk | 1 | 2 |
 | Import Documentation Specialist | §5.3 register — Supply Chain & Logistics | 1 | 2 |
 | Maintenance & Projects Coordinator | §5.3 register — Facilities & Real Estate | 2 | 2 |
+| Marketing Comms Specialist | §5.3 register — Marketing | 1 | 2 |
 | Operations Compliance Lead | §5.3 register — Internal Audit & Risk | 1 | 2 |
 | Paralegal / Contracts Specialist | §5.3 register — Legal & Compliance | 2 | 2 |
 | Payroll Supervisor | §5.3 register — Human Resources | 1 | 2 |
 | Purchasing / PO Specialist | §5.3 register — Supply Chain & Logistics | 6 | 2 |
-| Real-Estate & Site-Selection Analyst | §5.3 register — Facilities & Real Estate | 1 | 2 |
 | Replenishment & Allocation Analyst | §5.3 register — Supply Chain & Logistics | 2 | 2 |
 | Retail Media Operations Specialist | §5.3 register — Marketing | 1 | 2 |
 | Senior FP&A Analyst | §5.3 register — Finance & Accounting | 2 | 2 |
+| Sourcing & Screening Coordinator | §5.3 register — Human Resources | 1 | 2 |
 | Strategy Analyst | §5.3 register — Strategy / Corporate Planning | 1 | 2 |
 | Vendor Portal & Collaboration Specialist | §5.3 register — Supply Chain & Logistics | 2 | 2 |
+| Wellness Coordinator | §5.3 register — Health, Safety & Environment | 1 | 2 |
 | AAP Agent Engineer | IT product-model seats — Information Technology (product model) | — | 2 |
 | IAP Integration Support Engineer | IT product-model seats — Information Technology (product model) | — | 2 |
 | INFRA Site Reliability Engineer | IT product-model seats — Information Technology (product model) | — | 2 |
@@ -184,7 +182,7 @@
 | Inventory Planner | Supply Chain & Logistics | 2 | 3 | 6 | 16 | 5 | 11 | 7 | 4 | 0 |
 | Imports & Customs Manager | Supply Chain & Logistics | 1 | 3 | 1 | 0 | 2 | 3 | 2 | 1 | 0 |
 | Vendor Scorecard & Performance Analyst | Supply Chain & Logistics | 1 | 2 | 7 | 6 | 4 | 8 | 3 | 4 | 1 |
-| 3PL & Freight Specialist | Supply Chain & Logistics | 2 | 2 | 0 | 8 | 8 | 2 | 0 | 2 | 0 |
+| 3PL & Freight Specialist | Supply Chain & Logistics | 2 | 2 | 0 | 9 | 8 | 3 | 0 | 3 | 0 |
 | Vendor Portal & Collaboration Specialist | Supply Chain & Logistics | 2 | 1 | 2 | 12 | 1 | 2 | 1 | 1 | 0 |
 | Senior Demand Planner | Supply Chain & Logistics | 1 | 0 | 2 | 1 | 0 | 3 | 3 | 0 | 0 |
 | DC Operations Analyst | Supply Chain & Logistics | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 1 | 1 |
@@ -211,8 +209,8 @@
 | Compensation Analyst | Human Resources | 1 | 0 | 2 | 1 | 0 | 3 | 0 | 2 | 1 |
 | Timekeeping & Attendance Analyst | Human Resources | 1 | 0 | 2 | 1 | 0 | 3 | 2 | 1 | 0 |
 | Payroll Supervisor | Human Resources | 1 | 0 | 2 | 1 | 0 | 2 | 1 | 1 | 0 |
+| Sourcing & Screening Coordinator | Human Resources | 1 | 0 | 1 | 1 | 0 | 2 | 0 | 2 | 0 |
 | Payroll & Statutory Remittance Officer | Human Resources | 1 | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 0 |
-| Sourcing & Screening Coordinator | Human Resources | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | TA Coordinator | Human Resources | 1 | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 |
 | Marketplace Manager | Marketing | 2 | 34 | 66 | 59 | 92 | 79 | 10 | 53 | 16 |
 | Marketing Operations Manager | Marketing | 1 | 25 | 30 | 52 | 56 | 56 | 7 | 31 | 18 |
@@ -230,7 +228,7 @@
 | CRM Data Steward | Marketing | 2 | 3 | 5 | 11 | 4 | 5 | 3 | 2 | 0 |
 | Campaign Manager | Marketing | 2 | 2 | 14 | 28 | 5 | 14 | 3 | 8 | 3 |
 | Performance-Marketing Specialist | Marketing | 2 | 1 | 4 | 16 | 0 | 4 | 0 | 1 | 3 |
-| Marketing Comms Specialist | Marketing | 1 | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 |
+| Marketing Comms Specialist | Marketing | 1 | 1 | 0 | 2 | 0 | 2 | 0 | 1 | 1 |
 | Retail Media Operations Specialist | Marketing | 1 | 0 | 2 | 1 | 0 | 2 | 0 | 1 | 1 |
 | Ecommerce Marketing Specialist | Marketing | 2 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 1 |
 | Promotions Specialist | Marketing | 2 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
@@ -277,11 +275,11 @@
 | Regional LP Officer | Regional Loss Prevention | 20 | 12 | 47 | 77 | 26 | 59 | 29 | 29 | 1 |
 | LP Investigator | Regional Loss Prevention | 2 | 3 | 8 | 25 | 0 | 12 | 8 | 3 | 1 |
 | Senior LP Investigator | Regional Loss Prevention | 1 | 3 | 3 | 7 | 0 | 3 | 3 | 0 | 0 |
-| Senior LP Analytics Analyst | Regional Loss Prevention | 1 | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
+| Senior LP Analytics Analyst | Regional Loss Prevention | 1 | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 0 |
 | Head of HSE | Health, Safety & Environment | 1 | 24 | 9 | 35 | 163 | 86 | 28 | 53 | 5 |
 | Safety Officer (HSE Officer, DOLE-accredited SO2) | Health, Safety & Environment | 10 | 23 | 78 | 145 | 63 | 107 | 51 | 46 | 10 |
 | Company Nurse | Health, Safety & Environment | 1 | 9 | 35 | 40 | 0 | 27 | 11 | 16 | 0 |
-| Wellness Coordinator | Health, Safety & Environment | 1 | 1 | 1 | 1 | 0 | 1 | 0 | 1 | 0 |
+| Wellness Coordinator | Health, Safety & Environment | 1 | 1 | 1 | 2 | 0 | 2 | 0 | 2 | 0 |
 | Head of Quality Management | Quality Management | 1 | 34 | 38 | 128 | 170 | 117 | 29 | 79 | 9 |
 | Metrology & Weights-Measures Specialist | Quality Management | 1 | 25 | 39 | 85 | 5 | 29 | 3 | 22 | 4 |
 | Quality Inspector (Incoming Inspection) | Quality Management | 2 | 3 | 15 | 27 | 1 | 20 | 5 | 13 | 2 |
@@ -292,12 +290,12 @@
 | Director, Facilities & Real Estate (dual-hat GM, BuildRight Property Mgmt, Inc.) | Facilities & Real Estate | 1 | 14 | 0 | 0 | 0 | 14 | 3 | 10 | 1 |
 | Lease Administrator | Facilities & Real Estate | 1 | 13 | 25 | 35 | 4 | 30 | 4 | 24 | 2 |
 | Facilities Coordinator | Facilities & Real Estate | 3 | 8 | 27 | 40 | 23 | 35 | 10 | 24 | 1 |
-| Maintenance & Projects Coordinator | Facilities & Real Estate | 2 | 0 | 2 | 0 | 0 | 2 | 0 | 2 | 0 |
-| Real-Estate & Site-Selection Analyst | Facilities & Real Estate | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 2 | 0 |
+| Real-Estate & Site-Selection Analyst | Facilities & Real Estate | 1 | 0 | 2 | 2 | 0 | 3 | 0 | 3 | 0 |
+| Maintenance & Projects Coordinator | Facilities & Real Estate | 2 | 0 | 2 | 1 | 0 | 2 | 0 | 2 | 0 |
 | Head of Sustainability / ESG (Sustainability/ESG Manager) | Sustainability / ESG | 1 | 75 | 51 | 173 | 182 | 138 | 16 | 76 | 46 |
 | Environmental Compliance Specialist | Sustainability / ESG | 1 | 25 | 13 | 84 | 59 | 37 | 15 | 19 | 3 |
 | Sustainability Coordinator | Sustainability / ESG | 1 | 20 | 40 | 77 | 3 | 49 | 2 | 33 | 14 |
-| ESG Reporting & Data Analyst | Sustainability / ESG | 1 | 1 | 0 | 5 | 0 | 1 | 1 | 0 | 0 |
+| ESG Reporting & Data Analyst | Sustainability / ESG | 1 | 1 | 0 | 6 | 0 | 2 | 1 | 0 | 1 |
 | Head of Strategy & Corporate Planning | Strategy / Corporate Planning | 1 | 32 | 78 | 109 | 31 | 95 | 3 | 79 | 13 |
 | Competitive Intelligence Manager | Strategy / Corporate Planning | 1 | 2 | 4 | 0 | 1 | 5 | 0 | 3 | 2 |
 | Document Control Coordinator | Strategy / Corporate Planning | 1 | 0 | 3 | 0 | 0 | 3 | 0 | 3 | 0 |

@@ -314,7 +314,7 @@ Source: workflow W4173 — Preventive Maintenance Planning &amp; Scheduling</bpm
       </bpmn:startEvent>
       <bpmn:userTask id="W4173_Task5" name="Facilities build the preventive-maintenance (PM) schedule per asset/system from…">
         <bpmn:documentation>Step 1: Facilities build the preventive-maintenance (PM) schedule per asset/system from OEM intervals, warranty, and compliance (fire-system, elevator, generator), and resource it across providers/sites
-Responsible (R): Facilities Maintenance Lead / Provider
+Responsible (R): Facilities Maintenance Lead / Provider, Maintenance &amp; Projects Coordinator
 Accountable (A): Head of Facilities
 Duration: Per cycle</bpmn:documentation>
         <bpmn:incoming>W4173_Flow11</bpmn:incoming>

@@ -22,7 +22,7 @@
 | Class C — healthy (≥1 chartered owner) | 4042 |
 | Class B — owner-grain gap (chartered roles touched, owner not chartered) | 1271 |
 | Class A — role-less (no chartered role in any RACI cell) | 120 |
-| Anchoring census (role → workflow arm, pinned by Check 71) | 259 chartered / 259 anchored / 0 zero-anchor / 56 weak |
+| Anchoring census (role → workflow arm, pinned by Check 71) | 259 chartered / 259 anchored / 0 zero-anchor / 54 weak |
 
 > **Adjudication policy.** Department-grain ownership ('Finance', 'Legal',
 > 'HR' as performer) is acceptable only where the work is genuinely
@@ -2302,7 +2302,6 @@ candidate for the same governance path.
 | Promotions Specialist | Marketing | 1 | 0 |
 | Quality & Workforce Analyst | Customer Service | 1 | 0 |
 | Senior LP Analytics Analyst | Regional Loss Prevention | 1 | 0 |
-| Sourcing & Screening Coordinator | Human Resources | 1 | 0 |
 | Special Handling Lead | DC (field, per-DC roster) | 1 | 0 |
 | TA Coordinator | Human Resources | 1 | 0 |
 | Technical Accounting Manager | Finance & Accounting | 1 | 0 |
@@ -2323,15 +2322,16 @@ candidate for the same governance path.
 | Operations Compliance Lead | Internal Audit & Risk | 2 | 0 |
 | Payroll Supervisor | Human Resources | 2 | 0 |
 | Purchasing / PO Specialist | Supply Chain & Logistics | 2 | 0 |
-| Real-Estate & Site-Selection Analyst | Facilities & Real Estate | 2 | 0 |
 | Replenishment & Allocation Analyst | Supply Chain & Logistics | 2 | 0 |
 | Retail Media Operations Specialist | Marketing | 2 | 0 |
 | Senior FP&A Analyst | Finance & Accounting | 2 | 0 |
+| Sourcing & Screening Coordinator | Human Resources | 2 | 0 |
 | Strategy Analyst | Strategy / Corporate Planning | 2 | 0 |
 | B2B Support Representative | Customer Service | 3 | 0 |
 | Compensation Analyst | Human Resources | 3 | 0 |
 | Document Control Coordinator | Strategy / Corporate Planning | 3 | 0 |
 | Field Compliance Auditor | Internal Audit & Risk | 3 | 0 |
+| Real-Estate & Site-Selection Analyst | Facilities & Real Estate | 3 | 0 |
 | Senior Demand Planner | Supply Chain & Logistics | 3 | 0 |
 | Tax Compliance & eFPS Specialist | Finance & Accounting | 3 | 0 |
 | Timekeeping & Attendance Analyst | Human Resources | 3 | 0 |
