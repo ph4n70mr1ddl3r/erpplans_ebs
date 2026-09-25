@@ -1,0 +1,139 @@
+{
+  "provenance": "Machine twin of the Online Channel & Capability Registry (01-model-company/channel-capability-registry.md) for the man-hours roll-up (07-methodology/manhours-rollup.py): every registry row at a DISABLED state lists the workflows/process areas/value streams whose ENTIRE effort is dormant (frozen as designed capacity, excluded from live totals). Curated, not parsed — a Vehicles cell may cite support flows or mixed live/dormant estates that must NOT be marked (see exclusions). Updated in the same change as any registry row flip (W5580; registry rule 4).",
+  "attribution_note": "A workflow mapped to several capabilities (e.g. W829 under CAP-F04 and CAP-F09) counts once in the live/dormant headline totals and in each capability's own row.",
+  "exclusions": {
+    "W3322": "PA-102.3 sales commission & trade-incentive plan design — a live HR workflow whose trade-incentive slice is dormant (CAP-B03); the workflow itself stays live, so it is not marked",
+    "W1549": "covered by PA-11.2 tree dormancy (CAP-B01); listed here only as a cross-reference",
+    "PA-11.3": "wholesale operations — not a (x)-direction vehicle (CAP-B01 names PA-11.1/PA-11.2 only); stays live",
+    "PA-16.1/PA-16.2/PA-16.3": "CAP-B02's 'AR & Credit (VS-16.3)' citation is ambiguous and the PA-16 estate serves retail (consumer credit scoring, installments, payment settlement); stays live pending explicit direction",
+    "support workflows": "W98 delivery-failure branches, W591 SLA monitors, W12B returns logistics, the E-10 custody chain (VS-142/VS-56): prepared-support per registry §4 — their dormant branches execute only at enablement; the workflows stay live"
+  },
+  "capabilities": [
+    {
+      "id": "CAP-D01",
+      "state": "DISABLED — NOT PREPARED",
+      "name": "AR home visualization tool",
+      "since": "2026-09-25 (bm)",
+      "dormant_value_streams": [],
+      "dormant_process_areas": [],
+      "dormant_workflows": ["W1454"]
+    },
+    {
+      "id": "CAP-C03",
+      "state": "DISABLED — PREPARED",
+      "name": "Third-party marketplaces",
+      "since": "2026-09-23 (t)/(u) pickup-only mandate",
+      "dormant_value_streams": ["VS-65"],
+      "dormant_process_areas": ["PA-10.3"],
+      "dormant_workflows": []
+    },
+    {
+      "id": "CAP-C04",
+      "state": "DISABLED — PREPARED",
+      "name": "Social-commerce checkout",
+      "since": "2026-09-23 (t)/(u) pickup-only mandate",
+      "dormant_value_streams": [],
+      "dormant_process_areas": ["PA-10.3"],
+      "dormant_workflows": []
+    },
+    {
+      "id": "CAP-F04",
+      "state": "DISABLED — PREPARED",
+      "name": "Home delivery from DC",
+      "since": "2026-09-23 (d) pickup-only mandate",
+      "dormant_value_streams": [],
+      "dormant_process_areas": [],
+      "dormant_workflows": ["W19", "W592", "W829", "W899", "W1013"]
+    },
+    {
+      "id": "CAP-F05",
+      "state": "DISABLED — PREPARED",
+      "name": "Ship-from-store",
+      "since": "2026-09-23 (d) pickup-only mandate",
+      "dormant_value_streams": [],
+      "dormant_process_areas": [],
+      "dormant_workflows": ["W19B", "W1196"]
+    },
+    {
+      "id": "CAP-F06",
+      "state": "DISABLED — PREPARED",
+      "name": "Same-day / next-day express",
+      "since": "2026-09-23 (d) pickup-only mandate",
+      "dormant_value_streams": [],
+      "dormant_process_areas": [],
+      "dormant_workflows": ["W1155", "W1234"]
+    },
+    {
+      "id": "CAP-F07",
+      "state": "DISABLED — PREPARED",
+      "name": "Drop-ship vendor direct (DSV)",
+      "since": "2026-09-23 (d) pickup-only mandate",
+      "dormant_value_streams": [],
+      "dormant_process_areas": [],
+      "dormant_workflows": ["W246"]
+    },
+    {
+      "id": "CAP-F08",
+      "state": "DISABLED — PREPARED",
+      "name": "Dark-store quick-commerce",
+      "since": "2026-09-23 (d) pickup-only mandate",
+      "dormant_value_streams": ["VS-93"],
+      "dormant_process_areas": [],
+      "dormant_workflows": ["W210"]
+    },
+    {
+      "id": "CAP-F09",
+      "state": "DISABLED — PREPARED",
+      "name": "Multi-origin split shipment",
+      "since": "2026-09-23 (d) pickup-only mandate",
+      "dormant_value_streams": [],
+      "dormant_process_areas": [],
+      "dormant_workflows": ["W829", "W1195"]
+    },
+    {
+      "id": "CAP-T03",
+      "state": "DISABLED — PREPARED",
+      "name": "Cash on delivery",
+      "since": "2026-09-23 (t)/(u) pickup-only mandate",
+      "dormant_value_streams": [],
+      "dormant_process_areas": [],
+      "dormant_workflows": []
+    },
+    {
+      "id": "CAP-B01",
+      "state": "DISABLED — PREPARED",
+      "name": "Trade & Account Management department",
+      "since": "2026-09-23 (x)",
+      "dormant_value_streams": ["VS-107"],
+      "dormant_process_areas": ["PA-11.1", "PA-11.2"],
+      "dormant_workflows": []
+    },
+    {
+      "id": "CAP-B02",
+      "state": "DISABLED — PREPARED",
+      "name": "Trade credit accounts (B2B AR)",
+      "since": "2026-09-23 (x)",
+      "dormant_value_streams": ["VS-68"],
+      "dormant_process_areas": [],
+      "dormant_workflows": []
+    },
+    {
+      "id": "CAP-B03",
+      "state": "DISABLED — PREPARED",
+      "name": "Trade volume rebates",
+      "since": "2026-09-23 (x)",
+      "dormant_value_streams": [],
+      "dormant_process_areas": [],
+      "dormant_workflows": []
+    },
+    {
+      "id": "CAP-B04",
+      "state": "DISABLED — PREPARED",
+      "name": "Trade Professional membership program (Trade Pro)",
+      "since": "2026-09-23 (x)",
+      "dormant_value_streams": ["VS-43"],
+      "dormant_process_areas": [],
+      "dormant_workflows": []
+    }
+  ]
+}

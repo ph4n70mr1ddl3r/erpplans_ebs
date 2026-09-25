@@ -280,11 +280,12 @@ erpplans/
     ├── backfill-participants.py      Participants derivation from Steps roles
     ├── backfill-time-estimate.py     Time Estimate derivation from step durations
     ├── finalize-time-estimates.py    Draft Time Estimate finalizer (per-occurrence roll-up + Frequency-derived annualization; Check 49 companion)
-    ├── manhours-rollup.py            Living man-hours derivation from every Steps table's Role × Duration columns (classification-honest: effort/per-unit/elapsed/automated/cadence-only buckets; reads the tree, never edits it)
+    ├── manhours-rollup.py            Living man-hours derivation from every Steps table's Role × Duration columns (classification-honest: effort/per-unit/elapsed/automated/cadence-only buckets; splits live-capability vs dormant designed-capacity effort from dormant-capability-register.json; reads the tree, never edits it)
+    ├── dormant-capability-register.json Machine twin of the Online Channel & Capability Registry for the roll-up — per DISABLED — row, the workflows/PAs/VSs whose entire effort is dormant (frozen designed capacity, excluded from live totals); curated (not parsed from Vehicles cells) and updated in the same change as any registry row flip (W5580; registry rule 4)
     ├── manhours-rollup-report.md     GENERATED man-hours roll-up report — classification coverage, corpus totals, top roles/workflows, unparseable triage list (regenerate via 07-methodology/manhours-rollup.py --report; do not hand-edit)
     ├── manhours-rollup.json          GENERATED full-detail roll-up (per-workflow × per-step classification + per-role monthly hours; regenerate via --json)
     ├── manhours-rollup.csv           GENERATED workflow × role hour rows (per-role monthly hours, effort/automated/cadence-only counts, elapsed days, per-unit rates; regenerate via --csv)
-    ├── manhours-workflow-ranking.csv GENERATED per-workflow ranking by derived monthly hours — all 5,456 workflows, high then low desc, with FTE-high and per-class step counts (the headcount-optimization priority list; regenerate via --ranking)
+    ├── manhours-workflow-ranking.csv GENERATED per-workflow ranking by derived monthly hours — all 5,456 workflows, high then low desc, with FTE-high, per-class step counts and the live_or_dormant + dormant_capabilities columns (the headcount-optimization priority list — filter live_or_dormant=live for the staffing basis; regenerate via --ranking)
     ├── audit-time-estimate-math.py    Inline-arithmetic audit of Time Estimate / Staffing paragraphs (unit-convention-aware chain re-derivation; Check 50 guard)
     ├── reconcile-staffing-claims.py  Headcount-anchor & Volume-product reconciliation vs canonical registers (Check 51 guard)
     ├── virtual-gemba-walk.py         Virtual gemba walk & time-and-motion analyzer — per-VS touch time / handoff / approval-gate walk + per-role annual demand vs chartered TO capacity (read-only; 39th wave)

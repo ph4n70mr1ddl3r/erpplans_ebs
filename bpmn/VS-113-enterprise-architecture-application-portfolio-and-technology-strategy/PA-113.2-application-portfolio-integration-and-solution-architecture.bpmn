@@ -859,7 +859,7 @@ Duration: 2–4 h/change</bpmn:documentation>
         <bpmn:outgoing>W5580_Flow25</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W5580_Task12" name="Cross-workflow impact assessment (the flip set)">
-        <bpmn:documentation>Step 2: Cross-workflow impact assessment (the flip set): enumerate the capability&#x27;s vehicle and support workflows that flip live↔dormant; plan the volume re-basing each way (frozen designed-capacity canon ↔ live load); surface dependencies — enabling home delivery re-opens the COD custody chain (E-10), the W14 delivery IC flows and W592 tracking/POD; disabling BOPIS strands the entire online channel (POS completion is the only revenue vehicle)
+        <bpmn:documentation>Step 2: Cross-workflow impact assessment (the flip set): enumerate the capability&#x27;s vehicle and support workflows that flip live↔dormant; plan the volume re-basing each way (frozen designed-capacity canon ↔ live load); record the flip set in 07-methodology/dormant-capability-register.json (the man-hours roll-up&#x27;s dormancy input of record — same-change rule); surface dependencies — enabling home delivery re-opens the COD custody chain (E-10), the W14 delivery IC flows and W592 tracking/POD; disabling BOPIS strands the entire online channel (POS completion is the only revenue vehicle)
 Responsible (R): Product/process architects
 Accountable (A): Head of EA
 Duration: 4–16 h/change</bpmn:documentation>
@@ -915,7 +915,7 @@ Duration: 1–2 weeks elapsed</bpmn:documentation>
         <bpmn:outgoing>W5580_Flow32</bpmn:outgoing>
       </bpmn:userTask>
       <bpmn:userTask id="W5580_Task19" name="Canon settlement: every volume/staffing/canon cell the flip moved is re-pointed…">
-        <bpmn:documentation>Step 9: Canon settlement: every volume/staffing/canon cell the flip moved is re-pointed (the frozen designed-capacity ↔ live-load re-basing), document footers bumped, validate-repo.sh green before the change closes
+        <bpmn:documentation>Step 9: Canon settlement: every volume/staffing/canon cell the flip moved is re-pointed (the frozen designed-capacity ↔ live-load re-basing), the man-hours roll-up re-derived against the updated dormancy register so the live-capability totals re-base in the same change, document footers bumped, validate-repo.sh green before the change closes
 Responsible (R): Head of EA + owning team
 Accountable (A): Head of EA
 Duration: 4–16 h/change</bpmn:documentation>
