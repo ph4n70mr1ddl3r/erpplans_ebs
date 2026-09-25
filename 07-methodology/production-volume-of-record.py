@@ -130,11 +130,6 @@ QUERIES = [
      "SELECT COUNT(DISTINCT inventory_item_id) FROM mtl_system_items_b"),
     ("items_onhand", "Distinct items with on-hand inventory",
      "SELECT COUNT(DISTINCT inventory_item_id) FROM mtl_onhand_quantities_detail"),
-    ("categories_top", "Top item catalog groups, by distinct items",
-     "SELECT g.segment1, g.description, COUNT(DISTINCT i.inventory_item_id) n "
-     "FROM mtl_system_items_b i, mtl_item_catalog_groups_b g "
-     "WHERE i.item_catalog_group_id = g.item_catalog_group_id "
-     "GROUP BY g.segment1, g.description ORDER BY n DESC FETCH FIRST 12 ROWS ONLY"),
     ("store_pos_90d", "POS transactions per store, last 90 days",
      "SELECT store_id, COUNT(*) FROM osipos.osipos_trx_header WHERE trx_date >= TRUNC(SYSDATE)-90 GROUP BY store_id ORDER BY 1"),
     ("stroo_by_source_12m", "STROO transfer lines by source org, trailing 12 mo",
@@ -182,8 +177,6 @@ def _fmt(n):
 def render(cache):
     ts = cache["extracted_at"]
     m = cache["metrics"]
-    cats = m.get("categories_top", {})
-    rows_cat = cats.get("value") or []
 
     def val(key):
         e = m.get(key, {})
@@ -232,14 +225,20 @@ def render(cache):
     A(f"- Items defined in the item master: **{val('items_defined')}**")
     A(f"- Items with on-hand inventory: **{val('items_onhand')}**")
     A(f"- POS-active stores (distinct STORE_ID, last 7 days): **{val('pos_stores_12m')}**")
-    if rows_cat:
-        A(f"- Top item catalog groups (by distinct items): " +
-          "; ".join(f"{c[0]} {c[1]} ({_fmt(c[2])})" for c in rows_cat))
-    elif m.get("categories_top", {}).get("status") == "ok":
-        A("- Top item catalog groups: none maintained on the item master (catalog groups "
-          "unused — the operator's item taxonomy, if any, lives in item categories)")
+    assn = m.get("assortment", {})
+    if assn.get("status") == "ok" and assn.get("value"):
+        a = assn["value"]
+        A("- Merchandise hierarchy: 7 levels — Item type → Purchase type → Brand → "
+          "Product Family (Division) → Product Type (Department) → Product Category → "
+          "Sub Category; trade assortment = item type '10' (Outright)")
+        A("- Top divisions by distinct items: " +
+          "; ".join(f"{d[1]} {_fmt(d[2])}" for d in a["divisions"]))
+        A("- Top product types: " +
+          "; ".join(f"{t[1]} {_fmt(t[2])}" for t in a["types"]))
+        A("- Top brands: " +
+          "; ".join(f"{b[1]} {_fmt(b[2])}" for b in a["brands"]))
     else:
-        A("- Top item catalog groups: — (unavailable this run)")
+        A("- Assortment breakdown: — (unavailable this run)")
 
     # ---- segmentation (§4/§5): deterministic stats over the cached distributions
     def f1(x):
@@ -434,11 +433,48 @@ def render(cache):
     return "\n".join(lines) + "\n"
 
 
+def category_data(cur):
+    """Merchandise assortment from the operator's 7-level category hierarchy.
+
+    Discovered structure: category flexfield MCAT structure 101 'CH Inventory
+    Item Categories' (segments: Item type, Purchase type, Brand, Product
+    Family/Division, Product Type/Department, Product Category, Sub Category);
+    the seeded Inventory set (id 1) is unused — assignments live in the custom
+    set 1100000041 'CH Inventory Item Category'. Item type '10' = Outright
+    (trade) items. These instance facts are constants here on purpose: the
+    register must stay deterministic for --check.
+    """
+    cur.execute("""SELECT application_column_name, flex_value_set_id FROM fnd_id_flex_segments
+                  WHERE id_flex_code='MCAT' AND id_flex_num=101
+                  AND application_column_name IN ('SEGMENT3','SEGMENT4','SEGMENT5')""")
+    vs = {r[0]: r[1] for r in cur.fetchall()}
+
+    def names(col):
+        cur.execute("SELECT flex_value, description FROM fnd_flex_values_vl WHERE flex_value_set_id=:1",
+                    (vs[col],))
+        return {r[0]: (r[1] or "").strip() for r in cur.fetchall()}
+
+    dn, tn, bn = names("SEGMENT4"), names("SEGMENT5"), names("SEGMENT3")
+
+    def top(seg, nm, k):
+        cur.execute(f"""SELECT c.{seg}, COUNT(DISTINCT i.inventory_item_id) n
+                       FROM mtl_item_categories i, mtl_categories_b c
+                       WHERE i.category_id = c.category_id AND i.category_set_id = 1100000041
+                       AND c.structure_id = 101 AND c.segment1 = '10'
+                       GROUP BY c.{seg} ORDER BY n DESC FETCH FIRST {k} ROWS ONLY""")
+        return [[str(r[0]), nm.get(str(r[0]), f"code {r[0]}"), int(r[1])] for r in cur.fetchall()]
+
+    return {"status": "ok",
+            "value": {"divisions": top("SEGMENT4", dn, 12),
+                      "types": top("SEGMENT5", tn, 12),
+                      "brands": top("SEGMENT3", bn, 12)}}
+
+
 def refresh():
     con = connect()
     cur = con.cursor()
     metrics = {}
-    multi_row = {"categories_top", "store_pos_90d", "stroo_by_source_12m",
+    multi_row = {"store_pos_90d", "stroo_by_source_12m",
                  "rcv_by_org_12m", "rcv_split_by_org_12m", "org_codes"}
     for key, _label, sql in QUERIES:
         entry = {"status": "ok", "value": None}
@@ -461,7 +497,14 @@ def refresh():
         except Exception as e:  # noqa: BLE001 — degrade, never abort the register
             entry = {"status": "error", "value": None, "detail": str(e).split("\n")[0][:200]}
         metrics[key] = entry
-        print(f"  {key:18} {entry['status']:7} {_fmt(entry['value']) if entry['status'] == 'ok' else entry.get('detail', '')}")
+        print(f"  {key:22} {entry['status']:7} {_fmt(entry['value']) if entry['status'] == 'ok' else entry.get('detail', '')}")
+    try:
+        metrics["assortment"] = category_data(cur)
+        a = metrics["assortment"]["value"]
+        print(f"  assortment            ok       {len(a['divisions'])} divisions / {len(a['types'])} product types / {len(a['brands'])} brands")
+    except Exception as e:  # noqa: BLE001 — degrade, never abort the register
+        metrics["assortment"] = {"status": "error", "value": None, "detail": str(e).split("\n")[0][:200]}
+        print(f"  assortment            error    {metrics['assortment']['detail']}")
     cur.close()
     con.close()
     cache = {"extracted_at": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),

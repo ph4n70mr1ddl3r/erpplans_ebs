@@ -1,21 +1,21 @@
 # Production Volume of Record — the actual operator's PROD (generated)
 
-> **Generated** by [`production-volume-of-record.py`](../07-methodology/production-volume-of-record.py) `--refresh` on **2026-09-25 00:20 UTC** — read-only `appsro` against the production Active Data Guard standby. **This file is generated — do not hand-edit.** Validator Check 81 runs the instrument's `--check` mode: the register is re-rendered from the committed JSON cache (`production-volume-of-record-cache.json`) and byte-compared, so it cannot drift from its extraction of record. The instrument carries **no credentials** — they come from the environment or the operator's own access notes outside this repository. This register changes **no** model-company canon: every §6 delta is an explicit decision (W5580 governance, executive direction), never an automatic re-base.
+> **Generated** by [`production-volume-of-record.py`](../07-methodology/production-volume-of-record.py) `--refresh` on **2026-09-25 01:09 UTC** — read-only `appsro` against the production Active Data Guard standby. **This file is generated — do not hand-edit.** Validator Check 81 runs the instrument's `--check` mode: the register is re-rendered from the committed JSON cache (`production-volume-of-record-cache.json`) and byte-compared, so it cannot drift from its extraction of record. The instrument carries **no credentials** — they come from the environment or the operator's own access notes outside this repository. This register changes **no** model-company canon: every §6 delta is an explicit decision (W5580 governance, executive direction), never an automatic re-base.
 
 ## §1 Operating volumes — trailing 12 months, measured live
 
 | Metric | Actual (12 mo) |
 |---|---|
-| POS transactions (headers) | 13,306,019 |
+| POS transactions (headers) | 13,306,243 |
 | POS-active stores (last 7 days) | 132 |
-| Purchase orders | 22,180 |
-| PO lines | 141,866 |
-| Inter-branch transfer orders (STROO) | 532,538 |
-| OM order lines (all types) | 1,596,414 |
-| AP supplier invoices | 188,596 |
-| AR credit memos (returns instrument) | 14,810 |
-| PO receipt lines | 3,143,963 |
-| GL journal batches | 291,432 |
+| Purchase orders | 22,186 |
+| PO lines | 141,877 |
+| Inter-branch transfer orders (STROO) | 532,548 |
+| OM order lines (all types) | 1,596,393 |
+| AP supplier invoices | 188,660 |
+| AR credit memos (returns instrument) | 14,805 |
+| PO receipt lines | 3,143,902 |
+| GL journal batches | 291,526 |
 
 ## §2 Structure & estate
 
@@ -31,19 +31,22 @@
 - Items defined in the item master: **113,954**
 - Items with on-hand inventory: **31,475**
 - POS-active stores (distinct STORE_ID, last 7 days): **132**
-- Top item catalog groups: none maintained on the item master (catalog groups unused — the operator's item taxonomy, if any, lives in item categories)
+- Merchandise hierarchy: 7 levels — Item type → Purchase type → Brand → Product Family (Division) → Product Type (Department) → Product Category → Sub Category; trade assortment = item type '10' (Outright)
+- Top divisions by distinct items: WALL AND FLOOR COVERING 7,655; APPLIANCES 7,005; BUILDING MATERIALS 5,335; HARDWARE 3,733; BATHROOM FIXTURES 3,634; ELECTRICAL 3,602; DOORS AND WINDOWS 3,153; CONSTRUCTION EQUIPMENT 2,483; KITCHEN 2,259; BUILDING MAINTENANCE 2,242; STORAGE AND ORGANIZERS 2,199; PLUMBING 1,712
+- Top product types: KITCHEN 3,636; ACCESSORIES 3,290; PACKAGING MATERIALS 2,424; COOLING 1,990; COVERINGS 1,481; WALL CERAMIC 1,381; BOARDS 1,339; COVERINGS 1,260; ADHESIVES 1,187; WATER CLOSETS AND URINALS 1,134; POWER TOOLS 1,090; MOULDINGS 1,058
+- Top brands: BOSTON BAY 6,698; HAUSMANN 5,093; LA FONZA 2,010; DESIGNCRAFT 1,886; ZIGMA 1,742; RYKER 1,544; WOODTEK 1,339; POLYWOOD 1,174; BREMEN 1,116; CTX 951; STACK 916; HAPPY HOME 868
 
 ## §4 Store size segments — POS-measured, last 90 days
 
-Segmentation of the 132 POS-posting stores by transactions per store per day (90-day basis; tercile cuts at 201.5 and 312.7 trx/day):
+Segmentation of the 132 POS-posting stores by transactions per store per day (90-day basis; tercile cuts at 201.6 and 313.0 trx/day):
 
 | Segment | Stores | Store share | Mean trx/store/day | 90-day volume | Volume share |
 |---|---|---|---|---|---|
-| Big | 45 | 34% | 425.8 | 1,724,453 | 53% |
-| Medium | 44 | 33% | 251.2 | 994,632 | 30% |
-| Small | 43 | 33% | 143.5 | 555,458 | 17% |
+| Big | 45 | 34% | 426.0 | 1,725,469 | 53% |
+| Medium | 44 | 33% | 251.3 | 995,239 | 30% |
+| Small | 43 | 33% | 143.6 | 555,795 | 17% |
 
-Largest store: TAG (109) at 823.7 trx/day; smallest: GUN (2307) at 13.1 — a 63x spread the uniform per-store model-company canon does not capture.
+Largest store: TAG (109) at 824.1 trx/day; smallest: GUN (2307) at 13.1 — a 62x spread the uniform per-store model-company canon does not capture.
 
 ## §5 Distribution-network tiers — STROO outbound, trailing 12 months
 
@@ -51,11 +54,11 @@ Tiering the network by each org's share of outbound transfer lines (hub ≥5%, r
 
 | Tier | Orgs | Line share | Lines/month | Cut | Members (top) |
 |---|---|---|---|---|---|
-| National hubs | 7 | 88% | 116,871.0 | ≥5% of lines | SDC (113), CDC (818), BDC (1341), CD2 (1521), CD3 (1561), CD4 (1562), … |
-| Regional DCs | 3 | 4% | 4,774.7 | 1–5% | CD5 (2206), CD6 (2207), CD7 (2326) |
-| Satellite / store-attached | 143 | 8% | 11,228.1 | <1% | BAJ (101), MAT (102), ILI (103), CAG (104), PAR (105), MAN (106), … |
+| National hubs | 7 | 88% | 116,868.2 | ≥5% of lines | SDC (113), CDC (818), BDC (1341), CD2 (1521), CD3 (1561), CD4 (1562), … |
+| Regional DCs | 3 | 4% | 4,774.8 | 1–5% | CD5 (2206), CD6 (2207), CD7 (2326) |
+| Satellite / store-attached | 143 | 8% | 11,229.0 | <1% | BAJ (101), MAT (102), ILI (103), CAG (104), PAR (105), MAN (106), … |
 
-**Inbound sourcing at stores** (DELIVER receipt lines, trailing 12 mo; 1,473,853 store receipt lines / 182,364,007 units):
+**Inbound sourcing at stores** (DELIVER receipt lines, trailing 12 mo; 1,473,811 store receipt lines / 182,378,237 units):
 
 - **INTERNAL ORDER (DC/inter-branch transfers): 92% of lines, 94% of quantity** — the DC network is the store-replenishment artery
 - VENDOR direct-to-store: 6% of lines, 4% of quantity — a supplementary slice, not the artery
@@ -69,8 +72,8 @@ Landing-zone context: 93% of ALL DELIVER receipt lines land at stores — but as
 |---|---|---|---|
 | Stores | 200 (root README; data-volumes §1.1 mirrors the operator) | 132 POS-active (§2 inventory orgs 291) | OPEN — reconcile the 171-store calibration basis (data-volumes v4.7) vs the ~232-store audit figure vs the live POS-active count |
 | POS receipts per store per day (design target 467 = 93,333/day ÷ 200) | 467 | ≈ 276.0 (12-mo POS ÷ stores ÷ days) | OPEN — the 2026-07-30 probe measured 126–510/store/day, mean ~330; decide target-vs-measured |
-| Purchase orders per month (canon 1,650–1,950) | 1,650–1,950 | ≈ 1,848 | CONFIRMED if within band — the §1.1 calibration held |
-| Replenishment transfers per month (canon ~50,000) | ~50,000 | ≈ 44,378 | CONFIRMED if ~250/store on the live store count |
+| Purchase orders per month (canon 1,650–1,950) | 1,650–1,950 | ≈ 1,849 | CONFIRMED if within band — the §1.1 calibration held |
+| Replenishment transfers per month (canon ~50,000) | ~50,000 | ≈ 44,379 | CONFIRMED if ~250/store on the live store count |
 | Customer returns AR credit memos per month (canon ~1,200) | ~1,200 | ≈ 1,234 | CONFIRMED if within band |
 | Active SKUs | 35,000 | 31,475 items with on-hand | OPEN — near-canon if within ±15% |
 | Item master | ~55,000 | 113,954 defined | OPEN — the operator runs ~2x the modeled master |
@@ -111,7 +114,7 @@ Landing-zone context: 93% of ALL DELIVER receipt lines land at stores — but as
 
 ## §8 Method & freshness
 
-- Extracted: **2026-09-25 00:20 UTC**; query window: trailing 12 months from the database SYSDATE.
+- Extracted: **2026-09-25 01:09 UTC**; query window: trailing 12 months from the database SYSDATE.
 - Route: read-only `appsro` on the Active Data Guard standby (the operator's own
   access route; credentials via environment or ACCESS_EBS_HOME notes — never committed).
 - Timeout/error queries degrade to '—' here and are listed in the cache with their
@@ -120,4 +123,4 @@ Landing-zone context: 93% of ALL DELIVER receipt lines land at stores — but as
 - Pinned by validate-repo.sh **Check 81** (`--check` byte-verify from the committed
   cache). Refresh cadence: monthly, or before any calibration decision.
 
-*Generated 2026-09-25 00:20 UTC by production-volume-of-record.py — do not hand-edit.*
+*Generated 2026-09-25 01:09 UTC by production-volume-of-record.py — do not hand-edit.*
