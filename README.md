@@ -279,6 +279,10 @@ erpplans/
     ├── backfill-participants.py      Participants derivation from Steps roles
     ├── backfill-time-estimate.py     Time Estimate derivation from step durations
     ├── finalize-time-estimates.py    Draft Time Estimate finalizer (per-occurrence roll-up + Frequency-derived annualization; Check 49 companion)
+    ├── manhours-rollup.py            Living man-hours derivation from every Steps table's Role × Duration columns (classification-honest: effort/per-unit/elapsed/automated/cadence-only buckets; reads the tree, never edits it)
+    ├── manhours-rollup-report.md     GENERATED man-hours roll-up report — classification coverage, corpus totals, top roles/workflows, unparseable triage list (regenerate via 07-methodology/manhours-rollup.py --report; do not hand-edit)
+    ├── manhours-rollup.json          GENERATED full-detail roll-up (per-workflow × per-step classification + per-role monthly hours; regenerate via --json)
+    ├── manhours-rollup.csv           GENERATED workflow × role hour rows (per-role monthly hours, effort/automated/cadence-only counts, elapsed days, per-unit rates; regenerate via --csv)
     ├── audit-time-estimate-math.py    Inline-arithmetic audit of Time Estimate / Staffing paragraphs (unit-convention-aware chain re-derivation; Check 50 guard)
     ├── reconcile-staffing-claims.py  Headcount-anchor & Volume-product reconciliation vs canonical registers (Check 51 guard)
     ├── virtual-gemba-walk.py         Virtual gemba walk & time-and-motion analyzer — per-VS touch time / handoff / approval-gate walk + per-role annual demand vs chartered TO capacity (read-only; 39th wave)
