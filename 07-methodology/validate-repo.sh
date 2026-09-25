@@ -4170,6 +4170,53 @@ for name in sorted(os.listdir(meth)):
         continue
     if name not in readme:
         bad.append("tree-completeness: 07-methodology/%s not listed in the root-README folder tree" % name)
+
+# (e) repo-wide navigation-tree completeness (the 2026-09-25 (bp) eighth-pass
+# extension — the (bl) class one directory over): the same drift the (d) arm
+# closes for 07-methodology existed for every OTHER non-corpus file — the four
+# domain gap-analysis companions (workflow-gap-analysis-{it,finance,operations,
+# people}.md) sat untracked by any tree row from their batch-8–11 issuance until
+# this arm shipped, guarded for figures by Check 76 but absent from both the
+# root-README tree and the workflows/README Navigation hub. Scopes: every
+# root-level visible file (the Component-GPL price-list PDF), the .ebs-ssh.py
+# PROD-route helper, every 01-model-company and 02-oracle-ebs top-level
+# document, every top-level workflows/ support document (which must ALSO carry
+# a row in the workflows/README Navigation table — the navigation hub is a
+# listing surface of its own), and every policies/ document (the policies
+# tree row is prose-summarized, so its own directory index — the master
+# register README — must list each: the nine domain manuals and
+# gap-analysis.md are linked from it). Corpus PA files and the generated
+# bpmn//dmn//ebs_docs/ trees stay out of scope: tree-summarized by design
+# (bpmn/dmn/ebs_docs) or listed per-VS-directory (PA files, Check 44).
+import glob
+mc = os.path.join(ROOT, "01-model-company")
+wf = os.path.join(mc, "workflows")
+ebs = os.path.join(ROOT, "02-oracle-ebs")
+wfreadme = open(os.path.join(wf, "README.md"), encoding="utf-8").read()
+polreadme = open(os.path.join(mc, "policies", "README.md"), encoding="utf-8").read()
+for name in sorted(os.listdir(ROOT)):
+    p = os.path.join(ROOT, name)
+    if not os.path.isfile(p):
+        continue
+    if name == "README.md":
+        continue
+    if name.startswith(".") and name != ".ebs-ssh.py":
+        continue  # .gitignore and editor state are infrastructure, not artifacts
+    if name not in readme:
+        bad.append("tree-completeness: root-level %s not listed in the root-README folder tree" % name)
+for d, scope in ((mc, "01-model-company"), (wf, "01-model-company/workflows"), (ebs, "02-oracle-ebs")):
+    for name in sorted(os.listdir(d)):
+        if not name.endswith(".md") or not os.path.isfile(os.path.join(d, name)):
+            continue
+        if name not in readme:
+            bad.append("tree-completeness: %s/%s not listed in the root-README folder tree" % (scope, name))
+        if scope == "01-model-company/workflows" and name not in ("README.md",) and name not in wfreadme:
+            bad.append("nav-completeness: %s/%s not listed in the workflows/README.md Navigation hub" % (scope, name))
+for name in sorted(os.listdir(os.path.join(mc, "policies"))):
+    if not name.endswith(".md"):
+        continue
+    if name not in polreadme and name not in readme:
+        bad.append("tree-completeness: 01-model-company/policies/%s not listed in the policies README index or the root-README tree" % name)
 print("HITS %d" % len(bad))
 for b in bad:
     print("BAD|" + b)
@@ -4177,7 +4224,7 @@ PY
 )
 C63_BAD=$(echo "$C63_OUT" | sed -n 's/^HITS \([0-9]*\)/\1/p')
 if [ "${C63_BAD:-1}" -eq 0 ]; then
-    ok "Root-README worklist rows agree with the worklist files and the methodology tree lists every 07-methodology file (stale batch17 residual repaired by review #69)"
+    ok "Root-README worklist rows agree with the worklist files, the methodology tree lists every 07-methodology file, and the (bp) repo-wide arm lists every non-corpus file (root-level artifacts incl. the Component-GPL price-list PDF and the .ebs-ssh.py PROD-route helper, 01-model-company / workflows / 02-oracle-ebs top-level documents, each workflows/ support doc also in the Navigation hub, each policies/ doc in its directory index) — the (bl) class closed repo-wide (stale batch17 residual repaired by review #69)"
 else
     error "$C63_BAD root-README worklist/tree violation(s):"
     echo "$C63_OUT" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
@@ -6391,6 +6438,137 @@ if [ $C81_RC -eq 0 ]; then
 else
     error "Production volume-of-record register drift (run production-volume-of-record.py --refresh to re-extract, or restore the register):"
     echo "$C81_OUT" | sed 's/^/    [vol-of-record] /' | head -15
+fi
+
+echo ""
+echo "--- Check 82: Corporate Policy Manual register↔manual mirror ---"
+# --- Check 82: Corporate Policy Manual register↔manual mirror (the standing guard the six policy passes lacked) ---
+# The policy layer (01-model-company/policies/: the framework README's master
+# register + nine domain manuals, 75 policies) was built and trued across six
+# manual passes ((bh)–(bn)), each verifying the register↔manual mirror BY HAND
+# — the mechanical diff pass 6 ran (count/cadence/title/owner against the
+# manuals' bold-marker-split header tables) was never wired into a check, so a
+# future policy edit can contradict the register with nothing to fire. This
+# check re-derives that diff every run: (a) 75 register rows parse and 75
+# manual '## POL-xx' headers parse, per-domain counts equal; (b) set equality
+# in both directions; (c) every register Title cell equals its manual header
+# title; (d) every policy carries the §1.1(i) Version row ('1.0 — initial
+# issue, 2026-09-25 codification'); (e) every register cadence token (Ny)
+# agrees with the manual's Cadence line (N-year, or Annual for 1y); (f) every
+# register Owner/Approver cell fragment (parentheticals stripped, + / & / /
+# splits) resolves into the manual's Owner line — the pass-5/6 adjudicated
+# direction: the register may abbreviate ('DPO', 'SOC', the Manager suffix)
+# but may not name an owner the manual lacks; (g) every W-id / PA-x.y / VS-n /
+# CTL-n cited in the register Anchors cells or the manuals' Anchors rows
+# resolves against the corpus universes (5,456 '##'/'###' W headers, 569 PA
+# files with .x prefix wildcards, 188 VS dirs incl. slash-compound lists, the
+# 808 CTL rows) — the pass-5 workflow-link sweep made standing. Statement-level
+# cross-references and owner-title-vs-TO resolution stay with the manual passes
+# and generate-role-coverage.py's alias layer; this guard pins the mirror
+# itself.
+C82_OUT=$(python3 - "$REPO_ROOT" <<'PY'
+import os, re, glob, sys
+from collections import Counter
+ROOT = sys.argv[1]
+base = os.path.join(ROOT, "01-model-company", "policies")
+MANUALS = ["10-corporate-governance-policies.md","20-finance-treasury-policies.md","30-procurement-vendor-policies.md",
+           "40-hr-employment-policies.md","50-it-security-policies.md","60-data-privacy-records-policies.md",
+           "70-retail-operations-policies.md","80-health-safety-environment-policies.md","90-business-continuity-insurance-policies.md"]
+errs = []
+reg = open(os.path.join(base, "README.md"), encoding="utf-8").read()
+rows, order = {}, []
+for m in re.finditer(r'^\| (POL-[A-Z]\d{2}) \| ([^|]+) \| ([^|]+) \| ([^|]+) \| ([^|]+) \| ([^|]+) \|$', reg, re.M):
+    rows[m.group(1)] = dict(title=m.group(2).strip(), owner=m.group(3).strip(),
+                            appr=m.group(4).strip(), cad=m.group(5).strip(), anch=m.group(6).strip())
+    order.append(m.group(1))
+if len(rows) != 75 or len(order) != 75:
+    errs.append("register parses to %d rows (canonical 75)" % len(rows))
+wids = set()
+for p in glob.glob(os.path.join(ROOT, "01-model-company/workflows/VS-*/PA-*.md")):
+    wids |= set(re.findall(r'^##+ (W\d+[A-Z]?)\.', open(p, encoding="utf-8").read(), re.M))
+paset = set(re.match(r"(PA-\d+\.\d+)", os.path.basename(p)).group(1) for p in glob.glob(os.path.join(ROOT, "01-model-company/workflows/VS-*/PA-*.md")))
+vsset = set(re.match(r"VS-(\d+)", d).group(1) for d in os.listdir(os.path.join(ROOT, "01-model-company/workflows")) if d.startswith("VS-"))
+ctlset = set(re.findall(r'^\| (CTL-\d+) \|', open(os.path.join(ROOT, "01-model-company/internal-controls-matrix.md"), encoding="utf-8").read(), re.M))
+manual = {}
+for mn in MANUALS:
+    t = open(os.path.join(base, mn), encoding="utf-8").read()
+    for m in re.finditer(r'^## (POL-[A-Z]\d{2}) — (.+)$', t, re.M):
+        nxt = re.search(r'^## ', t[m.end():], re.M)
+        seg = t[m.start(): m.end() + (nxt.start() if nxt else len(t))]
+        manual[m.group(1)] = dict(file=mn, title=m.group(2).strip(), seg=seg)
+if len(manual) != 75:
+    errs.append("manual headers parse to %d (canonical 75)" % len(manual))
+dom = lambda p: p[4]
+rc, mc = Counter(dom(p) for p in rows), Counter(dom(p) for p in manual)
+if rc != mc:
+    errs.append("per-domain counts differ: register %s vs manuals %s" % (dict(sorted(rc.items())), dict(sorted(mc.items()))))
+for p in sorted(set(rows) - set(manual)):
+    errs.append("%s in the register but no manual header" % p)
+for p in sorted(set(manual) - set(rows)):
+    errs.append("%s manual header but not in the register" % p)
+for p in sorted(set(rows) & set(manual)):
+    if rows[p]['title'] != manual[p]['title']:
+        errs.append("%s title drift: register '%s' vs manual '%s'" % (p, rows[p]['title'], manual[p]['title']))
+    seg = manual[p]['seg']
+    if not re.search(r'^\| Version \| 1\.0 — initial issue, 2026-09-25 codification \|$', seg, re.M):
+        errs.append("%s missing the §1.1(i) Version row" % p)
+    cm = re.search(r'^\| Cadence \| (.+?) \|$', seg, re.M)
+    if not cm:
+        errs.append("%s missing the Cadence row" % p)
+    else:
+        ym = re.match(r'^(\d+)y$', rows[p]['cad'])
+        okc = (ym and (ym.group(1) + "-year" in cm.group(1) or (ym.group(1) == '1' and 'nnual' in cm.group(1)))) or \
+              (not ym and rows[p]['cad'].split()[0].lower() in cm.group(1).lower())
+        if not okc:
+            errs.append("%s cadence drift: register '%s' vs manual '%s'" % (p, rows[p]['cad'], cm.group(1)))
+    om = re.search(r'^\| Owner \(R\) / Approver \| (.+?) \|$', seg, re.M)
+    if not om:
+        errs.append("%s missing the Owner (R) / Approver row" % p)
+    else:
+        manline = re.sub(r'\s+', ' ', om.group(1).replace('**', ''))
+        for cellname in ('owner', 'appr'):
+            c = re.sub(r'\([^)]*\)', '', rows[p][cellname])
+            for fr in (x.strip() for x in re.split(r'[+/&]', c)):
+                if fr and fr not in manline:
+                    errs.append("%s %s fragment '%s' resolves nowhere in the manual owner line '%s'" % (p, cellname, fr, manline))
+
+def resolve(text, ctx):
+    for m in re.finditer(r'(W\d+[A-Z]?)–(W\d+[A-Z]?)', text):
+        a, b = m.group(1), m.group(2)
+        na, nb = int(a[1:]) if a[1:].isdigit() else 0, int(b[1:]) if b[1:].isdigit() else 0
+        if a not in wids: errs.append("%s: anchor range start %s unresolved" % (ctx, a))
+        if b not in wids: errs.append("%s: anchor range end %s unresolved" % (ctx, b))
+        if na and nb and na <= nb <= na + 50:
+            for i in range(na, nb + 1):
+                if "W%d" % i not in wids: errs.append("%s: W%d (anchor range) unresolved" % (ctx, i))
+    for m in re.finditer(r'\bW\d+[A-Z]?\b', text):
+        if m.group(0) not in wids: errs.append("%s: %s unresolved" % (ctx, m.group(0)))
+    for m in re.finditer(r'\bPA-(\d+)\.(\d+|x)\b', text):
+        n, d = m.group(1), m.group(2)
+        if d == 'x':
+            if not any(pp.startswith("PA-%s." % n) for pp in paset): errs.append("%s: PA-%s.x prefix unresolved" % (ctx, n))
+        elif "PA-%s.%s" % (n, d) not in paset: errs.append("%s: PA-%s.%s unresolved" % (ctx, n, d))
+    for m in re.finditer(r'\bVS-(\d+(?:/\d+)*)\b', text):
+        for n in m.group(1).split('/'):
+            if n not in vsset: errs.append("%s: VS-%s unresolved" % (ctx, n))
+    for m in re.finditer(r'\bCTL-\d+\b', text):
+        if m.group(0) not in ctlset: errs.append("%s: %s unresolved" % (ctx, m.group(0)))
+for p, r in rows.items():
+    resolve(r['anch'], "register %s" % p)
+for p, info in manual.items():
+    for m in re.finditer(r'^\| Anchors \| (.+?) \|$', info['seg'], re.M):
+        resolve(m.group(1), "%s %s" % (info['file'], p))
+print("HITS %d" % len(errs))
+for e in errs:
+    print("BAD|" + e)
+PY
+)
+C82_BAD=$(echo "$C82_OUT" | sed -n 's/^HITS \([0-9]*\)/\1/p')
+if [ "${C82_BAD:-1}" -eq 0 ]; then
+    ok "Corporate Policy Manual register↔manual mirror clean: 75 register rows ↔ 75 manual headers, per-domain counts equal (14+9+5+11+7+5+11+10+3), titles/Version rows/cadence tokens agree, every register owner and approver fragment resolves into its manual owner line (the pass-5/6 adjudicated direction — the register may abbreviate, never invent), and every W/PA/VS/CTL anchor cited by the register or the nine manuals resolves against the corpus universes (5,456 W headers / 569 PA files / 188 VS dirs / 808 CTL rows) — the six policy passes' manual diff ((bh)–(bn)) made standing (guard added by the 2026-09-25 (bp) eighth review-everything pass)"
+else
+    error "$C82_BAD Corporate Policy Manual register↔manual mirror violation(s):"
+    echo "$C82_OUT" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
 fi
 
 echo ""

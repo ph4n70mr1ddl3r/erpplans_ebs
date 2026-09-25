@@ -38,6 +38,10 @@ erpplans/
 │   │   ├── workflow-dependency-map.md           Prerequisite relationships, critical path
 │   │   ├── workflow-system-touchpoint-map.md    ERP module-to-workflow cross-reference
 │   │   ├── workflow-gap-analysis.md            Gap-analysis methodology & 30-pass history
+│   │   ├── workflow-gap-analysis-it.md         IT-domain companion — family rosters, coverage & evidence baselines per domain (Check 76-guarded)
+│   │   ├── workflow-gap-analysis-finance.md    Finance-domain companion — family rosters, coverage & evidence baselines per domain (Check 76-guarded)
+│   │   ├── workflow-gap-analysis-operations.md Operations-domain companion — family rosters, coverage & evidence baselines per domain (Check 76-guarded)
+│   │   ├── workflow-gap-analysis-people.md     People-domain companion — family rosters, coverage & evidence baselines per domain (Check 76-guarded)
 │   │   ├── event-custody-and-precedence-register.md  Cross-cutting event routing: accountable VS, PAGASA signal ladder, incident command, enforced overlap pairs
 │   │   ├── VS-01-merchandise-strategy/         46 workflows (3 process areas)
 │   │   ├── VS-02-supply-planning/               38 workflows (3 process areas)
@@ -257,14 +261,16 @@ erpplans/
 ├── ebs_docs/                    ← Oracle E-Business Suite R12.2 official documentation library (376 PDFs / 133,782 pages + the vendor HTML index) — the source of record behind 02-oracle-ebs/ebs-documentation-coverage.md
 ├── dmn/                         ← Generated DMN 1.3 decision models (80 decisions across 41 process areas; rule tables + tiered PHP authorization thresholds; mirrors the workflows/ tree; regenerates via 07-methodology/generate-dmn.py)
 ├── bpmn/                        ← Generated BPMN 2.0 models (5,456 processes; mirrors the workflows/ tree; regenerates via 07-methodology/generate-bpmn.py)
+├── applications-price-list-070574.pdf  Oracle Component GPL price list (September 10, 2026) — the in-repo source of record behind the licensing-BOM §2 line items and the §7 sellable-SKU sweep
+├── .ebs-ssh.py                  Credential-free SSH helper for the EBS VM (the ~/access_ebs PROD route; reads EBS_VM_PASS from the environment — never hardcoded)
 ├── CHANGELOG.md                 ← Revision history
 └── 07-methodology/              ← Technical system architecture and guidelines
     ├── README.md                     Methodology index & future document plan
     ├── technical-guidelines.md       POS hardware, infrastructure, integration, security, two-tier sourcing architecture
     ├── capability-sourcing-and-engineering-model.md  Two-tier sourcing decision gate (in EBS → use it; otherwise build), sourcing register, build squads, SEP
     ├── it-product-operating-model.md IT product teams (two-tier: in-suite EBS core + in-house built & already-built platforms + AI agent platform), roles, RACI, governance, sizing (50 → 122 FTE)
-    ├── ai-first-operating-guide.md   The AI-first operating guide — ERP-agnostic doctrine (ten laws, six layers, capability contracts), sourcing neutrality, autonomy ladder, agent factory, the EKB as persistent memory + consistency engine, the no-confusion decision system, and the seven-phase adoption path (v1.22)
-    ├── validate-repo.sh              Cross-reference validation (81 checks)
+    ├── ai-first-operating-guide.md   The AI-first operating guide — ERP-agnostic doctrine (ten laws, six layers, capability contracts), sourcing neutrality, autonomy ladder, agent factory, the EKB as persistent memory + consistency engine, the no-confusion decision system, and the seven-phase adoption path (v1.23)
+    ├── validate-repo.sh              Cross-reference validation (82 checks)
     ├── generate-bpmn.py             BPMN 2.0 generator — converts every workflow block in 01-model-company/workflows into validated .bpmn files under bpmn/ (5,456 processes, lanes, DI)
     ├── generate-dmn.py             DMN 1.3 generator — extracts rule tables and tiered PHP authorization rules from workflow markdown into validated .dmn files under dmn/ (80 decisions, decision tables, DMNDI)
     ├── generate-role-coverage.py   Role–workflow coverage generator — parses PA RACI fields + tier register + the official TO into 01-model-company/role-coverage-matrix.md (per-role owned/participated/step/tier-mix, --check byte-verify)

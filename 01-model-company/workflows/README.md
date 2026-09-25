@@ -30,6 +30,12 @@
 | [workflow-dependency-map.md](workflow-dependency-map.md) | Prerequisite relationships, critical path |
 | [workflow-system-touchpoint-map.md](workflow-system-touchpoint-map.md) | ERP module-to-workflow cross-reference |
 | [workflow-gap-analysis.md](workflow-gap-analysis.md) | Gap analysis methodology & results |
+| [workflow-gap-analysis-it.md](workflow-gap-analysis-it.md) | IT-domain companion — Technology-&-Data family rosters, coverage & evidence baselines |
+| [workflow-gap-analysis-finance.md](workflow-gap-analysis-finance.md) | Finance-domain companion — Finance family rosters, coverage & evidence baselines |
+| [workflow-gap-analysis-operations.md](workflow-gap-analysis-operations.md) | Operations-domain companion — Operations/Supply-Chain family rosters, coverage & evidence baselines |
+| [workflow-gap-analysis-people.md](workflow-gap-analysis-people.md) | People-domain companion — People/HR family rosters, coverage & evidence baselines |
+| [role-coverage-gap-analysis.md](role-coverage-gap-analysis.md) | GENERATED workflow→role coverage gap analysis (Class A role-less / Class B owner-grain / Class C healthy; regenerate via 07-methodology/role-coverage-gap-analysis.py) |
+| [weak-anchor-demand-verification.md](weak-anchor-demand-verification.md) | GENERATED weak-anchor watchlist demand verification (CONFIRMED / OVERLOAD / UNDER-UTILIZED / NO PARSED CADENCE; regenerate via 07-methodology/verify-weak-anchor-demand.py) |
 | [event-custody-and-precedence-register.md](event-custody-and-precedence-register.md) | Cross-cutting event routing — accountable value stream, PAGASA signal ladder, incident-command ladder, enforced overlap pairs |
 
 ---
