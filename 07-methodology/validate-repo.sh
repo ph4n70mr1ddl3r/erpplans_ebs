@@ -2673,6 +2673,19 @@ echo "--- Check 40: Validator self-description agreement ---"
 # in validate-repo.sh and validates every quoted check-count figure against it.
 # Per-version history notes (footer '*Date: ...' lines carrying frozen
 # 'across N checks' status records) and CHANGELOG/gap-analysis are exempt.
+# The 2026-09-25 (bu) tenth review-everything pass repaired the exemption's
+# grain: it was LINE-grain ('or "Prior v" in line' skipped the whole line), and
+# the methodology-index rows are multi-thousand-character narratives — the
+# validate-repo.sh Contents row's own Check-72 recital mentions "'Prior vN.M'
+# chains", which exempted the entire 60,632-character row from the count scan
+# and hid the stale '— 82 checks covering' self-description the (bt) ninth pass
+# had declared re-pointed but shipped stale (the root-README row moved, the
+# index row did not, and the guard designed to catch exactly that read
+# neither). Frozen history is the 'Prior v…' SEGMENTS — which always chain to
+# end-of-line in every footer form in the corpus — so the scan now reads only
+# the live prefix before the first 'Prior v' occurrence (a mid-row recital
+# mention narrows the scanned window; it can never again exempt the row's
+# head, where every count self-description lives).
 # The fifty-eighth-wave review (2026-09-21) added the builder-attribution arm:
 # the divergence-reconciliation round two had declared the Check-78 builder
 # attribution re-pointed 'fifty-fifth' -> 'fifty-seventh' but shipped the re-point
@@ -2695,14 +2708,17 @@ for f in glob.glob(ROOT + "/**/*.md", recursive=True):
     if rel.startswith("CHANGELOG") or "workflow-gap-analysis" in rel:
         continue
     for i, line in enumerate(open(f, encoding="utf-8"), 1):
-        if line.lstrip().startswith("*Date:") or "Prior v" in line:
-            continue  # frozen per-version history notes
+        if line.lstrip().startswith("*Date:"):
+            continue  # frozen per-version history footer lines
+        # segment-grain frozen-history cut (the (bu) tenth-pass repair — see
+        # block comment): scan only the live prefix before the first 'Prior v'
+        scan = line[: line.find("Prior v")] if "Prior v" in line else line
         # (a former '\u2192' line exemption was removed in review #30: it silently
         # exempted the 07-methodology README's own contents-table row — which quotes
         # an arrow inside its Check-46 description — letting that row drift to a
         # stale count; dated footers above are the only legitimate arrow carriers)
         for pat in forms:
-            for m in pat.finditer(line):
+            for m in pat.finditer(scan):
                 if int(m.group(1)) != IMPL:
                     bad.append(f"{rel}:{i}: '{m.group(0)}' != {IMPL} implemented checks")
 # The eighty-first-wave review (2026-09-23) found the guide's two narrative
@@ -2716,10 +2732,11 @@ forms += [re.compile(r"validator \u2014 (\d+) checks, run in CI"),
           re.compile(r"grew it to (\d+) checks")]
 for f in glob.glob(ROOT + "/07-methodology/ai-first-operating-guide.md"):
     for i, line in enumerate(open(f, encoding="utf-8"), 1):
-        if line.lstrip().startswith("*Date:") or "Prior v" in line:
+        if line.lstrip().startswith("*Date:"):
             continue
+        scan = line[: line.find("Prior v")] if "Prior v" in line else line
         for pat in forms:
-            for m in pat.finditer(line):
+            for m in pat.finditer(scan):
                 if int(m.group(1)) != IMPL:
                     bad.append(f"{os.path.relpath(f, ROOT)}:{i}: '{m.group(0)}' != {IMPL} implemented checks")
 # builder-attribution arm (fifty-eighth wave, 2026-09-21): the Check-78 block's
@@ -6714,6 +6731,98 @@ if [ "${C83_BAD:-1}" -eq 0 ]; then
 else
     error "$C83_BAD Capability-registry ↔ dormancy-register mirror violation(s):"
     echo "$C83_OUT" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
+fi
+
+# --- Check 84: Man-hours roll-up basis figures on the hand-written navigation surfaces ---
+echo "--- Check 84: Roll-up basis-figure navigation pins ---"
+# The 2026-09-25 (bu) tenth review-everything pass: Check 80 byte-pins the four
+# roll-up artifacts to manhours-rollup.py's re-derivation and Check 83 pins the
+# dormancy inputs (the registry DISABLED — rows plus the sourcing-register
+# deferrals), but the basis figures the (bn)/(bo)/(bt) chain HAND-quotes on the
+# navigation surfaces — the methodology-index manhours-rollup.py row (Duration
+# cells, the live-capability band and FTE, the dormant band, the cadence-only
+# share), the methodology-index manhours-rollup-report.md row (the seven
+# coverage shares, the live band, the unparseable count) and the root-README
+# ranking row (the workflow-corpus total) — had no standing re-derivation:
+# every register flip re-derived the artifacts and then hand-edited those rows
+# with nothing reading them (the exact cascade step the (bn) and (bt) passes
+# each performed by hand). This check reads manhours-rollup.json — the tool's
+# own derivation, proven fresh earlier in the same run by Check 80's byte-pin
+# — and requires the exact quoted forms on all three surfaces, so the next
+# basis move fires here until the rows move with the artifacts. The ninth
+# pass's rounded '≈900–1,500' dormant paraphrase was re-pointed to the exact
+# artifact band ('889–1,520') at the same time so the pin is exact.
+C84_OUT=$(python3 - "$REPO_ROOT" <<'PY'
+import json, os, sys
+from collections import Counter
+ROOT = sys.argv[1]
+bad = []
+rows = json.load(open(os.path.join(ROOT, "07-methodology", "manhours-rollup.json"), encoding="utf-8"))
+n = len(rows)
+cells = sum(len(r["steps"]) for r in rows)
+live = [r for r in rows if not r["dormant"]]
+dorm = [r for r in rows if r["dormant"]]
+def band(rs):
+    lo = hi = 0.0
+    for r in rs:
+        m = r["monthly_hours"]
+        if m:
+            lo += m[0]; hi += m[1]
+    return lo, hi
+llo, lhi = band(live)
+dlo, dhi = band(dorm)
+FTE_H = 173.6
+fl, fh = round(llo / FTE_H), round(lhi / FTE_H)
+cnt = Counter(s["klass"] for r in rows for s in r["steps"])
+unp = cnt["unparseable"]
+share = lambda k: round(cnt[k] / cells * 100, 1)
+rest = round((cnt["compound"] + cnt["cross-ref"] + cnt["empty"] + cnt["unparseable"]) / cells * 100, 1)
+meth = open(os.path.join(ROOT, "07-methodology", "README.md"), encoding="utf-8").read().splitlines()
+root = open(os.path.join(ROOT, "README.md"), encoding="utf-8").read().splitlines()
+def row_of(lines, key):
+    for l in lines:
+        if l.lstrip().startswith("|[" + key + "]") or l.lstrip().startswith("| [" + key + "](" + key + ")"):
+            return l
+    return None
+r70 = row_of(meth, "manhours-rollup.py")
+r71 = row_of(meth, "manhours-rollup-report.md")
+r_rank = next((l for l in root if "manhours-workflow-ranking.csv" in l and "GENERATED" in l), None)
+summary = (f"live {len(live):,} @ {llo:,.0f}\u2013{lhi:,.0f} h/month \u2248 {fl}\u2013{fh} FTE; "
+           f"dormant {len(dorm):,} @ {dlo:,.0f}\u2013{dhi:,.0f}; cells {cells:,}; rows {n:,}; unparseable {unp}")
+if r70 is None or r71 is None or r_rank is None:
+    bad.append("navigation surfaces: the methodology-index manhours-rollup.py / manhours-rollup-report.md rows or the root-README ranking row not found — the pins have no surface")
+else:
+    anchors = [
+        (r70, "methodology-index manhours-rollup.py row", [
+            f"all {cells:,} Duration cells",
+            f"\u2248{llo:,.0f}\u2013{lhi:,.0f} h/month \u2248 {fl}\u2013{fh} FTE",
+            f"\u2248{dlo:,.0f}\u2013{dhi:,.0f} h/month",
+            f"{share('cadence-only')}% of the column",
+        ]),
+        (r71, "methodology-index manhours-rollup-report.md row", [
+            f"effort {share('effort')}% / cadence-only {share('cadence-only')}% / elapsed {share('elapsed')}% / automated {share('automated')}% / per-unit {share('per-unit')}% / qualitative {share('qualitative')}% / compound+cross-ref+empty+unparseable {rest}%",
+            f"\u2248{llo:,.0f}\u2013{lhi:,.0f} h/month \u2248 {fl}\u2013{fh} FTE",
+            f"the {unp} unparseable Duration cells",
+        ]),
+        (r_rank, "root-README manhours-workflow-ranking.csv row", [
+            f"all {n:,} workflows",
+        ]),
+    ]
+    for text, surface, reqs in anchors:
+        for req in reqs:
+            if req not in text:
+                bad.append(f"{surface}: required basis anchor '{req}' missing — the quoted figures no longer match manhours-rollup.json's derivation ({summary}) — re-point the row with the artifacts")
+print("HITS %d" % len(bad))
+for b in bad:
+    print("BAD|" + b)
+PY
+)
+C84_BAD=$(echo "$C84_OUT" | sed -n 's/^HITS \([0-9]*\)/\1/p')
+if [ "${C84_BAD:-1}" -eq 0 ]; then
+    ok "Man-hours basis-figure navigation pins clean: the methodology-index manhours-rollup.py row (Duration cells / live-capability band + FTE / dormant band / cadence-only share), the manhours-rollup-report.md row (seven coverage shares / live band / unparseable count) and the root-README ranking row (workflow-corpus total) quote exactly manhours-rollup.json's derivation — the hand-quoted basis figures the (bn)/(bo)/(bt) register flips kept re-pointing made standing (Check 80 byte-pins the artifacts and Check 83 pins the dormancy inputs, but nothing read the quotations — guarded by the 2026-09-25 (bu) tenth review-everything pass)"
+else
+    error "$C84_BAD roll-up basis-figure navigation violation(s):"
+    echo "$C84_OUT" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
 fi
 
 echo ""
