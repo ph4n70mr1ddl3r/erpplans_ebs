@@ -27,8 +27,8 @@ NOTE: 1 workflow(s) use a `Latency`-headed last column (carries cadence/latency 
 
 ## Corpus totals (cadence-denominated effort only)
 
-- **Live-capability effort (registry ENABLED set; dormant rows excluded): 9,463–12,313 hours/month** (≈ 55–71 FTE at 173.6 h/FTE-month) across 5270 live workflows — the headcount-basis figure
-- Dormant designed capacity (registry DISABLED — rows, excluded from live): 726–1,267 hours/month (≈ 4.2–7.3 FTE) across 186 dormant workflows
+- **Live-capability effort (registry ENABLED set; dormant rows excluded): 9,433–12,265 hours/month** (≈ 54–71 FTE at 173.6 h/FTE-month) across 5234 live workflows — the headcount-basis figure
+- Dormant designed capacity (registry DISABLED — rows, excluded from live): 755–1,315 hours/month (≈ 4.3–7.6 FTE) across 222 dormant workflows
 - All-corpus mechanical total (live + dormant): 10,189–13,580 hours/month
 - Elapsed windows: 12,116–20,331 person-days reported (not converted)
 - Per-unit rates held symbolic: 2031
@@ -42,9 +42,11 @@ Dormant capabilities keep their prepared designs in the corpus (disable ≠ dele
 | CAP-B01 | DISABLED — PREPARED | 66 | 102–140 | 0.8 |
 | CAP-B02 | DISABLED — PREPARED | 24 | 72–111 | 0.6 |
 | CAP-B04 | DISABLED — PREPARED | 24 | 88–110 | 0.6 |
+| CAP-C02 | DISABLED — PREPARED | 12 | 30–48 | 0.3 |
 | CAP-C03 | DISABLED — PREPARED | 35 | 310–442 | 2.5 |
 | CAP-C04 | DISABLED — PREPARED | 11 | 187–251 | 1.4 |
 | CAP-D01 | DISABLED — NOT PREPARED | 1 | 103–403 | 2.3 |
+| CAP-F02 | DISABLED — PREPARED | 24 | 0–0 | 0.0 |
 | CAP-F04 | DISABLED — PREPARED | 5 | 29–29 | 0.2 |
 | CAP-F05 | DISABLED — PREPARED | 2 | 5–5 | 0.0 |
 | CAP-F06 | DISABLED — PREPARED | 2 | 11–22 | 0.1 |

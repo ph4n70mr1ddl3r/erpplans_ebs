@@ -2,6 +2,8 @@
   "provenance": "Machine twin of the Online Channel & Capability Registry (01-model-company/channel-capability-registry.md) for the man-hours roll-up (07-methodology/manhours-rollup.py): every registry row at a DISABLED state lists the workflows/process areas/value streams whose ENTIRE effort is dormant (frozen as designed capacity, excluded from live totals). Curated, not parsed — a Vehicles cell may cite support flows or mixed live/dormant estates that must NOT be marked (see exclusions). Updated in the same change as any registry row flip (W5580; registry rule 4).",
   "attribution_note": "A workflow mapped to several capabilities (e.g. W829 under CAP-F04 and CAP-F09) counts once in the live/dormant headline totals and in each capability's own row.",
   "exclusions": {
+    "W247": "dual-mode BOPIS staging/queue workflow (Smart Locker OR Expedited Pick-up Counter; trigger = every BOPIS order per W11) — its locker branch is dormant with CAP-F02, its counter-handoff branch is the live CAP-F01 path; the workflow stays live",
+    "PA-75.2 / PA-75.3 partial": "CAP-C02 is the customer mobile storefront — the in-store digital estate (W2654–W2656 kiosks/QR/self-checkout, W2658 digital receipts, W2660 Wi-Fi, W2661 ESL), the associate app (W2659) and the cross-channel digital analytics (W2662, W2664, W2666–W2669) stay live; only the app-specific W2646–W2653, W5553, W2657, W2663, W2665 are dormant",
     "W3322": "PA-102.3 sales commission & trade-incentive plan design — a live HR workflow whose trade-incentive slice is dormant (CAP-B03); the workflow itself stays live, so it is not marked",
     "W1549": "covered by PA-11.2 tree dormancy (CAP-B01); listed here only as a cross-reference",
     "PA-11.3": "wholesale operations — not a (x)-direction vehicle (CAP-B01 names PA-11.1/PA-11.2 only); stays live",
@@ -17,6 +19,24 @@
       "dormant_value_streams": [],
       "dormant_process_areas": [],
       "dormant_workflows": ["W1454"]
+    },
+    {
+      "id": "CAP-C02",
+      "state": "DISABLED — PREPARED",
+      "name": "Mobile app storefront",
+      "since": "2026-09-25 (bo)",
+      "dormant_value_streams": [],
+      "dormant_process_areas": [],
+      "dormant_workflows": ["W2646", "W2647", "W2648", "W2649", "W2650", "W2651", "W2652", "W2653", "W5553", "W2657", "W2663", "W2665"]
+    },
+    {
+      "id": "CAP-F02",
+      "state": "DISABLED — PREPARED",
+      "name": "Smart-locker pickup (BOPIS mode)",
+      "since": "2026-09-25 (bo)",
+      "dormant_value_streams": ["VS-164"],
+      "dormant_process_areas": [],
+      "dormant_workflows": []
     },
     {
       "id": "CAP-C03",

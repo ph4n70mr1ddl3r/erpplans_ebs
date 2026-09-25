@@ -9585,149 +9585,149 @@ file,workflow,role,monthly_hours_low,monthly_hours_high,effort_steps,automated_s
 01-model-company/workflows/VS-163-electric-vehicle-ev-charging-station-host-network-operations/PA-163.3-operations-maintenance-compliance-and-network-analytics.md,W4792,Energy,0.00,0.00,0,0,1,0,0.0,0.0,,live,
 01-model-company/workflows/VS-163-electric-vehicle-ev-charging-station-host-network-operations/PA-163.3-operations-maintenance-compliance-and-network-analytics.md,W4792,Finance,0.00,0.00,0,0,1,0,0.0,0.0,,live,
 01-model-company/workflows/VS-163-electric-vehicle-ev-charging-station-host-network-operations/PA-163.3-operations-maintenance-compliance-and-network-analytics.md,W4792,Strategy,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4793,Analytics,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4793,Ecommerce,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4793,Finance,0.00,0.00,0,0,2,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4793,Locker Program Manager,0.00,0.00,0,0,3,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4793,PMO,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4793,Strategy,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4794,IT,0.00,0.00,0,0,2,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4794,Legal,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4794,Locker Program Manager,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4794,Procurement,0.00,0.00,0,0,2,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4794,TPRM,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4795,Analytics,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4795,Ecommerce,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4795,Facilities,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4795,IT,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4795,LP,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4795,Locker Program Manager,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4795,Real Estate,0.00,0.00,0,0,3,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4795,Store Ops,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4796,Asset Mgmt,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4796,Facilities,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4796,IT,0.00,0.00,0,0,2,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4796,Locker Program Manager,0.00,0.00,0,0,2,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4796,Procurement,0.00,0.00,0,0,2,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4797,Ecommerce,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4797,Facilities,0.00,0.00,0,0,2,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4797,IT,0.00,0.00,0,0,2,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4797,Locker Program Manager,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4797,Locker vendor,0.00,0.00,0,0,2,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4798,Analytics,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4798,Facilities,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4798,Finance,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4798,IT,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4798,LP,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4798,Legal,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4798,Locker Program,0.00,0.00,0,0,1,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4798,Real Estate,0.00,0.00,0,0,2,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4799,Carrier,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4799,Finance,0.00,0.00,0,0,1,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4799,IT,0.00,0.00,0,0,2,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4799,Legal,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4799,Locker Program,0.00,0.00,0,0,1,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4799,TPRM,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4800,Analytics,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4800,Finance,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4800,Locker Program,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4800,PMO,0.00,0.00,0,0,1,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4800,Strategy,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4801,Locker Platform,0.00,0.00,0,0,1,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4801,OMS,0.00,0.00,0,0,2,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4801,Stock Associate,0.00,0.00,0,0,2,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4801,Store Ops,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4802,App team,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4802,CX,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4802,Cyber,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4802,IT,0.00,0.00,0,0,2,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4802,Locker Platform,0.00,0.00,0,0,2,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4802,OMS,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4802,Privacy,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4803,LP,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4803,Locker Platform,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4803,OMS,0.00,0.00,0,0,2,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4803,Returns,0.00,0.00,0,0,3,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4803,Stock Associate,0.00,0.00,0,0,2,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4804,CX,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4804,Locker Platform,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4804,Locker Program,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4804,OMS,0.00,0.00,0,0,1,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4804,Returns,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4804,Stock Associate,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4804,Store Ops,0.00,0.00,0,0,0,2,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4805,Analytics,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4805,App team,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4805,CX,0.00,0.00,0,0,2,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4805,IT,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4805,Locker Platform,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4805,Marketing,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4805,Store Ops,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4806,CX,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4806,Facilities,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4806,Locker Platform,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4806,Locker Program,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4806,OMS,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4806,Store Ops,0.00,0.00,0,0,3,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4807,Cyber,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4807,Ecommerce,0.00,0.00,0,0,0,2,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4807,IT,0.00,0.00,0,0,0,3,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4807,Locker Platform,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4807,Privacy,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4807,TPRM,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4808,Analytics,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4808,CX,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4808,IT,0.00,0.00,0,0,2,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4808,Inventory,0.00,0.00,0,0,2,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4808,LP,0.00,0.00,0,0,2,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4808,Locker Program,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4808,Store Ops,0.00,0.00,0,0,2,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4809,Facilities,0.00,0.00,0,0,1,2,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4809,IT,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4809,Locker Program,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4809,Locker Technician,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4809,Store Ops,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4810,CX,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4810,Facilities,0.00,0.00,0,0,3,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4810,IT,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4810,Locker Program,0.00,0.00,0,0,2,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4810,Procurement,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4810,Vendor,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4811,CX,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4811,Facilities,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4811,IT,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4811,Insurance,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4811,LP,0.00,0.00,0,0,3,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4811,Police,0.00,0.00,0,0,2,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4811,Store Ops,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4812,CX,0.00,0.00,0,0,0,2,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4812,Compliance,0.00,0.00,0,0,0,2,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4812,Facilities,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4812,LP,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4812,Store Ops,0.00,0.00,0,0,0,2,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4813,Cyber,0.00,0.00,0,0,1,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4813,DPO,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4813,IT,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4813,Locker Program,0.00,0.00,0,0,1,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4813,Privacy,0.00,0.00,0,0,2,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4813,TPRM,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4814,App team,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4814,Finance,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4814,IT,0.00,0.00,0,0,0,2,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4814,Legal,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4814,Locker Program,0.00,0.00,0,0,1,2,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4815,Analytics,0.00,0.00,0,0,3,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4815,Ecommerce,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4815,Finance,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4815,Locker Program,0.00,0.00,0,0,2,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4815,Marketing,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4815,Strategy,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4816,Facilities,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4816,IT,0.00,0.00,0,0,2,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4816,Locker Program,0.00,0.00,0,0,3,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4816,OCM,0.00,0.00,0,0,2,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4816,Store Ops,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4816,Vendor,0.00,0.00,0,0,1,0,0.0,0.0,,live,
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4793,Analytics,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4793,Ecommerce,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4793,Finance,0.00,0.00,0,0,2,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4793,Locker Program Manager,0.00,0.00,0,0,3,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4793,PMO,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4793,Strategy,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4794,IT,0.00,0.00,0,0,2,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4794,Legal,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4794,Locker Program Manager,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4794,Procurement,0.00,0.00,0,0,2,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4794,TPRM,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4795,Analytics,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4795,Ecommerce,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4795,Facilities,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4795,IT,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4795,LP,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4795,Locker Program Manager,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4795,Real Estate,0.00,0.00,0,0,3,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4795,Store Ops,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4796,Asset Mgmt,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4796,Facilities,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4796,IT,0.00,0.00,0,0,2,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4796,Locker Program Manager,0.00,0.00,0,0,2,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4796,Procurement,0.00,0.00,0,0,2,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4797,Ecommerce,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4797,Facilities,0.00,0.00,0,0,2,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4797,IT,0.00,0.00,0,0,2,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4797,Locker Program Manager,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4797,Locker vendor,0.00,0.00,0,0,2,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4798,Analytics,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4798,Facilities,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4798,Finance,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4798,IT,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4798,LP,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4798,Legal,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4798,Locker Program,0.00,0.00,0,0,1,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4798,Real Estate,0.00,0.00,0,0,2,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4799,Carrier,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4799,Finance,0.00,0.00,0,0,1,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4799,IT,0.00,0.00,0,0,2,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4799,Legal,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4799,Locker Program,0.00,0.00,0,0,1,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4799,TPRM,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4800,Analytics,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4800,Finance,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4800,Locker Program,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4800,PMO,0.00,0.00,0,0,1,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.1-locker-network-strategy-siting-and-deployment.md,W4800,Strategy,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4801,Locker Platform,0.00,0.00,0,0,1,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4801,OMS,0.00,0.00,0,0,2,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4801,Stock Associate,0.00,0.00,0,0,2,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4801,Store Ops,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4802,App team,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4802,CX,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4802,Cyber,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4802,IT,0.00,0.00,0,0,2,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4802,Locker Platform,0.00,0.00,0,0,2,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4802,OMS,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4802,Privacy,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4803,LP,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4803,Locker Platform,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4803,OMS,0.00,0.00,0,0,2,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4803,Returns,0.00,0.00,0,0,3,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4803,Stock Associate,0.00,0.00,0,0,2,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4804,CX,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4804,Locker Platform,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4804,Locker Program,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4804,OMS,0.00,0.00,0,0,1,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4804,Returns,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4804,Stock Associate,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4804,Store Ops,0.00,0.00,0,0,0,2,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4805,Analytics,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4805,App team,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4805,CX,0.00,0.00,0,0,2,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4805,IT,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4805,Locker Platform,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4805,Marketing,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4805,Store Ops,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4806,CX,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4806,Facilities,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4806,Locker Platform,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4806,Locker Program,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4806,OMS,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4806,Store Ops,0.00,0.00,0,0,3,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4807,Cyber,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4807,Ecommerce,0.00,0.00,0,0,0,2,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4807,IT,0.00,0.00,0,0,0,3,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4807,Locker Platform,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4807,Privacy,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4807,TPRM,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4808,Analytics,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4808,CX,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4808,IT,0.00,0.00,0,0,2,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4808,Inventory,0.00,0.00,0,0,2,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4808,LP,0.00,0.00,0,0,2,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4808,Locker Program,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.2-collection-operations-replenishment-and-access-management.md,W4808,Store Ops,0.00,0.00,0,0,2,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4809,Facilities,0.00,0.00,0,0,1,2,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4809,IT,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4809,Locker Program,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4809,Locker Technician,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4809,Store Ops,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4810,CX,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4810,Facilities,0.00,0.00,0,0,3,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4810,IT,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4810,Locker Program,0.00,0.00,0,0,2,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4810,Procurement,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4810,Vendor,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4811,CX,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4811,Facilities,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4811,IT,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4811,Insurance,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4811,LP,0.00,0.00,0,0,3,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4811,Police,0.00,0.00,0,0,2,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4811,Store Ops,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4812,CX,0.00,0.00,0,0,0,2,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4812,Compliance,0.00,0.00,0,0,0,2,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4812,Facilities,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4812,LP,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4812,Store Ops,0.00,0.00,0,0,0,2,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4813,Cyber,0.00,0.00,0,0,1,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4813,DPO,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4813,IT,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4813,Locker Program,0.00,0.00,0,0,1,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4813,Privacy,0.00,0.00,0,0,2,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4813,TPRM,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4814,App team,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4814,Finance,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4814,IT,0.00,0.00,0,0,0,2,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4814,Legal,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4814,Locker Program,0.00,0.00,0,0,1,2,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4815,Analytics,0.00,0.00,0,0,3,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4815,Ecommerce,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4815,Finance,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4815,Locker Program,0.00,0.00,0,0,2,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4815,Marketing,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4815,Strategy,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4816,Facilities,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4816,IT,0.00,0.00,0,0,2,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4816,Locker Program,0.00,0.00,0,0,3,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4816,OCM,0.00,0.00,0,0,2,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4816,Store Ops,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
+01-model-company/workflows/VS-164-smart-locker-and-automated-parcel-collection-network/PA-164.3-maintenance-integration-compliance-and-network-analytics.md,W4816,Vendor,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-F02
 01-model-company/workflows/VS-165-pcab-contractor-licensing-and-ra-4566-construction-contractor-compliance/PA-165.1-pcab-licensing-strategy-entity-registration-and-lifecycle.md,W4817,Engineering,0.00,0.00,0,0,1,0,0.0,0.0,,live,
 01-model-company/workflows/VS-165-pcab-contractor-licensing-and-ra-4566-construction-contractor-compliance/PA-165.1-pcab-licensing-strategy-entity-registration-and-lifecycle.md,W4817,Finance,0.00,0.00,0,0,1,0,0.0,0.0,,live,
 01-model-company/workflows/VS-165-pcab-contractor-licensing-and-ra-4566-construction-contractor-compliance/PA-165.1-pcab-licensing-strategy-entity-registration-and-lifecycle.md,W4817,HR,0.00,0.00,0,0,1,0,0.0,0.0,,live,
@@ -15868,26 +15868,26 @@ file,workflow,role,monthly_hours_low,monthly_hours_high,effort_steps,automated_s
 01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2644,Logistics Analyst,0.00,0.00,0,0,0,0,1.0,1.0,,live,
 01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2644,VP Supply Chain,0.00,0.00,0,0,1,0,0.0,0.0,,live,
 01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2645,VP Supply Chain,0.00,0.00,0,0,0,0,3.0,4.0,,live,
-01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2646,Digital Product Manager,13.33,26.67,1,0,0,2,0.0,0.0,,live,
-01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2646,IT Development,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2647,Digital Product Manager,11.85,12.85,2,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2647,Marketing,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2648,Marketing Digital Manager,0.00,0.00,0,0,3,0,0.0,0.0,,live,
-01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2649,Digital Product Manager,0.00,0.00,0,0,2,1,0.0,0.0,,live,
-01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2649,Loyalty Program Manager,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2650,Digital Product Manager,4.33,8.66,1,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2650,IT App Support,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2650,IT Application Support,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2651,Ecommerce Manager,0.00,0.00,0,0,1,1,0.0,0.0,,live,
-01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2651,IT,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2651,PIM Team,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2652,Data Privacy Officer,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2652,IT Security,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2652,IT Security Manager,0.00,0.00,0,0,0,2,0.0,0.0,,live,
-01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2653,Digital Product Manager,0.00,0.00,0,0,3,0,0.0,0.0,,live,
-01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2653,IT Development,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W5553,Digital Product Manager,0.00,0.00,0,0,1,0,3.0,13.0,,live,
-01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W5553,IT,0.00,0.00,0,0,1,0,3.0,13.0,,live,
+01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2646,Digital Product Manager,13.33,26.67,1,0,0,2,0.0,0.0,,dormant,CAP-C02
+01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2646,IT Development,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-C02
+01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2647,Digital Product Manager,11.85,12.85,2,0,1,0,0.0,0.0,,dormant,CAP-C02
+01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2647,Marketing,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-C02
+01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2648,Marketing Digital Manager,0.00,0.00,0,0,3,0,0.0,0.0,,dormant,CAP-C02
+01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2649,Digital Product Manager,0.00,0.00,0,0,2,1,0.0,0.0,,dormant,CAP-C02
+01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2649,Loyalty Program Manager,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-C02
+01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2650,Digital Product Manager,4.33,8.66,1,0,0,1,0.0,0.0,,dormant,CAP-C02
+01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2650,IT App Support,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-C02
+01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2650,IT Application Support,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-C02
+01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2651,Ecommerce Manager,0.00,0.00,0,0,1,1,0.0,0.0,,dormant,CAP-C02
+01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2651,IT,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-C02
+01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2651,PIM Team,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-C02
+01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2652,Data Privacy Officer,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-C02
+01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2652,IT Security,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-C02
+01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2652,IT Security Manager,0.00,0.00,0,0,0,2,0.0,0.0,,dormant,CAP-C02
+01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2653,Digital Product Manager,0.00,0.00,0,0,3,0,0.0,0.0,,dormant,CAP-C02
+01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2653,IT Development,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-C02
+01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W5553,Digital Product Manager,0.00,0.00,0,0,1,0,3.0,13.0,,dormant,CAP-C02
+01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W5553,IT,0.00,0.00,0,0,1,0,3.0,13.0,,dormant,CAP-C02
 01-model-company/workflows/VS-75-digital-engagement-app/PA-75.2-in-store-digital-experience-self-service.md,W2654,Digital Product Manager,0.00,0.00,0,0,1,0,0.0,0.0,,live,
 01-model-company/workflows/VS-75-digital-engagement-app/PA-75.2-in-store-digital-experience-self-service.md,W2654,Marketing,0.00,0.00,0,0,1,0,0.0,0.0,,live,
 01-model-company/workflows/VS-75-digital-engagement-app/PA-75.2-in-store-digital-experience-self-service.md,W2654,Merchandising,0.00,0.00,0,0,1,0,0.0,0.0,,live,
@@ -15899,8 +15899,8 @@ file,workflow,role,monthly_hours_low,monthly_hours_high,effort_steps,automated_s
 01-model-company/workflows/VS-75-digital-engagement-app/PA-75.2-in-store-digital-experience-self-service.md,W2656,LP Officer,0.00,0.00,0,0,0,1,0.0,0.0,,live,
 01-model-company/workflows/VS-75-digital-engagement-app/PA-75.2-in-store-digital-experience-self-service.md,W2656,Staff,0.00,0.00,0,0,0,1,0.0,0.0,,live,
 01-model-company/workflows/VS-75-digital-engagement-app/PA-75.2-in-store-digital-experience-self-service.md,W2656,VP Store Operations,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-75-digital-engagement-app/PA-75.2-in-store-digital-experience-self-service.md,W2657,Customer,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-75-digital-engagement-app/PA-75.2-in-store-digital-experience-self-service.md,W2657,Digital Product Manager,0.00,0.00,0,1,1,0,0.0,0.0,,live,
+01-model-company/workflows/VS-75-digital-engagement-app/PA-75.2-in-store-digital-experience-self-service.md,W2657,Customer,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,CAP-C02
+01-model-company/workflows/VS-75-digital-engagement-app/PA-75.2-in-store-digital-experience-self-service.md,W2657,Digital Product Manager,0.00,0.00,0,1,1,0,0.0,0.0,,dormant,CAP-C02
 01-model-company/workflows/VS-75-digital-engagement-app/PA-75.2-in-store-digital-experience-self-service.md,W2658,Customer,0.00,0.00,0,0,1,0,0.0,0.0,,live,
 01-model-company/workflows/VS-75-digital-engagement-app/PA-75.2-in-store-digital-experience-self-service.md,W2658,Finance,0.00,0.00,0,0,1,0,0.0,0.0,,live,
 01-model-company/workflows/VS-75-digital-engagement-app/PA-75.2-in-store-digital-experience-self-service.md,W2658,IT,0.00,0.00,0,0,1,0,0.0,0.0,,live,
@@ -15919,14 +15919,14 @@ file,workflow,role,monthly_hours_low,monthly_hours_high,effort_steps,automated_s
 01-model-company/workflows/VS-75-digital-engagement-app/PA-75.2-in-store-digital-experience-self-service.md,W2661,Store Ops,0.00,0.00,0,0,1,0,0.0,0.0,,live,
 01-model-company/workflows/VS-75-digital-engagement-app/PA-75.3-digital-engagement-analytics-optimization.md,W2662,CFO,0.00,0.00,0,0,1,0,0.0,0.0,,live,
 01-model-company/workflows/VS-75-digital-engagement-app/PA-75.3-digital-engagement-analytics-optimization.md,W2662,Digital Analytics Manager,0.00,0.00,0,0,1,0,2.0,3.0,,live,
-01-model-company/workflows/VS-75-digital-engagement-app/PA-75.3-digital-engagement-analytics-optimization.md,W2663,Digital Analytics Manager,0.00,0.00,0,0,0,0,1.0,2.0,,live,
-01-model-company/workflows/VS-75-digital-engagement-app/PA-75.3-digital-engagement-analytics-optimization.md,W2663,Digital Product Manager,0.00,0.00,0,0,0,1,2.0,4.0,,live,
-01-model-company/workflows/VS-75-digital-engagement-app/PA-75.3-digital-engagement-analytics-optimization.md,W2663,Marketing,0.00,0.00,0,0,0,1,0.0,0.0,,live,
+01-model-company/workflows/VS-75-digital-engagement-app/PA-75.3-digital-engagement-analytics-optimization.md,W2663,Digital Analytics Manager,0.00,0.00,0,0,0,0,1.0,2.0,,dormant,CAP-C02
+01-model-company/workflows/VS-75-digital-engagement-app/PA-75.3-digital-engagement-analytics-optimization.md,W2663,Digital Product Manager,0.00,0.00,0,0,0,1,2.0,4.0,,dormant,CAP-C02
+01-model-company/workflows/VS-75-digital-engagement-app/PA-75.3-digital-engagement-analytics-optimization.md,W2663,Marketing,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-C02
 01-model-company/workflows/VS-75-digital-engagement-app/PA-75.3-digital-engagement-analytics-optimization.md,W2664,Digital Analytics Manager,0.00,0.00,0,0,0,0,1.0,2.0,,live,
 01-model-company/workflows/VS-75-digital-engagement-app/PA-75.3-digital-engagement-analytics-optimization.md,W2664,Digital Product Manager,0.00,0.00,0,0,1,0,2.0,4.0,,live,
 01-model-company/workflows/VS-75-digital-engagement-app/PA-75.3-digital-engagement-analytics-optimization.md,W2664,VP Store Operations,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-75-digital-engagement-app/PA-75.3-digital-engagement-analytics-optimization.md,W2665,Digital Product Manager,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-75-digital-engagement-app/PA-75.3-digital-engagement-analytics-optimization.md,W2665,Ecommerce Manager,0.00,0.00,0,0,1,1,1.0,2.0,,live,
+01-model-company/workflows/VS-75-digital-engagement-app/PA-75.3-digital-engagement-analytics-optimization.md,W2665,Digital Product Manager,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-C02
+01-model-company/workflows/VS-75-digital-engagement-app/PA-75.3-digital-engagement-analytics-optimization.md,W2665,Ecommerce Manager,0.00,0.00,0,0,1,1,1.0,2.0,,dormant,CAP-C02
 01-model-company/workflows/VS-75-digital-engagement-app/PA-75.3-digital-engagement-analytics-optimization.md,W2666,CMO,0.00,0.00,0,0,1,0,0.0,0.0,,live,
 01-model-company/workflows/VS-75-digital-engagement-app/PA-75.3-digital-engagement-analytics-optimization.md,W2666,CX Analyst,0.00,0.00,0,1,0,0,2.0,3.0,,live,
 01-model-company/workflows/VS-75-digital-engagement-app/PA-75.3-digital-engagement-analytics-optimization.md,W2666,Digital Product Manager,0.00,0.00,0,0,0,0,2.0,3.0,,live,

@@ -6,6 +6,8 @@
 > [W615](workflows/VS-27-it-operations-security/PA-27.1-service-management.md) (Mobile App Daily Operations),
 > [W395](workflows/VS-27-it-operations-security/PA-27.2-infrastructure-and-platform.md) (Mobile App Store Management),
 > [W725](workflows/VS-10-ecommerce-digital/PA-10.1-ecommerce-platform-operations.md) (Ecommerce Platform Daily Health Monitoring).
+>
+> **Status (2026-09-25 (bo)):** the customer mobile app capability is **DISABLED — PREPARED** — [Online Channel & Capability Registry](channel-capability-registry.md) row CAP-C02. This strategy is retained as the prepared design (disable ≠ delete); the app-specific operations are dormant (VS-75 PA-75.1 + W2657/W2663/W2665 per the dormancy register) while the IT run duties (W615/W395) continue only as prepared-support for the disabled state, and customers order on the web storefront (CAP-C01).
 
 ---
 
