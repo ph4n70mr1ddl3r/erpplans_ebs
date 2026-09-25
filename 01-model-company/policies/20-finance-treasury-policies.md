@@ -15,6 +15,7 @@
 | Owner (R) / Approver | Treasury Manager / **CFO** (Board: account structure, limits) |
 | Cadence | 1-year review |
 | Anchors | W322, W30 (daily cash position), W323 (ZBA sweeps), W25 (petty cash), supply-chain-finance programs ([VS-105](../workflows/VS-105-supply-chain-finance-working-capital-management/), PA-105.1–105.3) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. All company cash across the 5 entities is visible daily: bank balances per
@@ -56,6 +57,7 @@
 | Owner (R) / Approver | Treasury Manager / **CFO** |
 | Cadence | 1-year review (policy limits) |
 | Anchors | W30 step 10a (FX hedging policy canon), commodity input-cost hedging ([VS-106](../workflows/VS-106-commodity-input-cost-risk-management/), PA-106.2) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. **Natural hedging first:** match USD payables (import POs per the W2 series)
@@ -87,6 +89,7 @@
 | Owner (R) / Approver | FP&A Manager / **CFO** (Board: > ₱10M per POL-G05) |
 | Cadence | 1-year review (thresholds + hurdle rates) |
 | Anchors | W1811 (capex workflow), W1732.3(c) (payment limits), M&A/divestiture gates ([VS-130](../workflows/VS-130-corporate-development-ma-divestiture/), PA-130.1–130.3) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. All capex (new stores, remodels, DC equipment, IT assets, intangibles)
@@ -120,6 +123,7 @@
 | Owner (R) / Approver | Controller / **CFO** |
 | Cadence | 2-year review |
 | Anchors | VS-34 expense & procurement workflows; DOA tiers for approval |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. Business expenses are company-purpose, documented (official receipts — BIR
@@ -145,6 +149,7 @@
 | Owner (R) / Approver | AR & Credit Manager / **CFO** |
 | Cadence | 2-year review (limits re-tiered) |
 | Anchors | PA-16.2 (AR & collections), the trade-credit lifecycle ([VS-68](../workflows/VS-68-trade-credit-risk-management/), PA-68.1 risk assessment, PA-68.2 limits & monitoring, PA-68.3 recovery/write-off), W5B trade account rules, the credit-bearing B2B channels — trade program ([VS-43](../workflows/VS-43-trade-professional-program/)), sari-sari/micro-wholesale ([VS-82](../workflows/VS-82-sari-sari-msme-micro-wholesale/)), strategic key accounts ([VS-107](../workflows/VS-107-strategic-key-account-enterprise-customer-management/)), cooperatives ([VS-185](../workflows/VS-185-b2b-cooperative-credit-and-procurement-partnerships/)) — trade credit insurance canon |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. Trade credit (B2B/corporate accounts) is granted only against a completed
@@ -179,6 +184,7 @@
 | Owner (R) / Approver | Revenue Assurance Analyst / **Controller** |
 | Cadence | 2-year review |
 | Anchors | POS audit chain (PA-08.x), the revenue-assurance program ([VS-118](../workflows/VS-118-revenue-assurance-pricing-integrity-and-leakage-management/), PA-118.1 leak-detection framework, PA-118.2 pricing/promotion/payment integrity monitoring, PA-118.3 recovery & analytics), W5F store cash chain, VS-23 LP analytics |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. Every peso of POS takings reconciles to bank: Z-report ↔ deposit ↔ bank
@@ -205,6 +211,7 @@
 | Owner (R) / Approver | Controller & Tax Manager / **CFO** |
 | Cadence | 1-year review (standards & BIR regulation changes) |
 | Anchors | W9/W9A close workflows, PA-17.x (record-to-report), PA-79.x (BIR reporting) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. Books follow PFRS for SMEs/large entities as applicable per entity, with a
@@ -264,6 +271,7 @@ Financing and lending activities are **POL-F08** below.
 | Owner (R) / Approver | Treasury Manager / **CFO** (Board: new programs & limits) |
 | Cadence | 1-year review (BSP/SEC regulation changes immediate) |
 | Anchors | [VS-154](../workflows/VS-154-home-construction-finance-loan-brokerage-and-mortgage-referral/) (construction-finance referral, PA-154.1–154.3), [VS-188](../workflows/VS-188-trade-reseller-floor-plan-and-dealer-inventory-financing/) (floor-plan financing, PA-188.1–188.3), [VS-189](../workflows/VS-189-trade-receivables-factoring-invoice-discounting-and-securitization/) (receivables financing, PA-189.1–189.3), [VS-170](../workflows/VS-170-inventory-pledge-asset-based-lending-and-trust-receipt-financing/) (inventory pledge/trust receipts, PA-170.1–170.3), [VS-181](../workflows/VS-181-b2b-project-financing-escrow-account-orchestration-and-lien-release/) (escrow/lien, PA-181.x), [VS-96](../workflows/VS-96-equipment-leasing-capital-equipment-finance/) (equipment finance, PA-96.x), consumer installment financing ([VS-38](../workflows/VS-38-consumer-credit-financing/), PA-38.1–38.3), VS-156 (financial-agency products, PA-156.1) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. **Charter boundary:** the company operates financing activities only as
@@ -314,6 +322,7 @@ Financing and lending activities are **POL-F08** below.
 | Owner (R) / Approver | Director, Facilities & Real Estate (program) + Controller (accounting) / **CFO** (Board: acquisitions per POL-G05.7) |
 | Cadence | 1-year review (statute & valuation changes) |
 | Anchors | corporate real-estate portfolio ([VS-97](../workflows/VS-97-corporate-real-estate-property-portfolio/), PA-97.1–97.3), lease administration ([VS-42](../workflows/VS-42-property-lease-admin/), PA-42.1–42.3), real-estate development & construction ([VS-20](../workflows/VS-20-real-estate-construction/), PA-20.1–20.3), landbanking & land-use conversion ([VS-178](../workflows/VS-178-landbanking-site-acquisition-and-agrarian-lgu-zoning-conversion/), PA-178.1–178.3), lease accounting per POL-F07.6 (PFRS 16, VS-148) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. **Acquisition gate:** every site acquisition (purchase, JV, long lease)

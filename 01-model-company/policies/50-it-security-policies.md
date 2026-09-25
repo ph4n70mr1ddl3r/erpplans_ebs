@@ -17,6 +17,7 @@
 | Owner (R) / Approver | CIO / **CIO + CEO** |
 | Cadence | 2-year review; acknowledgment at hire + annually |
 | Anchors | VS-27; M365/EBS audit-log monitoring (W5518) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. Company accounts, devices, networks and systems are for business use;
@@ -39,13 +40,14 @@
 
 ---
 
-## POL-I02 — Access Control & Joiner–Mover–Leaver (JML)
+## POL-I02 — Access Control & Joiner–Mover–Leaver
 
 | | |
 |---|---|
 | Owner (R) / Approver | Identity & Access Platform (IAP) / **CIO** |
 | Cadence | 1-year review (role catalogs + SoD rules) |
 | Anchors | W132 (branch/access provisioning), W5518, EBS roles/responsibilities, W43 exit cascade |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. Access = approved role + least privilege: entitlements provision only from
@@ -76,6 +78,7 @@
 | Owner (R) / Approver | Security Engineering (SEC) / **CIO** |
 | Cadence | 1-year review |
 | Anchors | M365 identity plane, EBS authentication, mobile-app estate (mobile-app-strategy), VS-10 ecommerce, the OT/ICS estate ([VS-190](../workflows/VS-190-operational-technology-ot-ics-cybersecurity-and-retail-technology-asset-protection/), PA-190.1–190.3) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. MFA is mandatory for: all remote access, all administrative/privileged
@@ -110,6 +113,7 @@
 | Owner (R) / Approver | CIO Office / **CIO** |
 | Cadence | 1-year review |
 | Anchors | VS-27 change workflows, EBS ADOP online-patching boundary, DR/backup runbooks, the technology-asset lifecycle ([VS-99](../workflows/VS-99-it-asset-technology-lifecycle-management/), PA-99.1–99.3) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. **No unauthorized change:** every production change carries an approved
@@ -146,6 +150,7 @@
 | Owner (R) / Approver | SEC platform / SOC on-call / **CIO** (Board notice: material incidents) |
 | Cadence | 1-year review + post-incident updates |
 | Anchors | W383 (host/incident core), W5518 (M365 audit), PA-26.1 (BCP linkage), DPA breach interface (POL-D03) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. Every suspected incident (malware, intrusion, account compromise, data
@@ -172,6 +177,7 @@
 | Owner (R) / Approver | SEP platform / **CIO** |
 | Cadence | 1-year review |
 | Anchors | VS-113 (architecture/technology strategy), ai-first operating guide (agent factory, paved road) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. Custom/in-house applications build on the paved road (SEP): approved stacks,
@@ -197,6 +203,7 @@
 | Owner (R) / Approver | CIO Office / AAP platform / **CIO + CEO** |
 | Cadence | 1-year review (fast-moving domain) |
 | Anchors | [ai-first operating guide](../../07-methodology/ai-first-operating-guide.md) (laws, autonomy ladder, agent factory); [VS-128](../workflows/VS-128-ai-ml-governance-responsible-ai/) (AI/ML governance & responsible AI: PA-128.1 strategy & model risk, PA-128.2 fairness/explainability/privacy/safety, PA-128.3 lifecycle assurance), VS-30.2 (AI/ML & automation) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. **Sanctioned tools only:** company data processes only through approved AI

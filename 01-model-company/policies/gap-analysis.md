@@ -211,3 +211,85 @@ to the org of record by the same grep standard the workflows already met
 the statute and canon citations verified against the corpus they anchor. No new
 policies, no register/tier/HC change, no workflow edits — this pass repaired
 only the policy layer's own accountability surfaces.
+
+---
+
+## 7. Pass 6 — the register↔manual mirror + the unguarded-surface sweep (2026-09-25)
+
+The pass-5 method (split every cell, grep-verify against the org/corpus of
+record) applied to the two surfaces no earlier pass had diffed *against each
+other*: the master register's remaining columns vs the nine manuals' own
+per-policy header tables, and the live documents no validator check reads.
+
+### 7.1 The register↔manual mirror — 4 contradictory cells, 5 cosmetic titles
+
+Mechanical diff: every register row's Owner/Approver/Review/Title against the
+manual's `Owner (R) / Approver` (split on the **bold approver**), `Cadence` and
+`## POL-xx — Title` header. 75/75 matched on count and cadence; the honest
+findings:
+
+- **POL-I01 Approver** — register said `CIO`; the manual (and the IT manual's
+  own class line, "company-facing conduct policies — POL-I01, POL-I07 —
+  co-approved by CEO") say `CIO + CEO`. The register cell was the drift;
+  trued to `CIO + CEO`.
+- **POL-F01 Owner** — register said `Treasury Manager / CFO`; the policy
+  document names one owner (Treasury Manager) with the CFO as *approver*. The
+  register's `/ CFO` dual form contradicted both the manual and the register's
+  own Approver column. Trued to `Treasury Manager`.
+- **POL-I01 Owner** — register said `CIO / SEC platform`; the policy document
+  names `CIO` alone (SEC platform executes the monitoring the anchors cite).
+  Trued to `CIO`.
+- **POL-F09 Owner** — the opposite direction: the manual names a co-owner
+  (`Director, Facilities & Real Estate (program) + Controller (accounting)`)
+  that the register omitted. Register trued to
+  `Director, Facilities & Real Estate + Controller`.
+- **Three manual titles off the register forms** (the pass-5 R07 precedent:
+  the register is canonical): POL-G07 → "Anti-Money Laundering / CTF & Sanctions"
+  (the spelled-out header was the only "Counter-Terrorist Financing" surface in
+  the corpus; the body already says AML/CFT), POL-G08 → "+ (RA 10667)",
+  POL-I02 → the register's un-JML'd form (the body defines the JML discipline).
+- **Two domain class-lines missing their exceptions** (the pass-5 five covered
+  G/R/S/H/B; the P and D siblings were missed): the P manual now excepts
+  POL-P03 (VP Legal & Compliance approver) beside POL-P04; the D manual now
+  states POL-D01–D04's CEO/DPO class and excepts POL-D05 (COO — operational
+  class).
+
+Kept after normalization (benign register-side abbreviations, no contradiction):
+DPO, IAP, "AAP", "SOC", "Merch Ops & Master Data" without "Manager".
+
+### 7.2 §1.1(i) version history — the template clause no policy satisfied
+
+The framework's own standard template (§1.1) ends "…(i) version history", and
+no policy carried one — a completeness claim falsifiable by grep since the
+codification shipped. Implemented: every policy's header table now carries
+`| Version | 1.0 — initial issue, 2026-09-25 codification |` (75/75, matching
+the 14+9+5+11+7+5+11+10+3 domain counts), and §1.1(i) states where the history
+lives and how it moves (W1729.3 change control).
+
+### 7.3 The unguarded-surface sweep — one stale live figure, one harness gap
+
+Four live documents in `02-oracle-ebs/` are read by zero validator checks
+(quote-coverage-review, module-coverage-map, ebs-documentation-coverage,
+customization-governance — the last two guarded by audit-model-docs arms run
+manually beside the validator). Grep + re-derivation over the set:
+
+- **quote-coverage-review §1** still derived from "the 728 requirements /
+  **5,427** workflows / 808 controls" — the batch-23 census, stale since batch
+  30 (2026-09-23). Trued to 5,433 with a v1.5 footer segment (the module-
+  coverage-map v2.1 footer-hygiene lesson applied to this document's own edit).
+- **module-coverage-map §2** re-derived: 462+500+1,546+786+445+323+977+394 =
+  5,433 — foots exactly; no edit.
+- **manhours-rollup's three shipped artifacts had no freshness harness** (the
+  (bg) tool shipped --report/--json/--csv writers with no --check; the same
+  gap the eighty-second wave closed for the other two generated reports).
+  Implemented: `manhours-rollup.py --check` re-derives all three artifacts in
+  memory and byte-compares (verified byte-identical, and the normal write path
+  regression-checked byte-equal), and the harness is wired into
+  validate-repo.sh Check 80 as its fourth arm.
+
+**Bottom line (pass 6):** 75 policies unchanged; the register↔manual mirror now
+holds on every column, the template's own (i) clause is finally true, and the
+one stale live figure outside every guard is trued with the drift class
+recorded. No new policies, no PA file, register, tier, HC or generated-tree
+change (canonical totals unchanged 188 VS / 569 PA / 5,433 WF / 5,456 rows /
+808 CTL / 728 Req; active HC 6,911 — HQ 511).

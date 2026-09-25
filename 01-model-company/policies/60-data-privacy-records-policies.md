@@ -1,7 +1,8 @@
 # Data Privacy, Records & Master Data Policies (POL-D)
 
 > Domain manual of the [Corporate Policy Manual](README.md). Approval class:
-> **CEO** (DPO-owned; NPC-facing per W1735). Statutory base: **RA 10173** (Data
+> **CEO** (POL-D01–D04; DPO-owned, NPC-facing per W1735) except POL-D05 Master
+> Data Governance (**COO** — operational class). Statutory base: **RA 10173** (Data
 > Privacy Act), its IRR and NPC circulars; corporate privacy governance
 > executes through **W1735** and the consumer-data-privacy workflows
 > ([VS-91](../workflows/VS-91-consumer-data-privacy-protection/), PA-91.1–91.3).
@@ -15,6 +16,7 @@
 | Owner (R) / Approver | Data Protection Officer (DPO) / **CEO** |
 | Cadence | 1-year review |
 | Anchors | W1735.1(a), W1735.3 (consent program); [PA-91.1](../workflows/VS-91-consumer-data-privacy-protection/) (privacy governance & data-subject rights, W3041–W3046), PA-91.2 (PIA & data mapping, W3049+); the customer-data platform ([VS-126](../workflows/VS-126-customer-data-platform-single-customer-view-identity-resolution/), PA-126.1–126.3) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. A plain-language **external privacy notice** governs every personal-data
@@ -46,6 +48,7 @@
 | Owner (R) / Approver | DPO / **CEO** |
 | Cadence | 1-year review |
 | Anchors | W1735.1(b)(c)(d), NPC registration (W1735.2); [PA-91.2](../workflows/VS-91-consumer-data-privacy-protection/) (privacy impact assessment, data mapping & vendor privacy, W3049+) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. The DPO is registered with the **National Privacy Commission**; data
@@ -77,6 +80,7 @@
 | Owner (R) / Approver | DPO / **CEO** (Board notified on material breaches) |
 | Cadence | 1-year review + post-breach updates |
 | Anchors | W1735 step 4 (72-hour NPC path, 5-day report); [PA-91.3](../workflows/VS-91-consumer-data-privacy-protection/) (breach detection, notification & NPC response, W3057+) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. Every suspected personal-data breach reports to the DPO immediately; the
@@ -101,6 +105,7 @@
 | Owner (R) / Approver | Strategy / BPM & Document Control / **CEO** |
 | Cadence | 2-year review (schedule re-baselined with BIR/SEC/labor changes) |
 | Anchors | [VS-88](../workflows/VS-88-document-control-records-retention/) document control & records retention |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. A single **retention & disposal schedule** classifies all records (accounting
@@ -130,6 +135,7 @@
 | Owner (R) / Approver | Merch Ops & Master Data Manager / **COO** |
 | Cadence | 2-year review |
 | Anchors | [VS-29](../workflows/VS-29-master-data/) (item, vendor, customer master); product information & digital assets ([VS-137](../workflows/VS-137-product-information-management-and-digital-asset-management/), PA-137.1–137.3) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. Master data (items, vendors, customers, chart of accounts, hierarchies) has

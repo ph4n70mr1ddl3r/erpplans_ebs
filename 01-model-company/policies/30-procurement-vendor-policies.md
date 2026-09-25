@@ -1,7 +1,8 @@
 # Procurement & Vendor Management Policies (POL-P)
 
 > Domain manual of the [Corporate Policy Manual](README.md). Approval class:
-> **CFO** (POL-P04: Board, as a conduct-adjacent policy). Spans the VS-03 vendor
+> **CFO** (POL-P03: VP Legal & Compliance; POL-P04: Board, as a conduct-adjacent
+> policy). Spans the VS-03 vendor
 > lifecycle, the W2/W632 sourcing mechanics and the VS-131 responsible-sourcing
 > program.
 
@@ -14,6 +15,7 @@
 | Owner (R) / Approver | Procurement Manager / **CFO** |
 | Cadence | 2-year review |
 | Anchors | W632 (competitive bidding & tender management, ~15–25 tenders/year), W2 series (merchandise POs) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. Spend above the tender threshold is competitively bid: **≥ 3 qualified
@@ -44,6 +46,7 @@
 | Owner (R) / Approver | Vendor Management Manager / **CFO** |
 | Cadence | 2-year review |
 | Anchors | VS-03 vendor-management workflows (sourcing & onboarding, scorecards, development); the procure-to-pay chain ([VS-15](../workflows/VS-15-procure-to-pay/), PA-15.1 invoice processing & matching, PA-15.2 vendor payment & reconciliation); freight procurement ([VS-110](../workflows/VS-110-freight-procurement-carrier-management-and-freight-audit/), PA-110.1–110.3); packaging & RTI pools ([VS-111](../workflows/VS-111-packaging-pallet-and-returnable-transport-item-management/), PA-111.1–111.3); cooperative procurement ([VS-94](../workflows/VS-94-cooperative-community-enterprise-procurement/), PA-94.1–94.3); B2B cooperative partnerships ([VS-185](../workflows/VS-185-b2b-cooperative-credit-and-procurement-partnerships/)) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. **Onboarding gate:** no PO issues to a vendor not in the Approved Vendor
@@ -103,6 +106,7 @@
 | Owner (R) / Approver | Contracts & Commercial Manager (Senior Counsel) / **VP Legal & Compliance** |
 | Cadence | 2-year review (template refresh) |
 | Anchors | W230 (legal risk review), W1732 (execution authority), lease & vendor agreement flows |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. No employee signs for the company outside POL-G05 execution authority;
@@ -132,6 +136,7 @@
 | Owner (R) / Approver | Procurement Manager / **Board** |
 | Cadence | 2-year review |
 | Anchors | [VS-131](../workflows/VS-131-human-rights-responsible-supply-chain-due-diligence/) (human rights due diligence), vendor scorecard compliance dimension |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. The **Supplier Code** (appendix to standard terms) binds vendors to: no
@@ -158,6 +163,7 @@
 | Owner (R) / Approver | Imports & Customs Manager / **CFO** (VP Legal & Compliance: enforcement matters) |
 | Cadence | 1-year review (tariff & CMTA changes immediate) |
 | Anchors | [VS-87](../workflows/VS-87-customs-trade-compliance-tariff/) (PA-87.1–87.3, W2945+), [VS-182](../workflows/VS-182-b2b-bulk-project-custom-import-indent-sourcing-and-brokerage/) (indent/LC/port-to-jobsite, PA-182.1–182.3), POL-P02 onboarding gates, POL-F01 FX/settlement linkage |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. Every import enters through the trade-compliance workflow with correct

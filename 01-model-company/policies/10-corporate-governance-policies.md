@@ -16,6 +16,7 @@
 | Owner (R) / Approver | VP Legal & Compliance / **Board** |
 | Cadence | 2-year review; annual employee re-acknowledgment |
 | Anchors | W1733 (speak-up), W1734 (COI); CTL register: conduct controls |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Purpose & scope.** The minimum standard of honest, lawful, respectful conduct
 for every director, officer, employee and covered contractor of BuildRight Depot
@@ -50,6 +51,7 @@ operations.
 | Owner (R) / Approver | VP Legal & Compliance / **Board** |
 | Cadence | 2-year review |
 | Anchors | W632 (competitive bidding integrity), P2P workflows; BIR deductibility rules for business gifts; the gift & entertainment register (PA-22.3 canon) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. No employee may offer, give, solicit or accept anything of value to obtain
@@ -83,6 +85,7 @@ against the active-bid calendar quarterly; Internal Audit samples it annually.
 | Owner (R) / Approver | Corporate Secretary / **Board** |
 | Cadence | 2-year review |
 | Anchors | W1733, [PA-119.2](../workflows/VS-119-whistleblower-ethics-and-corporate-integrity-speak-up-program/) (case investigation) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. Every employee (and external stakeholder) may report suspected fraud,
@@ -110,6 +113,7 @@ against the active-bid calendar quarterly; Internal Audit samples it annually.
 | Owner (R) / Approver | Corporate Secretary / **Board** |
 | Cadence | 2-year review; annual disclosure campaign |
 | Anchors | W1734 |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. A conflict exists when a personal, family, financial or outside-business
@@ -137,6 +141,7 @@ against the active-bid calendar quarterly; Internal Audit samples it annually.
 | Owner (R) / Approver | Corporate Secretary / **Board** (thresholds) |
 | Cadence | **Annual** review (inflation and org-structure adjustments) |
 | Anchors | W1732 (matrix maintenance + ERP enforcement), W1732.3 (system limits), [VS-130](../workflows/VS-130-corporate-development-ma-divestiture/) (PA-130.1–130.3 — Board-tier extraordinary transactions) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. Authority to commit the company is exercised only within the DOA matrix —
@@ -174,6 +179,7 @@ against the active-bid calendar quarterly; Internal Audit samples it annually.
 | Owner (R) / Approver | VP Legal & Compliance / **Board** |
 | Cadence | 2-year review |
 | Anchors | [PA-132.1](../workflows/VS-132-corporate-political-engagement-election-compliance/); the government-affairs function ([VS-104](../workflows/VS-104-government-affairs-public-policy-industry-relations/), PA-104.1–104.3) executes advocacy under this policy; CSR/foundation program: [VS-152](../workflows/VS-152-corporate-social-responsibility-foundation-and-community-investment/) (PA-152.1–152.3) with POL-S03 environmental/community commitments and W1736 governance hooks |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. The company does not make political contributions in kind or in cash to
@@ -203,13 +209,14 @@ against the active-bid calendar quarterly; Internal Audit samples it annually.
 
 ---
 
-## POL-G07 — Anti-Money Laundering, Counter-Terrorist Financing & Sanctions
+## POL-G07 — Anti-Money Laundering / CTF & Sanctions
 
 | | |
 |---|---|
 | Owner (R) / Approver | Compliance Manager / MLRO / **Board (Audit Committee)** |
 | Cadence | 1-year review |
 | Anchors | VS-86 (AML compliance program, W2921–W2932), CTL-237, AMLA (RA 9160 as amended); BSP e-money **agent** obligations for the in-store financial-agency estate ([VS-156](../workflows/VS-156-in-store-value-added-services-and-financial-agency-operations/), PA-156.1–156.3: bills payment, remittance, e-money cash-in/out, mobile load) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. The company maintains a Board-approved **AML/CFT program** (MLRO-led):
@@ -237,13 +244,14 @@ against the active-bid calendar quarterly; Internal Audit samples it annually.
 
 ---
 
-## POL-G08 — Competition Law Compliance
+## POL-G08 — Competition Law Compliance (RA 10667)
 
 | | |
 |---|---|
 | Owner (R) / Approver | VP Legal & Compliance / **Board** |
 | Cadence | 2-year review |
 | Anchors | W2683 (Philippine Competition Law Compliance, PA-76.2); the competition-compliance program ([VS-129](../workflows/VS-129-competition-and-antitrust-compliance/), PA-129.1 risk assessment, PA-129.2 conduct prevention, PA-129.3 PCC engagement); antitrust in the VS-119 ethics scope (ISO 37301 alignment) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. The company complies with **RA 10667** (Philippine Competition Act): no
@@ -274,6 +282,7 @@ against the active-bid calendar quarterly; Internal Audit samples it annually.
 | Owner (R) / Approver | Litigation & IP Counsel / **CEO** |
 | Cadence | 2-year review |
 | Anchors | [PA-100.2](../workflows/VS-100-legal-operations-litigation-ip-management/) (IP Portfolio & Brand Protection), CTL-530, VS-71 (anti-counterfeit detection & enforcement), in-store audio & music-royalty licensing ([VS-168](../workflows/VS-168-in-store-audio-ambient-media-and-music-royalty-licensing/), PA-168.1–168.3) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. The IP portfolio (trademarks, private-brand marks, domain names, designs,
@@ -308,6 +317,7 @@ against the active-bid calendar quarterly; Internal Audit samples it annually.
 | Owner (R) / Approver | Head of Internal Audit & Risk / **Board (Audit Committee)** |
 | Cadence | 1-year review (appetite re-affirmation) |
 | Anchors | W322 (risk appetite framework), PA-26.1 (BCP linkage), POL-P02/P04 (vendor lifecycle & code), POL-I02 (vendor access) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. The company runs a standing **enterprise risk register**: strategic,
@@ -337,6 +347,7 @@ against the active-bid calendar quarterly; Internal Audit samples it annually.
 | Owner (R) / Approver | Corporate Secretary / **Board** |
 | Cadence | 1-year review (SEC Code alignment) |
 | Anchors | PA-36.1 (board meetings & corporate records), W1730 (annual governance self-assessment), [PA-173.2](../workflows/VS-173-investor-relations-capital-markets-and-securities-disclosure/) (disclosure & securities compliance), the internal-audit charter ([VS-21](../workflows/VS-21-internal-audit-risk/), PA-21.1–21.3), SEC Code of Corporate Governance |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. The Board operates under a **corporate governance charter** with written
@@ -376,6 +387,7 @@ against the active-bid calendar quarterly; Internal Audit samples it annually.
 | Owner (R) / Approver | Compliance Manager / MLRO / **VP Legal & Compliance** |
 | Cadence | 1-year review (multi-agency exposure) |
 | Anchors | [VS-166](../workflows/VS-166-regulatory-license-permit-and-accreditation-portfolio-management/) (PA-166.1–166.3, W1400/W1547/W2910/W4735), PA-22.1 (permits & licenses), PA-76.1 (multi-LGU permits), the site-lifecycle permit waves — new-store openings ([VS-37](../workflows/VS-37-store-opening-commissioning/)), closures ([VS-59](../workflows/VS-59-store-closure-decommissioning/)), remodels ([VS-109](../workflows/VS-109-store-remodel-renovation-lifecycle-refurbishment/)) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. The company maintains a **single license & permit register** covering every
@@ -416,6 +428,7 @@ against the active-bid calendar quarterly; Internal Audit samples it annually.
 | Owner (R) / Approver | Forensic / Fraud Investigator (Internal Audit) / **Board (Audit Committee)** |
 | Cadence | 1-year review (fraud-pattern refresh) |
 | Anchors | [VS-125](../workflows/VS-125-cross-channel-fraud-management-payment-fraud-protection/) (PA-125.1–125.3, W369/W1409/W3857+), VS-80 payment operations (PA-80.2 settlement & disputes, PA-80.3 payment fraud & tokenization), VS-149 self-checkout loss prevention (PA-149.3), POL-R05/R01 linkage |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. Fraud management is a **standing cross-channel program** (not a case-by-case
@@ -448,6 +461,7 @@ against the active-bid calendar quarterly; Internal Audit samples it annually.
 | Owner (R) / Approver | VP Legal & Compliance (Bid Compliance Officer: execution) / **Board** |
 | Cadence | 1-year review (procurement-law changes immediate) |
 | Anchors | [VS-46](../workflows/VS-46-government-institutional-sales/) (PA-46.1 registration & qualification, PA-46.2 bid & order processing, PA-46.3 billing/collection compliance), RA 9184 (Government Procurement Reform) & its IRR as supplier-facing rules, RA 3019 (Anti-Graft, per POL-G02), COA audit rules for government receivables |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. Government and institutional business is pursued only through the

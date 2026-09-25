@@ -16,6 +16,7 @@
 | Owner (R) / Approver | VP Store Operations / **COO** (Bank-limit details: CFO) |
 | Cadence | 1-year review |
 | Anchors | W5F (daily cash collection & checklist), W1202 (armored-car pickup & deposit reconciliation), W30 (central matching), W25 (petty cash), the cash-in-transit/vault program ([VS-81](../workflows/VS-81-cash-in-transit-vault-armored/), PA-81.1–81.3), cash-on-delivery operations ([VS-142](../workflows/VS-142-cash-on-delivery-operations-driver-cash-handling-and-reconciliation/), PA-142.1–142.3) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. **Till discipline:** cashiers operate assigned drawers (no shared drawers);
@@ -59,6 +60,7 @@
 | Owner (R) / Approver | VP Store Operations / **COO** |
 | Cadence | 2-year review |
 | Anchors | W1622 returns family (counter returns, exchange/no-refund/quality/refund dispositions), VS-186 haul-away canon, the bulky delivery/haul-away program ([VS-143](../workflows/VS-143-bulky-white-goods-delivery-installation-haul-away-and-recycling/), PA-143.1–143.3), W707 omnichannel returns |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. The published return policy (window, condition, receipt/proof requirements)
@@ -102,6 +104,7 @@
 | Owner (R) / Approver | Pricing Manager / **COO** |
 | Cadence | 1-year review |
 | Anchors | W40 (regular SRP), W13 (promotions), W93 (clearance/markdown), W468 (DTI price freeze), W5B price-type canon, seasonal clearance cycles ([VS-64](../workflows/VS-64-seasonal-merchandise-clearance/), PA-64.1–64.3) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. **Price-type precedence** is system-enforced (W5B canon): clearance/markdown
@@ -137,6 +140,7 @@
 | Owner (R) / Approver | Inventory Control / **COO** |
 | Cadence | 2-year review (thresholds re-based) |
 | Anchors | Inventory adjustment workflows, cycle-count program, VS-05 transfers, consignment & VMI ([VS-45](../workflows/VS-45-consignment-vmi-operations/), PA-45.1–45.3) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. Stock movements are system-recorded at the moment they happen — receiving,
@@ -172,6 +176,7 @@
 | Owner (R) / Approver | Director, Regional Loss Prevention / **COO** |
 | Cadence | 2-year review |
 | Anchors | VS-23 loss prevention (regional LP officers, investigations, analytics), POS exception analytics, CCTV estate |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. Shrink is managed as a measured program: known-loss accounting (damage,
@@ -202,6 +207,7 @@
 | Owner (R) / Approver | Regulatory Compliance Officer / **VP Legal & Compliance** (COO for store execution) |
 | Cadence | 1-year review |
 | Anchors | W29 (Product Recall Execution), W447 (DTI-BPS ICC/SOC certification), W41 (customer complaints), W479 (FDA inspection protocol), the recall/CAPA program ([VS-89](../workflows/VS-89-product-recall-safety-corrective-action/), PA-89.1–89.3), the product-standards program ([VS-117](../workflows/VS-117-dti-bps-product-standards-certification-ps-mark-icc-compliance/), PA-117.1–117.3), the quality-management system ([VS-31](../workflows/VS-31-quality-management/), PA-31.1–31.3), private-label quality ([VS-41](../workflows/VS-41-private-label-brand/), PA-41.2), RA 7394 Consumer Act arts. 22–30 |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. Every SKU subject to mandatory **DTI-BPS certification** carries a valid
@@ -246,6 +252,7 @@
 | Owner (R) / Approver | VP Store Operations / **COO** (CFO: financial treatment) |
 | Cadence | 2-year review |
 | Anchors | W28 (gift card sell/reload/store credit), the gift-card program ([VS-54](../workflows/VS-54-gift-card-stored-value/), PA-54.1 issuance & distribution, PA-54.2 redemption & balance, PA-54.3 reconciliation & analytics), CTL-49 (unauthorized balance manipulation), LP gift-card fraud analytics (PA-22.1 touchpoint canon) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. Gift cards and store credit are company obligations issued only through the
@@ -283,6 +290,7 @@
 | Owner (R) / Approver | VP Marketing / **COO** (Compliance co-review) |
 | Cadence | 2-year review |
 | Anchors | W427 (DTI sales-promotion permits), RA 7394 truthful-advertising provisions, W13 (promo mechanics), the coupon/voucher program ([VS-58](../workflows/VS-58-coupon-digital-promotions/), PA-58.1–58.3), marketing operations ([VS-14](../workflows/VS-14-marketing/), PA-14.x), PA-22.2 Consumer Act program |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. All public advertising and promotions are **truthful, substantiated and not
@@ -319,6 +327,7 @@
 | Owner (R) / Approver | Merch Ops & Master Data Manager / **COO** |
 | Cadence | 2-year review |
 | Anchors | W311 (Barcode, GTIN & Item Identification Master Governance), W4481 (GS1 standards & item-ID standards), W4484 (EAS/RFID tag selection & SKU-tagging), RA 7394 price-tagging rules |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. Every sellable item carries a governed identifier: GTIN/barcode per the GS1
@@ -349,6 +358,7 @@
 | Owner (R) / Approver | Pricing Manager / **COO** (Tax Manager: BIR treatment) |
 | Cadence | 1-year review (statute changes immediate) |
 | Anchors | [VS-85](../workflows/VS-85-mandatory-discount-eligibility-tax-credit/) (PA-85.1 sc/pwd/solo-parent eligibility, PA-85.2 VAT-exempt/zero-rated certification, PA-85.3 tax-credit recovery & audit, W170/W217/W432), RA 9994 (seniors), RA 10754/RA 7277 (PWD), RA 11861 (solo parents), RA 9710 (magna carta of women), BIR withholding/VAT rules |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. Every statutory discount class (senior citizen, PWD, solo parent) grants
@@ -386,6 +396,7 @@
 | Owner (R) / Approver | VP Store Operations / **COO** (HSE co-owned, VP Legal & Compliance: claims) |
 | Cadence | 1-year review |
 | Anchors | [VS-147](../workflows/VS-147-customer-safety-premises-liability-and-in-store-risk-management/) (PA-147.1 framework, PA-147.2 in-store hazard control, PA-147.3 incident response & claims, W4385+), [VS-171](../workflows/VS-171-customer-pickup-loading-zone-and-will-call-counter-operations/) (PA-171.2 forklift-in-customer-area & vehicle coordination), RA 7394, RA 9514 (Fire Code per POL-S02), POL-S01/POL-B02 linkage |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. The **premises-liability duty of care** is operated as a measurable

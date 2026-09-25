@@ -11,7 +11,11 @@
 > subject-matter anchor gaps, and completed the register against the full
 > 188-domain workflow corpus, and the fifth pass reconciled every owner title
 > to the TO's §5.3 role register and completed the residual fold half-anchors
-> (see §4 and the [gap analysis](gap-analysis.md));
+> (see §4 and the [gap analysis](gap-analysis.md)); and the sixth pass trued the
+> register↔manual mirror itself — three owner cells and one approver cell the
+> manuals contradict, three manual titles off the register forms, two domain
+> class-lines missing their exceptions — and issued every policy's
+> version-history row (§1.1(i));
 > at 75 policies the manual now *exceeds* the re-pointed "~50–60" canon, which
 > requires re-baselining at the next W1729 review.
 
@@ -28,7 +32,9 @@ responsibilities (RACI against the [table of
 organization](../optimal-table-of-organization.md)) · **(f)** exceptions &
 approval process · **(g)** monitoring & enforcement (anchored to the [internal
 controls matrix](../internal-controls-matrix.md) CTL references) · **(h)**
-related documents · **(i)** version history.
+related documents · **(i)** version history — the header table's **Version**
+row (the 2026-09-25 codification issues every policy at 1.0; every change
+re-issues the policy under the change-control clause below).
 
 ### 1.2 Approval matrix (W1729.4 — binding)
 
@@ -84,7 +90,7 @@ truth; the policy states the rule, the workflow executes it.
 | POL-G13 | Fraud Management & Payment Protection | Forensic / Fraud Investigator | Board (Audit Cmte) | 1y | VS-125, VS-80, VS-149 |
 | POL-G14 | Government & Institutional Sales Compliance | VP Legal & Compliance | Board | 1y | VS-46 (RA 9184 as supplier, COA billing) |
 | **Finance, Treasury & Tax** ([manual](20-finance-treasury-policies.md)) | | | | | |
-| POL-F01 | Treasury, Cash Management & Banking Authority | Treasury Manager / CFO | CFO (Board: limits) | 1y | W322, W30, W323, VS-105 |
+| POL-F01 | Treasury, Cash Management & Banking Authority | Treasury Manager | CFO (Board: limits) | 1y | W322, W30, W323, VS-105 |
 | POL-F02 | Foreign Exchange Risk & Hedging | Treasury Manager | CFO | 1y | W30 step 10a, W80, VS-106 commodities |
 | POL-F03 | Capital Expenditure & Investment Approval | FP&A Manager | CFO (Board: >₱10M) | 1y | W1811, W1732, VS-130 |
 | POL-F04 | Expense Reimbursement & Business Travel | Controller | CFO | 2y | PA-34.x expense workflows |
@@ -92,7 +98,7 @@ truth; the policy states the rule, the workflow executes it.
 | POL-F06 | Revenue Assurance | Revenue Assurance Analyst | Controller | 2y | POS audit chain, PA-08.x, VS-118 |
 | POL-F07 | Accounting, Financial Reporting & Tax Compliance | Controller / Tax Manager | CFO | 1y | W9, PA-17.x, PA-79.x, VS-148, VS-158, VS-157, VS-35 |
 | POL-F08 | Financing & Lending Activities | Treasury Manager | CFO (Board: new programs) | 1y | VS-154, VS-188, VS-189, VS-170, VS-181, VS-96, VS-38 |
-| POL-F09 | Property Acquisition, Land-Use & Lease Compliance | Director, Facilities & Real Estate | CFO (Board: acquisitions) | 1y | VS-97, VS-42, VS-20, VS-178 |
+| POL-F09 | Property Acquisition, Land-Use & Lease Compliance | Director, Facilities & Real Estate + Controller | CFO (Board: acquisitions) | 1y | VS-97, VS-42, VS-20, VS-178 |
 | **Procurement & Vendor Management** ([manual](30-procurement-vendor-policies.md)) | | | | | |
 | POL-P01 | Competitive Sourcing & Bidding | Procurement Manager | CFO | 2y | W632, W2 series |
 | POL-P02 | Vendor Lifecycle (Onboarding → AVL → Exit) | Vendor Management Manager | CFO | 2y | VS-03 workflows, VS-15, VS-110, VS-111, VS-94/185, VS-122 |
@@ -112,7 +118,7 @@ truth; the policy states the rule, the workflow executes it.
 | POL-H10 | Contingent, Outsourced & Foreign Workforce | HRBP (Field) + Labor Relations Director | CHRO + CEO | 1y | VS-98, VS-160, VS-183 |
 | POL-H11 | Labor Relations & Collective Bargaining | Labor Relations Director | CHRO + CEO | 1y | VS-84 (CBA, grievance, DOLE conciliation) |
 | **IT & Information Security** ([manual](50-it-security-policies.md)) | | | | | |
-| POL-I01 | Acceptable Use of IT Resources | CIO / SEC platform | CIO | 2y | VS-27 workflows |
+| POL-I01 | Acceptable Use of IT Resources | CIO | CIO + CEO | 2y | VS-27 workflows |
 | POL-I02 | Access Control & Joiner–Mover–Leaver | Identity & Access (IAP) | CIO | 1y | W132, W5518, EBS roles |
 | POL-I03 | Authentication, Encryption, Mobile & BYOD | Security Engineering (SEC) | CIO | 1y | M365/EBS canon, VS-10, VS-190 |
 | POL-I04 | Change, Release & IT Resilience (incl. Backup) | CIO Office | CIO | 1y | VS-27 change workflows, VS-99, VS-190 |

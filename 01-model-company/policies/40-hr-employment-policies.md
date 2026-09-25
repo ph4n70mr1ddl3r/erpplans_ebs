@@ -19,6 +19,7 @@
 | Owner (R) / Approver | Talent Acquisition Manager / **CHRO** |
 | Cadence | 2-year review |
 | Anchors | PA-19.1; the talent-acquisition program ([VS-121](../workflows/VS-121-talent-acquisition-employer-brand-candidate-experience/), PA-121.1–121.3); workforce background screening ([VS-167](../workflows/VS-167-workforce-background-screening-credentialing-and-personnel-vetting/), PA-167.1–167.3); hiring authority per POL-G05 (W1732.1(d)) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. Hiring follows an approved headcount (requisition vs TO) — no requisition,
@@ -49,6 +50,7 @@
 | Owner (R) / Approver | HRBP (Field) / **CHRO** |
 | Cadence | 2-year review |
 | Anchors | PA-19.1/19.2; W541 store safe/asset issuance hooks; PA-150.1 drug-test step |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. Every hire completes: 201-file and government-mandated enrollments
@@ -74,6 +76,7 @@
 | Owner (R) / Approver | Compensation & Benefits Manager / **CHRO + CEO** |
 | Cadence | 1-year review (survey cycle + statutory wage orders) |
 | Anchors | PA-102.x (comp & ben), VS-144 (housing), VS-169 (uniform/PPE), employee transport & commute ([VS-141](../workflows/VS-141-employee-transport-shuttle-and-daily-commute-management/), PA-141.1–141.3) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. Pay is set by the graded structure against published **market benchmarks**
@@ -105,6 +108,7 @@
 | Owner (R) / Approver | HRBP (Field) / **CHRO** |
 | Cadence | 2-year review |
 | Anchors | PA-19.3 (performance), PA-19.4 (L&D); succession and promotion workflows |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. Every employee carries written KPIs/OKRs cascaded from the annual plan;
@@ -132,6 +136,7 @@
 | Owner (R) / Approver | HR Shared Services / **CHRO** |
 | Cadence | 2-year review (statutory changes immediate) |
 | Anchors | PA-19.x payroll chain (timekeeping → payroll), store scheduling workflows |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. Schedules post in advance per the store labor-standard rules; overtime is
@@ -163,6 +168,7 @@
 | Owner (R) / Approver | Labor Relations Director / **CHRO + CEO** |
 | Cadence | 2-year review |
 | Anchors | Labor Code due process (twin-notice rule), W43 separation hooks, PA-19.x |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. Discipline is **corrective, progressive and documented**: verbal coaching →
@@ -190,6 +196,7 @@
 | Owner (R) / Approver | HRBP (Field) / **CHRO + CEO** |
 | Cadence | 2-year review |
 | Anchors | RA 7877 (sexual harassment), RA 11313 (safe spaces), RA 11036; W1733 reporting |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. Zero tolerance for sexual harassment, gender-based harassment, and
@@ -216,6 +223,7 @@
 | Owner (R) / Approver | HSE Officer & CHRO / **CHRO + CEO** |
 | Cadence | 2-year review |
 | Anchors | RA 9165, DOLE/DDB guidelines; [PA-150.1](../workflows/VS-150-drug-free-workplace-and-substance-abuse-program/) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. The company maintains a DOLE-compliant **Drug-Free Workplace Program**:
@@ -242,6 +250,7 @@
 | Owner (R) / Approver | HR Shared Services / **CHRO** |
 | Cadence | 2-year review |
 | Anchors | W43 (separation), PA-19.x exit workflows, banking-signatory cascade (W30) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. Separations are lawful only for the recognized causes: authorized (retirement
@@ -270,6 +279,7 @@
 | Owner (R) / Approver | HRBP (Field) + Labor Relations Director / **CHRO + CEO** |
 | Cadence | 1-year review (DOLE regulation changes immediate) |
 | Anchors | [VS-98](../workflows/VS-98-contingent-contract-outsourced-workforce/) (PA-98.1–98.3, W555), [VS-160](../workflows/VS-160-global-mobility-immigration-and-foreign-worker-compliance/) (PA-160.1–160.3), [VS-183](../workflows/VS-183-dual-training-system-dts-and-tesda-partnership-program/) (DTS/TESDA, PA-183.1–183.3), POL-P03 service contracts, POL-I02 third-party access |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. **Contracting only, never labor-only:** every engagement of contingent or
@@ -314,6 +324,7 @@
 | Owner (R) / Approver | Labor Relations Director / **CHRO + CEO** |
 | Cadence | 1-year review (CBAs, docket and jurisprudence changes) |
 | Anchors | [VS-84](../workflows/VS-84-labor-relations-collective-bargaining/) (PA-84.1 union recognition & CBA negotiation/administration, PA-84.2 grievance & labor disputes/DOLE conciliation, PA-84.3 employee voice & engagement), Labor Code (Arts. 263–290, union & CBA framework), POL-H06 (discipline interface), POL-D04 (CBA/records retention) |
+| Version | 1.0 — initial issue, 2026-09-25 codification |
 
 **Policy statements.**
 1. The company deals with unions **lawfully and without interference**:

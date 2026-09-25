@@ -49,8 +49,10 @@ Usage:
     python3 07-methodology/manhours-rollup.py --csv PATH         # workflow x role rows
     python3 07-methodology/manhours-rollup.py --workflow W30     # one-workflow detail
     python3 07-methodology/manhours-rollup.py --unparseable N    # show N unparseable cells
+    python3 07-methodology/manhours-rollup.py --check            # byte-verify the three
+                                                                 # shipped artifacts, exit 1 on drift
 """
-import argparse, collections, csv, glob, json, os, re, sys
+import argparse, collections, csv, glob, io, json, os, re, sys
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WORKFLOWS = os.path.join(REPO, "01-model-company", "workflows")
@@ -514,6 +516,9 @@ def main():
     ap.add_argument("--workflow", metavar="WID", help="show detail for one workflow")
     ap.add_argument("--unparseable", type=int, default=0, metavar="N",
                     help="print up to N unparseable cells for triage")
+    ap.add_argument("--check", action="store_true",
+                    help="re-derive the three shipped artifacts in memory and "
+                         "byte-compare them; exit 1 on drift or missing file")
     args = ap.parse_args()
 
     class_counts = collections.Counter()
@@ -660,52 +665,84 @@ def main():
         P("")
 
     report = "\n".join(lines)
+
+    def json_str():
+        jd = []
+        for w in workflows:
+            jd.append({k: (list(v) if isinstance(v, tuple) else v) for k, v in w.items()})
+        return json.dumps(jd, indent=1) + "\n"
+
+    def csv_str():
+        buf = io.StringIO(newline="")
+        wr = csv.writer(buf)
+        wr.writerow(["file", "workflow", "role", "monthly_hours_low",
+                     "monthly_hours_high", "effort_steps", "automated_steps",
+                     "cadence_only_steps", "qualitative_steps",
+                     "elapsed_days_low", "elapsed_days_high", "per_unit_rates"])
+        # per workflow x role rows
+        by_wr = collections.defaultdict(lambda: [0.0, 0.0, 0, 0, 0, 0, 0.0, 0.0, []])
+        for w in workflows:
+            for s in w["steps"]:
+                if s["klass"] in ("effort",) and s.get("monthly"):
+                    for role in split_roles(s["role_r"]):
+                        cell = by_wr[(w["file"], w["id"], role)]
+                        cell[0] += s["monthly"][0]; cell[1] += s["monthly"][1]; cell[2] += 1
+                elif s["klass"] == "automated":
+                    for role in split_roles(s["role_r"]):
+                        by_wr[(w["file"], w["id"], role)][3] += 1
+                elif s["klass"] == "cadence-only":
+                    for role in split_roles(s["role_r"]):
+                        by_wr[(w["file"], w["id"], role)][4] += 1
+                elif s["klass"] == "qualitative":
+                    for role in split_roles(s["role_r"]):
+                        by_wr[(w["file"], w["id"], role)][5] += 1
+                elif s["klass"] == "elapsed" and s.get("elapsed_days"):
+                    for role in split_roles(s["role_r"]):
+                        by_wr[(w["file"], w["id"], role)][6] += s["elapsed_days"][0]
+                        by_wr[(w["file"], w["id"], role)][7] += s["elapsed_days"][1]
+                elif s["klass"] == "per-unit":
+                    for role in split_roles(s["role_r"]):
+                        by_wr[(w["file"], w["id"], role)][8].append(
+                            f"{s['hours'][0]:.2f}-{s['hours'][1]:.2f}h/{s['unit']}")
+        for (f, wid, role), c in sorted(by_wr.items()):
+            wr.writerow([f, wid, role, f"{c[0]:.2f}", f"{c[1]:.2f}", c[2], c[3],
+                         c[4], c[5], f"{c[6]:.1f}", f"{c[7]:.1f}",
+                         "; ".join(c[8])])
+        return buf.getvalue()
+
+    here = os.path.dirname(os.path.abspath(__file__))
+    artifacts = [
+        ("report", os.path.join(here, "manhours-rollup-report.md"), (report + "\n").encode("utf-8")),
+        ("json", os.path.join(here, "manhours-rollup.json"), json_str().encode("utf-8")),
+        ("csv", os.path.join(here, "manhours-rollup.csv"), csv_str().encode("utf-8")),
+    ]
+
+    if args.check:
+        bad = 0
+        for name, path, derived in artifacts:
+            if not os.path.exists(path):
+                print(f"manhours-rollup: {name} missing ({os.path.basename(path)}) "
+                      f"— run without --check to generate")
+                bad = 1
+                continue
+            if open(path, "rb").read() == derived:
+                print(f"manhours-rollup: {name} byte-identical, OK")
+            else:
+                print(f"manhours-rollup: {name} DRIFT — regenerate "
+                      f"(a Steps-table or grammar change moved the derivation)")
+                bad = 1
+        sys.exit(bad)
+
     print(report)
     if args.report:
         open(args.report, "w").write(report + "\n")
         print(f"[written] {args.report}", file=sys.stderr)
     if args.json:
-        jd = []
-        for w in workflows:
-            jd.append({k: (list(v) if isinstance(v, tuple) else v) for k, v in w.items()})
-        open(args.json, "w").write(json.dumps(jd, indent=1) + "\n")
+        open(args.json, "w").write(json_str())
         print(f"[written] {args.json}", file=sys.stderr)
     if args.csv:
         with open(args.csv, "w", newline="") as fh:
-            wr = csv.writer(fh)
-            wr.writerow(["file", "workflow", "role", "monthly_hours_low",
-                         "monthly_hours_high", "effort_steps", "automated_steps",
-                         "cadence_only_steps", "qualitative_steps",
-                         "elapsed_days_low", "elapsed_days_high", "per_unit_rates"])
-            # per workflow x role rows
-            by_wr = collections.defaultdict(lambda: [0.0, 0.0, 0, 0, 0, 0, 0.0, 0.0, []])
-            for w in workflows:
-                for s in w["steps"]:
-                    if s["klass"] in ("effort",) and s.get("monthly"):
-                        for role in split_roles(s["role_r"]):
-                            cell = by_wr[(w["file"], w["id"], role)]
-                            cell[0] += s["monthly"][0]; cell[1] += s["monthly"][1]; cell[2] += 1
-                    elif s["klass"] == "automated":
-                        for role in split_roles(s["role_r"]):
-                            by_wr[(w["file"], w["id"], role)][3] += 1
-                    elif s["klass"] == "cadence-only":
-                        for role in split_roles(s["role_r"]):
-                            by_wr[(w["file"], w["id"], role)][4] += 1
-                    elif s["klass"] == "qualitative":
-                        for role in split_roles(s["role_r"]):
-                            by_wr[(w["file"], w["id"], role)][5] += 1
-                    elif s["klass"] == "elapsed" and s.get("elapsed_days"):
-                        for role in split_roles(s["role_r"]):
-                            by_wr[(w["file"], w["id"], role)][6] += s["elapsed_days"][0]
-                            by_wr[(w["file"], w["id"], role)][7] += s["elapsed_days"][1]
-                    elif s["klass"] == "per-unit":
-                        for role in split_roles(s["role_r"]):
-                            by_wr[(w["file"], w["id"], role)][8].append(
-                                f"{s['hours'][0]:.2f}-{s['hours'][1]:.2f}h/{s['unit']}")
-            for (f, wid, role), c in sorted(by_wr.items()):
-                wr.writerow([f, wid, role, f"{c[0]:.2f}", f"{c[1]:.2f}", c[2], c[3],
-                             c[4], c[5], f"{c[6]:.1f}", f"{c[7]:.1f}",
-                             "; ".join(c[8])])
+            fh.write(csv_str())
         print(f"[written] {args.csv}", file=sys.stderr)
 
 if __name__ == "__main__":
