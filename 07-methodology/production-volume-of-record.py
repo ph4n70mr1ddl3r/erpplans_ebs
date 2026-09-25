@@ -145,6 +145,12 @@ QUERIES = [
     ("rcv_by_org_12m", "Receipt lines by receiving org, trailing 12 mo",
      "SELECT organization_id, COUNT(*) FROM rcv_transactions WHERE transaction_date >= ADD_MONTHS(SYSDATE,-12) "
      "GROUP BY organization_id ORDER BY 1"),
+    ("rcv_split_by_org_12m", "DELIVER receipt lines+qty by org and source, trailing 12 mo",
+     "SELECT t.organization_id, h.receipt_source_code, COUNT(*), SUM(ABS(t.quantity)) "
+     "FROM rcv_transactions t, rcv_shipment_headers h "
+     "WHERE t.shipment_header_id = h.shipment_header_id AND t.transaction_type = 'DELIVER' "
+     "AND t.transaction_date >= ADD_MONTHS(SYSDATE,-12) "
+     "GROUP BY t.organization_id, h.receipt_source_code ORDER BY 1"),
     ("org_codes", "Inventory-org code map",
      "SELECT organization_id, organization_code FROM org_organization_definitions"),
 ]
@@ -288,6 +294,9 @@ def render(cache):
 
     stroo = _dist("stroo_by_source_12m")
     rcv = _dist("rcv_by_org_12m")
+    e = m.get("rcv_split_by_org_12m", {})
+    rcv_split = [[int(r[0]), str(r[1]), int(r[2]), int(r[3])] for r in (e.get("value") or [])] \
+        if e.get("status") == "ok" else None
     A("")
     A("## §5 Distribution-network tiers — STROO outbound, trailing 12 months")
     A("")
@@ -312,15 +321,39 @@ def render(cache):
         A(tier("National hubs", hubs, "≥5% of lines"))
         A(tier("Regional DCs", reg, "1–5%"))
         A(tier("Satellite / store-attached", sat, "<1%"))
-        if rcv and tot and store:
+        if rcv_split and store:
             store_ids = {o for o, _ in store}
-            rcv_store = sum(v for o, v in rcv if o in store_ids)
-            rcv_tot = sum(v for _, v in rcv)
+            rows = rcv_split
+            tot_l = sum(r[2] for r in rows)
+            tot_q = sum(r[3] for r in rows)
+            st = [r for r in rows if r[0] in store_ids]
+            st_l = sum(r[2] for r in st)
+            st_q = sum(r[3] for r in st)
+
+            def src_share(code, idx):
+                sel = [r for r in st if r[1] == code]
+                tv = sum(r[2] for r in sel)
+                tq = sum(r[3] for r in sel)
+                return ((tv / st_l * 100.0) if st_l else 0.0,
+                        (tq / st_q * 100.0) if st_q else 0.0)
+
+            int_l, int_q = src_share("INTERNAL ORDER", 2)
+            ven_l, ven_q = src_share("VENDOR", 2)
+            inv_l, inv_q = src_share("INVENTORY", 2)
             A("")
-            A(f"Inbound note: {rcv_store / rcv_tot * 100:.0f}% of receipt lines land "
-              f"directly at POS-posting stores (vendor direct-to-store delivery), not via "
-              f"the DC network — the operator runs a mixed inbound model, which the model "
-              "company's replenishment design should reflect.")
+            A(f"**Inbound sourcing at stores** (DELIVER receipt lines, trailing 12 mo; "
+              f"{st_l:,} store receipt lines / {st_q:,} units):")
+            A("")
+            A(f"- **INTERNAL ORDER (DC/inter-branch transfers): {int_l:.0f}% of lines, "
+              f"{int_q:.0f}% of quantity** — the DC network is the store-replenishment artery")
+            A(f"- VENDOR direct-to-store: {ven_l:.0f}% of lines, {ven_q:.0f}% of quantity "
+              "— a supplementary slice, not the artery")
+            A(f"- INVENTORY (other internal) sources: {inv_l:.0f}% of lines, {inv_q:.0f}% of quantity")
+            A("")
+            A(f"Landing-zone context: {st_l / tot_l * 100:.0f}% of ALL DELIVER receipt lines "
+              f"land at stores — but as transfer receipts from the DC network, not vendor "
+              "deliveries. (The (bb) wave's '94% store-direct' reading conflated the landing "
+              "zone with the source; corrected here.)")
     else:
         A("— transfer-source distribution unavailable this run.")
     A("")
@@ -381,8 +414,10 @@ def render(cache):
     A("   register.")
     A("7. **Distribution tiers** — re-cut the model company's 4-DC design into the measured")
     A("   network tiers (§5: national hubs / regional / satellite) with per-tier outbound")
-    A("   volumes, and reflect the mixed inbound model (§5 inbound note) in the")
-    A("   replenishment and P2P workflow design.")
+    A("   volumes. The inbound correction stands: the DC network is the store-replenishment")
+    A("   artery (§5 inbound sourcing — the (bb) wave's '94% store-direct' reading was wrong,")
+    A("   it conflated landing zone with source); vendor direct-to-store stays a supplementary")
+    A("   P2P slice, not the artery.")
     A("")
     A("## §8 Method & freshness")
     A("")
@@ -404,7 +439,7 @@ def refresh():
     cur = con.cursor()
     metrics = {}
     multi_row = {"categories_top", "store_pos_90d", "stroo_by_source_12m",
-                 "rcv_by_org_12m", "org_codes"}
+                 "rcv_by_org_12m", "rcv_split_by_org_12m", "org_codes"}
     for key, _label, sql in QUERIES:
         entry = {"status": "ok", "value": None}
         try:
@@ -415,6 +450,9 @@ def refresh():
                     entry["value"] = [[int(r[0]), str(r[1])] for r in rows if r[0] is not None]
                 elif key == "categories_top":
                     entry["value"] = [[str(r[0]), str(r[1]), int(r[2])] for r in rows]
+                elif key == "rcv_split_by_org_12m":
+                    entry["value"] = [[int(r[0]), str(r[1]), int(r[2]), int(r[3] or 0)]
+                                      for r in rows if r[0] is not None]
                 else:
                     entry["value"] = [[int(r[0]), int(r[1])] for r in rows
                                       if r[0] is not None and r[1] is not None]
