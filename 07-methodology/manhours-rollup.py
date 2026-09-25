@@ -47,9 +47,10 @@ Usage:
     python3 07-methodology/manhours-rollup.py --report PATH      # markdown report
     python3 07-methodology/manhours-rollup.py --json PATH        # full detail
     python3 07-methodology/manhours-rollup.py --csv PATH         # workflow x role rows
+    python3 07-methodology/manhours-rollup.py --ranking PATH     # per-workflow ranking by derived hours
     python3 07-methodology/manhours-rollup.py --workflow W30     # one-workflow detail
     python3 07-methodology/manhours-rollup.py --unparseable N    # show N unparseable cells
-    python3 07-methodology/manhours-rollup.py --check            # byte-verify the three
+    python3 07-methodology/manhours-rollup.py --check            # byte-verify the four
                                                                  # shipped artifacts, exit 1 on drift
 """
 import argparse, collections, csv, glob, io, json, os, re, sys
@@ -513,11 +514,14 @@ def main():
     ap.add_argument("--report", metavar="PATH", help="write markdown report")
     ap.add_argument("--json", metavar="PATH", help="write full JSON detail")
     ap.add_argument("--csv", metavar="PATH", help="write workflow x role CSV")
+    ap.add_argument("--ranking", metavar="PATH",
+                    help="write per-workflow ranking CSV (all workflows by "
+                         "derived monthly hours, high then low desc)")
     ap.add_argument("--workflow", metavar="WID", help="show detail for one workflow")
     ap.add_argument("--unparseable", type=int, default=0, metavar="N",
                     help="print up to N unparseable cells for triage")
     ap.add_argument("--check", action="store_true",
-                    help="re-derive the three shipped artifacts in memory and "
+                    help="re-derive the four shipped artifacts in memory and "
                          "byte-compare them; exit 1 on drift or missing file")
     args = ap.parse_args()
 
@@ -710,11 +714,39 @@ def main():
                          "; ".join(c[8])])
         return buf.getvalue()
 
+    def ranking_str():
+        # the headcount-optimization priority list: every workflow ranked by
+        # derived monthly hours (high desc, then low desc; stable over corpus
+        # order on full ties). fte_high = high / (8 h x 21.7 d) — the same
+        # 173.6 h/FTE-month convention the report's corpus-total line uses.
+        recs = sorted(workflows, key=lambda w: (-w["monthly_hours"][1],
+                                                -w["monthly_hours"][0]))
+        buf = io.StringIO(newline="")
+        wr = csv.writer(buf)
+        wr.writerow(["rank", "workflow_id", "title", "process_area", "file",
+                     "monthly_hours_low", "monthly_hours_high", "fte_high",
+                     "effort_steps", "automated_steps", "cadence_only_steps",
+                     "qualitative_steps", "elapsed_days_low",
+                     "elapsed_days_high", "per_unit_rates"])
+        for i, w in enumerate(recs, 1):
+            area = w["file"].split("/")[2]
+            wr.writerow([i, w["id"], w["name"], area, w["file"],
+                         f"{w['monthly_hours'][0]:.2f}",
+                         f"{w['monthly_hours'][1]:.2f}",
+                         f"{w['monthly_hours'][1] / (HOURS_PER_WORKDAY * BUSINESS_DAYS_PER_MONTH):.3f}",
+                         w["effort_steps"], w["automated_steps"],
+                         w["cadence_only_steps"], w["qualitative_steps"],
+                         f"{w['elapsed_days'][0]:.1f}",
+                         f"{w['elapsed_days'][1]:.1f}",
+                         len(w["per_unit_rates"])])
+        return buf.getvalue()
+
     here = os.path.dirname(os.path.abspath(__file__))
     artifacts = [
         ("report", os.path.join(here, "manhours-rollup-report.md"), (report + "\n").encode("utf-8")),
         ("json", os.path.join(here, "manhours-rollup.json"), json_str().encode("utf-8")),
         ("csv", os.path.join(here, "manhours-rollup.csv"), csv_str().encode("utf-8")),
+        ("ranking", os.path.join(here, "manhours-workflow-ranking.csv"), ranking_str().encode("utf-8")),
     ]
 
     if args.check:
@@ -744,6 +776,10 @@ def main():
         with open(args.csv, "w", newline="") as fh:
             fh.write(csv_str())
         print(f"[written] {args.csv}", file=sys.stderr)
+    if args.ranking:
+        with open(args.ranking, "w", newline="") as fh:
+            fh.write(ranking_str())
+        print(f"[written] {args.ranking}", file=sys.stderr)
 
 if __name__ == "__main__":
     main()

@@ -284,6 +284,7 @@ erpplans/
     ├── manhours-rollup-report.md     GENERATED man-hours roll-up report — classification coverage, corpus totals, top roles/workflows, unparseable triage list (regenerate via 07-methodology/manhours-rollup.py --report; do not hand-edit)
     ├── manhours-rollup.json          GENERATED full-detail roll-up (per-workflow × per-step classification + per-role monthly hours; regenerate via --json)
     ├── manhours-rollup.csv           GENERATED workflow × role hour rows (per-role monthly hours, effort/automated/cadence-only counts, elapsed days, per-unit rates; regenerate via --csv)
+    ├── manhours-workflow-ranking.csv GENERATED per-workflow ranking by derived monthly hours — all 5,456 workflows, high then low desc, with FTE-high and per-class step counts (the headcount-optimization priority list; regenerate via --ranking)
     ├── audit-time-estimate-math.py    Inline-arithmetic audit of Time Estimate / Staffing paragraphs (unit-convention-aware chain re-derivation; Check 50 guard)
     ├── reconcile-staffing-claims.py  Headcount-anchor & Volume-product reconciliation vs canonical registers (Check 51 guard)
     ├── virtual-gemba-walk.py         Virtual gemba walk & time-and-motion analyzer — per-VS touch time / handoff / approval-gate walk + per-role annual demand vs chartered TO capacity (read-only; 39th wave)
