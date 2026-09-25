@@ -1,21 +1,21 @@
 # Production Volume of Record — the actual operator's PROD (generated)
 
-> **Generated** by [`production-volume-of-record.py`](../07-methodology/production-volume-of-record.py) `--refresh` on **2026-09-24 23:48 UTC** — read-only `appsro` against the production Active Data Guard standby. **This file is generated — do not hand-edit.** Validator Check 81 runs the instrument's `--check` mode: the register is re-rendered from the committed JSON cache (`production-volume-of-record-cache.json`) and byte-compared, so it cannot drift from its extraction of record. The instrument carries **no credentials** — they come from the environment or the operator's own access notes outside this repository. This register changes **no** model-company canon: every §4 delta is an explicit decision (W5580 governance, executive direction), never an automatic re-base.
+> **Generated** by [`production-volume-of-record.py`](../07-methodology/production-volume-of-record.py) `--refresh` on **2026-09-25 00:09 UTC** — read-only `appsro` against the production Active Data Guard standby. **This file is generated — do not hand-edit.** Validator Check 81 runs the instrument's `--check` mode: the register is re-rendered from the committed JSON cache (`production-volume-of-record-cache.json`) and byte-compared, so it cannot drift from its extraction of record. The instrument carries **no credentials** — they come from the environment or the operator's own access notes outside this repository. This register changes **no** model-company canon: every §6 delta is an explicit decision (W5580 governance, executive direction), never an automatic re-base.
 
 ## §1 Operating volumes — trailing 12 months, measured live
 
 | Metric | Actual (12 mo) |
 |---|---|
-| POS transactions (headers) | 13,305,968 |
+| POS transactions (headers) | 13,305,975 |
 | POS-active stores (last 7 days) | 132 |
-| Purchase orders | 22,175 |
-| PO lines | 141,839 |
+| Purchase orders | 22,179 |
+| PO lines | 141,862 |
 | Inter-branch transfer orders (STROO) | 532,542 |
-| OM order lines (all types) | 1,596,418 |
-| AP supplier invoices | 188,566 |
-| AR credit memos (returns instrument) | 14,801 |
-| PO receipt lines | 3,144,047 |
-| GL journal batches | 291,374 |
+| OM order lines (all types) | 1,596,417 |
+| AP supplier invoices | 188,589 |
+| AR credit memos (returns instrument) | 14,803 |
+| PO receipt lines | 3,144,013 |
+| GL journal batches | 291,407 |
 
 ## §2 Structure & estate
 
@@ -28,12 +28,36 @@
 
 ## §3 Masterfiles
 
-- Items defined in the item master: **113,950**
+- Items defined in the item master: **113,953**
 - Items with on-hand inventory: **31,475**
 - POS-active stores (distinct STORE_ID, last 7 days): **132**
 - Top item catalog groups: none maintained on the item master (catalog groups unused — the operator's item taxonomy, if any, lives in item categories)
 
-## §4 Calibration surface — model-company canon vs production actual
+## §4 Store size segments — POS-measured, last 90 days
+
+Segmentation of the 132 POS-posting stores by transactions per store per day (90-day basis; tercile cuts at 201.5 and 312.7 trx/day):
+
+| Segment | Stores | Store share | Mean trx/store/day | 90-day volume | Volume share |
+|---|---|---|---|---|---|
+| Big | 45 | 34% | 425.8 | 1,724,345 | 53% |
+| Medium | 44 | 33% | 251.2 | 994,566 | 30% |
+| Small | 43 | 33% | 143.5 | 555,423 | 17% |
+
+Largest store: TAG (109) at 823.6 trx/day; smallest: GUN (2307) at 13.0 — a 63x spread the uniform per-store model-company canon does not capture.
+
+## §5 Distribution-network tiers — STROO outbound, trailing 12 months
+
+Tiering the network by each org's share of outbound transfer lines (hub ≥5%, regional 1–5%, satellite <1%):
+
+| Tier | Orgs | Line share | Lines/month | Cut | Members (top) |
+|---|---|---|---|---|---|
+| National hubs | 7 | 88% | 116,871.2 | ≥5% of lines | SDC (113), CDC (818), BDC (1341), CD2 (1521), CD3 (1561), CD4 (1562), … |
+| Regional DCs | 3 | 4% | 4,774.7 | 1–5% | CD5 (2206), CD6 (2207), CD7 (2326) |
+| Satellite / store-attached | 143 | 8% | 11,228.1 | <1% | BAJ (101), MAT (102), ILI (103), CAG (104), PAR (105), MAN (106), … |
+
+Inbound note: 94% of receipt lines land directly at POS-posting stores (vendor direct-to-store delivery), not via the DC network — the operator runs a mixed inbound model, which the model company's replenishment design should reflect.
+
+## §6 Calibration surface — model-company canon vs production actual
 
 | Parameter | Model-company canon (source) | Production actual | Reading |
 |---|---|---|---|
@@ -41,15 +65,15 @@
 | POS receipts per store per day (design target 467 = 93,333/day ÷ 200) | 467 | ≈ 276.0 (12-mo POS ÷ stores ÷ days) | OPEN — the 2026-07-30 probe measured 126–510/store/day, mean ~330; decide target-vs-measured |
 | Purchase orders per month (canon 1,650–1,950) | 1,650–1,950 | ≈ 1,848 | CONFIRMED if within band — the §1.1 calibration held |
 | Replenishment transfers per month (canon ~50,000) | ~50,000 | ≈ 44,378 | CONFIRMED if ~250/store on the live store count |
-| Customer returns AR credit memos per month (canon ~1,200) | ~1,200 | ≈ 1,233 | CONFIRMED if within band |
+| Customer returns AR credit memos per month (canon ~1,200) | ~1,200 | ≈ 1,234 | CONFIRMED if within band |
 | Active SKUs | 35,000 | 31,475 items with on-hand | OPEN — near-canon if within ±15% |
-| Item master | ~55,000 | 113,950 defined | OPEN — the operator runs ~2x the modeled master |
+| Item master | ~55,000 | 113,953 defined | OPEN — the operator runs ~2x the modeled master |
 | Legal entities | 5 (ebs-platform-architecture) | 15 | BY DESIGN — the model company consolidates; the operator runs 15 entity books |
 | Inventory organizations | 205 | 291 | BY DESIGN — re-base only with the store/DC estate decision |
 | Suppliers on the master | — | 8,237 total / 6,950 active | NEW BASIS — adopt as the supplier-master scale when the P2P docs are next revised |
 | EBS application users | — | 514 active / 468 30-day logins | NEW BASIS — the licensing-BOM user driver grounds here |
 
-## §5 Decision register
+## §7 Decision register
 
 1. **Store-count basis** — one number of record for the mirrored estate (the §1.1
    calibration used 171; the capability audit says ~232; §2 is the live POS-active
@@ -67,10 +91,19 @@
 5. **Role-load reliability** — the load model's cadence layer graduates from prose
    parsing (53% coverage) to this register: per-workflow-event cadences ground on the
    measured 12-month volumes above before any headcount optimization is taken.
+6. **Store segmentation** — adopt the measured size segments (§4) for the model
+   company's store estate: a big/medium/small mix with per-segment POS volumes
+   replaces the uniform 200-store canon, driving differentiated staffing per segment
+   (the TO's flat 29/store) — the single highest-leverage headcount insight in this
+   register.
+7. **Distribution tiers** — re-cut the model company's 4-DC design into the measured
+   network tiers (§5: national hubs / regional / satellite) with per-tier outbound
+   volumes, and reflect the mixed inbound model (§5 inbound note) in the
+   replenishment and P2P workflow design.
 
-## §6 Method & freshness
+## §8 Method & freshness
 
-- Extracted: **2026-09-24 23:48 UTC**; query window: trailing 12 months from the database SYSDATE.
+- Extracted: **2026-09-25 00:09 UTC**; query window: trailing 12 months from the database SYSDATE.
 - Route: read-only `appsro` on the Active Data Guard standby (the operator's own
   access route; credentials via environment or ACCESS_EBS_HOME notes — never committed).
 - Timeout/error queries degrade to '—' here and are listed in the cache with their
@@ -79,4 +112,4 @@
 - Pinned by validate-repo.sh **Check 81** (`--check` byte-verify from the committed
   cache). Refresh cadence: monthly, or before any calibration decision.
 
-*Generated 2026-09-24 23:48 UTC by production-volume-of-record.py — do not hand-edit.*
+*Generated 2026-09-25 00:09 UTC by production-volume-of-record.py — do not hand-edit.*

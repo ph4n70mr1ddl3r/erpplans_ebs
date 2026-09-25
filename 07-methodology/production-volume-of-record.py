@@ -17,7 +17,7 @@ notes (ACCESS_EBS_HOME/access.txt, default ~/access_ebs/access.txt) — the
 fifty-fifth-wave rule that retired the hardcoded VM password, applied to the
 database route.
 
-This instrument changes NO model-company canon. §4 of the register is the
+This instrument changes NO model-company canon. §6 of the register is the
 calibration surface: every canon-vs-actual delta is an explicit decision (the
 W5580 governance, executive direction), never an automatic re-base.
 
@@ -88,7 +88,7 @@ def connect():
 # ---------------------------------------------------------------- query set
 # Each query is cheap (12-month windows / small tables) and read-only. A query
 # that times out or errors degrades to status "timeout"/"error" — the register
-# renders it as unavailable and lists it in §6; --check stays deterministic.
+# renders it as unavailable and lists it in §8; --check stays deterministic.
 
 QUERIES = [
     ("pos_trx_12m", "POS transactions (headers), trailing 12 mo",
@@ -135,6 +135,18 @@ QUERIES = [
      "FROM mtl_system_items_b i, mtl_item_catalog_groups_b g "
      "WHERE i.item_catalog_group_id = g.item_catalog_group_id "
      "GROUP BY g.segment1, g.description ORDER BY n DESC FETCH FIRST 12 ROWS ONLY"),
+    ("store_pos_90d", "POS transactions per store, last 90 days",
+     "SELECT store_id, COUNT(*) FROM osipos.osipos_trx_header WHERE trx_date >= TRUNC(SYSDATE)-90 GROUP BY store_id ORDER BY 1"),
+    ("stroo_by_source_12m", "STROO transfer lines by source org, trailing 12 mo",
+     "SELECT l.ship_from_org_id, COUNT(*) FROM oe_order_lines_all l, oe_order_headers_all h "
+     "WHERE l.header_id = h.header_id AND h.order_type_id IN "
+     "(SELECT transaction_type_id FROM oe_transaction_types_tl WHERE name LIKE 'STROO%') "
+     "AND l.creation_date >= ADD_MONTHS(SYSDATE,-12) GROUP BY l.ship_from_org_id ORDER BY 1"),
+    ("rcv_by_org_12m", "Receipt lines by receiving org, trailing 12 mo",
+     "SELECT organization_id, COUNT(*) FROM rcv_transactions WHERE transaction_date >= ADD_MONTHS(SYSDATE,-12) "
+     "GROUP BY organization_id ORDER BY 1"),
+    ("org_codes", "Inventory-org code map",
+     "SELECT organization_id, organization_code FROM org_organization_definitions"),
 ]
 
 # ---------------------------------------------------------------- canon
@@ -182,7 +194,7 @@ def render(cache):
       f" (`production-volume-of-record-cache.json`) and byte-compared, so it cannot drift from its"
       f" extraction of record. The instrument carries **no credentials** — they come from the"
       f" environment or the operator's own access notes outside this repository. This register"
-      f" changes **no** model-company canon: every §4 delta is an explicit decision (W5580"
+      f" changes **no** model-company canon: every §6 delta is an explicit decision (W5580"
       f" governance, executive direction), never an automatic re-base.")
     A("")
     A("## §1 Operating volumes — trailing 12 months, measured live")
@@ -222,8 +234,97 @@ def render(cache):
           "unused — the operator's item taxonomy, if any, lives in item categories)")
     else:
         A("- Top item catalog groups: — (unavailable this run)")
+
+    # ---- segmentation (§4/§5): deterministic stats over the cached distributions
+    def f1(x):
+        return f"{x:,.1f}" if x is not None else "—"
+
+    def _dist(key):
+        e = m.get(key, {})
+        return [(int(r[0]), int(r[1])) for r in (e.get("value") or [])] if e.get("status") == "ok" else None
+
+    _codes = m.get("org_codes", {}).get("value") or []
+    org_codes = {int(k): v for k, v in _codes} if _codes else {}
+
+    def _label(org):
+        return f"{org_codes.get(org, 'org ' + str(org))} ({org})"
+
+    store = _dist("store_pos_90d")
     A("")
-    A("## §4 Calibration surface — model-company canon vs production actual")
+    A("## §4 Store size segments — POS-measured, last 90 days")
+    A("")
+    if store:
+        vals = sorted(v for _, v in store)
+        n = len(vals)
+        p33, p67 = vals[max(0, int(round(0.33 * n)) - 1)], vals[min(n - 1, int(round(0.67 * n)) - 1)]
+        big = [(o, v) for o, v in store if v >= p67]
+        med = [(o, v) for o, v in store if p33 <= v < p67]
+        sml = [(o, v) for o, v in store if v < p33]
+        tot = sum(vals)
+        vmax, vmin = max(vals), min(vals)
+
+        def band(name, rows):
+            k = len(rows)
+            tv = sum(v for _, v in rows)
+            share = tv / tot * 100.0 if tot else 0.0
+            return (f"| {name} | {k} | {k / n * 100:.0f}% | {f1(tv / k / 90.0)} | "
+                    f"{_fmt(tv)} | {share:.0f}% |")
+
+        A(f"Segmentation of the {n} POS-posting stores by transactions per store per day "
+          f"(90-day basis; tercile cuts at {f1(p33 / 90.0)} and {f1(p67 / 90.0)} trx/day):")
+        A("")
+        A("| Segment | Stores | Store share | Mean trx/store/day | 90-day volume | Volume share |")
+        A("|---|---|---|---|---|---|")
+        A(band("Big", big))
+        A(band("Medium", med))
+        A(band("Small", sml))
+        A("")
+        A(f"Largest store: {_label(max(store, key=lambda r: r[1])[0])} at "
+          f"{f1(vmax / 90.0)} trx/day; smallest: {_label(min(store, key=lambda r: r[1])[0])} at "
+          f"{f1(vmin / 90.0)} — a {vmax // max(1, vmin)}x spread the uniform per-store "
+          "model-company canon does not capture.")
+    else:
+        A("— store distribution unavailable this run.")
+
+    stroo = _dist("stroo_by_source_12m")
+    rcv = _dist("rcv_by_org_12m")
+    A("")
+    A("## §5 Distribution-network tiers — STROO outbound, trailing 12 months")
+    A("")
+    if stroo:
+        tot = sum(v for _, v in stroo)
+        hubs = [(o, v) for o, v in stroo if v >= tot * 0.05]
+        reg = [(o, v) for o, v in stroo if tot * 0.01 <= v < tot * 0.05]
+        sat = [(o, v) for o, v in stroo if v < tot * 0.01]
+
+        def tier(name, rows, cut):
+            k = len(rows)
+            tv = sum(v for _, v in rows)
+            share = tv / tot * 100.0 if tot else 0.0
+            names = ", ".join(_label(o) for o, _ in rows[:6]) + (", …" if k > 6 else "")
+            return (f"| {name} | {k} | {share:.0f}% | {f1(tv / 12.0)} | {cut} | {names} |")
+
+        A("Tiering the network by each org's share of outbound transfer lines "
+          "(hub ≥5%, regional 1–5%, satellite <1%):")
+        A("")
+        A("| Tier | Orgs | Line share | Lines/month | Cut | Members (top) |")
+        A("|---|---|---|---|---|---|")
+        A(tier("National hubs", hubs, "≥5% of lines"))
+        A(tier("Regional DCs", reg, "1–5%"))
+        A(tier("Satellite / store-attached", sat, "<1%"))
+        if rcv and tot and store:
+            store_ids = {o for o, _ in store}
+            rcv_store = sum(v for o, v in rcv if o in store_ids)
+            rcv_tot = sum(v for _, v in rcv)
+            A("")
+            A(f"Inbound note: {rcv_store / rcv_tot * 100:.0f}% of receipt lines land "
+              f"directly at POS-posting stores (vendor direct-to-store delivery), not via "
+              f"the DC network — the operator runs a mixed inbound model, which the model "
+              "company's replenishment design should reflect.")
+    else:
+        A("— transfer-source distribution unavailable this run.")
+    A("")
+    A("## §6 Calibration surface — model-company canon vs production actual")
     A("")
     A("| Parameter | Model-company canon (source) | Production actual | Reading |")
     A("|---|---|---|---|")
@@ -235,9 +336,6 @@ def render(cache):
     pos, stores = num("pos_trx_12m"), num("pos_stores_12m")
     per_store_day = (pos / 12.0 / 30.44 / stores) if (pos and stores) else None
     po, sto, cm = num("po_docs_12m"), num("sto_docs_12m"), num("ar_cm_12m")
-
-    def f1(x):
-        return f"{x:,.1f}" if x is not None else "—"
 
     A("| Stores | 200 (root README; data-volumes §1.1 mirrors the operator) | "
       f"{val('pos_stores_12m')} POS-active (§2 inventory orgs {val('inv_orgs')}) | "
@@ -258,7 +356,7 @@ def render(cache):
     A(f"| Suppliers on the master | — | {val('suppliers_total')} total / {val('suppliers_active')} active | NEW BASIS — adopt as the supplier-master scale when the P2P docs are next revised |")
     A(f"| EBS application users | — | {val('users_active')} active / {val('users_30d')} 30-day logins | NEW BASIS — the licensing-BOM user driver grounds here |")
     A("")
-    A("## §5 Decision register")
+    A("## §7 Decision register")
     A("")
     A("1. **Store-count basis** — one number of record for the mirrored estate (the §1.1")
     A("   calibration used 171; the capability audit says ~232; §2 is the live POS-active")
@@ -276,8 +374,17 @@ def render(cache):
     A("5. **Role-load reliability** — the load model's cadence layer graduates from prose")
     A("   parsing (53% coverage) to this register: per-workflow-event cadences ground on the")
     A("   measured 12-month volumes above before any headcount optimization is taken.")
+    A("6. **Store segmentation** — adopt the measured size segments (§4) for the model")
+    A("   company's store estate: a big/medium/small mix with per-segment POS volumes")
+    A("   replaces the uniform 200-store canon, driving differentiated staffing per segment")
+    A("   (the TO's flat 29/store) — the single highest-leverage headcount insight in this")
+    A("   register.")
+    A("7. **Distribution tiers** — re-cut the model company's 4-DC design into the measured")
+    A("   network tiers (§5: national hubs / regional / satellite) with per-tier outbound")
+    A("   volumes, and reflect the mixed inbound model (§5 inbound note) in the")
+    A("   replenishment and P2P workflow design.")
     A("")
-    A("## §6 Method & freshness")
+    A("## §8 Method & freshness")
     A("")
     A(f"- Extracted: **{ts}**; query window: trailing 12 months from the database SYSDATE.")
     A("- Route: read-only `appsro` on the Active Data Guard standby (the operator's own")
@@ -296,12 +403,23 @@ def refresh():
     con = connect()
     cur = con.cursor()
     metrics = {}
+    multi_row = {"categories_top", "store_pos_90d", "stroo_by_source_12m",
+                 "rcv_by_org_12m", "org_codes"}
     for key, _label, sql in QUERIES:
         entry = {"status": "ok", "value": None}
         try:
             cur.execute(sql)
             rows = cur.fetchall()
-            entry["value"] = [[r[0], int(r[1])] for r in rows] if key == "categories_top" else int(rows[0][0])
+            if key in multi_row:
+                if key == "org_codes":
+                    entry["value"] = [[int(r[0]), str(r[1])] for r in rows if r[0] is not None]
+                elif key == "categories_top":
+                    entry["value"] = [[str(r[0]), str(r[1]), int(r[2])] for r in rows]
+                else:
+                    entry["value"] = [[int(r[0]), int(r[1])] for r in rows
+                                      if r[0] is not None and r[1] is not None]
+            else:
+                entry["value"] = int(rows[0][0])
         except Exception as e:  # noqa: BLE001 — degrade, never abort the register
             entry = {"status": "error", "value": None, "detail": str(e).split("\n")[0][:200]}
         metrics[key] = entry
