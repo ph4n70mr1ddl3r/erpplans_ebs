@@ -1,5 +1,5 @@
 {
-  "provenance": "Machine twin of the Online Channel & Capability Registry (01-model-company/channel-capability-registry.md) for the man-hours roll-up (07-methodology/manhours-rollup.py): every registry row at a DISABLED state lists the workflows/process areas/value streams whose ENTIRE effort is dormant (frozen as designed capacity, excluded from live totals). Curated, not parsed — a Vehicles cell may cite support flows or mixed live/dormant estates that must NOT be marked (see exclusions). Updated in the same change as any registry row flip (W5580; registry rule 4).",
+  "provenance": "Machine twin of the Online Channel & Capability Registry (01-model-company/channel-capability-registry.md) for the man-hours roll-up (07-methodology/manhours-rollup.py): every registry row at a DISABLED state lists the workflows/process areas/value streams whose ENTIRE effort is dormant (frozen as designed capacity, excluded from live totals). Curated, not parsed — a Vehicles cell may cite support flows or mixed live/dormant estates that must NOT be marked (see exclusions). Updated in the same change as any registry row flip (W5580; registry rule 4). The sourcing_register_deferrals section is the second half of the twin: the capability-sourcing register §4's 'squad deferred — prepared' amendments hold entire value-stream estates at designed capacity exactly as the registry's DISABLED — rows do, but they are sourcing-register rows (W5515's register), not registry rows — so their dormant sets live here under the same discipline (updated in the same change as any §4 posture flip; the roll-up folds them into the dormant classification and validate-repo.sh Check 83 re-derives the registry↔register and sourcing-seam mirrors every run). Found by the 2026-09-25 (bt) ninth review-everything pass: VS-60/VS-74/VS-77 carried the guarded 'held at designed capacity' banners while the roll-up priced them live.",
   "attribution_note": "A workflow mapped to several capabilities (e.g. W829 under CAP-F04 and CAP-F09) counts once in the live/dormant headline totals and in each capability's own row.",
   "exclusions": {
     "W247": "dual-mode BOPIS staging/queue workflow (Smart Locker OR Expedited Pick-up Counter; trigger = every BOPIS order per W11) — its locker branch is dormant with CAP-F02, its counter-handoff branch is the live CAP-F01 path; the workflow stays live",
@@ -10,6 +10,36 @@
     "PA-16.1/PA-16.2/PA-16.3": "CAP-B02's 'AR & Credit (VS-16.3)' citation is ambiguous and the PA-16 estate serves retail (consumer credit scoring, installments, payment settlement); stays live pending explicit direction",
     "support workflows": "W98 delivery-failure branches, W591 SLA monitors, W12B returns logistics, the E-10 custody chain (VS-142/VS-56): prepared-support per registry §4 — their dormant branches execute only at enablement; the workflows stay live"
   },
+  "sourcing_register_deferrals": {
+    "provenance": "Capability-sourcing register §4 (07-methodology/capability-sourcing-and-engineering-model.md) rows whose posture cell reads 'Build — squad deferred — prepared': the sourcing-side dormant estates. Distinct from the registry rows above in trigger only — a deferral re-activates on its sourcing-row stand-up trigger (W5580 carries the state change either way) — and identical in man-hours treatment: designed capacity, never live load. The exempt_value_streams lists are the adjudicated seams (e.g. the (ad) consumer-side bulky ruling): a VS exempted there stays live and must not be bannered dormant (audit-model-docs' tps_project_estate_hits protects the VS-143 seam).",
+    "deferrals": [
+      {
+        "id": "TPS",
+        "state": "squad deferred — prepared",
+        "name": "Trade & Project Services platform (project-side workload)",
+        "since": "2026-09-23 (ad)",
+        "dormancy_source": "registry CAP-B01 — the estate's B2B trade/project demand base is the disabled — prepared Trade & Account Management department; the sourcing row's stand-up trigger is CAP-B01 re-enablement",
+        "dormant_value_streams": [
+          "VS-74",
+          "VS-77"
+        ],
+        "exempt_value_streams": [
+          "VS-143"
+        ]
+      },
+      {
+        "id": "OMO",
+        "state": "squad deferred — prepared",
+        "name": "In-house Order Orchestration product (multi-source routing estate)",
+        "since": "2026-09-23 (ah)",
+        "dormancy_source": "registry CAP-F01 posture — BOPIS store pickup is the only enabled online fulfillment origin, so order routing is deterministic and the multi-source orchestration design never executes; the sourcing row's stand-up trigger is any second fulfillment origin (CAP-F04–F09) or marketplace channel (CAP-C03/C04) enabled",
+        "dormant_value_streams": [
+          "VS-60"
+        ],
+        "exempt_value_streams": []
+      }
+    ]
+  },
   "capabilities": [
     {
       "id": "CAP-D01",
@@ -18,7 +48,9 @@
       "since": "2026-09-25 (bm)",
       "dormant_value_streams": [],
       "dormant_process_areas": [],
-      "dormant_workflows": ["W1454"]
+      "dormant_workflows": [
+        "W1454"
+      ]
     },
     {
       "id": "CAP-C02",
@@ -27,14 +59,29 @@
       "since": "2026-09-25 (bo)",
       "dormant_value_streams": [],
       "dormant_process_areas": [],
-      "dormant_workflows": ["W2646", "W2647", "W2648", "W2649", "W2650", "W2651", "W2652", "W2653", "W5553", "W2657", "W2663", "W2665"]
+      "dormant_workflows": [
+        "W2646",
+        "W2647",
+        "W2648",
+        "W2649",
+        "W2650",
+        "W2651",
+        "W2652",
+        "W2653",
+        "W5553",
+        "W2657",
+        "W2663",
+        "W2665"
+      ]
     },
     {
       "id": "CAP-F02",
       "state": "DISABLED — PREPARED",
       "name": "Smart-locker pickup (BOPIS mode)",
       "since": "2026-09-25 (bo)",
-      "dormant_value_streams": ["VS-164"],
+      "dormant_value_streams": [
+        "VS-164"
+      ],
       "dormant_process_areas": [],
       "dormant_workflows": []
     },
@@ -43,8 +90,12 @@
       "state": "DISABLED — PREPARED",
       "name": "Third-party marketplaces",
       "since": "2026-09-23 (t)/(u) pickup-only mandate",
-      "dormant_value_streams": ["VS-65"],
-      "dormant_process_areas": ["PA-10.3"],
+      "dormant_value_streams": [
+        "VS-65"
+      ],
+      "dormant_process_areas": [
+        "PA-10.3"
+      ],
       "dormant_workflows": []
     },
     {
@@ -53,7 +104,9 @@
       "name": "Social-commerce checkout",
       "since": "2026-09-23 (t)/(u) pickup-only mandate",
       "dormant_value_streams": [],
-      "dormant_process_areas": ["PA-10.3"],
+      "dormant_process_areas": [
+        "PA-10.3"
+      ],
       "dormant_workflows": []
     },
     {
@@ -63,7 +116,13 @@
       "since": "2026-09-23 (d) pickup-only mandate",
       "dormant_value_streams": [],
       "dormant_process_areas": [],
-      "dormant_workflows": ["W19", "W592", "W829", "W899", "W1013"]
+      "dormant_workflows": [
+        "W19",
+        "W592",
+        "W829",
+        "W899",
+        "W1013"
+      ]
     },
     {
       "id": "CAP-F05",
@@ -72,7 +131,10 @@
       "since": "2026-09-23 (d) pickup-only mandate",
       "dormant_value_streams": [],
       "dormant_process_areas": [],
-      "dormant_workflows": ["W19B", "W1196"]
+      "dormant_workflows": [
+        "W19B",
+        "W1196"
+      ]
     },
     {
       "id": "CAP-F06",
@@ -81,7 +143,10 @@
       "since": "2026-09-23 (d) pickup-only mandate",
       "dormant_value_streams": [],
       "dormant_process_areas": [],
-      "dormant_workflows": ["W1155", "W1234"]
+      "dormant_workflows": [
+        "W1155",
+        "W1234"
+      ]
     },
     {
       "id": "CAP-F07",
@@ -90,16 +155,22 @@
       "since": "2026-09-23 (d) pickup-only mandate",
       "dormant_value_streams": [],
       "dormant_process_areas": [],
-      "dormant_workflows": ["W246"]
+      "dormant_workflows": [
+        "W246"
+      ]
     },
     {
       "id": "CAP-F08",
       "state": "DISABLED — PREPARED",
       "name": "Dark-store quick-commerce",
       "since": "2026-09-23 (d) pickup-only mandate",
-      "dormant_value_streams": ["VS-93"],
+      "dormant_value_streams": [
+        "VS-93"
+      ],
       "dormant_process_areas": [],
-      "dormant_workflows": ["W210"]
+      "dormant_workflows": [
+        "W210"
+      ]
     },
     {
       "id": "CAP-F09",
@@ -108,7 +179,10 @@
       "since": "2026-09-23 (d) pickup-only mandate",
       "dormant_value_streams": [],
       "dormant_process_areas": [],
-      "dormant_workflows": ["W829", "W1195"]
+      "dormant_workflows": [
+        "W829",
+        "W1195"
+      ]
     },
     {
       "id": "CAP-T03",
@@ -124,8 +198,13 @@
       "state": "DISABLED — PREPARED",
       "name": "Trade & Account Management department",
       "since": "2026-09-23 (x)",
-      "dormant_value_streams": ["VS-107"],
-      "dormant_process_areas": ["PA-11.1", "PA-11.2"],
+      "dormant_value_streams": [
+        "VS-107"
+      ],
+      "dormant_process_areas": [
+        "PA-11.1",
+        "PA-11.2"
+      ],
       "dormant_workflows": []
     },
     {
@@ -133,7 +212,9 @@
       "state": "DISABLED — PREPARED",
       "name": "Trade credit accounts (B2B AR)",
       "since": "2026-09-23 (x)",
-      "dormant_value_streams": ["VS-68"],
+      "dormant_value_streams": [
+        "VS-68"
+      ],
       "dormant_process_areas": [],
       "dormant_workflows": []
     },
@@ -151,7 +232,9 @@
       "state": "DISABLED — PREPARED",
       "name": "Trade Professional membership program (Trade Pro)",
       "since": "2026-09-23 (x)",
-      "dormant_value_streams": ["VS-43"],
+      "dormant_value_streams": [
+        "VS-43"
+      ],
       "dormant_process_areas": [],
       "dormant_workflows": []
     }

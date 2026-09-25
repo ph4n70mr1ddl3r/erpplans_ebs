@@ -15251,27 +15251,27 @@ file,workflow,role,monthly_hours_low,monthly_hours_high,effort_steps,automated_s
 01-model-company/workflows/VS-59-store-closure-decommissioning/PA-59.3-staff-redeployment-post-closure.md,W2284,VP Store Operations,0.00,0.00,0,0,0,0,8.0,15.0,,live,
 01-model-company/workflows/VS-59-store-closure-decommissioning/PA-59.3-staff-redeployment-post-closure.md,W2285,COO,0.00,0.00,0,0,0,0,3.0,4.0,,live,
 01-model-company/workflows/VS-59-store-closure-decommissioning/PA-59.3-staff-redeployment-post-closure.md,W2285,Closure PM,0.00,0.00,0,0,0,0,3.0,4.0,,live,
-01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.1-intelligent-order-routing.md,W2287,System,0.00,0.00,0,1,0,0,0.0,0.0,,live,
-01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.1-intelligent-order-routing.md,W2289,Vendor,0.00,0.00,0,0,0,0,4.0,9.0,,live,
-01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.1-intelligent-order-routing.md,W2290,System,0.00,0.00,0,1,0,0,0.0,0.0,,live,
-01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.1-intelligent-order-routing.md,W2291,Ecom Ops Manager,0.00,0.00,0,0,0,0,0.0,0.0,0.25-0.50h/exception,live,
-01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.1-intelligent-order-routing.md,W2292,Ecom Ops Manager,21.70,43.40,1,0,0,0,0.0,0.0,,live,
-01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.1-intelligent-order-routing.md,W2293,Logistics Finance Analyst,4.00,6.00,1,0,0,0,0.0,0.0,,live,
-01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.2-split-order-fulfillment.md,W2294,System,0.00,0.00,0,1,0,0,0.0,0.0,,live,
-01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.2-split-order-fulfillment.md,W2296,System,0.00,0.00,0,1,0,0,0.0,0.0,,live,
-01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.2-split-order-fulfillment.md,W2300,Ecom Quality Coord,17.32,25.98,1,0,0,0,0.0,0.0,,live,
-01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.2-split-order-fulfillment.md,W2301,3PL,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.2-split-order-fulfillment.md,W2301,Store Staff,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.3-fulfillment-performance-analytics.md,W2302,Ecom Ops Manager,47.40,71.10,1,0,0,0,0.0,0.0,,live,
-01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.3-fulfillment-performance-analytics.md,W2303,Analytics Manager,4.00,6.00,1,0,0,0,0.0,0.0,,live,
-01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.3-fulfillment-performance-analytics.md,W2304,Data Science Lead,0.00,0.00,0,0,0,0,8.0,15.0,,live,
-01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.3-fulfillment-performance-analytics.md,W2305,CX Manager,4.00,6.00,1,0,0,0,0.0,0.0,,live,
-01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.3-fulfillment-performance-analytics.md,W2307,VP Supply Chain,0.00,0.00,0,0,0,0,5.0,8.0,,live,
-01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.3-fulfillment-performance-analytics.md,W2308,Returns Manager,4.00,6.00,1,0,0,0,0.0,0.0,,live,
-01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.3-fulfillment-performance-analytics.md,W2309,CFO,0.00,0.00,0,0,0,0,5.0,8.0,,live,
-01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.3-fulfillment-performance-analytics.md,W2309,CIO,0.00,0.00,0,0,0,0,5.0,8.0,,live,
-01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.3-fulfillment-performance-analytics.md,W2309,VP Marketing,0.00,0.00,0,0,0,0,5.0,8.0,,live,
-01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.3-fulfillment-performance-analytics.md,W2309,VP Supply Chain,0.00,0.00,0,0,0,0,5.0,8.0,,live,
+01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.1-intelligent-order-routing.md,W2287,System,0.00,0.00,0,1,0,0,0.0,0.0,,dormant,OMO
+01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.1-intelligent-order-routing.md,W2289,Vendor,0.00,0.00,0,0,0,0,4.0,9.0,,dormant,OMO
+01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.1-intelligent-order-routing.md,W2290,System,0.00,0.00,0,1,0,0,0.0,0.0,,dormant,OMO
+01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.1-intelligent-order-routing.md,W2291,Ecom Ops Manager,0.00,0.00,0,0,0,0,0.0,0.0,0.25-0.50h/exception,dormant,OMO
+01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.1-intelligent-order-routing.md,W2292,Ecom Ops Manager,21.70,43.40,1,0,0,0,0.0,0.0,,dormant,OMO
+01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.1-intelligent-order-routing.md,W2293,Logistics Finance Analyst,4.00,6.00,1,0,0,0,0.0,0.0,,dormant,OMO
+01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.2-split-order-fulfillment.md,W2294,System,0.00,0.00,0,1,0,0,0.0,0.0,,dormant,OMO
+01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.2-split-order-fulfillment.md,W2296,System,0.00,0.00,0,1,0,0,0.0,0.0,,dormant,OMO
+01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.2-split-order-fulfillment.md,W2300,Ecom Quality Coord,17.32,25.98,1,0,0,0,0.0,0.0,,dormant,OMO
+01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.2-split-order-fulfillment.md,W2301,3PL,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,OMO
+01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.2-split-order-fulfillment.md,W2301,Store Staff,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,OMO
+01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.3-fulfillment-performance-analytics.md,W2302,Ecom Ops Manager,47.40,71.10,1,0,0,0,0.0,0.0,,dormant,OMO
+01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.3-fulfillment-performance-analytics.md,W2303,Analytics Manager,4.00,6.00,1,0,0,0,0.0,0.0,,dormant,OMO
+01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.3-fulfillment-performance-analytics.md,W2304,Data Science Lead,0.00,0.00,0,0,0,0,8.0,15.0,,dormant,OMO
+01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.3-fulfillment-performance-analytics.md,W2305,CX Manager,4.00,6.00,1,0,0,0,0.0,0.0,,dormant,OMO
+01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.3-fulfillment-performance-analytics.md,W2307,VP Supply Chain,0.00,0.00,0,0,0,0,5.0,8.0,,dormant,OMO
+01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.3-fulfillment-performance-analytics.md,W2308,Returns Manager,4.00,6.00,1,0,0,0,0.0,0.0,,dormant,OMO
+01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.3-fulfillment-performance-analytics.md,W2309,CFO,0.00,0.00,0,0,0,0,5.0,8.0,,dormant,OMO
+01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.3-fulfillment-performance-analytics.md,W2309,CIO,0.00,0.00,0,0,0,0,5.0,8.0,,dormant,OMO
+01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.3-fulfillment-performance-analytics.md,W2309,VP Marketing,0.00,0.00,0,0,0,0,5.0,8.0,,dormant,OMO
+01-model-company/workflows/VS-60-omnichannel-order-routing/PA-60.3-fulfillment-performance-analytics.md,W2309,VP Supply Chain,0.00,0.00,0,0,0,0,5.0,8.0,,dormant,OMO
 01-model-company/workflows/VS-61-fuel-fleet-cost-management/PA-61.1-fuel-procurement-consumption.md,W2310,Finance,6.00,9.00,1,0,0,0,0.0,0.0,,live,
 01-model-company/workflows/VS-61-fuel-fleet-cost-management/PA-61.1-fuel-procurement-consumption.md,W2310,Logistics Manager,6.00,9.00,1,0,0,0,0.0,0.0,,live,
 01-model-company/workflows/VS-61-fuel-fleet-cost-management/PA-61.1-fuel-procurement-consumption.md,W2311,Logistics Finance Analyst,11.33,18.32,1,0,0,0,0.0,0.0,,live,
@@ -15825,55 +15825,55 @@ file,workflow,role,monthly_hours_low,monthly_hours_high,effort_steps,automated_s
 01-model-company/workflows/VS-73-store-waste-circular-economy/PA-73.3-circular-economy-recycling-analytics.md,W2621,External Consultant,0.00,0.00,0,0,0,0,60.0,90.0,,live,
 01-model-company/workflows/VS-73-store-waste-circular-economy/PA-73.3-circular-economy-recycling-analytics.md,W2621,Finance,0.00,0.00,0,0,0,0,30.0,30.0,,live,
 01-model-company/workflows/VS-73-store-waste-circular-economy/PA-73.3-circular-economy-recycling-analytics.md,W2621,Sustainability Coordinator,0.00,0.00,0,0,0,0,270.0,480.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.1-jobsite-delivery-planning-scheduling.md,W2624,3PL Partner,0.00,0.00,0,0,0,0,1.0,1.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.1-jobsite-delivery-planning-scheduling.md,W2624,Logistics Coordinator,0.00,0.00,0,0,0,0,1.0,1.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.1-jobsite-delivery-planning-scheduling.md,W2625,Logistics Coordinator,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.1-jobsite-delivery-planning-scheduling.md,W2625,Supply Planning,0.00,0.00,0,0,0,0,1.0,1.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.1-jobsite-delivery-planning-scheduling.md,W2627,Contractor,0.00,0.00,0,0,0,0,1.0,2.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.1-jobsite-delivery-planning-scheduling.md,W2627,Driver,0.00,0.00,0,0,0,0,0.0,0.0,0.25-0.25h/delivery,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.1-jobsite-delivery-planning-scheduling.md,W2627,Logistics Coordinator,0.00,0.00,0,0,0,0,1.0,2.0,0.25-0.25h/delivery,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.1-jobsite-delivery-planning-scheduling.md,W2628,Logistics Coordinator,0.00,0.00,0,0,0,0,1.0,1.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.1-jobsite-delivery-planning-scheduling.md,W2629,3PL,0.00,0.00,0,0,0,0,1.0,2.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.1-jobsite-delivery-planning-scheduling.md,W2629,Logistics Coordinator,0.00,0.00,0,0,0,0,1.0,2.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2631,LP,0.00,0.00,0,0,0,0,2.0,5.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2631,Logistics Coord,0.00,0.00,0,0,0,0,2.0,5.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2631,Logistics Coordinator,0.00,0.00,0,0,0,0,1.0,2.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2631,Trade Sales Rep,0.00,0.00,0,0,0,0,2.0,5.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2632,Driver,0.00,0.00,0,0,0,0,1.0,3.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2632,Finance,0.00,0.00,0,0,0,0,1.0,2.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2632,Logistics Coordinator,0.00,0.00,0,0,0,0,1.0,3.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2632,Receiving Clerk,0.00,0.00,0,0,0,0,1.0,2.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2633,Driver,0.00,0.00,0,1,0,0,0.0,0.0,0.17-0.17h/delivery,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2633,Finance,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2634,Safety Officer,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2635,Finance,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2635,Logistics,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2635,Logistics Coordinator,0.00,0.00,0,0,0,0,1.0,1.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2636,Category Manager,0.00,0.00,0,0,0,0,2.0,5.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2636,Quality Inspector,0.00,0.00,0,0,0,0,1.0,2.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2636,Trade Sales Rep,0.00,0.00,0,0,0,0,3.0,7.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2637,Driver,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2637,Logistics Coordinator,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2637,System,0.00,0.00,0,1,0,0,0.0,0.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2638,Logistics Analyst,0.00,0.00,0,0,0,0,2.0,3.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2638,Logistics Manager,8.00,8.00,1,0,0,0,0.0,0.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2639,Finance Analyst,0.00,0.00,0,0,0,0,2.0,3.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2639,Finance Controller,2.67,2.67,1,0,0,0,0.0,0.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2639,Logistics Manager,0.00,0.00,0,0,0,0,1.0,1.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2640,Customer Experience,0.00,0.00,0,1,0,0,0.0,0.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2640,Logistics Manager,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2640,Trade Sales Manager,5.33,8.00,1,0,0,0,0.0,0.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2641,Logistics Analyst,0.00,0.00,0,0,0,0,2.0,2.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2641,Logistics Manager,0.00,0.00,0,0,0,0,2.0,4.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2642,Logistics Manager,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2642,Supply Planning,0.00,0.00,0,0,0,0,1.0,1.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2642,Trade Sales Manager,0.00,0.00,0,0,0,0,2.0,3.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2642,Trade Sales Rep,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2643,Logistics Coordinator,0.00,0.00,0,0,0,0,2.0,3.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2643,Logistics Manager,2.67,2.67,1,0,0,0,0.0,0.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2644,Logistics Analyst,0.00,0.00,0,0,0,0,1.0,1.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2644,VP Supply Chain,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2645,VP Supply Chain,0.00,0.00,0,0,0,0,3.0,4.0,,live,
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.1-jobsite-delivery-planning-scheduling.md,W2624,3PL Partner,0.00,0.00,0,0,0,0,1.0,1.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.1-jobsite-delivery-planning-scheduling.md,W2624,Logistics Coordinator,0.00,0.00,0,0,0,0,1.0,1.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.1-jobsite-delivery-planning-scheduling.md,W2625,Logistics Coordinator,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.1-jobsite-delivery-planning-scheduling.md,W2625,Supply Planning,0.00,0.00,0,0,0,0,1.0,1.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.1-jobsite-delivery-planning-scheduling.md,W2627,Contractor,0.00,0.00,0,0,0,0,1.0,2.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.1-jobsite-delivery-planning-scheduling.md,W2627,Driver,0.00,0.00,0,0,0,0,0.0,0.0,0.25-0.25h/delivery,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.1-jobsite-delivery-planning-scheduling.md,W2627,Logistics Coordinator,0.00,0.00,0,0,0,0,1.0,2.0,0.25-0.25h/delivery,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.1-jobsite-delivery-planning-scheduling.md,W2628,Logistics Coordinator,0.00,0.00,0,0,0,0,1.0,1.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.1-jobsite-delivery-planning-scheduling.md,W2629,3PL,0.00,0.00,0,0,0,0,1.0,2.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.1-jobsite-delivery-planning-scheduling.md,W2629,Logistics Coordinator,0.00,0.00,0,0,0,0,1.0,2.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2631,LP,0.00,0.00,0,0,0,0,2.0,5.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2631,Logistics Coord,0.00,0.00,0,0,0,0,2.0,5.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2631,Logistics Coordinator,0.00,0.00,0,0,0,0,1.0,2.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2631,Trade Sales Rep,0.00,0.00,0,0,0,0,2.0,5.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2632,Driver,0.00,0.00,0,0,0,0,1.0,3.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2632,Finance,0.00,0.00,0,0,0,0,1.0,2.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2632,Logistics Coordinator,0.00,0.00,0,0,0,0,1.0,3.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2632,Receiving Clerk,0.00,0.00,0,0,0,0,1.0,2.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2633,Driver,0.00,0.00,0,1,0,0,0.0,0.0,0.17-0.17h/delivery,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2633,Finance,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2634,Safety Officer,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2635,Finance,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2635,Logistics,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2635,Logistics Coordinator,0.00,0.00,0,0,0,0,1.0,1.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2636,Category Manager,0.00,0.00,0,0,0,0,2.0,5.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2636,Quality Inspector,0.00,0.00,0,0,0,0,1.0,2.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2636,Trade Sales Rep,0.00,0.00,0,0,0,0,3.0,7.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2637,Driver,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2637,Logistics Coordinator,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.2-jobsite-delivery-execution-material-handling.md,W2637,System,0.00,0.00,0,1,0,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2638,Logistics Analyst,0.00,0.00,0,0,0,0,2.0,3.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2638,Logistics Manager,8.00,8.00,1,0,0,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2639,Finance Analyst,0.00,0.00,0,0,0,0,2.0,3.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2639,Finance Controller,2.67,2.67,1,0,0,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2639,Logistics Manager,0.00,0.00,0,0,0,0,1.0,1.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2640,Customer Experience,0.00,0.00,0,1,0,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2640,Logistics Manager,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2640,Trade Sales Manager,5.33,8.00,1,0,0,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2641,Logistics Analyst,0.00,0.00,0,0,0,0,2.0,2.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2641,Logistics Manager,0.00,0.00,0,0,0,0,2.0,4.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2642,Logistics Manager,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2642,Supply Planning,0.00,0.00,0,0,0,0,1.0,1.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2642,Trade Sales Manager,0.00,0.00,0,0,0,0,2.0,3.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2642,Trade Sales Rep,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2643,Logistics Coordinator,0.00,0.00,0,0,0,0,2.0,3.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2643,Logistics Manager,2.67,2.67,1,0,0,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2644,Logistics Analyst,0.00,0.00,0,0,0,0,1.0,1.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2644,VP Supply Chain,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-74-contractor-jobsite-delivery/PA-74.3-jobsite-delivery-performance-analytics.md,W2645,VP Supply Chain,0.00,0.00,0,0,0,0,3.0,4.0,,dormant,TPS
 01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2646,Digital Product Manager,13.33,26.67,1,0,0,2,0.0,0.0,,dormant,CAP-C02
 01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2646,IT Development,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,CAP-C02
 01-model-company/workflows/VS-75-digital-engagement-app/PA-75.1-mobile-app-product-feature-management.md,W2647,Digital Product Manager,11.85,12.85,2,0,1,0,0.0,0.0,,dormant,CAP-C02
@@ -16011,76 +16011,76 @@ file,workflow,role,monthly_hours_low,monthly_hours_high,effort_steps,automated_s
 01-model-company/workflows/VS-76-multi-region-lgu-compliance/PA-76.3-lgu-relationship-regulatory-analytics.md,W2692,Tax Accountant,0.00,0.00,0,0,0,0,30.0,60.0,,live,
 01-model-company/workflows/VS-76-multi-region-lgu-compliance/PA-76.3-lgu-relationship-regulatory-analytics.md,W2693,Legal Compliance Officer,0.00,0.00,0,0,0,0,2.0,2.0,,live,
 01-model-company/workflows/VS-76-multi-region-lgu-compliance/PA-76.3-lgu-relationship-regulatory-analytics.md,W2693,VP Legal,0.00,0.00,0,0,1,0,1.0,1.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2694,Contractor,0.00,0.00,0,0,0,0,2.0,5.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2694,Supply Planning,0.00,0.00,0,0,0,0,1.0,2.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2694,Trade Sales Manager,0.00,0.00,0,0,0,0,3.0,7.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2695,Category Manager,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2695,DC Ops,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2695,Supply Planner,0.00,0.00,0,0,0,0,1.0,1.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2696,Contractor,0.00,0.00,0,0,0,0,1.0,1.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2696,Supply Planning,0.00,0.00,0,0,0,0,1.0,1.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2696,Trade Sales Rep,0.00,0.00,0,0,0,0,1.0,1.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2697,Finance,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2697,Pricing Analyst,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2697,Trade Sales Manager,0.00,0.00,0,0,2,0,0.0,0.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2698,Category Manager,0.00,0.00,0,0,0,0,1.0,1.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2698,Procurement,0.00,0.00,0,0,0,0,1.0,1.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2698,Supply Planning Manager,0.00,0.00,0,0,0,0,2.0,3.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2699,Contractor,0.00,0.00,0,0,0,0,1.0,2.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2699,Supply Planning,0.00,0.00,0,0,0,0,1.0,1.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2699,Trade Sales Rep,0.00,0.00,0,0,0,0,2.0,3.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2700,Category Manager,0.00,0.00,0,0,0,0,1.0,2.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2700,Contractor,0.00,0.00,0,0,0,0,1.0,2.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2700,Quality,0.00,0.00,0,0,1,0,1.0,2.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2700,Trade Sales Rep,0.00,0.00,0,0,1,0,1.0,2.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2701,Credit Manager,0.00,0.00,0,0,2,0,0.0,0.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2701,Finance,0.00,0.00,0,0,2,0,0.0,0.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2701,Trade Sales Manager,0.00,0.00,0,0,2,0,0.0,0.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2703,Trade Sales Rep,0.00,0.00,0,0,0,0,1.0,1.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2704,Contractor,0.00,0.00,0,0,2,0,0.0,0.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2704,Trade Sales Rep,0.00,0.00,0,0,3,0,0.0,0.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2705,Contractor,0.00,0.00,0,0,0,0,1.0,1.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2705,Supply Planning,0.00,0.00,0,0,0,0,1.0,1.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2705,Trade Sales Rep,0.00,0.00,0,0,0,0,1.0,1.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2706,Contractor,0.00,0.00,0,0,0,0,1.0,2.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2706,Finance,0.00,0.00,0,0,0,0,1.0,1.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2706,Logistics,0.00,0.00,0,0,0,0,3.0,5.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2706,Receiving Clerk,0.00,0.00,0,0,0,0,3.0,5.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2706,Trade Sales Rep,0.00,0.00,0,0,0,0,2.0,3.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2707,DC Ops,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2707,Procurement,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2707,Procurement Manager,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2707,Supply Planning,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2707,Trade Sales Rep,0.00,0.00,0,0,0,1,0.0,0.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2708,Finance,0.00,0.00,0,0,0,0,1.0,2.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2708,Logistics Manager,0.00,0.00,0,0,1,0,0.2,0.2,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2708,Trade Sales Rep,0.00,0.00,0,0,0,0,1.2,2.2,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2709,Finance,0.00,0.00,0,0,0,0,1.0,1.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2709,Supply Planning,0.00,0.00,0,0,0,0,1.0,1.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2709,Trade Sales Manager,0.00,0.00,0,0,0,0,2.0,3.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2710,Category Manager,0.00,0.00,0,0,0,0,1.0,1.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2710,FP&A,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2710,Trade Sales Manager,0.00,0.00,0,0,1,0,2.0,3.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2711,Logistics Analyst,0.00,0.00,0,0,0,0,2.0,3.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2711,Trade Sales Manager,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2712,CFO,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2712,FP&A Manager,0.00,0.00,0,0,0,0,2.0,3.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2712,VP Merchandising,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2713,Finance Analyst,0.00,0.00,0,0,0,0,2.0,3.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2713,Finance Controller,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2713,Supply Planning Manager,0.00,0.00,0,0,0,0,1.0,1.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2713,Trade Sales Manager,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2714,CX Analyst,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2714,Trade Sales Manager,0.00,0.00,0,0,0,0,1.0,2.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2714,VP Merchandising,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2715,Category Manager,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2715,Sustainability Coordinator,0.00,0.00,0,0,3,0,0.0,0.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2715,Trade Sales Manager,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2716,Procurement,0.00,0.00,0,0,0,0,1.0,1.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2716,Supply Planning Manager,0.00,0.00,0,0,0,0,2.0,3.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2716,VP Supply Chain,0.00,0.00,0,0,1,0,0.0,0.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2717,FP&A,0.00,0.00,0,0,0,0,2.0,3.0,,live,
-01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2717,VP Merchandising,0.00,0.00,0,0,0,0,4.0,5.0,,live,
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2694,Contractor,0.00,0.00,0,0,0,0,2.0,5.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2694,Supply Planning,0.00,0.00,0,0,0,0,1.0,2.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2694,Trade Sales Manager,0.00,0.00,0,0,0,0,3.0,7.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2695,Category Manager,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2695,DC Ops,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2695,Supply Planner,0.00,0.00,0,0,0,0,1.0,1.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2696,Contractor,0.00,0.00,0,0,0,0,1.0,1.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2696,Supply Planning,0.00,0.00,0,0,0,0,1.0,1.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2696,Trade Sales Rep,0.00,0.00,0,0,0,0,1.0,1.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2697,Finance,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2697,Pricing Analyst,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2697,Trade Sales Manager,0.00,0.00,0,0,2,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2698,Category Manager,0.00,0.00,0,0,0,0,1.0,1.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2698,Procurement,0.00,0.00,0,0,0,0,1.0,1.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2698,Supply Planning Manager,0.00,0.00,0,0,0,0,2.0,3.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2699,Contractor,0.00,0.00,0,0,0,0,1.0,2.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2699,Supply Planning,0.00,0.00,0,0,0,0,1.0,1.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2699,Trade Sales Rep,0.00,0.00,0,0,0,0,2.0,3.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2700,Category Manager,0.00,0.00,0,0,0,0,1.0,2.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2700,Contractor,0.00,0.00,0,0,0,0,1.0,2.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2700,Quality,0.00,0.00,0,0,1,0,1.0,2.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2700,Trade Sales Rep,0.00,0.00,0,0,1,0,1.0,2.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2701,Credit Manager,0.00,0.00,0,0,2,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2701,Finance,0.00,0.00,0,0,2,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.1-project-material-planning-phasing.md,W2701,Trade Sales Manager,0.00,0.00,0,0,2,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2703,Trade Sales Rep,0.00,0.00,0,0,0,0,1.0,1.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2704,Contractor,0.00,0.00,0,0,2,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2704,Trade Sales Rep,0.00,0.00,0,0,3,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2705,Contractor,0.00,0.00,0,0,0,0,1.0,1.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2705,Supply Planning,0.00,0.00,0,0,0,0,1.0,1.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2705,Trade Sales Rep,0.00,0.00,0,0,0,0,1.0,1.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2706,Contractor,0.00,0.00,0,0,0,0,1.0,2.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2706,Finance,0.00,0.00,0,0,0,0,1.0,1.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2706,Logistics,0.00,0.00,0,0,0,0,3.0,5.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2706,Receiving Clerk,0.00,0.00,0,0,0,0,3.0,5.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2706,Trade Sales Rep,0.00,0.00,0,0,0,0,2.0,3.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2707,DC Ops,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2707,Procurement,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2707,Procurement Manager,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2707,Supply Planning,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2707,Trade Sales Rep,0.00,0.00,0,0,0,1,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2708,Finance,0.00,0.00,0,0,0,0,1.0,2.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2708,Logistics Manager,0.00,0.00,0,0,1,0,0.2,0.2,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2708,Trade Sales Rep,0.00,0.00,0,0,0,0,1.2,2.2,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2709,Finance,0.00,0.00,0,0,0,0,1.0,1.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2709,Supply Planning,0.00,0.00,0,0,0,0,1.0,1.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.2-phased-delivery-execution-site-coordination.md,W2709,Trade Sales Manager,0.00,0.00,0,0,0,0,2.0,3.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2710,Category Manager,0.00,0.00,0,0,0,0,1.0,1.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2710,FP&A,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2710,Trade Sales Manager,0.00,0.00,0,0,1,0,2.0,3.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2711,Logistics Analyst,0.00,0.00,0,0,0,0,2.0,3.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2711,Trade Sales Manager,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2712,CFO,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2712,FP&A Manager,0.00,0.00,0,0,0,0,2.0,3.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2712,VP Merchandising,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2713,Finance Analyst,0.00,0.00,0,0,0,0,2.0,3.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2713,Finance Controller,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2713,Supply Planning Manager,0.00,0.00,0,0,0,0,1.0,1.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2713,Trade Sales Manager,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2714,CX Analyst,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2714,Trade Sales Manager,0.00,0.00,0,0,0,0,1.0,2.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2714,VP Merchandising,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2715,Category Manager,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2715,Sustainability Coordinator,0.00,0.00,0,0,3,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2715,Trade Sales Manager,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2716,Procurement,0.00,0.00,0,0,0,0,1.0,1.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2716,Supply Planning Manager,0.00,0.00,0,0,0,0,2.0,3.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2716,VP Supply Chain,0.00,0.00,0,0,1,0,0.0,0.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2717,FP&A,0.00,0.00,0,0,0,0,2.0,3.0,,dormant,TPS
+01-model-company/workflows/VS-77-construction-material-staging/PA-77.3-project-material-reconciliation-analytics.md,W2717,VP Merchandising,0.00,0.00,0,0,0,0,4.0,5.0,,dormant,TPS
 01-model-company/workflows/VS-78-green-building-advisory/PA-78.1-green-product-curation-certification.md,W2718,Category Manager,13.33,26.67,1,0,0,0,1.0,1.0,,live,
 01-model-company/workflows/VS-78-green-building-advisory/PA-78.1-green-product-curation-certification.md,W2718,IT,0.00,0.00,0,0,0,0,1.0,1.0,,live,
 01-model-company/workflows/VS-78-green-building-advisory/PA-78.1-green-product-curation-certification.md,W2718,Procurement,0.00,0.00,0,0,0,0,1.0,1.0,,live,

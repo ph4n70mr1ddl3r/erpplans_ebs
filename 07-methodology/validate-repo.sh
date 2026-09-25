@@ -6571,6 +6571,151 @@ else
     echo "$C82_OUT" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
 fi
 
+# --- Check 83: Capability-registry ↔ dormancy-register mirror + sourcing-deferral seam (the standing guard the (bn)–(bo) dormancy passes lacked) ---
+# The man-hours roll-up's dormancy input of record (07-methodology/dormant-capability-register.json)
+# was issued by the (bn) pass and extended by (bo), and every registry-row flip since the (t)/(u)
+# mandate updated it in the same change — but the mirror was verified BY HAND each time (the
+# Check-82 precedent), and nothing re-derived it. Worse, the 2026-09-25 (bt) ninth
+# review-everything pass found the mirror's own blind spot: the capability-sourcing register §4's
+# two 'Build — squad deferred — prepared' amendments ((ad) TPS, (ah) OMO) hold entire value-stream
+# estates at designed capacity — VS-60/VS-74/VS-77 carried the GUARDED 'Workload dormant —
+# prepared … held at designed capacity' README banners (audit-model-docs' tps_project_estate_hits /
+# omo_routing_estate_hits arms) while the dormancy register never absorbed them, so the roll-up
+# priced 72 workflows of designed-capacity effort as LIVE headcount-basis load — the exact defect
+# class the (bn) instrument exists to close, invisible to every existing check because the
+# sourcing-register rows are W5515's instruments, not W5580's registry rows. This check re-derives
+# the whole seam every run: (a) the registry §3 rows parse (CAP-id + bold state); (b) bidirectional
+# set equality between the registry's DISABLED — rows and the register's capabilities — every
+# DISABLED row with a corpus must have an entry and every entry must name a DISABLED row — with
+# the declared no-corpus exemption (the '(no workflow yet)' Vehicles cell, CAP-F03); (c) state
+# equality per id (a state flip without the twin's update fires here); (d) every dormant
+# W/PA/VS anchor and every parseable exclusion key resolves against the corpus universes; (e) the
+# sourcing-seam arm: the VS sets of the sourcing register's squad-deferred rows must be covered by
+# the register's dormant universe (capabilities ∪ deferrals) or by a DECLARED exemption
+# (exempt_value_streams — an exemption can never be silent), every deferral's dormant VSs must
+# appear in its sourcing row and resolve to real VS directories, and each deferral's
+# dormancy_source must name a real registry CAP row; (f) no VS may be both dormant-marked and
+# exempt-declared. A future registry flip, sourcing-posture flip, register edit or banner
+# re-adjudication that leaves the twins disagreeing fails at its exact arm.
+C83_OUT=$(python3 - "$REPO_ROOT" <<'PY'
+import os, re, json, sys
+ROOT = sys.argv[1]
+errs = []
+# universes (the Check-82 convention)
+wids = set()
+paset = set()
+for p in __import__("glob").glob(os.path.join(ROOT, "01-model-company/workflows/VS-*/PA-*.md")):
+    t = open(p, encoding="utf-8").read()
+    wids |= set(re.findall(r'^##+ (W\d+[A-Z]?)\.', t, re.M))
+    paset.add(re.match(r"(PA-\d+\.\d+)", os.path.basename(p)).group(1))
+vsdirs = [d for d in os.listdir(os.path.join(ROOT, "01-model-company/workflows")) if d.startswith("VS-")]
+vsset = set(re.match(r"VS-(\d+)", d).group(1) for d in vsdirs)
+
+# (a) registry §3 rows
+reg_md = open(os.path.join(ROOT, "01-model-company", "channel-capability-registry.md"), encoding="utf-8").read()
+reg_rows = {}
+for line in reg_md.splitlines():
+    if not line.startswith("| CAP-"):
+        continue
+    cells = [c.strip() for c in line.split("|")[1:-1]]
+    cid = cells[0]
+    bm = re.search(r"\*\*([A-Z][^*]*?)\*\*", cells[3])
+    if not bm:
+        errs.append("registry row %s: no bold state cell" % cid)
+        continue
+    reg_rows[cid] = dict(state=bm.group(1).strip(), vehicles=cells[4] if len(cells) > 4 else "")
+if len(reg_rows) != 21:
+    errs.append("registry §3 parses to %d CAP rows (canonical 21)" % len(reg_rows))
+reg_disabled = {c: r["state"] for c, r in reg_rows.items() if r["state"].startswith("DISABLED")}
+
+# the dormancy register
+reg_json = json.load(open(os.path.join(ROOT, "07-methodology", "dormant-capability-register.json"), encoding="utf-8"))
+caps = {c["id"]: c for c in reg_json.get("capabilities", [])}
+defs = {d["id"]: d for d in reg_json.get("sourcing_register_deferrals", {}).get("deferrals", [])}
+
+# (b) bidirectional mirror, with the declared no-corpus exemption
+for c in sorted(set(reg_disabled) - set(caps)):
+    if "(no workflow yet)" in reg_disabled.get(c, "") or "(no workflow yet)" in reg_rows[c]["vehicles"]:
+        continue  # no corpus to freeze — entry legitimately absent
+    errs.append("registry %s is %s but has no dormant-capability-register entry (no-corpus exemption not declared in its Vehicles cell)" % (c, reg_disabled[c]))
+for c in sorted(set(caps) - set(reg_disabled)):
+    errs.append("dormant-capability-register entry %s names no DISABLED registry row (state in the registry: %s) — a live/phased row must never be dormancy-marked" % (c, reg_rows.get(c, {}).get("state", "ABSENT")))
+
+# (c) state equality per id
+for c in sorted(set(reg_disabled) & set(caps)):
+    if caps[c].get("state", "").strip() != reg_disabled[c].strip():
+        errs.append("%s state drift: registry '%s' vs register '%s'" % (c, reg_disabled[c], caps[c].get("state", "")))
+
+# (d) dormant anchors resolve
+def resolve_anchors(tokens, ctx):
+    for t in tokens:
+        if re.fullmatch(r"W\d+[A-Z]?", t) and t not in wids:
+            errs.append("%s: %s unresolved (no '## %s.' header)" % (ctx, t, t))
+        elif re.fullmatch(r"PA-\d+\.\d+", t) and t not in paset:
+            errs.append("%s: %s unresolved (no PA file)" % (ctx, t))
+for c, cap in caps.items():
+    resolve_anchors(cap.get("dormant_workflows", []), "register %s dormant_workflows" % c)
+    resolve_anchors(cap.get("dormant_process_areas", []), "register %s dormant_process_areas" % c)
+    for v in cap.get("dormant_value_streams", []):
+        if v.replace("VS-", "") not in vsset:
+            errs.append("register %s dormant_value_stream %s unresolved (no VS dir)" % (c, v))
+for key in reg_json.get("exclusions", {}):
+    resolve_anchors(re.findall(r"W\d+[A-Z]?|PA-\d+\.\d+", key), "exclusions key '%s'" % key)
+
+# (e) the sourcing-seam arm: derive the squad-deferred rows' VS sets from the sourcing register
+src_md = open(os.path.join(ROOT, "07-methodology", "capability-sourcing-and-engineering-model.md"), encoding="utf-8").read()
+src_body = src_md.split("*Document Version:")[0]
+row_vs = []
+for line in src_body.splitlines():
+    if line.startswith("|") and "squad deferred — prepared" in line:
+        row_vs.append(sorted(set("VS-" + n for n in re.findall(r"VS-(\d+)", line))))
+if not row_vs:
+    errs.append("capability-sourcing register: no 'squad deferred — prepared' §4 row found — the seam arm cannot derive its sets")
+row_union = sorted({v for vs in row_vs for v in vs})
+dormant_vs_universe = set()
+for c, cap in caps.items():
+    dormant_vs_universe |= set(cap.get("dormant_value_streams", []))
+for d, dd in defs.items():
+    dormant_vs_universe |= set(dd.get("dormant_value_streams", []))
+exempt_universe = set()
+for d, dd in defs.items():
+    exempt_universe |= set(dd.get("exempt_value_streams", []))
+for vs in row_union:
+    if vs not in dormant_vs_universe and vs not in exempt_universe:
+        errs.append("sourcing-register squad-deferred row names %s but the dormancy register neither dormancy-marks nor explicitly exempts it (designed-capacity effort priced live — the (bt)-pass defect class)" % vs)
+for d, dd in defs.items():
+    for v in dd.get("dormant_value_streams", []):
+        if v not in row_union:
+            errs.append("deferral %s dormant_value_stream %s appears in no 'squad deferred — prepared' sourcing row (stale set)" % (d, v))
+        if v.replace("VS-", "") not in vsset:
+            errs.append("deferral %s dormant_value_stream %s unresolved (no VS dir)" % (d, v))
+    for v in dd.get("exempt_value_streams", []):
+        if v not in row_union:
+            errs.append("deferral %s exempts %s but no sourcing row names it (a silent exemption can never be adjudicated)" % (d, v))
+    m = re.findall(r"CAP-[A-Z]\d{2}", dd.get("dormancy_source", ""))
+    if not m or not any(x in reg_rows for x in m):
+        errs.append("deferral %s dormancy_source names no real registry CAP row" % d)
+
+# (f) no VS both dormant and exempt
+for both in sorted(dormant_vs_universe & exempt_universe):
+    errs.append("%s is both dormancy-marked and exempt-declared — contradictory state" % both)
+# deferral ids must not collide with CAP ids
+for coll in sorted(set(defs) & set(caps)):
+    errs.append("deferral id %s collides with a CAP id" % coll)
+
+print("HITS %d" % len(errs))
+for e in errs:
+    print("BAD|" + e)
+PY
+)
+C83_BAD=$(echo "$C83_OUT" | sed -n 's/^HITS \([0-9]*\)/\1/p')
+if [ "${C83_BAD:-1}" -eq 0 ]; then
+    ok "Capability-registry ↔ dormancy-register mirror clean: 21 registry CAP rows parse, the DISABLED — set and the register's capabilities mirror 1:1 in both directions (the declared '(no workflow yet)' no-corpus exemption the only gate), per-id states agree, every dormant W/PA/VS anchor and parseable exclusion key resolves against the corpus universes, the sourcing register's squad-deferred rows' VS estates (VS-60 OMO / VS-74+VS-77 TPS, the (ad)/(ah) deferrals) are dormancy-marked with VS-143 the one declared (ad) seam exemption, and no VS is both dormant and exempt — the man-hours roll-up's live/dormant split input of record made standing (the (bn)/(bo) passes' hand-verified mirror plus the (bt) pass's sourcing-seam blind spot — 72 workflows of designed-capacity effort had been priced live under guarded banners — guarded by the 2026-09-25 (bt) ninth review-everything pass)"
+else
+    error "$C83_BAD Capability-registry ↔ dormancy-register mirror violation(s):"
+    echo "$C83_OUT" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
+fi
+
 echo ""
 echo "=== Validation Complete ==="
 echo "Errors: $ERRORS, Warnings: $WARNINGS"
