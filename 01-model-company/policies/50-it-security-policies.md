@@ -75,7 +75,7 @@
 |---|---|
 | Owner (R) / Approver | Security Engineering (SEC) / **CIO** |
 | Cadence | 1-year review |
-| Anchors | M365 identity plane, EBS authentication, mobile-app estate (mobile-app-strategy), VS-10 ecommerce |
+| Anchors | M365 identity plane, EBS authentication, mobile-app estate (mobile-app-strategy), VS-10 ecommerce, the OT/ICS estate ([VS-190](../workflows/VS-190-operational-technology-ot-ics-cybersecurity-and-retail-technology-asset-protection/), PA-190.1–190.3) |
 
 **Policy statements.**
 1. MFA is mandatory for: all remote access, all administrative/privileged
@@ -94,6 +94,12 @@
    USB ports controlled; POS network segmentation from LAN/guest Wi-Fi.
 5. Keys & certificates: corporate PKI/keys lifecycle-managed by SEC; no
    production keys in source code or chat/tool artifacts (SDLC hook, POL-I06).
+6. **OT/ICS estate** (DC building controls, refrigeration/energy
+   controllers, POS-adjacent unmanaged devices — VS-190): segmented from IT
+   networks per the IT/OT architecture (PA-190.1), monitored with the same
+   incident discipline (PA-190.2), and third-party OT access only through
+   time-boxed, logged conduits (PA-190.3) — availability-safety tradeoffs
+   in OT follow the OT standard's rules, not improvisation.
 
 ---
 
@@ -103,7 +109,7 @@
 |---|---|
 | Owner (R) / Approver | CIO Office / **CIO** |
 | Cadence | 1-year review |
-| Anchors | VS-27 change workflows, EBS ADOP online-patching boundary, DR/backup runbooks |
+| Anchors | VS-27 change workflows, EBS ADOP online-patching boundary, DR/backup runbooks, the technology-asset lifecycle ([VS-99](../workflows/VS-99-it-asset-technology-lifecycle-management/), PA-99.1–99.3) |
 
 **Policy statements.**
 1. **No unauthorized change:** every production change carries an approved
@@ -119,8 +125,16 @@
    monthly; config/secret stores back up encrypted.
 4. Resilience: store operations have documented degraded-mode runbooks (POS
    offline procedure) that are tested per the store-operations calendar;
-   capacity/headroom reviews are quarterly for tier-1 systems (POS, WMS, EBS).
-5. Major releases freeze during peak trading windows (ber-month peak,
+   capacity/headroom reviews are quarterly for tier-1 systems (POS, WMS, EBS);
+   OT/estate recovery objectives (PA-190.2) sit inside the same recovery
+   catalog as IT systems — no system tier is exempt from a tested restore.
+5. **Technology-asset lifecycle** (VS-99): assets register, track and
+   retire through the lifecycle workflows — software license compliance is
+   a standing audit surface (PA-99.2, publisher-audit readiness), and
+   decommissioning includes **certified data sanitization** before disposal
+   or resale (PA-99.3; media leaving custody without sanitization is a
+   reportable incident, POL-D03/D04 interfaces).
+6. Major releases freeze during peak trading windows (ber-month peak,
    sale events) except security-emergency patches (CISO/CIO-approved).
 
 ---
@@ -182,7 +196,7 @@
 |---|---|
 | Owner (R) / Approver | CIO Office / AAP platform / **CIO + CEO** |
 | Cadence | 1-year review (fast-moving domain) |
-| Anchors | [ai-first operating guide](../../07-methodology/ai-first-operating-guide.md) (laws, autonomy ladder, agent factory); VS-30.2 (AI/ML & automation) |
+| Anchors | [ai-first operating guide](../../07-methodology/ai-first-operating-guide.md) (laws, autonomy ladder, agent factory); [VS-128](../workflows/VS-128-ai-ml-governance-responsible-ai/) (AI/ML governance & responsible AI: PA-128.1 strategy & model risk, PA-128.2 fairness/explainability/privacy/safety, PA-128.3 lifecycle assurance), VS-30.2 (AI/ML & automation) |
 
 **Policy statements.**
 1. **Sanctioned tools only:** company data processes only through approved AI

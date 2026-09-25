@@ -14,7 +14,7 @@
 |---|---|
 | Owner (R) / Approver | ERM / Internal Audit Lead / **Board** |
 | Cadence | 1-year review + exercise-driven updates |
-| Anchors | PA-26.1 (BCP planning & testing), PA-26.2 (crisis management), VS-69 typhoon response, PA-184.3 (temporary facility mobilization) |
+| Anchors | PA-26.1 (BCP planning & testing), PA-26.2 (crisis management), VS-69 typhoon response, PA-184.3 (temporary facility mobilization), disaster-relief coordination ([VS-180](../workflows/VS-180-disaster-relief-supply-chain-logistics-and-humanitarian-aid-coordination/), PA-180.1–180.3) |
 
 **Policy statements.**
 1. **Impact analysis first:** every critical business function (store trading,
@@ -42,6 +42,10 @@
    PA-184.3 playbook (permits, safety clearance, cash controls) — trading may
    resume only after the safety assessment (POL-S02.2) and with the
    infrastructure-reconstruction program (PA-184.2) tracked to completion.
+   Community-relief logistics (VS-180) activate under the same crisis
+   organization with BCP discipline — allocation, staging and partner
+   coordination per POL-S02.6, with continuity of trading and of relief
+   planned together, never in competition.
 
 ---
 
@@ -74,3 +78,41 @@
    claim-denial root causes feed the risk-assessment cycle.
 5. Surety bonds (performance, permit, lease) track expiry with renewal
    lead-time; bond issuance authority follows POL-G05.
+
+---
+
+## POL-B03 — Surety, Captive & Risk Financing
+
+| | |
+|---|---|
+| Owner (R) / Approver | Facilities & Surety (bonds) + Treasurer (risk financing) / **CFO** (Board: captive formation, program limits) |
+| Cadence | 1-year review |
+| Anchors | [VS-116](../workflows/VS-116-performance-bond-surety-and-bank-guarantee-management/) (PA-116.1–116.3), [VS-153](../workflows/VS-153-captive-insurance-reinsurance-and-enterprise-risk-financing/) (PA-153.1–153.3), Insurance Code, POL-B02 program interface, POL-F01/F08 treasury linkage |
+
+**Policy statements.**
+1. **Bond & guarantee portfolio:** performance bonds, surety and bank
+   guarantees issue only through the governed surety workflow
+   (PA-116.1–116.3): facility strategy with pre-agreed provider lines,
+   issuance on approved applications with collateral/encumbrance tracking
+   (PA-116.2), and release/claims/recovery discipline (PA-116.3) — expired
+   bonds terminate their encumbrances; no site or project procures bonds
+   outside the facilities.
+2. **Encumbrance integrity:** every bond/guarantee against company assets
+   registers in the encumbrance ledger with its counter-obligation; the
+   ledger reconciles monthly to Treasury (POL-F01) and reports in the
+   annual audit scope — unregistered encumbrances are a control failure.
+3. **Risk-financing review:** the board-approved risk-financing strategy
+   (retention levels, POL-B02 self-insured retentions, insurance program
+   limits, surety capacity) reviews annually against claims experience and
+   ERM output (POL-G10) — retentions drift only by decision, not by
+   inflation.
+4. **Captive/reinsurance option:** a captive insurer (VS-153) is a
+   Board-level decision only after a documented feasibility study
+   (PA-153.1: domicile, capitalization, regulatory domicile governance);
+   if formed, it operates under its domicile's Insurance Code regime with
+   the same claims discipline as the external program (POL-B02 standards
+   apply to captive-claimed losses) — the captive never insures
+   non-group risks or becomes an unregulated insurance seller.
+5. Cost-of-risk reporting (premiums + retentions + claims + bond fees +
+   captive economics) reports annually to the Audit Committee with the
+   BCP exercise results (POL-B01.3) as its control-quality input.

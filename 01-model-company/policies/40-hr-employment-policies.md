@@ -15,7 +15,7 @@
 |---|---|
 | Owner (R) / Approver | Talent Acquisition Lead / **CHRO** |
 | Cadence | 2-year review |
-| Anchors | PA-19.1; hiring authority per POL-G05 (W1732.1(d)) |
+| Anchors | PA-19.1; the talent-acquisition program ([VS-121](../workflows/VS-121-talent-acquisition-employer-brand-candidate-experience/), PA-121.1–121.3); workforce background screening ([VS-167](../workflows/VS-167-workforce-background-screening-credentialing-and-personnel-vetting/), PA-167.1–167.3); hiring authority per POL-G05 (W1732.1(d)) |
 
 **Policy statements.**
 1. Hiring follows an approved headcount (requisition vs TO) — no requisition,
@@ -27,7 +27,12 @@
 3. Verification before offer: credentials, employment history, NBI clearance
    for sensitive roles (finance, LP, IT), and for cashier/LP roles the honesty
    screening panel; offers state rank-and-file vs managerial status, probation
-   (≤ 6 months), compensation band and work location.
+   (≤ 6 months), compensation band and work location. **Screening runs as a
+   governed program** (VS-167): vetting depth is proportionate to role risk
+   (PA-167.1 tiering), candidate consent and RA 10173 handling apply to every
+   check (POL-D02 — screening data is sensitive personal data, retained only
+   per the schedule), and adverse findings follow the adverse-action steps
+   with candidate explanation before withdrawal.
 4. Interview records and applicant data retain per POL-D02/D04 (use limitation:
    recruitment only); referral bonuses disclosure rules apply to relatives of
    incumbents in the same approval chain (POL-G04).
@@ -65,7 +70,7 @@
 |---|---|
 | Owner (R) / Approver | Compensation & Benefits Manager / **CHRO + CEO** |
 | Cadence | 1-year review (survey cycle + statutory wage orders) |
-| Anchors | PA-102.x (comp & ben), VS-144 (housing), VS-169 (uniform/PPE) |
+| Anchors | PA-102.x (comp & ben), VS-144 (housing), VS-169 (uniform/PPE), employee transport & commute ([VS-141](../workflows/VS-141-employee-transport-shuttle-and-daily-commute-management/), PA-141.1–141.3) |
 
 **Policy statements.**
 1. Pay is set by the graded structure against published **market benchmarks**
@@ -80,7 +85,10 @@
 4. **Welfare programs** operate as codified programs: staff housing/dormitory
    (VS-144 allocation policy, occupancy rules, deductions), uniform & PPE
    issuance (VS-169 entitlement matrix per role, replacement cycles, return-on-
-   separation), HMO and wellness per plan rules (POL-S05).
+   separation), the employee transport/shuttle and commute-allowance program
+   (VS-141 — route/vendor safety per POL-S01, allowance framework per
+   PA-141.1, never a substitute for wage obligations), HMO and wellness per
+   plan rules (POL-S05).
 5. Payroll accuracy is a control: variance review vs prior cycle, off-cycle
    payments need CHRO + CFO approval, and dedupe/bank-detail changes follow
    maker-checker (fraud control).
@@ -243,3 +251,90 @@
    honored by TA (POL-H01).
 5. GWEP/retirement-benefit administration, and separation-related payroll
    accruals, follow POL-F07 accounting policy.
+
+---
+
+## POL-H10 — Contingent, Outsourced & Foreign Workforce
+
+| | |
+|---|---|
+| Owner (R) / Approver | HRBP (Field) + Labor Relations / **CHRO + CEO** |
+| Cadence | 1-year review (DOLE regulation changes immediate) |
+| Anchors | [VS-98](../workflows/VS-98-contingent-contract-outsourced-workforce/) (PA-98.1–98.3, W555), [VS-160](../workflows/VS-160-global-mobility-immigration-and-foreign-worker-compliance/) (PA-160.1–160.3), [VS-183](../workflows/VS-183-dual-training-system-dts-and-tesda-partnership-program/) (DTS/TESDA, PA-183.1–183.3), POL-P03 service contracts, POL-I02 third-party access |
+
+**Policy statements.**
+1. **Contracting only, never labor-only:** every engagement of contingent or
+   outsourced workers runs through a licensed service provider under a
+   service-agreement structure (POL-P03) that preserves the permissible
+   contracting arrangement — the company does not engage through
+   labor-only contracting structures, and contractual employees perform only
+   the usual services of the trade per DO 174-17; assessed labor-only
+   findings convert to direct regular employment (labor-case protection:
+   POL-H06.5 handling).
+2. **Provider gate:** staffing/outsourcing providers verify DOLE registration
+   (DO-174 compliance), capitalization, SSS/PhilHealth/Pag-IBIG remittance
+   current-ness and financial capacity before engagement and annually after
+   (PA-98.1); providers failing verification exit the panel.
+3. **End-to-end record:** every contingent worker has a system record
+   (identity, engagement, site, access, time) through the VS-98 lifecycle
+   (PA-98.2 onboarding/access/time operations) — no shadow headcount; store
+   and DC managers may not source workers outside the panel.
+4. **Foreign workers:** no foreign national starts work without the
+   compliant work authorization (AEP, 9(g)/other visa, PEZA where
+   applicable — PA-160.2); assignments run the mobility framework
+   (PA-160.1 charter, tax/payroll/repatriation per PA-160.3); immigration
+   compliance is a launch gate for any capability requiring foreign
+   expertise, and overstays/underspent visa conditions are reportable
+   events.
+5. **Trainees & DTS:** student-trainee programs run only under the
+   accredited DTS/TESDA framework (PA-183.1 accreditation, PA-183.2
+   trainee lifecycle, PA-183.3 tax-incentive compliance) with the statutory
+   allowances, hours and mentor ratios — trainees never substitute for
+   headcount.
+6. **Equal treatment floor:** contingent workers get site safety (POL-S01),
+   drug-free-workplace rules (POL-H08), safe-spaces protection (POL-H07),
+   and speak-up access (POL-G03); performance/risk/spend analytics
+   (PA-98.3) review quarterly with CHRO and COO.
+
+---
+
+## POL-H11 — Labor Relations & Collective Bargaining
+
+| | |
+|---|---|
+| Owner (R) / Approver | Labor Relations Manager / **CHRO + CEO** |
+| Cadence | 1-year review (CBAs, docket and jurisprudence changes) |
+| Anchors | [VS-84](../workflows/VS-84-labor-relations-collective-bargaining/) (PA-84.1 union recognition & CBA negotiation/administration, PA-84.2 grievance & labor disputes/DOLE conciliation, PA-84.3 employee voice & engagement), Labor Code (Arts. 263–290, union & CBA framework), POL-H06 (discipline interface), POL-D04 (CBA/records retention) |
+
+**Policy statements.**
+1. The company deals with unions **lawfully and without interference**:
+   certification elections run on employee free choice; no company unionism,
+   no interference in organizing, no discrimination against union members —
+   and equally, no acceptance of a union demand outside the legal process.
+2. **CBA negotiation** (PA-84.1) runs only through the chartered
+   negotiating panel (Labor Relations + Legal + affected COO/CHRO): the
+   bargaining table is the only place economic terms negotiate — supervisors
+   and store management never make or imply commitments to union
+   representatives; ratified CBAs administer to the letter, with a compliance
+   calendar for every monetary and non-monetary obligation.
+3. **Grievance machinery** (PA-84.2): grievances follow the CBA's steps and
+   timelines exactly — skipped steps invalidate the process; where no CBA
+   applies, the published non-union grievance channel applies; DOLE
+   conciliation/NCMB appearances are centralized in Labor Relations with
+   outside counsel per Legal — stores never appear, respond or settle
+   (POL-H06.5 discipline).
+4. **Labor disputes & work stoppages:** pickets, strikes and lockouts are
+   managed against the contingency plan — picket conduct rules (no
+   obstruction of customers, safety-first, LP documentation), picket-line
+   discipline communicated to all employees (crossing is an individual
+   right, harassment is not), and business-continuity activation per
+   POL-B01 where service threatens.
+5. **Employee voice & engagement** (PA-84.3) runs as the standing
+   non-union counterpart: labor-management councils, pulse surveys and the
+   speak-up channel (POL-G03) — engagement findings route to owners like
+   any audit finding; union-busting flavored "voice" programs are
+   prohibited.
+6. Every CBA, grievance settlement and conciliation agreement files in the
+   labor-relations register with obligations calendared and financial
+   commitments accrued per POL-F07 — an unrecorded labor commitment is a
+   misstatement, not a courtesy.

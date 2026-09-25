@@ -134,7 +134,7 @@ against the active-bid calendar quarterly; Internal Audit samples it annually.
 |---|---|
 | Owner (R) / Approver | Corporate Secretary / **Board** (thresholds) |
 | Cadence | **Annual** review (inflation and org-structure adjustments) |
-| Anchors | W1732 (matrix maintenance + ERP enforcement), W1732.3 (system limits) |
+| Anchors | W1732 (matrix maintenance + ERP enforcement), W1732.3 (system limits), [VS-130](../workflows/VS-130-corporate-development-ma-divestiture/) (PA-130.1–130.3 — Board-tier extraordinary transactions) |
 
 **Policy statements.**
 1. Authority to commit the company is exercised only within the DOA matrix —
@@ -157,6 +157,11 @@ against the active-bid calendar quarterly; Internal Audit samples it annually.
    never self-approve their own request or expense.
 6. Annual re-approval by the Board; signed manager acknowledgments maintained
    by the Corporate Secretary (W1732.5).
+7. **Reserved (non-delegable) authority:** M&A, divestiture, disposal of a
+   subsidiary or equity interest, and any commitment outside the ordinary
+   course reserve to the Board regardless of amount ([VS-130](../workflows/VS-130-corporate-development-ma-divestiture/)
+   gates, PA-130.2 due-diligence discipline) — a transaction may never be
+   structured or split to fit a delegated tier.
 
 ---
 
@@ -166,7 +171,7 @@ against the active-bid calendar quarterly; Internal Audit samples it annually.
 |---|---|
 | Owner (R) / Approver | VP Legal & Compliance / **Board** |
 | Cadence | 2-year review |
-| Anchors | [PA-132.1](../workflows/VS-132-corporate-political-engagement-election-compliance/) |
+| Anchors | [PA-132.1](../workflows/VS-132-corporate-political-engagement-election-compliance/); the government-affairs function ([VS-104](../workflows/VS-104-government-affairs-public-policy-industry-relations/), PA-104.1–104.3) executes advocacy under this policy; CSR/foundation program: [VS-152](../workflows/VS-152-corporate-social-responsibility-foundation-and-community-investment/) (PA-152.1–152.3) with POL-S03 environmental/community commitments and W1736 governance hooks |
 
 **Policy statements.**
 1. The company does not make political contributions in kind or in cash to
@@ -178,12 +183,19 @@ against the active-bid calendar quarterly; Internal Audit samples it annually.
 3. Trade/industry associations and business chambers: memberships and
    position letters route through VP Legal & Compliance; advocacy positions on
    material issues (retail regulation, labor policy) are approved by the CEO
-   and logged.
+   and logged. The government-affairs program (VS-104: national-government
+   relations, industry associations, public affairs) executes under these
+   tiers — external positions on company letterhead are never freelance.
 4. Corporate donations and sponsorships (charitable, civic, community) are
    budgeted, materiality-tested and approved: < ₱100K by the CMO/COO; ≥ ₱100K
    or any politically-adjacent recipient by the CEO; anything touching an
    official or election period by the Board. The donation register is maintained
-   by Legal & Finance (corpus rule) and audited annually.
+   by Legal & Finance (corpus rule) and audited annually. The **CSR &
+   foundation program** (VS-152: strategy/foundation governance, community
+   investment & disaster-response volunteering, impact measurement) executes
+   under this donation discipline plus the POL-S03 community/environmental
+   commitments — foundation funds follow statement 4's tiers and the
+   W1736 governance hooks.
 5. Election-period compliance: stores and DCs display no campaign material;
    store premises are never offered as campaign venues.
 
@@ -195,13 +207,16 @@ against the active-bid calendar quarterly; Internal Audit samples it annually.
 |---|---|
 | Owner (R) / Approver | MLRO / Compliance Officer / **Board (Audit Committee)** |
 | Cadence | 1-year review |
-| Anchors | VS-86 (AML compliance program, W2921–W2932), CTL-237, AMLA (RA 9160 as amended); BSP e-money agent obligations for the e-wallet cash-in/out estate (W1301 settlement chain) |
+| Anchors | VS-86 (AML compliance program, W2921–W2932), CTL-237, AMLA (RA 9160 as amended); BSP e-money **agent** obligations for the in-store financial-agency estate ([VS-156](../workflows/VS-156-in-store-value-added-services-and-financial-agency-operations/), PA-156.1–156.3: bills payment, remittance, e-money cash-in/out, mobile load) |
 
 **Policy statements.**
 1. The company maintains a Board-approved **AML/CFT program** (MLRO-led):
    risk-based customer due diligence, the compliance manual, training, and the
-   independent audit of the program — covering every covered channel: e-wallet
-   cash-in/cash-out agency, gift cards/store credit, large cash retail
+   independent audit of the program — covering every covered channel: the
+   in-store financial-agency estate (VS-156 counter operations: bills payment,
+   remittance, e-wallet cash-in/cash-out, mobile load — operated to BSP agent
+   obligations with partner-principal compliance terms in the agency
+   contracts, PA-156.1), gift cards/store credit, large cash retail
    transactions, and trade receivables.
 2. **KYC/CDD:** covered customers are risk-tiered with due-diligence
    documentation and periodic refresh; sanctions/watchlist screening runs at
@@ -226,7 +241,7 @@ against the active-bid calendar quarterly; Internal Audit samples it annually.
 |---|---|
 | Owner (R) / Approver | VP Legal & Compliance / **Board** |
 | Cadence | 2-year review |
-| Anchors | W2683 (Philippine Competition Law Compliance, PA-76.2); antitrust in the VS-119 ethics scope (ISO 37301 alignment) |
+| Anchors | W2683 (Philippine Competition Law Compliance, PA-76.2); the competition-compliance program ([VS-129](../workflows/VS-129-competition-and-antitrust-compliance/), PA-129.1 risk assessment, PA-129.2 conduct prevention, PA-129.3 PCC engagement); antitrust in the VS-119 ethics scope (ISO 37301 alignment) |
 
 **Policy statements.**
 1. The company complies with **RA 10667** (Philippine Competition Act): no
@@ -256,7 +271,7 @@ against the active-bid calendar quarterly; Internal Audit samples it annually.
 |---|---|
 | Owner (R) / Approver | IP Counsel / **CEO** |
 | Cadence | 2-year review |
-| Anchors | [PA-100.2](../workflows/VS-100-legal-operations-litigation-ip-management/) (IP Portfolio & Brand Protection), CTL-530, VS-71 (anti-counterfeit detection & enforcement) |
+| Anchors | [PA-100.2](../workflows/VS-100-legal-operations-litigation-ip-management/) (IP Portfolio & Brand Protection), CTL-530, VS-71 (anti-counterfeit detection & enforcement), in-store audio & music-royalty licensing ([VS-168](../workflows/VS-168-in-store-audio-ambient-media-and-music-royalty-licensing/), PA-168.1–168.3) |
 
 **Policy statements.**
 1. The IP portfolio (trademarks, private-brand marks, domain names, designs,
@@ -268,8 +283,9 @@ against the active-bid calendar quarterly; Internal Audit samples it annually.
    terms; contractor engagements assign IP in writing before work starts
    (contract-template floor, POL-P03).
 3. **Third-party respect:** no unauthorized use of third-party IP — music/
-   ambient-media royalty licensing (in-store audio), fonts, images, software
-   licenses, and franchise/vendor IP usage stay within license terms;
+   ambient-media royalty licensing (in-store audio runs only inside the
+   VS-168 licensed repertoires and royalty-compliance program), fonts, images,
+   software licenses, and franchise/vendor IP usage stay within license terms;
    open-source use follows the license-compliance rules in the SDLC standard
    (POL-I06).
 4. **Anti-counterfeiting:** counterfeit suspicion (vendor goods, marketplace
@@ -318,7 +334,7 @@ against the active-bid calendar quarterly; Internal Audit samples it annually.
 |---|---|
 | Owner (R) / Approver | Corporate Secretary / **Board** |
 | Cadence | 1-year review (SEC Code alignment) |
-| Anchors | PA-36.1 (board meetings & corporate records), W1730 (annual governance self-assessment), [PA-173.2](../workflows/VS-173-investor-relations-capital-markets-and-securities-disclosure/) (disclosure & securities compliance), SEC Code of Corporate Governance |
+| Anchors | PA-36.1 (board meetings & corporate records), W1730 (annual governance self-assessment), [PA-173.2](../workflows/VS-173-investor-relations-capital-markets-and-securities-disclosure/) (disclosure & securities compliance), the internal-audit charter ([VS-21](../workflows/VS-21-internal-audit-risk/), PA-21.1–21.3), SEC Code of Corporate Governance |
 
 **Policy statements.**
 1. The Board operates under a **corporate governance charter** with written
@@ -342,3 +358,117 @@ against the active-bid calendar quarterly; Internal Audit samples it annually.
    documented bylaws, minute books and registrations current per entity;
    annual reportorial requirements (GIS, AFS filing) run on the Compliance
    calendar.
+6. **Internal audit** operates under an Audit-Committee-approved charter
+   (PA-21.1): independent of management, unrestricted scope across every
+   entity/function (including the policy-compliance testing this manual
+   requires), and a risk-based plan derived from the ERM register (POL-G10) —
+   the audit function reports functionally to the Audit Committee, never to
+   the operations it audits.
+
+---
+
+## POL-G12 — Licenses, Permits & Accreditation Portfolio
+
+| | |
+|---|---|
+| Owner (R) / Approver | Compliance Officer / **VP Legal & Compliance** |
+| Cadence | 1-year review (multi-agency exposure) |
+| Anchors | [VS-166](../workflows/VS-166-regulatory-license-permit-and-accreditation-portfolio-management/) (PA-166.1–166.3, W1400/W1547/W2910/W4735), PA-22.1 (permits & licenses), PA-76.1 (multi-LGU permits), the site-lifecycle permit waves — new-store openings ([VS-37](../workflows/VS-37-store-opening-commissioning/)), closures ([VS-59](../workflows/VS-59-store-closure-decommissioning/)), remodels ([VS-109](../workflows/VS-109-store-remodel-renovation-lifecycle-refurbishment/)) |
+
+**Policy statements.**
+1. The company maintains a **single license & permit register** covering every
+   statutory permission across all agencies and all sites: BIR (registration,
+   invoices/receipts accreditation), DTI/SEC (business registration, brand
+   marks), LGU (mayor's permit, barangay clearance, zoning per store), DOLE
+   (OSH program registration, fire/sanitary certificates), FDA (where the
+   assortment requires), DENR (hazardous-waste, LGU environmental), BSP
+   (e-money agency), NPC (DPO registration), PCAB (construction) — no site
+   operates on an expired or lapsed permission.
+2. **Renewal discipline:** every license carries an owner, a renewal lead-time
+   and a calendar entry (PA-166.2 renewal execution); renewals start at the
+   lead-time, never at expiry; multi-site renewal campaigns (200 stores ×
+   LGU permits) run as managed programs with district accountability.
+3. **Regulatory intelligence:** the Compliance Officer tracks rule changes,
+   new permit classes and agency circulars affecting the estate (PA-166.1
+   regulatory intelligence); new business initiatives (new category, service,
+   channel) complete a permit-impact check before launch. The site lifecycle
+   rides the same register: no new store trades before its permit set
+   completes (VS-37 gate), no closed site leaves permits/registrations
+   unsettled (VS-59 wind-down), and no remodel starts construction without
+   the building/electrical/sanitary clearances (VS-109 gate — construction
+   licensing per POL-S07).
+4. **Inspection readiness:** agency inspections (any registrar) route through
+   the PA-22.2 response protocol; the register's currency is the first
+   evidence pack; lapsed-permission findings are reportable events with
+   root-cause review.
+5. Cost of the portfolio (fees, bonds, professional assistance) is budgeted
+   per entity; penalties from non-compliance are separately reported (never
+   buried in operating cost) and feed the ERM register (POL-G10).
+
+---
+
+## POL-G13 — Fraud Management & Payment Protection
+
+| | |
+|---|---|
+| Owner (R) / Approver | Forensic / Fraud Investigator (Internal Audit) / **Board (Audit Committee)** |
+| Cadence | 1-year review (fraud-pattern refresh) |
+| Anchors | [VS-125](../workflows/VS-125-cross-channel-fraud-management-payment-fraud-protection/) (PA-125.1–125.3, W369/W1409/W3857+), VS-80 payment operations (PA-80.2 settlement & disputes, PA-80.3 payment fraud & tokenization), VS-149 self-checkout loss prevention (PA-149.3), POL-R05/R01 linkage |
+
+**Policy statements.**
+1. Fraud management is a **standing cross-channel program** (not a case-by-case
+   activity): a fraud strategy owned by the Forensic/Fraud Investigator with a
+   detection platform covering store (POS, self-checkout), ecommerce
+   (order/payment fraud, account takeover), payments (chargebacks, settlement
+   exceptions) and internal fraud (payroll, vendor master, expense).
+2. **Payment protection:** card-present estate stays tokenized/segmented per
+   POL-I03; disputes and chargebacks work within acquirer deadlines
+   (PA-80.2); payment-cost/fraud analytics (PA-80.3) review quarterly with
+   Treasury and IT; no payment channel ships without a fraud-control review.
+3. **Detection-to-case ladder:** automated flags triage daily; confirmed
+   fraud opens a case with evidence standards (POS journal, CCTV, system
+   logs — POL-R05.2); employee-involved fraud runs POL-H06 due process in
+   parallel with LP/Legal evidence preservation; criminal referral decision
+   rests with VP Legal & Compliance.
+4. **Loss recovery** (chargebacks, bank claims, insurance fidelity covers per
+   POL-B02, vendor/agent recovery) pursues every economic avenue; write-off
+   of fraud losses requires the Audit-Committee-noted disposition.
+5. Fraud analytics, loss data and control weaknesses report quarterly to the
+   Audit Committee; substantiated control gaps get owners and dates (the
+   POL→W→CTL chain must show which control failed and its fix).
+
+---
+
+## POL-G14 — Government & Institutional Sales Compliance
+
+| | |
+|---|---|
+| Owner (R) / Approver | VP Legal & Compliance (Bid Compliance Officer: execution) / **Board** |
+| Cadence | 1-year review (procurement-law changes immediate) |
+| Anchors | [VS-46](../workflows/VS-46-government-institutional-sales/) (PA-46.1 registration & qualification, PA-46.2 bid & order processing, PA-46.3 billing/collection compliance), RA 9184 (Government Procurement Reform) & its IRR as supplier-facing rules, RA 3019 (Anti-Graft, per POL-G02), COA audit rules for government receivables |
+
+**Policy statements.**
+1. Government and institutional business is pursued only through the
+   **qualified-program gate** (PA-46.1): registrations, accreditations and
+   eligibility documents (PCAB license where construction-adjacent, BIR
+   clearance, audited financials) are current before any bid — expired
+   eligibility documents never support a submission.
+2. **Bid integrity is absolute** (PA-46.2): bids are truthful and complete,
+   pricing follows the approved bid model, no bid rigging, no collusion with
+   other bidders, and no fee, gift or consideration to any government
+   official or their intermediary to influence an award (POL-G02.2 applies
+   at Board severity for this channel) — a won-by-corruption contract is a
+   criminal exposure, never a revenue win.
+3. **Performance discipline:** awarded contracts perform to their terms —
+   delivery schedules, bond/warranty obligations (POL-B03 surety facilities),
+   and substitution rules (no silent product substitution) — default
+   exposures escalate to VP Legal & Compliance immediately.
+4. **Billing & collection compliance** (PA-46.3): government invoices carry
+   the required documentation (ORB/TVS where applicable, COA-compliant
+   supports); receivables follow POL-F05 aging with the statutory-bar and
+   audit-season calendars; no informal collection arrangements, no
+   accommodation of fund-release timing beyond published rules.
+5. Every bid file retains the full evidence chain (eligibility, bid,
+   award, performance, collection) per POL-D04 — the file is the defense in
+   any COA, Ombudsman or PCC inquiry; bid losses with integrity questions
+   are reportable events to the Audit Committee.

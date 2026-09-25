@@ -2,8 +2,9 @@
 
 > Domain manual of the [Corporate Policy Manual](README.md). Approval class:
 > **CEO** (DPO-owned; NPC-facing per W1735). Statutory base: **RA 10173** (Data
-> Privacy Act), its IRR and NPC circulars; company privacy governance executes
-> through **W1735**.
+> Privacy Act), its IRR and NPC circulars; corporate privacy governance
+> executes through **W1735** and the consumer-data-privacy workflows
+> ([VS-91](../workflows/VS-91-consumer-data-privacy-protection/), PA-91.1–91.3).
 
 ---
 
@@ -13,7 +14,7 @@
 |---|---|
 | Owner (R) / Approver | Data Protection Officer (DPO) / **CEO** |
 | Cadence | 1-year review |
-| Anchors | W1735.1(a), W1735.3 (consent program) |
+| Anchors | W1735.1(a), W1735.3 (consent program); [PA-91.1](../workflows/VS-91-consumer-data-privacy-protection/) (privacy governance & data-subject rights, W3041–W3046), PA-91.2 (PIA & data mapping, W3049+); the customer-data platform ([VS-126](../workflows/VS-126-customer-data-platform-single-customer-view-identity-resolution/), PA-126.1–126.3) |
 
 **Policy statements.**
 1. A plain-language **external privacy notice** governs every personal-data
@@ -28,7 +29,10 @@
 3. Marketing use of customer data requires the marketing-consent flag — no
    consent, no campaigns; sharing with third parties (marketplaces, logistics
    partners, banks) only under consent or a data-processing agreement
-   (POL-D02), never sold.
+   (POL-D02), never sold. The **CDP/single-customer-view** (VS-126)
+   consolidates identity only from consented sources (PA-126.1), and every
+   activation/segmentation run (PA-126.2) honors the flag — identity
+   resolution never manufactures consent that the source capture lacked.
 4. Data-subject rights (access, correction, blocking, complaint) have a
    published intake channel and a DPO-owned response SLA; the log of requests
    and outcomes reports annually.
@@ -41,7 +45,7 @@
 |---|---|
 | Owner (R) / Approver | DPO / **CEO** |
 | Cadence | 1-year review |
-| Anchors | W1735.1(b)(c)(d), NPC registration (W1735.2) |
+| Anchors | W1735.1(b)(c)(d), NPC registration (W1735.2); [PA-91.2](../workflows/VS-91-consumer-data-privacy-protection/) (privacy impact assessment, data mapping & vendor privacy, W3049+) |
 
 **Policy statements.**
 1. The DPO is registered with the **National Privacy Commission**; data
@@ -72,7 +76,7 @@
 |---|---|
 | Owner (R) / Approver | DPO / **CEO** (Board notified on material breaches) |
 | Cadence | 1-year review + post-breach updates |
-| Anchors | W1735 step 4 (72-hour NPC path, 5-day report) |
+| Anchors | W1735 step 4 (72-hour NPC path, 5-day report); [PA-91.3](../workflows/VS-91-consumer-data-privacy-protection/) (breach detection, notification & NPC response, W3057+) |
 
 **Policy statements.**
 1. Every suspected personal-data breach reports to the DPO immediately; the
@@ -125,7 +129,7 @@
 |---|---|
 | Owner (R) / Approver | Merch Ops & Master Data Manager / **COO** |
 | Cadence | 2-year review |
-| Anchors | [VS-29](../workflows/VS-29-master-data/) (item, vendor, customer master) |
+| Anchors | [VS-29](../workflows/VS-29-master-data/) (item, vendor, customer master); product information & digital assets ([VS-137](../workflows/VS-137-product-information-management-and-digital-asset-management/), PA-137.1–137.3) |
 
 **Policy statements.**
 1. Master data (items, vendors, customers, chart of accounts, hierarchies) has
@@ -143,3 +147,8 @@
 5. Hierarchy changes (category restructures, store openings/closures) run
    through the governance workflow with downstream-impact checks (pricing,
    replenishment, reporting) before activation.
+6. **Product content is master data too** (VS-137): PIM attributes, digital
+   assets and SDS/certificate documents follow the same single-steward rule
+   (PA-137.1) — channels syndicate from the governed master only (PA-137.3),
+   never from local copies; a product page claiming an attribute the master
+   does not carry is a data defect, not a marketing convenience.

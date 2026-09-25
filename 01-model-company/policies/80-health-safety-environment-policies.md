@@ -15,7 +15,7 @@
 |---|---|
 | Owner (R) / Approver | HSE Manager / **CEO** |
 | Cadence | 1-year review (OSH program re-filing) |
-| Anchors | RA 11058 / D.O. 198-18 program, per-store safety committees, VS-06 fleet workflows, TESDA-standard equipment certifications |
+| Anchors | RA 11058 / D.O. 198-18 program, per-store safety committees, the OSH execution family ([VS-24](../workflows/VS-24-health-safety-environment/), PA-24.1–24.3), fleet & fuel operations ([VS-61](../workflows/VS-61-fuel-fleet-cost-management/), PA-61.1–61.3), VS-06 fleet workflows, TESDA-standard equipment certifications |
 
 **Policy statements.**
 1. Each store, DC and HQ site maintains a compliant **OSH program**: written
@@ -34,10 +34,20 @@
    inspections, no-overtime driving rules, telematics monitoring with the
    coaching ladder (speeding, harsh braking, idle patterns per the telematics
    workflow), and load-securing standards; incidents report within 24 hours
-   with drug/alcohol testing per POL-H08 for-cause triggers.
+   with drug/alcohol testing per POL-H08 for-cause triggers. **Fuel handling**
+   (VS-61): bulk-fuel storage, refueling and fuel-card controls (PA-61.1)
+   follow the flammable-materials rules (POL-S04 storage classes) — fuel
+   cost analytics (PA-61.3) never override a safety control.
 5. Occupational health: company nurse case management, first-aid readiness per
    site, return-to-work plans after injury; reportable incidents file to DOLE
    on calendar.
+6. **Green fleet operations** (electrification and alt-fuel vehicles) follow
+   the same safety discipline through the green-fleet workflows
+   ([VS-192](../workflows/VS-192-green-fleet-transition-electric-vehicle-fleet-operations-and-sustainable-transportation/),
+   PA-192.1–192.3): charging-infrastructure electrical safety, EV-specific
+   emergency response (battery-thermal events in the emergency plans),
+   driver training on the new drivetrains, and compliance/safety analytics
+   inside the fleet program — sustainability never bypasses the OSH standard.
 
 ---
 
@@ -47,7 +57,7 @@
 |---|---|
 | Owner (R) / Approver | HSE Manager / **COO** |
 | Cadence | 1-year review (pre-season, before June) |
-| Anchors | [VS-69](../workflows/VS-69-typhoon-disaster-response/) typhoon & disaster response family, VS-26 BCP (POL-B01), PA-184 post-disaster reconstruction |
+| Anchors | [VS-69](../workflows/VS-69-typhoon-disaster-response/) typhoon & disaster response family, VS-26 BCP (POL-B01), PA-184 post-disaster reconstruction, disaster-relief logistics ([VS-180](../workflows/VS-180-disaster-relief-supply-chain-logistics-and-humanitarian-aid-coordination/), PA-180.1–180.3) |
 
 **Policy statements.**
 1. Every site keeps current **emergency action plans** for its risk set:
@@ -69,6 +79,14 @@
    communications per the crisis plan.
 5. Emergency equipment (extinguishers, exit lights, generators, first-aid,
    comms) inspects on calendar with deficiency remediation tracked to closure.
+6. **Disaster-relief operations** (VS-180): emergency material allocation and
+   relief-kit staging (PA-180.1) activate under the crisis organization;
+   price-freeze and state-of-calamity controls (PA-180.2) bind pricing per
+   POL-R03.3 with regulatory reporting on calendar; priority relief routing
+   and LGU/humanitarian-partner coordination (PA-180.3) follow the published
+   allocation rules — relief never bypasses POL-G02 (no consideration to
+   officials for allocation priority) and never trades against employee
+   safety.
 
 ---
 
@@ -78,7 +96,7 @@
 |---|---|
 | Owner (R) / Approver | Sustainability / ESG Lead / **CEO** |
 | Cadence | 1-year review |
-| Anchors | [VS-73](../workflows/VS-73-store-waste-circular-economy/) (segregation & DENR compliance), VS-108 (renewable/prosumer energy), PA-73.2 (hazardous waste DENR) |
+| Anchors | [VS-73](../workflows/VS-73-store-waste-circular-economy/) (segregation & DENR compliance), VS-108 (renewable/prosumer energy), PA-73.2 (hazardous waste DENR), ESG reporting ([VS-25](../workflows/VS-25-esg-sustainability/), PA-25.1–25.3), the solar product line ([VS-70](../workflows/VS-70-solar-renewable-energy/), PA-70.1–70.3), construction-debris & site-cleanup ([VS-191](../workflows/VS-191-customer-construction-debris-demolition-waste-and-site-cleanup-operations/), PA-191.1–191.3) |
 
 **Policy statements.**
 1. **Waste segregation at source** per the store program: recyclables,
@@ -100,6 +118,35 @@
    packaging rules; take-back programs (old-appliance haul-away, battery
    returns) route collected items to the correct waste streams (POL-R02/
    POL-S04 linkage).
+6. **Energy-efficiency statutory program** (RA 11285): the designated-
+   establishment obligations run through the EEC compliance workflows
+   ([VS-120](../workflows/VS-120-energy-efficiency-conservation-and-ra-11285-compliance-program/),
+   PA-120.1–120.3) — energy audits on statutory cadence, conservation-plan
+   filing and reporting on calendar, ECM delivery tracked to verified
+   savings.
+7. **Extended producer responsibility** (RA 11898): the plastic footprint is
+   measured, registered and recovered through the EPR workflows
+   ([VS-179](../workflows/VS-179-extended-producer-responsibility-compliance-and-plastic-recovery-network/),
+   PA-179.1–179.3) — recovery partnerships verified, credit trading only
+   within the statute's rules, annual compliance reporting on the calendar;
+   EPR performance reports on the ESG dashboard with the energy-intensity
+   metrics. Hazardous-product **stewardship and take-back** (paint, batteries,
+   lamps — the hazardous-end programs) run under **POL-S10**.
+8. **Customer construction debris & site cleanup** (VS-191) is a waste
+   operation, not a trucking side-business: collected debris segregates and
+   hauls through DENR-compliant channels (PA-191.2), diversion/disposal
+   settlements document per PA-191.3, and no cleanup crew disposes outside
+   the accredited-hauler rule in statement 1.
+9. **ESG reporting** (VS-25) carries the discipline of a financial report:
+   environmental/social/governance metrics have owners, data lineage and
+   evidence (PA-25.1 monitoring, PA-25.3 reporting) — claims publish only
+   when substantiated (greenwashing is an advertising-claims violation,
+   POL-R08, and a disclosure violation, POL-G11).
+10. **The solar product line** (VS-70) sells and installs inside the same
+   environmental frame: customer-site installation follows permitting and
+   electrical-safety rules (PA-70.2, POL-S01/S07 gates), and end-of-life
+   panels/batteries route into the stewardship streams (POL-S10) — a
+   renewable product that ends as illegal waste breaks this policy.
 
 ---
 
@@ -138,13 +185,17 @@
 |---|---|
 | Owner (R) / Approver | Company Nurse / HSE / **CHRO** |
 | Cadence | 2-year review |
-| Anchors | HSE wellness program (department canon), sanitary-code permits, PA-19.x sick-leave chain |
+| Anchors | HSE wellness program (department canon), the occupational-health program ([VS-83](../workflows/VS-83-occupational-health-clinic-wellness/), PA-83.1–83.3), sanitary-code permits, PA-19.x sick-leave chain |
 
 **Policy statements.**
 1. Sites maintain sanitary-code compliance for canteens/break rooms (permits,
    potable water, sanitation inspections) and the first-aid/medical readiness
    standard (kits, trained first-aiders per shift, nurse coverage per the
-   medical program).
+   medical program). The **occupational-health clinic program** (VS-83)
+   operates the medical function: clinic/case management (PA-83.1), the
+   DOLE-mandated periodic-exam and health-surveillance calendar for
+   covered roles (PA-83.2), and the mental-health/EAP program (PA-83.3) —
+   PA-83 outputs are the medical side of POL-S01 case management.
 2. **Wellness program:** annual health screening offer, APE for managerial/
    covered roles, mental-health access per RA 11036 (counseling hotline,
    manager referral training), and health-promotion campaigns on calendar.
@@ -188,3 +239,158 @@
 5. Customer guarantees (plant guarantee/replacement, W4352) publish the same
    terms chain-wide; guarantee replacements dispose the returned live goods
    through the treatment protocols, never re-shelf.
+
+---
+
+## POL-S07 — Contractor Licensing & Construction Compliance
+
+| | |
+|---|---|
+| Owner (R) / Approver | Facilities & Construction Lead / **COO** (VP Legal & Compliance: licensing) |
+| Cadence | 1-year review |
+| Anchors | [VS-165](../workflows/VS-165-pcab-contractor-licensing-and-ra-4566-construction-contractor-compliance/) (PA-165.1–165.3, W162/W590), [VS-74](../workflows/VS-74-contractor-jobsite-delivery/) (PA-74.1–74.3), the third-party installer/pro-referral network ([VS-172](../workflows/VS-172-third-party-installer-and-contractor-network-pro-referral-management/), PA-172.1–172.3), RA 4566 (Contractor's License Law), RA 9184 (government procurement, where applicable), POL-P02/P04 vendor gates, POL-S01.3 contractor safety |
+
+**Policy statements.**
+1. Only **PCAB-licensed contractors** (correct license category/size for the
+   project) perform construction work: license verified at bid, tracked with
+   expiry through the project (PA-165.1), and re-verified at renewal seasons —
+   an expired license suspends the contractor from new awards immediately.
+2. **Project registration & statutory filings** (PA-165.2): project-specific
+   registrations, bonding requirements and contractor statutory obligations
+   (SSS/PhilHealth/Pag-IBIG coverage of workers, safety-program registration
+   per POL-S01.3) verify before mobilization — BuildRight does not inherit
+   unregistered work.
+3. **Compliance monitoring** (PA-165.3): site compliance inspections on the
+   construction calendar, response protocol for DOLE/PCAB inspections (via
+   PA-22.2), and contractor analytics (license status, incident record,
+   bond status) feeding award decisions (POL-P02.2 scorecards).
+4. **Jobsite delivery interface** (VS-74): BuildRight deliveries to active
+   jobsites follow the site-scheduling and material-handling rules
+   (PA-74.1–74.3) with the contractor's site-safety induction — delivery
+   crews never work outside the general-contractor's permit-to-work regime.
+5. Company-acting-as-contractor situations (self-perform construction above
+   materiality) assess PCAB licensing applicability with Legal **before**
+   work starts; penalty exposure from unlicensed contracting is a
+   reportable event.
+6. **The installer/pro-referral network** (VS-172) is contractor management
+   in customer homes: network recruitment verifies licenses/credentials at
+   intake (PA-172.1 vetting), project routing never bypasses the licensed-
+   installer gate (PA-172.2), and compliance status (license, insurance,
+   incident record) is a scored input to the network performance reviews
+   (PA-172.3) — a lapsed license suspends referrals automatically, and
+   referred-work customer claims route through POL-R11.3.
+
+---
+
+## POL-S08 — LPG, Pressure-Vessel & Gas-Refill Safety
+
+| | |
+|---|---|
+| Owner (R) / Approver | HSE Manager / **COO** |
+| Cadence | 1-year review (pre-wet-season + pre-holiday demand) |
+| Anchors | [VS-175](../workflows/VS-175-propane-lpg-cylinder-exchange-and-gas-refill-operations/) (PA-175.1–175.3, W5057+), RA 11592 (LPG Industry Regulation), DOE/BPS circulars, POL-S04 (DG storage class), POL-R06 (product certification) |
+
+**Policy statements.**
+1. LPG exchange/refill operates only as the **licensed program design**
+   (PA-175.1): supplier/permit chain verified (marketer licenses, cylinder
+   ownership marks), exchange-point siting per the safety distances, fire-
+   authority clearances in the POL-G12 permit register — unlicensed refill
+   or transfer at store level is prohibited outright.
+2. **Cylinder integrity:** only marked, in-test cylinders exchange through
+   the network — out-of-test, corroded, or non-owned cylinders quarantine;
+   cylinder reconciliation (PA-175.3) runs like cash (POL-R01 discipline):
+   counted per shift, variance-investigated, fleet-audited monthly.
+3. **Refill operations** (where performed, PA-175.2) run under the statutory
+   operating conditions: trained/certified operators, filling on scale,
+   leak-check discipline, no-refill criteria enforced, PPE per the DG
+   standard (POL-S04), and fire-suppression readiness at every operating
+   point.
+4. **Storage & display:** quantity caps per store format, segregation from
+   ignition sources and emergency exits, cage/ventilation standards,
+   no-cylinder sales-floor displays beyond the format standard — compliance
+   inspects on the store-safety round (POL-R11.1) with same-day defect
+   closure for fire-risk findings.
+5. **Incidents** (leaks, fires, exposures) trigger the emergency plan
+   (POL-S02) with LGU/BFP notification as required; near-misses feed the
+   program analytics (PA-175.3) and the incident-reporting ladder
+   (POL-S01.1).
+
+---
+
+## POL-S09 — Corporate Security, Executive Protection & Travel Risk
+
+| | |
+|---|---|
+| Owner (R) / Approver | Corporate Security Manager / **COO** (VP Legal & Compliance: investigations interface) |
+| Cadence | 1-year review (threat landscape refresh) |
+| Anchors | [VS-159](../workflows/VS-159-corporate-security-executive-protection-and-travel-risk-management/) (PA-159.1 strategy/threat intelligence, PA-159.2 executive protection & travel/event security, PA-159.3 investigations, insider threat & workplace violence), RA 5487 (Private Security Agency Law — licensed guard coverage), POL-G13 (fraud interface), POL-R05 (LP interface), POL-D02 (investigative data handling) |
+
+**Policy statements.**
+1. Physical security operates as a **governed program, not a guard contract**:
+   site risk assessments set the guard coverage per format (PA-159.1), and
+   only **RA 5487-licensed security agencies** with verified SSS/minimum-wage
+   compliance for their guards may serve the estate — guard post orders,
+   use-of-force limits and incident-reporting duties are contract terms with
+   audit teeth (POL-P03), and the agency panel reviews annually.
+2. **Executive protection & travel risk** (PA-159.2): travel to elevated-risk
+   destinations requires the pre-travel risk brief and, where the risk tier
+   dictates, protection detail; executive residences/events security follows
+   the assessed-need standard; travel booking data feeds the duty-of-care
+   tracking so the company can locate and assist travelers in an emergency
+   (employee privacy handled per POL-D02).
+3. **Workplace violence & insider threat** (PA-159.3): threat-of-violence
+   reports route through the same-day assessment protocol with HR (POL-H06/
+   POL-H07 interface) — no "wait and see" on credible threats; terminations
+   with hostility indicators get a coordinated security/HR plan before
+   notice; insider-threat indicators (access anomalies, POL-I02 data, LP
+   cases) review jointly under the evidence rules.
+4. **Investigations discipline:** corporate-security investigations (theft,
+   threats, premises incidents) follow the evidence standards (POL-R05.2
+   chain, CCTV per POL-R05.4), coordinate with LP/Forensic (POL-G13) to
+   avoid duplicate or conflicting cases, and refer criminal matters only
+   through VP Legal & Compliance — security staff never detain beyond the
+   citizen's-arrest rules (POL-R05.3 safety-first standard applies).
+5. Incident and threat intelligence (attempted intrusions, organized retail
+   crime patterns, geo events) consolidates in the VS-159 analytics and
+   shares to the risk register (POL-G10) and the store-safety program
+   (POL-R11) — security information is a company asset, not a post log.
+6. Crisis interface: security incidents with life-safety dimension trigger
+   the emergency plan (POL-S02) immediately; the corporate-security role in
+   the crisis team (POL-B01.4) is the protection of people first, property
+   second, evidence always.
+
+---
+
+## POL-S10 — Product Stewardship & Take-Back (Hazardous-End Programs)
+
+| | |
+|---|---|
+| Owner (R) / Approver | Sustainability / ESG Lead (program) + HSE Manager (handling) / **COO** |
+| Cadence | 1-year review (DENR regulation changes immediate) |
+| Anchors | [VS-187](../workflows/VS-187-household-hazardous-waste-paint-and-product-stewardship-take-back/) (PA-187.1 program setup & partner network, PA-187.2 take-back operations, PA-187.3 recovery/disposal/reporting), RA 6969 (Toxic Substances & Hazardous Nuclear Waste Control), RA 11898 EPR interface (plastic EPR per POL-S03.7), RA 9003 (ecological solid waste), DENR hauler/treater accreditation per POL-S03.2, POL-R02 (customer interface), POL-R04 (quarantine rules) |
+
+**Policy statements.**
+1. The company runs **take-back programs for the hazardous-end products it
+   sells** (paint, solvents, batteries, lamps, e-waste-adjacent items):
+   collection points operate only where the program design (PA-187.1) has
+   verified the partner/recycler network and the DENR registrations behind
+   it — a take-back promise without a licensed downstream is prohibited.
+2. **Take-back operations** (PA-187.2): collected items intake with
+   quantity/condition capture, quarantine per POL-R04.2 evidence rules,
+   segregated storage per POL-S04 compatibility standards — collected
+   hazardous goods are hazardous waste in law, never resellable stock.
+3. **Recovery & disposal** (PA-187.3): materials move only to accredited
+   transporters/treaters with manifests (POL-S03.2 chain), recovery/
+   recycling rates track to the program targets, and disposal certificates
+   file in the compliance register — the company's name stays on its waste
+   until a licensed chain lawfully ends that.
+4. **Regulatory interface:** product-stewardship obligations (registrations,
+   reports, take-back quotas where applicable under RA 6969/DENR rules and
+   the RA 11898 EPR regime for the packaging footprint) run on the
+   Compliance calendar (POL-G12 register) with the ESG dashboard (POL-S03.9)
+   carrying the performance metrics — regulatory credit trading only within
+   the statutes' rules.
+5. Customer-facing honesty: take-back terms (what, where, fees if any) are
+   published and honored (POL-R02 interface); stores never refuse a covered
+   item the program accepts, and never accept outside the program scope
+   (no unlicensed drop-off classes).
