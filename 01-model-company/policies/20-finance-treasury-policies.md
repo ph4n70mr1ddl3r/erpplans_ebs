@@ -142,7 +142,7 @@
 
 | | |
 |---|---|
-| Owner (R) / Approver | AR / Credit Manager / **CFO** |
+| Owner (R) / Approver | AR & Credit Manager / **CFO** |
 | Cadence | 2-year review (limits re-tiered) |
 | Anchors | PA-16.2 (AR & collections), the trade-credit lifecycle ([VS-68](../workflows/VS-68-trade-credit-risk-management/), PA-68.1 risk assessment, PA-68.2 limits & monitoring, PA-68.3 recovery/write-off), W5B trade account rules, the credit-bearing B2B channels — trade program ([VS-43](../workflows/VS-43-trade-professional-program/)), sari-sari/micro-wholesale ([VS-82](../workflows/VS-82-sari-sari-msme-micro-wholesale/)), strategic key accounts ([VS-107](../workflows/VS-107-strategic-key-account-enterprise-customer-management/)), cooperatives ([VS-185](../workflows/VS-185-b2b-cooperative-credit-and-procurement-partnerships/)) — trade credit insurance canon |
 
@@ -261,7 +261,7 @@ Financing and lending activities are **POL-F08** below.
 
 | | |
 |---|---|
-| Owner (R) / Approver | Treasurer / **CFO** (Board: new programs & limits) |
+| Owner (R) / Approver | Treasury Manager / **CFO** (Board: new programs & limits) |
 | Cadence | 1-year review (BSP/SEC regulation changes immediate) |
 | Anchors | [VS-154](../workflows/VS-154-home-construction-finance-loan-brokerage-and-mortgage-referral/) (construction-finance referral, PA-154.1–154.3), [VS-188](../workflows/VS-188-trade-reseller-floor-plan-and-dealer-inventory-financing/) (floor-plan financing, PA-188.1–188.3), [VS-189](../workflows/VS-189-trade-receivables-factoring-invoice-discounting-and-securitization/) (receivables financing, PA-189.1–189.3), [VS-170](../workflows/VS-170-inventory-pledge-asset-based-lending-and-trust-receipt-financing/) (inventory pledge/trust receipts, PA-170.1–170.3), [VS-181](../workflows/VS-181-b2b-project-financing-escrow-account-orchestration-and-lien-release/) (escrow/lien, PA-181.x), [VS-96](../workflows/VS-96-equipment-leasing-capital-equipment-finance/) (equipment finance, PA-96.x), consumer installment financing ([VS-38](../workflows/VS-38-consumer-credit-financing/), PA-38.1–38.3), VS-156 (financial-agency products, PA-156.1) |
 
@@ -284,7 +284,7 @@ Financing and lending activities are **POL-F08** below.
    BSP coverage assessed for credit/lending exposure (RA 3765 Truth in
    Lending, BSP circulars; RA 9474/RA 8556 where lending investors/financing
    companies are involved), SEC registration for financing/factoring
-   activity, PD 115 (Lintang Law-style investment contracts) screening for
+   activity, PD 115 (Investment Contracts Law) screening for
    any investment-soliciting product, RA 11057 for security interests in
    movable property. No program launches without Compliance's written
    perimeter memo (POL-G07 AML obligations assessed at the same gate —
@@ -311,7 +311,7 @@ Financing and lending activities are **POL-F08** below.
 
 | | |
 |---|---|
-| Owner (R) / Approver | Head of Real Estate & Construction (program) + Controller (accounting) / **CFO** (Board: acquisitions per POL-G05.7) |
+| Owner (R) / Approver | Director, Facilities & Real Estate (program) + Controller (accounting) / **CFO** (Board: acquisitions per POL-G05.7) |
 | Cadence | 1-year review (statute & valuation changes) |
 | Anchors | corporate real-estate portfolio ([VS-97](../workflows/VS-97-corporate-real-estate-property-portfolio/), PA-97.1–97.3), lease administration ([VS-42](../workflows/VS-42-property-lease-admin/), PA-42.1–42.3), real-estate development & construction ([VS-20](../workflows/VS-20-real-estate-construction/), PA-20.1–20.3), landbanking & land-use conversion ([VS-178](../workflows/VS-178-landbanking-site-acquisition-and-agrarian-lgu-zoning-conversion/), PA-178.1–178.3), lease accounting per POL-F07.6 (PFRS 16, VS-148) |
 

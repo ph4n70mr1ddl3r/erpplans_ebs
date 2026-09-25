@@ -152,3 +152,8 @@
    (PA-137.1) — channels syndicate from the governed master only (PA-137.3),
    never from local copies; a product page claiming an attribute the master
    does not carry is a data defect, not a marketing convenience.
+7. **Customer identity data** obeys the consent chain, not just the steward
+   chain: the CDP/single-customer-view consolidation (VS-126) draws only from
+   consented sources per POL-D01.3 — master-data merging never manufactures
+   consent the source capture lacked, and identity-resolution conflicts
+   resolve under this policy's governance workflow like any hierarchy change.

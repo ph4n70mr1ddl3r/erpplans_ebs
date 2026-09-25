@@ -9,7 +9,9 @@
 > codification). This manual ships **75 policies** across the nine domains below
 > — the codification's fourth pass repaired the fold-anchor chains, closed the
 > subject-matter anchor gaps, and completed the register against the full
-> 188-domain workflow corpus (see §4 and the [gap analysis](gap-analysis.md));
+> 188-domain workflow corpus, and the fifth pass reconciled every owner title
+> to the TO's §5.3 role register and completed the residual fold half-anchors
+> (see §4 and the [gap analysis](gap-analysis.md));
 > at 75 policies the manual now *exceeds* the re-pointed "~50–60" canon, which
 > requires re-baselining at the next W1729 review.
 
@@ -73,42 +75,42 @@ truth; the policy states the rule, the workflow executes it.
 | POL-G04 | Conflict of Interest Disclosure & Management | Corporate Secretary | Board | 2y | W1734 |
 | POL-G05 | Delegation of Authority & Signing Authority | Corporate Secretary | Board | 1y | W1732 |
 | POL-G06 | Political Engagement, Donations & Sponsorships | VP Legal & Compliance | Board | 2y | PA-132.1 |
-| POL-G07 | Anti-Money Laundering / CTF & Sanctions | MLRO / Compliance Officer | Board (Audit Cmte) | 1y | VS-86, W2921–W2932, CTL-237 |
+| POL-G07 | Anti-Money Laundering / CTF & Sanctions | Compliance Manager / MLRO | Board (Audit Cmte) | 1y | VS-86, W2921–W2932, CTL-237 |
 | POL-G08 | Competition Law Compliance (RA 10667) | VP Legal & Compliance | Board | 2y | W2683, VS-129 |
-| POL-G09 | Intellectual Property & Brand Protection | IP Counsel | CEO | 2y | PA-100.2, CTL-530, VS-71, VS-168 |
-| POL-G10 | Enterprise Risk & Third-Party Risk Management | ERM / TPRM Lead | Board (Audit Cmte) | 1y | W322 appetite, PA-26.1 |
+| POL-G09 | Intellectual Property & Brand Protection | Litigation & IP Counsel | CEO | 2y | PA-100.2, CTL-530, VS-71, VS-168 |
+| POL-G10 | Enterprise Risk & Third-Party Risk Management | Head of Internal Audit & Risk | Board (Audit Cmte) | 1y | W322 appetite, PA-26.1 |
 | POL-G11 | Corporate Governance, Board Operations & Disclosure | Corporate Secretary | Board | 1y | PA-36.1, W1730, PA-173.2, VS-21 |
-| POL-G12 | Licenses, Permits & Accreditation Portfolio | Compliance Officer | VP Legal & Compliance | 1y | VS-166, PA-22.1, PA-76.1, VS-37/59/109 site lifecycle |
+| POL-G12 | Licenses, Permits & Accreditation Portfolio | Compliance Manager / MLRO | VP Legal & Compliance | 1y | VS-166, PA-22.1, PA-76.1, VS-37/59/109 site lifecycle |
 | POL-G13 | Fraud Management & Payment Protection | Forensic / Fraud Investigator | Board (Audit Cmte) | 1y | VS-125, VS-80, VS-149 |
 | POL-G14 | Government & Institutional Sales Compliance | VP Legal & Compliance | Board | 1y | VS-46 (RA 9184 as supplier, COA billing) |
 | **Finance, Treasury & Tax** ([manual](20-finance-treasury-policies.md)) | | | | | |
-| POL-F01 | Treasury, Cash Management & Banking Authority | Treasurer / CFO | CFO (Board: limits) | 1y | W322, W30, W323, VS-105 |
+| POL-F01 | Treasury, Cash Management & Banking Authority | Treasury Manager / CFO | CFO (Board: limits) | 1y | W322, W30, W323, VS-105 |
 | POL-F02 | Foreign Exchange Risk & Hedging | Treasury Manager | CFO | 1y | W30 step 10a, W80, VS-106 commodities |
 | POL-F03 | Capital Expenditure & Investment Approval | FP&A Manager | CFO (Board: >₱10M) | 1y | W1811, W1732, VS-130 |
 | POL-F04 | Expense Reimbursement & Business Travel | Controller | CFO | 2y | PA-34.x expense workflows |
-| POL-F05 | Credit & Collections | AR / Credit Manager | CFO | 2y | PA-16.2, W5B trade, VS-68, VS-43/82/107/185 channels |
+| POL-F05 | Credit & Collections | AR & Credit Manager | CFO | 2y | PA-16.2, W5B trade, VS-68, VS-43/82/107/185 channels |
 | POL-F06 | Revenue Assurance | Revenue Assurance Analyst | Controller | 2y | POS audit chain, PA-08.x, VS-118 |
 | POL-F07 | Accounting, Financial Reporting & Tax Compliance | Controller / Tax Manager | CFO | 1y | W9, PA-17.x, PA-79.x, VS-148, VS-158, VS-157, VS-35 |
-| POL-F08 | Financing & Lending Activities | Treasurer | CFO (Board: new programs) | 1y | VS-154, VS-188, VS-189, VS-170, VS-181, VS-96, VS-38 |
-| POL-F09 | Property Acquisition, Land-Use & Lease Compliance | Head of Real Estate & Construction | CFO (Board: acquisitions) | 1y | VS-97, VS-42, VS-20, VS-178 |
+| POL-F08 | Financing & Lending Activities | Treasury Manager | CFO (Board: new programs) | 1y | VS-154, VS-188, VS-189, VS-170, VS-181, VS-96, VS-38 |
+| POL-F09 | Property Acquisition, Land-Use & Lease Compliance | Director, Facilities & Real Estate | CFO (Board: acquisitions) | 1y | VS-97, VS-42, VS-20, VS-178 |
 | **Procurement & Vendor Management** ([manual](30-procurement-vendor-policies.md)) | | | | | |
 | POL-P01 | Competitive Sourcing & Bidding | Procurement Manager | CFO | 2y | W632, W2 series |
-| POL-P02 | Vendor Lifecycle (Onboarding → AVL → Exit) | Vendor Management Lead | CFO | 2y | VS-03 workflows, VS-15, VS-110, VS-111, VS-94/185, VS-122 |
+| POL-P02 | Vendor Lifecycle (Onboarding → AVL → Exit) | Vendor Management Manager | CFO | 2y | VS-03 workflows, VS-15, VS-110, VS-111, VS-94/185, VS-122 |
 | POL-P03 | Contract Management | Contracts & Commercial Manager | VP Legal & Compliance | 2y | W230, legal workflows |
 | POL-P04 | Supplier Code of Conduct & Responsible Sourcing | Procurement Manager | Board | 2y | VS-131 due diligence |
-| POL-P05 | Customs & Trade Compliance | Import/Trade Compliance Lead | CFO | 1y | VS-87, VS-182 |
+| POL-P05 | Customs & Trade Compliance | Imports & Customs Manager | CFO | 1y | VS-87, VS-182 |
 | **Human Resources & Employment** ([manual](40-hr-employment-policies.md)) | | | | | |
-| POL-H01 | Recruitment & Selection | Talent Acquisition Lead | CHRO | 2y | PA-19.1, VS-121, VS-167 |
+| POL-H01 | Recruitment & Selection | Talent Acquisition Manager | CHRO | 2y | PA-19.1, VS-121, VS-167 |
 | POL-H02 | Onboarding & Probationary Employment | HRBP (Field) | CHRO | 2y | PA-19.1, PA-19.2 |
 | POL-H03 | Compensation, Benefits & Employee Welfare Programs | Compensation & Benefits Manager | CHRO + CEO | 1y | PA-102.x, VS-144, VS-169, VS-141 |
 | POL-H04 | Performance Management & Talent Development | HRBP (Field) | CHRO | 2y | PA-19.3/19.4 |
 | POL-H05 | Attendance, Leave & Working Hours | HR Shared Services | CHRO | 2y | PA-19.x payroll chain |
-| POL-H06 | Employee Discipline & Due Process | Labor Relations Manager | CHRO + CEO | 2y | PA-19.x, W43 |
+| POL-H06 | Employee Discipline & Due Process | Labor Relations Director | CHRO + CEO | 2y | PA-19.x, W43 |
 | POL-H07 | Anti-Harassment & Safe Spaces | HRBP (Field) | CHRO + CEO | 2y | PA-19.x, W1733 |
 | POL-H08 | Drug-Free Workplace & Substance Abuse | HSE Officer / CHRO | CHRO + CEO | 2y | VS-150, PA-150.1 |
 | POL-H09 | Separation, Retirement & Clearance | HR Shared Services | CHRO | 2y | W43, PA-19.x |
-| POL-H10 | Contingent, Outsourced & Foreign Workforce | HRBP (Field) + Labor Relations | CHRO + CEO | 1y | VS-98, VS-160, VS-183 |
-| POL-H11 | Labor Relations & Collective Bargaining | Labor Relations Manager | CHRO + CEO | 1y | VS-84 (CBA, grievance, DOLE conciliation) |
+| POL-H10 | Contingent, Outsourced & Foreign Workforce | HRBP (Field) + Labor Relations Director | CHRO + CEO | 1y | VS-98, VS-160, VS-183 |
+| POL-H11 | Labor Relations & Collective Bargaining | Labor Relations Director | CHRO + CEO | 1y | VS-84 (CBA, grievance, DOLE conciliation) |
 | **IT & Information Security** ([manual](50-it-security-policies.md)) | | | | | |
 | POL-I01 | Acceptable Use of IT Resources | CIO / SEC platform | CIO | 2y | VS-27 workflows |
 | POL-I02 | Access Control & Joiner–Mover–Leaver | Identity & Access (IAP) | CIO | 1y | W132, W5518, EBS roles |
@@ -128,7 +130,7 @@ truth; the policy states the rule, the workflow executes it.
 | POL-R02 | Returns, Refunds, Exchanges & Trade-In / Haul-Away | VP Store Operations | COO | 2y | W1622 family, VS-186, VS-143 |
 | POL-R03 | Pricing, Price Adjustments & Overrides | Pricing Manager | COO | 1y | W40, W468, W13, VS-64 |
 | POL-R04 | Inventory Adjustments, Write-offs & Damage | Inventory Control | COO | 2y | W-series inventory, VS-45 |
-| POL-R05 | Shrink Management & Loss Prevention | Director, Loss Prevention | COO | 2y | VS-23, LP workflows |
+| POL-R05 | Shrink Management & Loss Prevention | Director, Regional Loss Prevention | COO | 2y | VS-23, LP workflows |
 | POL-R06 | Product Safety, Standards & Recall | Regulatory Compliance Officer | VP Legal & Compliance | 1y | W29, W447, W41, VS-89, VS-117, VS-31, VS-41 |
 | POL-R07 | Gift Cards, Store Credit, Layaway & Promotional Instruments | VP Store Operations | COO | 2y | W28, CTL-49, VS-54 |
 | POL-R08 | Advertising, Promotions & Promotional Claims | VP Marketing | COO | 2y | W427, W13, VS-58, VS-14 |
@@ -136,20 +138,20 @@ truth; the policy states the rule, the workflow executes it.
 | POL-R10 | Statutory Mandatory Discounts & VAT Exemptions | Pricing Manager | COO | 1y | VS-85, PA-85.1–85.3 |
 | POL-R11 | Customer & Premises Safety / Liability | VP Store Operations | COO | 1y | VS-147, VS-171 |
 | **Health, Safety & Environment** ([manual](80-health-safety-environment-policies.md)) | | | | | |
-| POL-S01 | Occupational Safety & Health (incl. Driver Safety) | HSE Manager | CEO | 1y | RA 11058 program, VS-24, VS-06, VS-61 |
-| POL-S02 | Emergency Preparedness & Disaster Response | HSE Manager | COO | 1y | VS-69 typhoon workflows, VS-180 |
-| POL-S03 | Environmental, Energy & Waste Management | Sustainability / ESG Lead | CEO | 1y | VS-73, VS-108, VS-25, VS-70, VS-191 |
-| POL-S04 | Dangerous Goods & Hazardous Materials | HSE Manager | COO | 2y | VS-114 |
+| POL-S01 | Occupational Safety & Health (incl. Driver Safety) | Head of HSE | CEO | 1y | RA 11058 program, VS-24, VS-06, VS-61 |
+| POL-S02 | Emergency Preparedness & Disaster Response | Head of HSE | COO | 1y | VS-69 typhoon workflows, VS-180 |
+| POL-S03 | Environmental, Energy & Waste Management | Head of Sustainability / ESG | CEO | 1y | VS-73, VS-108, VS-25, VS-70, VS-191 |
+| POL-S04 | Dangerous Goods & Hazardous Materials | Head of HSE | COO | 2y | VS-114 |
 | POL-S05 | Employee Health, Wellness & Canteen | Company Nurse / HSE | CHRO | 2y | VS-19 HSE workflows, VS-83 |
-| POL-S06 | Live Goods, Plant Health & Agri-Input Compliance | Garden Operations Lead | COO | 1y | VS-145, CTL-665, W4352 |
-| POL-S07 | Contractor Licensing & Construction Compliance | Facilities & Construction Lead | COO | 1y | VS-165, VS-74, VS-172 |
-| POL-S08 | LPG, Pressure-Vessel & Gas-Refill Safety | HSE Manager | COO | 1y | VS-175, RA 11592 |
-| POL-S09 | Corporate Security, Executive Protection & Travel Risk | Corporate Security Manager | COO | 1y | VS-159 (RA 5487 licensed guarding) |
-| POL-S10 | Product Stewardship & Take-Back (Hazardous-End Programs) | Sustainability / ESG Lead + HSE | COO | 1y | VS-187 (RA 6969/RA 9003, EPR interface) |
+| POL-S06 | Live Goods, Plant Health & Agri-Input Compliance | Garden Buyer (Merchandising) | COO | 1y | VS-145, CTL-665, W4352 |
+| POL-S07 | Contractor Licensing & Construction Compliance | Director, Facilities & Real Estate | COO | 1y | VS-165, VS-74, VS-172 |
+| POL-S08 | LPG, Pressure-Vessel & Gas-Refill Safety | Head of HSE | COO | 1y | VS-175, RA 11592 |
+| POL-S09 | Corporate Security, Executive Protection & Travel Risk | Director, Regional Loss Prevention | COO | 1y | VS-159 (RA 5487/11917 licensed guarding) |
+| POL-S10 | Product Stewardship & Take-Back (Hazardous-End Programs) | Head of Sustainability / ESG + Head of HSE | COO | 1y | VS-187 (RA 6969/RA 9003, EPR interface) |
 | **Business Continuity & Insurance** ([manual](90-business-continuity-insurance-policies.md)) | | | | | |
-| POL-B01 | Business Continuity Management & Crisis Response | ERM / Internal Audit Lead | Board | 1y | VS-26 |
-| POL-B02 | Corporate Insurance & Claims Management | Facilities & Surety / Finance | CFO | 1y | PA-26.3 |
-| POL-B03 | Surety, Captive & Risk Financing | Facilities & Surety + Treasurer | CFO (Board: captive) | 1y | VS-116, VS-153 |
+| POL-B01 | Business Continuity Management & Crisis Response | Head of Internal Audit & Risk | Board | 1y | VS-26 |
+| POL-B02 | Corporate Insurance & Claims Management | Surety Program Manager / Finance | CFO | 1y | PA-26.3 |
+| POL-B03 | Surety, Captive & Risk Financing | Surety Program Manager + Treasury Manager | CFO (Board: captive) | 1y | VS-116, VS-153 |
 
 *Count check: 14+9+5+11+7+5+11+10+3 = **75** — the manual now exceeds W1729's
 re-pointed "~50–60 active corporate policies" Volume canon (re-baseline due).
@@ -266,6 +268,41 @@ note that their risk-bearing edges are individually anchored where they
 touch one (e.g. marketplace customer data → POL-D01; IT asset disposal →
 POL-I04.5; price-matching conduct → POL-R03.5).
 
+**Fifth-pass owner & anchor reconciliation (2026-09-25).** The pass-5 review
+ran the pass-4 mechanical method against the two surfaces no earlier pass
+grep-verified: the **owner column** and the **fold decisions' sibling halves**.
+Findings: (a) **27 owner cells minted outside the org of record** — the TO's
+§5.3 Enterprise Role Register (194 rows / 193 distinct role titles) and the
+corpus's own role-vocabulary alias adjudication (`generate-role-coverage.py`)
+resolve every seat, and 27 policy-owner cells used titles neither recognizes
+('Treasurer', 'HSE Manager', 'Corporate Security Manager', 'Garden Operations
+Lead', 'Vendor Management Lead', 'Import/Trade Compliance Lead', 'Labor
+Relations Manager', 'Talent Acquisition Lead', 'IP Counsel', 'Compliance
+Officer', 'ERM / TPRM Lead', 'Facilities & Surety', 'Facilities & Construction
+Lead', 'Head of Real Estate & Construction', 'Director, Loss Prevention', 'AR /
+Credit Manager', 'Sustainability / ESG Lead') — all re-seated to their
+canonical titles (Treasury Manager, Head of HSE, Director Regional Loss
+Prevention, Garden Buyer (Merchandising), Vendor Management Manager, Imports &
+Customs Manager, Labor Relations Director, Talent Acquisition Manager,
+Litigation & IP Counsel, Compliance Manager / MLRO, Head of Internal Audit &
+Risk, Surety Program Manager, Director Facilities & Real Estate, AR & Credit
+Manager, Head of Sustainability / ESG) in both the register and the manuals —
+README §5's "every owner role exists here" claim is now true by grep, not by
+assertion; and (b) **five fold decisions carried only their sibling half** —
+remote work → POL-H05 (no remote-work content existed at all), home-charge →
+POL-S03 (VS-192 was written into S01.6 only), packaging → POL-S03 (VS-111
+written into P02.5 only), CDP → POL-D05 (VS-126 written into D01.3 only),
+plant guarantee → POL-R02 (W4352 written into S06.5 only) — each now written
+(H05.5, S03.4, S03.5, D05.7, R02.7). Statute-name and canon true-ups rode the
+same pass: 'PD 115 (Lintang Law…)' corrected to the Investment Contracts Law,
+the uncorpus 'ORB/TVS' invoice-documentation coinage re-pointed to W1966's
+BIR-registered invoice/receipt canon, POL-G02's gift-register rule reconciled
+to PA-22.3's ₱1,000 declaration auto-route, 'Rev. Proc.' (IRS-speak) re-pointed
+to BIR deductibility rules, RA 5487 cited with its RA 11917 amendment, POL-R07's
+manual title aligned to the register's 'Layaway' form, and the five domain-
+manual approval-class headers made exact (G12/S05/R06 exceptions, the HR
+domain's two-class split, the B domain's class line).
+
 **Out of scope for the policy layer (deliberate):** departmental SOPs (the
 5,433 workflows *are* the SOP layer); technical/security standards (EBS
 blueprint, SDLC standard); customer-facing legal terms (ecommerce T&C, loyalty
@@ -277,7 +314,7 @@ certification is an organizational decision, not a policy).
 ## 5. Related documents
 
 - [Model Company Profile](../model-company-profile.md) — the operating facts policies assume (200 stores, 4 DCs, 5 entities, PHP)
-- [Table of Organization](../optimal-table-of-organization.md) — every owner role named above exists here
+- [Table of Organization](../optimal-table-of-organization.md) — every owner role named above resolves here (the TO §5.3 role register, exactly or through the corpus's role-vocabulary alias adjudication)
 - [Internal Controls Matrix](../internal-controls-matrix.md) — the CTL register
 - [ERP Requirements](../erp-requirements.md) — where a policy requires system enforcement, its requirement lives here
 - AI/agent governance: [`07-methodology/ai-first-operating-guide.md`](../../07-methodology/ai-first-operating-guide.md)

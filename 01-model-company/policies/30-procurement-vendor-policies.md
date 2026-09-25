@@ -41,7 +41,7 @@
 
 | | |
 |---|---|
-| Owner (R) / Approver | Vendor Management Lead / **CFO** |
+| Owner (R) / Approver | Vendor Management Manager / **CFO** |
 | Cadence | 2-year review |
 | Anchors | VS-03 vendor-management workflows (sourcing & onboarding, scorecards, development); the procure-to-pay chain ([VS-15](../workflows/VS-15-procure-to-pay/), PA-15.1 invoice processing & matching, PA-15.2 vendor payment & reconciliation); freight procurement ([VS-110](../workflows/VS-110-freight-procurement-carrier-management-and-freight-audit/), PA-110.1–110.3); packaging & RTI pools ([VS-111](../workflows/VS-111-packaging-pallet-and-returnable-transport-item-management/), PA-111.1–111.3); cooperative procurement ([VS-94](../workflows/VS-94-cooperative-community-enterprise-procurement/), PA-94.1–94.3); B2B cooperative partnerships ([VS-185](../workflows/VS-185-b2b-cooperative-credit-and-procurement-partnerships/)) |
 
@@ -155,7 +155,7 @@
 
 | | |
 |---|---|
-| Owner (R) / Approver | Import/Trade Compliance Lead / **CFO** (VP Legal & Compliance: enforcement matters) |
+| Owner (R) / Approver | Imports & Customs Manager / **CFO** (VP Legal & Compliance: enforcement matters) |
 | Cadence | 1-year review (tariff & CMTA changes immediate) |
 | Anchors | [VS-87](../workflows/VS-87-customs-trade-compliance-tariff/) (PA-87.1–87.3, W2945+), [VS-182](../workflows/VS-182-b2b-bulk-project-custom-import-indent-sourcing-and-brokerage/) (indent/LC/port-to-jobsite, PA-182.1–182.3), POL-P02 onboarding gates, POL-F01 FX/settlement linkage |
 

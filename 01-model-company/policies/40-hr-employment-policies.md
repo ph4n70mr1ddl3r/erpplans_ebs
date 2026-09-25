@@ -1,7 +1,10 @@
 # Human Resources & Employment Policies (POL-H)
 
 > Domain manual of the [Corporate Policy Manual](README.md). Approval class:
-> **CHRO + CEO** (W1729.4 HR class). drafted to Philippine labor law: Labor Code
+> **CHRO + CEO** (W1729.4 HR class) for the conduct-, compensation- and
+> labor-relations-bearing policies (H03, H06, H07, H08, H10, H11); **CHRO**
+> for the employment-lifecycle policies (H01, H02, H04, H05, H09). Drafted to
+> Philippine labor law: Labor Code
 > (as renumbered), DOLE implementing rules, SSS/PhilHealth/Pag-IBIG mandates,
 > RA 11036 (mental health), RA 7877 & RA 11313 (safe spaces), RA 9165 (dangerous
 > drugs), RA 10173 (employee data). The employment lifecycle executes through
@@ -13,7 +16,7 @@
 
 | | |
 |---|---|
-| Owner (R) / Approver | Talent Acquisition Lead / **CHRO** |
+| Owner (R) / Approver | Talent Acquisition Manager / **CHRO** |
 | Cadence | 2-year review |
 | Anchors | PA-19.1; the talent-acquisition program ([VS-121](../workflows/VS-121-talent-acquisition-employer-brand-candidate-experience/), PA-121.1–121.3); workforce background screening ([VS-167](../workflows/VS-167-workforce-background-screening-credentialing-and-personnel-vetting/), PA-167.1–167.3); hiring authority per POL-G05 (W1732.1(d)) |
 
@@ -144,6 +147,12 @@
 4. Biometric and CCTV timekeeping data is employee personal data — access
    restricted, retained per POL-D04, never used beyond attendance/purpose
    notified (W1735 consent item).
+5. **Remote & hybrid work** (where a role permits it): arrangements are
+   manager-approved and time-bound in writing (the PA-19.3 workforce-
+   management canon), stay governed by the same working-hours, overtime,
+   leave and premium rules as on-site work (statements 1–3), and ride the
+   endpoint and access rules of POL-I01/POL-I03 — a remote arrangement never
+   alters statutory coverage, benefits or premium obligations (POL-H03).
 
 ---
 
@@ -151,7 +160,7 @@
 
 | | |
 |---|---|
-| Owner (R) / Approver | Labor Relations Manager / **CHRO + CEO** |
+| Owner (R) / Approver | Labor Relations Director / **CHRO + CEO** |
 | Cadence | 2-year review |
 | Anchors | Labor Code due process (twin-notice rule), W43 separation hooks, PA-19.x |
 
@@ -258,7 +267,7 @@
 
 | | |
 |---|---|
-| Owner (R) / Approver | HRBP (Field) + Labor Relations / **CHRO + CEO** |
+| Owner (R) / Approver | HRBP (Field) + Labor Relations Director / **CHRO + CEO** |
 | Cadence | 1-year review (DOLE regulation changes immediate) |
 | Anchors | [VS-98](../workflows/VS-98-contingent-contract-outsourced-workforce/) (PA-98.1–98.3, W555), [VS-160](../workflows/VS-160-global-mobility-immigration-and-foreign-worker-compliance/) (PA-160.1–160.3), [VS-183](../workflows/VS-183-dual-training-system-dts-and-tesda-partnership-program/) (DTS/TESDA, PA-183.1–183.3), POL-P03 service contracts, POL-I02 third-party access |
 
@@ -302,7 +311,7 @@
 
 | | |
 |---|---|
-| Owner (R) / Approver | Labor Relations Manager / **CHRO + CEO** |
+| Owner (R) / Approver | Labor Relations Director / **CHRO + CEO** |
 | Cadence | 1-year review (CBAs, docket and jurisprudence changes) |
 | Anchors | [VS-84](../workflows/VS-84-labor-relations-collective-bargaining/) (PA-84.1 union recognition & CBA negotiation/administration, PA-84.2 grievance & labor disputes/DOLE conciliation, PA-84.3 employee voice & engagement), Labor Code (Arts. 263–290, union & CBA framework), POL-H06 (discipline interface), POL-D04 (CBA/records retention) |
 

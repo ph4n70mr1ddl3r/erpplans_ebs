@@ -2,7 +2,8 @@
 
 > Domain manual of the [Corporate Policy Manual](README.md). Approval class:
 > **Board** for POL-G policies (W1729.4 — governance/critical class) except as
-> stated per policy (POL-G09: CEO).
+> stated per policy (POL-G09: CEO; POL-G12: VP Legal & Compliance — an
+> operational portfolio register, not a Board conduct policy).
 > Review cycle: 2 years unless stated. Operationalized mainly by
 > [PA-36.3](../workflows/VS-36-corporate-governance/PA-36.3-corporate-policy-entity-governance.md).
 
@@ -48,7 +49,7 @@ operations.
 |---|---|
 | Owner (R) / Approver | VP Legal & Compliance / **Board** |
 | Cadence | 2-year review |
-| Anchors | W632 (competitive bidding integrity), P2P workflows; Rev. Proc. / BIR gift rules for deductibility |
+| Anchors | W632 (competitive bidding integrity), P2P workflows; BIR deductibility rules for business gifts; the gift & entertainment register (PA-22.3 canon) |
 
 **Policy statements.**
 1. No employee may offer, give, solicit or accept anything of value to obtain
@@ -60,8 +61,9 @@ operations.
    lawful, published fees and expedited-program payments only.
 3. **Commercial gifts:** nominal items (< ₱2,000 value per occasion, no cash or
    cash equivalents) may be accepted only if unsolicited, infrequent and
-   declared in the Gift & Entertainment Register; anything above must be
-   declined or surrendered to HR Shared Services for disposition.
+   declared in the Gift & Entertainment Register (declarations above ₱1,000
+   auto-route to Compliance review per the PA-22.3 register canon); anything
+   above must be declined or surrendered to HR Shared Services for disposition.
 4. **Vendor-hosted entertainment** is limited to business-reasonable occasions
    and is prohibited during an active bid, negotiation or vendor dispute with
    that counterparty (W632 integrity rule).
@@ -205,7 +207,7 @@ against the active-bid calendar quarterly; Internal Audit samples it annually.
 
 | | |
 |---|---|
-| Owner (R) / Approver | MLRO / Compliance Officer / **Board (Audit Committee)** |
+| Owner (R) / Approver | Compliance Manager / MLRO / **Board (Audit Committee)** |
 | Cadence | 1-year review |
 | Anchors | VS-86 (AML compliance program, W2921–W2932), CTL-237, AMLA (RA 9160 as amended); BSP e-money **agent** obligations for the in-store financial-agency estate ([VS-156](../workflows/VS-156-in-store-value-added-services-and-financial-agency-operations/), PA-156.1–156.3: bills payment, remittance, e-money cash-in/out, mobile load) |
 
@@ -269,14 +271,14 @@ against the active-bid calendar quarterly; Internal Audit samples it annually.
 
 | | |
 |---|---|
-| Owner (R) / Approver | IP Counsel / **CEO** |
+| Owner (R) / Approver | Litigation & IP Counsel / **CEO** |
 | Cadence | 2-year review |
 | Anchors | [PA-100.2](../workflows/VS-100-legal-operations-litigation-ip-management/) (IP Portfolio & Brand Protection), CTL-530, VS-71 (anti-counterfeit detection & enforcement), in-store audio & music-royalty licensing ([VS-168](../workflows/VS-168-in-store-audio-ambient-media-and-music-royalty-licensing/), PA-168.1–168.3) |
 
 **Policy statements.**
 1. The IP portfolio (trademarks, private-brand marks, domain names, designs,
    software copyrights) is registered, renewed and defended under the
-   IP Counsel's portfolio program (W3265–W3272, W5563); brand usage on signage,
+   Litigation & IP Counsel's portfolio program (W3265–W3272, W5563); brand usage on signage,
    packaging, marketing and the mobile/app estate follows the brand-usage rules.
 2. **Company-created work:** employee-produced work product (code, designs,
    content, private-brand developments) is company property per employment
@@ -303,7 +305,7 @@ against the active-bid calendar quarterly; Internal Audit samples it annually.
 
 | | |
 |---|---|
-| Owner (R) / Approver | ERM / TPRM Lead (Internal Audit & Risk) / **Board (Audit Committee)** |
+| Owner (R) / Approver | Head of Internal Audit & Risk / **Board (Audit Committee)** |
 | Cadence | 1-year review (appetite re-affirmation) |
 | Anchors | W322 (risk appetite framework), PA-26.1 (BCP linkage), POL-P02/P04 (vendor lifecycle & code), POL-I02 (vendor access) |
 
@@ -371,7 +373,7 @@ against the active-bid calendar quarterly; Internal Audit samples it annually.
 
 | | |
 |---|---|
-| Owner (R) / Approver | Compliance Officer / **VP Legal & Compliance** |
+| Owner (R) / Approver | Compliance Manager / MLRO / **VP Legal & Compliance** |
 | Cadence | 1-year review (multi-agency exposure) |
 | Anchors | [VS-166](../workflows/VS-166-regulatory-license-permit-and-accreditation-portfolio-management/) (PA-166.1–166.3, W1400/W1547/W2910/W4735), PA-22.1 (permits & licenses), PA-76.1 (multi-LGU permits), the site-lifecycle permit waves — new-store openings ([VS-37](../workflows/VS-37-store-opening-commissioning/)), closures ([VS-59](../workflows/VS-59-store-closure-decommissioning/)), remodels ([VS-109](../workflows/VS-109-store-remodel-renovation-lifecycle-refurbishment/)) |
 
@@ -388,7 +390,7 @@ against the active-bid calendar quarterly; Internal Audit samples it annually.
    and a calendar entry (PA-166.2 renewal execution); renewals start at the
    lead-time, never at expiry; multi-site renewal campaigns (200 stores ×
    LGU permits) run as managed programs with district accountability.
-3. **Regulatory intelligence:** the Compliance Officer tracks rule changes,
+3. **Regulatory intelligence:** the Compliance Manager / MLRO tracks rule changes,
    new permit classes and agency circulars affecting the estate (PA-166.1
    regulatory intelligence); new business initiatives (new category, service,
    channel) complete a permit-impact check before launch. The site lifecycle
@@ -464,8 +466,8 @@ against the active-bid calendar quarterly; Internal Audit samples it annually.
    and substitution rules (no silent product substitution) — default
    exposures escalate to VP Legal & Compliance immediately.
 4. **Billing & collection compliance** (PA-46.3): government invoices carry
-   the required documentation (ORB/TVS where applicable, COA-compliant
-   supports); receivables follow POL-F05 aging with the statutory-bar and
+   the required documentation (BIR-registered invoices and official receipts
+   per W1966, COA-compliant supports); receivables follow POL-F05 aging with the statutory-bar and
    audit-season calendars; no informal collection arrangements, no
    accommodation of fund-release timing beyond published rules.
 5. Every bid file retains the full evidence chain (eligibility, bid,

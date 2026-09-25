@@ -1,6 +1,9 @@
 # Business Continuity & Insurance Policies (POL-B)
 
-> Domain manual of the [Corporate Policy Manual](README.md). Domain workflow
+> Domain manual of the [Corporate Policy Manual](README.md). Approval class:
+> **Board** for POL-B01 (governance/critical class); **CFO** for POL-B02/B03
+> (financial class — Board for captive formation and program limits) per
+> W1729.4. Domain workflow
 > home: [VS-26](../workflows/VS-26-business-continuity-insurance/) (BCP planning
 > & testing, crisis management, insurance & claims). The 2026 typhoon events
 > (VS-69/PA-184) are the working proof the continuity doctrine exists — these
@@ -12,7 +15,7 @@
 
 | | |
 |---|---|
-| Owner (R) / Approver | ERM / Internal Audit Lead / **Board** |
+| Owner (R) / Approver | Head of Internal Audit & Risk / **Board** |
 | Cadence | 1-year review + exercise-driven updates |
 | Anchors | PA-26.1 (BCP planning & testing), PA-26.2 (crisis management), VS-69 typhoon response, PA-184.3 (temporary facility mobilization), disaster-relief coordination ([VS-180](../workflows/VS-180-disaster-relief-supply-chain-logistics-and-humanitarian-aid-coordination/), PA-180.1–180.3) |
 
@@ -53,7 +56,7 @@
 
 | | |
 |---|---|
-| Owner (R) / Approver | Facilities & Surety (program) + Finance (recovery) / **CFO** |
+| Owner (R) / Approver | Surety Program Manager (program) + Finance (recovery) / **CFO** |
 | Cadence | 1-year review (renewal season) |
 | Anchors | PA-26.3 (insurance claims & policy management), trade credit insurance (POL-F05), PA-184 insurance-appraisal coordination |
 
@@ -85,7 +88,7 @@
 
 | | |
 |---|---|
-| Owner (R) / Approver | Facilities & Surety (bonds) + Treasurer (risk financing) / **CFO** (Board: captive formation, program limits) |
+| Owner (R) / Approver | Surety Program Manager (bonds) + Treasury Manager (risk financing) / **CFO** (Board: captive formation, program limits) |
 | Cadence | 1-year review |
 | Anchors | [VS-116](../workflows/VS-116-performance-bond-surety-and-bank-guarantee-management/) (PA-116.1–116.3), [VS-153](../workflows/VS-153-captive-insurance-reinsurance-and-enterprise-risk-financing/) (PA-153.1–153.3), Insurance Code, POL-B02 program interface, POL-F01/F08 treasury linkage |
 

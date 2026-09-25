@@ -1,7 +1,7 @@
 # Health, Safety & Environment Policies (POL-S)
 
 > Domain manual of the [Corporate Policy Manual](README.md). Approval class:
-> **CEO/COO** per policy. Statutory base: **RA 11058** (OSH Act) & DOLE D.O.
+> **CEO/COO** per policy (POL-S05: CHRO). Statutory base: **RA 11058** (OSH Act) & DOLE D.O.
 > 198-18, fire code, sanitary code, **RA 9003 / RA 6969 / DENR rules** (waste &
 > hazardous waste), RA 11285 (energy efficiency). HSE executes through the
 > regional safety-officer network (HSE department, 13 FTE) and the VS-69/73/114
@@ -13,7 +13,7 @@
 
 | | |
 |---|---|
-| Owner (R) / Approver | HSE Manager / **CEO** |
+| Owner (R) / Approver | Head of HSE / **CEO** |
 | Cadence | 1-year review (OSH program re-filing) |
 | Anchors | RA 11058 / D.O. 198-18 program, per-store safety committees, the OSH execution family ([VS-24](../workflows/VS-24-health-safety-environment/), PA-24.1–24.3), fleet & fuel operations ([VS-61](../workflows/VS-61-fuel-fleet-cost-management/), PA-61.1–61.3), VS-06 fleet workflows, TESDA-standard equipment certifications |
 
@@ -55,7 +55,7 @@
 
 | | |
 |---|---|
-| Owner (R) / Approver | HSE Manager / **COO** |
+| Owner (R) / Approver | Head of HSE / **COO** |
 | Cadence | 1-year review (pre-season, before June) |
 | Anchors | [VS-69](../workflows/VS-69-typhoon-disaster-response/) typhoon & disaster response family, VS-26 BCP (POL-B01), PA-184 post-disaster reconstruction, disaster-relief logistics ([VS-180](../workflows/VS-180-disaster-relief-supply-chain-logistics-and-humanitarian-aid-coordination/), PA-180.1–180.3) |
 
@@ -94,7 +94,7 @@
 
 | | |
 |---|---|
-| Owner (R) / Approver | Sustainability / ESG Lead / **CEO** |
+| Owner (R) / Approver | Head of Sustainability / ESG / **CEO** |
 | Cadence | 1-year review |
 | Anchors | [VS-73](../workflows/VS-73-store-waste-circular-economy/) (segregation & DENR compliance), VS-108 (renewable/prosumer energy), PA-73.2 (hazardous waste DENR), ESG reporting ([VS-25](../workflows/VS-25-esg-sustainability/), PA-25.1–25.3), the solar product line ([VS-70](../workflows/VS-70-solar-renewable-energy/), PA-70.1–70.3), construction-debris & site-cleanup ([VS-191](../workflows/VS-191-customer-construction-debris-demolition-waste-and-site-cleanup-operations/), PA-191.1–191.3) |
 
@@ -113,9 +113,13 @@
 4. **Energy management:** sites follow the energy-efficiency program (LED
    retrofits, HVAC setpoints, peak-demand discipline) and the renewable/
    prosumer assets (rooftop solar per VS-108) operate under their safety and
-   grid-interconnection rules; energy intensity reports on the ESG dashboard.
+   grid-interconnection rules; EV-charging infrastructure (the green-fleet
+   program's depot/home-charge assets, VS-192) operates under the same
+   electrical-safety discipline (POL-S01.6); energy intensity reports on the
+   ESG dashboard.
 5. Product-side: private-brand packaging follows the restricted-substances and
-   packaging rules; take-back programs (old-appliance haul-away, battery
+   packaging rules (the VS-111 packaging/RTI supplier gates per POL-P02.5);
+   take-back programs (old-appliance haul-away, battery
    returns) route collected items to the correct waste streams (POL-R02/
    POL-S04 linkage).
 6. **Energy-efficiency statutory program** (RA 11285): the designated-
@@ -154,7 +158,7 @@
 
 | | |
 |---|---|
-| Owner (R) / Approver | HSE Manager / **COO** |
+| Owner (R) / Approver | Head of HSE / **COO** |
 | Cadence | 2-year review |
 | Anchors | [VS-114](../workflows/VS-114-dangerous-goods-hazmat-transport-ecommerce-regulatory-compliance/) (DG transport & ecommerce regulatory compliance) |
 
@@ -214,7 +218,7 @@
 
 | | |
 |---|---|
-| Owner (R) / Approver | Garden Operations Lead / **COO** (Quality: co-review) |
+| Owner (R) / Approver | Garden Buyer (Merchandising) / **COO** (Quality: co-review) |
 | Cadence | 1-year review (pre-wet-season) |
 | Anchors | [VS-145](../workflows/VS-145-garden-center-live-goods-and-plant-nursery/) (live goods & plant nursery), CTL-665 (grower qualification & phytosanitary compliance), W4352 (plant guarantee & replacement) |
 
@@ -246,7 +250,7 @@
 
 | | |
 |---|---|
-| Owner (R) / Approver | Facilities & Construction Lead / **COO** (VP Legal & Compliance: licensing) |
+| Owner (R) / Approver | Director, Facilities & Real Estate / **COO** (VP Legal & Compliance: licensing) |
 | Cadence | 1-year review |
 | Anchors | [VS-165](../workflows/VS-165-pcab-contractor-licensing-and-ra-4566-construction-contractor-compliance/) (PA-165.1–165.3, W162/W590), [VS-74](../workflows/VS-74-contractor-jobsite-delivery/) (PA-74.1–74.3), the third-party installer/pro-referral network ([VS-172](../workflows/VS-172-third-party-installer-and-contractor-network-pro-referral-management/), PA-172.1–172.3), RA 4566 (Contractor's License Law), RA 9184 (government procurement, where applicable), POL-P02/P04 vendor gates, POL-S01.3 contractor safety |
 
@@ -286,7 +290,7 @@
 
 | | |
 |---|---|
-| Owner (R) / Approver | HSE Manager / **COO** |
+| Owner (R) / Approver | Head of HSE / **COO** |
 | Cadence | 1-year review (pre-wet-season + pre-holiday demand) |
 | Anchors | [VS-175](../workflows/VS-175-propane-lpg-cylinder-exchange-and-gas-refill-operations/) (PA-175.1–175.3, W5057+), RA 11592 (LPG Industry Regulation), DOE/BPS circulars, POL-S04 (DG storage class), POL-R06 (product certification) |
 
@@ -321,9 +325,9 @@
 
 | | |
 |---|---|
-| Owner (R) / Approver | Corporate Security Manager / **COO** (VP Legal & Compliance: investigations interface) |
+| Owner (R) / Approver | Director, Regional Loss Prevention / **COO** (VP Legal & Compliance: investigations interface) |
 | Cadence | 1-year review (threat landscape refresh) |
-| Anchors | [VS-159](../workflows/VS-159-corporate-security-executive-protection-and-travel-risk-management/) (PA-159.1 strategy/threat intelligence, PA-159.2 executive protection & travel/event security, PA-159.3 investigations, insider threat & workplace violence), RA 5487 (Private Security Agency Law — licensed guard coverage), POL-G13 (fraud interface), POL-R05 (LP interface), POL-D02 (investigative data handling) |
+| Anchors | [VS-159](../workflows/VS-159-corporate-security-executive-protection-and-travel-risk-management/) (PA-159.1 strategy/threat intelligence, PA-159.2 executive protection & travel/event security, PA-159.3 investigations, insider threat & workplace violence), RA 5487 as amended by RA 11917 (Private Security Services Industry Act — licensed guard coverage), POL-G13 (fraud interface), POL-R05 (LP interface), POL-D02 (investigative data handling) |
 
 **Policy statements.**
 1. Physical security operates as a **governed program, not a guard contract**:
@@ -365,7 +369,7 @@
 
 | | |
 |---|---|
-| Owner (R) / Approver | Sustainability / ESG Lead (program) + HSE Manager (handling) / **COO** |
+| Owner (R) / Approver | Head of Sustainability / ESG (program) + Head of HSE (handling) / **COO** |
 | Cadence | 1-year review (DENR regulation changes immediate) |
 | Anchors | [VS-187](../workflows/VS-187-household-hazardous-waste-paint-and-product-stewardship-take-back/) (PA-187.1 program setup & partner network, PA-187.2 take-back operations, PA-187.3 recovery/disposal/reporting), RA 6969 (Toxic Substances & Hazardous Nuclear Waste Control), RA 11898 EPR interface (plastic EPR per POL-S03.7), RA 9003 (ecological solid waste), DENR hauler/treater accreditation per POL-S03.2, POL-R02 (customer interface), POL-R04 (quarantine rules) |
 

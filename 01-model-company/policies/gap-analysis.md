@@ -1,14 +1,15 @@
-# Policy Layer Gap Analysis — 2026-09-25 (fourth pass)
+# Policy Layer Gap Analysis — 2026-09-25 (fifth pass; pass-4 record below)
 
 > Follow-up to §4 of the [Policy Manual README](README.md). Pass 1 built the
 > base 50; pass 2 added ten corpus-evidenced policies (60 total); pass 3 added
 > ten statutory-exposure policies (70 total) and *claimed* all chains complete.
-> **Pass 4 (this pass) did not accept the prose claims** — it mechanically
-> re-derived every one of the 188 VS domains against the anchors actually
-> written in the nine domain manuals + the master register, and found the
-> pass-3 completion claim false in two material ways. Both defect classes are
-> repaired here, the register is completed at **75 policies**, and every VS
-> domain now ends in a *written* anchor or a documented SOP-layer decision.
+> **Pass 4 did not accept the prose claims** — it mechanically re-derived every
+> one of the 188 VS domains against the anchors actually written in the nine
+> domain manuals + the master register, found the pass-3 completion claim false
+> in two material ways, repaired both, and closed the register at **75
+> policies**. **Pass 5 (recorded at §6 below) ran the same mechanical method
+> against the two surfaces no earlier pass grep-verified — the owner column and
+> the fold decisions' sibling halves.**
 
 ## 1. Method (pass 4) — mechanical, not narrative
 
@@ -118,3 +119,95 @@ disposal → POL-I04.5; price-match conduct → POL-R03.5).
 in a **written** anchor or a **documented** SOP-layer decision; the pass-3
 broken-fold class is repaired and its lesson recorded — *coverage claims are
 only as good as the grep that checks them.*
+
+---
+
+## 6. Pass 5 — owner reconciliation + fold half-anchors (2026-09-25)
+
+The pass-4 method (grep over written anchors, no prose claim accepted) applied
+to the two surfaces passes 1–4 never tested.
+
+### 6.1 The owner column — 27 cells minted outside the org of record
+
+The README §5 claim "every owner role named above exists here" in the TO had
+never been grep-verified. Mechanical check: every register Owner cell split,
+normalized, and matched against the TO §5.3 Enterprise Role Register (194 rows
+/ 193 distinct role titles) plus the corpus's own role-vocabulary alias
+adjudication (`generate-role-coverage.py` ROLE_ALIASES — the governance layer
+that already reconciled all 5,433 workflow owner cells). **27 policy-owner
+cells used titles neither recognizes.** All re-seated to canonical titles in
+both the register and the manuals:
+
+| Was (register/manual) | Canonical seat (TO §5.3 / alias) | Policies |
+|---|---|---|
+| Treasurer | Treasury Manager (alias `treasurer`) | F01 (register), F08, B03 |
+| AR / Credit Manager | AR & Credit Manager | F05 |
+| ERM / TPRM Lead; ERM / Internal Audit Lead | Head of Internal Audit & Risk (alias `head of internal audit`) | G10, B01 |
+| IP Counsel | Litigation & IP Counsel (alias `ip counsel`) | G09 |
+| Compliance Officer; MLRO / Compliance Officer | Compliance Manager / MLRO (aliases `compliance officer`, `compliance portfolio manager`) | G07, G12 |
+| Talent Acquisition Lead | Talent Acquisition Manager (alias `ta lead`) | H01 |
+| Labor Relations Manager; + Labor Relations | Labor Relations Director | H06, H10, H11 |
+| Vendor Management Lead | Vendor Management Manager | P02 |
+| Import/Trade Compliance Lead | Imports & Customs Manager | P05 |
+| Director, Loss Prevention | Director, Regional Loss Prevention | R05 |
+| HSE Manager | Head of HSE (alias `hse manager`) | S01, S02, S04, S08, S10 |
+| Garden Operations Lead | Garden Buyer (Merchandising) (corpus: PA-145.1 Owner; alias `garden buyer`) | S06 |
+| Facilities & Construction Lead | Director, Facilities & Real Estate (alias `facilities`) | S07 |
+| Corporate Security Manager | Director, Regional Loss Prevention (aliases `cso`, `head of corporate security`) | S09 |
+| Sustainability / ESG Lead | Head of Sustainability / ESG (alias `sustainability lead`) | S03, S10 |
+| Facilities & Surety | Surety Program Manager (TO seat, Facilities & RE) | B02, B03 |
+| Head of Real Estate & Construction | Director, Facilities & Real Estate (TO seat, dual-hat GM Property Mgmt Inc.) | F09 |
+
+Kept as function-level owners (alias-resolvable or OM-team seats): Inventory
+Control, Strategy / BPM & Document Control, the IT platform seats (IAP/SEC/SEP/
+AAP/CIO Office), VP/Chief titles, and corpus-attested program titles
+(Regulatory Compliance Officer — PA-89.3's own Owner cell; Bid Compliance
+Officer as a parenthetical execution note).
+
+### 6.2 The fold decisions' sibling halves — five half-written folds
+
+Pass 4 verified the fifteen fold routings it named, but the batch-3 fold list
+named *pairs* of policies where only one carried the written anchor. Grep per
+policy (not per file) found five halves missing, now written:
+
+| Fold claim | Had | Added |
+|---|---|---|
+| remote work → POL-H05 | **nothing** (the fold's substance was absent entirely) | H05.5 — manager-approved, time-bound arrangements under the same hours/overtime/leave rules (PA-19.3) + POL-I01/I03 endpoint rules |
+| home-charge/EV → POL-S01/S03 (VS-192) | S01.6 only | S03.4 — EV-charging infrastructure under the same electrical-safety discipline (VS-192, POL-S01.6) |
+| packaging → POL-P02/S03 (VS-111) | P02.5 only | S03.5 — packaging rules cite the VS-111 supplier gates per POL-P02.5 |
+| CDP → POL-D01/D05 (VS-126) | D01.3 only | D05.7 — customer identity data obeys the consent chain; merging never manufactures consent (VS-126) |
+| plant guarantee → POL-R02/S06 (W4352) | S06.5 only | R02.7 — live-goods/plant-guarantee replacements follow POL-S06.5 (W4352) |
+
+### 6.3 Statute-name and canon true-ups (correctness)
+
+- **'PD 115 (Lintang Law-style investment contracts)'** — no such statute
+  nickname exists; corrected to **PD 115 (Investment Contracts Law)**
+  (POL-F08.2).
+- **'ORB/TVS'** invoice documentation (POL-G14.4) — a coinage absent from the
+  corpus; re-pointed to W1966's canon: BIR-registered invoices/official
+  receipts plus COA-compliant supports.
+- **POL-G02.3** reconciled to its own operational canon: PA-22.3's gift &
+  entertainment register auto-routes declarations **above ₱1,000** to
+  Compliance review — now stated inside the policy alongside the ₱2,000
+  acceptance ceiling.
+- **'Rev. Proc. / BIR gift rules'** (POL-G02 anchors) — IRS-speak in a
+  Philippine corpus; re-pointed to BIR deductibility rules.
+- **RA 5487** cited with its amendment **RA 11917** (Private Security Services
+  Industry Act) in POL-S09.
+- **POL-R07's manual title** aligned to the register: "Gift Cards, Store
+  Credit, **Layaway** & Promotional Instruments" (statement 6 always covered
+  layaway).
+- **Domain-manual approval-class headers made exact:** the G manual excepts
+  POL-G12 (VP Legal & Compliance approver); the R manual excepts POL-R06; the
+  S manual excepts POL-S05 (CHRO); the H manual states its two-class split
+  (CHRO+CEO for H03/H06/H07/H08/H10/H11, CHRO for the lifecycle policies); the
+  B manual gains the class line it never had (B01 Board, B02/B03 CFO).
+
+---
+
+**Bottom line (pass 5):** 75 policies unchanged; every owner cell now resolves
+to the org of record by the same grep standard the workflows already met
+(5,433/5,433 owner cells); every fold decision carries both its written halves;
+the statute and canon citations verified against the corpus they anchor. No new
+policies, no register/tier/HC change, no workflow edits — this pass repaired
+only the policy layer's own accountability surfaces.

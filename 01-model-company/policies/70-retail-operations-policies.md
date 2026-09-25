@@ -1,7 +1,9 @@
 # Retail Store Operations Policies (POL-R)
 
 > Domain manual of the [Corporate Policy Manual](README.md). Approval class:
-> **COO** (operational class, W1729.4). These policies bind all 200 stores, the
+> **COO** (operational class, W1729.4) except as stated per policy (POL-R06:
+> VP Legal & Compliance, COO for store execution). These policies bind all
+> 200 stores, the
 > 4 DCs' front-door/store-interface operations, and the ecommerce fulfillment
 > touchpoints that handle cash, stock or customers.
 
@@ -87,7 +89,9 @@
    PA-155.1–155.3): valuation grids published per category, serial capture
    and stolen-goods screening at intake, refurbishment & certification before
    resale (never as-new), and CPO warranty terms per POL-R06 — trade-in units
-   never bypass the disposition rules in statement 4.
+   never bypass the disposition rules in statement 4; live-goods and
+   plant-guarantee replacements follow the POL-S06.5 treatment protocols
+   (W4352), never the sales floor.
 
 ---
 
@@ -165,7 +169,7 @@
 
 | | |
 |---|---|
-| Owner (R) / Approver | Director, Loss Prevention / **COO** |
+| Owner (R) / Approver | Director, Regional Loss Prevention / **COO** |
 | Cadence | 2-year review |
 | Anchors | VS-23 loss prevention (regional LP officers, investigations, analytics), POS exception analytics, CCTV estate |
 
@@ -235,7 +239,7 @@
 
 ---
 
-## POL-R07 — Gift Cards, Store Credit & Promotional Instruments
+## POL-R07 — Gift Cards, Store Credit, Layaway & Promotional Instruments
 
 | | |
 |---|---|
