@@ -30,7 +30,7 @@ Source: workflow W3 — Warehouse Receiving &amp; Putaway</bpmn:documentation>
         <bpmn:flowNodeRef>W3_Task17</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W3_Task19</bpmn:flowNodeRef>
         </bpmn:lane>
-        <bpmn:lane id="W3_Lane7" name="Putaway Staff, Special Handling Lead">
+        <bpmn:lane id="W3_Lane7" name="Putaway Staff">
         <bpmn:flowNodeRef>W3_Task18</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W3_End20</bpmn:flowNodeRef>
         </bpmn:lane>
@@ -104,7 +104,7 @@ Duration: Automated</bpmn:documentation>
       </bpmn:serviceTask>
       <bpmn:userTask id="W3_Task18" name="Putaway staff moves goods to assigned bin; scan-confirm in system">
         <bpmn:documentation>Step 9: Putaway staff moves goods to assigned bin; scan-confirm in system
-Responsible (R): Putaway Staff, Special Handling Lead
+Responsible (R): Putaway Staff
 Accountable (A): DC Supervisor
 Duration: 15–30 min</bpmn:documentation>
         <bpmn:incoming>W3_Flow31</bpmn:incoming>
@@ -2025,7 +2025,7 @@ Duration: Automated</bpmn:documentation>
         <bpmn:documentation>Step 5: DC Inbound Supervisor reviews exception: determines resolution — (a) accept shipment with PO amendment by Buyer, (b) accept partial shipment (only matched lines), (c) reject entire shipment, or (d) hold shipment pending vendor clarification
 Responsible (R): DC Inbound Supervisor
 Accountable (A): DC Manager
-Duration: 10–20 min/exception</bpmn:documentation>
+Duration: 10–20 min/occurrence</bpmn:documentation>
         <bpmn:incoming>W1365_Flow22</bpmn:incoming>
         <bpmn:outgoing>W1365_Flow23</bpmn:outgoing>
       </bpmn:userTask>
@@ -2041,7 +2041,7 @@ Duration: 15 min/case</bpmn:documentation>
         <bpmn:documentation>Step 7: For resolution (d): Supervisor contacts vendor via portal messaging; vendor provides corrected ASN or explanation; system matches corrected ASN to PO
 Responsible (R): DC Inbound Supervisor / Vendor
 Accountable (A): —
-Duration: 1–24 hours</bpmn:documentation>
+Duration: 15–30 min/occurrence (vendor response window 1–24 hours elapsed)</bpmn:documentation>
         <bpmn:incoming>W1365_Flow24</bpmn:incoming>
         <bpmn:outgoing>W1365_Flow25</bpmn:outgoing>
       </bpmn:userTask>

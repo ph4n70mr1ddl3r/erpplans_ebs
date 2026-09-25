@@ -158,7 +158,7 @@ Owner: Marketing Technology Manager
 Participants: Marketing Tech, DPO, Loyalty/CRM, IT, Ecommerce
 Source: workflow W3043 — Consent Capture, Preference Management &amp; Lawful Basis Tracking</bpmn:documentation>
       <bpmn:laneSet id="W3043_LaneSet4">
-        <bpmn:lane id="W3043_Lane1" name="Marketing Tech">
+        <bpmn:lane id="W3043_Lane1" name="System">
         <bpmn:flowNodeRef>W3043_Task6</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W3043_Start5</bpmn:flowNodeRef>
         </bpmn:lane>
@@ -173,14 +173,14 @@ Source: workflow W3043 — Consent Capture, Preference Management &amp; Lawful B
       <bpmn:startEvent id="W3043_Start5" name="Customer data collection / signup / preference change">
         <bpmn:outgoing>W3043_Flow12</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:userTask id="W3043_Task6" name="Marketing Tech/Loyalty capture consent at enrollment/checkout with granular…">
-        <bpmn:documentation>Step 1: Marketing Tech/Loyalty capture consent at enrollment/checkout with granular purpose flags (marketing, profiling, third-party share, location); record timestamp and version
-Responsible (R): Marketing Tech / Loyalty, Privacy Officer
+      <bpmn:serviceTask id="W3043_Task6" name="Loyalty platform and POS checkout capture consent at enrollment/checkout with…">
+        <bpmn:documentation>Step 1: Loyalty platform and POS checkout capture consent at enrollment/checkout with granular purpose flags (marketing, profiling, third-party share, location); record timestamp and version
+Responsible (R): System
 Accountable (A): Marketing Technology Manager
-Duration: Per signup</bpmn:documentation>
+Duration: Automated</bpmn:documentation>
         <bpmn:incoming>W3043_Flow12</bpmn:incoming>
         <bpmn:outgoing>W3043_Flow13</bpmn:outgoing>
-      </bpmn:userTask>
+      </bpmn:serviceTask>
       <bpmn:userTask id="W3043_Task7" name="IT maintains consent/preference center allowing customer self-service changes…">
         <bpmn:documentation>Step 2: IT maintains consent/preference center allowing customer self-service changes; syncs preferences across channels (POS, web, app, CRM, email/SMS)
 Responsible (R): IT / CRM

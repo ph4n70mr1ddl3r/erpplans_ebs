@@ -2300,7 +2300,6 @@ candidate for the same governance path.
 | Promotions & Vendor-Funding Coordinator | Merchandising & Buying | 1 | 0 |
 | Promotions Specialist | Marketing | 1 | 0 |
 | Quality & Workforce Analyst | Customer Service | 1 | 0 |
-| Senior LP Analytics Analyst | Regional Loss Prevention | 1 | 0 |
 | Special Handling Lead | DC (field, per-DC roster) | 1 | 0 |
 | TA Coordinator | Human Resources | 1 | 0 |
 | Technical Accounting Manager | Finance & Accounting | 1 | 0 |
@@ -2324,6 +2323,7 @@ candidate for the same governance path.
 | Purchasing / PO Specialist | Supply Chain & Logistics | 2 | 0 |
 | Replenishment & Allocation Analyst | Supply Chain & Logistics | 2 | 0 |
 | Retail Media Operations Specialist | Marketing | 2 | 0 |
+| Senior LP Analytics Analyst | Regional Loss Prevention | 2 | 0 |
 | Sourcing & Screening Coordinator | Human Resources | 2 | 0 |
 | Strategy Analyst | Strategy / Corporate Planning | 2 | 0 |
 | B2B Support Representative | Customer Service | 3 | 0 |

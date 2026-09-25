@@ -11,17 +11,17 @@ Capability dormancy: workflows under registry DISABLED — rows and the capabili
 
 | class | cells | share | meaning |
 |---|---:|---:|---|
-| effort | 7668 | 33.7% | hours normalized to monthly equivalents (cadence denominators) |
-| per-unit | 2031 | 8.9% | hours per non-cadence unit (transfer/case/store) — symbolic |
+| effort | 7667 | 33.7% | hours normalized to monthly equivalents (cadence denominators) |
+| per-unit | 2033 | 8.9% | hours per non-cadence unit (transfer/case/store) — symbolic |
 | elapsed | 2520 | 11.1% | elapsed windows (bare days/weeks/months) — reported in days |
-| automated | 1249 | 5.5% | system steps — zero human hours |
-| cadence-only | 6562 | 28.8% | cell says WHEN (monthly / per event), not HOW LONG |
+| automated | 1251 | 5.5% | system steps — zero human hours |
+| cadence-only | 6561 | 28.8% | cell says WHEN (monthly / per event), not HOW LONG |
 | qualitative | 2240 | 9.8% | continuous / ongoing / as needed / periodic … |
 | compound | 373 | 1.6% | mixed segments ('Automated + 15 min/run review') |
 | cross-ref | 76 | 0.3% | step performed inside another workflow ('Part of W89') |
 | empty | 39 | 0.2% | empty / dash cell |
 | unparseable | 23 | 0.1% | did not match any grammar — needs manual triage |
-| **total** | **22781** | 100% | |
+| **total** | **22783** | 100% | |
 
 NOTE: 1 workflow(s) use a `Latency`-headed last column (carries cadence/latency semantics, not effort) — their cells are excluded.
 
@@ -31,7 +31,7 @@ NOTE: 1 workflow(s) use a `Latency`-headed last column (carries cadence/latency 
 - Dormant designed capacity (registry DISABLED — rows + sourcing-register deferrals, excluded from live): 889–1,520 hours/month (≈ 5.1–8.8 FTE) across 294 dormant workflows
 - All-corpus mechanical total (live + dormant): 10,189–13,580 hours/month
 - Elapsed windows: 12,116–20,331 person-days reported (not converted)
-- Per-unit rates held symbolic: 2031
+- Per-unit rates held symbolic: 2033
 
 ## Dormant capability adjustments (registry DISABLED — rows + sourcing-register deferrals)
 
@@ -65,7 +65,7 @@ Dormant capabilities keep their prepared designs in the corpus (disable ≠ dele
 | Treasury Analyst | 340–425 | 58 | 0 |
 | Employee | 277–416 | 3 | 0 |
 | Buddy (Peer Trainer) | 277–416 | 1 | 0 |
-| LP Analyst | 251–316 | 24 | 0 |
+| LP Analyst | 242–303 | 23 | 0 |
 | Pricing Analyst | 242–286 | 46 | 0 |
 | Finance | 178–221 | 39 | 0 |
 | Buyer | 145–221 | 32 | 0 |

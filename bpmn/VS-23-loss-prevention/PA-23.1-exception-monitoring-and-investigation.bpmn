@@ -8,7 +8,7 @@ Owner: Loss Prevention Manager (Regional)
 Participants: Store Manager, LP Analyst, POS System Administrator, Finance Controller, Senior LP Analytics Analyst
 Source: workflow W837 — Daily Store Exception-Based Reporting &amp; Transaction Monitoring</bpmn:documentation>
       <bpmn:laneSet id="W837_LaneSet4">
-        <bpmn:lane id="W837_Lane1" name="LP Analyst, Senior LP Analytics Analyst">
+        <bpmn:lane id="W837_Lane1" name="System">
         <bpmn:flowNodeRef>W837_Task6</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W837_Start5</bpmn:flowNodeRef>
         </bpmn:lane>
@@ -27,14 +27,14 @@ Source: workflow W837 — Daily Store Exception-Based Reporting &amp; Transactio
       <bpmn:startEvent id="W837_Start5" name="Automated — POS transaction data feed processed nightly; exception alerts generated when…">
         <bpmn:outgoing>W837_Flow16</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:userTask id="W837_Task6" name="Automated POS data extraction and exception rule engine execution — flag voids…">
+      <bpmn:serviceTask id="W837_Task6" name="Automated POS data extraction and exception rule engine execution — flag voids…">
         <bpmn:documentation>Step 1: Automated POS data extraction and exception rule engine execution — flag voids, no-sales, excessive discounts, high-value refunds, post-void patterns, and override frequency by cashier
-Responsible (R): LP Analyst, Senior LP Analytics Analyst
+Responsible (R): System
 Accountable (A): LP Manager (Regional)
-Duration: 30 min (automated + validation)</bpmn:documentation>
+Duration: Automated</bpmn:documentation>
         <bpmn:incoming>W837_Flow16</bpmn:incoming>
         <bpmn:outgoing>W837_Flow17</bpmn:outgoing>
-      </bpmn:userTask>
+      </bpmn:serviceTask>
       <bpmn:userTask id="W837_Task7" name="Review prioritized exception dashboard — sort by severity (critical: repeat…">
         <bpmn:documentation>Step 2: Review prioritized exception dashboard — sort by severity (critical: repeat offenders, high-value anomalies; medium: single threshold breach; low: borderline)
 Responsible (R): LP Analyst

@@ -129,7 +129,7 @@ def exercised_demand(title, res, cap, wfs):
         ev, _rule = vgw.events_per_year(w["freq"], exec_bucket)
         if ev is None:
             continue
-        for dur, r, a in w["steps"]:
+        for si, (dur, r, a) in enumerate(w["steps"]):
             if not pat.search(norm(r)):
                 continue
             roles = vgw.role_parts(r, res)
@@ -141,7 +141,10 @@ def exercised_demand(title, res, cap, wfs):
                 continue
             anchors["parsed"] += 1
             if roles:
-                share = dur / len(roles) * ev
+                periods = w.get("step_period") or [None] * len(w["steps"])
+                pm = periods[si] if si < len(periods) else None
+                mult = pm if pm else ev
+                share = dur / len(roles) * mult
                 for _p, _b, t in roles:
                     k = vgw.fold_capacity_key(cap, norm(t), exec_bucket)
                     if k == norm(title):
@@ -185,7 +188,7 @@ def main():
                "store": "§7.2 store roster", "dc": "§7.3 DC roster"}
     L = []
     A = L.append
-    A("# Weak-Anchor Demand Verification (generated — batch 50, 2026-09-25)")
+    A("# Weak-Anchor Demand Verification (generated — batch 51, 2026-09-25)")
     A("")
     A("> **Verification record** for the Role-Anchoring Contract's weak-anchor watchlist — the")
     A(f"> {len(weak)} chartered roles anchored in only 1–2 workflows. Per the contract, no headcount")

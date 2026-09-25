@@ -61,10 +61,10 @@
 | Ecommerce Marketing Specialist | §5.3 register — Marketing | 2 | 1 |
 | Field Communications Manager | §5.3 register — Store Operations | 1 | 1 |
 | Payroll & Statutory Remittance Officer | §5.3 register — Human Resources | 1 | 1 |
+| Privacy Officer | §5.3 register — Legal & Compliance | 1 | 1 |
 | Promotions & Vendor-Funding Coordinator | §5.3 register — Merchandising & Buying | 3 | 1 |
 | Promotions Specialist | §5.3 register — Marketing | 2 | 1 |
 | Quality & Workforce Analyst | §5.3 register — Customer Service | 2 | 1 |
-| Senior LP Analytics Analyst | §5.3 register — Regional Loss Prevention | 1 | 1 |
 | TA Coordinator | §5.3 register — Human Resources | 1 | 1 |
 | Technical Accounting Manager | §5.3 register — Finance & Accounting | 1 | 1 |
 | IAP Integration Engineer | IT product-model seats — Information Technology (product model) | — | 1 |
@@ -94,10 +94,10 @@
 | Operations Compliance Lead | §5.3 register — Internal Audit & Risk | 1 | 2 |
 | Paralegal / Contracts Specialist | §5.3 register — Legal & Compliance | 2 | 2 |
 | Payroll Supervisor | §5.3 register — Human Resources | 1 | 2 |
-| Privacy Officer | §5.3 register — Legal & Compliance | 1 | 2 |
 | Purchasing / PO Specialist | §5.3 register — Supply Chain & Logistics | 6 | 2 |
 | Replenishment & Allocation Analyst | §5.3 register — Supply Chain & Logistics | 2 | 2 |
 | Retail Media Operations Specialist | §5.3 register — Marketing | 1 | 2 |
+| Senior LP Analytics Analyst | §5.3 register — Regional Loss Prevention | 1 | 2 |
 | Sourcing & Screening Coordinator | §5.3 register — Human Resources | 1 | 2 |
 | Strategy Analyst | §5.3 register — Strategy / Corporate Planning | 1 | 2 |
 | Vendor Portal & Collaboration Specialist | §5.3 register — Supply Chain & Logistics | 2 | 2 |
@@ -250,7 +250,7 @@
 | AML / ABC Officer | Legal & Compliance | 1 | 7 | 42 | 26 | 4 | 45 | 19 | 23 | 3 |
 | Paralegal / Contracts Specialist | Legal & Compliance | 2 | 2 | 0 | 2 | 4 | 2 | 0 | 2 | 0 |
 | Legal Counsel — Contracts | Legal & Compliance | 2 | 1 | 0 | 1 | 4 | 2 | 0 | 1 | 1 |
-| Privacy Officer | Legal & Compliance | 1 | 1 | 0 | 1 | 0 | 2 | 1 | 1 | 0 |
+| Privacy Officer | Legal & Compliance | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Corporate Secretary Analyst | Legal & Compliance | 1 | 0 | 2 | 1 | 0 | 2 | 1 | 1 | 0 |
 | Contracts & Commercial Manager (Senior Counsel) | Legal & Compliance | 1 | 0 | 1 | 1 | 0 | 1 | 0 | 0 | 1 |
 | ERM & TPRM Analyst | Internal Audit & Risk | 1 | 29 | 28 | 106 | 60 | 59 | 11 | 44 | 4 |
@@ -268,13 +268,13 @@
 | Services Manager | Customer Service | 1 | 5 | 10 | 15 | 45 | 24 | 9 | 10 | 5 |
 | Ecommerce Support Specialist | Customer Service | 3 | 2 | 2 | 1 | 0 | 2 | 2 | 0 | 0 |
 | B2B Support Representative | Customer Service | 4 | 0 | 2 | 1 | 0 | 3 | 0 | 2 | 1 |
-| Quality & Workforce Analyst | Customer Service | 2 | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 |
+| Quality & Workforce Analyst | Customer Service | 2 | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Director, Regional Loss Prevention | Regional Loss Prevention | 1 | 54 | 28 | 101 | 169 | 103 | 24 | 70 | 9 |
-| LP Analytics Analyst | Regional Loss Prevention | 2 | 20 | 30 | 95 | 9 | 50 | 20 | 23 | 7 |
+| LP Analytics Analyst | Regional Loss Prevention | 2 | 20 | 30 | 94 | 9 | 50 | 20 | 23 | 7 |
 | Regional LP Officer | Regional Loss Prevention | 20 | 12 | 47 | 77 | 26 | 59 | 29 | 29 | 1 |
 | LP Investigator | Regional Loss Prevention | 2 | 3 | 8 | 25 | 0 | 12 | 8 | 3 | 1 |
 | Senior LP Investigator | Regional Loss Prevention | 1 | 3 | 3 | 7 | 0 | 3 | 3 | 0 | 0 |
-| Senior LP Analytics Analyst | Regional Loss Prevention | 1 | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 0 |
+| Senior LP Analytics Analyst | Regional Loss Prevention | 1 | 0 | 1 | 1 | 0 | 2 | 2 | 0 | 0 |
 | Head of HSE | Health, Safety & Environment | 1 | 24 | 9 | 35 | 163 | 86 | 28 | 53 | 5 |
 | Safety Officer (HSE Officer, DOLE-accredited SO2) | Health, Safety & Environment | 10 | 23 | 78 | 145 | 63 | 107 | 51 | 46 | 10 |
 | Company Nurse | Health, Safety & Environment | 1 | 9 | 35 | 40 | 0 | 27 | 11 | 16 | 0 |
@@ -306,7 +306,7 @@
 | Head of Trade & Account Management | Trade / Account Management | 1 | 11 | 4 | 20 | 58 | 41 | 2 | 29 | 10 |
 | Trade Operations & Analytics Specialist | Trade / Account Management | 1 | 7 | 8 | 27 | 19 | 10 | 2 | 8 | 0 |
 | Trade Professional Program Coordinator | Trade / Account Management | 1 | 3 | 2 | 7 | 5 | 4 | 0 | 3 | 1 |
-| Shift Supervisor (DC roster) | Information Technology (product model) | — | 11 | 32 | 57 | 129 | 81 | 39 | 41 | 1 |
+| Shift Supervisor (DC roster) | Information Technology (product model) | — | 11 | 32 | 57 | 130 | 81 | 39 | 41 | 1 |
 | Board of Directors | Information Technology (product model) | — | 1 | 20 | 6 | 37 | 31 | 5 | 18 | 8 |
 
 ## Information Technology product-model seats (§5.3 by reference)
@@ -1847,7 +1847,7 @@
 | Marketing Production Coordinator | Marketing | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Marketing Research | Marketing | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Marketing Research Mgr | Marketing | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 |
-| Marketing Tech | Marketing | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 0 |
+| Marketing Tech | Marketing | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
 | Mdf | Marketing | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
 | Media Buyer | Marketing | 0 | 1 | 1 | 0 | 1 | 0 | 0 | 1 |
 | Mi | Marketing | 0 | 0 | 1 | 0 | 1 | 0 | 0 | 1 |
@@ -2364,7 +2364,7 @@
 | Warranty Claims Team | Customer Service | 0 | 1 | 2 | 0 | 1 | 0 | 1 | 0 |
 | Lp | Regional Loss Prevention | 18 | 120 | 148 | 4 | 155 | 49 | 95 | 11 |
 | Loss Prevention | Regional Loss Prevention | 14 | 44 | 28 | 0 | 59 | 23 | 30 | 6 |
-| Lp Manager | Regional Loss Prevention | 12 | 30 | 62 | 107 | 74 | 30 | 36 | 8 |
+| Lp Manager | Regional Loss Prevention | 12 | 30 | 62 | 108 | 74 | 30 | 36 | 8 |
 | Loss Prevention Manager | Regional Loss Prevention | 8 | 2 | 5 | 8 | 9 | 3 | 4 | 2 |
 | Lp Training Coordinator | Regional Loss Prevention | 1 | 1 | 3 | 0 | 2 | 1 | 1 | 0 |
 | Loss Prevention Supervisor | Regional Loss Prevention | 1 | 0 | 2 | 4 | 1 | 1 | 0 | 0 |
@@ -2869,7 +2869,7 @@
 | Department Head | Generic / cross-department | 5 | 27 | 31 | 24 | 50 | 15 | 29 | 6 |
 | Ecommerce Operations | Digital Commerce (IT-built platforms) | 5 | 9 | 3 | 12 | 14 | 2 | 10 | 2 |
 | Digital | Digital Commerce (IT-built platforms) | 5 | 12 | 10 | 0 | 13 | 0 | 12 | 1 |
-| Loyalty | Marketing (Loyalty) | 4 | 56 | 26 | 0 | 56 | 15 | 30 | 11 |
+| Loyalty | Marketing (Loyalty) | 4 | 56 | 25 | 0 | 56 | 15 | 30 | 11 |
 | Payroll | Human Resources (Payroll) | 4 | 43 | 46 | 1 | 49 | 16 | 33 | 0 |
 | Department Heads | Generic / cross-department | 4 | 33 | 15 | 3 | 44 | 15 | 22 | 7 |
 | Cross-Entity | Generic / cross-department | 3 | 9 | 12 | 0 | 14 | 6 | 7 | 1 |
@@ -3358,7 +3358,7 @@
 
 | Role | Dept / source | Owns | Participant | Step-R | Step-A | Touched | T1 | T2 | T3 |
 |---|---|---|---|---|---|---|---|---|---|
-| System | System & automated actors | 8 | 29 | 2481 | 5 | 1192 | 394 | 626 | 172 |
+| System | System & automated actors | 8 | 29 | 2483 | 5 | 1194 | 396 | 626 | 172 |
 | Order Management System | System & automated actors | 6 | 0 | 0 | 0 | 6 | 0 | 6 | 0 |
 | Pos | System & automated actors | 4 | 37 | 9 | 0 | 42 | 27 | 11 | 4 |
 | Ecommerce System | System & automated actors | 4 | 0 | 5 | 0 | 5 | 0 | 5 | 0 |

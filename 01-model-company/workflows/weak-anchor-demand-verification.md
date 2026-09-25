@@ -1,4 +1,4 @@
-# Weak-Anchor Demand Verification (generated — batch 50, 2026-09-25)
+# Weak-Anchor Demand Verification (generated — batch 51, 2026-09-25)
 
 > **Verification record** for the Role-Anchoring Contract's weak-anchor watchlist — the
 > 53 chartered roles anchored in only 1–2 workflows. Per the contract, no headcount
@@ -49,17 +49,17 @@
 | Facilities/Utility | §7.3 DC roster — DC (field, per-DC roster) | 1 | — | — | — | NO PARSED CADENCE |
 | Field Communications Manager | §5.3 register — Store Operations | 1 | 56 | 1 | 3% | UNDER-UTILIZED |
 | IAP Integration Engineer | IT seat — Information Technology (product model) | 1 | 8 | — | — | MEASURED — capacity unmapped |
-| Payroll & Statutory Remittance Officer | §5.3 register — Human Resources | 1 | 60 | 1 | 3% | UNDER-UTILIZED |
+| Payroll & Statutory Remittance Officer | §5.3 register — Human Resources | 1 | 6 | 1 | 0% | UNDER-UTILIZED |
+| Privacy Officer | §5.3 register — Legal & Compliance | 1 | 4 | 1 | 0% | EXERCISED-THROUGH (UNDER-UTILIZED) — via data privacy officer (dpo) |
 | Promotions & Vendor-Funding Coordinator | §5.3 register — Merchandising & Buying | 1 | 125 | 3 | 2% | UNDER-UTILIZED |
 | Promotions Specialist | §5.3 register — Marketing | 1 | 62 | 2 | 2% | UNDER-UTILIZED |
-| Quality & Workforce Analyst | §5.3 register — Customer Service | 1 | 7,500 | 2 | 208% | OVERLOAD |
-| Senior LP Analytics Analyst | §5.3 register — Regional Loss Prevention | 1 | 18,250 | 1 | 1014% | OVERLOAD |
-| Special Handling Lead | §7.3 DC roster — DC (field, per-DC roster) | 1 | 13,500 | 4 | 178% | OVERLOAD |
+| Quality & Workforce Analyst | §5.3 register — Customer Service | 1 | — | 2 | — | NO PARSED CADENCE |
+| Special Handling Lead | §7.3 DC roster — DC (field, per-DC roster) | 1 | — | — | — | ZERO-DURATION |
 | TA Coordinator | §5.3 register — Human Resources | 1 | — | 1 | — | ZERO-DURATION |
 | Technical Accounting Manager | §5.3 register — Finance & Accounting | 1 | 3 | 1 | 0% | UNDER-UTILIZED |
 | Tile & Heavy/Breakbulk Crew | §7.3 DC roster — DC (field, per-DC roster) | 1 | 684 | — | — | EXERCISED-THROUGH — via loading crew |
 | AAP Agent Engineer | IT seat — Information Technology (product model) | 2 | — | — | — | NO PARSED CADENCE |
-| Assistant DC Manager — Inbound | §7.3 DC roster — DC (field, per-DC roster) | 2 | 65,340 | 4 | 860% | OVERLOAD |
+| Assistant DC Manager — Inbound | §7.3 DC roster — DC (field, per-DC roster) | 2 | 76 | 4 | 1% | UNDER-UTILIZED |
 | Audit Manager | §5.3 register — Internal Audit & Risk | 2 | — | 1 | — | ZERO-DURATION |
 | Banking & Cash-Management Specialist | §5.3 register — Finance & Accounting | 2 | — | 2 | — | ZERO-DURATION |
 | Build-Squad Tech Lead | IT seat — Information Technology (product model) | 2 | — | — | — | ZERO-DURATION |
@@ -68,8 +68,8 @@
 | CPM (Corporate Performance Management) Analyst | §5.3 register — Strategy / Corporate Planning | 2 | — | 1 | — | ZERO-DURATION |
 | Cross-Dock Team | §7.3 DC roster — DC (field, per-DC roster) | 2 | 31 | 24 | 0% | UNDER-UTILIZED |
 | DC Cost-to-Serve Analyst | §5.3 register — Finance & Accounting | 2 | — | 1 | — | ZERO-DURATION |
-| DC Operations Analyst | §5.3 register — Supply Chain & Logistics | 2 | 62 | 1 | 3% | UNDER-UTILIZED |
-| Ecommerce Support Specialist | §5.3 register — Customer Service | 2 | 5,000 | 3 | 93% | CONFIRMED |
+| DC Operations Analyst | §5.3 register — Supply Chain & Logistics | 2 | 13 | 1 | 1% | UNDER-UTILIZED |
+| Ecommerce Support Specialist | §5.3 register — Customer Service | 2 | — | 3 | — | ZERO-DURATION |
 | ESG Reporting & Data Analyst | §5.3 register — Sustainability / ESG | 2 | — | 1 | — | ZERO-DURATION |
 | Facilities Coordination Specialist | §5.3 register — Store Operations | 2 | — | 1 | — | ZERO-DURATION |
 | Forensic / Fraud Investigator | §5.3 register — Internal Audit & Risk | 2 | — | 1 | — | ZERO-DURATION |
@@ -77,33 +77,33 @@
 | Import Documentation Specialist | §5.3 register — Supply Chain & Logistics | 2 | — | 1 | — | ZERO-DURATION |
 | INFRA Site Reliability Engineer | IT seat — Information Technology (product model) | 2 | — | — | — | NO PARSED CADENCE |
 | Legal Counsel — Contracts | §5.3 register — Legal & Compliance | 2 | — | 2 | — | ZERO-DURATION |
-| Lumber / Long-Length Crew | §7.3 DC roster — DC (field, per-DC roster) | 2 | 30,542 | 32 | 50% | CONFIRMED |
+| Lumber / Long-Length Crew | §7.3 DC roster — DC (field, per-DC roster) | 2 | 30,447 | 32 | 50% | CONFIRMED |
 | Maintenance & Projects Coordinator | §5.3 register — Facilities & Real Estate | 2 | — | 2 | — | ZERO-DURATION |
 | Marketing Comms Specialist | §5.3 register — Marketing | 2 | 72 | 1 | 4% | UNDER-UTILIZED |
 | Operations Compliance Lead | §5.3 register — Internal Audit & Risk | 2 | — | 1 | — | ZERO-DURATION |
 | Paralegal / Contracts Specialist | §5.3 register — Legal & Compliance | 2 | 195 | 2 | 5% | UNDER-UTILIZED |
 | Payroll Supervisor | §5.3 register — Human Resources | 2 | 30 | 1 | 2% | UNDER-UTILIZED |
-| Privacy Officer | §5.3 register — Legal & Compliance | 2 | 36,000 | 1 | 2000% | EXERCISED-THROUGH (OVERLOAD) — via data privacy officer (dpo) |
 | Purchasing / PO Specialist | §5.3 register — Supply Chain & Logistics | 2 | — | 6 | — | NO PARSED CADENCE |
 | Replenishment & Allocation Analyst | §5.3 register — Supply Chain & Logistics | 2 | 3,042 | 2 | 84% | CONFIRMED |
 | Retail Media Operations Specialist | §5.3 register — Marketing | 2 | 112 | 1 | 6% | UNDER-UTILIZED |
+| Senior LP Analytics Analyst | §5.3 register — Regional Loss Prevention | 2 | 130 | 1 | 7% | UNDER-UTILIZED |
 | Sourcing & Screening Coordinator | §5.3 register — Human Resources | 2 | — | 1 | — | ZERO-DURATION |
 | Strategy Analyst | §5.3 register — Strategy / Corporate Planning | 2 | — | 1 | — | ZERO-DURATION |
-| Vendor Portal & Collaboration Specialist | §5.3 register — Supply Chain & Logistics | 2 | 4,354 | 2 | 121% | CONFIRMED |
+| Vendor Portal & Collaboration Specialist | §5.3 register — Supply Chain & Logistics | 2 | 1,520 | 2 | 42% | UNDER-UTILIZED |
 | Wellness Coordinator | §5.3 register — Health, Safety & Environment | 2 | — | 1 | — | ZERO-DURATION |
 
 ## Tally
 
 | Verdict | Roles |
 |---|---|
-| CONFIRMED | 5 |
-| OVERLOAD | 4 |
-| UNDER-UTILIZED | 16 |
+| CONFIRMED | 3 |
+| OVERLOAD | 0 |
+| UNDER-UTILIZED | 19 |
 | EXERCISED-THROUGH | 2 |
 | MEASURED — CAPACITY UNMAPPED | 2 |
-| ZERO-DURATION | 20 |
+| ZERO-DURATION | 22 |
 | UNPARSEABLE-FREQ | 0 |
-| NO PARSED CADENCE | 4 |
+| NO PARSED CADENCE | 5 |
 
 > OVERLOAD rows are the headcount-real candidates this doctrine exists to find. UNDER-UTILIZED
 > rows are merge/resize candidates. EXERCISED-THROUGH rows are measured through the seats their

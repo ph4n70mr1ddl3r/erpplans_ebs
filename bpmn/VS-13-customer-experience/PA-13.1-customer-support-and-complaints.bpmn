@@ -79,7 +79,7 @@ Duration: Automated</bpmn:documentation>
       </bpmn:serviceTask>
       <bpmn:userTask id="W41_Task13" name="Tier 2 Resolution">
         <bpmn:documentation>Step 6: Tier 2 Resolution (CS Manager / Store Manager): investigates root cause; coordinates with relevant department (Buyer for product issues, Logistics for delivery, HR for staff complaints)
-Responsible (R): CS Manager / Store Manager, Quality &amp; Workforce Analyst
+Responsible (R): CS Manager / Store Manager
 Accountable (A): VP Store Operations
 Duration: 30–60 min</bpmn:documentation>
         <bpmn:incoming>W41_Flow29</bpmn:incoming>

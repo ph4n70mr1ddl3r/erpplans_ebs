@@ -114,7 +114,7 @@ def parse_workflows():
                 owner = m.group(1).strip() if m else ""
                 m = re.search(r"\| \*\*Frequency\*\* \|(.*?)\|", body)
                 freq = m.group(1).strip() if m else ""
-                steps, in_steps = [], False
+                steps, periods, in_steps = [], [], False
                 for ln in body.splitlines():
                     if re.match(r"^\|\s*#\s*\|", ln) and "Role (R)" in ln:
                         in_steps = True
@@ -126,10 +126,12 @@ def parse_workflows():
                         cells = [c.strip() for c in ln.strip().strip("|").split("|")]
                         if len(cells) < 5 or set(cells[0]) <= set("- "):
                             continue
-                        steps.append((parse_minutes(cells[4] if len(cells) > 4 else ""),
+                        dur_cell = cells[4] if len(cells) > 4 else ""
+                        steps.append((parse_minutes(dur_cell),
                                       cells[2].strip(), cells[3].strip()))
+                        periods.append(step_period_qualifier(dur_cell))
                 out.append({"id": wid, "vs": vs, "title": title.strip(), "owner": owner,
-                            "freq": freq, "steps": steps})
+                            "freq": freq, "steps": steps, "step_period": periods})
     return out
 
 
@@ -142,9 +144,28 @@ def parse_minutes(cell):
     plural-unit duration cell (3,775 corpus cells re-measured by the fix).
     Unit alternation is now plural-capable longest-first
     ('mins?|hours?|hrs?|h'), so qualifiers after the unit ('/year',
-    '/item midpoint × ~30 items/year') no longer defeat the match."""
+    '/item midpoint × ~30 items/year') no longer defeat the match.
+    2026-09-25 (bu) tenth review-everything pass — per-occurrence rates are
+    SYMBOLIC (the roll-up's per-unit discipline, mirrored here): a duration
+    cell qualified by a subset-event unit ('/occurrence', '/exception',
+    '/incident', '/case', 'per investigation', '/signup', …) prices the step
+    per THAT subset, whose universe the workflow's Frequency clause does not
+    carry — annualizing it against the workflow cadence multiplied subset
+    work by the whole universe (W1365's '10–20 min/exception' read ×8,700
+    ASN-events = 2,175 h/yr against its own ~105–150/exceptions-month
+    estimate; W3's '15 min/occurrence' Buyer RTV cell read ×72,000
+    store-events). Such cells return 0.0 here (counted, never summed — the
+    roll-up's classification is authoritative for their volume). Period-
+    qualified totals ('1 hour/week', '2 hours/month', '4 hours/year') are
+    NOT zeroed: they are chain-wide periodic totals, bridged by the per-step
+    step_period attachment (parse_workflows × step_period_qualifier) —
+    '4 hours/year' on W942's DPO consent audit had been priced 240 min ×
+    9,000 linking-events = 36,000 h/yr against a charter of 4 documented
+    hours."""
     c = cell.strip().strip("*").lower()
     if not c or c in {"—", "-", "automated", "n/a", "system"}:
+        return 0.0
+    if re.search(r"(?:/\s*|\bper\s+)(occurrences?|exceptions?|incidents?|cases?|signups?|investigations?|claims?|requests?)\b", c):
         return 0.0
     m = re.search(r"(\d+(?:\.\d+)?)(?:\s*[–-]\s*(\d+(?:\.\d+)?))?\s*(mins?|hours?|hrs?|h)\b", c)
     if not m:

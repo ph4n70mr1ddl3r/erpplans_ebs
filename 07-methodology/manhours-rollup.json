@@ -27313,9 +27313,28 @@
     "elapsed_days": null,
     "notes": [],
     "step": "9",
-    "role_r": "Putaway Staff, Special Handling Lead",
+    "role_r": "Putaway Staff",
     "role_a": "DC Supervisor",
     "duration": "15\u201330 min"
+   },
+   {
+    "klass": "per-unit",
+    "hours": [
+     0.5,
+     0.75
+    ],
+    "cadence": null,
+    "monthly": null,
+    "unit": "occurrence",
+    "mults": [
+     "occurrence"
+    ],
+    "elapsed_days": null,
+    "notes": [],
+    "step": "9a",
+    "role_r": "Special Handling Lead",
+    "role_a": "DC Supervisor",
+    "duration": "30\u201345 min/occurrence"
    },
    {
     "klass": "automated",
@@ -27354,6 +27373,13 @@
     "hours": [
      0.25,
      0.25
+    ]
+   },
+   {
+    "unit": "occurrence",
+    "hours": [
+     0.5,
+     0.75
     ]
    }
   ]
@@ -29586,16 +29612,16 @@
     ],
     "cadence": null,
     "monthly": null,
-    "unit": "exception",
+    "unit": "occurrence",
     "mults": [
-     "exception"
+     "occurrence"
     ],
     "elapsed_days": null,
     "notes": [],
     "step": "5",
     "role_r": "DC Inbound Supervisor",
     "role_a": "DC Manager",
-    "duration": "10\u201320 min/exception"
+    "duration": "10\u201320 min/occurrence"
    },
    {
     "klass": "per-unit",
@@ -29617,21 +29643,23 @@
     "duration": "15 min/case"
    },
    {
-    "klass": "effort",
+    "klass": "per-unit",
     "hours": [
-     1.0,
-     24.0
+     0.25,
+     0.5
     ],
-    "cadence": "occurrence",
+    "cadence": null,
     "monthly": null,
-    "unit": null,
-    "mults": [],
+    "unit": "occurrence",
+    "mults": [
+     "occurrence"
+    ],
     "elapsed_days": null,
     "notes": [],
     "step": "7",
     "role_r": "DC Inbound Supervisor / Vendor",
     "role_a": "\u2014",
-    "duration": "1\u201324 hours"
+    "duration": "15\u201330 min/occurrence (vendor response window 1\u201324 hours elapsed)"
    },
    {
     "klass": "effort",
@@ -29669,7 +29697,7 @@
   ],
   "per_unit_rates": [
    {
-    "unit": "exception",
+    "unit": "occurrence",
     "hours": [
      0.16666666666666666,
      0.3333333333333333
@@ -29680,6 +29708,13 @@
     "hours": [
      0.25,
      0.25
+    ]
+   },
+   {
+    "unit": "occurrence",
+    "hours": [
+     0.25,
+     0.5
     ]
    }
   ]
@@ -173531,7 +173566,7 @@
     "elapsed_days": null,
     "notes": [],
     "step": "6",
-    "role_r": "CS Manager / Store Manager, Quality & Workforce Analyst",
+    "role_r": "CS Manager / Store Manager",
     "role_a": "VP Store Operations",
     "duration": "30\u201360 min"
    },
@@ -368234,10 +368269,24 @@
   "frequency": "Daily (every store, every operating day)",
   "steps": [
    {
+    "klass": "automated",
+    "hours": null,
+    "cadence": null,
+    "monthly": null,
+    "unit": null,
+    "mults": [],
+    "elapsed_days": null,
+    "notes": [],
+    "step": "1",
+    "role_r": "System",
+    "role_a": "LP Manager (Regional)",
+    "duration": "Automated"
+   },
+   {
     "klass": "effort",
     "hours": [
-     0.5,
-     0.5
+     0.25,
+     0.25
     ],
     "cadence": "occurrence",
     "monthly": null,
@@ -368245,10 +368294,10 @@
     "mults": [],
     "elapsed_days": null,
     "notes": [],
-    "step": "1",
-    "role_r": "LP Analyst, Senior LP Analytics Analyst",
+    "step": "1a",
+    "role_r": "LP Analyst",
     "role_a": "LP Manager (Regional)",
-    "duration": "30 min (automated + validation)"
+    "duration": "15 min"
    },
    {
     "klass": "effort",
@@ -368361,7 +368410,7 @@
    0.0
   ],
   "effort_steps": 0,
-  "automated_steps": 0,
+  "automated_steps": 1,
   "cadence_only_steps": 0,
   "qualitative_steps": 0,
   "empty_steps": 0,
@@ -389987,7 +390036,7 @@
     "elapsed_days": null,
     "notes": [],
     "step": "2",
-    "role_r": "LP Analyst",
+    "role_r": "Senior LP Analytics Analyst",
     "role_a": "Loss Prevention Manager",
     "duration": "2-3 hours/week"
    },
@@ -510395,7 +510444,7 @@
   "frequency": "Continuous",
   "steps": [
    {
-    "klass": "cadence-only",
+    "klass": "automated",
     "hours": null,
     "cadence": null,
     "monthly": null,
@@ -510404,9 +510453,9 @@
     "elapsed_days": null,
     "notes": [],
     "step": "1",
-    "role_r": "Marketing Tech / Loyalty, Privacy Officer",
+    "role_r": "System",
     "role_a": "Marketing Technology Manager",
-    "duration": "Per signup"
+    "duration": "Automated"
    },
    {
     "klass": "qualitative",
@@ -510445,8 +510494,8 @@
    0.0
   ],
   "effort_steps": 0,
-  "automated_steps": 0,
-  "cadence_only_steps": 2,
+  "automated_steps": 1,
+  "cadence_only_steps": 1,
   "qualitative_steps": 1,
   "empty_steps": 0,
   "elapsed_days": [
