@@ -193,6 +193,20 @@ def events_per_year(freq, field_exec):
     low = f.lower()
     period_re = r"(day|week|month|quarter|year)"
 
+    # 0. standing-coverage house forms (no digits, no bare cadence word): the
+    #    work is per-workday coverage (system/platform monitoring, register
+    #    maintenance), not a per-event count -> HQ/DC once per workday, store
+    #    once per trading day (xSTORES). 'Continuous + periodic review' etc.
+    #    with a bare cadence word fall through to rule 3 unchanged; genuinely
+    #    event-driven forms ('Per case', 'Event-driven') are NOT matched here —
+    #    they need measured volumes, not a synthetic cadence.
+    if re.search(r"\b(continuous|ongoing|maintained|always[- ]on)\b", low) \
+            and not re.search(r"\b(daily|weekly|monthly|quarterly|annual|yearly)\b", low) \
+            and not re.search(r"\d", low):
+        if field_exec == "store":
+            return float(STORES * 365), "continuous-xSTORES"
+        return float(WORKDAYS["day"]), "continuous-workdays"  # 250 workdays x 1/day
+
     def midpoint(lo_s, hi_s=None):
         lo = float(lo_s.replace(",", ""))
         hi = float(hi_s.replace(",", "")) if hi_s else lo
@@ -238,11 +252,16 @@ def events_per_year(freq, field_exec):
             events = float(WORKDAYS[period])
             return events, f"bare-{period}"
 
-    # 4. 'N-M / period' slash form
-    m = re.search(r"(\d[\d,]*)\s*[–-]\s*(\d[\d,]*)\s*/\s*" + period_re, low)
+    # 4. 'N-M [/unit words] / period' slash form — including the calibration-era
+    #    house shape '~13,000–15,000 transactions/month chain-wide (...)' where a
+    #    unit word sits between the range and the slash (the 2026-09-25 (bd)
+    #    extension: the bare 'N-M / period' form missed every v4.7-calibrated row).
+    m = re.search(r"(\d[\d,]*)\s*[–-]\s*(\d[\d,]*)\s*[^.;()/]*?/\s*" + period_re, low) or \
+        re.search(r"(\d[\d,]*)\s*[^.;()/]*?/\s*" + period_re, low)
     if m:
-        per = midpoint(m.group(1), m.group(2))
-        return per * PERIOD_MULT[m.group(3)], "slash-period"
+        g = m.groups()
+        per = midpoint(g[0], g[1] if len(g) == 3 else None)
+        return per * PERIOD_MULT[g[-1]], "slash-period"
     return None, "unparseable"
 
 

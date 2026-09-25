@@ -80,6 +80,13 @@ def main():
         return 1
     demand = parse_full_dump(proc.stdout)
 
+    # coverage % re-derived from the same engine (was hardcoded '~53%' before the
+    # (bd) parser extensions — a hardcoded figure contradicted the tool's own
+    # coverage line on every motion re-run)
+    cov = re.search(r"Annualization coverage: (\d[\d,]*)/(\d[\d,]*) workflows \((\d+)%\)",
+                    proc.stdout)
+    cov_pct = f"{cov.group(3)}%" if cov else "—"
+
     src_map = {"hq": "§5.3 register", "it": "IT seat",
                "store": "§7.2 store roster", "dc": "§7.3 DC roster"}
     L = []
@@ -91,7 +98,8 @@ def main():
     A("> or structure decision may touch a weak-anchor role until its per-role annual demand is")
     A("> verified against chartered capacity. Instrument: `virtual-gemba-walk.py motion --full`")
     A("> (per-role annual demand hours from the corpus's own step durations × event cadence vs")
-    A("> chartered TO capacity; 1,800/1,900 net productive hours; ~53% frequency-parse coverage).")
+    A("> chartered TO capacity; 1,800/1,900 net productive hours; frequency-parse coverage "
+      f"{cov_pct} at generation).")
     A("> Batches 39–41 elevated nineteen roles into Role (R) cells; batch 42 re-anchored the T&A")
     A("> Analyst off a store-scaled step onto its true HQ platform step; batch 43 classifies the")
     A("> residual — ZERO-DURATION rows are days-based/multi-day work the hour model cannot")
