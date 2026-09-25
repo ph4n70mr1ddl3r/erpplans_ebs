@@ -5,7 +5,7 @@
 > or structure decision may touch a weak-anchor role until its per-role annual demand is
 > verified against chartered capacity. Instrument: `virtual-gemba-walk.py motion --full`
 > (per-role annual demand hours from the corpus's own step durations × event cadence vs
-> chartered TO capacity; 1,800/1,900 net productive hours; frequency-parse coverage 79% at generation).
+> chartered TO capacity; 1,800/1,900 net productive hours; frequency-parse coverage 88% at generation).
 > Batches 39–41 elevated nineteen roles into Role (R) cells; batch 42 re-anchored the T&A
 > Analyst off a store-scaled step onto its true HQ platform step; batch 43 classifies the
 > residual — ZERO-DURATION rows are days-based/multi-day work the hour model cannot
@@ -40,7 +40,7 @@
 | IAP Integration Engineer | IT seat — Information Technology (product model) | 1 | — | — | — | NO PARSED CADENCE |
 | Payroll & Statutory Remittance Officer | §5.3 register — Human Resources | 1 | 60 | 1 | 3% | UNDER-UTILIZED |
 | Promotions & Vendor-Funding Coordinator | §5.3 register — Merchandising & Buying | 1 | — | 3 | — | NO PARSED CADENCE |
-| Promotions Specialist | §5.3 register — Marketing | 1 | — | 2 | — | NO PARSED CADENCE |
+| Promotions Specialist | §5.3 register — Marketing | 1 | 62 | 2 | 2% | UNDER-UTILIZED |
 | Quality & Workforce Analyst | §5.3 register — Customer Service | 1 | 7,500 | 2 | 208% | OVERLOAD |
 | Senior LP Analytics Analyst | §5.3 register — Regional Loss Prevention | 1 | 18,250 | 1 | 1014% | OVERLOAD |
 | Special Handling Lead | §7.3 DC roster — DC (field, per-DC roster) | 1 | — | — | — | NO PARSED CADENCE |
@@ -54,7 +54,7 @@
 | Business Process & IMS Lead | §5.3 register — Strategy / Corporate Planning | 2 | — | 1 | — | NO PARSED CADENCE |
 | Corporate Secretary Analyst | §5.3 register — Legal & Compliance | 2 | — | 1 | — | NO PARSED CADENCE |
 | CPM (Corporate Performance Management) Analyst | §5.3 register — Strategy / Corporate Planning | 2 | — | 1 | — | NO PARSED CADENCE |
-| Cross-Dock Team | §7.3 DC roster — DC (field, per-DC roster) | 2 | 91 | 24 | 0% | UNDER-UTILIZED |
+| Cross-Dock Team | §7.3 DC roster — DC (field, per-DC roster) | 2 | 31 | 24 | 0% | UNDER-UTILIZED |
 | DC Cost-to-Serve Analyst | §5.3 register — Finance & Accounting | 2 | — | 1 | — | NO PARSED CADENCE |
 | DC Operations Analyst | §5.3 register — Supply Chain & Logistics | 2 | — | 1 | — | NO PARSED CADENCE |
 | Ecommerce Support Specialist | §5.3 register — Customer Service | 2 | 5,000 | 3 | 93% | CONFIRMED |
@@ -86,8 +86,8 @@
 |---|---|
 | CONFIRMED | 4 |
 | OVERLOAD | 2 |
-| UNDER-UTILIZED | 9 |
-| NO PARSED CADENCE | 38 |
+| UNDER-UTILIZED | 10 |
+| NO PARSED CADENCE | 37 |
 
 > OVERLOAD rows are the headcount-real candidates this doctrine exists to find. UNDER-UTILIZED
 > rows are merge/resize candidates. ZERO-DURATION rows carry days-based work — audit the cycle,

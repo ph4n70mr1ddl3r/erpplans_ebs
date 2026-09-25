@@ -151,6 +151,91 @@ PERIOD_DAYS = {"day": 1, "week": 7, "month": 30, "quarter": 91, "year": 365}
 PERIOD_MULT = {"day": 365, "week": 52, "month": 12, "quarter": 4, "year": 1}
 WORKDAYS = {"day": 250, "week": 50, "month": 12, "quarter": 4, "year": 1}
 
+# Adjudicated nominal annual event volumes for the episodic program families
+# (2026-09-25 (be) wave) — exact-form keys, chain-wide events/yr. These are
+# DOCUMENTED ASSUMPTIONS (small-N episodic programs production does not
+# measure), not derived figures; each is deliberately conservative and
+# revisitable. Basis notes inline. Unmapped bespoke phrases stay unparsed.
+NOMINAL_EVENTS = {
+    "event-driven": 12,            # generic incident/escalation/case programs
+    "event-driven; rare": 2,
+    "event-driven × 200 stores": 2400,   # 12 exceptions/store/yr
+    "per recall event": 2,         # product-safety recalls: rare by design
+    "per project": 20,             # capex/EPC/construction program
+    "per remodel": 15,             # store remodel program
+    "per event": 24,               # marketing/event calendar (~2/month)
+    "per transaction": 2,          # M&A/deal transactions, not POS
+    "on event": 24,                # HR life-events + surveillance triggers
+    "per case": 30,                # legal/investigation docket (W3258: ~30–80)
+    "per closure": 2,              # store closures
+    "per target": 12,              # M&A/screening funnel
+    "periodic": 4,                 # quarterly review cycle
+    "per rental": 4500,            # own-field sibling: ~3,000–6,000 rentals/yr
+    "per site": 12,                # solar/site programs
+    "per order": 6000,             # resale/pre-owned order volume (small)
+    "per item": 1500,              # trade-in/take-back units
+    "per opportunity": 30,
+    "per shipment": 200,           # import containers/yr (consolidated)
+    "per project completion": 20,
+    "per initiative": 15,
+    "per application": 300,        # housing-finance applications
+    "per claim": 60,
+    "per sourcing event + multi-year contract": 4,
+    "ad hoc": 6,
+    "ad-hoc": 6,
+    "ad-hoc (rare)": 2,
+    "ad hoc (lapse/breach events)": 2,
+    "per cooperative onboarding": 10,
+    "opportunity-driven": 30,
+    "per dispute": 20,
+    "per cycle": 4,
+    "per incident": 20,
+    "per program cycle": 4,
+    "per loan": 150,
+    "per assignment": 10,
+    "per new store construction": 12,   # opening program ~10–15/yr (own-field)
+    "per delivery": 2000,          # jobsite/bulky deliveries
+    "per lease deal": 20,
+    "per worker assignment": 500,  # contractor assignments (~10–20% of labor)
+    "per matter": 15,
+    "per engagement": 12,
+    "per campaign": 12,
+    "per bid": 30,
+    "per milestone": 60,
+    "per return": 400,
+    "per season/promotion": 8,
+    "per launch": 6,
+    "per test": 12,
+    "per finding": 12,
+    "per cohort": 6,
+    "per trip": 2000,
+    "per issue": 12,
+    "per candidate": 400,          # hiring pipeline (≈2x the hire volume)
+    "per referral": 150,
+    "per customer interaction": 20000,   # contact-center tier interactions
+    "per visit": 2000,
+    "per appointment": 300,
+    "per consultation": 300,
+    "per exception": 2400,
+    "per need": 12,
+    "per change": 250,             # per-workday change rate for register upkeep
+    "per report": 50,
+    "per lease": 20,
+    "per asset": 100,
+    "per instrument": 50,
+    "per decision": 50,
+    "per proposal": 30,
+    "per exit": 1170,              # own-field sibling: ~1,000–1,340 exits/yr
+    "per intake batch": 50,
+    "per stage-gate": 80,
+    "per movement": 500,
+    "rare": 1,
+    "occasional": 12,
+    "moderate": 50,
+    "seasonal": 4,
+    "per tax year + per filing": 260,
+}
+
 
 PERIOD_QUALIFIER = re.compile(r"(?:/|per\s+)\s*(month|week|year|quarter)\b", re.I)
 PERIOD_MULT_Q = {"month": 12.0, "week": 52.0, "quarter": 4.0, "year": 1.0}
@@ -192,17 +277,16 @@ def events_per_year(freq, field_exec):
         return None, "no-frequency"
     low = f.lower()
     period_re = r"(day|week|month|quarter|year)"
+    core = re.sub(r"\([^)]*\)", " ", low)  # parentheticals are annotation, not cadence
 
-    # 0. standing-coverage house forms (no digits, no bare cadence word): the
-    #    work is per-workday coverage (system/platform monitoring, register
-    #    maintenance), not a per-event count -> HQ/DC once per workday, store
-    #    once per trading day (xSTORES). 'Continuous + periodic review' etc.
-    #    with a bare cadence word fall through to rule 3 unchanged; genuinely
-    #    event-driven forms ('Per case', 'Event-driven') are NOT matched here —
-    #    they need measured volumes, not a synthetic cadence.
-    if re.search(r"\b(continuous|ongoing|maintained|always[- ]on)\b", low) \
-            and not re.search(r"\b(daily|weekly|monthly|quarterly|annual|yearly)\b", low) \
-            and not re.search(r"\d", low):
+    # 0. standing-coverage house forms: the work is per-workday coverage
+    #    (system/platform monitoring, register maintenance), not a per-event
+    #    count -> HQ/DC once per workday (250), store once per trading day
+    #    (xSTORES). Judged on the paren-stripped text so annotation like
+    #    'Continuous (~6,911 employees)' still matches; a bare cadence word in
+    #    the core ('Continuous + monthly close') keeps rule 3 authoritative.
+    if re.search(r"\b(continuous|ongoing|maintained|always[- ]on|real[- ]time|24/7)\b", core) \
+            and not re.search(r"\b(daily|weekly|monthly|quarterly|annual|yearly)\b", core):
         if field_exec == "store":
             return float(STORES * 365), "continuous-xSTORES"
         return float(WORKDAYS["day"]), "continuous-workdays"  # 250 workdays x 1/day
@@ -262,6 +346,27 @@ def events_per_year(freq, field_exec):
         g = m.groups()
         per = midpoint(g[0], g[1] if len(g) == 3 else None)
         return per * PERIOD_MULT[g[-1]], "slash-period"
+    # 5. self-stated volume: the field carries its own annual/monthly count in
+    #    a parenthetical or tail clause ('Per hire (~1,200–1,600 hires/yr)',
+    #    '~3,000–6,000 rentals/yr', '~100–200 loan/advance requests/month
+    #    chain-wide') — the field's own numbers, not a synthetic cadence.
+    m = re.search(r"~?\s*(\d[\d,]*)\s*[–-]\s*(\d[\d,]*)\s*[^();]*?/\s*(?:yr|year)\b", low) or \
+        re.search(r"~?\s*(\d[\d,]*)\s*[–-]\s*(\d[\d,]*)\s*[^();]*?per\s+year\b", low)
+    if m:
+        return midpoint(m.group(1), m.group(2)), "self-stated-annual"
+    m = re.search(r"~?\s*(\d[\d,]*)\s*[–-]\s*(\d[\d,]*)\s*[^();]*?/\s*month\b", low)
+    if m:
+        return midpoint(m.group(1), m.group(2)) * 12, "self-stated-monthly"
+
+    # 6. adjudicated nominal families (exact-form map, 2026-09-25 (be)): the
+    #    episodic program workflows whose volumes production does not measure
+    #    (recalls, M&A deals, remodels, cases, rentals...) — small-N nominal
+    #    events/yr, each an explicit documented assumption. Exact-form match
+    #    (whitespace-normalized) so a polysemous noun can never hijack a real
+    #    cadence. Unmapped bespoke one-off phrases stay honestly unparsed.
+    nominal = NOMINAL_EVENTS.get(re.sub(r"\s+", " ", low).strip(" ;,."))
+    if nominal:
+        return float(nominal), "nominal-family"
     return None, "unparseable"
 
 
