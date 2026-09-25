@@ -67,7 +67,6 @@
 | Senior LP Analytics Analyst | §5.3 register — Regional Loss Prevention | 1 | 1 |
 | TA Coordinator | §5.3 register — Human Resources | 1 | 1 |
 | Technical Accounting Manager | §5.3 register — Finance & Accounting | 1 | 1 |
-| Build-Squad Tech Lead | IT product-model seats — Information Technology (product model) | — | 1 |
 | IAP Integration Engineer | IT product-model seats — Information Technology (product model) | — | 1 |
 | ASM | §7.2 store roster — Store (field, per-store roster) | — | 1 |
 | Assistant DC Manager — Outbound | §7.3 DC roster — DC (field, per-DC roster) | — | 1 |
@@ -104,6 +103,7 @@
 | Vendor Portal & Collaboration Specialist | §5.3 register — Supply Chain & Logistics | 2 | 2 |
 | Wellness Coordinator | §5.3 register — Health, Safety & Environment | 1 | 2 |
 | AAP Agent Engineer | IT product-model seats — Information Technology (product model) | — | 2 |
+| Build-Squad Tech Lead | IT product-model seats — Information Technology (product model) | — | 2 |
 | IAP Integration Support Engineer | IT product-model seats — Information Technology (product model) | — | 2 |
 | INFRA Site Reliability Engineer | IT product-model seats — Information Technology (product model) | — | 2 |
 | Assistant DC Manager — Inbound | §7.3 DC roster — DC (field, per-DC roster) | — | 2 |
@@ -148,7 +148,7 @@
 | Senior FP&A Analyst | Finance & Accounting | 2 | 0 | 2 | 1 | 0 | 3 | 2 | 0 | 1 |
 | Tax Compliance & eFPS Specialist | Finance & Accounting | 1 | 0 | 2 | 1 | 0 | 3 | 3 | 0 | 0 |
 | Banking & Cash-Management Specialist | Finance & Accounting | 2 | 0 | 2 | 1 | 0 | 2 | 1 | 1 | 0 |
-| DC Cost-to-Serve Analyst | Finance & Accounting | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 1 | 1 |
+| DC Cost-to-Serve Analyst | Finance & Accounting | 1 | 0 | 2 | 1 | 0 | 2 | 0 | 1 | 1 |
 | Accounting Policy Analyst | Finance & Accounting | 1 | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 |
 | Technical Accounting Manager | Finance & Accounting | 1 | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 |
 | Category Manager | Merchandising & Buying | 5 | 127 | 616 | 656 | 560 | 733 | 119 | 482 | 132 |
@@ -184,7 +184,7 @@
 | 3PL & Freight Specialist | Supply Chain & Logistics | 2 | 2 | 0 | 9 | 8 | 3 | 0 | 3 | 0 |
 | Vendor Portal & Collaboration Specialist | Supply Chain & Logistics | 2 | 1 | 2 | 12 | 1 | 2 | 1 | 1 | 0 |
 | Senior Demand Planner | Supply Chain & Logistics | 1 | 0 | 2 | 1 | 0 | 3 | 3 | 0 | 0 |
-| DC Operations Analyst | Supply Chain & Logistics | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 1 | 1 |
+| DC Operations Analyst | Supply Chain & Logistics | 1 | 0 | 2 | 1 | 0 | 2 | 0 | 1 | 1 |
 | Import Documentation Specialist | Supply Chain & Logistics | 1 | 0 | 2 | 1 | 0 | 2 | 1 | 1 | 0 |
 | Purchasing / PO Specialist | Supply Chain & Logistics | 6 | 0 | 2 | 1 | 0 | 2 | 2 | 0 | 0 |
 | Replenishment & Allocation Analyst | Supply Chain & Logistics | 2 | 0 | 1 | 1 | 0 | 2 | 1 | 1 | 0 |
@@ -229,14 +229,14 @@
 | Performance-Marketing Specialist | Marketing | 2 | 1 | 4 | 16 | 0 | 4 | 0 | 1 | 3 |
 | Marketing Comms Specialist | Marketing | 1 | 1 | 0 | 2 | 0 | 2 | 0 | 1 | 1 |
 | Retail Media Operations Specialist | Marketing | 1 | 0 | 2 | 1 | 0 | 2 | 0 | 1 | 1 |
-| Ecommerce Marketing Specialist | Marketing | 2 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 1 |
+| Ecommerce Marketing Specialist | Marketing | 2 | 0 | 1 | 1 | 0 | 1 | 0 | 0 | 1 |
 | Promotions Specialist | Marketing | 2 | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 |
 | VP Store Operations (Director Field Retail Operations) | Store Operations | 1 | 98 | 166 | 212 | 539 | 366 | 66 | 242 | 58 |
 | Retail Standards & Store-Opening Manager (Store Support Center lead) | Store Operations | 1 | 31 | 26 | 24 | 37 | 53 | 9 | 42 | 2 |
 | Regional Manager | Store Operations | 6 | 28 | 116 | 140 | 201 | 209 | 62 | 125 | 22 |
 | OpEx / Continuous-Improvement Process Lead | Store Operations | 1 | 27 | 34 | 104 | 26 | 56 | 1 | 28 | 27 |
 | District Manager | Store Operations | 13 | 9 | 11 | 26 | 25 | 23 | 5 | 17 | 1 |
-| Facilities Coordination Specialist | Store Operations | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 2 | 0 |
+| Facilities Coordination Specialist | Store Operations | 1 | 0 | 2 | 1 | 0 | 2 | 0 | 2 | 0 |
 | Field Communications Manager | Store Operations | 1 | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 |
 | VP Legal & Compliance | Legal & Compliance | 1 | 109 | 131 | 184 | 1114 | 636 | 200 | 388 | 48 |
 | Compliance Manager / MLRO | Legal & Compliance | 1 | 60 | 31 | 104 | 167 | 125 | 45 | 67 | 13 |
@@ -298,7 +298,7 @@
 | Head of Strategy & Corporate Planning | Strategy / Corporate Planning | 1 | 32 | 78 | 109 | 31 | 95 | 3 | 79 | 13 |
 | Competitive Intelligence Manager | Strategy / Corporate Planning | 1 | 2 | 4 | 0 | 1 | 5 | 0 | 3 | 2 |
 | Document Control Coordinator | Strategy / Corporate Planning | 1 | 0 | 3 | 0 | 0 | 3 | 0 | 3 | 0 |
-| Business Process & IMS Lead | Strategy / Corporate Planning | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 2 | 0 |
+| Business Process & IMS Lead | Strategy / Corporate Planning | 1 | 0 | 2 | 1 | 0 | 2 | 0 | 2 | 0 |
 | CPM (Corporate Performance Management) Analyst | Strategy / Corporate Planning | 1 | 0 | 2 | 1 | 0 | 2 | 0 | 1 | 1 |
 | Strategy Analyst | Strategy / Corporate Planning | 1 | 0 | 2 | 1 | 0 | 2 | 1 | 0 | 1 |
 | Trade Account Manager | Trade / Account Management | 2 | 22 | 54 | 90 | 13 | 56 | 13 | 38 | 5 |
@@ -342,9 +342,9 @@
 | AAP Agent Engineer | Information Technology (product model) | 1 | 2 | 4 | 5 | 2 | 0 | 2 | 0 |
 | INFRA Site Reliability Engineer | Information Technology (product model) | 1 | 2 | 5 | 0 | 2 | 0 | 2 | 0 |
 | Information Technology (department) | Information Technology (product model) | 0 | 1 | 22 | 1 | 15 | 8 | 6 | 1 |
-| IAP Integration Support Engineer | Information Technology (product model) | 0 | 2 | 1 | 1 | 2 | 1 | 1 | 0 |
-| Build-Squad Tech Lead | Information Technology (product model) | 0 | 1 | 1 | 0 | 1 | 0 | 0 | 1 |
-| IAP Integration Engineer | Information Technology (product model) | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
+| Build-Squad Tech Lead | Information Technology (product model) | 0 | 1 | 2 | 0 | 2 | 0 | 1 | 1 |
+| IAP Integration Support Engineer | Information Technology (product model) | 0 | 2 | 2 | 1 | 2 | 1 | 1 | 0 |
+| IAP Integration Engineer | Information Technology (product model) | 0 | 1 | 1 | 0 | 1 | 0 | 1 | 0 |
 
 ## Store field roles (§7.2 roster)
 
@@ -387,13 +387,13 @@
 | Packers / Load Builders | DC (field, per-DC roster) | 0 | 5 | 9 | 0 | 8 | 6 | 2 | 0 |
 | Putaway Staff | DC (field, per-DC roster) | 0 | 4 | 4 | 0 | 4 | 2 | 0 | 2 |
 | Cross-Dock Team | DC (field, per-DC roster) | 0 | 2 | 1 | 0 | 2 | 0 | 1 | 1 |
-| Assistant DC Manager — Outbound | DC (field, per-DC roster) | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
+| Assistant DC Manager — Outbound | DC (field, per-DC roster) | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 0 |
 | Cycle Counters | DC (field, per-DC roster) | 0 | 1 | 2 | 0 | 1 | 0 | 1 | 0 |
-| DC Office Administrator | DC (field, per-DC roster) | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 1 |
+| DC Office Administrator | DC (field, per-DC roster) | 0 | 1 | 1 | 0 | 1 | 0 | 0 | 1 |
 | Discrepancy Analysts | DC (field, per-DC roster) | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 0 |
 | Facilities/Utility | DC (field, per-DC roster) | 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |
-| Special Handling Lead | DC (field, per-DC roster) | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
-| Tile & Heavy/Breakbulk Crew | DC (field, per-DC roster) | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 |
+| Special Handling Lead | DC (field, per-DC roster) | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 0 |
+| Tile & Heavy/Breakbulk Crew | DC (field, per-DC roster) | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 0 |
 
 ## Department-level actors (department or generic form named as performer)
 

@@ -30,7 +30,7 @@ Source: workflow W3 — Warehouse Receiving &amp; Putaway</bpmn:documentation>
         <bpmn:flowNodeRef>W3_Task17</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W3_Task19</bpmn:flowNodeRef>
         </bpmn:lane>
-        <bpmn:lane id="W3_Lane7" name="Putaway Staff">
+        <bpmn:lane id="W3_Lane7" name="Putaway Staff, Special Handling Lead">
         <bpmn:flowNodeRef>W3_Task18</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W3_End20</bpmn:flowNodeRef>
         </bpmn:lane>
@@ -104,7 +104,7 @@ Duration: Automated</bpmn:documentation>
       </bpmn:serviceTask>
       <bpmn:userTask id="W3_Task18" name="Putaway staff moves goods to assigned bin; scan-confirm in system">
         <bpmn:documentation>Step 9: Putaway staff moves goods to assigned bin; scan-confirm in system
-Responsible (R): Putaway Staff
+Responsible (R): Putaway Staff, Special Handling Lead
 Accountable (A): DC Supervisor
 Duration: 15–30 min</bpmn:documentation>
         <bpmn:incoming>W3_Flow31</bpmn:incoming>

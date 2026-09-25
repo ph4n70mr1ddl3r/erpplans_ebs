@@ -23,7 +23,7 @@ Source: workflow W4177 — Janitorial, Cleaning &amp; Hygiene Service Operations
       </bpmn:startEvent>
       <bpmn:userTask id="W4177_Task5" name="Facilities/Provider execute the daily cleaning schedule per site-type standard…">
         <bpmn:documentation>Step 1: Facilities/Provider execute the daily cleaning schedule per site-type standard (floor, restrooms, glass, backroom, yard) with checklists and photo evidence, resourced by the provider workforce (VS-98)
-Responsible (R): Provider / Facilities Soft-Services Lead
+Responsible (R): Provider / Facilities Soft-Services Lead, Facilities Coordination Specialist
 Accountable (A): Facilities Soft-Services Lead
 Duration: Daily</bpmn:documentation>
         <bpmn:incoming>W4177_Flow11</bpmn:incoming>

@@ -65,6 +65,7 @@ TIER_PATH = os.path.join(WF, "workflow-criticality-classification.md")
 IT_SEATS = {
     "it product owner": "IT Product Owner",
     "it product manager": "IT Product Manager (build squad)",
+    "build-squad tech lead": "Build-Squad Tech Lead",
     "product owner": "IT Product Owner",
     "product manager": "IT Product Manager (build squad)",
     "erp functional analyst": "ERP Functional Analyst",

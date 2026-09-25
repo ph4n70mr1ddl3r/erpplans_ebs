@@ -357,7 +357,7 @@ Duration: 15 min</bpmn:documentation>
       </bpmn:userTask>
       <bpmn:userTask id="W584_Task13" name="Shift handover log">
         <bpmn:documentation>Step 7: Shift handover log (1:45 PM — end of Day Shift A / start of Night Shift B): DC Shift Supervisor (A) completes shift handover log in system and conducts face-to-face handover with incoming DC Shift Supervisor (B). Handover log captures: (a) inbound status: receipts completed (count and lines), receipts pending (with reason — late truck, quality hold, Buyer pending), dock door occupancy, unscheduled deliveries handled; (b) outbound status: dispatches completed, dispatches pending (with reason — pick incomplete, truck late, 3PL no-show), truck utilization rate for completed dispatches; (c) inventory operations: putaway backlog (pallet count and estimated hours to clear), pick wave completion status, cycle count results if any per W6; (d) exceptions: unresolved exceptions from step 5 with current status and required actions; (e) equipment status: forklift availability, RF scanner status, dock leveler issues; (f) staffing: actual headcount vs. planned, overtime hours consumed, any injuries or incidents; incoming Shift Supervisor (B) acknowledges handover in system
-Responsible (R): DC Shift Supervisor (A) / DC Shift Supervisor (B)
+Responsible (R): DC Shift Supervisor (A) / DC Shift Supervisor (B), DC Office Administrator
 Accountable (A): DC Manager
 Duration: 20 min</bpmn:documentation>
         <bpmn:incoming>W584_Flow28</bpmn:incoming>
@@ -613,135 +613,138 @@ Volume: 4 DCs; ~20 KPIs tracked per DC across 6 operational categories
 Owner: DC Manager
 Participants: DC Shift Supervisors, DC Receiving Supervisor, DC Dispatch Supervisor, VP Supply Chain, Supply Planning Manager, DC Operations Analyst
 Source: workflow W586 — DC Daily KPI Dashboard &amp; Performance Tracking</bpmn:documentation>
-      <bpmn:laneSet id="W586_LaneSet4">
+      <bpmn:laneSet id="W586_LaneSet5">
         <bpmn:lane id="W586_Lane1" name="System">
-        <bpmn:flowNodeRef>W586_Task6</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W586_Task7</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W586_Task9</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W586_Task13</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W586_Start5</bpmn:flowNodeRef>
-        </bpmn:lane>
-        <bpmn:lane id="W586_Lane2" name="DC Manager">
         <bpmn:flowNodeRef>W586_Task8</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W586_Task10</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W586_Task12</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W586_Task14</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W586_Start6</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W586_Lane2" name="DC Manager">
+        <bpmn:flowNodeRef>W586_Task9</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W586_Task11</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W586_Lane3" name="VP Supply Chain">
-        <bpmn:flowNodeRef>W586_Task11</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W586_End14</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W586_Task12</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W586_Lane4" name="DC Manager, DC Operations Analyst">
+        <bpmn:flowNodeRef>W586_Task13</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W586_End15</bpmn:flowNodeRef>
         </bpmn:lane>
       </bpmn:laneSet>
-      <bpmn:startEvent id="W586_Start5" name="Automated overnight KPI calculation cycle; DC Manager morning review">
-        <bpmn:outgoing>W586_Flow17</bpmn:outgoing>
+      <bpmn:startEvent id="W586_Start6" name="Automated overnight KPI calculation cycle; DC Manager morning review">
+        <bpmn:outgoing>W586_Flow18</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:serviceTask id="W586_Task6" name="Automated overnight KPI calculation">
+      <bpmn:serviceTask id="W586_Task7" name="Automated overnight KPI calculation">
         <bpmn:documentation>Step 1: Automated overnight KPI calculation (10:30 PM — after Night Shift B closes): System extracts transaction data from WMS, Oracle Transportation Execution, ERP, and timekeeping systems for the completed operational day (6:00 AM current day through 10:00 PM current day) and calculates the following KPIs per DC: (A) Receiving Throughput: (i) total receipts completed vs. planned (target: ≥ 95% of scheduled appointments), (ii) average receiving time per receipt — gate-to-GR posting (target: ≤ 2 hours), (iii) receiving accuracy — % of GRs with zero discrepancies (target: ≥ 98%), (iv) quality inspection pass rate (target: ≥ 95% per W3 quality standards); (B) Putaway Performance: (v) total pallets put away vs. received (target: 100% same-day putaway), (vi) putaway backlog at EOD — pallet count (target: 0), (vii) average putaway time per pallet (target: ≤ 20 min from GR to bin-scan confirmation); (C) Picking Productivity: (viii) lines picked per picker-hour (target: ≥ 25 lines/picker-hour for standard merchandise, ≥ 15 for bulky/heavy items), (ix) pick accuracy — % of picks with zero errors (target: ≥ 99.5%), (x) pick wave on-time completion % (target: ≥ 95% of waves completed within scheduled window); (D) Shipping &amp; Dispatch: (xi) outbound loads dispatched vs. planned (target: ≥ 95%), (xii) on-time departure rate (target: ≥ 95% depart within 30 min of scheduled time), (xiii) truck utilization rate — loaded volume ÷ capacity (target: ≥ 75%), (xiv) on-time delivery rate from prior-day POD returns (target: ≥ 90%); (E) Labor Utilization: (xv) actual labor-hours vs. planned (target: ± 5%), (xvi) overtime hours as % of total labor-hours (target: ≤ 8%), (xvii) labor-hours per receipt processed, (xviii) labor-hours per dispatch processed; (F) Accuracy &amp; Quality: (xix) cycle count accuracy — if cycle count conducted today per W6 (target: ≥ 99.5%), (xx) shipping accuracy — % of outbound orders with zero errors (correct items, correct quantities, correct store) (target: ≥ 99%)
 Responsible (R): System
 Accountable (A): —
 Duration: Automated (30 min batch)</bpmn:documentation>
-        <bpmn:incoming>W586_Flow17</bpmn:incoming>
-        <bpmn:outgoing>W586_Flow18</bpmn:outgoing>
+        <bpmn:incoming>W586_Flow18</bpmn:incoming>
+        <bpmn:outgoing>W586_Flow19</bpmn:outgoing>
       </bpmn:serviceTask>
-      <bpmn:serviceTask id="W586_Task7" name="Morning dashboard generation">
+      <bpmn:serviceTask id="W586_Task8" name="Morning dashboard generation">
         <bpmn:documentation>Step 2: Morning dashboard generation (5:30 AM): System generates DC daily KPI dashboard with: (a) Summary scorecard: green/amber/red status per KPI category (green = within target, amber = within 10% of target threshold, red = below target threshold by &gt; 10%); (b) DC comparison view: side-by-side KPI comparison across all 4 DCs (Davao, Cebu, Calamba, Clark) to enable benchmarking; (c) 7-day trend sparklines: mini-trend charts for each KPI showing daily values for the past week; (d) Exception list: KPIs in red status with automatic root-cause suggestions based on correlation analysis (e.g., if receiving throughput is red and dock utilization is red, system suggests &quot;dock congestion — review W585 appointment schedule&quot;); (e) Corrective action tracker: open corrective actions from prior days with due-date status; dashboard is accessible via browser on DC Manager&#x27;s desktop and on wall-mounted displays in each DC&#x27;s operations office
 Responsible (R): System
 Accountable (A): —
 Duration: Automated</bpmn:documentation>
-        <bpmn:incoming>W586_Flow18</bpmn:incoming>
-        <bpmn:outgoing>W586_Flow19</bpmn:outgoing>
+        <bpmn:incoming>W586_Flow19</bpmn:incoming>
+        <bpmn:outgoing>W586_Flow20</bpmn:outgoing>
       </bpmn:serviceTask>
-      <bpmn:userTask id="W586_Task8" name="DC Manager morning review">
+      <bpmn:userTask id="W586_Task9" name="DC Manager morning review">
         <bpmn:documentation>Step 3: DC Manager morning review (8:00 AM): DC Manager opens daily KPI dashboard and reviews: (a) overall DC performance — is the summary scorecard predominantly green?; (b) any red-status KPIs — drill down to underlying transaction data to understand root cause; (c) 7-day trends — are any KPIs showing declining trajectory even if still green?; (d) DC comparison — is this DC underperforming vs. other DCs on any metric?; (e) open corrective actions — are prior corrective actions completed or overdue?; DC Manager documents review notes and action items in dashboard
 Responsible (R): DC Manager
 Accountable (A): VP Supply Chain
 Duration: 15–20 min/day</bpmn:documentation>
-        <bpmn:incoming>W586_Flow19</bpmn:incoming>
-        <bpmn:outgoing>W586_Flow20</bpmn:outgoing>
+        <bpmn:incoming>W586_Flow20</bpmn:incoming>
+        <bpmn:outgoing>W586_Flow21</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:serviceTask id="W586_Task9" name="Exception flagging and escalation">
+      <bpmn:serviceTask id="W586_Task10" name="Exception flagging and escalation">
         <bpmn:documentation>Step 4: Exception flagging and escalation: System automatically flags exceptions based on configurable rules: (a) Single-day red alert: any KPI in red status triggers automated email to DC Manager and DC Shift Supervisor with exception detail and suggested root cause; (b) 3-day amber trend: any KPI in amber status for 3 consecutive days escalates to DC Manager for investigation; (c) 7-day declining trend: any KPI showing consistent daily decline over 7 days (even if still green) triggers trend alert to DC Manager and VP Supply Chain; (d) Cross-DC outlier: any DC that is &gt; 15% below the 4-DC average on any KPI triggers outlier alert to VP Supply Chain; DC Manager must acknowledge each exception within 4 hours (weekdays) or by next business day (weekends)
 Responsible (R): System / DC Manager
 Accountable (A): VP Supply Chain
 Duration: 5–10 min/day for acknowledgment</bpmn:documentation>
-        <bpmn:incoming>W586_Flow20</bpmn:incoming>
-        <bpmn:outgoing>W586_Flow21</bpmn:outgoing>
+        <bpmn:incoming>W586_Flow21</bpmn:incoming>
+        <bpmn:outgoing>W586_Flow22</bpmn:outgoing>
       </bpmn:serviceTask>
-      <bpmn:userTask id="W586_Task10" name="Corrective action assignment">
+      <bpmn:userTask id="W586_Task11" name="Corrective action assignment">
         <bpmn:documentation>Step 5: Corrective action assignment: For each acknowledged exception, DC Manager assigns corrective action: (a) assigns responsible person (Shift Supervisor, Receiving Supervisor, Dispatch Supervisor, or specific staff member), (b) sets target resolution date (default: 5 business days for operational issues, 10 business days for systemic issues), (c) describes corrective action plan, (d) system tracks corrective action through lifecycle: Assigned → In Progress → Completed → Verified; (e) if corrective action not completed by target date: system escalates to VP Supply Chain; (f) completed corrective actions are reviewed for effectiveness in the next weekly trend review (step 7) — did the KPI improve?
 Responsible (R): DC Manager
 Accountable (A): VP Supply Chain
 Duration: 10 min/exception; ~2–3 exceptions/day</bpmn:documentation>
-        <bpmn:incoming>W586_Flow21</bpmn:incoming>
-        <bpmn:outgoing>W586_Flow22</bpmn:outgoing>
+        <bpmn:incoming>W586_Flow22</bpmn:incoming>
+        <bpmn:outgoing>W586_Flow23</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W586_Task11" name="VP Supply Chain multi-DC dashboard review">
+      <bpmn:userTask id="W586_Task12" name="VP Supply Chain multi-DC dashboard review">
         <bpmn:documentation>Step 6: VP Supply Chain multi-DC dashboard review (9:00 AM): VP Supply Chain reviews consolidated dashboard across all 4 DCs: (a) 4-DC summary scorecard with side-by-side comparison; (b) cross-DC outlier alerts; (c) open corrective action status across DCs; (d) identifies systemic issues affecting multiple DCs (e.g., if all 4 DCs show declining truck utilization, the issue is likely in load planning or fleet management rather than individual DC operations); (e) escalates systemic issues to COO with root-cause analysis and proposed resolution
 Responsible (R): VP Supply Chain
 Accountable (A): COO
 Duration: 20 min/day</bpmn:documentation>
-        <bpmn:incoming>W586_Flow22</bpmn:incoming>
-        <bpmn:outgoing>W586_Flow23</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:userTask id="W586_Task12" name="Weekly trend review">
-        <bpmn:documentation>Step 7: Weekly trend review (Monday 10:00 AM — part of W584 weekly operations review): DC Manager analyzes 7-day KPI trends: (a) calculate weekly averages for each KPI and compare to prior week; (b) identify KPIs with sustained improvement or decline over 4+ weeks; (c) review effectiveness of corrective actions completed in the past week — did the targeted KPI improve?; (d) identify emerging capacity constraints (e.g., if receiving throughput is steady but inbound volume is increasing, the DC is approaching a capacity ceiling); (e) prepare 1-page weekly DC performance summary for VP Supply Chain with top 3 wins, top 3 concerns, and action plan for the coming week
-Responsible (R): DC Manager
-Accountable (A): VP Supply Chain
-Duration: 30 min/week (in addition to W584 weekly review)</bpmn:documentation>
         <bpmn:incoming>W586_Flow23</bpmn:incoming>
         <bpmn:outgoing>W586_Flow24</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:serviceTask id="W586_Task13" name="Monthly executive DC performance report">
+      <bpmn:userTask id="W586_Task13" name="Weekly trend review">
+        <bpmn:documentation>Step 7: Weekly trend review (Monday 10:00 AM — part of W584 weekly operations review): DC Manager analyzes 7-day KPI trends: (a) calculate weekly averages for each KPI and compare to prior week; (b) identify KPIs with sustained improvement or decline over 4+ weeks; (c) review effectiveness of corrective actions completed in the past week — did the targeted KPI improve?; (d) identify emerging capacity constraints (e.g., if receiving throughput is steady but inbound volume is increasing, the DC is approaching a capacity ceiling); (e) prepare 1-page weekly DC performance summary for VP Supply Chain with top 3 wins, top 3 concerns, and action plan for the coming week
+Responsible (R): DC Manager, DC Operations Analyst
+Accountable (A): VP Supply Chain
+Duration: 30 min/week (in addition to W584 weekly review)</bpmn:documentation>
+        <bpmn:incoming>W586_Flow24</bpmn:incoming>
+        <bpmn:outgoing>W586_Flow25</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:serviceTask id="W586_Task14" name="Monthly executive DC performance report">
         <bpmn:documentation>Step 8: Monthly executive DC performance report: System generates monthly DC performance report for VP Supply Chain and COO: (a) monthly KPI averages per DC with month-over-month and year-over-year comparison; (b) 4-DC benchmarking ranking per KPI category; (c) top 10 corrective actions closed with effectiveness assessment; (d) open corrective actions aging report; (e) capacity utilization trend — is the DC approaching physical or labor capacity limits?; (f) cost per unit processed trend (total DC operating cost / units received + dispatched); (g) recommendations for capex investment (dock expansion, automation, equipment) or process changes based on performance trends; report auto-distributed to VP Supply Chain, COO, and CFO
 Responsible (R): System / DC Manager
 Accountable (A): VP Supply Chain
 Duration: Automated generation + 1 hour/month DC Manager review and commentary</bpmn:documentation>
-        <bpmn:incoming>W586_Flow24</bpmn:incoming>
-        <bpmn:outgoing>W586_Flow25</bpmn:outgoing>
-      </bpmn:serviceTask>
-      <bpmn:endEvent id="W586_End14" name="Complete">
         <bpmn:incoming>W586_Flow25</bpmn:incoming>
+        <bpmn:outgoing>W586_Flow26</bpmn:outgoing>
+      </bpmn:serviceTask>
+      <bpmn:endEvent id="W586_End15" name="Complete">
+        <bpmn:incoming>W586_Flow26</bpmn:incoming>
       </bpmn:endEvent>
-      <bpmn:textAnnotation id="W586_Annotation15">
+      <bpmn:textAnnotation id="W586_Annotation16">
         <bpmn:text>Controls: - CTL-252 (ensure controlled execution — DC Operations Management (PA-04.3).) | - operational: configurable per-DC targets but requires initial calibration effort; operational: pairing throughput KPIs with accuracy/quality KPIs in the same dashboard view
 Owner: DC Manager</bpmn:text>
       </bpmn:textAnnotation>
-      <bpmn:association id="W586_Assoc16" sourceRef="W586_Annotation15" targetRef="W586_Start5" associationDirection="None" />
-      <bpmn:sequenceFlow id="W586_Flow17" sourceRef="W586_Start5" targetRef="W586_Task6" />
-      <bpmn:sequenceFlow id="W586_Flow18" sourceRef="W586_Task6" targetRef="W586_Task7" />
+      <bpmn:association id="W586_Assoc17" sourceRef="W586_Annotation16" targetRef="W586_Start6" associationDirection="None" />
+      <bpmn:sequenceFlow id="W586_Flow18" sourceRef="W586_Start6" targetRef="W586_Task7" />
       <bpmn:sequenceFlow id="W586_Flow19" sourceRef="W586_Task7" targetRef="W586_Task8" />
       <bpmn:sequenceFlow id="W586_Flow20" sourceRef="W586_Task8" targetRef="W586_Task9" />
       <bpmn:sequenceFlow id="W586_Flow21" sourceRef="W586_Task9" targetRef="W586_Task10" />
       <bpmn:sequenceFlow id="W586_Flow22" sourceRef="W586_Task10" targetRef="W586_Task11" />
       <bpmn:sequenceFlow id="W586_Flow23" sourceRef="W586_Task11" targetRef="W586_Task12" />
       <bpmn:sequenceFlow id="W586_Flow24" sourceRef="W586_Task12" targetRef="W586_Task13" />
-      <bpmn:sequenceFlow id="W586_Flow25" sourceRef="W586_Task13" targetRef="W586_End14" />
+      <bpmn:sequenceFlow id="W586_Flow25" sourceRef="W586_Task13" targetRef="W586_Task14" />
+      <bpmn:sequenceFlow id="W586_Flow26" sourceRef="W586_Task14" targetRef="W586_End15" />
     </bpmn:process>
     <bpmndi:BPMNDiagram id="W586_diag">
       <bpmndi:BPMNPlane id="W586_plane" bpmnElement="W_W586">
         <bpmndi:BPMNShape id="W586_Lane1_di" bpmnElement="W586_Lane1" isHorizontal="true"><dc:Bounds x="160" y="80" width="2000" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W586_Lane2_di" bpmnElement="W586_Lane2" isHorizontal="true"><dc:Bounds x="160" y="250" width="2000" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W586_Lane3_di" bpmnElement="W586_Lane3" isHorizontal="true"><dc:Bounds x="160" y="420" width="2000" height="170" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W586_Task6_di" bpmnElement="W586_Task6"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W586_Task7_di" bpmnElement="W586_Task7"><dc:Bounds x="610" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W586_Task8_di" bpmnElement="W586_Task8"><dc:Bounds x="820" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W586_Task9_di" bpmnElement="W586_Task9"><dc:Bounds x="1030" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W586_Task10_di" bpmnElement="W586_Task10"><dc:Bounds x="1240" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W586_Task11_di" bpmnElement="W586_Task11"><dc:Bounds x="1450" y="465" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W586_Task12_di" bpmnElement="W586_Task12"><dc:Bounds x="1660" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W586_Task13_di" bpmnElement="W586_Task13"><dc:Bounds x="1870" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W586_Start5_di" bpmnElement="W586_Start5"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W586_End14_di" bpmnElement="W586_End14"><dc:Bounds x="2100" y="487" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W586_Annotation15_di" bpmnElement="W586_Annotation15"><dc:Bounds x="160" y="630" width="360" height="86" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNEdge id="W586_Flow17_di" bpmnElement="W586_Flow17"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W586_Flow18_di" bpmnElement="W586_Flow18"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W586_Flow19_di" bpmnElement="W586_Flow19"><di:waypoint x="790" y="165" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W586_Flow20_di" bpmnElement="W586_Flow20"><di:waypoint x="1000" y="335" /><di:waypoint x="1030" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W586_Flow21_di" bpmnElement="W586_Flow21"><di:waypoint x="1210" y="165" /><di:waypoint x="1240" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W586_Flow22_di" bpmnElement="W586_Flow22"><di:waypoint x="1420" y="335" /><di:waypoint x="1450" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W586_Flow23_di" bpmnElement="W586_Flow23"><di:waypoint x="1630" y="505" /><di:waypoint x="1660" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W586_Flow24_di" bpmnElement="W586_Flow24"><di:waypoint x="1840" y="335" /><di:waypoint x="1870" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W586_Flow25_di" bpmnElement="W586_Flow25"><di:waypoint x="2050" y="165" /><di:waypoint x="2100" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W586_Assoc16_di" bpmnElement="W586_Assoc16"><di:waypoint x="340" y="630" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNShape id="W586_Lane4_di" bpmnElement="W586_Lane4" isHorizontal="true"><dc:Bounds x="160" y="590" width="2000" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W586_Task7_di" bpmnElement="W586_Task7"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W586_Task8_di" bpmnElement="W586_Task8"><dc:Bounds x="610" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W586_Task9_di" bpmnElement="W586_Task9"><dc:Bounds x="820" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W586_Task10_di" bpmnElement="W586_Task10"><dc:Bounds x="1030" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W586_Task11_di" bpmnElement="W586_Task11"><dc:Bounds x="1240" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W586_Task12_di" bpmnElement="W586_Task12"><dc:Bounds x="1450" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W586_Task13_di" bpmnElement="W586_Task13"><dc:Bounds x="1660" y="635" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W586_Task14_di" bpmnElement="W586_Task14"><dc:Bounds x="1870" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W586_Start6_di" bpmnElement="W586_Start6"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W586_End15_di" bpmnElement="W586_End15"><dc:Bounds x="2100" y="657" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W586_Annotation16_di" bpmnElement="W586_Annotation16"><dc:Bounds x="160" y="800" width="360" height="86" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="W586_Flow18_di" bpmnElement="W586_Flow18"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W586_Flow19_di" bpmnElement="W586_Flow19"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W586_Flow20_di" bpmnElement="W586_Flow20"><di:waypoint x="790" y="165" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W586_Flow21_di" bpmnElement="W586_Flow21"><di:waypoint x="1000" y="335" /><di:waypoint x="1030" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W586_Flow22_di" bpmnElement="W586_Flow22"><di:waypoint x="1210" y="165" /><di:waypoint x="1240" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W586_Flow23_di" bpmnElement="W586_Flow23"><di:waypoint x="1420" y="335" /><di:waypoint x="1450" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W586_Flow24_di" bpmnElement="W586_Flow24"><di:waypoint x="1630" y="505" /><di:waypoint x="1660" y="675" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W586_Flow25_di" bpmnElement="W586_Flow25"><di:waypoint x="1840" y="675" /><di:waypoint x="1870" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W586_Flow26_di" bpmnElement="W586_Flow26"><di:waypoint x="2050" y="165" /><di:waypoint x="2100" y="675" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W586_Assoc17_di" bpmnElement="W586_Assoc17"><di:waypoint x="340" y="800" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
       </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W649" name="W649. DC Safety Operations &amp; Compliance" isExecutable="false">

@@ -27313,7 +27313,7 @@
     "elapsed_days": null,
     "notes": [],
     "step": "9",
-    "role_r": "Putaway Staff",
+    "role_r": "Putaway Staff, Special Handling Lead",
     "role_a": "DC Supervisor",
     "duration": "15\u201330 min"
    },
@@ -29944,7 +29944,7 @@
     "elapsed_days": null,
     "notes": [],
     "step": "2",
-    "role_r": "DC Dispatch Supervisor",
+    "role_r": "DC Dispatch Supervisor, Assistant DC Manager \u2014 Outbound",
     "role_a": "DC Supervisor",
     "duration": "30\u201360 min/day"
    },
@@ -29982,7 +29982,7 @@
     "elapsed_days": null,
     "notes": [],
     "step": "4",
-    "role_r": "Loading Crew",
+    "role_r": "Loading Crew, Tile & Heavy/Breakbulk Crew",
     "role_a": "DC Dispatch Supervisor",
     "duration": "30\u201360 min/truck"
    },
@@ -32186,7 +32186,7 @@
     "elapsed_days": null,
     "notes": [],
     "step": "7",
-    "role_r": "DC Shift Supervisor (A) / DC Shift Supervisor (B)",
+    "role_r": "DC Shift Supervisor (A) / DC Shift Supervisor (B), DC Office Administrator",
     "role_a": "DC Manager",
     "duration": "20 min"
    },
@@ -32612,7 +32612,7 @@
     "elapsed_days": null,
     "notes": [],
     "step": "7",
-    "role_r": "DC Manager",
+    "role_r": "DC Manager, DC Operations Analyst",
     "role_a": "VP Supply Chain",
     "duration": "30 min/week (in addition to W584 weekly review)"
    },
@@ -99045,7 +99045,7 @@
     "elapsed_days": null,
     "notes": [],
     "step": "6",
-    "role_r": "CX Rep",
+    "role_r": "CX Rep, Ecommerce Marketing Specialist",
     "role_a": "Digital Content Manager",
     "duration": "10 min/response"
    },
@@ -133468,7 +133468,7 @@
     "elapsed_days": null,
     "notes": [],
     "step": "1",
-    "role_r": "Logistics / BI / FP&A",
+    "role_r": "Logistics / BI / FP&A, DC Cost-to-Serve Analyst",
     "role_a": "Logistics Manager",
     "duration": "Monthly"
    },
@@ -137642,7 +137642,7 @@
      "elapsed window: 0.5\u20131 day/service bootstrap"
     ],
     "step": "1",
-    "role_r": "DevEx engineers / Squad Tech Lead",
+    "role_r": "DevEx engineers / Squad Tech Lead, Build-Squad Tech Lead",
     "role_a": "Head of Engineering",
     "duration": "0.5\u20131 day/service bootstrap"
    },
@@ -188342,7 +188342,7 @@
     "elapsed_days": null,
     "notes": [],
     "step": "1",
-    "role_r": "OpEx CoE / Process Owners",
+    "role_r": "OpEx CoE / Process Owners, Business Process & IMS Lead",
     "role_a": "COO",
     "duration": "Maintained"
    },
@@ -196978,7 +196978,7 @@
     "elapsed_days": null,
     "notes": [],
     "step": "1",
-    "role_r": "Provider / Facilities Soft-Services Lead",
+    "role_r": "Provider / Facilities Soft-Services Lead, Facilities Coordination Specialist",
     "role_a": "Facilities Soft-Services Lead",
     "duration": "Daily"
    },
@@ -391353,7 +391353,7 @@
     "elapsed_days": null,
     "notes": [],
     "step": "1",
-    "role_r": "IT Infra Lead",
+    "role_r": "IT Infra Lead, IAP Integration Engineer",
     "role_a": "IT Infra Mgr",
     "duration": "4 hours"
    },
@@ -391435,7 +391435,7 @@
     "elapsed_days": null,
     "notes": [],
     "step": "6",
-    "role_r": "IT Infrastructure",
+    "role_r": "IT Infrastructure, IAP Integration Support Engineer",
     "role_a": "IT Infra Mgr",
     "duration": "Per change"
    }

@@ -4080,11 +4080,13 @@ def gap_fill_straggler_hits():
                      "Frequencies parse 840x high across it — the bridge "
                      "must be paren-blocked)"))
     _nb = vg.count("[^.;()]*?per")
-    if _nb != 4:
+    if _nb != 6:
         hits.append(("virtual-gemba-walk.py", 0,
                      f"paren-blocked frequency bridge class '[^.;()]*?per' must "
-                     f"appear exactly 4 times (found {_nb}) — ladder rules 1–2, "
-                     f"dash-form + single-number alternatives"))
+                     f"appear exactly 6 times (found {_nb}) — ladder rules 1–2, "
+                     f"dash-form + single-number alternatives, and the batch-51 "
+                     f"(44c) compound-decomposition rule 6a's two clause-pricing "
+                     f"forms"))
     if "bridges never cross parentheses" not in vg:
         hits.append(("virtual-gemba-walk.py", 0,
                      'missing docstring measurement-assumption anchor "bridges '

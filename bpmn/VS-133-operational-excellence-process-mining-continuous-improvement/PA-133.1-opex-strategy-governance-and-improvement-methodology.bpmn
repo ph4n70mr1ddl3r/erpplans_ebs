@@ -101,7 +101,7 @@ Source: workflow W4050 — Enterprise Process Architecture, Ownership &amp; RACI
       </bpmn:startEvent>
       <bpmn:userTask id="W4050_Task5" name="OpEx maintain the enterprise process architecture (value streams → process…">
         <bpmn:documentation>Step 1: OpEx maintain the enterprise process architecture (value streams → process areas → workflows) mapped to the value-stream-index, assign a single process owner (RACI A) per end-to-end process, and resolve ownership gaps/overlaps
-Responsible (R): OpEx CoE / Process Owners
+Responsible (R): OpEx CoE / Process Owners, Business Process &amp; IMS Lead
 Accountable (A): COO
 Duration: Maintained</bpmn:documentation>
         <bpmn:incoming>W4050_Flow11</bpmn:incoming>

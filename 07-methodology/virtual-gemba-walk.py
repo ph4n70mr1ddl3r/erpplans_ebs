@@ -134,11 +134,19 @@ def parse_workflows():
 
 
 def parse_minutes(cell):
-    """'5min'/'5–10min'/'2h'/'1.5 hours' → midpoint minutes; Automated/—/'' → 0."""
+    """'5min'/'5–10min'/'2h'/'1.5 hours' → midpoint minutes; Automated/—/'' → 0.
+    Batch 49 (2026-09-25): plural unit forms ('2 hours', '4 hrs', '30 mins',
+    '24 hours/year') previously returned 0.0 — the unit alternation
+    ('min|hour|hr|h') matched the singular stem and the trailing \b could not
+    bind before the plural 's' (or the '/qualifier'), silently zeroing every
+    plural-unit duration cell (3,775 corpus cells re-measured by the fix).
+    Unit alternation is now plural-capable longest-first
+    ('mins?|hours?|hrs?|h'), so qualifiers after the unit ('/year',
+    '/item midpoint × ~30 items/year') no longer defeat the match."""
     c = cell.strip().strip("*").lower()
     if not c or c in {"—", "-", "automated", "n/a", "system"}:
         return 0.0
-    m = re.search(r"(\d+(?:\.\d+)?)(?:\s*[–-]\s*(\d+(?:\.\d+)?))?\s*(min|hour|hr|h)\b", c)
+    m = re.search(r"(\d+(?:\.\d+)?)(?:\s*[–-]\s*(\d+(?:\.\d+)?))?\s*(mins?|hours?|hrs?|h)\b", c)
     if not m:
         return 0.0
     lo = float(m.group(1))
@@ -147,9 +155,9 @@ def parse_minutes(cell):
     return mid * 60 if m.group(3).startswith(("h", "h")) else mid
 
 
-PERIOD_DAYS = {"day": 1, "week": 7, "month": 30, "quarter": 91, "year": 365}
-PERIOD_MULT = {"day": 365, "week": 52, "month": 12, "quarter": 4, "year": 1}
-WORKDAYS = {"day": 250, "week": 50, "month": 12, "quarter": 4, "year": 1}
+PERIOD_DAYS = {"day": 1, "week": 7, "month": 30, "quarter": 91, "year": 365, "season": 91}
+PERIOD_MULT = {"day": 365, "week": 52, "month": 12, "quarter": 4, "year": 1, "season": 4}
+WORKDAYS = {"day": 250, "week": 50, "month": 12, "quarter": 4, "year": 1, "season": 4}
 
 # Adjudicated nominal annual event volumes for the episodic program families
 # (2026-09-25 (be) wave) — exact-form keys, chain-wide events/yr. These are
@@ -234,10 +242,120 @@ NOMINAL_EVENTS = {
     "moderate": 50,
     "seasonal": 4,
     "per tax year + per filing": 260,
+    # batch 50 / 44c tranche (2026-09-25): paren-qualified and qualified-rare
+    # whole forms — the qualifier IS the adjudication, so these are exact-form
+    # entries rather than decomposition candidates (decomposition would price
+    # 'per event (rare)' at the per-event rate and inflate a rare class 12×).
+    "rare (preparedness continuous)": 1,     # continuity/evacuation preparedness programs
+    "rare but high-impact": 1,               # DG transport incident, bond default class
+    "per event (rare)": 2,                   # rare-event response with per-event triggers
+    "as occurred": 2,                        # actual-occurrence reactive programs
+    "per qualifying breach": 2,              # breach-of-contract / covenant class
+    "per fault": 20,                         # equipment/fault dispatch queue (aligns per incident)
+    "per procurement batch": 50,             # aligns per intake batch
+    "exception-driven": 20,                  # vendor dispute/exception queue (aligns per dispute)
+    "campaign-driven": 12,                   # marketing campaign calendar (~2/month)
+    "seasonal + event-driven": 8,            # seasonal program + in-season events
+    "event-driven per calamity": 4,          # PH calamity-season class
+    "event-driven post-disaster": 4,         # post-disaster response cycles
+    "statutory + usage-based": 12,           # statutory calibration/inspection + usage triggers
+    "usage/time-based": 12,                  # usage-triggered calibration/maintenance
+    "scheduled pm + reactive": 12,           # PM schedule + reactive service calls
+    "per temporary office mobilization": 2,  # temporary-site program (rare)
+    "ad-hoc; 5–10 per project": 20,          # 5–10 × the per-project rate
+    "per seasonal event": 8,                 # garden/season program calendar
+    "per dg shipment": 200,                  # aligns per shipment (import containers)
+    "per dg last-mile shipment": 200,
+    "per mode + per shipment": 200,
+    "ad-hoc per project request": 20,         # aligns per project
 }
 
 
 PERIOD_QUALIFIER = re.compile(r"(?:/|per\s+)\s*(month|week|year|quarter)\b", re.I)
+
+# Batch 50 / 44c (2026-09-25): clause-level nominal volumes for compound
+# decomposition (rule 6a) — keyed on the clause text with a leading 'per '
+# stripped, whitespace-normalized, parentheticals removed. Same discipline as
+# NOMINAL_EVENTS: small-N documented assumptions, each deliberately
+# conservative and revisitable. Deliberately ABSENT: high-volume or polysemous
+# nouns (transaction, sku, pickup, load, employee, customer, store) — those
+# clauses stay unparsed rather than risk a wrong-order annualization.
+CLAUSE_EVENTS = {
+    "contract": 40,        # ~40–60 active contracts, rolling renewals/reviews
+    "project": 20,         # aligns per project
+    "completed project": 20,
+    "incident": 20,        # aligns per incident
+    "case": 30,            # aligns per case
+    "case event": 30,
+    "event": 24,           # aligns per event
+    "site": 12,            # aligns per site
+    "lease": 20,           # aligns per lease
+    "vendor": 40,          # certification/renewal subset of the vendor base
+    "third party": 12,     # processor/partner due-diligence cycle
+    "matter": 15,          # aligns per matter
+    "engagement": 12,      # aligns per engagement
+    "program": 12,
+    "initiative": 15,      # aligns per initiative
+    "model": 12,           # governed models (AI/pricing/risk), small-N
+    "design": 12,
+    "cycle": 4,            # aligns per cycle
+    "season": 4,           # aligns seasonal
+    "shipment": 200,       # aligns per shipment (import containers)
+    "delivery": 2000,      # aligns per delivery (jobsite/bulky)
+    "order": 6000,         # aligns per order (resale/pre-owned volume)
+    "worker": 500,         # aligns per worker assignment
+    "worker assignment": 500,
+    "candidate": 400,      # aligns per candidate
+    "device": 100,         # aligns per asset
+    "asset": 100,
+    "vehicle": 200,        # fleet ~200 trucks
+    "category": 6,         # merch category reviews (~2/yr per category)
+    "batch": 50,           # aligns per intake batch
+    "claim": 60,           # aligns per claim
+    "breach": 12,
+    "dispute": 20,         # aligns per dispute
+    "return": 400,         # aligns per return
+    "move-out": 1170,      # aligns per exit (rental returns at maturity)
+    "build": 12,           # quarterly-ish release/build cycles
+    "build cycle": 12,
+    "finding": 12,         # aligns per finding
+    "milestone": 60,       # aligns per milestone
+    "hedge": 12,           # rolling hedge program
+    "carrier": 12,         # carrier re-qualification cycle
+    "partner": 12,
+    "supplier": 40,        # supplier review subset
+    "permit cycle": 4,
+    "audit cycle": 4,
+    "onboarding": 300,     # onboarding pipeline (sub-per-candidate)
+    "divestiture": 2,
+    # second-clause family (the maintenance half of compounds)
+    "periodic review": 4,
+    "periodic refresh": 4,
+    "periodic rebalance": 4,
+    "periodic re-qualification": 2,
+    "periodic re-vet": 2,
+    "periodic re-verification": 2,
+    "periodic revalidation": 2,
+    "periodic recertification": 2,
+    "periodic renewal": 2,
+    "periodic review of template contracts": 4,
+    "periodic tuning": 4,
+    "periodic": 4,
+    "refresh": 4,
+    "launch": 6,           # aligns per launch
+    "renewal": 40,         # aligns contract renewal cycles
+    "on change": 250,      # aligns per change
+    "on update": 250,
+    "on regulation change": 4,
+    "on standard change": 4,
+    "on structural change": 4,
+    "reactive": 20,        # aligns per incident class
+    "portfolio": 12,
+    "strategy refresh": 4,
+    "portfolio review": 4,
+    "portfolio capacity": 12,
+    "per project request": 20,
+}
 PERIOD_MULT_Q = {"month": 12.0, "week": 52.0, "quarter": 4.0, "year": 1.0}
 
 
@@ -276,7 +394,7 @@ def events_per_year(freq, field_exec):
     if not f:
         return None, "no-frequency"
     low = f.lower()
-    period_re = r"(day|week|month|quarter|year)"
+    period_re = r"(day|week|month|quarter|year|season)"   # season: 4/yr (batch 50, 44c)
     core = re.sub(r"\([^)]*\)", " ", low)  # parentheticals are annotation, not cadence
 
     # 0. standing-coverage house forms: the work is per-workday coverage
@@ -367,6 +485,54 @@ def events_per_year(freq, field_exec):
     nominal = NOMINAL_EVENTS.get(re.sub(r"\s+", " ", low).strip(" ;,."))
     if nominal:
         return float(nominal), "nominal-family"
+
+    # 6a. compound decomposition (batch 50 / 44c, 2026-09-25): split the
+    #     frequency on top-level '+' / ';' (paren-aware) and price each clause
+    #     independently — clauses 1–5 of this ladder, then the exact-form map,
+    #     then the clause-nominal table (leading 'per ' stripped). Take the
+    #     MAXIMUM parsed clause: the binding (most frequent) cadence governs
+    #     the annualization. Clauses that parse to nothing are ignored; if no
+    #     clause parses the form stays honestly unparsed. Single-clause forms
+    #     price through the same clause tables (a one-clause split).
+    clauses = [c.strip(" ;,." ) for c in re.split(r"\s*\+\s*|\s*;\s*", core) if c.strip(" ;,.")]
+    if clauses:
+        best, best_rule = None, None
+        for cl in clauses:
+            cl_low = cl.strip().lower()
+            ev2 = None
+            m2 = re.search(r"(\d[\d,]*)\s*[–-]\s*(\d[\d,]*)\s*[^.;()]*?per\s+" + period_re + r"\b", cl_low) or \
+                 re.search(r"(\d[\d,]*)\s*[^.;()]*?per\s+" + period_re + r"\b", cl_low)
+            if m2:
+                g2 = m2.groups()
+                ev2 = midpoint(g2[0], g2[1] if len(g2) > 2 else None) * PERIOD_MULT[g2[-1]]
+            else:
+                for word, period in (("daily", "day"), ("weekly", "week"), ("monthly", "month"),
+                                     ("quarterly", "quarter"), ("annual", "year"), ("yearly", "year")):
+                    if re.search(r"\b" + word, cl_low):
+                        ev2 = float(PERIOD_MULT[period])
+                        break
+            if ev2 is None:
+                m2 = re.search(r"(\d[\d,]*)\s*[–-]\s*(\d[\d,]*)\s*[^.;()/]*?/\s*" + period_re + r"\b", cl_low) or \
+                     re.search(r"(\d[\d,]*)\s*[^.;()/]*?/\s*" + period_re + r"\b", cl_low)
+                if m2:
+                    g2 = m2.groups()
+                    ev2 = midpoint(g2[0], g2[1] if len(g2) == 3 else None) * PERIOD_MULT[g2[-1]]
+            if ev2 is None:
+                ev2 = NOMINAL_EVENTS.get(re.sub(r"\s+", " ", cl_low).strip(" ;,."))
+            if ev2 is None:
+                bare = re.sub(r"\([^)]*\)", " ", cl_low)
+                bare = re.sub(r"\s+", " ", bare).strip(" ;,.")
+                ev2 = NOMINAL_EVENTS.get(bare)
+            if ev2 is None:
+                # clause-nominal table: the leading 'per ' is optional
+                # ('per incident' / 'incident' both price; 'ad-hoc per X'
+                # forms stay out — they need their own exact entries)
+                key = bare[4:].strip() if bare.startswith("per ") else bare
+                ev2 = CLAUSE_EVENTS.get(key)
+            if ev2 is not None and (best is None or ev2 > best):
+                best, best_rule = float(ev2), f"compound:{cl_low[:24]}"
+        if best is not None:
+            return best, best_rule
     return None, "unparseable"
 
 

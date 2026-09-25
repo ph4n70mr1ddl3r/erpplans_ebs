@@ -245,7 +245,7 @@ Source: workflow W3516 — Freight Cost-to-Serve &amp; Lane Profitability Analyt
       </bpmn:startEvent>
       <bpmn:userTask id="W3516_Task5" name="Logistics/BI compute cost-to-serve by customer/order/channel/region/island…">
         <bpmn:documentation>Step 1: Logistics/BI compute cost-to-serve by customer/order/channel/region/island (links to VS-107/VS-10/VS-82): freight + handling + last-mile + inter-island + returns (links to VS-32), per-order and per-customer; identify unprofitable segments and free-delivery threshold leakage (profile §8.3)
-Responsible (R): Logistics / BI / FP&amp;A
+Responsible (R): Logistics / BI / FP&amp;A, DC Cost-to-Serve Analyst
 Accountable (A): Logistics Manager
 Duration: Monthly</bpmn:documentation>
         <bpmn:incoming>W3516_Flow11</bpmn:incoming>

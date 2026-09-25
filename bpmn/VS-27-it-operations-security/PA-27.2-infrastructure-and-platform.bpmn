@@ -593,7 +593,7 @@ Owner: IT Infrastructure Manager
 Participants: Cloud Architect, Database Administrator, Network Engineer, CIO, Finance (Budgeting), IAP Integration Engineer, IAP Integration Support Engineer
 Source: workflow W376 — IT Capacity &amp; Performance Planning</bpmn:documentation>
       <bpmn:laneSet id="W376_LaneSet5">
-        <bpmn:lane id="W376_Lane1" name="IT Infra Lead">
+        <bpmn:lane id="W376_Lane1" name="IT Infra Lead, IAP Integration Engineer">
         <bpmn:flowNodeRef>W376_Task7</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W376_Start6</bpmn:flowNodeRef>
         </bpmn:lane>
@@ -605,7 +605,7 @@ Source: workflow W376 — IT Capacity &amp; Performance Planning</bpmn:documenta
         <bpmn:flowNodeRef>W376_Task9</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W376_Task10</bpmn:flowNodeRef>
         </bpmn:lane>
-        <bpmn:lane id="W376_Lane4" name="IT Infrastructure">
+        <bpmn:lane id="W376_Lane4" name="IT Infrastructure, IAP Integration Support…">
         <bpmn:flowNodeRef>W376_Task12</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W376_End13</bpmn:flowNodeRef>
         </bpmn:lane>
@@ -615,7 +615,7 @@ Source: workflow W376 — IT Capacity &amp; Performance Planning</bpmn:documenta
       </bpmn:startEvent>
       <bpmn:userTask id="W376_Task7" name="Utilization Baselining">
         <bpmn:documentation>Step 1: Utilization Baselining: Extract 90-day utilization data for compute, storage, memory, and bandwidth across all core systems
-Responsible (R): IT Infra Lead
+Responsible (R): IT Infra Lead, IAP Integration Engineer
 Accountable (A): IT Infra Mgr
 Duration: 4 hours</bpmn:documentation>
         <bpmn:incoming>W376_Flow16</bpmn:incoming>
@@ -655,7 +655,7 @@ Duration: 4 hours</bpmn:documentation>
       </bpmn:userTask>
       <bpmn:userTask id="W376_Task12" name="Implementation">
         <bpmn:documentation>Step 6: Implementation: Execute scaling actions during maintenance windows; update NFR monitoring thresholds
-Responsible (R): IT Infrastructure
+Responsible (R): IT Infrastructure, IAP Integration Support Engineer
 Accountable (A): IT Infra Mgr
 Duration: Per change</bpmn:documentation>
         <bpmn:incoming>W376_Flow21</bpmn:incoming>

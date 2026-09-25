@@ -7,130 +7,131 @@ Volume: ~425 replenishment orders/DC/day (the ~50,000/month production-calibrate
 Owner: DC Dispatch Supervisor
 Participants: DC Dispatch Supervisor, DC Supervisor, Loaders, Drivers, Fleet Manager, Supply Planner, Assistant DC Manager — Outbound, Tile &amp; Heavy/Breakbulk Crew
 Source: workflow W106 — DC Outbound Dispatch &amp; Load Planning</bpmn:documentation>
-      <bpmn:laneSet id="W106_LaneSet5">
+      <bpmn:laneSet id="W106_LaneSet6">
         <bpmn:lane id="W106_Lane1" name="System">
-        <bpmn:flowNodeRef>W106_Task7</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W106_Task12</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W106_Start6</bpmn:flowNodeRef>
-        </bpmn:lane>
-        <bpmn:lane id="W106_Lane2" name="DC Dispatch Supervisor">
         <bpmn:flowNodeRef>W106_Task8</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W106_Task13</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W106_Start7</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W106_Lane2" name="DC Dispatch Supervisor, Assistant DC Manager —…">
         <bpmn:flowNodeRef>W106_Task9</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W106_Task15</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W106_Lane3" name="DC Dispatch Supervisor">
+        <bpmn:flowNodeRef>W106_Task10</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W106_Task16</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W106_Task17</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W106_Task18</bpmn:flowNodeRef>
         </bpmn:lane>
-        <bpmn:lane id="W106_Lane3" name="Loading Crew">
-        <bpmn:flowNodeRef>W106_Task10</bpmn:flowNodeRef>
-        </bpmn:lane>
-        <bpmn:lane id="W106_Lane4" name="Driver">
+        <bpmn:lane id="W106_Lane4" name="Loading Crew, Tile &amp; Heavy">
         <bpmn:flowNodeRef>W106_Task11</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W106_Task13</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="W106_Lane5" name="Driver">
+        <bpmn:flowNodeRef>W106_Task12</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>W106_Task14</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>W106_End18</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W106_Task15</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>W106_End19</bpmn:flowNodeRef>
         </bpmn:lane>
       </bpmn:laneSet>
-      <bpmn:startEvent id="W106_Start6" name="Daily outbound dispatch planning cycle (initiated each morning after W4 replenishment…">
-        <bpmn:outgoing>W106_Flow21</bpmn:outgoing>
+      <bpmn:startEvent id="W106_Start7" name="Daily outbound dispatch planning cycle (initiated each morning after W4 replenishment…">
+        <bpmn:outgoing>W106_Flow22</bpmn:outgoing>
       </bpmn:startEvent>
-      <bpmn:serviceTask id="W106_Task7" name="Morning dispatch planning">
+      <bpmn:serviceTask id="W106_Task8" name="Morning dispatch planning">
         <bpmn:documentation>Step 1: Morning dispatch planning (6:00 AM): System generates daily outbound dispatch plan from confirmed pick/pack outputs: (a) store replenishment orders ready for dispatch (grouped by destination store and delivery route), (b) home delivery orders packed and staged (grouped by delivery zone), (c) inter-DC transfer orders (W22) if any, (d) promotional pre-positioning shipments (W57) with priority flag
 Responsible (R): System
 Accountable (A): —
 Duration: Automated (nightly batch)</bpmn:documentation>
-        <bpmn:incoming>W106_Flow21</bpmn:incoming>
-        <bpmn:outgoing>W106_Flow22</bpmn:outgoing>
-      </bpmn:serviceTask>
-      <bpmn:userTask id="W106_Task8" name="Route optimization">
-        <bpmn:documentation>Step 2: DC Dispatch Supervisor reviews dispatch plan and assigns loads to trucks: (a) Route optimization: system suggests optimal multi-stop route per truck based on store delivery addresses, traffic patterns (Metro Manila vs. provincial), and delivery time windows; Dispatch Supervisor accepts or adjusts, (b) Load consolidation: system groups multiple store replenishment orders on one truck where stores are on the same route (typical: 3–5 stores per truck for provincial routes; 5–8 for Metro Manila), (c) Truck assignment: owned fleet (W52) for regular scheduled routes; 3PL trucks for overflow, home delivery bulk, and inter-island, (d) Home delivery batching: system batches home delivery orders by delivery zone; assigns to 3PL carriers per W19 rate cards and zone coverage
-Responsible (R): DC Dispatch Supervisor
-Accountable (A): DC Supervisor
-Duration: 30–60 min/day</bpmn:documentation>
         <bpmn:incoming>W106_Flow22</bpmn:incoming>
         <bpmn:outgoing>W106_Flow23</bpmn:outgoing>
+      </bpmn:serviceTask>
+      <bpmn:userTask id="W106_Task9" name="Route optimization">
+        <bpmn:documentation>Step 2: DC Dispatch Supervisor reviews dispatch plan and assigns loads to trucks: (a) Route optimization: system suggests optimal multi-stop route per truck based on store delivery addresses, traffic patterns (Metro Manila vs. provincial), and delivery time windows; Dispatch Supervisor accepts or adjusts, (b) Load consolidation: system groups multiple store replenishment orders on one truck where stores are on the same route (typical: 3–5 stores per truck for provincial routes; 5–8 for Metro Manila), (c) Truck assignment: owned fleet (W52) for regular scheduled routes; 3PL trucks for overflow, home delivery bulk, and inter-island, (d) Home delivery batching: system batches home delivery orders by delivery zone; assigns to 3PL carriers per W19 rate cards and zone coverage
+Responsible (R): DC Dispatch Supervisor, Assistant DC Manager — Outbound
+Accountable (A): DC Supervisor
+Duration: 30–60 min/day</bpmn:documentation>
+        <bpmn:incoming>W106_Flow23</bpmn:incoming>
+        <bpmn:outgoing>W106_Flow24</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W106_Task9" name="Load manifest">
+      <bpmn:userTask id="W106_Task10" name="Load manifest">
         <bpmn:documentation>Step 3: DC Dispatch Supervisor prints or transmits load manifests to loaders and drivers: (a) Load manifest: truck ID, driver name, stop sequence (store name, address, delivery time window, order number, number of cases/totes, special instructions), (b) Loading sequence: system directs loading in reverse stop order (last stop loaded first, first stop loaded last) for efficient unloading at each stop, (c) Special handling flags: fragile items, hazardous materials (paint/chemicals), catch-weight items (lumber), temperature-sensitive items
 Responsible (R): DC Dispatch Supervisor
 Accountable (A): DC Supervisor
 Duration: 15 min/truck</bpmn:documentation>
-        <bpmn:incoming>W106_Flow23</bpmn:incoming>
-        <bpmn:outgoing>W106_Flow24</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:userTask id="W106_Task10" name="Loading crew">
-        <bpmn:documentation>Step 4: Loading crew loads truck per load manifest and loading sequence: (a) scan-confirm each case/tote against manifest during loading, (b) secure loads with straps/bars for transit, (c) load hazardous materials per DOT/DENR segregation rules (paint/chemicals separated from general merchandise), (d) load catch-weight items (lumber, rebar) last for easy access and to prevent damage to other goods
-Responsible (R): Loading Crew
-Accountable (A): DC Dispatch Supervisor
-Duration: 30–60 min/truck</bpmn:documentation>
         <bpmn:incoming>W106_Flow24</bpmn:incoming>
         <bpmn:outgoing>W106_Flow25</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W106_Task11" name="Driver pre-departure">
+      <bpmn:userTask id="W106_Task11" name="Loading crew">
+        <bpmn:documentation>Step 4: Loading crew loads truck per load manifest and loading sequence: (a) scan-confirm each case/tote against manifest during loading, (b) secure loads with straps/bars for transit, (c) load hazardous materials per DOT/DENR segregation rules (paint/chemicals separated from general merchandise), (d) load catch-weight items (lumber, rebar) last for easy access and to prevent damage to other goods
+Responsible (R): Loading Crew, Tile &amp; Heavy/Breakbulk Crew
+Accountable (A): DC Dispatch Supervisor
+Duration: 30–60 min/truck</bpmn:documentation>
+        <bpmn:incoming>W106_Flow25</bpmn:incoming>
+        <bpmn:outgoing>W106_Flow26</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="W106_Task12" name="Driver pre-departure">
         <bpmn:documentation>Step 5: Driver pre-departure: (a) Driver reviews load manifest and route, (b) signs dispatch confirmation acknowledging load received and route assigned, (c) conducts vehicle pre-trip check per W52.2 (if owned vehicle), (d) departs DC per scheduled departure time (target: first truck departs by 8:00 AM for morning wave)
 Responsible (R): Driver
 Accountable (A): DC Dispatch Supervisor
 Duration: 15 min</bpmn:documentation>
-        <bpmn:incoming>W106_Flow25</bpmn:incoming>
-        <bpmn:outgoing>W106_Flow26</bpmn:outgoing>
+        <bpmn:incoming>W106_Flow26</bpmn:incoming>
+        <bpmn:outgoing>W106_Flow27</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:serviceTask id="W106_Task12" name="In-transit tracking">
+      <bpmn:serviceTask id="W106_Task13" name="In-transit tracking">
         <bpmn:documentation>Step 6: In-transit tracking: System tracks truck location via GPS (owned fleet) or 3PL carrier tracking API; DC Dispatch Supervisor monitors real-time delivery progress dashboard: (a) trucks en-route, (b) stops completed, (c) deliveries behind schedule (ETE &gt; planned ETA by &gt; 30 min flagged), (d) exceptions (traffic delay, road closure, vehicle breakdown)
 Responsible (R): System / DC Dispatch Supervisor
 Accountable (A): DC Supervisor
 Duration: Continuous (15 min review every 2 hours)</bpmn:documentation>
-        <bpmn:incoming>W106_Flow26</bpmn:incoming>
-        <bpmn:outgoing>W106_Flow27</bpmn:outgoing>
+        <bpmn:incoming>W106_Flow27</bpmn:incoming>
+        <bpmn:outgoing>W106_Flow28</bpmn:outgoing>
       </bpmn:serviceTask>
-      <bpmn:userTask id="W106_Task13" name="Store delivery execution">
+      <bpmn:userTask id="W106_Task14" name="Store delivery execution">
         <bpmn:documentation>Step 7: Store delivery execution: (a) Driver arrives at store; presents load manifest to Receiving Clerk, (b) Receiving Clerk scans each case/tote against transfer order per W4.10, (c) Driver obtains signed delivery receipt (proof of delivery), (d) if short shipment or damage at delivery: noted on delivery receipt; Driver reports to DC Dispatch for resolution per W22.9a, (e) Driver proceeds to next stop
 Responsible (R): Driver / Receiving Clerk
 Accountable (A): DC Dispatch Supervisor / Store Manager
 Duration: 15–30 min/stop</bpmn:documentation>
-        <bpmn:incoming>W106_Flow27</bpmn:incoming>
-        <bpmn:outgoing>W106_Flow28</bpmn:outgoing>
+        <bpmn:incoming>W106_Flow28</bpmn:incoming>
+        <bpmn:outgoing>W106_Flow29</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W106_Task14" name="Delivery confirmation">
+      <bpmn:userTask id="W106_Task15" name="Delivery confirmation">
         <bpmn:documentation>Step 8: Delivery confirmation: (a) Upon completing all stops, Driver returns to DC (or proceeds to next dispatch wave), (b) Driver submits signed delivery receipts and exception reports to DC Dispatch, (c) DC Dispatch scans delivery receipts into system; system updates transfer order status to &quot;Delivered&quot; or &quot;Partially Delivered&quot; per receiving confirmation, (d) system triggers store inventory receipt posting (W4.12)
 Responsible (R): Driver / DC Dispatch Supervisor
 Accountable (A): DC Supervisor
 Duration: 15 min/truck</bpmn:documentation>
-        <bpmn:incoming>W106_Flow28</bpmn:incoming>
-        <bpmn:outgoing>W106_Flow29</bpmn:outgoing>
+        <bpmn:incoming>W106_Flow29</bpmn:incoming>
+        <bpmn:outgoing>W106_Flow30</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W106_Task15" name="Afternoon wave">
+      <bpmn:userTask id="W106_Task16" name="Afternoon wave">
         <bpmn:documentation>Step 9: Afternoon wave (1:00 PM): Repeat steps 1–8 for second dispatch wave using afternoon replenishment orders and remaining home delivery batches; typically lighter volume than morning wave
 Responsible (R): DC Dispatch Supervisor
 Accountable (A): DC Supervisor
 Duration: Per steps 1–8</bpmn:documentation>
-        <bpmn:incoming>W106_Flow29</bpmn:incoming>
-        <bpmn:outgoing>W106_Flow30</bpmn:outgoing>
+        <bpmn:incoming>W106_Flow30</bpmn:incoming>
+        <bpmn:outgoing>W106_Flow31</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W106_Task16" name="End-of-day dispatch summary">
+      <bpmn:userTask id="W106_Task17" name="End-of-day dispatch summary">
         <bpmn:documentation>Step 10: End-of-day dispatch summary: DC Dispatch Supervisor generates daily dispatch report: (a) total orders dispatched, (b) on-time departure rate (target: ≥ 95% of trucks depart within 30 min of scheduled time), (c) on-time delivery rate (target: ≥ 95% of stores receive within delivery window), (d) truck utilization rate (loaded volume ÷ truck capacity), (e) exceptions and resolution, (f) 3PL carrier performance for the day (feeds W52.9 and W62B)
 Responsible (R): DC Dispatch Supervisor
 Accountable (A): DC Supervisor
 Duration: 15 min/day</bpmn:documentation>
-        <bpmn:incoming>W106_Flow30</bpmn:incoming>
-        <bpmn:outgoing>W106_Flow31</bpmn:outgoing>
+        <bpmn:incoming>W106_Flow31</bpmn:incoming>
+        <bpmn:outgoing>W106_Flow32</bpmn:outgoing>
       </bpmn:userTask>
-      <bpmn:userTask id="W106_Task17" name="Weekly">
+      <bpmn:userTask id="W106_Task18" name="Weekly">
         <bpmn:documentation>Step 11: Weekly: DC Dispatch Supervisor and Fleet Manager review route efficiency metrics: (a) cost per delivery by route, (b) stops per route, (c) average delivery time per stop, (d) route optimization opportunities (new store additions, traffic pattern changes), (e) 3PL vs. owned fleet cost comparison per route; recommendations for route rebalancing or carrier changes
 Responsible (R): DC Dispatch Supervisor / Fleet Manager
 Accountable (A): DC Supervisor
 Duration: 1 hour/week</bpmn:documentation>
-        <bpmn:incoming>W106_Flow31</bpmn:incoming>
-        <bpmn:outgoing>W106_Flow32</bpmn:outgoing>
-      </bpmn:userTask>
-      <bpmn:endEvent id="W106_End18" name="Complete">
         <bpmn:incoming>W106_Flow32</bpmn:incoming>
+        <bpmn:outgoing>W106_Flow33</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:endEvent id="W106_End19" name="Complete">
+        <bpmn:incoming>W106_Flow33</bpmn:incoming>
       </bpmn:endEvent>
-      <bpmn:textAnnotation id="W106_Annotation19">
+      <bpmn:textAnnotation id="W106_Annotation20">
         <bpmn:text>Controls: - CTL-251 (ensure controlled execution — DC Outbound Operations (PA-04.2).) | - operational: DC Dispatch Supervisor review and approval gate
 Owner: DC Dispatch Supervisor</bpmn:text>
       </bpmn:textAnnotation>
-      <bpmn:association id="W106_Assoc20" sourceRef="W106_Annotation19" targetRef="W106_Start6" associationDirection="None" />
-      <bpmn:sequenceFlow id="W106_Flow21" sourceRef="W106_Start6" targetRef="W106_Task7" />
-      <bpmn:sequenceFlow id="W106_Flow22" sourceRef="W106_Task7" targetRef="W106_Task8" />
+      <bpmn:association id="W106_Assoc21" sourceRef="W106_Annotation20" targetRef="W106_Start7" associationDirection="None" />
+      <bpmn:sequenceFlow id="W106_Flow22" sourceRef="W106_Start7" targetRef="W106_Task8" />
       <bpmn:sequenceFlow id="W106_Flow23" sourceRef="W106_Task8" targetRef="W106_Task9" />
       <bpmn:sequenceFlow id="W106_Flow24" sourceRef="W106_Task9" targetRef="W106_Task10" />
       <bpmn:sequenceFlow id="W106_Flow25" sourceRef="W106_Task10" targetRef="W106_Task11" />
@@ -140,7 +141,8 @@ Owner: DC Dispatch Supervisor</bpmn:text>
       <bpmn:sequenceFlow id="W106_Flow29" sourceRef="W106_Task14" targetRef="W106_Task15" />
       <bpmn:sequenceFlow id="W106_Flow30" sourceRef="W106_Task15" targetRef="W106_Task16" />
       <bpmn:sequenceFlow id="W106_Flow31" sourceRef="W106_Task16" targetRef="W106_Task17" />
-      <bpmn:sequenceFlow id="W106_Flow32" sourceRef="W106_Task17" targetRef="W106_End18" />
+      <bpmn:sequenceFlow id="W106_Flow32" sourceRef="W106_Task17" targetRef="W106_Task18" />
+      <bpmn:sequenceFlow id="W106_Flow33" sourceRef="W106_Task18" targetRef="W106_End19" />
     </bpmn:process>
     <bpmndi:BPMNDiagram id="W106_diag">
       <bpmndi:BPMNPlane id="W106_plane" bpmnElement="W_W106">
@@ -148,33 +150,34 @@ Owner: DC Dispatch Supervisor</bpmn:text>
         <bpmndi:BPMNShape id="W106_Lane2_di" bpmnElement="W106_Lane2" isHorizontal="true"><dc:Bounds x="160" y="250" width="2630" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W106_Lane3_di" bpmnElement="W106_Lane3" isHorizontal="true"><dc:Bounds x="160" y="420" width="2630" height="170" /></bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="W106_Lane4_di" bpmnElement="W106_Lane4" isHorizontal="true"><dc:Bounds x="160" y="590" width="2630" height="170" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W106_Task7_di" bpmnElement="W106_Task7"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W106_Task8_di" bpmnElement="W106_Task8"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W106_Task9_di" bpmnElement="W106_Task9"><dc:Bounds x="820" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W106_Task10_di" bpmnElement="W106_Task10"><dc:Bounds x="1030" y="465" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W106_Task11_di" bpmnElement="W106_Task11"><dc:Bounds x="1240" y="635" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W106_Task12_di" bpmnElement="W106_Task12"><dc:Bounds x="1450" y="125" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W106_Task13_di" bpmnElement="W106_Task13"><dc:Bounds x="1660" y="635" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W106_Task14_di" bpmnElement="W106_Task14"><dc:Bounds x="1870" y="635" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W106_Task15_di" bpmnElement="W106_Task15"><dc:Bounds x="2080" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W106_Task16_di" bpmnElement="W106_Task16"><dc:Bounds x="2290" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W106_Task17_di" bpmnElement="W106_Task17"><dc:Bounds x="2500" y="295" width="180" height="80" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W106_Start6_di" bpmnElement="W106_Start6"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W106_End18_di" bpmnElement="W106_End18"><dc:Bounds x="2730" y="657" width="36" height="36" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="W106_Annotation19_di" bpmnElement="W106_Annotation19"><dc:Bounds x="160" y="800" width="360" height="60" /></bpmndi:BPMNShape>
-        <bpmndi:BPMNEdge id="W106_Flow21_di" bpmnElement="W106_Flow21"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W106_Flow22_di" bpmnElement="W106_Flow22"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W106_Flow23_di" bpmnElement="W106_Flow23"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W106_Flow24_di" bpmnElement="W106_Flow24"><di:waypoint x="1000" y="335" /><di:waypoint x="1030" y="505" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W106_Flow25_di" bpmnElement="W106_Flow25"><di:waypoint x="1210" y="505" /><di:waypoint x="1240" y="675" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W106_Flow26_di" bpmnElement="W106_Flow26"><di:waypoint x="1420" y="675" /><di:waypoint x="1450" y="165" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W106_Flow27_di" bpmnElement="W106_Flow27"><di:waypoint x="1630" y="165" /><di:waypoint x="1660" y="675" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W106_Flow28_di" bpmnElement="W106_Flow28"><di:waypoint x="1840" y="675" /><di:waypoint x="1870" y="675" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W106_Flow29_di" bpmnElement="W106_Flow29"><di:waypoint x="2050" y="675" /><di:waypoint x="2080" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W106_Flow30_di" bpmnElement="W106_Flow30"><di:waypoint x="2260" y="335" /><di:waypoint x="2290" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W106_Flow31_di" bpmnElement="W106_Flow31"><di:waypoint x="2470" y="335" /><di:waypoint x="2500" y="335" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W106_Flow32_di" bpmnElement="W106_Flow32"><di:waypoint x="2680" y="335" /><di:waypoint x="2730" y="675" /></bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="W106_Assoc20_di" bpmnElement="W106_Assoc20"><di:waypoint x="340" y="800" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNShape id="W106_Lane5_di" bpmnElement="W106_Lane5" isHorizontal="true"><dc:Bounds x="160" y="760" width="2630" height="170" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W106_Task8_di" bpmnElement="W106_Task8"><dc:Bounds x="400" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W106_Task9_di" bpmnElement="W106_Task9"><dc:Bounds x="610" y="295" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W106_Task10_di" bpmnElement="W106_Task10"><dc:Bounds x="820" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W106_Task11_di" bpmnElement="W106_Task11"><dc:Bounds x="1030" y="635" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W106_Task12_di" bpmnElement="W106_Task12"><dc:Bounds x="1240" y="805" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W106_Task13_di" bpmnElement="W106_Task13"><dc:Bounds x="1450" y="125" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W106_Task14_di" bpmnElement="W106_Task14"><dc:Bounds x="1660" y="805" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W106_Task15_di" bpmnElement="W106_Task15"><dc:Bounds x="1870" y="805" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W106_Task16_di" bpmnElement="W106_Task16"><dc:Bounds x="2080" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W106_Task17_di" bpmnElement="W106_Task17"><dc:Bounds x="2290" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W106_Task18_di" bpmnElement="W106_Task18"><dc:Bounds x="2500" y="465" width="180" height="80" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W106_Start7_di" bpmnElement="W106_Start7"><dc:Bounds x="290" y="147" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W106_End19_di" bpmnElement="W106_End19"><dc:Bounds x="2730" y="827" width="36" height="36" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="W106_Annotation20_di" bpmnElement="W106_Annotation20"><dc:Bounds x="160" y="970" width="360" height="60" /></bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="W106_Flow22_di" bpmnElement="W106_Flow22"><di:waypoint x="326" y="165" /><di:waypoint x="400" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W106_Flow23_di" bpmnElement="W106_Flow23"><di:waypoint x="580" y="165" /><di:waypoint x="610" y="335" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W106_Flow24_di" bpmnElement="W106_Flow24"><di:waypoint x="790" y="335" /><di:waypoint x="820" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W106_Flow25_di" bpmnElement="W106_Flow25"><di:waypoint x="1000" y="505" /><di:waypoint x="1030" y="675" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W106_Flow26_di" bpmnElement="W106_Flow26"><di:waypoint x="1210" y="675" /><di:waypoint x="1240" y="845" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W106_Flow27_di" bpmnElement="W106_Flow27"><di:waypoint x="1420" y="845" /><di:waypoint x="1450" y="165" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W106_Flow28_di" bpmnElement="W106_Flow28"><di:waypoint x="1630" y="165" /><di:waypoint x="1660" y="845" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W106_Flow29_di" bpmnElement="W106_Flow29"><di:waypoint x="1840" y="845" /><di:waypoint x="1870" y="845" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W106_Flow30_di" bpmnElement="W106_Flow30"><di:waypoint x="2050" y="845" /><di:waypoint x="2080" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W106_Flow31_di" bpmnElement="W106_Flow31"><di:waypoint x="2260" y="505" /><di:waypoint x="2290" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W106_Flow32_di" bpmnElement="W106_Flow32"><di:waypoint x="2470" y="505" /><di:waypoint x="2500" y="505" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W106_Flow33_di" bpmnElement="W106_Flow33"><di:waypoint x="2680" y="505" /><di:waypoint x="2730" y="845" /></bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="W106_Assoc21_di" bpmnElement="W106_Assoc21"><di:waypoint x="340" y="970" /><di:waypoint x="308" y="183" /></bpmndi:BPMNEdge>
       </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
     <bpmn:process id="W_W784" name="W784. DC Inventory Slotting Optimization &amp; Periodic Re-Slotting Execution" isExecutable="false">

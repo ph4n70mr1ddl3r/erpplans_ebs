@@ -616,7 +616,7 @@ Source: workflow W5517 — SEP Paved Road &amp; Engineering Standard Governance 
       </bpmn:startEvent>
       <bpmn:userTask id="W5517_Task8" name="DevEx bootstrap every new service from the SEP golden-path templates — repo…">
         <bpmn:documentation>Step 1: DevEx bootstrap every new service from the SEP golden-path templates — repo layout, CI/CD, observability, IaC; any deviation requires an ARB-recorded exception (W3573), and paved-road adoption (100% minus recorded exceptions) is reported at QBR
-Responsible (R): DevEx engineers / Squad Tech Lead
+Responsible (R): DevEx engineers / Squad Tech Lead, Build-Squad Tech Lead
 Accountable (A): Head of Engineering
 Duration: 0.5–1 day/service bootstrap</bpmn:documentation>
         <bpmn:incoming>W5517_Flow16</bpmn:incoming>

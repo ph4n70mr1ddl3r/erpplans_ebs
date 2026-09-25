@@ -654,7 +654,7 @@ Source: workflow W510 — Ecommerce Product Review &amp; Rating Management</bpmn
         <bpmn:lane id="W510_Lane3" name="Content Rep">
         <bpmn:flowNodeRef>W510_Task10</bpmn:flowNodeRef>
         </bpmn:lane>
-        <bpmn:lane id="W510_Lane4" name="CX Rep">
+        <bpmn:lane id="W510_Lane4" name="CX Rep, Ecommerce Marketing Specialist">
         <bpmn:flowNodeRef>W510_Task13</bpmn:flowNodeRef>
         </bpmn:lane>
         <bpmn:lane id="W510_Lane5" name="Digital Content Manager">
@@ -708,7 +708,7 @@ Duration: 15 min/ticket</bpmn:documentation>
       </bpmn:serviceTask>
       <bpmn:userTask id="W510_Task13" name="CX Representative drafts public vendor response for applicable reviews…">
         <bpmn:documentation>Step 6: CX Representative drafts public vendor response for applicable reviews; response posted alongside customer review on product page
-Responsible (R): CX Rep
+Responsible (R): CX Rep, Ecommerce Marketing Specialist
 Accountable (A): Digital Content Manager
 Duration: 10 min/response</bpmn:documentation>
         <bpmn:incoming>W510_Flow25</bpmn:incoming>

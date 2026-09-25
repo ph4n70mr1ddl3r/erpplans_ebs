@@ -2288,7 +2288,6 @@ candidate for the same governance path.
 | Accounting Policy Analyst | Finance & Accounting | 1 | 0 |
 | ASM | Store (field, per-store roster) | 1 | 0 |
 | Assistant DC Manager — Outbound | DC (field, per-DC roster) | 1 | 0 |
-| Build-Squad Tech Lead | Information Technology (product model) | 1 | 0 |
 | Contracts & Commercial Manager (Senior Counsel) | Legal & Compliance | 1 | 0 |
 | Cycle Counters | DC (field, per-DC roster) | 1 | 0 |
 | DC Office Administrator | DC (field, per-DC roster) | 1 | 0 |
@@ -2308,6 +2307,7 @@ candidate for the same governance path.
 | Tile & Heavy/Breakbulk Crew | DC (field, per-DC roster) | 1 | 0 |
 | Audit Manager | Internal Audit & Risk | 2 | 0 |
 | Banking & Cash-Management Specialist | Finance & Accounting | 2 | 0 |
+| Build-Squad Tech Lead | Information Technology (product model) | 2 | 0 |
 | Business Process & IMS Lead | Strategy / Corporate Planning | 2 | 0 |
 | Corporate Secretary Analyst | Legal & Compliance | 2 | 0 |
 | CPM (Corporate Performance Management) Analyst | Strategy / Corporate Planning | 2 | 0 |
