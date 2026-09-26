@@ -6825,6 +6825,114 @@ else
     echo "$C84_OUT" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
 fi
 
+# --- Check 85: Verification-state navigation pins (the (bv) batch-51 dispositions' own residue) ---
+echo "--- Check 85: Verification-state navigation pins ---"
+# The 2026-09-25 (bv) weak-anchor overload dispositions regenerated the
+# demand-verification instrument to batch 51 (OVERLOAD 4 → 0) but left the
+# verification-state navigation surfaces teaching the retired state: the
+# methodology-index and root-README verify-tool rows at 're-derived batches
+# 49–50'/49, the shipped verification report's own recital stopping at batch
+# 50 while its header read 51, the official TO's §5.3 status note at the
+# retired batch-31 '65 weakly anchored' census against the Check-71-pinned 53,
+# and the wave-4/5/7 tool rows teaching the dispositioned anchors and the
+# retired 4-OVERLOAD tally as live state — the half-repaired-cell class on the
+# very rows the wave batches own. This check re-derives the whole class every
+# run: (a) the TO §5.3 status note's weak-anchor census must equal the Check-71
+# CENSUS pin's anchor_weak (read off the generated role-coverage matrix, the
+# byte-pinned Check-71 mirror; the retired '65 weakly anchored' census form
+# banned on the footer-stripped body — the historical '65 → 53' transition
+# form is the only licensed carrier), (b) the two verify-tool navigation rows'
+# quoted re-derivation batch ceiling must equal the shipped report header's
+# batch, and (c) the six wave-4/5/7 navigation rows (methodology-index +
+# root-README) must carry the batch-51 supersession annotation. (The OM
+# downstream TO pin and the headcount-reality-check banner's newest TO pin the
+# (bv) pass re-pointed at pin level are already standing — audit-model-docs'
+# live_pin_hits arms (a)/(b) pin them to the TO's live footer, proven by the
+# same teeth injection firing both guards.)
+C85_OUT=$(python3 - "$REPO_ROOT" <<'PY'
+import os, re, sys
+ROOT = sys.argv[1]
+bad = []
+
+def read(rel):
+    return open(os.path.join(ROOT, rel), encoding="utf-8").read()
+
+def lines(rel):
+    return read(rel).splitlines()
+
+# (a) TO §5.3 status note weak census vs the Check-71 CENSUS pin
+mx = read("01-model-company/role-coverage-matrix.md")
+m = re.search(r"\| Weakly anchored \(1–2 workflows\) — demand-verification watchlist \| (\d+) \|", mx)
+if not m:
+    bad.append("role-coverage matrix: the Check-71 weak-anchor census row not found — arm (a) cannot run")
+    pin_weak = None
+else:
+    pin_weak = int(m.group(1))
+to = read("01-model-company/optimal-table-of-organization.md")
+to_body = to.split("*Document Version:")[0]
+if pin_weak is not None:
+    forms = re.findall(r"zero-anchor / (\d+) weakly anchored", to_body)
+    if not forms:
+        bad.append("TO §5.3 status note: the required census form '0 zero-anchor / N weakly anchored' missing — the note no longer states the Check-71-pinned census")
+    elif any(int(v) != pin_weak for v in forms):
+        bad.append(f"TO §5.3 status note: census form reads {forms} against the Check-71-pinned anchor_weak={pin_weak} — re-point the note with the census")
+if "65 weakly anchored" in to_body:
+    bad.append(f"TO §5.3 status note: the retired '65 weakly anchored' census form appears on the live body (Check 71 pins {pin_weak}) — the batch-31 form is frozen history; the '65 → 53' transition form is the licensed carrier")
+
+# (b) the two verify-tool navigation rows' batch ceiling vs the shipped report header
+rep = lines("01-model-company/workflows/weak-anchor-demand-verification.md")
+hm = re.search(r"generated — batch (\d+)", rep[0]) if rep else None
+if not hm:
+    bad.append("weak-anchor-demand-verification.md: batch header not found — arm (b) cannot run")
+else:
+    batch = int(hm.group(1))
+    meth = lines("07-methodology/README.md")
+    root = lines("README.md")
+    meth_row = next((l for l in meth if l.lstrip().startswith("| [verify-weak-anchor-demand.py]")), None)
+    root_row = next((l for l in root if "verify-weak-anchor-demand.py  " in l), None)
+    for row, surf in ((meth_row, "methodology-index verify-weak-anchor-demand.py row"),
+                      (root_row, "root-README verify-weak-anchor-demand.py row")):
+        if row is None:
+            bad.append(f"{surf}: row not found — the pin has no surface")
+            continue
+        nums = re.findall(r"re-derived batches? (\d+)(?:[–\u2013-](\d+))?", row)
+        if not nums:
+            bad.append(f"{surf}: no 're-derived batch(es)' self-description — the row no longer teaches its re-derivation state")
+        else:
+            ceiling = max(int(v) for grp in nums for v in grp)
+            if ceiling != batch:
+                bad.append(f"{surf}: re-derivation batch ceiling {ceiling} != the shipped report's batch {batch} — re-point the row with the report")
+
+# (c) the six wave-4/5/7 navigation rows must carry the batch-51 supersession annotation
+meth = lines("07-methodology/README.md")
+root = lines("README.md")
+for name in ("anchor-step-level-wave4.py", "anchor-step-level-wave5.py", "anchor-step-level-wave7.py"):
+    rows = [next((l for l in meth if l.lstrip().startswith("| [" + name + "]")), None),
+            next((l for l in root if name in l), None)]
+    for row, surf in zip(rows, ("methodology-index", "root-README")):
+        if row is None:
+            bad.append(f"{surf} {name} row: not found — the pin has no surface")
+        elif "batch-51 dispositions" not in row:
+            bad.append(f"{surf} {name} row: the batch-51 supersession annotation missing — the row teaches a dispositioned anchor or the retired 4-OVERLOAD tally as live state")
+
+# (d) — removed at the pass's own teeth: the OM downstream TO pin and the
+# headcount-reality-check banner's newest TO pin are already standing under
+# audit-model-docs live_pin_hits (a)/(b) — the injection drifting the OM pin
+# fired BOTH guards (2 errors), so re-pinning them here would duplicate an
+# existing surface; the remaining arms (a)–(c) cover the surfaces no rule read.
+print("HITS %d" % len(bad))
+for b in bad:
+    print("BAD|" + b)
+PY
+)
+C85_BAD=$(echo "$C85_OUT" | sed -n 's/^HITS \([0-9]*\)/\1/p')
+if [ "${C85_BAD:-1}" -eq 0 ]; then
+    ok "Verification-state navigation pins clean: the TO §5.3 status note's weak-anchor census equals the Check-71-pinned anchor_weak with the retired batch-31 form banned, the two verify-tool navigation rows' re-derivation batch ceiling equals the shipped report's batch, and the six wave-4/5/7 navigation rows carry their batch-51 supersession annotations — the (bv) batch-51 dispositions' own navigation residue made standing (the 2026-09-26 (bw) eleventh review-everything pass; the OM/banner pin arms live with audit-model-docs live_pin_hits)"
+else
+    error "$C85_BAD verification-state navigation violation(s):"
+    echo "$C85_OUT" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
+fi
+
 echo ""
 echo "=== Validation Complete ==="
 echo "Errors: $ERRORS, Warnings: $WARNINGS"

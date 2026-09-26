@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-r"""Weak-anchor demand verification generator — batch 49 (2026-09-25, by direction).
+r"""Weak-anchor demand verification generator — batches 49–51 (2026-09-25, by direction).
 
 Verifies the Role-Anchoring Contract's weak-anchor watchlist (chartered roles
 anchored in only 1–2 workflows) against per-role annual demand, using the
@@ -40,6 +40,22 @@ Batch 49 defects fixed (both found by the make-everything-measurable pass):
      PARSED CADENCE. Group is now comma-tolerant.
   3. THIS TOOL: the exercised-through arm above — roles whose named cells
      attribute to broader seats are now measured instead of reported empty.
+
+Batch 51 defects fixed (both found by the weak-anchor overload dispositions):
+  1. ENGINE: per-occurrence subset rates ('/occurrence', '/exception',
+     '/incident', '/case', 'per investigation', '/signup') were annualized
+     against the whole workflow event universe (W1365 step 5 = 15 min ×
+     8,700 ASN-events) — they are per-unit rates, held symbolic: counted,
+     never summed (the roll-up's per-unit discipline). parse_minutes zeroes
+     the family; the exercised-through arm mirrors it exactly.
+  2. ENGINE: period-qualified totals ('1 hour/week', '2 hours/month',
+     '4 hours/year') were multiplied by workflow events instead of bridged
+     (the W942 DPO consent audit read 36,000 h/yr against 4 documented
+     hours) — parse_workflows attaches per-step step_period and the ladder
+     bridges ×52/×12/×4/×1.
+  3. CORPUS: the five dispositioned step cells re-pointed to their executing
+     seats (see the batch-51 preamble of the shipped report); every figure
+     re-derived post-fix — OVERLOAD 4 → 0.
 
 Writes 01-model-company/workflows/weak-anchor-demand-verification.md.
 Deterministic; read-only over the corpus and the motion engine.
@@ -210,7 +226,18 @@ def main():
     A("> 7)** elevated the twelve participant-only roles that had a mandate-exact step (PA-04.1/.2/.3,")
     A("> PA-10.1, PA-27.2, PA-110.3, PA-113.1, PA-133.1, PA-138.2) and added the MEASURED — CAPACITY")
     A("> UNMAPPED arm for seats whose own-key demand prices against no mapped HC (the IT product-model")
-    A("> seats the TO carries by reference; the ASM alias gap). Generated — do not hand-edit.")
+    A("> seats the TO carries by reference; the ASM alias gap). **Batch 51 (2026-09-25, the weak-anchor")
+    A("> overload dispositions)** re-pointed the five dispositioned cells (W837 step 1 system-side with the")
+    A("> new 1a store-validation step; W1365's ASN-exception cells to the per-occurrence form; W3 step 9a's")
+    A("> special-handling slice; W41 step 6 back to CS Manager / Store Manager — the QWA mandate admitted")
+    A("> to the anchoring backlog; PA-91.1 step 1 back to system-side — the DPO's step-3 quarterly audit")
+    A("> stands) and repaired the engine's grammar behind them — per-occurrence subset rates")
+    A("> ('/occurrence', '/exception', '/incident', '/case', 'per investigation', '/signup') are zeroed as")
+    A("> symbolic (counted never summed — the roll-up's per-unit discipline) and period-qualified totals")
+    A("> ('1 hour/week', '2 hours/month', '4 hours/year') bridge through the step-period ladder")
+    A("> (×52/×12/×4/×1) instead of the workflow event universe — with this tool's exercised-through arm")
+    A("> mirroring mode_motion exactly; the re-derived table reads OVERLOAD 0 (CONFIRMED 3 / UNDER 19 /")
+    A("> EXERCISED 2 / MEASURED-UNMAPPED 2 / ZERO-DURATION 22 / NO PARSED 5). Generated — do not hand-edit.")
     A("")
     A("## Verdict legend")
     A("")

@@ -47,6 +47,14 @@ Measurement assumptions (printed with every run):
     demand = duration x 12/52/4/1, NOT duration x the workflow's store-event
     count (fifty-sixth-wave store-scope review — the per-store ladder was
     multiplying such steps by store-day events).
+  * duration cells carrying a per-occurrence subset rate ('15 min/occurrence',
+    '10–20 min/exception', '30–45 min/incident', 'per investigation',
+    'per signup') are per-unit rates over an exception/occurrence subset of
+    the workflow's event universe, not per-event effort: parse_minutes zeroes
+    the family as symbolic — counted in the coverage census, never summed
+    (the man-hours roll-up's per-unit discipline; the 2026-09-25 (bv)
+    overload dispositions' engine repair — W1365 step 5 had read 15 min ×
+    8,700 ASN-events and W3 step 6b 15 min × 72,000 store-events).
   * demand keys fold onto their bucket-preferred capacity entry (exact form,
     then singular/plural variants) — the store and DC rosters carry same-noun
     titles ('Receiving Clerks'), and without bucket preference store

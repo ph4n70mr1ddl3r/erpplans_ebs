@@ -19,7 +19,18 @@
 > 7)** elevated the twelve participant-only roles that had a mandate-exact step (PA-04.1/.2/.3,
 > PA-10.1, PA-27.2, PA-110.3, PA-113.1, PA-133.1, PA-138.2) and added the MEASURED — CAPACITY
 > UNMAPPED arm for seats whose own-key demand prices against no mapped HC (the IT product-model
-> seats the TO carries by reference; the ASM alias gap). Generated — do not hand-edit.
+> seats the TO carries by reference; the ASM alias gap). **Batch 51 (2026-09-25, the weak-anchor
+> overload dispositions)** re-pointed the five dispositioned cells (W837 step 1 system-side with the
+> new 1a store-validation step; W1365's ASN-exception cells to the per-occurrence form; W3 step 9a's
+> special-handling slice; W41 step 6 back to CS Manager / Store Manager — the QWA mandate admitted
+> to the anchoring backlog; PA-91.1 step 1 back to system-side — the DPO's step-3 quarterly audit
+> stands) and repaired the engine's grammar behind them — per-occurrence subset rates
+> ('/occurrence', '/exception', '/incident', '/case', 'per investigation', '/signup') are zeroed as
+> symbolic (counted never summed — the roll-up's per-unit discipline) and period-qualified totals
+> ('1 hour/week', '2 hours/month', '4 hours/year') bridge through the step-period ladder
+> (×52/×12/×4/×1) instead of the workflow event universe — with this tool's exercised-through arm
+> mirroring mode_motion exactly; the re-derived table reads OVERLOAD 0 (CONFIRMED 3 / UNDER 19 /
+> EXERCISED 2 / MEASURED-UNMAPPED 2 / ZERO-DURATION 22 / NO PARSED 5). Generated — do not hand-edit.
 
 ## Verdict legend
 

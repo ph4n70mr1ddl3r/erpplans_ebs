@@ -790,7 +790,7 @@ three-tier landscape (unified ERP core, BoB WMS/TMS/WFM/FSM edges, in-house OMO/
 16 teams (reconciliation unchanged 171 + 17 = 188 VS / 4,865 + 499 = 5,364 workflows),
 archetypes + Vendor PM + build squads, SIB governance, per-archetype release cadences,
 sizing 80 → 115. Prior v1.1 (2026-09-02, review #68) and v1.0 (2026-09-01): unified-model
-12-team design at 80 FTE. Downstream: `optimal-table-of-organization.md` v3.6 (HQ 511 active /
+12-team design at 80 FTE. Downstream: `optimal-table-of-organization.md` v3.7 (HQ 511 active /
 total 6,911 active — Trade / Account Management disabled — prepared 2026-09-23 (x); the TPS build squad deferred — prepared 2026-09-23 (ad); the OMO build squad deferred — prepared 2026-09-23 (ah); the 532/6,932 design retained; census population re-pointed at batch 30), `model-company-profile.md` v3.11,
 `technical-guidelines.md` v3.8,
 `capability-sourcing-and-engineering-model.md` v3.21.*
