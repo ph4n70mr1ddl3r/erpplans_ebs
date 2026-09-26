@@ -11,10 +11,10 @@
 
 | Field | Value | Source |
 |---|---|---|
-| Role title | **IT Helpdesk Lead** (workflow-catalog canonical title; resolves to the FS Supervisor seat) | W48 Owner cell; ITOM §5.3 Field & End-User Services roster |
+| Role title | **IT Helpdesk Agent (FS)** — the chartered product-model seat; the workflow catalog titles this function "IT Helpdesk Lead" (W48's Owner cell) and the corpus resolver folds that title onto this seat (`generate-role-coverage.py`: 'it helpdesk lead' → IT Helpdesk Agent (FS); no FS-Supervisor seat is chartered — the Supervisor is the reporting line, below) | W48 Owner cell; ITOM §5.3 Field & End-User Services roster; coverage-matrix seat row |
 | Team / department | Field & End-User Services (FS) — Platform archetype, product 16 of 17 | ITOM §3.2 (row 16: all 205 locations; 6,911 users) |
-| Reports to | ⟨regen: ITOM FS team line⟩ | ITOM §5.3 |
-| Headcount (seats with this charter) | 1 (team roster: Supervisor + 2 helpdesk L2 analysts + 1 ITAM administrator + 5 regional field technicians; L1 is an outsourced contact center) | ITOM §5.3 |
+| Reports to | FS Supervisor (the roster's team lead line — a roster role, not a chartered product-model seat) | ITOM §5.3 |
+| Headcount (seats with this charter) | 2 (the FS roster's two helpdesk L2 analysts — the seat's chartered HC; full roster: Supervisor + 2 helpdesk L2 analysts + 1 ITAM administrator + 5 regional field technicians; L1 is an outsourced contact center) | ITOM §5.3 |
 | Charter ID / version / review date | RC-IT-FS-01 · v0.1 · quarterly | this layer |
 
 ## 2. Mission [A]
@@ -62,7 +62,7 @@
 
 | W# | Workflow | This role | Tier | Cadence/volume | Demand status |
 |---|---|---|---|---|---|
-| W48 | IT Operations & Helpdesk Support | **Owner** | ⟨regen: confirmed tier register⟩ | Continuous; ~800–1,200 tickets/mo | ⟨regen: gemba verdict⟩ |
+| W48 | IT Operations & Helpdesk Support | **Owner** (catalog title: "IT Helpdesk Lead" → this seat) | ⟨regen: confirmed tier register⟩ | Continuous; ~800–1,200 tickets/mo | ⟨regen: register verdict — currently OVERLOAD, adjudication pending (disposition queue P2-A)⟩ |
 | W595 | ERP Daily Health Check & Integration Monitoring | R (user comms); P2 recipient | ⟨regen⟩ | Daily 05:00/07:00 + 24/7 monitoring | ⟨regen⟩ |
 | … | *(full anchor set pulled from coverage-matrix row)* | | | | |
 
@@ -121,7 +121,7 @@ store/DC down before HQ, revenue-adjacent before back-office.
 
 | Field | Value |
 |---|---|
-| Canon sources | W48 (PA-27.1: Owner, steps 7–11, Severity & SLA Matrix, Change Management); W595 (PA-27.2: Participants, steps 3/9/11–12); ITOM §3.2 row 16, §5.3 FS roster; coverage-matrix row ⟨regen⟩ |
+| Canon sources | W48 (PA-27.1: Owner cell titles the function "IT Helpdesk Lead", which the corpus resolver folds onto this seat; steps 7–11, Severity & SLA Matrix, Change Management); W595 (PA-27.2: Participants, steps 3/9/11–12); ITOM §3.2 row 16, §5.3 FS roster; coverage-matrix seat row ⟨regen⟩ |
 | Refresh trigger | Any batch touching W48/W595 anchors or the FS roster — regenerate derived fields |
 | Authored / reviewed with | ⟨author⟩ · ⟨incumbent⟩ · ⟨FS Supervisor's manager⟩ · ⟨ERP System Administrator (counterparty)⟩ |
 | Changes | v0.1 — drafted from TEMPLATE as pilot example |

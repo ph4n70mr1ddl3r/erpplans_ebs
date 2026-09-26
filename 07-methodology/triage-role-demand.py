@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-r"""P2 disposition triage for the universal role-demand register (batch 53).
+r"""P2 disposition triage for the universal role-demand register (batch 54).
 
 Reads the same machinery as verify-role-demand.py (census join, parts
 attribution, capacity pricing, state) and adds SOURCE TRACKING — for every
@@ -32,6 +32,16 @@ Also emits the charter naming worklist (P1 interface): priced roles whose
 residual is PARTIAL — UNNAMED plus the UNMEASURED rows, ranked by unnamed
 hours (capacity h/yr minus measured demand h/yr) — the charter layer's
 prioritized queue (naming is a charter act; the instrument counts).
+
+Batch 54 register join — the naming queue and the OVERLOAD triage join the
+REGISTER's demand basis, not this tool's parts-walk alone: zero-parts-claim
+roles price through verify-role-demand's surface fallback (the 52c
+grain-guarded claim), so every register active-OVERLOAD row carries a queue
+row and the naming queue's sub-5% population IS the register's
+PARTIAL — UNNAMED class (the 53 form asserted the equation while dropping 3
+OVERLOAD rows and 5 naming rows whose demand prices only through the
+fallback). Rows priced through the fallback carry § — no step-cell evidence
+at this queue's grain; read the register's row before disposition.
 
 Writes 01-model-company/workflows/role-demand-disposition-queue.md.
 Deterministic; read-only over the corpus and the engine. --check byte-compares.
@@ -154,20 +164,39 @@ def main():
                            raws[si] if si < len(raws) else "", w["freq"][:60], exec_bucket)
                     contrib[k][key] = contrib[k].get(key, 0.0) + share
 
-    # ---- verdicts (mirror the register's ladder) ----
+    # ---- verdicts (mirror the register's ladder, joined at the register's
+    # demand basis: parts claim first, the grain-guarded surface fallback for
+    # zero-claim roles — the same measurement verify-role-demand prices) ----
     over_rows, under_rows, naming = [], [], []
+    surface_demand = {}
+    for q in queue:
+        k = norm(q["title"])
+        if k in hit and claim[k] > 0:
+            continue
+        s_claimed, _anc, _nbd, _pk, _own, _via = vrd.surface_claim(q, idx, res, cap)
+        if s_claimed > 0:
+            surface_demand[k] = s_claimed
     for q in queue:
         k = norm(q["title"])
         state = vrd.state_of(q)
-        if k not in hit or claim[k] <= 0:
+        fallback = k in surface_demand
+        if k in hit and claim[k] > 0:
+            dem_min = claim[k]
+        elif fallback:
+            dem_min = surface_demand[k]
+        else:
             continue
         ch, hours = vrd.capacity_for(q, cap)
         if not ch:
             continue
         cap_h = ch * hours
-        dem_h = claim[k] / 60
+        dem_h = dem_min / 60
         util = dem_h / cap_h * 100
         if util > 150 and state == "active":
+            if fallback:
+                over_rows.append((q, dem_h, util, 0.0, [],
+                                  "SURFACE-PRICED (register fallback)"))
+                continue
             tb = by_bucket_min[k]
             tot = max(claim[k], 1e-9)
             field_share = (tb["store"] + tb["dc"]) / tot
@@ -183,7 +212,7 @@ def main():
                 cls = "DISTRIBUTED (real-signal candidate)"
             over_rows.append((q, dem_h, util, field_share, top, cls))
         elif util < 80:
-            naming.append((q, dem_h, cap_h, util))
+            naming.append((q, dem_h, cap_h, util, fallback))
 
     over_rows.sort(key=lambda x: -x[2])
     naming_unnamed = [n for n in naming if n[3] < 5]
@@ -192,16 +221,18 @@ def main():
     L = []
     A = L.append
     gap_rows = 0
-    A("# Role-Demand Disposition Queue — P2 triage (generated — batch 53, 2026-09-26)")
+    A("# Role-Demand Disposition Queue — P2 triage (generated — batch 54, 2026-09-26)")
     A("")
     A("> **P2 worklist** for the universal register")
-    A("> ([role-demand-verification.md](role-demand-verification.md), batch 52b): every")
+    A("> ([role-demand-verification.md](role-demand-verification.md), batch 52c): every")
     A(f"> active-state OVERLOAD row ({len(over_rows)}) with its evidence — the per-cell")
     A("> contributions behind the demand — auto-classified for disposition, plus the")
-    A("> charter naming worklist ranked by unnamed hours. A class is a hypothesis until")
-    A("> the disposition note says otherwise; no headcount or corpus decision rides a")
-    A("> class label alone (the batch-51 discipline: read the cell, then re-point,")
-    A("> re-scope, or confirm — and re-derive). Cadence-parse coverage")
+    A("> charter naming worklist ranked by unnamed hours (joined at the register's")
+    A("> demand basis since batch 54 — zero-parts-claim roles price through the")
+    A("> register's grain-guarded surface fallback, marked §). A class is a hypothesis")
+    A("> until the disposition note says otherwise; no headcount or corpus decision")
+    A("> rides a class label alone (the batch-51 discipline: read the cell, then")
+    A("> re-point, re-scope, or confirm — and re-derive). Cadence-parse coverage")
     A(f"> {cov['parsed']}/{cov['total']} workflows at generation. Generated — do not hand-edit.")
     A("")
     A("## P2-A — OVERLOAD (active) triage")
@@ -241,9 +272,12 @@ def main():
             "Verify per-site arithmetic (events ladder × site multiplier vs roster complement) before any roster decision; the §7.2/§7.3 rosters price per-site.",
         "DISTRIBUTED (real-signal candidate)":
             "Capacity decision on the evidence as it stands — resize, split, or accept with a named residual; the demand is spread, not an artifact.",
+        "SURFACE-PRICED (register fallback)":
+            "Demand prices through the register's grain-guarded surface fallback — no step-cell evidence at this queue's grain; read the register's row and the via-group before any disposition.",
     }
     for cls in ("SCALE-ARTIFACT (field-exec × HQ charter)", "CELL-AUDIT (concentration)",
-                "FIELD-SIGNAL (chain vs roster pricing)", "DISTRIBUTED (real-signal candidate)"):
+                "FIELD-SIGNAL (chain vs roster pricing)", "DISTRIBUTED (real-signal candidate)",
+                "SURFACE-PRICED (register fallback)"):
         A(f"| {cls} | {cls_count.get(cls, 0)} | {paths[cls]} |")
     A("")
     A(f"**Engine grammar-gap sensitivity:** {gap_rows} of {len(over_rows)} OVERLOAD rows")
@@ -261,15 +295,22 @@ def main():
     A("> Priced roles under 80% utilization: `unnamed hours = capacity − measured")
     A("> demand`. Naming is a charter act (§10 definition-of-done / §2 mission / §11")
     A("> coverage) — this queue ranks where naming buys the most explained capacity.")
-    A("> Top 30 shown; util < 5% rows are the PARTIAL — UNNAMED register class.")
+    A("> Top 30 shown; util < 5% rows are the register's PARTIAL — UNNAMED class;")
+    A("> § rows price through the register's surface fallback (no step-cell")
+    A("> evidence at this queue's grain).")
     A("")
     A("| Role | Dept | Util | Unnamed h/yr | HC |")
     A("|---|---|---|---|---|")
-    for q, dem_h, cap_h, util in naming[:30]:
-        A(f"| {q['title']} | {q['dept']} | {util:.0f}% | {max(0.0, cap_h - dem_h):,.0f} | {q['hc'] or '—'} |")
+    for q, dem_h, cap_h, util, fallback in naming[:30]:
+        mark = " §" if fallback else ""
+        A(f"| {q['title']}{mark} | {q['dept']} | {util:.0f}% | {max(0.0, cap_h - dem_h):,.0f} | {q['hc'] or '—'} |")
     A("")
     A(f"(Full naming queue: {len(naming)} priced roles under 80%; of these")
-    A(f"{len(naming_unnamed)} sit under 5% — the register's PARTIAL — UNNAMED class.)")
+    A(f"{len(naming_unnamed)} sit under 5% — by the batch-54 register join these ARE")
+    A("the register's PARTIAL — UNNAMED class, one-for-one. The 3 UNMEASURED rows")
+    A("(Facilities/Utility, Certified Hazmat/Paint Handlers, Loaders / Staging) are")
+    A("unpriced field-roster seats — capacity-map them at the §7.2/§7.3 rosters first,")
+    A("then charter-name.)")
     A("")
     A("> Guardrails: verdicts price role design, never incumbents; classes are")
     A("> hypotheses with evidence attached; every disposition re-derives the register")

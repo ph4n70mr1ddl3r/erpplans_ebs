@@ -88,8 +88,11 @@ demand-verification instrument).
 
 ## Rollout order for the full population
 
-259 chartered roles = 194 §5.3 register rows + 32 IT product-model seats +
-§7.2 store + §7.3 DC roster roles. Sequence by confusion exposure, not by
+259 chartered roles = 192 §5.3 register roles (the register's 194 rows ex the
+by-reference IT-portfolio row, which the 32 seats carry, and the one
+duplicated title — the coverage census's own decomposition) + 32 IT
+product-model seats + 8 §7.2 store-roster + 27 §7.3 DC-roster roles.
+Sequence by confusion exposure, not by
 org chart: (1) Tier-1-owning roles, (2) weak-anchor watchlist roles (the 53 —
 their charters make the mandate explicit while demand verification runs), (3)
 shared-services and cross-department roles, (4) the long tail. Store/DC

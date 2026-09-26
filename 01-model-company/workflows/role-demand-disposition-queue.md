@@ -1,13 +1,15 @@
-# Role-Demand Disposition Queue — P2 triage (generated — batch 53, 2026-09-26)
+# Role-Demand Disposition Queue — P2 triage (generated — batch 54, 2026-09-26)
 
 > **P2 worklist** for the universal register
-> ([role-demand-verification.md](role-demand-verification.md), batch 52b): every
+> ([role-demand-verification.md](role-demand-verification.md), batch 52c): every
 > active-state OVERLOAD row (79) with its evidence — the per-cell
 > contributions behind the demand — auto-classified for disposition, plus the
-> charter naming worklist ranked by unnamed hours. A class is a hypothesis until
-> the disposition note says otherwise; no headcount or corpus decision rides a
-> class label alone (the batch-51 discipline: read the cell, then re-point,
-> re-scope, or confirm — and re-derive). Cadence-parse coverage
+> charter naming worklist ranked by unnamed hours (joined at the register's
+> demand basis since batch 54 — zero-parts-claim roles price through the
+> register's grain-guarded surface fallback, marked §). A class is a hypothesis
+> until the disposition note says otherwise; no headcount or corpus decision
+> rides a class label alone (the batch-51 discipline: read the cell, then
+> re-point, re-scope, or confirm — and re-derive). Cadence-parse coverage
 > 5070/5433 workflows at generation. Generated — do not hand-edit.
 
 ## P2-A — OVERLOAD (active) triage
@@ -102,6 +104,7 @@
 | CELL-AUDIT (concentration) | 10 | Read the top cell: per-occurrence subset rate, misparsed cadence, or genuinely oversized cell (the W1365 / W942 precedents); fix or confirm, then re-derive. |
 | FIELD-SIGNAL (chain vs roster pricing) | 8 | Verify per-site arithmetic (events ladder × site multiplier vs roster complement) before any roster decision; the §7.2/§7.3 rosters price per-site. |
 | DISTRIBUTED (real-signal candidate) | 12 | Capacity decision on the evidence as it stands — resize, split, or accept with a named residual; the demand is spread, not an artifact. |
+| SURFACE-PRICED (register fallback) | 0 | Demand prices through the register's grain-guarded surface fallback — no step-cell evidence at this queue's grain; read the register's row and the via-group before any disposition. |
 
 **Engine grammar-gap sensitivity:** 19 of 79 OVERLOAD rows
 have a `PER-UNIT?` / `PERIOD?` top cell — per-unit qualifier forms outside
@@ -118,7 +121,9 @@ batch-51 pin and are a conscious re-adjudication by direction.
 > Priced roles under 80% utilization: `unnamed hours = capacity − measured
 > demand`. Naming is a charter act (§10 definition-of-done / §2 mission / §11
 > coverage) — this queue ranks where naming buys the most explained capacity.
-> Top 30 shown; util < 5% rows are the PARTIAL — UNNAMED register class.
+> Top 30 shown; util < 5% rows are the register's PARTIAL — UNNAMED class;
+> § rows price through the register's surface fallback (no step-cell
+> evidence at this queue's grain).
 
 | Role | Dept | Util | Unnamed h/yr | HC |
 |---|---|---|---|---|
@@ -130,6 +135,7 @@ batch-51 pin and are a conscious re-adjudication by direction.
 | Order Pickers | DC (field, per-DC roster) | 74% | 47,641 | — |
 | Putaway Staff | DC (field, per-DC roster) | 40% | 45,604 | — |
 | Cross-Dock Team | DC (field, per-DC roster) | 0% | 45,569 | — |
+| Tile & Heavy/Breakbulk Crew § | DC (field, per-DC roster) | 2% | 44,916 | — |
 | ERP Functional Analyst | Information Technology (product model) | 1% | 39,368 | — |
 | Packers / Load Builders | DC (field, per-DC roster) | 63% | 39,192 | — |
 | Lumber / Long-Length Crew | DC (field, per-DC roster) | 50% | 30,353 | — |
@@ -151,10 +157,13 @@ batch-51 pin and are a conscious re-adjudication by direction.
 | AAP Agent Engineer | Information Technology (product model) | 0% | 5,379 | — |
 | Direct Sourcing / Import Buyer | Merchandising & Buying | 1% | 5,338 | 3 |
 | Promotions & Vendor-Funding Coordinator | Merchandising & Buying | 2% | 5,275 | 3 |
-| Logistics & Cost Finance Analyst | Finance & Accounting | 13% | 4,714 | 3 |
 
-(Full naming queue: 98 priced roles under 80%; of these
-40 sit under 5% — the register's PARTIAL — UNNAMED class.)
+(Full naming queue: 99 priced roles under 80%; of these
+41 sit under 5% — by the batch-54 register join these ARE
+the register's PARTIAL — UNNAMED class, one-for-one. The 3 UNMEASURED rows
+(Facilities/Utility, Certified Hazmat/Paint Handlers, Loaders / Staging) are
+unpriced field-roster seats — capacity-map them at the §7.2/§7.3 rosters first,
+then charter-name.)
 
 > Guardrails: verdicts price role design, never incumbents; classes are
 > hypotheses with evidence attached; every disposition re-derives the register

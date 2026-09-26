@@ -141,7 +141,8 @@ from "the 53-role watchlist" to the universal register.
   store-executed demand at 68,467% on HC 2 — the register now mirrors the
   engine faithfully: OVERLOAD active 82 is the honest corpus reading, the
   W2201-class store-multiplier artifacts dominating it are the P2 disposition
-  queue, not instrument noise.
+  queue, not instrument noise. (Superseded at 52c, see run-2 below: three of
+  those 82 were the substring-claim phantoms — the honest active count is 79.)
 - **Days-bridge:** the corpus's 2,869 day/week cells are elapsed-window
   style ('1–2 weeks' UAT, '2–5 days' signoff) with zero effort-worded cells —
   the batch-51 elapsed-vs-effort doctrine keeps them unpriced; the bridge is
@@ -155,9 +156,35 @@ from "the 53-role watchlist" to the universal register.
   (department)', 'Strategy / Corporate Planning (PMO)', DP CDP/scientist)
   stay MEASURED — HC UNPRICED deliberately: the ITOM seat-charter worklist,
   never a silent fold. Unpriced total: 7.
-- **Register tallies (52b):** CONFIRMED 25 · OVERLOAD active 82 + design 3 ·
-  UNDER 93 · ZERO-DURATION 39 · UNPARSEABLE 2 · NO PARSED 8 · unpriced 7 ·
-  residual UNNAMED 45 / UNMEASURED 3 · alias-claimed 2. All 259 census-joined.
+- **Register tallies (52c):** CONFIRMED 25 · OVERLOAD active 79 + design 3 ·
+  UNDER 87 · EXERCISED-THROUGH 10 · ZERO-DURATION 39 · UNPARSEABLE 2 ·
+  NO PARSED 8 · unpriced 6 · residual UNNAMED 41 / UNMEASURED 3 ·
+  alias-claimed 2. All 259 census-joined.
+- **Run-2 correction (52c, 2026-09-26 twelfth review-everything pass):** the
+  52b fallback claimed demand by SUBSTRING while the corpus's own
+  reconciliation (the resolver + ROLE_ALIASES tables) fires on whole-cell
+  equality — bare generic alias tokens ('brand', 'energy', 'cloud', 'pmo')
+  and suffix matches inside longer segments ('procurement compliance
+  analyst' → Procurement Coordinator; 'data privacy officer' → the DPO
+  seat; 'tax tech lead'; 'private label brand manager') priced OTHER
+  roles' cells onto these seats: three phantom active-OVERLOAD verdicts
+  (Brand Manager 1,200%, Compliance Analyst 347%, Energy Manager 168%)
+  and inflated reads on seven more (incl. the DP umbrella's 125,955 h/yr).
+  The guard: surface claims price a cell only at the corpus's own grain —
+  whole-cell or comma/semicolon-segment equality of the paren-stripped
+  cell, never substring, never slash-split (slash-compound titles resolve
+  whole); substring matches count anchors only. Zero-claim rows whose
+  named cells parse but fold to other seats read EXERCISED-THROUGH with
+  the via-group named — §3.2's own ladder row, restored (the batch-51
+  Privacy Officer precedent, which the 52b register had silently read as
+  4 h/yr UNDER). The honest comma-segment claim survives (Tile &
+  Heavy/Breakbulk Crew keeps its 684 h/yr — the cell names the crew
+  verbatim as a co-performer). Companion repair: triage-role-demand.py
+  (batch 54) joins the register's demand basis, so the disposition queue
+  carries every active-OVERLOAD row (the 53 form silently dropped the 3
+  phantom rows — 82 vs 79 — and its naming worklist dropped 5 of the 45
+  PARTIAL — UNNAMED rows while asserting the class equation; the join
+  makes both structural).
 
 ## 7. Artifact
 

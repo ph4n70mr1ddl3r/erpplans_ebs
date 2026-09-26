@@ -6933,6 +6933,230 @@ else
     echo "$C85_OUT" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
 fi
 
+# --- Check 86: Universal-register ↔ disposition-queue ↔ charter-layer consistency pins ---
+echo "--- Check 86: Universal-register/queue/charter-layer consistency pins ---"
+# The 2026-09-26 (bx) universal role-demand wave shipped three surfaces whose
+# mutual consistency no rule read: the generated register
+# (role-demand-verification.md, deliberately unpinned until spec Phase 3), the
+# generated disposition queue (role-demand-disposition-queue.md, same), and the
+# hand-authored charter layer (role-charters/). The twelfth review-everything
+# pass found all three defect classes live: the queue's parts-only walk silently
+# dropped 3 of the register's 82 active-OVERLOAD rows and 5 of its 45
+# PARTIAL — UNNAMED naming rows while its footer ASSERTED the class equation
+# ('40 sit under 5% — the register's PARTIAL — UNNAMED class'), the register's
+# 52b substring fallback had manufactured three phantom OVERLOAD verdicts by
+# pricing other roles' cells onto these seats, and the charter layer's own
+# surfaces contradicted the canon (the README's population decomposition summed
+# to 261 against the census's 259; the EXAMPLE's identity row claimed a
+# resolution to an 'FS Supervisor' seat that is not chartered — the resolver
+# folds W48's 'IT Helpdesk Lead' onto the IT Helpdesk Agent (FS) seat, HC 2).
+# The instruments were repaired in-change (batch 52c grain guard + EXERCISED-
+# THROUGH restore; batch 54 register join; charter-layer re-points) and this
+# check re-derives the RELATIONS every run — set equality and quoted-figure
+# agreement, never byte identity (Phase 3 owns the byte pins, so the artifacts'
+# legitimate movement between now and the P3 re-pin must not fire here):
+#   (a) the charter README's rollout decomposition must equal the chartered
+#       census composition re-derived from the registers of record
+#       (parse_toc's §5.3 rows ex the by-reference IT-portfolio row, the §7.2
+#       and §7.3 rosters, and IT_SEATS' distinct seat values) with the total;
+#   (b) the EXAMPLE charter's identity row must name a chartered seat whose
+#       reconciliation the corpus's own alias tables carry for the W48 owner
+#       title, at the IT_SEAT_HC mirror's own HC;
+#   (c) the queue's P2-A population must equal the register's active-OVERLOAD
+#       population in both directions, the queue header's quoted count must
+#       equal it, and the naming-worklist footer's sub-5% count must equal the
+#       register's PARTIAL — UNNAMED tally (the class equation, made
+#       structural by the batch-54 join);
+#   (d) the methodology-index verify-role-demand row's tally enumeration must
+#       quote the shipped register's tally table completely (every verdict
+#       class's count — the 52b row omitted UNPARSEABLE and summed to 257
+#       against its own '259 rows:' prefix).
+C86_OUT=$(python3 - "$REPO_ROOT" <<'PY'
+import importlib.util, os, re, sys
+ROOT = sys.argv[1]
+bad = []
+
+def read(rel):
+    return open(os.path.join(ROOT, rel), encoding="utf-8").read()
+
+# ---- (a) charter README decomposition vs the registers of record ----
+spec = importlib.util.spec_from_file_location(
+    "c86grc", os.path.join(ROOT, "07-methodology/generate-role-coverage.py"))
+grc = importlib.util.module_from_spec(spec)
+sys.argv = ["c86grc"]
+spec.loader.exec_module(grc)
+hq, dc_r, store_r, _dept = grc.parse_toc()
+# mirror build()'s chartered-population construction exactly (setdefault dedup
+# on key(title), the by-reference IT-portfolio row skipped, IT seats carried)
+chartered = {}
+for _k, (title, dept, _hc) in hq.items():
+    if title.startswith("IT product portfolio"):
+        continue
+    chartered.setdefault(grc.key(title), "hq")
+for _k, (title, _dept2) in store_r.items():
+    chartered.setdefault(grc.key(title), "store")
+for _k, (title, _dept2) in dc_r.items():
+    chartered.setdefault(grc.key(title), "dc")
+for seat in grc.IT_SEATS.values():
+    chartered.setdefault(grc.key(seat), "it")
+comp = {b: sum(1 for v in chartered.values() if v == b)
+        for b in ("hq", "it", "store", "dc")}
+total = sum(comp.values())
+cread = read("01-model-company/role-charters/README.md")
+if "chartered roles =" not in cread:
+    bad.append("role-charters/README.md: the rollout decomposition "
+               "('259 chartered roles = …') not found — arm (a) cannot run")
+else:
+    for form, n in (("192 §5.3 register roles", comp["hq"]),
+                    ("32 IT", comp["it"]),
+                    ("8 §7.2 store-roster", comp["store"]),
+                    ("27 §7.3 DC-roster", comp["dc"])):
+        if form not in cread:
+            bad.append(f"role-charters/README.md: the rollout decomposition "
+                       f"lacks '{form}' — the register of record derives "
+                       f"{n}; re-point the rollout line")
+    if f"{total} chartered roles =" not in cread:
+        bad.append(f"role-charters/README.md: rollout total != {total} — "
+                   "the decomposition no longer foots to the census")
+# the retired wrong decomposition form banned (194 register rows summed to 261)
+if re.search(r"194 §5\.3 register rows", cread):
+    bad.append("role-charters/README.md: the retired '194 §5.3 register rows' "
+               "decomposition form (sums to 261 against the 259 census) — "
+               "re-point to the census decomposition")
+
+# ---- (b) EXAMPLE charter identity vs the canon resolution ----
+ex = read("01-model-company/role-charters/EXAMPLE-it-helpdesk-lead.md")
+idl = next((l for l in ex.splitlines() if "| Role title |" in l), None)
+if idl is None:
+    bad.append("EXAMPLE-it-helpdesk-lead.md: the §1 Role title row not found — "
+               "arm (b) cannot run")
+else:
+    seat = "IT Helpdesk Agent (FS)"
+    if seat not in idl:
+        bad.append(f"EXAMPLE-it-helpdesk-lead.md: the identity row no longer "
+                   f"names the chartered seat '{seat}' the resolver folds "
+                   "W48's owner title onto")
+    if "FS Supervisor seat" in ex:
+        bad.append("EXAMPLE-it-helpdesk-lead.md: the retired 'resolves to the "
+                   "FS Supervisor seat' claim — no FS Supervisor seat is "
+                   "chartered; the canon resolution is the IT Helpdesk "
+                   "Agent (FS) product-model seat")
+    folded = any(tab.get("it helpdesk lead") == seat
+                 for tab in (grc.ROLE_ALIASES, grc.ROLE_ALIASES_W36,
+                             grc.ROLE_ALIASES_W38, grc.ROLE_ALIASES_W39,
+                             grc.IT_SEATS))
+    if not folded:
+        bad.append("EXAMPLE-it-helpdesk-lead.md: the corpus reconciliation "
+                   "tables no longer fold 'it helpdesk lead' onto the named "
+                   "seat — re-point the identity row at the new resolution")
+    vsrc = read("07-methodology/verify-role-demand.py")
+    m = re.search(r'"it helpdesk agent \(fs\)"\s*:\s*(\d+)', vsrc)
+    hc = int(m.group(1)) if m else None
+    hcl = next((l for l in ex.splitlines()
+                if "Headcount (seats with this charter)" in l), None)
+    if hcl is None:
+        bad.append("EXAMPLE-it-helpdesk-lead.md: the §1 Headcount row not found")
+    elif hc is None:
+        bad.append("verify-role-demand.py: the IT_SEAT_HC mirror entry for the "
+                   "seat not found — arm (b) cannot verify the HC quote")
+    elif f"| {hc} (" not in hcl:
+        bad.append(f"EXAMPLE-it-helpdesk-lead.md: the Headcount row does not "
+                   f"quote the seat's chartered HC {hc} (the IT_SEAT_HC "
+                   "mirror of ITOM §5.3) — re-point it")
+
+# ---- (c) register ↔ queue set equality + the naming class equation ----
+reg = read("01-model-company/workflows/role-demand-verification.md")
+que = read("01-model-company/workflows/role-demand-disposition-queue.md")
+reg_rows = []
+for line in reg.splitlines():
+    m = re.match(r"^\| ([^|]+) \| [^|]+ \| \d+ \| [^|]* \| [^|]* \| [^|]* \|"
+                 r" ([^|]+) \| [^|]+ \| ([^|]+) \|", line)
+    if m and m.group(1).strip() != "Role":
+        reg_rows.append((m.group(1).strip(), m.group(2).strip(),
+                         m.group(3).strip()))
+over_reg = {r for r, v, st in reg_rows if v == "OVERLOAD" and st == "active"}
+q_over = set()
+for line in que.splitlines():
+    m = re.match(r"^\| ([^|]+) \| [^|]+ \| [\d,]+ \| \d+% \|", line)
+    if m and m.group(1).strip() != "Role":
+        q_over.add(m.group(1).strip())
+if q_over != over_reg:
+    for r in sorted(over_reg - q_over):
+        bad.append(f"disposition queue: register active-OVERLOAD role '{r}' "
+                   "carries no P2-A row — every active-OVERLOAD row must be "
+                   "triaged (the batch-54 register join)")
+    for r in sorted(q_over - over_reg):
+        bad.append(f"disposition queue: P2-A row '{r}' is not an "
+                   "active-OVERLOAD register row — the queue drifted from the "
+                   "register")
+hm = re.search(r"active-state OVERLOAD row \((\d+)\)", que)
+if not hm:
+    bad.append("disposition queue: the header's 'active-state OVERLOAD row (N)' "
+               "self-description not found")
+elif int(hm.group(1)) != len(over_reg):
+    bad.append(f"disposition queue: header quotes {hm.group(1)} active-OVERLOAD "
+               f"rows against the register's {len(over_reg)}")
+pu = re.search(r"\| PARTIAL — UNNAMED \| (\d+) \|", reg)
+qm = re.search(r"(\d+) sit under 5%", que)
+if not pu:
+    bad.append("register: the PARTIAL — UNNAMED tally row not found — the "
+               "naming-class equation cannot run")
+elif not qm:
+    bad.append("disposition queue: the naming-worklist footer's 'N sit under "
+               "5%' count not found")
+elif int(qm.group(1)) != int(pu.group(1)):
+    bad.append(f"disposition queue: naming footer quotes {qm.group(1)} sub-5% "
+               f"rows against the register's PARTIAL — UNNAMED tally "
+               f"{pu.group(1)} — the class equation must hold one-for-one")
+
+# ---- (d) methodology-index tally enumeration vs the register tally table ----
+tally = dict(re.findall(r"\| ([A-Z][^|]+?) \| (\d+) \|", reg))
+meth = read("07-methodology/README.md")
+vrow = next((l for l in meth.splitlines()
+             if l.lstrip().startswith("| [verify-role-demand.py]")), None)
+if vrow is None:
+    bad.append("methodology-index verify-role-demand.py row: not found — the "
+               "tally enumeration has no surface")
+else:
+    forms = [("CONFIRMED ", tally.get("CONFIRMED")),
+             ("OVERLOAD ", tally.get("OVERLOAD (active)")),
+             ("UNDER ", tally.get("UNDER-UTILIZED")),
+             ("EXERCISED ", tally.get("EXERCISED-THROUGH")),
+             ("ZERO-DURATION ", tally.get("ZERO-DURATION")),
+             ("UNPARSEABLE ", tally.get("UNPARSEABLE-FREQ")),
+             ("NO PARSED ", tally.get("NO PARSED CADENCE"))]
+    for prefix, n in forms:
+        if n is None:
+            bad.append(f"register: tally class '{prefix.strip()}' not found — "
+                       "arm (d) cannot verify the enumeration")
+        elif f"{prefix}{n}" not in vrow:
+            bad.append(f"methodology-index verify-role-demand.py row: the tally "
+                       f"enumeration lacks '{prefix}{n}' — the row must quote "
+                       "the shipped register's tally completely")
+    un = re.search(r"MEASURED — HC UNPRICED \| (\d+) \|", reg)
+    if un and f"unpriced {un.group(1)}" not in vrow:
+        bad.append(f"methodology-index verify-role-demand.py row: the tally "
+                   f"enumeration lacks 'unpriced {un.group(1)}' — quote the "
+                   "shipped register's tally completely")
+    ru = re.search(r"PARTIAL — UNNAMED \| (\d+) \|", reg)
+    um = re.search(r"UNMEASURED \| (\d+) \|", reg)
+    if ru and um and (f"residual UNNAMED {ru.group(1)} / "
+                      f"UNMEASURED {um.group(1)}") not in vrow:
+        bad.append("methodology-index verify-role-demand.py row: the residual "
+                   "enumeration does not quote the shipped register's tally")
+print("HITS %d" % len(bad))
+for b in bad:
+    print("BAD|" + b)
+PY
+)
+C86_BAD=$(echo "$C86_OUT" | sed -n 's/^HITS \([0-9]*\)/\1/p')
+if [ "${C86_BAD:-1}" -eq 0 ]; then
+    ok "Universal-register/queue/charter-layer consistency pins clean: the charter README's rollout decomposition equals the chartered census composition re-derived from the registers of record (259 = 192 §5.3 + 32 IT + 8 store + 27 DC), the EXAMPLE charter's identity names the chartered seat the corpus reconciliation folds W48's owner title onto at the mirror's HC, the disposition queue's P2-A population equals the register's active-OVERLOAD population both directions with the naming-worklist footer's sub-5% count equal to the register's PARTIAL — UNNAMED tally (the class equation the 53 form asserted while dropping rows — made structural by the batch-54 join), and the methodology-index tally enumeration quotes the shipped register's tally completely — the (bx) wave's three mutual-consistency surfaces made standing without byte-pinning the Phase-3 candidates (guarded by the 2026-09-26 twelfth review-everything pass)"
+else
+    error "$C86_BAD universal-register/queue/charter-layer consistency violation(s):"
+    echo "$C86_OUT" | grep -E '^BAD\|' | sed 's/^BAD|/    /' || true
+fi
+
 echo ""
 echo "=== Validation Complete ==="
 echo "Errors: $ERRORS, Warnings: $WARNINGS"

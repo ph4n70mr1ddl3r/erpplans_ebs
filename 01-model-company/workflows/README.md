@@ -36,8 +36,8 @@
 | [workflow-gap-analysis-people.md](workflow-gap-analysis-people.md) | People-domain companion — People/HR family rosters, coverage & evidence baselines |
 | [role-coverage-gap-analysis.md](role-coverage-gap-analysis.md) | GENERATED workflow→role coverage gap analysis (Class A role-less / Class B owner-grain / Class C healthy; regenerate via 07-methodology/role-coverage-gap-analysis.py) |
 | [weak-anchor-demand-verification.md](weak-anchor-demand-verification.md) | GENERATED weak-anchor watchlist demand verification (CONFIRMED / OVERLOAD / UNDER-UTILIZED / EXERCISED-THROUGH / MEASURED — CAPACITY UNMAPPED / ZERO-DURATION / UNPARSEABLE-FREQ / NO PARSED CADENCE; regenerate via 07-methodology/verify-weak-anchor-demand.py) |
-| [role-demand-verification.md](role-demand-verification.md) | GENERATED universal role-demand register — ALL 259 chartered roles with verdict / residual / state / confidence + department roll-up (batch 52b; regenerate via 07-methodology/verify-role-demand.py) |
-| [role-demand-disposition-queue.md](role-demand-disposition-queue.md) | GENERATED P2 disposition queue — active-OVERLOAD rows with per-cell evidence, SCALE-ARTIFACT / CELL-AUDIT / FIELD-SIGNAL / DISTRIBUTED classes, grammar-gap markers and the charter naming worklist (batch 53; regenerate via 07-methodology/triage-role-demand.py) |
+| [role-demand-verification.md](role-demand-verification.md) | GENERATED universal role-demand register — ALL 259 chartered roles with verdict / residual / state / confidence + department roll-up (batch 52c; regenerate via 07-methodology/verify-role-demand.py) |
+| [role-demand-disposition-queue.md](role-demand-disposition-queue.md) | GENERATED P2 disposition queue — active-OVERLOAD rows with per-cell evidence, SCALE-ARTIFACT / CELL-AUDIT / FIELD-SIGNAL / DISTRIBUTED classes, grammar-gap markers and the charter naming worklist (batch 54; regenerate via 07-methodology/triage-role-demand.py) |
 | [event-custody-and-precedence-register.md](event-custody-and-precedence-register.md) | Cross-cutting event routing — accountable value stream, PAGASA signal ladder, incident-command ladder, enforced overlap pairs |
 
 ---

@@ -1,14 +1,16 @@
-# Universal Role-Demand Verification (generated — batch 52b, 2026-09-26)
+# Universal Role-Demand Verification (generated — batch 52c, 2026-09-26)
 
 > **Universal register** for the Role-Anchoring Contract — every chartered role
 > (259: §5.3 register + IT product-model seats + §7.2/§7.3 roster roles) carries a
 > per-role annual-demand verdict against chartered capacity, generalizing the batch-49–51
 > weak-anchor instrument from its 53-role watchlist to the full population, per
 > [`universal-role-demand-verification-spec.md`](../../07-methodology/universal-role-demand-verification-spec.md).
-> **Batch 52b grammar** — mode_motion's attribution computed in-process at role grain,
+> **Batch 52c grammar** — mode_motion's attribution computed in-process at role grain,
 > with four documented supersets: (1) days/week bridge († — whole-cell '3–5 days'/'1–2
 > weeks' price at midpoint × 6.5 h/day; the engine keeps its cycle-audit zero), (2) IT-seat
-> alias surfaces (claims matched through IT_SEATS vocabulary, blocklist-guarded), (3)
+> alias surfaces (claims matched through IT_SEATS vocabulary, blocklist-guarded — since
+> 52c priced only at the corpus's own reconciliation grain: whole-cell or
+> comma/semicolon-segment equality, never substring), (3)
 > attribution confidence (own-surface / alias-claimed / participant-only), (4) peak-aware
 > flagging (⚑ — matched workflows ride a peak-calendar cadence: payroll, close, seasonal;
 > the average understates the peak window). State column separates active verdicts from
@@ -17,8 +19,10 @@
 > 5070/5433 workflows (93%)
 > at generation. Residual classes: measured or NAMED — naming is a charter act
 > (charter §10/§2/§11); `UNNAMED` residuals are the charter layer's worklist and the
-> instrument never invents them. Verdicts are demand-on-role-design decision support,
-> not timesheet actuals and never incumbent grading. Generated — do not hand-edit.
+> instrument never invents them. Zero-claim rows whose named cells parse but fold to
+> other seats read EXERCISED-THROUGH (via-group named). Verdicts are
+> demand-on-role-design decision support, not timesheet actuals and never incumbent
+> grading. Generated — do not hand-edit.
 
 ## Verdict, residual, state & confidence legend
 
@@ -27,6 +31,7 @@
 | CONFIRMED | parsed demand 50–150% of chartered capacity | WORKFLOW-MEASURED if util ≥80%; else PARTIAL |
 | OVERLOAD | parsed demand >150% of capacity | — (capacity decision; design-load rows are posture, not staffing) |
 | UNDER-UTILIZED | parsed demand <50% | PARTIAL — residual named or seat resized |
+| EXERCISED-THROUGH | no claimable step surface at the corpus's grain; named cells fold to broader seats (via-group named) | COVERAGE-STANDBY — verify the via-group before any seat decision |
 | MEASURED — HC UNPRICED | demand priced; no mappable HC (§7.2 alias gap class) | capacity-map decision |
 | ZERO-DURATION | anchors are cadence-only work the bridge cannot price | COVERAGE-STANDBY (cycle audit) |
 | UNPARSEABLE-FREQ | anchors ride unparseable cadence | adjudicate the frequency family |
@@ -54,7 +59,7 @@
 | Field Communications Manager | §5.3 register — Store Operations | 1 | 56 | 1 | 3% | UNDER-UTILIZED | PARTIAL — UNNAMED | active | own-surface |
 | IAP Integration Engineer | IT seat — Information Technology (product model) | 1 | 8 | 5 | 0% | UNDER-UTILIZED | PARTIAL — UNNAMED | active | own-surface |
 | Payroll & Statutory Remittance Officer | §5.3 register — Human Resources | 1 | 6⚑ | 1 | 0% | UNDER-UTILIZED | PARTIAL — UNNAMED | active | own-surface |
-| Privacy Officer | §5.3 register — Legal & Compliance | 1 | 4⚑ | 1 | 0% | UNDER-UTILIZED | PARTIAL — UNNAMED | active | own-surface |
+| Privacy Officer | §5.3 register — Legal & Compliance | 1 | —⚑ | 1 | — | EXERCISED-THROUGH | COVERAGE-STANDBY — via Data Privacy Officer (DPO) | active | own-surface |
 | Promotions & Vendor-Funding Coordinator | §5.3 register — Merchandising & Buying | 1 | 125 | 3 | 2% | UNDER-UTILIZED | PARTIAL — UNNAMED | active | own-surface |
 | Promotions Specialist | §5.3 register — Marketing | 1 | 62 | 2 | 2% | UNDER-UTILIZED | PARTIAL — UNNAMED | active | own-surface |
 | Quality & Workforce Analyst | §5.3 register — Customer Service | 1 | — | 2 | — | NO PARSED CADENCE | COVERAGE-STANDBY — mandate-priced | active | participant-only |
@@ -66,7 +71,7 @@
 | Assistant DC Manager — Inbound | §7.3 DC roster — DC (field, per-DC roster) | 2 | 76 | 4 | 1% | UNDER-UTILIZED | PARTIAL — UNNAMED | active | own-surface |
 | Audit Manager | §5.3 register — Internal Audit & Risk | 2 | — | 1 | — | ZERO-DURATION | COVERAGE-STANDBY — cycle audit | active | own-surface |
 | Banking & Cash-Management Specialist | §5.3 register — Finance & Accounting | 2 | — | 2 | — | ZERO-DURATION | COVERAGE-STANDBY — cycle audit | active | own-surface |
-| Build-Squad Tech Lead | IT seat — Information Technology (product model) | 2 | 375 | 2 | 10% | UNDER-UTILIZED | PARTIAL — NAMED | deferred-prepared (OMO/TPS) | own-surface |
+| Build-Squad Tech Lead | IT seat — Information Technology (product model) | 2 | — | — | — | EXERCISED-THROUGH | COVERAGE-STANDBY — via Tax Tech Lead | deferred-prepared (OMO/TPS) | own-surface |
 | Business Process & IMS Lead | §5.3 register — Strategy / Corporate Planning | 2 | — | 1 | — | ZERO-DURATION | COVERAGE-STANDBY — cycle audit | active | own-surface |
 | Corporate Secretary Analyst | §5.3 register — Legal & Compliance | 2 | — | 1 | — | ZERO-DURATION | COVERAGE-STANDBY — cycle audit | active | own-surface |
 | CPM (Corporate Performance Management) Analyst | §5.3 register — Strategy / Corporate Planning | 2 | — | 1 | — | ZERO-DURATION | COVERAGE-STANDBY — cycle audit | active | own-surface |
@@ -119,7 +124,7 @@
 | Competitive Intelligence Manager | §5.3 register — Strategy / Corporate Planning | 5 | — | 1 | — | NO PARSED CADENCE | COVERAGE-STANDBY — mandate-priced | active | participant-only |
 | CRM Data Steward | §5.3 register — Marketing | 5 | 3,545 | 2 | 98% | CONFIRMED | WORKFLOW-MEASURED | active | own-surface |
 | HRIS & HR-Technology Administrator | §5.3 register — Human Resources | 5 | 8,392⚑ | 1 | 466% | OVERLOAD | — | active | own-surface |
-| INFRA Cloud Engineer | IT seat — Information Technology (product model) | 5 | 124 | 2 | 3% | UNDER-UTILIZED | PARTIAL — UNNAMED | active | alias-claimed |
+| INFRA Cloud Engineer | IT seat — Information Technology (product model) | 5 | — | — | — | EXERCISED-THROUGH | COVERAGE-STANDBY — via Cloud Architect / Cloud Arch | active | alias-claimed |
 | MHE Maintenance Technicians | §7.3 DC roster — DC (field, per-DC roster) | 5 | 79 | 16 | 0% | UNDER-UTILIZED | PARTIAL — UNNAMED | active | own-surface |
 | Talent Acquisition Specialist | §5.3 register — Human Resources | 5 | 156 | 5 | 2% | UNDER-UTILIZED | PARTIAL — UNNAMED | active | own-surface |
 | Benefits Specialist | §5.3 register — Human Resources | 6 | 564 | 2 | 16% | UNDER-UTILIZED | PARTIAL — NAMED | active | own-surface |
@@ -140,7 +145,7 @@
 | Demand Planner | §5.3 register — Supply Chain & Logistics | 11 | 900⚑ | 2 | 25% | UNDER-UTILIZED | PARTIAL — NAMED | active | own-surface |
 | Inventory Planner | §5.3 register — Supply Chain & Logistics | 11 | 73,927⚑ | 2 | 2054% | OVERLOAD | — | active | own-surface |
 | Outbound/Shipping Supervisor | §7.3 DC roster — DC (field, per-DC roster) | 11 | 1,667 | 8 | 11% | UNDER-UTILIZED | PARTIAL — NAMED | active | own-surface |
-| Compliance Analyst | §5.3 register — Legal & Compliance | 12 | 6,250 | 1 | 347% | OVERLOAD | — | active | own-surface |
+| Compliance Analyst | §5.3 register — Legal & Compliance | 12 | — | 1 | — | EXERCISED-THROUGH | COVERAGE-STANDBY — via Procurement Coordinator | active | own-surface |
 | LP Investigator | §5.3 register — Regional Loss Prevention | 12 | 6,250 | 2 | 174% | OVERLOAD | — | active | own-surface |
 | Inventory Planning Manager | §5.3 register — Supply Chain & Logistics | 13 | 4,970 | 1 | 276% | OVERLOAD | — | active | own-surface |
 | IT / ERP Auditor | §5.3 register — Internal Audit & Risk | 13 | 4 | 2 | 0% | UNDER-UTILIZED | PARTIAL — UNNAMED | active | own-surface |
@@ -178,8 +183,8 @@
 | Surety Program Manager | §5.3 register — Facilities & Real Estate | 24 | — | 1 | — | ZERO-DURATION | COVERAGE-STANDBY — cycle audit | active | own-surface |
 | Assistant Store Manager | §7.2 store roster — Store (field, per-store roster) | 25 | 174,742 | 200 | 46% | UNDER-UTILIZED | PARTIAL — NAMED | active | own-surface |
 | INFRA DBA / SaaS Administrator | IT seat — Information Technology (product model) | 25 | 744⚑ | 1 | 41% | UNDER-UTILIZED | PARTIAL — NAMED | active | own-surface |
-| Leases Accountant | §5.3 register — Finance & Accounting | 25 | 12 | 1 | 1% | UNDER-UTILIZED | PARTIAL — UNNAMED | active | own-surface |
-| Brand Manager | §5.3 register — Marketing | 26 | 21,609⚑ | 1 | 1200% | OVERLOAD | — | active | own-surface |
+| Leases Accountant | §5.3 register — Finance & Accounting | 25 | — | 1 | — | EXERCISED-THROUGH | COVERAGE-STANDBY — via VP Finance & Accounting / Corporate Controller | active | own-surface |
+| Brand Manager | §5.3 register — Marketing | 26 | —⚑ | 1 | — | EXERCISED-THROUGH | COVERAGE-STANDBY — via Vendor Brand Ambassador / Sales Associate | active | own-surface |
 | Insights Analyst | §5.3 register — Marketing | 26 | 450 | 2 | 12% | UNDER-UTILIZED | PARTIAL — NAMED | active | own-surface |
 | Inventory Control Supervisor | §7.3 DC roster — DC (field, per-DC roster) | 26 | 152,453 | 4 | 2006% | OVERLOAD | — | active | own-surface |
 | Labor Relations Director | §5.3 register — Human Resources | 26 | —⚑ | 1 | — | ZERO-DURATION | COVERAGE-STANDBY — cycle audit | active | own-surface |
@@ -211,7 +216,7 @@
 | Environmental Compliance Specialist | §5.3 register — Sustainability / ESG | 37 | 367,619 | 1 | 20423% | OVERLOAD | — | active | own-surface |
 | Fleet Compliance & Safety Specialist | §5.3 register — Supply Chain & Logistics | 37 | 99 | 1 | 6% | UNDER-UTILIZED | PARTIAL — NAMED | active | own-surface |
 | INFRA Network Engineer | IT seat — Information Technology (product model) | 37 | 1,858 | 1 | 103% | CONFIRMED | WORKFLOW-MEASURED | active | own-surface |
-| DP / Data & Analytics (VS-28) | IT seat — Information Technology (product model) | 38 | 125,955⚑ | — | — | MEASURED — HC UNPRICED | capacity-map decision | active | own-surface |
+| DP / Data & Analytics (VS-28) | IT seat — Information Technology (product model) | 38 | —⚑ | — | — | EXERCISED-THROUGH | COVERAGE-STANDBY — via Merchandising Operations & Master Data Manager / Esg Data Analyst | active | own-surface |
 | Regulatory Affairs Specialist | §5.3 register — Legal & Compliance | 38 | 735 | 3 | 14% | UNDER-UTILIZED | PARTIAL — NAMED | active | own-surface |
 | AP Manager | §5.3 register — Finance & Accounting | 41 | 984⚑ | 1 | 55% | CONFIRMED | PARTIAL — NAMED | active | own-surface |
 | Compensation & Benefits Manager | §5.3 register — Human Resources | 41 | 11 | 1 | 1% | UNDER-UTILIZED | PARTIAL — UNNAMED | active | own-surface |
@@ -219,7 +224,7 @@
 | DP MDM Steward | IT seat — Information Technology (product model) | 43 | 13,968 | 2 | 388% | OVERLOAD | — | active | own-surface |
 | Litigation & IP Counsel | §5.3 register — Legal & Compliance | 43 | — | 2 | — | ZERO-DURATION | COVERAGE-STANDBY — cycle audit | active | own-surface |
 | Loyalty & CRM Manager | §5.3 register — Marketing | 43 | 23,867⚑ | 1 | 1326% | OVERLOAD | — | active | own-surface |
-| AML / ABC Officer | §5.3 register — Legal & Compliance | 45 | 338 | 1 | 19% | UNDER-UTILIZED | PARTIAL — NAMED | active | own-surface |
+| AML / ABC Officer | §5.3 register — Legal & Compliance | 45 | — | 1 | — | EXERCISED-THROUGH | COVERAGE-STANDBY — via Compliance Manager / MLRO / Bsa-Aml Analyst | active | own-surface |
 | Vendor Management Manager | §5.3 register — Supply Chain & Logistics | 46 | 24 | 1 | 1% | UNDER-UTILIZED | PARTIAL — UNNAMED | active | own-surface |
 | IT Helpdesk Agent (FS) | IT seat — Information Technology (product model) | 47 | 155,896⚑ | 2 | 4330% | OVERLOAD | — | active | own-surface |
 | Learning & Development Manager | §5.3 register — Human Resources | 47 | 12,116 | 1 | 673% | OVERLOAD | — | active | own-surface |
@@ -248,7 +253,7 @@
 | AR Clerk | §5.3 register — Finance & Accounting | 66 | 132,958 | 2 | 3693% | OVERLOAD | — | active | own-surface |
 | Revenue Assurance Lead | §5.3 register — Finance & Accounting | 69 | 96 | 1 | 5% | UNDER-UTILIZED | PARTIAL — NAMED | active | own-surface |
 | GL Accountant (one per entity) | §5.3 register — Finance & Accounting | 71 | 22,895⚑ | 5 | 254% | OVERLOAD | — | active | own-surface |
-| Energy Manager | §5.3 register — Facilities & Real Estate | 73 | 3,020⚑ | 1 | 168% | OVERLOAD | — | active | own-surface |
+| Energy Manager | §5.3 register — Facilities & Real Estate | 73 | —⚑ | 1 | — | EXERCISED-THROUGH | COVERAGE-STANDBY — via Energy Audit Partner / Sales Associate | active | own-surface |
 | Marketplace Manager | §5.3 register — Marketing | 79 | 1,256⚑ | 2 | 35% | UNDER-UTILIZED | PARTIAL — NAMED | active | own-surface |
 | IT Operations (FS/INFRA) | IT seat — Information Technology (product model) | 81 | 745 | — | — | MEASURED — HC UNPRICED | capacity-map decision | active | own-surface |
 | DC Operations Manager | §5.3 register — Supply Chain & Logistics | 84 | 219,956⚑ | 1 | 12220% | OVERLOAD | — | active | own-surface |
@@ -260,7 +265,7 @@
 | IT Product Manager (build squad) | IT seat — Information Technology (product model) | 88 | 48,593⚑ | 2 | 1350% | OVERLOAD | — | active | own-surface |
 | Treasury Analyst | §5.3 register — Finance & Accounting | 88 | 930,989⚑ | 3 | 17241% | OVERLOAD | — | active | own-surface |
 | AP Clerk | §5.3 register — Finance & Accounting | 92 | 288,246⚑ | 13 | 1232% | OVERLOAD | — | active | own-surface |
-| Head of Strategy & Corporate Planning | §5.3 register — Strategy / Corporate Planning | 95 | 72 | 1 | 4% | UNDER-UTILIZED | PARTIAL — UNNAMED | active | own-surface |
+| Head of Strategy & Corporate Planning | §5.3 register — Strategy / Corporate Planning | 95 | — | 1 | — | EXERCISED-THROUGH | COVERAGE-STANDBY — via Director Of Construction Pmo / Environmental Consultant | active | own-surface |
 | Procurement Manager | §5.3 register — Supply Chain & Logistics | 97 | 4,121⚑ | 1 | 229% | OVERLOAD | — | active | own-surface |
 | Tax Manager | §5.3 register — Finance & Accounting | 97 | 2,928 | 1 | 163% | OVERLOAD | — | active | own-surface |
 | Pricing Analyst | §5.3 register — Merchandising & Buying | 99 | 205,527⚑ | 4 | 2855% | OVERLOAD | — | active | own-surface |
@@ -307,10 +312,11 @@
 | Verdict | Roles |
 |---|---|
 | CONFIRMED | 25 |
-| OVERLOAD (active) | 82 |
+| OVERLOAD (active) | 79 |
 | OVERLOAD (design-load) | 3 |
-| UNDER-UTILIZED | 93 |
-| MEASURED — HC UNPRICED | 7 |
+| UNDER-UTILIZED | 87 |
+| EXERCISED-THROUGH | 10 |
+| MEASURED — HC UNPRICED | 6 |
 | ZERO-DURATION | 39 |
 | UNPARSEABLE-FREQ | 2 |
 | NO PARSED CADENCE | 8 |
@@ -319,9 +325,9 @@
 | Residual class | Roles |
 |---|---|
 | WORKFLOW-MEASURED | 13 |
-| PARTIAL — NAMED | 60 |
-| PARTIAL — UNNAMED | 45 |
-| COVERAGE-STANDBY | 46 |
+| PARTIAL — NAMED | 58 |
+| PARTIAL — UNNAMED | 41 |
+| COVERAGE-STANDBY | 56 |
 | UNMEASURED | 3 |
 
 Instrument marks: alias-claimed rows 2 · days-bridged rows 0 ·
@@ -338,31 +344,31 @@ peak-calendar rows ⚑ counted in the marks column of the register.
 | Department / roster | Roles | Measured | Demand h/yr | Capacity h/yr | Measured util |
 |---|---|---|---|---|---|
 | Sustainability / ESG | 4 | 3 | 414,533 | 7,200 | 5757% |
-| Marketing | 20 | 19 | 3,044,371 | 54,000 | 5638% |
+| Marketing | 20 | 18 | 3,022,762 | 54,000 | 5598% |
 | Executive Office | 6 | 6 | 586,959 | 10,800 | 5435% |
-| Facilities & Real Estate | 8 | 4 | 945,135 | 21,600 | 4376% |
+| Facilities & Real Estate | 8 | 3 | 942,115 | 21,600 | 4362% |
 | Regional Loss Prevention | 6 | 5 | 1,606,571 | 48,600 | 3306% |
 | Quality Management | 4 | 3 | 276,744 | 9,000 | 3075% |
-| Finance & Accounting | 31 | 27 | 2,828,734 | 111,600 | 2535% |
+| Finance & Accounting | 31 | 26 | 2,828,722 | 111,600 | 2535% |
 | Merchandising & Buying | 12 | 12 | 1,340,981 | 77,400 | 1733% |
 | Trade / Account Management | 5 | 5 | 211,658 | 12,600 | 1680% |
 | Store Operations | 7 | 5 | 603,446 | 43,200 | 1397% |
 | Supply Chain & Logistics | 25 | 21 | 597,409 | 82,800 | 722% |
-| Legal & Compliance | 15 | 11 | 218,931 | 37,800 | 579% |
-| IT product model — active | 29 | 27 | 463,317 | 129,600 | 357% |
+| Legal & Compliance | 15 | 8 | 212,339 | 37,800 | 562% |
 | Store (field, per-store roster) (field) | 8 | 8 | 14,658,657 | 4,560,000 | 321% |
+| IT product model — active | 29 | 25 | 337,238 | 129,600 | 260% |
 | Health, Safety & Environment | 4 | 2 | 53,661 | 23,400 | 229% |
 | Customer Service | 7 | 5 | 86,122 | 63,000 | 137% |
 | Internal Audit & Risk | 9 | 4 | 28,876 | 25,200 | 115% |
 | DC (field, per-DC roster) (field) | 27 | 23 | 1,223,614 | 1,140,000 | 107% |
 | Human Resources | 23 | 16 | 103,754 | 99,000 | 105% |
-| IT product model — deferred-prepared (OMO/TPS) | 3 | 3 | 1,338 | 21,600 | 6% |
-| Strategy / Corporate Planning | 6 | 1 | 72 | 10,800 | 1% |
+| IT product model — deferred-prepared (OMO/TPS) | 3 | 2 | 962 | 21,600 | 4% |
+| Strategy / Corporate Planning | 6 | 0 | 0 | 10,800 | 0% |
 
 ## Census line (Phase-3 Check 71 extension form)
 
 ```
-verified=259 verified_confirmed=25 verified_overload_active=82 verified_overload_design=3 verified_under=93 coverage_standby=46 unmeasured=3 residual_unnamed=45 alias_claimed=2 days_bridged=0
+verified=259 verified_confirmed=25 verified_overload_active=79 verified_overload_design=3 verified_under=87 verified_exercised=10 coverage_standby=56 unmeasured=3 residual_unnamed=41 alias_claimed=2 days_bridged=0
 ```
 
 > Interpretation guardrails: (1) utilization is demand-on-role-design, not timesheet

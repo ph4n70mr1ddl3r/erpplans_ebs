@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-r"""Universal role-demand verification register — batch 52b (2026-09-26, by direction).
+r"""Universal role-demand verification register — batch 52c (2026-09-26, by direction).
 
 Generalizes the Role-Anchoring Contract's demand-verification loop from the
 53-role weak-anchor watchlist to ALL chartered roles (259), per
@@ -22,7 +22,25 @@ documented supersets over the engine:
      'integration engineer', …), with a preceding-qualifier blocklist
      ('facilities', 'transport', 'bir', 'eis') so 'facilities helpdesk' never
      claims against the IT FS seat. Converts participant-only reads to
-     measured claims without corpus edits.
+     measured claims without corpus edits. BATCH 52c RUN-2 CORRECTION —
+     demand claims at the corpus's own reconciliation GRAIN: a surface may
+     price a cell only when it equals the whole normalized cell or a
+     comma/semicolon segment of the paren-stripped cell (slash-compound
+     titles resolve whole, per the coverage matrix's documented resolution
+     order — segments are never slash-split). The 52b form claimed by
+     SUBSTRING, so bare generic alias tokens ('brand', 'energy', 'cloud',
+     'pmo') and suffix matches inside longer segments ('procurement
+     compliance analyst' → the Procurement Coordinator seat; 'data privacy
+     officer' → the DPO seat; 'tax tech lead'; 'private label brand manager')
+     priced OTHER roles' cells onto these seats — three phantom OVERLOAD
+     verdicts (Brand Manager 1,200%, Compliance Analyst 347%, Energy Manager
+     168%) and inflated reads on seven more rows. Substring matching now
+     counts ANCHORS only (the presence signal that classifies
+     ZERO-DURATION / UNPARSEABLE-FREQ / NO PARSED CADENCE); zero-claim rows
+     whose named cells parse but fold to other seats read EXERCISED-THROUGH
+     with the via-group named (the spec §3.2 ladder's own row, restored:
+     'own key empty; named cells land on broader seats — verify the via-group
+     before any seat decision' — the batch-51 Privacy Officer precedent).
   3. ATTRIBUTION CONFIDENCE — every row carries own-surface (a matched cell's
      resolved parts fold to the seat's own capacity key), alias-claimed
      (matched only through alias vocabulary — the corpus's cells denote the
@@ -45,9 +63,11 @@ seats), not slack (the exercise-through contract: individual UNDER rows
 inside a hot department are queue-shape).
 
 Verdict ladder: CONFIRMED (50–150%) / OVERLOAD (>150%) / UNDER-UTILIZED
-(<50%) / MEASURED — HC UNPRICED / ZERO-DURATION / UNPARSEABLE-FREQ /
-NO PARSED CADENCE. Residual classes: WORKFLOW-MEASURED (util ≥80%) /
-PARTIAL — NAMED / PARTIAL — UNNAMED (<5%) / COVERAGE-STANDBY / UNMEASURED —
+(<50%) / EXERCISED-THROUGH (zero claimable step surface; named cells fold
+to broader seats — 52c) / MEASURED — HC UNPRICED / ZERO-DURATION /
+UNPARSEABLE-FREQ / NO PARSED CADENCE. Residual classes: WORKFLOW-MEASURED
+(util ≥80%) / PARTIAL — NAMED / PARTIAL — UNNAMED (<5%) / COVERAGE-STANDBY /
+UNMEASURED —
 naming is a charter act (charter §10/§2/§11); the instrument counts, the
 charter names, and never invents residual content.
 
@@ -270,14 +290,27 @@ def surface_claim(q, idx, res, cap):
     """Fallback pass for zero-claim roles: the claimed even-share slice of
     every step cell whose text names the seat through a canonical or
     adjudicated-alias surface (blocklist-guarded) — the vocabulary the
-    resolver folds elsewhere, claimed honestly at alias-claimed confidence."""
+    resolver folds elsewhere, claimed honestly at alias-claimed confidence.
+
+    Batch 52c grain guard: a surface PRICES a cell only when it equals the
+    whole normalized cell or a comma/semicolon segment of the paren-stripped
+    cell (the corpus's own reconciliation grain — ROLE_ALIASES fires on
+    whole-cell keys, and slash-compound canonical titles resolve whole, so
+    segments are never slash-split). Substring matches still count ANCHORS
+    (the presence signal that classifies ZERO-DURATION / UNPARSEABLE /
+    NO PARSED), and their parsed occurrences fold their minutes onto the
+    resolved parts' titles as the row's VIA-group (EXERCISED-THROUGH)."""
     canonical = norm(q["title"])
     surfaces = surfaces_for(q)
+    skeys = set()
+    for s in surfaces:
+        skeys |= {s, grc.key(s)}
     claimed = 0.0
     anchors = {"parsed": 0, "zero": 0, "unparsed": 0}
     days_bridged = 0
     peak = False
     own_surface = False
+    via = {}
     own_key = vgw.fold_capacity_key(cap, canonical, "hq")
     for text, e in idx.items():
         s, is_canon = surface_hits(text, surfaces, canonical)
@@ -293,6 +326,7 @@ def surface_claim(q, idx, res, cap):
                 if vgw.fold_capacity_key(cap, norm(t), "hq") == own_key:
                     own_surface = True
                     break
+        claimable = claim_segments(text) & skeys
         for d, mult, bucket, pk, brd in e["occ"]:
             if pk:
                 peak = True
@@ -306,11 +340,34 @@ def surface_claim(q, idx, res, cap):
             anchors["parsed"] += 1
             if brd:
                 days_bridged += 1
-            if roles:
-                claimed += d / len(roles) * mult
+            if claimable:
+                if roles:
+                    claimed += d / len(roles) * mult
+                else:
+                    claimed += d * mult
             else:
-                claimed += d * mult
-    return claimed, anchors, days_bridged, peak, own_surface
+                for _p, _b, t in (roles or ()):
+                    via[t] = via.get(t, 0.0) + d * mult
+    via_top = sorted(via.items(), key=lambda kv: -kv[1])
+    return claimed, anchors, days_bridged, peak, own_surface, via_top
+
+
+SEG_SPLIT_RE = re.compile(r"\s*[,;]\s*")
+
+
+def claim_segments(text):
+    """The corpus's own reconciliation grain as a set of normalized segment
+    keys: the whole cell plus every comma/semicolon segment of the
+    paren-stripped cell (both raw-normalized and grc.key forms). Never
+    slash-split — slash-compound canonical titles ('Tile & Heavy/Breakbulk
+    Crew', 'AML / ABC Officer') resolve whole."""
+    stripped = re.sub(r"\([^)]*\)", " ", text)
+    segs = {norm(text), grc.key(text)}
+    for seg in SEG_SPLIT_RE.split(stripped):
+        n = norm(seg)
+        if n:
+            segs |= {n, grc.key(seg)}
+    return segs
 
 
 def capacity_for(q, cap):
@@ -388,7 +445,8 @@ def main():
     src_map = {"hq": "§5.3 register", "it": "IT seat",
                "store": "§7.2 store roster", "dc": "§7.3 DC roster"}
     tally = {"CONFIRMED": 0, "OVERLOAD (active)": 0, "OVERLOAD (design-load)": 0,
-             "UNDER-UTILIZED": 0, "MEASURED — HC UNPRICED": 0,
+             "UNDER-UTILIZED": 0, "EXERCISED-THROUGH": 0,
+             "MEASURED — HC UNPRICED": 0,
              "ZERO-DURATION": 0, "UNPARSEABLE-FREQ": 0, "NO PARSED CADENCE": 0}
     resid = {"WORKFLOW-MEASURED": 0, "PARTIAL — NAMED": 0,
              "PARTIAL — UNNAMED": 0, "COVERAGE-STANDBY": 0, "UNMEASURED": 0}
@@ -397,17 +455,19 @@ def main():
 
     L = []
     A = L.append
-    A("# Universal Role-Demand Verification (generated — batch 52b, 2026-09-26)")
+    A("# Universal Role-Demand Verification (generated — batch 52c, 2026-09-26)")
     A("")
     A("> **Universal register** for the Role-Anchoring Contract — every chartered role")
     A(f"> ({len(queue)}: §5.3 register + IT product-model seats + §7.2/§7.3 roster roles) carries a")
     A("> per-role annual-demand verdict against chartered capacity, generalizing the batch-49–51")
     A("> weak-anchor instrument from its 53-role watchlist to the full population, per")
     A("> [`universal-role-demand-verification-spec.md`](../../07-methodology/universal-role-demand-verification-spec.md).")
-    A("> **Batch 52b grammar** — mode_motion's attribution computed in-process at role grain,")
+    A("> **Batch 52c grammar** — mode_motion's attribution computed in-process at role grain,")
     A("> with four documented supersets: (1) days/week bridge († — whole-cell '3–5 days'/'1–2")
     A("> weeks' price at midpoint × 6.5 h/day; the engine keeps its cycle-audit zero), (2) IT-seat")
-    A("> alias surfaces (claims matched through IT_SEATS vocabulary, blocklist-guarded), (3)")
+    A("> alias surfaces (claims matched through IT_SEATS vocabulary, blocklist-guarded — since")
+    A("> 52c priced only at the corpus's own reconciliation grain: whole-cell or")
+    A("> comma/semicolon-segment equality, never substring), (3)")
     A("> attribution confidence (own-surface / alias-claimed / participant-only), (4) peak-aware")
     A("> flagging (⚑ — matched workflows ride a peak-calendar cadence: payroll, close, seasonal;")
     A("> the average understates the peak window). State column separates active verdicts from")
@@ -416,8 +476,10 @@ def main():
     A(f"> {cov['parsed']}/{cov['total']} workflows ({cov['parsed'] * 100 // max(cov['total'], 1)}%)")
     A("> at generation. Residual classes: measured or NAMED — naming is a charter act")
     A("> (charter §10/§2/§11); `UNNAMED` residuals are the charter layer's worklist and the")
-    A("> instrument never invents them. Verdicts are demand-on-role-design decision support,")
-    A("> not timesheet actuals and never incumbent grading. Generated — do not hand-edit.")
+    A("> instrument never invents them. Zero-claim rows whose named cells parse but fold to")
+    A("> other seats read EXERCISED-THROUGH (via-group named). Verdicts are")
+    A("> demand-on-role-design decision support, not timesheet actuals and never incumbent")
+    A("> grading. Generated — do not hand-edit.")
     A("")
     A("## Verdict, residual, state & confidence legend")
     A("")
@@ -426,6 +488,7 @@ def main():
     A("| CONFIRMED | parsed demand 50–150% of chartered capacity | WORKFLOW-MEASURED if util ≥80%; else PARTIAL |")
     A("| OVERLOAD | parsed demand >150% of capacity | — (capacity decision; design-load rows are posture, not staffing) |")
     A("| UNDER-UTILIZED | parsed demand <50% | PARTIAL — residual named or seat resized |")
+    A("| EXERCISED-THROUGH | no claimable step surface at the corpus's grain; named cells fold to broader seats (via-group named) | COVERAGE-STANDBY — verify the via-group before any seat decision |")
     A("| MEASURED — HC UNPRICED | demand priced; no mappable HC (§7.2 alias gap class) | capacity-map decision |")
     A("| ZERO-DURATION | anchors are cadence-only work the bridge cannot price | COVERAGE-STANDBY (cycle audit) |")
     A("| UNPARSEABLE-FREQ | anchors ride unparseable cadence | adjudicate the frequency family |")
@@ -452,7 +515,7 @@ def main():
     for q in queue:
         state = state_of(q)
         k = norm(q["title"])
-        s_claimed, anchors, nbd, peak, own_surface = surface_claim(q, idx, res, cap)
+        s_claimed, anchors, nbd, peak, own_surface, via_top = surface_claim(q, idx, res, cap)
         if k in parts_hit and parts_claim.get(k, 0.0) > 0.0:
             claimed = parts_claim[k]
             conf = "own-surface"
@@ -466,7 +529,7 @@ def main():
         if nbd:
             n_days += 1
         marks = ("†" if nbd else "") + ("⚑" if peak else "")
-        results.append((q, claimed, anchors, state, conf, marks, peak, nbd))
+        results.append((q, claimed, anchors, state, conf, marks, peak, nbd, via_top))
         if claimed > 0:
             ch, hours = capacity_for(q, cap)
             if not ch:
@@ -496,6 +559,15 @@ def main():
             emit(q, f"—{marks}", q["hc"], "—", "UNPARSEABLE-FREQ",
                  "adjudicate cadence", state, conf)
             continue
+        if anchors["parsed"] > 0:
+            # named cells parse but none is claimable at the corpus's grain —
+            # their work prices onto the seats the resolver folds them to
+            tally["EXERCISED-THROUGH"] += 1
+            resid["COVERAGE-STANDBY"] += 1
+            via_names = " / ".join(t for t, _m in via_top[:2]) if via_top else "unresolved step cells"
+            emit(q, f"—{marks}", q["hc"], "—", "EXERCISED-THROUGH",
+                 f"COVERAGE-STANDBY — via {via_names}", state, conf)
+            continue
         tally["NO PARSED CADENCE"] += 1
         resid["COVERAGE-STANDBY" if q["hc"] else "UNMEASURED"] += 1
         emit(q, "—", q["hc"], "—", "NO PARSED CADENCE",
@@ -504,7 +576,7 @@ def main():
 
     # Department roll-up: §5.3 departments, IT product model split by state,
     # store/DC field rosters — measured demand vs capacity, with coverage.
-    for q, claimed, anchors, state, conf, marks, peak, nbd in results:
+    for q, claimed, anchors, state, conf, marks, peak, nbd, _via in results:
         grp = (q["dept"] if q["bucket"] == "hq" else
                f"IT product model — {state}" if q["bucket"] == "it" else
                f"{q['dept']} (field)")
@@ -523,8 +595,8 @@ def main():
     A("| Verdict | Roles |")
     A("|---|---|")
     for k in ("CONFIRMED", "OVERLOAD (active)", "OVERLOAD (design-load)",
-              "UNDER-UTILIZED", "MEASURED — HC UNPRICED", "ZERO-DURATION",
-              "UNPARSEABLE-FREQ", "NO PARSED CADENCE"):
+              "UNDER-UTILIZED", "EXERCISED-THROUGH", "MEASURED — HC UNPRICED",
+              "ZERO-DURATION", "UNPARSEABLE-FREQ", "NO PARSED CADENCE"):
         A(f"| {k} | {tally[k]} |")
     A(f"| **Total chartered verified** | **{len(queue)}** |")
     A("")
@@ -559,6 +631,7 @@ def main():
       f"verified_overload_active={tally['OVERLOAD (active)']} "
       f"verified_overload_design={tally['OVERLOAD (design-load)']} "
       f"verified_under={tally['UNDER-UTILIZED']} "
+      f"verified_exercised={tally['EXERCISED-THROUGH']} "
       f"coverage_standby={resid['COVERAGE-STANDBY']} "
       f"unmeasured={resid['UNMEASURED']} residual_unnamed={resid['PARTIAL — UNNAMED']} "
       f"alias_claimed={n_alias} days_bridged={n_days}")
@@ -590,7 +663,8 @@ def main():
     print(f"wrote {OUT} — {len(queue)} roles; "
           f"CONFIRMED {tally['CONFIRMED']} / OVERLOAD active {tally['OVERLOAD (active)']} "
           f"+ design {tally['OVERLOAD (design-load)']} / UNDER {tally['UNDER-UTILIZED']} / "
-          f"unpriced {tally['MEASURED — HC UNPRICED']} / zero-dur {tally['ZERO-DURATION']} / "
+          f"unpriced {tally['MEASURED — HC UNPRICED']} / exercised {tally['EXERCISED-THROUGH']} / "
+          f"zero-dur {tally['ZERO-DURATION']} / "
           f"unparsed {tally['UNPARSEABLE-FREQ']} / no-cadence {tally['NO PARSED CADENCE']}; "
           f"alias-claimed {n_alias} / days-bridged {n_days}; "
           f"residual unnamed {resid['PARTIAL — UNNAMED']} / unmeasured {resid['UNMEASURED']}")
