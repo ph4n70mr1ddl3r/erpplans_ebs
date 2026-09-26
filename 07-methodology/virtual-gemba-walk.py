@@ -108,7 +108,9 @@ def load_grc():
 # ---------------------------------------------------------------- parsing ---
 
 def parse_workflows():
-    """(id, vs, title, owner, r_roles, a_roles, steps[(dur_min, r, a)], freq_raw, exec_bucket)"""
+    """(id, vs, title, owner, r_roles, a_roles, steps[(dur_min, r, a)],
+    freq_raw, exec_bucket; steps_raw carries the verbatim duration cells —
+    additive batch-52 field for downstream instruments, pricing untouched)"""
     out = []
     for vd in sorted(d for d in os.listdir(WF) if d.startswith("VS-")):
         vs = int(re.match(r"VS-(\d+)", vd).group(1))
@@ -122,7 +124,7 @@ def parse_workflows():
                 owner = m.group(1).strip() if m else ""
                 m = re.search(r"\| \*\*Frequency\*\* \|(.*?)\|", body)
                 freq = m.group(1).strip() if m else ""
-                steps, periods, in_steps = [], [], False
+                steps, periods, durs, acts, in_steps = [], [], [], [], False
                 for ln in body.splitlines():
                     if re.match(r"^\|\s*#\s*\|", ln) and "Role (R)" in ln:
                         in_steps = True
@@ -138,8 +140,11 @@ def parse_workflows():
                         steps.append((parse_minutes(dur_cell),
                                       cells[2].strip(), cells[3].strip()))
                         periods.append(step_period_qualifier(dur_cell))
+                        durs.append(dur_cell)
+                        acts.append(cells[1].strip())
                 out.append({"id": wid, "vs": vs, "title": title.strip(), "owner": owner,
-                            "freq": freq, "steps": steps, "step_period": periods})
+                            "freq": freq, "steps": steps, "step_period": periods,
+                            "steps_raw": durs, "steps_act": acts})
     return out
 
 
